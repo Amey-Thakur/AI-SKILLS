@@ -1,0 +1,49 @@
+{
+  "name": "ai-skills",
+  "owner": {
+    "name": "Amey Thakur",
+    "email": "ameythakur20@gmail.com"
+  },
+  "metadata": {
+    "description": "Plug-and-play skills and prompts for every AI coding agent",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "engineering-skills",
+      "description": "Working methods for software engineering: code review, debugging, commit messages, testing strategy, refactoring, API design, and SQL optimization",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/code-review",
+        "./skills/debugging",
+        "./skills/commit-messages",
+        "./skills/testing-strategy",
+        "./skills/refactoring",
+        "./skills/api-design",
+        "./skills/sql-optimization"
+      ]
+    },
+    {
+      "name": "writing-skills",
+      "description": "Working methods for writing and communication: technical writing, research synthesis, incident postmortems, and prompt engineering",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/technical-writing",
+        "./skills/research-synthesis",
+        "./skills/incident-postmortem",
+        "./skills/prompt-engineering"
+      ]
+    },
+    {
+      "name": "quality-skills",
+      "description": "Working methods for quality and inclusion: practical accessibility review",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/accessibility-review"
+      ]
+    }
+  ]
+}

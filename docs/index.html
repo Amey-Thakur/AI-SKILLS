@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Skills — plug-and-play skills & prompts for Claude Code, Cursor, and every AI coding agent</title>
+<meta name="description" content="Open library of agent skills and ready-to-run prompts. Works with Claude Code, Claude Desktop, Cursor, Antigravity, OpenAI Codex, Gemini CLI, and any AI agent that reads markdown. MIT licensed.">
+<meta property="og:title" content="AI Skills">
+<meta property="og:description" content="Plug-and-play skills and prompts for every AI coding agent. One command to install, plain markdown underneath.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amey-thakur.github.io/ai-skills/">
+<link rel="canonical" href="https://amey-thakur.github.io/ai-skills/">
+<script>
+  try {
+    var stored = localStorage.getItem("ai-skills-theme");
+    if (stored === "light" || stored === "dark") {
+      document.documentElement.setAttribute("data-theme", stored);
+    }
+  } catch (_) {}
+</script>
+<style>
+  :root {
+    --bg: #111111; --surface: #161616; --surface-2: #1c1c1c; --border: #2a2a2a;
+    --border-hover: #3a3a3a; --text-1: #eae6e0; --text-2: #bfb9b2; --text-3: #a09a93;
+    --text-4: #8a847d; --accent: #8ab2ea; --accent-dim: #5f8ed6;
+  }
+  [data-theme="light"] {
+    --bg: #efece3; --surface: #e7e3d8; --surface-2: #dfdbcf; --border: #ccc7b8;
+    --border-hover: #b5b0a0; --text-1: #1d1c1a; --text-2: #3d3b36; --text-3: #5a574f;
+    --text-4: #767268; --accent: #2f62b8; --accent-dim: #4a70a9;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--text-2);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px; line-height: 1.65;
+  }
+  .mono { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.site {
+    border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky;
+    top: 0; background: var(--bg); z-index: 10;
+  }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { font-family: ui-monospace, Consolas, monospace; font-weight: 700; color: var(--text-1); font-size: 18px; letter-spacing: -0.5px; text-decoration: none; }
+  .brand span { color: var(--accent); }
+  nav.top { display: flex; gap: 18px; align-items: center; font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
+  nav.top a { color: var(--text-3); text-decoration: none; }
+  nav.top a:hover { color: var(--text-1); }
+  #theme-toggle { background: none; border: 1px solid var(--border); color: var(--text-3); padding: 5px 10px; cursor: pointer; font-family: inherit; font-size: 12px; }
+  #theme-toggle:hover { border-color: var(--border-hover); color: var(--text-1); }
+
+  .hero { padding: 72px 0 48px; }
+  .hero h1 { font-family: ui-monospace, Consolas, monospace; color: var(--text-1); font-size: clamp(34px, 6vw, 56px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 18px; }
+  .hero h1 em { color: var(--accent); font-style: normal; }
+  .hero p.lede { font-size: 19px; color: var(--text-2); max-width: 640px; margin-bottom: 14px; }
+  .hero p.sub { font-family: ui-monospace, Consolas, monospace; font-size: 13px; color: var(--text-4); margin-bottom: 30px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 12px 22px; font-family: ui-monospace, Consolas, monospace; font-size: 14px; text-decoration: none; border: 1px solid var(--border); color: var(--text-2); }
+  .btn:hover { border-color: var(--accent-dim); color: var(--text-1); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 700; }
+  .btn.primary:hover { opacity: 0.9; }
+
+  .install { border: 1px solid var(--border); background: var(--surface); padding: 20px 22px; margin: 40px 0; }
+  .install h2 { font-family: ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-4); margin-bottom: 14px; }
+  .install .row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+  .install .row:last-child { margin-bottom: 0; }
+  .install code { font-family: ui-monospace, Consolas, monospace; font-size: 13px; background: var(--surface-2); border: 1px solid var(--border); padding: 8px 12px; color: var(--text-1); overflow-x: auto; white-space: nowrap; max-width: 100%; }
+  .install .label { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); min-width: 120px; }
+  .copy-btn { background: none; border: 1px solid var(--border); color: var(--text-3); font-family: ui-monospace, Consolas, monospace; font-size: 11px; padding: 6px 10px; cursor: pointer; }
+  .copy-btn:hover { border-color: var(--accent-dim); color: var(--text-1); }
+
+  .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 8px 0 22px; }
+  #search { flex: 1; min-width: 220px; background: var(--surface); border: 1px solid var(--border); color: var(--text-1); font-family: ui-monospace, Consolas, monospace; font-size: 14px; padding: 10px 14px; outline: none; }
+  #search:focus { border-color: var(--accent-dim); }
+  .chip { background: none; border: 1px solid var(--border); color: var(--text-3); font-family: ui-monospace, Consolas, monospace; font-size: 12px; padding: 8px 14px; cursor: pointer; }
+  .chip[aria-pressed="true"] { border-color: var(--accent-dim); background: var(--surface-2); color: var(--text-1); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; padding-bottom: 72px; }
+  .card { border: 1px solid var(--border); background: var(--surface); padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+  .card:hover { border-color: var(--border-hover); }
+  .card .kind { font-family: ui-monospace, Consolas, monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+  .card h3 { font-family: ui-monospace, Consolas, monospace; color: var(--text-1); font-size: 16px; letter-spacing: -0.3px; }
+  .card p { font-size: 14px; color: var(--text-3); flex: 1; }
+  .card .actions { display: flex; gap: 8px; margin-top: 4px; }
+  .card .actions a { font-family: ui-monospace, Consolas, monospace; font-size: 11px; color: var(--text-3); text-decoration: none; border: 1px solid var(--border); padding: 6px 10px; }
+  .card .actions a:hover { border-color: var(--accent-dim); color: var(--text-1); }
+  #empty { color: var(--text-4); font-family: ui-monospace, Consolas, monospace; font-size: 13px; padding: 30px 0 72px; display: none; }
+
+  footer { border-top: 1px solid var(--border); padding: 26px 0 40px; font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); }
+  footer a { color: var(--text-3); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./">ai<span>-</span>skills</a>
+    <nav class="top" aria-label="Site">
+      <a href="prompt-builder.html">Prompt Builder</a>
+      <a href="https://github.com/Amey-Thakur/ai-skills">GitHub</a>
+      <button id="theme-toggle" type="button" aria-label="Toggle color theme">theme</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Skills your AI agent<br>can actually <em>use</em>.</h1>
+      <p class="lede">
+        An open library of working methods and ready-to-run prompts — plain
+        markdown that plugs into Claude Code, Claude Desktop, Cursor,
+        Antigravity, OpenAI Codex, Gemini CLI, and anything else that reads a
+        file.
+      </p>
+      <p class="sub">MIT licensed · self-contained · nothing to execute or trust</p>
+      <div class="cta">
+        <a class="btn primary" href="#library">Browse the library</a>
+        <a class="btn" href="prompt-builder.html">Build a prompt</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="install" aria-label="Install">
+      <h2>Use it in one line</h2>
+      <div class="row">
+        <span class="label">Claude Code</span>
+        <code id="i-claude">/plugin marketplace add Amey-Thakur/ai-skills</code>
+        <button class="copy-btn" type="button" data-copy="i-claude">copy</button>
+      </div>
+      <div class="row">
+        <span class="label">Any editor</span>
+        <code id="i-clone">git clone https://github.com/Amey-Thakur/ai-skills</code>
+        <button class="copy-btn" type="button" data-copy="i-clone">copy</button>
+      </div>
+      <div class="row">
+        <span class="label">Any agent</span>
+        <code id="i-raw">https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/index.json</code>
+        <button class="copy-btn" type="button" data-copy="i-raw">copy</button>
+      </div>
+    </section>
+
+    <section id="library" aria-label="Library">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search skills and prompts..." aria-label="Search the library">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="skill" aria-pressed="false">Skills</button>
+        <button class="chip" type="button" data-filter="prompt" aria-pressed="false">Prompts</button>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p id="empty">Nothing matches that search.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Made by <a href="https://github.com/Amey-Thakur">Amey Thakur</a> ·
+    maker of <a href="https://github.com/Amey-Thakur/NotebookLab">NotebookLab</a> ·
+    MIT license · contributions welcome
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* Theme */
+  var toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", function () {
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("ai-skills-theme", next); } catch (_) {}
+  });
+
+  /* Copy buttons for install lines */
+  document.querySelectorAll(".copy-btn[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = document.getElementById(btn.getAttribute("data-copy")).textContent;
+      navigator.clipboard.writeText(text).then(function () {
+        var old = btn.textContent;
+        btn.textContent = "copied";
+        setTimeout(function () { btn.textContent = old; }, 1200);
+      });
+    });
+  });
+
+  /* Library: load the catalog, render cards, wire search + filter. */
+  var grid = document.getElementById("grid");
+  var empty = document.getElementById("empty");
+  var search = document.getElementById("search");
+  var entries = [];
+  var filter = "all";
+
+  function render() {
+    var term = search.value.trim().toLowerCase();
+    grid.innerHTML = "";
+    var shown = 0;
+    entries.forEach(function (e) {
+      if (filter !== "all" && e.kind !== filter) return;
+      if (term && (e.name + " " + e.description).toLowerCase().indexOf(term) === -1) return;
+      shown++;
+      var card = document.createElement("div");
+      card.className = "card";
+      var gh = "https://github.com/Amey-Thakur/ai-skills/blob/main/" + e.path;
+      card.innerHTML =
+        '<span class="kind">' + e.kind + "</span>" +
+        "<h3></h3>" +
+        "<p></p>" +
+        '<div class="actions">' +
+        '<a href="' + gh + '">view</a>' +
+        '<a href="#" data-raw="' + e.raw_url + '">copy content</a>' +
+        "</div>";
+      card.querySelector("h3").textContent = e.name;
+      card.querySelector("p").textContent = e.description;
+      grid.appendChild(card);
+    });
+    empty.style.display = shown === 0 ? "block" : "none";
+  }
+
+  grid.addEventListener("click", function (event) {
+    var link = event.target.closest("a[data-raw]");
+    if (!link) return;
+    event.preventDefault();
+    fetch(link.getAttribute("data-raw"))
+      .then(function (r) { return r.text(); })
+      .then(function (text) { return navigator.clipboard.writeText(text); })
+      .then(function () {
+        var old = link.textContent;
+        link.textContent = "copied";
+        setTimeout(function () { link.textContent = old; }, 1200);
+      })
+      .catch(function () { link.textContent = "copy failed"; });
+  });
+
+  search.addEventListener("input", render);
+  document.querySelectorAll(".chip[data-filter]").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      filter = chip.getAttribute("data-filter");
+      document.querySelectorAll(".chip[data-filter]").forEach(function (c) {
+        c.setAttribute("aria-pressed", c === chip ? "true" : "false");
+      });
+      render();
+    });
+  });
+
+  fetch("index.json")
+    .then(function (r) { return r.json(); })
+    .then(function (data) { entries = data.entries; render(); })
+    .catch(function () {
+      empty.textContent = "Could not load the catalog. Browse it on GitHub instead.";
+      empty.style.display = "block";
+    });
+})();
+</script>
+</body>
+</html>

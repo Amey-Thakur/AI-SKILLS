@@ -1,0 +1,40 @@
+# AI Skills
+
+> Plug-and-play skills and prompts for every AI coding agent. Each entry
+> below is self-contained markdown, fetchable at its URL. Skills are working
+> methods to follow; prompts are templates to fill and run. See AGENTS.md
+> for usage rules.
+
+## Skills
+
+- [accessibility-review](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/accessibility-review/SKILL.md): Audit a UI for real accessibility, keyboard-first, with concrete failures and fixes rather than checkbox compliance. Use when reviewing or building any user interface.
+- [api-design](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/api-design/SKILL.md): Design HTTP and library APIs that are predictable, hard to misuse, and stable under growth. Use when creating or reviewing endpoints, public functions, or wire formats.
+- [code-review](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/code-review/SKILL.md): Review code changes for correctness, security, and maintainability with severity-ranked, evidence-based findings. Use when asked to review a diff, a pull request, or a file before merge.
+- [commit-messages](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/commit-messages/SKILL.md): Write commit messages that explain change and intent so history stays useful. Use when committing work or asked to draft a commit message for a diff.
+- [debugging](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/debugging/SKILL.md): Find the root cause of a bug with a hypothesis-driven loop instead of guess-and-patch. Use when something fails, crashes, or behaves wrongly and the cause is not yet known.
+- [incident-postmortem](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/incident-postmortem/SKILL.md): Write a blameless postmortem that finds systemic causes and produces actions that actually prevent recurrence. Use after an outage, data incident, or serious bug reaches users.
+- [prompt-engineering](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/prompt-engineering/SKILL.md): Build prompts that get accurate, reliably-shaped output from any LLM, choosing the right technique for the task. Use when writing, improving, or debugging a prompt.
+- [refactoring](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/refactoring/SKILL.md): Improve code structure in small, always-green steps without changing behavior. Use when asked to clean up, simplify, restructure, or de-duplicate working code.
+- [research-synthesis](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/research-synthesis/SKILL.md): Turn multiple sources into a defensible, source-attributed answer that separates fact from inference. Use when researching a question across documents, articles, or search results.
+- [sql-optimization](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/sql-optimization/SKILL.md): Diagnose and fix slow SQL with the query plan as evidence, not folklore. Use when a query is slow, a table scan appears, or database load climbs.
+- [technical-writing](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/technical-writing/SKILL.md): Write documentation, READMEs, and guides that respect the reader's time and answer their actual question. Use when drafting or editing any technical document.
+- [testing-strategy](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/testing-strategy/SKILL.md): Decide what to test, at which level, and what to skip, so tests catch real regressions without freezing the design. Use when writing tests or planning coverage for a change.
+
+## Prompts
+
+- [brainstorm-divergent](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/brainstorm-divergent.md): Generate genuinely different ideas across the solution space, then converge on the strongest few.
+- [changelog-from-diff](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/changelog-from-diff.md): Turn a diff or commit list into user-facing changelog entries that describe outcomes, not code.
+- [compare-options](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/compare-options.md): Compare options against criteria that matter and end with a defensible recommendation.
+- [data-to-insights](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/data-to-insights.md): Read a table or dataset and report what it actually shows - findings, not decoration, with honest caveats.
+- [email-professional](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/email-professional.md): Draft a professional email that gets to the point, lands the right tone, and makes the next step obvious.
+- [explain-code](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/explain-code.md): Explain what a piece of code does, why it is shaped that way, and where it can bite.
+- [explain-like-im-five](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/explain-like-im-five.md): Explain any concept in genuinely simple terms with one honest analogy, without becoming wrong.
+- [extract-action-items](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/extract-action-items.md): Pull every commitment, task, and deadline out of meeting notes or a thread, with owners.
+- [interview-questions](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/interview-questions.md): Generate interview questions that reveal real capability for a specific role, with what good answers sound like.
+- [meeting-minutes](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/meeting-minutes.md): Turn a transcript or rough notes into minutes people actually consult - decisions, actions, and open questions first.
+- [rewrite-for-clarity](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/rewrite-for-clarity.md): Rewrite any text to be clearer and shorter without changing its meaning or losing content.
+- [risk-analysis](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/risk-analysis.md): Surface what can go wrong with a plan, ranked by expected damage, with mitigations that change the odds.
+- [socratic-tutor](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/socratic-tutor.md): Teach a topic by asking questions that lead the learner to build the understanding themselves.
+- [summarize-document](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/summarize-document.md): Summarize any document into a faithful, layered brief that never invents content.
+- [user-story-breakdown](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/user-story-breakdown.md): Break a feature idea into small, testable user stories with acceptance criteria and honest unknowns.
+- [write-tests](https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/write-tests.md): Generate meaningful tests for given code, edge cases first, in the project's own style.

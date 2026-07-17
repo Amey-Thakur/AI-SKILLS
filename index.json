@@ -1,0 +1,291 @@
+{
+  "name": "AI Skills",
+  "description": "Plug-and-play skills and prompts for every AI coding agent.",
+  "homepage": "https://amey-thakur.github.io/ai-skills/",
+  "repository": "https://github.com/Amey-Thakur/ai-skills",
+  "license": "MIT",
+  "count": {
+    "skills": 12,
+    "prompts": 16
+  },
+  "entries": [
+    {
+      "kind": "skill",
+      "name": "accessibility-review",
+      "description": "Audit a UI for real accessibility, keyboard-first, with concrete failures and fixes rather than checkbox compliance. Use when reviewing or building any user interface.",
+      "path": "skills/accessibility-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/accessibility-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "api-design",
+      "description": "Design HTTP and library APIs that are predictable, hard to misuse, and stable under growth. Use when creating or reviewing endpoints, public functions, or wire formats.",
+      "path": "skills/api-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/api-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-review",
+      "description": "Review code changes for correctness, security, and maintainability with severity-ranked, evidence-based findings. Use when asked to review a diff, a pull request, or a file before merge.",
+      "path": "skills/code-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/code-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "commit-messages",
+      "description": "Write commit messages that explain change and intent so history stays useful. Use when committing work or asked to draft a commit message for a diff.",
+      "path": "skills/commit-messages/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/commit-messages/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "debugging",
+      "description": "Find the root cause of a bug with a hypothesis-driven loop instead of guess-and-patch. Use when something fails, crashes, or behaves wrongly and the cause is not yet known.",
+      "path": "skills/debugging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "incident-postmortem",
+      "description": "Write a blameless postmortem that finds systemic causes and produces actions that actually prevent recurrence. Use after an outage, data incident, or serious bug reaches users.",
+      "path": "skills/incident-postmortem/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/incident-postmortem/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "prompt-engineering",
+      "description": "Build prompts that get accurate, reliably-shaped output from any LLM, choosing the right technique for the task. Use when writing, improving, or debugging a prompt.",
+      "path": "skills/prompt-engineering/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/prompt-engineering/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "refactoring",
+      "description": "Improve code structure in small, always-green steps without changing behavior. Use when asked to clean up, simplify, restructure, or de-duplicate working code.",
+      "path": "skills/refactoring/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/refactoring/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "research-synthesis",
+      "description": "Turn multiple sources into a defensible, source-attributed answer that separates fact from inference. Use when researching a question across documents, articles, or search results.",
+      "path": "skills/research-synthesis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/research-synthesis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "sql-optimization",
+      "description": "Diagnose and fix slow SQL with the query plan as evidence, not folklore. Use when a query is slow, a table scan appears, or database load climbs.",
+      "path": "skills/sql-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/sql-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "technical-writing",
+      "description": "Write documentation, READMEs, and guides that respect the reader's time and answer their actual question. Use when drafting or editing any technical document.",
+      "path": "skills/technical-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/technical-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "testing-strategy",
+      "description": "Decide what to test, at which level, and what to skip, so tests catch real regressions without freezing the design. Use when writing tests or planning coverage for a change.",
+      "path": "skills/testing-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/testing-strategy/SKILL.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "brainstorm-divergent",
+      "description": "Generate genuinely different ideas across the solution space, then converge on the strongest few.",
+      "variables": [
+        "{problem}: the problem or goal to ideate on",
+        "{constraints}: hard limits ideas must respect (budget, tech, time), if any"
+      ],
+      "settings": "Temperature 0.8-1.0 for the divergent phase.",
+      "path": "prompts/brainstorm-divergent.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/brainstorm-divergent.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "changelog-from-diff",
+      "description": "Turn a diff or commit list into user-facing changelog entries that describe outcomes, not code.",
+      "variables": [
+        "{changes}: the diff, commit list, or PR descriptions",
+        "{audience}: who reads the changelog (end users, developers, operators)"
+      ],
+      "settings": "Temperature 0.2-0.4.",
+      "path": "prompts/changelog-from-diff.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/changelog-from-diff.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "compare-options",
+      "description": "Compare options against criteria that matter and end with a defensible recommendation.",
+      "variables": [
+        "{options}: the options being weighed",
+        "{context}: the situation, constraints, and what success means"
+      ],
+      "settings": "Temperature 0.2-0.4.",
+      "path": "prompts/compare-options.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/compare-options.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "data-to-insights",
+      "description": "Read a table or dataset and report what it actually shows - findings, not decoration, with honest caveats.",
+      "variables": [
+        "{data}: the table, CSV excerpt, or numbers",
+        "{question}: what decision or question the analysis serves"
+      ],
+      "settings": "Temperature 0-0.3. Ask for the data as text/CSV, not a description of it.",
+      "path": "prompts/data-to-insights.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/data-to-insights.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "email-professional",
+      "description": "Draft a professional email that gets to the point, lands the right tone, and makes the next step obvious.",
+      "variables": [
+        "{purpose}: what the email must achieve",
+        "{recipient}: who it goes to and your relationship",
+        "{key_points}: the facts, context, or decisions to include",
+        "{tone}: e.g. warm, neutral, firm"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/email-professional.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/email-professional.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "explain-code",
+      "description": "Explain what a piece of code does, why it is shaped that way, and where it can bite.",
+      "variables": [
+        "{code}: the code to explain",
+        "{level}: the reader's experience (e.g. new to the language, senior but new to this codebase)"
+      ],
+      "settings": "Temperature 0-0.3.",
+      "path": "prompts/explain-code.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/explain-code.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "explain-like-im-five",
+      "description": "Explain any concept in genuinely simple terms with one honest analogy, without becoming wrong.",
+      "variables": [
+        "{concept}: the thing to explain",
+        "{level}: optional - actual audience if not literally five (e.g. a smart 12-year-old, a non-technical manager)"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/explain-like-im-five.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/explain-like-im-five.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "extract-action-items",
+      "description": "Pull every commitment, task, and deadline out of meeting notes or a thread, with owners.",
+      "variables": [
+        "{text}: the notes, transcript, or thread to mine"
+      ],
+      "settings": "Temperature 0-0.2; precision matters more than prose.",
+      "path": "prompts/extract-action-items.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/extract-action-items.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "interview-questions",
+      "description": "Generate interview questions that reveal real capability for a specific role, with what good answers sound like.",
+      "variables": [
+        "{role}: the position and seniority",
+        "{focus}: the skills or responsibilities that matter most"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/interview-questions.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/interview-questions.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "meeting-minutes",
+      "description": "Turn a transcript or rough notes into minutes people actually consult - decisions, actions, and open questions first.",
+      "variables": [
+        "{notes}: the transcript or raw notes",
+        "{meeting}: what the meeting was and who attended, if not in the notes"
+      ],
+      "settings": "Temperature 0-0.3.",
+      "path": "prompts/meeting-minutes.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/meeting-minutes.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "rewrite-for-clarity",
+      "description": "Rewrite any text to be clearer and shorter without changing its meaning or losing content.",
+      "variables": [
+        "{text}: the text to rewrite",
+        "{audience}: who it is for"
+      ],
+      "settings": "Temperature 0.2-0.4.",
+      "path": "prompts/rewrite-for-clarity.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/rewrite-for-clarity.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "risk-analysis",
+      "description": "Surface what can go wrong with a plan, ranked by expected damage, with mitigations that change the odds.",
+      "variables": [
+        "{plan}: the plan, decision, or design to stress-test",
+        "{context}: environment, stakes, and constraints"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/risk-analysis.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/risk-analysis.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "socratic-tutor",
+      "description": "Teach a topic by asking questions that lead the learner to build the understanding themselves.",
+      "variables": [
+        "{topic}: what the learner wants to understand",
+        "{background}: what they already know"
+      ],
+      "settings": "Temperature 0.5-0.7. Multi-turn; expects the learner to reply.",
+      "path": "prompts/socratic-tutor.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/socratic-tutor.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "summarize-document",
+      "description": "Summarize any document into a faithful, layered brief that never invents content.",
+      "variables": [
+        "{document}: the full text to summarize",
+        "{audience}: who reads the summary (e.g. an executive, a new team member)",
+        "{length}: the size budget (e.g. 5 bullets, 200 words)"
+      ],
+      "settings": "Temperature 0-0.3. Works with any capable model.",
+      "path": "prompts/summarize-document.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/summarize-document.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "user-story-breakdown",
+      "description": "Break a feature idea into small, testable user stories with acceptance criteria and honest unknowns.",
+      "variables": [
+        "{feature}: the feature or goal to break down",
+        "{context}: product, users, and any constraints"
+      ],
+      "settings": "Temperature 0.2-0.4.",
+      "path": "prompts/user-story-breakdown.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/user-story-breakdown.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-tests",
+      "description": "Generate meaningful tests for given code, edge cases first, in the project's own style.",
+      "variables": [
+        "{code}: the code under test",
+        "{framework}: the test framework and an example existing test if available"
+      ],
+      "settings": "Temperature 0-0.3.",
+      "path": "prompts/write-tests.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/write-tests.md"
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Builder — build prompts that work, in your browser | AI Skills</title>
+<meta name="description" content="Free browser prompt builder. Describe the job, pick the technique (few-shot, step-by-step reasoning, role and style, structured output), and get a complete, ready-to-run prompt for any AI model.">
+<link rel="canonical" href="https://amey-thakur.github.io/ai-skills/prompt-builder.html">
+<script>
+  try {
+    var stored = localStorage.getItem("ai-skills-theme");
+    if (stored === "light" || stored === "dark") {
+      document.documentElement.setAttribute("data-theme", stored);
+    }
+  } catch (_) {}
+</script>
+<style>
+  :root {
+    --bg: #111111; --surface: #161616; --surface-2: #1c1c1c; --border: #2a2a2a;
+    --border-hover: #3a3a3a; --text-1: #eae6e0; --text-2: #bfb9b2; --text-3: #a09a93;
+    --text-4: #8a847d; --accent: #8ab2ea; --accent-dim: #5f8ed6;
+  }
+  [data-theme="light"] {
+    --bg: #efece3; --surface: #e7e3d8; --surface-2: #dfdbcf; --border: #ccc7b8;
+    --border-hover: #b5b0a0; --text-1: #1d1c1a; --text-2: #3d3b36; --text-3: #5a574f;
+    --text-4: #767268; --accent: #2f62b8; --accent-dim: #4a70a9;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text-2); font-family: Georgia, serif; font-size: 16px; line-height: 1.6; }
+  a { color: var(--accent); }
+  .mono { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  header.site { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { font-family: ui-monospace, Consolas, monospace; font-weight: 700; color: var(--text-1); font-size: 18px; text-decoration: none; }
+  .brand span { color: var(--accent); }
+  nav.top { display: flex; gap: 18px; align-items: center; font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
+  nav.top a { color: var(--text-3); text-decoration: none; }
+  nav.top a:hover { color: var(--text-1); }
+  #theme-toggle { background: none; border: 1px solid var(--border); color: var(--text-3); padding: 5px 10px; cursor: pointer; font-family: inherit; font-size: 12px; }
+
+  .head { padding: 44px 0 8px; }
+  .head h1 { font-family: ui-monospace, Consolas, monospace; color: var(--text-1); font-size: clamp(26px, 4vw, 38px); letter-spacing: -1px; margin-bottom: 10px; }
+  .head p { color: var(--text-3); max-width: 640px; margin-bottom: 6px; }
+  .head p.small { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); }
+
+  .builder { display: grid; grid-template-columns: 1fr; gap: 22px; padding: 28px 0 72px; }
+  @media (min-width: 900px) { .builder { grid-template-columns: 1fr 1fr; align-items: start; } }
+
+  fieldset { border: 1px solid var(--border); background: var(--surface); padding: 20px; margin-bottom: 16px; }
+  legend { font-family: ui-monospace, Consolas, monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-4); padding: 0 8px; }
+  label.f { display: block; font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); margin: 14px 0 5px; }
+  label.f:first-of-type { margin-top: 0; }
+  label.f .opt { color: var(--text-4); opacity: 0.7; }
+  input[type="text"], textarea {
+    width: 100%; background: var(--surface-2); border: 1px solid var(--border);
+    color: var(--text-1); font-family: Georgia, serif; font-size: 15px; padding: 10px 12px; outline: none;
+  }
+  input[type="text"]:focus, textarea:focus { border-color: var(--accent-dim); }
+  textarea { resize: vertical; min-height: 64px; }
+  .types { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .type {
+    border: 1px solid var(--border); background: var(--surface-2); padding: 10px 12px;
+    cursor: pointer; font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-3);
+  }
+  .type[aria-pressed="true"] { border-color: var(--accent-dim); color: var(--text-1); background: var(--surface); }
+  .type small { display: block; color: var(--text-4); font-size: 10px; margin-top: 2px; }
+  .hint { font-family: ui-monospace, Consolas, monospace; font-size: 11px; color: var(--accent-dim); margin-top: 6px; }
+
+  .out { position: sticky; top: 20px; }
+  .out .bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+  .out .bar span { font-family: ui-monospace, Consolas, monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-4); }
+  .out .actions { display: flex; gap: 8px; }
+  .out button { background: none; border: 1px solid var(--border); color: var(--text-3); font-family: ui-monospace, Consolas, monospace; font-size: 12px; padding: 7px 14px; cursor: pointer; }
+  .out button:hover { border-color: var(--accent-dim); color: var(--text-1); }
+  .out button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 700; }
+  pre#result {
+    border: 1px solid var(--border); background: var(--surface); color: var(--text-1);
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 13px; line-height: 1.6;
+    padding: 18px; white-space: pre-wrap; word-break: break-word; min-height: 300px; max-height: 70vh; overflow: auto;
+  }
+  .settings { border: 1px solid var(--border); background: var(--surface); padding: 12px 16px; margin-top: 10px; font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-3); }
+  .settings b { color: var(--text-1); }
+  footer { border-top: 1px solid var(--border); padding: 24px 0 40px; font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./">ai<span>-</span>skills</a>
+    <nav class="top" aria-label="Site">
+      <a href="./">Library</a>
+      <a href="https://github.com/Amey-Thakur/ai-skills">GitHub</a>
+      <button id="theme-toggle" type="button" aria-label="Toggle color theme">theme</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="head">
+    <h1>Prompt Builder</h1>
+    <p>
+      Describe the job, and the builder assembles a complete prompt using the
+      technique that fits: worked examples for sorting and extraction,
+      step-by-step reasoning for logic, role and style for creative work, a
+      strict schema for structured output.
+    </p>
+    <p class="small">Runs entirely in your browser. Nothing you type leaves this page.</p>
+  </div>
+
+  <div class="builder">
+    <form id="form" autocomplete="off">
+      <fieldset>
+        <legend>The job</legend>
+        <label class="f" for="task">What do you want the AI to do?</label>
+        <textarea id="task" rows="3" placeholder="e.g. Sort incoming support emails into billing, bug, or feature request, with a one-line reason for each."></textarea>
+        <p class="hint" id="detect-hint" hidden></p>
+
+        <label class="f">Task type</label>
+        <div class="types" role="group" aria-label="Task type">
+          <button type="button" class="type" data-type="extract" aria-pressed="false">Classify / Extract<small>sorting, labeling, pulling data out</small></button>
+          <button type="button" class="type" data-type="reason" aria-pressed="false">Reason / Analyze<small>logic, math, comparisons, decisions</small></button>
+          <button type="button" class="type" data-type="create" aria-pressed="false">Create / Write<small>emails, posts, stories, copy</small></button>
+          <button type="button" class="type" data-type="structured" aria-pressed="false">Structured output<small>JSON, tables, strict formats</small></button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sharpen it <span class="opt">— all optional</span></legend>
+        <label class="f" for="context">Context the model needs</label>
+        <textarea id="context" rows="2" placeholder="Background, definitions, the situation."></textarea>
+
+        <label class="f" for="examples">Worked examples <span class="opt">(input → expected output, one pair per line)</span></label>
+        <textarea id="examples" rows="3" placeholder="Refund taking 3 weeks?! → billing — payment delay complaint"></textarea>
+
+        <label class="f" for="constraints">Rules and constraints</label>
+        <textarea id="constraints" rows="2" placeholder="e.g. under 200 words; never invent order numbers; UK spelling"></textarea>
+
+        <label class="f" for="audience">Audience</label>
+        <input type="text" id="audience" placeholder="e.g. non-technical customers">
+
+        <label class="f" for="tone">Tone</label>
+        <input type="text" id="tone" placeholder="e.g. plain and direct">
+
+        <label class="f" for="format">Output format</label>
+        <input type="text" id="format" placeholder="e.g. a five-bullet summary; JSON with fields category, reason">
+      </fieldset>
+    </form>
+
+    <div class="out">
+      <div class="bar">
+        <span>Your prompt</span>
+        <div class="actions">
+          <button type="button" id="copy" class="primary">Copy</button>
+          <button type="button" id="clear">Clear</button>
+        </div>
+      </div>
+      <pre id="result" aria-live="polite">Describe the job on the left and the prompt builds here as you type.</pre>
+      <div class="settings" id="settings" hidden></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Part of <a href="./">AI Skills</a> · the same method as the
+    <a href="https://github.com/Amey-Thakur/ai-skills/blob/main/skills/prompt-engineering/SKILL.md">prompt-engineering skill</a>
+    · MIT license
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", function () {
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("ai-skills-theme", next); } catch (_) {}
+  });
+
+  var fields = ["task", "context", "examples", "constraints", "audience", "tone", "format"];
+  var el = {};
+  fields.forEach(function (id) { el[id] = document.getElementById(id); });
+  var result = document.getElementById("result");
+  var settingsBox = document.getElementById("settings");
+  var detectHint = document.getElementById("detect-hint");
+  var typeButtons = Array.prototype.slice.call(document.querySelectorAll(".type"));
+  var chosenType = null;   /* explicit user choice */
+
+  /* Honest keyword heuristics for a starting suggestion; the user can always
+     override with the buttons. */
+  function detectType(task) {
+    var t = task.toLowerCase();
+    if (/json|csv|table|schema|fields|yaml|xml|structured/.test(t)) return "structured";
+    if (/classif|categor|sort|label|tag|extract|pull out|identify|detect/.test(t)) return "extract";
+    if (/why|analy|compare|decide|calculat|math|reason|evaluate|estimate|debug|prove/.test(t)) return "reason";
+    if (/write|draft|story|email|post|poem|copy|slogan|describe|announce|blog/.test(t)) return "create";
+    return null;
+  }
+
+  function activeType() {
+    return chosenType || detectType(el.task.value) || "reason";
+  }
+
+  var SETTINGS = {
+    extract: "<b>Run it with:</b> temperature 0–0.2 · few-shot examples matter more than instructions here — add 2–3 if you can",
+    reason: "<b>Run it with:</b> temperature 0–0.3 · give the model room to think before the answer",
+    create: "<b>Run it with:</b> temperature 0.7–0.9 · constraints shape voice better than adjectives",
+    structured: "<b>Run it with:</b> temperature 0 · validate the output against your schema on arrival"
+  };
+
+  function esc(text) { return text.trim(); }
+
+  function build() {
+    var task = esc(el.task.value);
+    if (!task) {
+      result.textContent = "Describe the job on the left and the prompt builds here as you type.";
+      settingsBox.hidden = true;
+      return;
+    }
+    var type = activeType();
+    var lines = [];
+
+    /* Role, earned only where persona helps. */
+    if (type === "create") {
+      var audience = esc(el.audience.value);
+      lines.push("You are a skilled writer" + (audience ? " writing for " + audience + "." : "."));
+      lines.push("");
+    } else if (esc(el.audience.value)) {
+      lines.push("Your reader: " + esc(el.audience.value) + ".");
+      lines.push("");
+    }
+
+    lines.push("Task: " + task);
+    lines.push("");
+
+    if (esc(el.context.value)) {
+      lines.push("Context:");
+      lines.push(esc(el.context.value));
+      lines.push("");
+    }
+
+    /* Technique blocks per type. */
+    if (type === "reason") {
+      lines.push("Think through this step by step before answering: lay out the");
+      lines.push("relevant facts, work through the logic, then check the result");
+      lines.push("against the question. Give the reasoning first, then a clearly");
+      lines.push("separated final answer starting with \"Answer:\".");
+      lines.push("");
+    }
+    if (type === "structured") {
+      var schema = esc(el.format.value);
+      lines.push("Output ONLY the structured result, no prose around it.");
+      lines.push(schema ? "Format: " + schema : "Format: {describe_your_exact_schema_here}");
+      lines.push("If a value is unknown, use null — never invent one.");
+      lines.push("");
+    }
+
+    var rules = [];
+    if (esc(el.constraints.value)) rules.push(esc(el.constraints.value));
+    if (esc(el.tone.value)) rules.push("Write in a " + esc(el.tone.value) + " tone.");
+    if (type !== "structured" && esc(el.format.value)) rules.push("Format the answer as " + esc(el.format.value) + ".");
+    rules.push("If information needed for the task is missing, say what is missing instead of guessing.");
+    lines.push("Rules:");
+    rules.forEach(function (r) { lines.push("- " + r); });
+    lines.push("");
+
+    var examples = esc(el.examples.value);
+    if (examples) {
+      lines.push("Examples of correct results:");
+      examples.split(/\n/).forEach(function (line) {
+        if (line.trim()) lines.push("- " + line.trim());
+      });
+      lines.push("");
+    } else if (type === "extract") {
+      lines.push("(Add 2-3 worked examples above the input when you use this —");
+      lines.push("for sorting and extraction they teach the format better than");
+      lines.push("any instruction.)");
+      lines.push("");
+    }
+
+    lines.push("The input:");
+    lines.push("<input>");
+    lines.push("{paste_your_input_here}");
+    lines.push("</input>");
+
+    result.textContent = lines.join("\n");
+    settingsBox.innerHTML = SETTINGS[type];
+    settingsBox.hidden = false;
+
+    /* Show what was auto-detected when the user has not chosen. */
+    if (!chosenType) {
+      var detected = detectType(el.task.value);
+      detectHint.hidden = !detected;
+      if (detected) {
+        var names = { extract: "Classify / Extract", reason: "Reason / Analyze", create: "Create / Write", structured: "Structured output" };
+        detectHint.textContent = "Looks like: " + names[detected] + " (tap a type to override)";
+      }
+    } else {
+      detectHint.hidden = true;
+    }
+    typeButtons.forEach(function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-type") === type ? "true" : "false");
+    });
+  }
+
+  typeButtons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      chosenType = chosenType === b.getAttribute("data-type") ? null : b.getAttribute("data-type");
+      build();
+    });
+  });
+  fields.forEach(function (id) { el[id].addEventListener("input", build); });
+
+  document.getElementById("copy").addEventListener("click", function () {
+    navigator.clipboard.writeText(result.textContent).then(function () {
+      var btn = document.getElementById("copy");
+      btn.textContent = "Copied";
+      setTimeout(function () { btn.textContent = "Copy"; }, 1200);
+    });
+  });
+  document.getElementById("clear").addEventListener("click", function () {
+    fields.forEach(function (id) { el[id].value = ""; });
+    chosenType = null;
+    build();
+  });
+})();
+</script>
+</body>
+</html>
