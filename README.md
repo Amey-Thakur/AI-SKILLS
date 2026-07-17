@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/favicon.svg" alt="AI-SKILLS logo" width="88">
+
 # AI Skills
 
 **Plug-and-play skills and prompts for every AI coding agent.**
@@ -52,7 +54,7 @@ a product does.
 | Tool | One line |
 |---|---|
 | Claude Desktop, claude.ai | Upload a skill folder in Settings, Capabilities, Skills |
-| Codex, Gemini CLI, Cursor, Copilot, Windsurf, Zed, Aider | Reference a skill from your `AGENTS.md` |
+| Codex, Gemini CLI, Cursor, Copilot, Windsurf, Antigravity, Zed, Aider | Reference a skill from your `AGENTS.md` |
 | Cline | `curl -s <raw>/skills/code-review/SKILL.md > .clinerules/code-review.md` |
 | Any API | Fetch the raw file; the body is your system prompt |
 

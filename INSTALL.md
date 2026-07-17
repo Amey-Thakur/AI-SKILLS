@@ -49,7 +49,7 @@ also reads `AGENTS.md` (below).
 
 ## AGENTS.md standard
 
-Codex CLI, Gemini CLI, Cursor, GitHub Copilot, Windsurf, Zed, Aider, Warp,
+Codex CLI, Gemini CLI, Cursor, GitHub Copilot, Windsurf, Antigravity, Zed, Aider, Warp,
 Jules, and Junie all read an `AGENTS.md` at your repository root. Reference the
 methods you want from there, so any of them can pull the full text on demand:
 
