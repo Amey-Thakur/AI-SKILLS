@@ -5,7 +5,7 @@
 **Plug-and-play skills and prompts for every AI coding agent.**
 
 Claude Code · Claude Desktop · Cursor · OpenAI Codex · Gemini CLI ·
-GitHub Copilot · Windsurf · Cline · Zed · Aider · any agent that reads a file
+GitHub Copilot · Windsurf · Antigravity · Cline · Zed · Aider · any agent that reads a file
 
 [Website](https://amey-thakur.github.io/AI-SKILLS/) ·
 [Prompt Studio](https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html) ·

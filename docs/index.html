@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 <script>
   try {
     var stored = localStorage.getItem("ai-skills-theme");
@@ -95,7 +95,17 @@
 
   @media (max-width: 640px) {
     .hero { padding: 56px 0 30px; }
+    .hero p.lede { font-size: 18px; }
+    .install { padding: 20px; }
+    .install .row { gap: 10px; }
     .install .label { min-width: 100%; }
+    .install code { font-size: 12.5px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .hero .cta { flex-direction: column; align-items: stretch; }
+    .hero .cta .btn { width: 100%; justify-content: center; padding: 14px 20px; }
+    #search { min-width: 100%; }
   }
 </style>
 </head>
@@ -140,7 +150,7 @@
       <div class="works" aria-label="Compatible tools">
         <span>Claude Code</span><span>Claude Desktop</span><span>Cursor</span>
         <span>OpenAI Codex</span><span>Gemini CLI</span><span>GitHub Copilot</span>
-        <span>Windsurf</span><span>Cline</span><span>Zed</span><span>Aider</span>
+        <span>Windsurf</span><span>Antigravity</span><span>Cline</span><span>Zed</span><span>Aider</span>
       </div>
     </div>
   </section>

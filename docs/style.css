@@ -129,8 +129,23 @@ footer.site a { color: var(--text-3); }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
-@media (max-width: 640px) {
-  .wrap { padding: 0 20px; }
+
+/* Tablet and below: tighten the shell without losing anything. */
+@media (max-width: 820px) {
+  .wrap { padding: 0 24px; }
+  nav.top { gap: 18px; font-size: 13px; }
+  .btn { padding: 12px 20px; }
+}
+
+/* Phones: the header wraps to two centered rows so every link stays
+   reachable, and tap targets stay comfortable. No hamburger needed for a
+   three-link nav. */
+@media (max-width: 560px) {
+  .wrap { padding: 0 18px; }
   body { font-size: 16px; }
-  nav.top { gap: 16px; }
+  header.site { padding: 12px 0; }
+  header.site .wrap { flex-wrap: wrap; justify-content: center; gap: 12px 18px; }
+  .brand { font-size: 18px; }
+  nav.top { gap: 16px; width: 100%; justify-content: center; }
+  nav.top a { padding: 4px 2px; }
 }

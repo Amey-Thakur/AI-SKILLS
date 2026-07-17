@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 <script>
   try {
     var stored = localStorage.getItem("ai-skills-theme");
@@ -78,6 +78,17 @@
   .settings b { color: var(--text-1); }
   .fill-note { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); margin-top: 12px; line-height: 1.6; }
   .fill-note code { color: var(--accent); }
+
+  /* Single column below the two-pane breakpoint: the output follows the form
+     in the flow rather than sticking, so it never covers the inputs. */
+  @media (max-width: 979px) { .out { position: static; } }
+  @media (max-width: 640px) {
+    .head { padding: 40px 0 8px; }
+    .head p.lede { font-size: 17px; }
+    fieldset { padding: 22px; }
+    .science { margin: 28px 0 8px; }
+    pre#result { padding: 18px; font-size: 13.5px; }
+  }
 </style>
 </head>
 <body>

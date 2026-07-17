@@ -33,6 +33,20 @@ by name.
 Settings, then Capabilities, then Skills. Upload a skill folder (the one
 containing `SKILL.md`). It becomes available in every conversation.
 
+## Google Antigravity
+
+Antigravity loads the same `SKILL.md` folders natively. Copy a skill into
+either scope:
+
+```bash
+git clone https://github.com/Amey-Thakur/AI-SKILLS
+cp -r AI-SKILLS/skills/code-review ~/.gemini/config/skills/   # every project
+cp -r AI-SKILLS/skills/code-review .agents/skills/            # this project
+```
+
+The agent equips a skill when the task matches its description. Antigravity
+also reads `AGENTS.md` (below).
+
 ## AGENTS.md standard
 
 Codex CLI, Gemini CLI, Cursor, GitHub Copilot, Windsurf, Zed, Aider, Warp,
