@@ -96,6 +96,10 @@
   .card .actions a:hover { border-color: var(--accent); color: var(--text-1); }
   #empty { color: var(--text-4); font-family: "Play", ui-monospace, Consolas, monospace; font-size: 14px; padding: 40px 0; display: none; }
 
+  .eco-lede { font-size: 16px; color: var(--text-3); max-width: 680px; margin-bottom: 22px; }
+  .card .meta { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); }
+  .card .meta b { color: var(--accent); font-weight: 400; }
+
   @media (max-width: 640px) {
     .hero { padding: 56px 0 30px; }
     .hero p.lede { font-size: 18px; }
@@ -195,6 +199,17 @@
       <div class="grid" id="grid"></div>
       <p id="empty">Nothing matches that search.</p>
     </section>
+
+    <section class="block" id="ecosystem" aria-label="Ecosystem">
+      <p class="section-label">The rest of the world's skills</p>
+      <p class="eco-lede">
+        Our library is original and complete above. Beyond it, this index
+        covers every major skill collection on GitHub: 8,000+ skills, one
+        fetch away for any agent via
+        <a href="https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json">ecosystem.json</a>.
+      </p>
+      <div class="grid" id="eco-grid"></div>
+    </section>
   </div>
 </main>
 
@@ -278,6 +293,27 @@
   fetch("index.json").then(function (r) { return r.json(); })
     .then(function (data) { entries = data.entries; render(); })
     .catch(function () { empty.textContent = "Could not load the catalog. Browse it on GitHub instead."; empty.style.display = "block"; });
+
+  /* The ecosystem: every major collection, linked, with per-skill counts. */
+  var ecoGrid = document.getElementById("eco-grid");
+  function starsLabel(n) { return n >= 1000 ? Math.round(n / 1000) + "k" : String(n); }
+  fetch("ecosystem.json").then(function (r) { return r.json(); })
+    .then(function (data) {
+      data.collections.forEach(function (c) {
+        var card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML =
+          '<span class="kind">collection</span><h3></h3><p></p>' +
+          '<span class="meta"><b>' + starsLabel(c.stars) + ' stars</b>' +
+          (c.skills ? " · " + c.skills.length + " skills linked" : "") + "</span>" +
+          '<div class="actions"><a rel="noopener">Visit</a></div>';
+        card.querySelector("h3").textContent = c.name;
+        card.querySelector("p").textContent = c.focus;
+        card.querySelector(".actions a").href = c.url;
+        ecoGrid.appendChild(card);
+      });
+    })
+    .catch(function () { document.getElementById("ecosystem").style.display = "none"; });
 })();
 </script>
 </body>

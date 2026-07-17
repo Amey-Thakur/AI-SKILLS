@@ -3,7 +3,9 @@
 > Plug-and-play skills and prompts for every AI coding agent. Each entry
 > below is self-contained markdown, fetchable at its URL. Skills are working
 > methods to follow; prompts are templates to fill and run. See AGENTS.md
-> for usage rules.
+> for usage rules. Beyond this library, ecosystem.json indexes every major
+> skill collection on GitHub (8,000+ skills reachable):
+> https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json
 
 ## Skills
 

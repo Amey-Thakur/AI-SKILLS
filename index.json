@@ -3,6 +3,7 @@
   "description": "Plug-and-play skills and prompts for every AI coding agent.",
   "homepage": "https://amey-thakur.github.io/AI-SKILLS/",
   "repository": "https://github.com/Amey-Thakur/AI-SKILLS",
+  "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
     "skills": 28,

@@ -74,14 +74,17 @@ const index = {
   description: "Plug-and-play skills and prompts for every AI coding agent.",
   homepage: SITE,
   repository: "https://github.com/Amey-Thakur/AI-SKILLS",
+  ecosystem_index: `${RAW_BASE}/ecosystem.json`,
   license: "MIT",
   count: { skills: entries.filter((e) => e.kind === "skill").length, prompts: entries.filter((e) => e.kind === "prompt").length },
   entries,
 };
 
 writeFileSync("index.json", JSON.stringify(index, null, 2) + "\n");
-/* The website is served from docs/, so it gets its own copy of the catalog. */
+/* The website is served from docs/, so it gets its own copy of the catalog
+   and of the ecosystem index. */
 writeFileSync(join("docs", "index.json"), JSON.stringify(index, null, 2) + "\n");
+writeFileSync(join("docs", "ecosystem.json"), readFileSync("ecosystem.json"));
 
 const llms = [
   "# AI Skills",
@@ -89,7 +92,9 @@ const llms = [
   "> Plug-and-play skills and prompts for every AI coding agent. Each entry",
   "> below is self-contained markdown, fetchable at its URL. Skills are working",
   "> methods to follow; prompts are templates to fill and run. See AGENTS.md",
-  "> for usage rules.",
+  "> for usage rules. Beyond this library, ecosystem.json indexes every major",
+  "> skill collection on GitHub (8,000+ skills reachable):",
+  `> ${RAW_BASE}/ecosystem.json`,
   "",
   "## Skills",
   "",

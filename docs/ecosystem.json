@@ -1,0 +1,129 @@
+{
+  "description": "The ecosystem index: every major agent-skill collection on GitHub, machine-readable. Our own library (index.json) is original and complete in this repository; these are the rest of the world's skills, indexed so one fetch finds everything. Counts come from each collection's own description and overlap between them.",
+  "refreshed": "2026-07-17",
+  "reachable_estimate": "8000+ skills across the indexed collections",
+  "note_on_content": "Collections marked license none or NOASSERTION grant no reuse rights, so their content is linked, never copied. Facts (names, links, counts) are indexed for discovery.",
+  "collections": [
+    {
+      "name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 162091,
+      "license": "none",
+      "focus": "Anthropic's official skills: document tooling (docx, xlsx, pptx, pdf), MCP building, frontend design, skill creation",
+      "skills": [
+        { "name": "algorithmic-art", "url": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art" },
+        { "name": "brand-guidelines", "url": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines" },
+        { "name": "canvas-design", "url": "https://github.com/anthropics/skills/tree/main/skills/canvas-design" },
+        { "name": "claude-api", "url": "https://github.com/anthropics/skills/tree/main/skills/claude-api" },
+        { "name": "doc-coauthoring", "url": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring" },
+        { "name": "docx", "url": "https://github.com/anthropics/skills/tree/main/skills/docx" },
+        { "name": "frontend-design", "url": "https://github.com/anthropics/skills/tree/main/skills/frontend-design" },
+        { "name": "internal-comms", "url": "https://github.com/anthropics/skills/tree/main/skills/internal-comms" },
+        { "name": "mcp-builder", "url": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder" },
+        { "name": "pdf", "url": "https://github.com/anthropics/skills/tree/main/skills/pdf" },
+        { "name": "pptx", "url": "https://github.com/anthropics/skills/tree/main/skills/pptx" },
+        { "name": "skill-creator", "url": "https://github.com/anthropics/skills/tree/main/skills/skill-creator" },
+        { "name": "slack-gif-creator", "url": "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator" },
+        { "name": "theme-factory", "url": "https://github.com/anthropics/skills/tree/main/skills/theme-factory" },
+        { "name": "web-artifacts-builder", "url": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder" },
+        { "name": "webapp-testing", "url": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing" },
+        { "name": "xlsx", "url": "https://github.com/anthropics/skills/tree/main/skills/xlsx" }
+      ]
+    },
+    {
+      "name": "vercel-labs/agent-skills",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "stars": 29166,
+      "license": "none",
+      "focus": "Vercel's official skills: React best practices, deployment, web design and writing guidelines",
+      "skills": [
+        { "name": "composition-patterns", "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns" },
+        { "name": "deploy-to-vercel", "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/deploy-to-vercel" },
+        { "name": "react-best-practices", "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices" },
+        { "name": "react-native-skills", "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills" },
+        { "name": "react-view-transitions", "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-view-transitions" },
+        { "name": "vercel-cli-with-tokens", "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-cli-with-tokens" },
+        { "name": "vercel-optimize", "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-optimize" },
+        { "name": "web-design-guidelines", "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines" },
+        { "name": "writing-guidelines", "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/writing-guidelines" }
+      ]
+    },
+    {
+      "name": "kepano/obsidian-skills",
+      "url": "https://github.com/kepano/obsidian-skills",
+      "stars": 42381,
+      "license": "MIT",
+      "focus": "Official Obsidian skills: CLI, markdown, bases, JSON canvas, defuddle",
+      "skills": [
+        { "name": "defuddle", "url": "https://github.com/kepano/obsidian-skills/tree/main/skills/defuddle" },
+        { "name": "json-canvas", "url": "https://github.com/kepano/obsidian-skills/tree/main/skills/json-canvas" },
+        { "name": "obsidian-bases", "url": "https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-bases" },
+        { "name": "obsidian-cli", "url": "https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-cli" },
+        { "name": "obsidian-markdown", "url": "https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-markdown" }
+      ]
+    },
+    {
+      "name": "multica-ai/andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "stars": 193563,
+      "license": "none",
+      "focus": "A single CLAUDE.md distilling Andrej Karpathy's guidance for Claude Code behavior"
+    },
+    {
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "stars": 175509,
+      "license": "MIT",
+      "focus": "Matt Pocock's engineering skills, straight from a working .agents directory"
+    },
+    {
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "stars": 78959,
+      "license": "MIT",
+      "focus": "Production-grade engineering skills for AI coding agents"
+    },
+    {
+      "name": "ComposioHQ/awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "stars": 67968,
+      "license": "none",
+      "focus": "Curated list of Claude skills, resources, and tools"
+    },
+    {
+      "name": "VoltAgent/awesome-openclaw-skills",
+      "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "stars": 51297,
+      "license": "MIT",
+      "focus": "5,400+ OpenClaw skills, filtered and categorized"
+    },
+    {
+      "name": "sickn33/agentic-awesome-skills",
+      "url": "https://github.com/sickn33/agentic-awesome-skills",
+      "stars": 43488,
+      "license": "MIT",
+      "focus": "Installable library of 1,900+ agentic skills for Claude Code, Cursor, Codex, and more"
+    },
+    {
+      "name": "Imbad0202/academic-research-skills",
+      "url": "https://github.com/Imbad0202/academic-research-skills",
+      "stars": 38242,
+      "license": "NOASSERTION",
+      "focus": "Academic research pipeline: research, write, review, revise, finalize"
+    },
+    {
+      "name": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "stars": 31080,
+      "license": "MIT",
+      "focus": "Turn any agent into an AI scientist: the leading science skill library"
+    },
+    {
+      "name": "VoltAgent/awesome-agent-skills",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "stars": 28291,
+      "license": "MIT",
+      "focus": "1,000+ agent skills curated from official teams and the community"
+    }
+  ]
+}

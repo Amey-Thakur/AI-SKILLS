@@ -12,7 +12,7 @@ GitHub Copilot · Windsurf · Antigravity · Cline · Zed · Aider · any agent 
 [Website](https://amey-thakur.github.io/AI-SKILLS/) ·
 [Prompt Studio](https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html) ·
 [Install](INSTALL.md) · [Skills](skills/) · [Prompts](prompts/) ·
-[Contributing](CONTRIBUTING.md)
+[Ecosystem](ECOSYSTEM.md) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
@@ -20,10 +20,18 @@ GitHub Copilot · Windsurf · Antigravity · Cline · Zed · Aider · any agent 
 
 ## What this is
 
-Two collections, one idea: a tested method beats improvisation. Hand an agent
-the way a strong engineer reviews code, and its review improves in one step.
-Hand a person a prompt built on what actually works, and the answer improves
-on the first try.
+One place that finds every skill. Two halves make that true:
+
+- **The library**: original skills and prompts, written for this repository,
+  every one complete and tested. Below.
+- **[The ecosystem index](ECOSYSTEM.md)**: every major skill collection on
+  GitHub, indexed with per-skill links for the official ones. 8,000+ skills
+  reachable through [`ecosystem.json`](ecosystem.json), one fetch away.
+
+The idea behind the library: a tested method beats improvisation. Hand an
+agent the way a strong engineer reviews code, and its review improves in one
+step. Hand a person a prompt built on what actually works, and the answer
+improves on the first try.
 
 - **[`skills/`](skills/)** are working methods an agent loads and follows:
   reviewing code, debugging, writing a postmortem, designing an API. One
@@ -130,8 +138,10 @@ next run.
 **Does this work with my tool?** If the tool reads a markdown file, yes. The
 per-tool steps in [INSTALL.md](INSTALL.md) are conveniences, not requirements.
 
-**How is this different from a curated list?** A list links to things. This
-repository is the things: every entry is here, complete, in one format.
+**How is this different from a curated list?** It is both halves. The library
+is the things themselves: every entry here, complete, in one format. The
+[ecosystem index](ECOSYSTEM.md) is the list: every major collection elsewhere,
+linked and machine-readable. One fetch covers both.
 
 **Can I use these commercially?** Yes, under MIT. Attribution is appreciated
 and never required.
