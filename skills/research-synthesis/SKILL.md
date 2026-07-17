@@ -17,14 +17,14 @@ question with claims you can defend, each traceable to evidence.
 2. **Gather with hostility toward your first answer.** Search for the
    claim *and* its negation. Prefer primary sources (the paper, the spec,
    the changelog, the benchmark) over commentary about them; note each
-   source's date and incentive — a vendor's benchmark and an academic's
+   source's date and incentive: a vendor's benchmark and an academic's
    are different evidence.
 3. **Extract claims, not paragraphs.** From each source pull the specific
    assertions relevant to the question, each tagged with its source and
    whether it is measured, reported, or opined.
 4. **Reconcile before writing.** Where sources agree, the claim strengthens.
    Where they conflict, say so and adjudicate: newer data, better
-   methodology, closer to primary — or declare it genuinely unsettled.
+   methodology, closer to primary: or declare it genuinely unsettled.
    A synthesis that hides its conflicts is an advertisement.
 5. **Write the answer in three layers:**
    - *The answer*: two or three sentences, direct, first.
@@ -50,5 +50,5 @@ question with claims you can defend, each traceable to evidence.
 ## Litmus test
 
 Could a skeptical reader, given only your synthesis, locate the exact
-source for every load-bearing claim — and would the two or three sentences
+source for every load-bearing claim: and would the two or three sentences
 at the top survive them checking?

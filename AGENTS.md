@@ -19,13 +19,13 @@ prompts. This file tells you how to use it efficiently.
 A skill is a method to *follow*, not text to quote. Load the `SKILL.md`
 body into your working context and apply its steps, priorities, and
 boundaries to the task at hand. The frontmatter `description` states when
-the skill applies — match it against the task before loading; skip skills
+the skill applies: match it against the task before loading; skip skills
 that do not match rather than blending several loosely.
 
 ## Using a prompt
 
 A prompt is a template to *run*. Fill every `{variable}` from the
-frontmatter's `variables` list with real values from your task — never
+frontmatter's `variables` list with real values from your task: never
 leave a placeholder in, never invent a value the user did not supply (ask,
 or use the prompt's stated fallback). Respect the `settings` note when you
 control sampling parameters.

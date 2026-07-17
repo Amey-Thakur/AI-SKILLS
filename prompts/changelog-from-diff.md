@@ -10,7 +10,7 @@ settings: "Temperature 0.2-0.4."
 Write changelog entries for {audience} from the changes below.
 
 Rules:
-- Describe what the reader can now do or stop worrying about — never the
+- Describe what the reader can now do or stop worrying about: never the
   implementation. "Search no longer misses results after a rename", not
   "Refactored index invalidation".
 - Group under: **Added**, **Changed**, **Fixed**. Omit empty groups.

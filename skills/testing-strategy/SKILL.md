@@ -10,8 +10,8 @@ refactoring or passes while the product is broken has failed at its one job.
 
 ## Method
 
-1. **Test behavior, not implementation.** Assert what the caller observes —
-   return values, emitted events, stored rows, rendered text — never private
+1. **Test behavior, not implementation.** Assert what the caller observes , 
+   return values, emitted events, stored rows, rendered text: never private
    internals or call sequences. The test that breaks on a faithful refactor
    is a bug in the test.
 2. **Spend tests where the risk is.** Rank the change's code paths by
@@ -19,7 +19,7 @@ refactoring or passes while the product is broken has failed at its one job.
    Parsing, money, permissions, concurrency, and anything with an off-by-one
    opportunity outrank getters forever.
 3. **Choose the cheapest level that catches the failure:**
-   - *Unit* for pure logic and edge-case matrices — milliseconds, no mocks
+   - *Unit* for pure logic and edge-case matrices: milliseconds, no mocks
      needed when the logic is genuinely pure.
    - *Integration* for the seams: real database, real serialization, real
      filesystem. Most production bugs live at seams; a mock at every seam
@@ -33,7 +33,7 @@ refactoring or passes while the product is broken has failed at its one job.
    reason it cannot happen.
 5. **One behavior per test.** Shared setup is fine; shared assertions are
    not. When `test_everything` fails, nobody knows what broke.
-6. **A regression gets a test that fails without the fix** — before or with
+6. **A regression gets a test that fails without the fix**: before or with
    the fix, never "later". It is the only test guaranteed to be about a real
    bug.
 

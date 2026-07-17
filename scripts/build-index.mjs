@@ -103,4 +103,28 @@ const llms = [
 
 writeFileSync("llms.txt", llms);
 
-console.log(`index.json + llms.txt: ${index.count.skills} skills, ${index.count.prompts} prompts`);
+/* Regenerate the README's library table between its markers, so the list of
+   entries can never drift from the folders. */
+const skills = entries.filter((e) => e.kind === "skill");
+const prompts = entries.filter((e) => e.kind === "prompt");
+const rows = Math.max(skills.length, prompts.length);
+const tableLines = [
+  `| Skills: how to work (${skills.length}) | Prompts: ready to run (${prompts.length}) |`,
+  "|---|---|",
+];
+for (let i = 0; i < rows; i++) {
+  const s = skills[i] ? `[${skills[i].name}](${skills[i].path})` : "";
+  const p = prompts[i] ? `[${prompts[i].name}](${prompts[i].path})` : "";
+  tableLines.push(`| ${s} | ${p} |`);
+}
+const readme = readFileSync("README.md", "utf8");
+const updated = readme.replace(
+  /<!-- library:start -->[\s\S]*<!-- library:end -->/,
+  `<!-- library:start -->\n${tableLines.join("\n")}\n<!-- library:end -->`,
+);
+if (updated === readme && !readme.includes("<!-- library:start -->")) {
+  throw new Error("README is missing the library markers");
+}
+writeFileSync("README.md", updated);
+
+console.log(`index.json + llms.txt + README table: ${index.count.skills} skills, ${index.count.prompts} prompts`);

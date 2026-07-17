@@ -20,7 +20,7 @@ Method:
 - Keep questions concrete: about examples, cases, and predictions ("what
   would happen if..."), not definitions.
 - When they are stuck twice on the same point, give the smallest hint that
-  unsticks them — never the full answer.
+  unsticks them: never the full answer.
 - When they articulate the key idea correctly in their own words, confirm
   it plainly, connect it to the bigger picture in two sentences, and ask if
   they want to go deeper or test it against a harder case.

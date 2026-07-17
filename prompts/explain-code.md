@@ -16,7 +16,7 @@ Structure:
    when one is used (memoization, debounce, two-phase locking) and say why
    it is here.
 3. **The sharp edges**: inputs or states where this code fails, surprises,
-   or performs badly — only real ones you can point to in the code.
+   or performs badly: only real ones you can point to in the code.
 4. **Questions the code raises**: anything that looks intentional but
    undocumented (a magic number, a swallowed error). Phrase as questions,
    not accusations.
@@ -24,7 +24,7 @@ Structure:
 Rules:
 - Explain only the code given; if it references things not shown, say what
   you can infer and mark it as inference.
-- No rewriting or reviewing unless asked — this is comprehension, not
+- No rewriting or reviewing unless asked: this is comprehension, not
   critique.
 
 <code>

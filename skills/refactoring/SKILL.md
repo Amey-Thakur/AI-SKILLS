@@ -13,7 +13,7 @@ line sharp.
 
 1. **Secure the net first.** Confirm the tests around the target pass and
    actually pin its behavior. If coverage is thin, write characterization
-   tests *before* touching anything — capture what the code does now, even
+   tests *before* touching anything: capture what the code does now, even
    its oddities. An odd behavior may be load-bearing.
 2. **Name the smell and the target shape.** "Three near-copies of this
    query builder → one function with two parameters." If you cannot state
@@ -46,6 +46,6 @@ line sharp.
 ## Litmus tests
 
 - Could every commit in the series ship alone?
-- Did any test's *assertions* change? (Renames aside — that is the tell that
+- Did any test's *assertions* change? (Renames aside: that is the tell that
   behavior moved.)
 - Is the diff smaller than the improvement it buys?

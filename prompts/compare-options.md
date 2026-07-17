@@ -14,7 +14,7 @@ Options: {options}
 Context and constraints: {context}
 
 Method:
-1. Derive 3-6 criteria from the context — the ones that would actually
+1. Derive 3-6 criteria from the context: the ones that would actually
    change the decision (cost, risk, time-to-value, reversibility,
    maintenance burden). State them and why each matters here.
 2. Assess every option against every criterion with specifics, not

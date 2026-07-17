@@ -3,12 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Skills — plug-and-play skills & prompts for Claude Code, Cursor, and every AI coding agent</title>
+<title>AI Skills: plug-and-play skills & prompts for Claude Code, Cursor, and every AI coding agent</title>
 <meta name="description" content="Open library of agent skills and ready-to-run prompts. Works with Claude Code, Claude Desktop, Cursor, Antigravity, OpenAI Codex, Gemini CLI, and any AI agent that reads markdown. MIT licensed.">
 <meta property="og:title" content="AI Skills">
 <meta property="og:description" content="Plug-and-play skills and prompts for every AI coding agent. One command to install, plain markdown underneath.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://amey-thakur.github.io/AI-SKILLS/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://amey-thakur.github.io/AI-SKILLS/">
 <script>
   try {
@@ -45,7 +49,7 @@
     top: 0; background: var(--bg); z-index: 10;
   }
   header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  .brand { font-family: ui-monospace, Consolas, monospace; font-weight: 700; color: var(--text-1); font-size: 18px; letter-spacing: -0.5px; text-decoration: none; }
+  .brand { display: flex; align-items: center; gap: 9px; font-family: 'Play', ui-monospace, Consolas, monospace; font-weight: 700; color: var(--text-1); font-size: 18px; letter-spacing: -0.5px; text-decoration: none; }
   .brand span { color: var(--accent); }
   nav.top { display: flex; gap: 18px; align-items: center; font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
   nav.top a { color: var(--text-3); text-decoration: none; }
@@ -63,7 +67,7 @@
   @media (prefers-reduced-motion: reduce) { .tt-knob { transition: none; } }
 
   .hero { padding: 72px 0 48px; }
-  .hero h1 { font-family: ui-monospace, Consolas, monospace; color: var(--text-1); font-size: clamp(34px, 6vw, 56px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 18px; }
+  .hero h1 { font-family: 'Play', ui-monospace, Consolas, monospace; color: var(--text-1); font-size: clamp(34px, 6vw, 56px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 18px; }
   .hero h1 em { color: var(--accent); font-style: normal; }
   .hero p.lede { font-size: 19px; color: var(--text-2); max-width: 640px; margin-bottom: 14px; }
   .hero p.sub { font-family: ui-monospace, Consolas, monospace; font-size: 13px; color: var(--text-4); margin-bottom: 30px; }
@@ -107,7 +111,7 @@
 <body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="./">AI<span>-</span>SKILLS</a>
+    <a class="brand" href="./"><svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="var(--bg)"/><rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="var(--accent)" stroke-width="4"/><rect x="12" y="38" width="10" height="14" fill="var(--accent-dim)"/><rect x="27" y="28" width="10" height="24" fill="var(--accent)"/><rect x="42" y="16" width="10" height="36" fill="var(--text-1)"/></svg>AI<span>-</span>SKILLS</a>
     <nav class="top" aria-label="Site">
       <a href="prompt-studio.html">Prompt Studio</a>
       <a href="https://github.com/Amey-Thakur/AI-SKILLS">GitHub</a>
@@ -131,7 +135,7 @@
     <div class="wrap">
       <h1>Skills your AI agent<br>can actually <em>use</em>.</h1>
       <p class="lede">
-        An open library of working methods and ready-to-run prompts — plain
+        An open library of working methods and ready-to-run prompts: plain
         markdown that plugs into Claude Code, Claude Desktop, Cursor,
         Antigravity, OpenAI Codex, Gemini CLI, and anything else that reads a
         file.

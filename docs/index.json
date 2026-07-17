@@ -5,8 +5,8 @@
   "repository": "https://github.com/Amey-Thakur/AI-SKILLS",
   "license": "MIT",
   "count": {
-    "skills": 12,
-    "prompts": 16
+    "skills": 24,
+    "prompts": 22
   },
   "entries": [
     {
@@ -25,6 +25,20 @@
     },
     {
       "kind": "skill",
+      "name": "ci-cd",
+      "description": "Build CI/CD pipelines that are fast, trustworthy, and safe to deploy from. Use when creating or fixing continuous integration, delivery workflows, or release automation.",
+      "path": "skills/ci-cd/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/ci-cd/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-documentation",
+      "description": "Write code comments and API docs that carry what the code cannot say, and nothing it already does. Use when documenting functions, modules, or tricky passages.",
+      "path": "skills/code-documentation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-documentation/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "code-review",
       "description": "Review code changes for correctness, security, and maintainability with severity-ranked, evidence-based findings. Use when asked to review a diff, a pull request, or a file before merge.",
       "path": "skills/code-review/SKILL.md",
@@ -39,6 +53,13 @@
     },
     {
       "kind": "skill",
+      "name": "containerization",
+      "description": "Write container images and compose setups that are small, reproducible, and safe to run. Use when writing Dockerfiles, docker-compose files, or debugging container behavior.",
+      "path": "skills/containerization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/containerization/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "debugging",
       "description": "Find the root cause of a bug with a hypothesis-driven loop instead of guess-and-patch. Use when something fails, crashes, or behaves wrongly and the cause is not yet known.",
       "path": "skills/debugging/SKILL.md",
@@ -46,10 +67,52 @@
     },
     {
       "kind": "skill",
+      "name": "dependency-management",
+      "description": "Choose, add, upgrade, and remove dependencies with the long-term cost in view. Use when adding a library, resolving version conflicts, or auditing a dependency tree.",
+      "path": "skills/dependency-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/dependency-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "error-handling",
+      "description": "Design error handling that fails loudly, recovers deliberately, and tells the person exactly what to do. Use when writing failure paths, retries, or user-facing errors.",
+      "path": "skills/error-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/error-handling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "frontend-state",
+      "description": "Decide where frontend state lives and how it flows, so UIs stay predictable as they grow. Use when structuring components, adding state, or untangling prop-drilling and sync bugs.",
+      "path": "skills/frontend-state/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/frontend-state/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "git-workflow",
+      "description": "Use git safely and legibly: branches, history, merges, conflicts, and recovery. Use when managing branches, cleaning history, resolving conflicts, or undoing mistakes.",
+      "path": "skills/git-workflow/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-workflow/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "incident-postmortem",
       "description": "Write a blameless postmortem that finds systemic causes and produces actions that actually prevent recurrence. Use after an outage, data incident, or serious bug reaches users.",
       "path": "skills/incident-postmortem/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/incident-postmortem/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "observability",
+      "description": "Instrument software so production questions get answered from signals, not guesses. Use when adding logging, metrics, tracing, or alerts, or when a system is hard to debug in production.",
+      "path": "skills/observability/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/observability/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "performance-optimization",
+      "description": "Make code measurably faster by profiling first and fixing the actual bottleneck. Use when something is slow, uses too much memory, or needs to handle more load.",
+      "path": "skills/performance-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance-optimization/SKILL.md"
     },
     {
       "kind": "skill",
@@ -74,10 +137,31 @@
     },
     {
       "kind": "skill",
+      "name": "schema-design",
+      "description": "Design database schemas that stay correct under growth and change. Use when creating tables, modeling relationships, or planning schema migrations.",
+      "path": "skills/schema-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/schema-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "security-review",
+      "description": "Review code for the vulnerabilities that actually get exploited, ranked by real risk with concrete attack scenarios. Use when reviewing changes that touch input handling, auth, secrets, files, queries, or network calls.",
+      "path": "skills/security-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "sql-optimization",
       "description": "Diagnose and fix slow SQL with the query plan as evidence, not folklore. Use when a query is slow, a table scan appears, or database load climbs.",
       "path": "skills/sql-optimization/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "staying-on-task",
+      "description": "Keep an AI agent anchored to the actual goal through long or messy work. Use at the start of any multi-step task, and whenever work begins to drift, balloon, or stall.",
+      "path": "skills/staying-on-task/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/staying-on-task/SKILL.md"
     },
     {
       "kind": "skill",
@@ -95,6 +179,18 @@
     },
     {
       "kind": "prompt",
+      "name": "api-docs-from-code",
+      "description": "Generate accurate reference documentation for an API from its code, marking every inference.",
+      "variables": [
+        "{code}: the endpoint handlers, route definitions, or public functions",
+        "{audience}: who consumes the API (internal team, external developers)"
+      ],
+      "settings": "Temperature 0-0.3.",
+      "path": "prompts/api-docs-from-code.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/api-docs-from-code.md"
+    },
+    {
+      "kind": "prompt",
       "name": "brainstorm-divergent",
       "description": "Generate genuinely different ideas across the solution space, then converge on the strongest few.",
       "variables": [
@@ -104,6 +200,18 @@
       "settings": "Temperature 0.8-1.0 for the divergent phase.",
       "path": "prompts/brainstorm-divergent.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/brainstorm-divergent.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "bug-report-triage",
+      "description": "Turn a vague bug report into a structured, actionable ticket with severity and next steps.",
+      "variables": [
+        "{report}: the raw bug report, however messy",
+        "{product}: what the product is, briefly, if not obvious from the report"
+      ],
+      "settings": "Temperature 0-0.3.",
+      "path": "prompts/bug-report-triage.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/bug-report-triage.md"
     },
     {
       "kind": "prompt",
@@ -192,6 +300,18 @@
     },
     {
       "kind": "prompt",
+      "name": "incident-status-update",
+      "description": "Write a calm, honest status update during an ongoing incident, sized for its audience.",
+      "variables": [
+        "{situation}: what is known right now - impact, timeline, actions so far",
+        "{audience}: who reads it (customers, internal stakeholders, engineering)"
+      ],
+      "settings": "Temperature 0-0.3. Re-run for each audience rather than one update for all.",
+      "path": "prompts/incident-status-update.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/incident-status-update.md"
+    },
+    {
+      "kind": "prompt",
       "name": "interview-questions",
       "description": "Generate interview questions that reveal real capability for a specific role, with what good answers sound like.",
       "variables": [
@@ -201,6 +321,20 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/interview-questions.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/interview-questions.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "learning-plan",
+      "description": "Build a realistic, practice-first plan to learn any skill, fitted to available time and a concrete goal.",
+      "variables": [
+        "{skill}: what to learn",
+        "{background}: current level and adjacent knowledge",
+        "{time}: honest weekly time available",
+        "{goal}: what being done looks like (ship a project, pass an exam, hold a conversation)"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/learning-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/learning-plan.md"
     },
     {
       "kind": "prompt",
@@ -249,6 +383,30 @@
       "settings": "Temperature 0.5-0.7. Multi-turn; expects the learner to reply.",
       "path": "prompts/socratic-tutor.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/socratic-tutor.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "sql-from-question",
+      "description": "Translate a plain-language question into correct SQL against a given schema, stating every assumption.",
+      "variables": [
+        "{question}: what the person wants to know",
+        "{schema}: the relevant tables and columns (CREATE statements or a description)",
+        "{dialect}: the database (PostgreSQL, MySQL, SQLite, ...)"
+      ],
+      "settings": "Temperature 0-0.2. Include the real schema; guessed columns produce wrong queries.",
+      "path": "prompts/sql-from-question.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/sql-from-question.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "standup-summary",
+      "description": "Turn work notes, commits, or a task list into a crisp standup update that surfaces blockers first.",
+      "variables": [
+        "{notes}: raw material - commit messages, ticket updates, scratch notes"
+      ],
+      "settings": "Temperature 0-0.3.",
+      "path": "prompts/standup-summary.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/standup-summary.md"
     },
     {
       "kind": "prompt",

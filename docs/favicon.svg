@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- The AI-SKILLS mark: three ascending bars, skill building on skill. -->
+  <rect width="64" height="64" fill="#111111"/>
+  <rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="#8ab2ea" stroke-width="3"/>
+  <rect x="12" y="38" width="10" height="14" fill="#5f8ed6"/>
+  <rect x="27" y="28" width="10" height="24" fill="#8ab2ea"/>
+  <rect x="42" y="16" width="10" height="36" fill="#eae6e0"/>
+</svg>

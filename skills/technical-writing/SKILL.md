@@ -15,7 +15,7 @@ an answer, in as little of their time as possible.
    "an operator debugging a production incident". One document per reader
    when they diverge; a document for everyone answers no one.
 2. **Lead with the answer.** The first paragraph carries the single most
-   important thing — what this is, what just happened, what to do. Context
+   important thing: what this is, what just happened, what to do. Context
    and reasoning follow for readers who want them. Never build suspense.
 3. **Structure for the scanning reader.** People read headings, code blocks,
    and lists first, prose only when trapped. Make the skeleton carry the
@@ -27,7 +27,7 @@ an answer, in as little of their time as possible.
 5. **Write plainly.** Short sentences. Active voice. "Use" not "utilize",
    "so" not "in order to". Jargon only when the reader owns it already, and
    defined once when unavoidable. Adjectives like "simple", "just", and
-   "easy" are broken promises — the reader for whom it is not easy is the
+   "easy" are broken promises: the reader for whom it is not easy is the
    one reading.
 6. **State the edges honestly.** What it does not do, where it breaks, what
    is a known limitation. A document that oversells produces support burden
@@ -47,5 +47,5 @@ an answer, in as little of their time as possible.
 ## Boundaries
 
 Match the project's existing voice and formatting conventions. Never invent
-facts to fill a section — a short honest document outranks a long padded
+facts to fill a section: a short honest document outranks a long padded
 one, and "this is not documented yet" outranks a guess.

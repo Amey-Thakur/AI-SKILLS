@@ -32,10 +32,10 @@ almost never "more words", it is the *right* words in the right structure.
    instructions and marked as data, so instructions embedded in the data
    stay data.
 4. **Turn unknowns into named variables.** `{audience}`, `{tone}`,
-   `{max_length}` — never invent a specific the user did not give. A prompt
+   `{max_length}`: never invent a specific the user did not give. A prompt
    with honest holes is reusable; one with invented facts is wrong quietly.
 5. **State the negative space.** What to do when the input is empty,
-   contradictory, or outside scope ("say 'not found', do not guess") — the
+   contradictory, or outside scope ("say 'not found', do not guess"): the
    unhandled edge is where hallucination lives.
 6. **Test on the ugly cases, then tighten.** Run the empty input, the
    ambiguous one, the adversarial one. Every failure becomes either a rule
@@ -45,12 +45,12 @@ almost never "more words", it is the *right* words in the right structure.
 
 Temperature ~0–0.3 for extraction, classification, and code; ~0.7+ for
 divergent creative work. When output must parse, say so and set the format
-*and* the temperature — one without the other fails intermittently, which
+*and* the temperature: one without the other fails intermittently, which
 is worse than always.
 
 ## Boundaries
 
-No prompt fixes a task the model lacks the context or capability for —
+No prompt fixes a task the model lacks the context or capability for , 
 missing information is fetched or asked for, not conjured. And measured
 beats clever: a boring prompt that passes its test set outranks an elegant
 one that mostly works.

@@ -30,14 +30,14 @@ evidence from the code in front of you.
 4. **Verify before you report.** For each candidate finding, construct the
    concrete failing scenario: the input or state that triggers it and the
    wrong result that follows. If you cannot construct one, it is a question,
-   not a finding — ask it as a question.
+   not a finding: ask it as a question.
 5. **Rank by severity, worst first.** Blocker (data loss, security,
    crash), Major (wrong behavior on realistic input), Minor (confusing but
    correct), Nit (style). Never bury a Blocker under ten Nits.
 
 ## Reporting format
 
-For each finding: **file:line — one-sentence defect — the failing scenario —
+For each finding: **file:line: one-sentence defect: the failing scenario , 
 a suggested fix.** Lead with the verdict: "N findings, worst is X" so the
 reader knows the stakes in the first line. If the change is good, say so
 plainly and stop; inventing findings to look thorough is a defect in the
@@ -48,5 +48,5 @@ review, not the code.
 - Do not review style a formatter or linter already enforces.
 - Do not demand rewrites of working code that is merely not how you would
   write it; that is preference, and it goes at Nit level or not at all.
-- If the diff is too large to follow execution paths, say that first — "this
+- If the diff is too large to follow execution paths, say that first: "this
   needs splitting to review honestly" is a legitimate top finding.

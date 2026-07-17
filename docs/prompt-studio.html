@@ -3,12 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prompt Studio — build research-grade prompts in your browser | AI-SKILLS</title>
+<title>Prompt Studio: build research-grade prompts in your browser | AI-SKILLS</title>
 <meta name="description" content="Free browser Prompt Studio. Describe the job and get a complete, ready-to-run prompt built on proven prompt-engineering techniques: worked examples for classification, step-by-step reasoning for logic, role and constraints for creative work, strict schemas for structured output.">
-<meta property="og:title" content="Prompt Studio — AI-SKILLS">
+<meta property="og:title" content="Prompt Studio: AI-SKILLS">
 <meta property="og:description" content="Build prompts the way prompt engineering research says to: the right technique per task, honest variables, recommended settings. Free, in your browser, nothing leaves the page.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html">
 <script>
   try {
@@ -36,7 +40,7 @@
 
   header.site { border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 0; background: var(--bg); z-index: 10; }
   header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  .brand { font-family: ui-monospace, Consolas, monospace; font-weight: 700; color: var(--text-1); font-size: 18px; text-decoration: none; }
+  .brand { display: flex; align-items: center; gap: 9px; font-family: 'Play', ui-monospace, Consolas, monospace; font-weight: 700; color: var(--text-1); font-size: 18px; text-decoration: none; }
   .brand span { color: var(--accent); }
   nav.top { display: flex; gap: 20px; align-items: center; font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
   nav.top a { color: var(--text-3); text-decoration: none; }
@@ -53,7 +57,7 @@
 
   .head { padding: 60px 0 20px; }
   .head .kicker { font-family: ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-dim); margin-bottom: 12px; }
-  .head h1 { font-family: ui-monospace, Consolas, monospace; color: var(--text-1); font-size: clamp(30px, 5vw, 46px); letter-spacing: -1.2px; margin-bottom: 16px; }
+  .head h1 { font-family: 'Play', ui-monospace, Consolas, monospace; color: var(--text-1); font-size: clamp(30px, 5vw, 46px); letter-spacing: -1.2px; margin-bottom: 16px; }
   .head p.lede { color: var(--text-2); font-size: 18px; max-width: 700px; margin-bottom: 10px; }
   .head p.small { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); }
 
@@ -116,7 +120,7 @@
 <body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="./">AI<span>-</span>SKILLS</a>
+    <a class="brand" href="./"><svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="var(--bg)"/><rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="var(--accent)" stroke-width="4"/><rect x="12" y="38" width="10" height="14" fill="var(--accent-dim)"/><rect x="27" y="28" width="10" height="24" fill="var(--accent)"/><rect x="42" y="16" width="10" height="36" fill="var(--text-1)"/></svg>AI<span>-</span>SKILLS</a>
     <nav class="top" aria-label="Site">
       <a href="./">Library</a>
       <a href="https://github.com/Amey-Thakur/AI-SKILLS">GitHub</a>
@@ -140,10 +144,10 @@
     <p class="kicker">Prompt Studio</p>
     <h1>Prompts built the way<br>the research says to.</h1>
     <p class="lede">
-      Describe the job. The Studio picks the technique that fits — worked
+      Describe the job. The Studio picks the technique that fits: worked
       examples for sorting and extraction, step-by-step reasoning for logic,
       role and constraints for creative work, a strict schema for structured
-      output — and assembles the complete prompt with the settings to run it.
+      output: and assembles the complete prompt with the settings to run it.
     </p>
     <p class="small">Free · runs entirely in your browser · nothing you type leaves this page</p>
   </div>
@@ -164,7 +168,7 @@
         <p class="hint" id="detect-hint" hidden></p>
         <button type="button" class="example-btn" id="try-example">Try an example</button>
 
-        <label class="f">Task type <span class="opt">— detected automatically, tap to override</span></label>
+        <label class="f">Task type <span class="opt">,  detected automatically, tap to override</span></label>
         <div class="types" role="group" aria-label="Task type">
           <button type="button" class="type" data-type="extract" aria-pressed="false">Classify / Extract<small>sorting, labeling, pulling data out of text</small></button>
           <button type="button" class="type" data-type="reason" aria-pressed="false">Reason / Analyze<small>logic, math, comparisons, decisions</small></button>
@@ -174,12 +178,12 @@
       </fieldset>
 
       <fieldset>
-        <legend>Sharpen it <span class="opt">— every field optional</span></legend>
+        <legend>Sharpen it <span class="opt">,  every field optional</span></legend>
         <label class="f" for="context">Context the model needs</label>
         <textarea id="context" rows="2" placeholder="Background, definitions, the situation."></textarea>
 
         <label class="f" for="examples">Worked examples <span class="opt">(input → expected output, one pair per line)</span></label>
-        <textarea id="examples" rows="3" placeholder="Refund taking 3 weeks?! → billing — payment delay complaint"></textarea>
+        <textarea id="examples" rows="3" placeholder="Refund taking 3 weeks?! → billing: payment delay complaint"></textarea>
 
         <label class="f" for="constraints">Rules and constraints</label>
         <textarea id="constraints" rows="2" placeholder="e.g. under 200 words; never invent order numbers; UK spelling"></textarea>
@@ -207,7 +211,7 @@
       <div class="settings" id="settings" hidden></div>
       <p class="fill-note">
         Anything the Studio could not know appears as a <code>{variable}</code>
-        — fill those before running. Honest holes beat invented facts.
+       : fill those before running. Honest holes beat invented facts.
       </p>
     </div>
   </div>
@@ -258,7 +262,7 @@
   function activeType() { return chosenType || detectType(el.task.value) || "reason"; }
 
   var SETTINGS = {
-    extract: "<b>Run it with:</b> temperature 0–0.2 · few-shot examples matter more than instructions here — add 2–3 if you can",
+    extract: "<b>Run it with:</b> temperature 0–0.2 · few-shot examples matter more than instructions here: add 2–3 if you can",
     reason: "<b>Run it with:</b> temperature 0–0.3 · give the model room to think before the answer",
     create: "<b>Run it with:</b> temperature 0.7–0.9 · constraints shape voice better than adjectives",
     structured: "<b>Run it with:</b> temperature 0 · validate the output against your schema on arrival"
@@ -307,7 +311,7 @@
       var schema = esc(el.format.value);
       lines.push("Output ONLY the structured result, no prose around it.");
       lines.push(schema ? "Format: " + schema : "Format: {describe_your_exact_schema_here}");
-      lines.push("If a value is unknown, use null — never invent one.");
+      lines.push("If a value is unknown, use null: never invent one.");
       lines.push("");
     }
 
@@ -328,7 +332,7 @@
       });
       lines.push("");
     } else if (type === "extract") {
-      lines.push("(Add 2-3 worked examples above the input when you use this —");
+      lines.push("(Add 2-3 worked examples above the input when you use this , ");
       lines.push("for sorting and extraction they teach the format better than");
       lines.push("any instruction.)");
       lines.push("");
@@ -348,7 +352,7 @@
       detectHint.hidden = !detected;
       if (detected) {
         var names = { extract: "Classify / Extract", reason: "Reason / Analyze", create: "Create / Write", structured: "Structured output" };
-        detectHint.textContent = "Looks like: " + names[detected] + " — tap a type to override";
+        detectHint.textContent = "Looks like: " + names[detected] + ": tap a type to override";
       }
     } else {
       detectHint.hidden = true;
@@ -368,7 +372,7 @@
 
   document.getElementById("try-example").addEventListener("click", function () {
     el.task.value = "Sort incoming support emails into billing, bug, or feature request, with a one-line reason for each.";
-    el.examples.value = "Refund taking 3 weeks?! → billing — payment delay complaint\nApp crashes when I rotate my phone → bug — reproducible crash report";
+    el.examples.value = "Refund taking 3 weeks?! → billing: payment delay complaint\nApp crashes when I rotate my phone → bug: reproducible crash report";
     el.constraints.value = "Never invent order numbers; if the email fits no category, label it 'other'.";
     build();
   });

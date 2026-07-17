@@ -8,7 +8,7 @@ today.** Everything below serves that.
 
 1. One folder under `skills/`, kebab-case, one `SKILL.md` inside.
 2. Frontmatter: `name` (matching the folder) and a one-sentence
-   `description` written for the moment an agent decides whether to load it —
+   `description` written for the moment an agent decides whether to load it , 
    say when to use it, not what it contains.
 3. The body is a working method, not an essay: the steps in order, what good
    output looks like, and the boundaries (where the skill does not apply,
@@ -23,7 +23,7 @@ today.** Everything below serves that.
    `{placeholder}` in the body, with a note on what belongs in it), and
    `settings` (temperature guidance and anything else that matters).
 3. The body is the complete prompt, ready to paste, with `{variables}` for
-   the parts the user supplies. Unknowns become variables — never invented
+   the parts the user supplies. Unknowns become variables: never invented
    specifics.
 
 ## The review checklist

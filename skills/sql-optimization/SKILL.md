@@ -17,14 +17,14 @@ others quietly worse.
    (`EXPLAIN ANALYZE` where available).
 2. **Read the plan for the expensive truth.** The usual suspects, in the
    order they pay off:
-   - *Full scan where a seek belongs* — filter or join column lacks a
+   - *Full scan where a seek belongs*: filter or join column lacks a
      usable index, or the predicate defeats it (function on the column,
      leading wildcard, implicit type cast).
-   - *Examined ≫ returned* — thousands read to return ten: missing
+   - *Examined ≫ returned*: thousands read to return ten: missing
      composite index, or filtering happens after the join instead of in it.
-   - *Sort or hash spilling* — `ORDER BY`/`GROUP BY`/`DISTINCT` on an
+   - *Sort or hash spilling*: `ORDER BY`/`GROUP BY`/`DISTINCT` on an
      unindexed expression over a large set.
-   - *N+1 at the application seam* — one query per row in a loop; the plan
+   - *N+1 at the application seam*: one query per row in a loop; the plan
      looks fine, the trace shows 400 of them.
 3. **Fix in this order, cheapest first:**
    - Rewrite the predicate to be index-friendly (move the function to the
@@ -35,7 +35,7 @@ others quietly worse.
    - Restructure the query: select only needed columns, filter before
      joining, replace correlated subqueries with joins or window functions,
      paginate by keyset (`WHERE id > ?`) not `OFFSET` at depth.
-   - Only then reach for denormalization, materialized views, or caching —
+   - Only then reach for denormalization, materialized views, or caching , 
      real costs that need the earlier steps ruled out.
 4. **Verify against the same measurement,** same data, same parameters.
    Then check the write side: every index taxes every insert and update on
@@ -47,5 +47,5 @@ others quietly worse.
 - Never claim a fix without before/after numbers from comparable data.
 - Distrust `SELECT *` on principle: it defeats covering indexes and widens
   every row on the wire.
-- A query that cannot be made fast may be the wrong question — say so and
+- A query that cannot be made fast may be the wrong question: say so and
   propose the schema or access-pattern change honestly.

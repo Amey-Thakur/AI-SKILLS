@@ -15,7 +15,7 @@ see, then keep the promise boring.
    /notebooks/{id}/share` or `client.notebooks.share(id)`. If the ideal call
    is awkward to say, the design is wrong at the root.
 2. **Name by domain, shape by convention.** Nouns for resources, verbs for
-   actions that are not CRUD. Same word for the same concept everywhere —
+   actions that are not CRUD. Same word for the same concept everywhere , 
    an API where "document", "file", and "source" mean one thing teaches
    distrust of every name.
 3. **Make the common case one call** with obvious defaults, and the rare
@@ -46,6 +46,6 @@ see, then keep the promise boring.
 
 ## Boundaries
 
-Consistency with the existing API's conventions beats abstract elegance —
+Consistency with the existing API's conventions beats abstract elegance , 
 one surprising-but-uniform surface is kinder than a half-migrated ideal.
 Note the inconsistency you would fix, then follow the house style.

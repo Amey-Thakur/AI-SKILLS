@@ -10,14 +10,14 @@ settings: "Temperature 0.4-0.6."
 Write interview questions for a {role}, focused on {focus}.
 
 Produce:
-1. **Experience probes (3)** — "Tell me about a time..." questions targeting
+1. **Experience probes (3)**: "Tell me about a time..." questions targeting
    {focus}, each designed so a real story is easy and an invented one is
    hard. Include the follow-up that separates the two ("what did you try
    first that failed?").
-2. **Working-session questions (3)** — small realistic problems from the
+2. **Working-session questions (3)**: small realistic problems from the
    role's daily work to reason through aloud. Solvable in 10-15 minutes of
    discussion, no trick knowledge, escalating difficulty.
-3. **Judgment calls (2)** — situations with genuine trade-offs and no
+3. **Judgment calls (2)**: situations with genuine trade-offs and no
    clean answer, to hear how they weigh things.
 
 For every question add:

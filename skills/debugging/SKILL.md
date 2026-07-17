@@ -19,7 +19,7 @@ without understanding is a second bug waiting.
    with an empty list when the user has 3 orders" is. Write down expected vs
    actual; the gap between them is the search space.
 3. **Form one falsifiable hypothesis.** "The cache returns stale data
-   because the key omits the user id" — specific enough that an experiment
+   because the key omits the user id": specific enough that an experiment
    can kill it. If you have three hypotheses, rank by likelihood and cheapest
    test first.
 4. **Run the smallest experiment that can falsify it.** Read the code path,
