@@ -7,8 +7,8 @@
 Claude Code · Claude Desktop · Cursor · Antigravity · OpenAI Codex ·
 Gemini CLI · any agent that reads markdown
 
-[Website](https://amey-thakur.github.io/ai-skills/) ·
-[Prompt Builder](https://amey-thakur.github.io/ai-skills/prompt-builder.html) ·
+[Website](https://amey-thakur.github.io/AI-SKILLS/) ·
+[Prompt Studio](https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html) ·
 [Skills](skills/) · [Prompts](prompts/) · [Contributing](CONTRIBUTING.md)
 
 </div>
@@ -29,7 +29,7 @@ thing that comes to mind.
 - **[`prompts/`](prompts/)** — complete, ready-to-run prompts with named
   `{variables}`, the right model settings, and an honest line about what
   each is good at. Build your own in the browser with the
-  [Prompt Builder](https://amey-thakur.github.io/ai-skills/prompt-builder.html).
+  [Prompt Studio](https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html).
 
 Everything is plain markdown with a small YAML header. Nothing executes;
 there is nothing to install, trust, or sandbox. Read it, use it, edit it.
@@ -41,14 +41,14 @@ there is nothing to install, trust, or sandbox. Read it, use it, edit it.
 **Claude Code** — one command, everything available:
 
 ```
-/plugin marketplace add Amey-Thakur/ai-skills
+/plugin marketplace add Amey-Thakur/AI-SKILLS
 ```
 
 Or copy just what you want:
 
 ```bash
-git clone https://github.com/Amey-Thakur/ai-skills
-cp -r ai-skills/skills/code-review ~/.claude/skills/
+git clone https://github.com/Amey-Thakur/AI-SKILLS
+cp -r AI-SKILLS/skills/code-review ~/.claude/skills/
 ```
 
 **claude.ai / Claude Desktop** — upload any skill folder in
@@ -58,14 +58,14 @@ Settings → Capabilities → Skills.
 rules file:
 
 ```bash
-curl -s https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/code-review/SKILL.md >> .cursorrules
+curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-review/SKILL.md >> .cursorrules
 ```
 
 **OpenAI, Gemini CLI, or any API** — a skill's body is a system-prompt
 section; a prompt's body is a user message. Fetch raw and go:
 
 ```
-https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/summarize-document.md
+https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/summarize-document.md
 ```
 
 **AI agents reading this** — machine-readable catalog at

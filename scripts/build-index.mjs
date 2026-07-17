@@ -10,8 +10,8 @@
 import { readdirSync, readFileSync, writeFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
-const RAW_BASE = "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main";
-const SITE = "https://amey-thakur.github.io/ai-skills/";
+const RAW_BASE = "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main";
+const SITE = "https://amey-thakur.github.io/AI-SKILLS/";
 
 function frontmatter(path) {
   const text = readFileSync(path, "utf8");
@@ -73,7 +73,7 @@ const index = {
   name: "AI Skills",
   description: "Plug-and-play skills and prompts for every AI coding agent.",
   homepage: SITE,
-  repository: "https://github.com/Amey-Thakur/ai-skills",
+  repository: "https://github.com/Amey-Thakur/AI-SKILLS",
   license: "MIT",
   count: { skills: entries.filter((e) => e.kind === "skill").length, prompts: entries.filter((e) => e.kind === "prompt").length },
   entries,

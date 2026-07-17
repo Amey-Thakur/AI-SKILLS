@@ -1,8 +1,8 @@
 {
   "name": "AI Skills",
   "description": "Plug-and-play skills and prompts for every AI coding agent.",
-  "homepage": "https://amey-thakur.github.io/ai-skills/",
-  "repository": "https://github.com/Amey-Thakur/ai-skills",
+  "homepage": "https://amey-thakur.github.io/AI-SKILLS/",
+  "repository": "https://github.com/Amey-Thakur/AI-SKILLS",
   "license": "MIT",
   "count": {
     "skills": 12,
@@ -14,84 +14,84 @@
       "name": "accessibility-review",
       "description": "Audit a UI for real accessibility, keyboard-first, with concrete failures and fixes rather than checkbox compliance. Use when reviewing or building any user interface.",
       "path": "skills/accessibility-review/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/accessibility-review/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility-review/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "api-design",
       "description": "Design HTTP and library APIs that are predictable, hard to misuse, and stable under growth. Use when creating or reviewing endpoints, public functions, or wire formats.",
       "path": "skills/api-design/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/api-design/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/api-design/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "code-review",
       "description": "Review code changes for correctness, security, and maintainability with severity-ranked, evidence-based findings. Use when asked to review a diff, a pull request, or a file before merge.",
       "path": "skills/code-review/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/code-review/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-review/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "commit-messages",
       "description": "Write commit messages that explain change and intent so history stays useful. Use when committing work or asked to draft a commit message for a diff.",
       "path": "skills/commit-messages/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/commit-messages/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/commit-messages/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "debugging",
       "description": "Find the root cause of a bug with a hypothesis-driven loop instead of guess-and-patch. Use when something fails, crashes, or behaves wrongly and the cause is not yet known.",
       "path": "skills/debugging/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/debugging/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "incident-postmortem",
       "description": "Write a blameless postmortem that finds systemic causes and produces actions that actually prevent recurrence. Use after an outage, data incident, or serious bug reaches users.",
       "path": "skills/incident-postmortem/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/incident-postmortem/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/incident-postmortem/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "prompt-engineering",
       "description": "Build prompts that get accurate, reliably-shaped output from any LLM, choosing the right technique for the task. Use when writing, improving, or debugging a prompt.",
       "path": "skills/prompt-engineering/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/prompt-engineering/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-engineering/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "refactoring",
       "description": "Improve code structure in small, always-green steps without changing behavior. Use when asked to clean up, simplify, restructure, or de-duplicate working code.",
       "path": "skills/refactoring/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/refactoring/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/refactoring/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "research-synthesis",
       "description": "Turn multiple sources into a defensible, source-attributed answer that separates fact from inference. Use when researching a question across documents, articles, or search results.",
       "path": "skills/research-synthesis/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/research-synthesis/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-synthesis/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "sql-optimization",
       "description": "Diagnose and fix slow SQL with the query plan as evidence, not folklore. Use when a query is slow, a table scan appears, or database load climbs.",
       "path": "skills/sql-optimization/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/sql-optimization/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql-optimization/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "technical-writing",
       "description": "Write documentation, READMEs, and guides that respect the reader's time and answer their actual question. Use when drafting or editing any technical document.",
       "path": "skills/technical-writing/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/technical-writing/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/technical-writing/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "testing-strategy",
       "description": "Decide what to test, at which level, and what to skip, so tests catch real regressions without freezing the design. Use when writing tests or planning coverage for a change.",
       "path": "skills/testing-strategy/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/skills/testing-strategy/SKILL.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing-strategy/SKILL.md"
     },
     {
       "kind": "prompt",
@@ -103,7 +103,7 @@
       ],
       "settings": "Temperature 0.8-1.0 for the divergent phase.",
       "path": "prompts/brainstorm-divergent.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/brainstorm-divergent.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/brainstorm-divergent.md"
     },
     {
       "kind": "prompt",
@@ -115,7 +115,7 @@
       ],
       "settings": "Temperature 0.2-0.4.",
       "path": "prompts/changelog-from-diff.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/changelog-from-diff.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/changelog-from-diff.md"
     },
     {
       "kind": "prompt",
@@ -127,7 +127,7 @@
       ],
       "settings": "Temperature 0.2-0.4.",
       "path": "prompts/compare-options.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/compare-options.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/compare-options.md"
     },
     {
       "kind": "prompt",
@@ -139,7 +139,7 @@
       ],
       "settings": "Temperature 0-0.3. Ask for the data as text/CSV, not a description of it.",
       "path": "prompts/data-to-insights.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/data-to-insights.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/data-to-insights.md"
     },
     {
       "kind": "prompt",
@@ -153,7 +153,7 @@
       ],
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/email-professional.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/email-professional.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/email-professional.md"
     },
     {
       "kind": "prompt",
@@ -165,7 +165,7 @@
       ],
       "settings": "Temperature 0-0.3.",
       "path": "prompts/explain-code.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/explain-code.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/explain-code.md"
     },
     {
       "kind": "prompt",
@@ -177,7 +177,7 @@
       ],
       "settings": "Temperature 0.5-0.7.",
       "path": "prompts/explain-like-im-five.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/explain-like-im-five.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/explain-like-im-five.md"
     },
     {
       "kind": "prompt",
@@ -188,7 +188,7 @@
       ],
       "settings": "Temperature 0-0.2; precision matters more than prose.",
       "path": "prompts/extract-action-items.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/extract-action-items.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/extract-action-items.md"
     },
     {
       "kind": "prompt",
@@ -200,7 +200,7 @@
       ],
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/interview-questions.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/interview-questions.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/interview-questions.md"
     },
     {
       "kind": "prompt",
@@ -212,7 +212,7 @@
       ],
       "settings": "Temperature 0-0.3.",
       "path": "prompts/meeting-minutes.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/meeting-minutes.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/meeting-minutes.md"
     },
     {
       "kind": "prompt",
@@ -224,7 +224,7 @@
       ],
       "settings": "Temperature 0.2-0.4.",
       "path": "prompts/rewrite-for-clarity.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/rewrite-for-clarity.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/rewrite-for-clarity.md"
     },
     {
       "kind": "prompt",
@@ -236,7 +236,7 @@
       ],
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/risk-analysis.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/risk-analysis.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/risk-analysis.md"
     },
     {
       "kind": "prompt",
@@ -248,7 +248,7 @@
       ],
       "settings": "Temperature 0.5-0.7. Multi-turn; expects the learner to reply.",
       "path": "prompts/socratic-tutor.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/socratic-tutor.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/socratic-tutor.md"
     },
     {
       "kind": "prompt",
@@ -261,7 +261,7 @@
       ],
       "settings": "Temperature 0-0.3. Works with any capable model.",
       "path": "prompts/summarize-document.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/summarize-document.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/summarize-document.md"
     },
     {
       "kind": "prompt",
@@ -273,7 +273,7 @@
       ],
       "settings": "Temperature 0.2-0.4.",
       "path": "prompts/user-story-breakdown.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/user-story-breakdown.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/user-story-breakdown.md"
     },
     {
       "kind": "prompt",
@@ -285,7 +285,7 @@
       ],
       "settings": "Temperature 0-0.3.",
       "path": "prompts/write-tests.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/prompts/write-tests.md"
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-tests.md"
     }
   ]
 }

@@ -12,7 +12,7 @@ prompts. This file tells you how to use it efficiently.
 - [`llms.txt`](llms.txt) carries the same catalog as plain text if JSON is
   inconvenient.
 - Raw URL pattern:
-  `https://raw.githubusercontent.com/Amey-Thakur/ai-skills/main/<path>`
+  `https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/<path>`
 
 ## Using a skill
 
