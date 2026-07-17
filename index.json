@@ -5,7 +5,7 @@
   "repository": "https://github.com/Amey-Thakur/AI-SKILLS",
   "license": "MIT",
   "count": {
-    "skills": 24,
+    "skills": 28,
     "prompts": 22
   },
   "entries": [
@@ -15,6 +15,13 @@
       "description": "Audit a UI for real accessibility, keyboard-first, with concrete failures and fixes rather than checkbox compliance. Use when reviewing or building any user interface.",
       "path": "skills/accessibility-review/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-memory",
+      "description": "Design memory for an AI agent so it recalls what matters and forgets the rest, without drowning in its own history. Use when adding persistence, context recall, or long-running state to an agent.",
+      "path": "skills/agent-memory/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/agent-memory/SKILL.md"
     },
     {
       "kind": "skill",
@@ -74,6 +81,13 @@
     },
     {
       "kind": "skill",
+      "name": "design-systems",
+      "description": "Build and maintain a design system that keeps a product visually consistent and fast to build. Use when creating design tokens, component libraries, or UI guidelines.",
+      "path": "skills/design-systems/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/design-systems/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "error-handling",
       "description": "Design error handling that fails loudly, recovers deliberately, and tells the person exactly what to do. Use when writing failure paths, retries, or user-facing errors.",
       "path": "skills/error-handling/SKILL.md",
@@ -102,6 +116,13 @@
     },
     {
       "kind": "skill",
+      "name": "mcp-server",
+      "description": "Design a Model Context Protocol server that exposes tools and data to AI agents safely and legibly. Use when building an MCP server or deciding what to expose to an agent.",
+      "path": "skills/mcp-server/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp-server/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "observability",
       "description": "Instrument software so production questions get answered from signals, not guesses. Use when adding logging, metrics, tracing, or alerts, or when a system is hard to debug in production.",
       "path": "skills/observability/SKILL.md",
@@ -120,6 +141,13 @@
       "description": "Build prompts that get accurate, reliably-shaped output from any LLM, choosing the right technique for the task. Use when writing, improving, or debugging a prompt.",
       "path": "skills/prompt-engineering/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-engineering/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "rag-pipeline",
+      "description": "Design a retrieval-augmented generation pipeline that answers from sources and can be trusted. Use when building or debugging RAG: chunking, embedding, retrieval, context assembly, and grounding.",
+      "path": "skills/rag-pipeline/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/rag-pipeline/SKILL.md"
     },
     {
       "kind": "skill",

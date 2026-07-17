@@ -69,30 +69,34 @@ Fetch the index, pick by description, pull only what the task needs.
 ## What's inside
 
 <!-- library:start -->
-| Skills: how to work (24) | Prompts: ready to run (22) |
+| Skills: how to work (28) | Prompts: ready to run (22) |
 |---|---|
 | [accessibility-review](skills/accessibility-review/SKILL.md) | [api-docs-from-code](prompts/api-docs-from-code.md) |
-| [api-design](skills/api-design/SKILL.md) | [brainstorm-divergent](prompts/brainstorm-divergent.md) |
-| [ci-cd](skills/ci-cd/SKILL.md) | [bug-report-triage](prompts/bug-report-triage.md) |
-| [code-documentation](skills/code-documentation/SKILL.md) | [changelog-from-diff](prompts/changelog-from-diff.md) |
-| [code-review](skills/code-review/SKILL.md) | [compare-options](prompts/compare-options.md) |
-| [commit-messages](skills/commit-messages/SKILL.md) | [data-to-insights](prompts/data-to-insights.md) |
-| [containerization](skills/containerization/SKILL.md) | [email-professional](prompts/email-professional.md) |
-| [debugging](skills/debugging/SKILL.md) | [explain-code](prompts/explain-code.md) |
-| [dependency-management](skills/dependency-management/SKILL.md) | [explain-like-im-five](prompts/explain-like-im-five.md) |
-| [error-handling](skills/error-handling/SKILL.md) | [extract-action-items](prompts/extract-action-items.md) |
-| [frontend-state](skills/frontend-state/SKILL.md) | [incident-status-update](prompts/incident-status-update.md) |
-| [git-workflow](skills/git-workflow/SKILL.md) | [interview-questions](prompts/interview-questions.md) |
-| [incident-postmortem](skills/incident-postmortem/SKILL.md) | [learning-plan](prompts/learning-plan.md) |
-| [observability](skills/observability/SKILL.md) | [meeting-minutes](prompts/meeting-minutes.md) |
-| [performance-optimization](skills/performance-optimization/SKILL.md) | [rewrite-for-clarity](prompts/rewrite-for-clarity.md) |
-| [prompt-engineering](skills/prompt-engineering/SKILL.md) | [risk-analysis](prompts/risk-analysis.md) |
-| [refactoring](skills/refactoring/SKILL.md) | [socratic-tutor](prompts/socratic-tutor.md) |
-| [research-synthesis](skills/research-synthesis/SKILL.md) | [sql-from-question](prompts/sql-from-question.md) |
-| [schema-design](skills/schema-design/SKILL.md) | [standup-summary](prompts/standup-summary.md) |
-| [security-review](skills/security-review/SKILL.md) | [summarize-document](prompts/summarize-document.md) |
-| [sql-optimization](skills/sql-optimization/SKILL.md) | [user-story-breakdown](prompts/user-story-breakdown.md) |
-| [staying-on-task](skills/staying-on-task/SKILL.md) | [write-tests](prompts/write-tests.md) |
+| [agent-memory](skills/agent-memory/SKILL.md) | [brainstorm-divergent](prompts/brainstorm-divergent.md) |
+| [api-design](skills/api-design/SKILL.md) | [bug-report-triage](prompts/bug-report-triage.md) |
+| [ci-cd](skills/ci-cd/SKILL.md) | [changelog-from-diff](prompts/changelog-from-diff.md) |
+| [code-documentation](skills/code-documentation/SKILL.md) | [compare-options](prompts/compare-options.md) |
+| [code-review](skills/code-review/SKILL.md) | [data-to-insights](prompts/data-to-insights.md) |
+| [commit-messages](skills/commit-messages/SKILL.md) | [email-professional](prompts/email-professional.md) |
+| [containerization](skills/containerization/SKILL.md) | [explain-code](prompts/explain-code.md) |
+| [debugging](skills/debugging/SKILL.md) | [explain-like-im-five](prompts/explain-like-im-five.md) |
+| [dependency-management](skills/dependency-management/SKILL.md) | [extract-action-items](prompts/extract-action-items.md) |
+| [design-systems](skills/design-systems/SKILL.md) | [incident-status-update](prompts/incident-status-update.md) |
+| [error-handling](skills/error-handling/SKILL.md) | [interview-questions](prompts/interview-questions.md) |
+| [frontend-state](skills/frontend-state/SKILL.md) | [learning-plan](prompts/learning-plan.md) |
+| [git-workflow](skills/git-workflow/SKILL.md) | [meeting-minutes](prompts/meeting-minutes.md) |
+| [incident-postmortem](skills/incident-postmortem/SKILL.md) | [rewrite-for-clarity](prompts/rewrite-for-clarity.md) |
+| [mcp-server](skills/mcp-server/SKILL.md) | [risk-analysis](prompts/risk-analysis.md) |
+| [observability](skills/observability/SKILL.md) | [socratic-tutor](prompts/socratic-tutor.md) |
+| [performance-optimization](skills/performance-optimization/SKILL.md) | [sql-from-question](prompts/sql-from-question.md) |
+| [prompt-engineering](skills/prompt-engineering/SKILL.md) | [standup-summary](prompts/standup-summary.md) |
+| [rag-pipeline](skills/rag-pipeline/SKILL.md) | [summarize-document](prompts/summarize-document.md) |
+| [refactoring](skills/refactoring/SKILL.md) | [user-story-breakdown](prompts/user-story-breakdown.md) |
+| [research-synthesis](skills/research-synthesis/SKILL.md) | [write-tests](prompts/write-tests.md) |
+| [schema-design](skills/schema-design/SKILL.md) |  |
+| [security-review](skills/security-review/SKILL.md) |  |
+| [sql-optimization](skills/sql-optimization/SKILL.md) |  |
+| [staying-on-task](skills/staying-on-task/SKILL.md) |  |
 | [technical-writing](skills/technical-writing/SKILL.md) |  |
 | [testing-strategy](skills/testing-strategy/SKILL.md) |  |
 <!-- library:end -->
