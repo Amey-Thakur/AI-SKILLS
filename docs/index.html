@@ -3,127 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Skills: plug-and-play skills & prompts for Claude Code, Cursor, and every AI coding agent</title>
-<meta name="description" content="Open library of agent skills and ready-to-run prompts. Works with Claude Code, Claude Desktop, Cursor, Antigravity, OpenAI Codex, Gemini CLI, and any AI agent that reads markdown. MIT licensed.">
+<title>AI Skills: plug-and-play skills and prompts for Claude Code, Cursor, and every AI coding agent</title>
+<meta name="description" content="An open library of working methods and ready-to-run prompts for AI coding agents. Works with Claude Code, Claude Desktop, Cursor, OpenAI Codex, Gemini CLI, GitHub Copilot, Windsurf, Cline, Zed, Aider, and any agent that reads a file. MIT licensed.">
 <meta property="og:title" content="AI Skills">
 <meta property="og:description" content="Plug-and-play skills and prompts for every AI coding agent. One command to install, plain markdown underneath.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://amey-thakur.github.io/AI-SKILLS/">
+<link rel="canonical" href="https://amey-thakur.github.io/AI-SKILLS/">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://amey-thakur.github.io/AI-SKILLS/">
+<link rel="stylesheet" href="style.css">
 <script>
   try {
     var stored = localStorage.getItem("ai-skills-theme");
-    if (stored === "light" || stored === "dark") {
-      document.documentElement.setAttribute("data-theme", stored);
-    }
+    if (stored === "light" || stored === "dark") document.documentElement.setAttribute("data-theme", stored);
   } catch (_) {}
 </script>
 <style>
-  :root {
-    --bg: #111111; --surface: #161616; --surface-2: #1c1c1c; --border: #2a2a2a;
-    --border-hover: #3a3a3a; --text-1: #eae6e0; --text-2: #bfb9b2; --text-3: #a09a93;
-    --text-4: #8a847d; --accent: #8ab2ea; --accent-dim: #5f8ed6;
+  .hero { padding: 84px 0 40px; text-align: center; }
+  .hero h1 {
+    font-family: "Play", ui-monospace, Consolas, monospace;
+    color: var(--text-1); font-size: clamp(38px, 6.5vw, 62px);
+    letter-spacing: -1.5px; line-height: 1.04; margin: 0 auto 22px; max-width: 15ch;
   }
-  [data-theme="light"] {
-    --bg: #efece3; --surface: #e7e3d8; --surface-2: #dfdbcf; --border: #ccc7b8;
-    --border-hover: #b5b0a0; --text-1: #1d1c1a; --text-2: #3d3b36; --text-3: #5a574f;
-    --text-4: #767268; --accent: #2f62b8; --accent-dim: #4a70a9;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--bg); color: var(--text-2);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 16px; line-height: 1.65;
-  }
-  .mono { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
-  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-
-  header.site {
-    border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky;
-    top: 0; background: var(--bg); z-index: 10;
-  }
-  header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  .brand { display: flex; align-items: center; gap: 9px; font-family: 'Play', ui-monospace, Consolas, monospace; font-weight: 700; color: var(--text-1); font-size: 18px; letter-spacing: -0.5px; text-decoration: none; }
-  .brand span { color: var(--accent); }
-  nav.top { display: flex; gap: 18px; align-items: center; font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
-  nav.top a { color: var(--text-3); text-decoration: none; }
-  nav.top a:hover { color: var(--text-1); }
-  /* Theme switch: a real toggle whose knob glides between sun and moon,
-     matching NotebookLab's site. */
-  .theme-toggle { position: relative; width: 46px; height: 24px; padding: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; cursor: pointer; transition: border-color .2s, background-color .25s; }
-  .theme-toggle:hover { border-color: var(--accent); }
-  .tt-knob { position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: var(--accent); color: var(--bg); display: flex; align-items: center; justify-content: center; transition: transform .28s cubic-bezier(.4,0,.2,1), background-color .25s; }
-  [data-theme="light"] .tt-knob { transform: translateX(22px); }
-  .tt-knob svg { width: 11px; height: 11px; }
-  .tt-knob .tt-sun { display: none; }
-  [data-theme="light"] .tt-knob .tt-sun { display: block; }
-  [data-theme="light"] .tt-knob .tt-moon { display: none; }
-  @media (prefers-reduced-motion: reduce) { .tt-knob { transition: none; } }
-
-  .hero { padding: 72px 0 48px; }
-  .hero h1 { font-family: 'Play', ui-monospace, Consolas, monospace; color: var(--text-1); font-size: clamp(34px, 6vw, 56px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 18px; }
   .hero h1 em { color: var(--accent); font-style: normal; }
-  .hero p.lede { font-size: 19px; color: var(--text-2); max-width: 640px; margin-bottom: 14px; }
-  .hero p.sub { font-family: ui-monospace, Consolas, monospace; font-size: 13px; color: var(--text-4); margin-bottom: 30px; }
-  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
-  .btn { display: inline-block; padding: 12px 22px; font-family: ui-monospace, Consolas, monospace; font-size: 14px; text-decoration: none; border: 1px solid var(--border); color: var(--text-2); }
-  .btn:hover { border-color: var(--accent-dim); color: var(--text-1); }
-  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 700; }
-  .btn.primary:hover { opacity: 0.9; }
+  .hero p.lede { font-size: 20px; color: var(--text-2); max-width: 620px; margin: 0 auto 18px; }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 30px; }
+  .works { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; margin: 42px auto 0; max-width: 760px; }
+  .works span {
+    font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12.5px; color: var(--text-3);
+    border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 6px 15px; background: var(--surface);
+  }
 
-  .install { border: 1px solid var(--border); background: var(--surface); padding: 20px 22px; margin: 40px 0; }
-  .install h2 { font-family: ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-4); margin-bottom: 14px; }
-  .install .row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
-  .install .row:last-child { margin-bottom: 0; }
-  .install code { font-family: ui-monospace, Consolas, monospace; font-size: 13px; background: var(--surface-2); border: 1px solid var(--border); padding: 8px 12px; color: var(--text-1); overflow-x: auto; white-space: nowrap; max-width: 100%; }
-  .install .label { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); min-width: 120px; }
-  .copy-btn { background: none; border: 1px solid var(--border); color: var(--text-3); font-family: ui-monospace, Consolas, monospace; font-size: 11px; padding: 6px 10px; cursor: pointer; }
-  .copy-btn:hover { border-color: var(--accent-dim); color: var(--text-1); }
+  section.block { padding: 26px 0; }
+  .section-label { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text-4); margin-bottom: 18px; }
 
-  .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 8px 0 22px; }
-  #search { flex: 1; min-width: 220px; background: var(--surface); border: 1px solid var(--border); color: var(--text-1); font-family: ui-monospace, Consolas, monospace; font-size: 14px; padding: 10px 14px; outline: none; }
-  #search:focus { border-color: var(--accent-dim); }
-  .chip { background: none; border: 1px solid var(--border); color: var(--text-3); font-family: ui-monospace, Consolas, monospace; font-size: 12px; padding: 8px 14px; cursor: pointer; }
-  .chip[aria-pressed="true"] { border-color: var(--accent-dim); background: var(--surface-2); color: var(--text-1); }
+  .install {
+    border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius);
+    padding: 26px 28px; box-shadow: var(--shadow-sm);
+  }
+  .install .row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--border); }
+  .install .row:first-of-type { border-top: none; padding-top: 4px; }
+  .install .label { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; color: var(--text-4); min-width: 116px; }
+  .install code {
+    flex: 1; min-width: 0; font-family: ui-monospace, Consolas, monospace; font-size: 13.5px;
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 11px 15px; color: var(--text-1); overflow-x: auto; white-space: nowrap;
+  }
+  .copy-btn {
+    flex-shrink: 0; background: var(--surface-2); border: 1px solid var(--border); color: var(--text-3);
+    font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; padding: 9px 15px;
+    border-radius: var(--radius-sm); cursor: pointer; transition: border-color .15s, color .15s;
+  }
+  .copy-btn:hover { border-color: var(--accent); color: var(--text-1); }
+  .install .more { margin-top: 16px; font-size: 15px; color: var(--text-3); }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; padding-bottom: 72px; }
-  .card { border: 1px solid var(--border); background: var(--surface); padding: 18px; display: flex; flex-direction: column; gap: 8px; }
-  .card:hover { border-color: var(--border-hover); }
-  .card .kind { font-family: ui-monospace, Consolas, monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
-  .card h3 { font-family: ui-monospace, Consolas, monospace; color: var(--text-1); font-size: 16px; letter-spacing: -0.3px; }
-  .card p { font-size: 14px; color: var(--text-3); flex: 1; }
-  .card .actions { display: flex; gap: 8px; margin-top: 4px; }
-  .card .actions a { font-family: ui-monospace, Consolas, monospace; font-size: 11px; color: var(--text-3); text-decoration: none; border: 1px solid var(--border); padding: 6px 10px; }
-  .card .actions a:hover { border-color: var(--accent-dim); color: var(--text-1); }
-  #empty { color: var(--text-4); font-family: ui-monospace, Consolas, monospace; font-size: 13px; padding: 30px 0 72px; display: none; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 24px; }
+  #search {
+    flex: 1; min-width: 240px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    color: var(--text-1); font-family: ui-monospace, Consolas, monospace; font-size: 15px; padding: 13px 18px; outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  #search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .chip {
+    background: var(--surface); border: 1px solid var(--border); color: var(--text-3);
+    font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; padding: 10px 18px;
+    border-radius: var(--radius-pill); cursor: pointer; transition: border-color .15s, color .15s, background-color .15s;
+  }
+  .chip:hover { border-color: var(--border-hover); color: var(--text-1); }
+  .chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--text-1); }
 
-  footer { border-top: 1px solid var(--border); padding: 26px 0 40px; font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); }
-  footer a { color: var(--text-3); }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; padding-bottom: 40px; }
+  .card {
+    border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius);
+    padding: 22px; display: flex; flex-direction: column; gap: 10px;
+    transition: border-color .18s, transform .18s, box-shadow .18s;
+  }
+  .card:hover { border-color: var(--border-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .card .kind { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+  .card h3 { font-family: "Play", ui-monospace, Consolas, monospace; color: var(--text-1); font-size: 17px; letter-spacing: -0.2px; }
+  .card p { font-size: 14.5px; color: var(--text-3); flex: 1; line-height: 1.6; }
+  .card .actions { display: flex; gap: 9px; margin-top: 6px; }
+  .card .actions a {
+    font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-3); text-decoration: none;
+    border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 14px; cursor: pointer; transition: border-color .15s, color .15s;
+  }
+  .card .actions a:hover { border-color: var(--accent); color: var(--text-1); }
+  #empty { color: var(--text-4); font-family: "Play", ui-monospace, Consolas, monospace; font-size: 14px; padding: 40px 0; display: none; }
+
+  @media (max-width: 640px) {
+    .hero { padding: 56px 0 30px; }
+    .install .label { min-width: 100%; }
+  }
 </style>
 </head>
 <body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="./"><svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="var(--bg)"/><rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="var(--accent)" stroke-width="4"/><rect x="12" y="38" width="10" height="14" fill="var(--accent-dim)"/><rect x="27" y="28" width="10" height="24" fill="var(--accent)"/><rect x="42" y="16" width="10" height="36" fill="var(--text-1)"/></svg>AI<span>-</span>SKILLS</a>
+    <a class="brand" href="./">
+      <svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="var(--surface-2)"/>
+        <rect x="13" y="38" width="10" height="13" rx="2" fill="var(--text-3)"/>
+        <rect x="27" y="28" width="10" height="23" rx="2" fill="var(--accent)"/>
+        <rect x="41" y="15" width="10" height="36" rx="2" fill="var(--text-1)"/>
+      </svg>
+      AI<span>-</span>SKILLS
+    </a>
     <nav class="top" aria-label="Site">
       <a href="prompt-studio.html">Prompt Studio</a>
+      <a href="https://github.com/Amey-Thakur/AI-SKILLS/blob/main/INSTALL.md">Install</a>
       <a href="https://github.com/Amey-Thakur/AI-SKILLS">GitHub</a>
-      <button type="button" id="theme-toggle" class="theme-toggle" role="switch" aria-checked="false" aria-label="Light theme">
+      <button type="button" id="theme-toggle" class="theme-toggle" role="switch" aria-checked="false" aria-label="Toggle light and dark theme">
         <span class="tt-knob" aria-hidden="true">
-          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
-          </svg>
-          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
-          </svg>
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         </span>
       </button>
     </nav>
@@ -133,44 +128,53 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <h1>Skills your AI agent<br>can actually <em>use</em>.</h1>
+      <h1>Skills your agent<br>can actually <em>use</em></h1>
       <p class="lede">
-        An open library of working methods and ready-to-run prompts: plain
-        markdown that plugs into Claude Code, Claude Desktop, Cursor,
-        Antigravity, OpenAI Codex, Gemini CLI, and anything else that reads a
-        file.
+        An open library of working methods and ready-to-run prompts. Plain
+        markdown that plugs into the agent you already use.
       </p>
-      <p class="sub">MIT licensed · self-contained · nothing to execute or trust</p>
       <div class="cta">
         <a class="btn primary" href="#library">Browse the library</a>
-        <a class="btn" href="prompt-studio.html">Build a prompt</a>
+        <a class="btn" href="prompt-studio.html">Open Prompt Studio</a>
+      </div>
+      <div class="works" aria-label="Compatible tools">
+        <span>Claude Code</span><span>Claude Desktop</span><span>Cursor</span>
+        <span>OpenAI Codex</span><span>Gemini CLI</span><span>GitHub Copilot</span>
+        <span>Windsurf</span><span>Cline</span><span>Zed</span><span>Aider</span>
       </div>
     </div>
   </section>
 
   <div class="wrap">
-    <section class="install" aria-label="Install">
-      <h2>Use it in one line</h2>
-      <div class="row">
-        <span class="label">Claude Code</span>
-        <code id="i-claude">/plugin marketplace add Amey-Thakur/AI-SKILLS</code>
-        <button class="copy-btn" type="button" data-copy="i-claude">copy</button>
-      </div>
-      <div class="row">
-        <span class="label">Any editor</span>
-        <code id="i-clone">git clone https://github.com/Amey-Thakur/AI-SKILLS</code>
-        <button class="copy-btn" type="button" data-copy="i-clone">copy</button>
-      </div>
-      <div class="row">
-        <span class="label">Any agent</span>
-        <code id="i-raw">https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/index.json</code>
-        <button class="copy-btn" type="button" data-copy="i-raw">copy</button>
+    <section class="block" aria-label="Install">
+      <p class="section-label">Use it in one line</p>
+      <div class="install">
+        <div class="row">
+          <span class="label">Claude Code</span>
+          <code id="i-claude">/plugin marketplace add Amey-Thakur/AI-SKILLS</code>
+          <button class="copy-btn" type="button" data-copy="i-claude">Copy</button>
+        </div>
+        <div class="row">
+          <span class="label">Any editor</span>
+          <code id="i-clone">git clone https://github.com/Amey-Thakur/AI-SKILLS</code>
+          <button class="copy-btn" type="button" data-copy="i-clone">Copy</button>
+        </div>
+        <div class="row">
+          <span class="label">Any agent</span>
+          <code id="i-raw">https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/index.json</code>
+          <button class="copy-btn" type="button" data-copy="i-raw">Copy</button>
+        </div>
+        <p class="more">
+          Per-tool steps for Cursor, Codex, Copilot, Windsurf, Cline, and more
+          are in the <a href="https://github.com/Amey-Thakur/AI-SKILLS/blob/main/INSTALL.md">install guide</a>.
+        </p>
       </div>
     </section>
 
-    <section id="library" aria-label="Library">
+    <section class="block" id="library" aria-label="Library">
+      <p class="section-label">The library</p>
       <div class="toolbar">
-        <input id="search" type="search" placeholder="Search skills and prompts..." aria-label="Search the library">
+        <input id="search" type="search" placeholder="Search skills and prompts" aria-label="Search the library">
         <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
         <button class="chip" type="button" data-filter="skill" aria-pressed="false">Skills</button>
         <button class="chip" type="button" data-filter="prompt" aria-pressed="false">Prompts</button>
@@ -181,10 +185,10 @@
   </div>
 </main>
 
-<footer>
+<footer class="site">
   <div class="wrap">
     Made by <a href="https://github.com/Amey-Thakur">Amey Thakur</a> ·
-    maker of <a href="https://github.com/Amey-Thakur/NotebookLab">NotebookLab</a> ·
+    sibling of <a href="https://github.com/Amey-Thakur/NotebookLab">NotebookLab</a> ·
     MIT license · contributions welcome
   </div>
 </footer>
@@ -192,33 +196,25 @@
 <script>
 (function () {
   "use strict";
-
-  /* Theme */
   var toggle = document.getElementById("theme-toggle");
-  function syncToggle() {
-    toggle.setAttribute("aria-checked", document.documentElement.getAttribute("data-theme") === "light" ? "true" : "false");
-  }
-  syncToggle();
+  function sync() { toggle.setAttribute("aria-checked", document.documentElement.getAttribute("data-theme") === "light" ? "true" : "false"); }
+  sync();
   toggle.addEventListener("click", function () {
     var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
     try { localStorage.setItem("ai-skills-theme", next); } catch (_) {}
-    syncToggle();
+    sync();
   });
 
-  /* Copy buttons for install lines */
   document.querySelectorAll(".copy-btn[data-copy]").forEach(function (btn) {
     btn.addEventListener("click", function () {
-      var text = document.getElementById(btn.getAttribute("data-copy")).textContent;
-      navigator.clipboard.writeText(text).then(function () {
-        var old = btn.textContent;
-        btn.textContent = "copied";
+      navigator.clipboard.writeText(document.getElementById(btn.getAttribute("data-copy")).textContent).then(function () {
+        var old = btn.textContent; btn.textContent = "Copied";
         setTimeout(function () { btn.textContent = old; }, 1200);
       });
     });
   });
 
-  /* Library: load the catalog, render cards, wire search + filter. */
   var grid = document.getElementById("grid");
   var empty = document.getElementById("empty");
   var search = document.getElementById("search");
@@ -237,13 +233,9 @@
       card.className = "card";
       var gh = "https://github.com/Amey-Thakur/AI-SKILLS/blob/main/" + e.path;
       card.innerHTML =
-        '<span class="kind">' + e.kind + "</span>" +
-        "<h3></h3>" +
-        "<p></p>" +
-        '<div class="actions">' +
-        '<a href="' + gh + '">view</a>' +
-        '<a href="#" data-raw="' + e.raw_url + '">copy content</a>' +
-        "</div>";
+        '<span class="kind">' + e.kind + "</span><h3></h3><p></p>" +
+        '<div class="actions"><a href="' + gh + '">View</a>' +
+        '<a href="#" data-raw="' + e.raw_url + '">Copy content</a></div>';
       card.querySelector("h3").textContent = e.name;
       card.querySelector("p").textContent = e.description;
       grid.appendChild(card);
@@ -255,35 +247,24 @@
     var link = event.target.closest("a[data-raw]");
     if (!link) return;
     event.preventDefault();
-    fetch(link.getAttribute("data-raw"))
-      .then(function (r) { return r.text(); })
+    fetch(link.getAttribute("data-raw")).then(function (r) { return r.text(); })
       .then(function (text) { return navigator.clipboard.writeText(text); })
-      .then(function () {
-        var old = link.textContent;
-        link.textContent = "copied";
-        setTimeout(function () { link.textContent = old; }, 1200);
-      })
-      .catch(function () { link.textContent = "copy failed"; });
+      .then(function () { var old = link.textContent; link.textContent = "Copied"; setTimeout(function () { link.textContent = old; }, 1200); })
+      .catch(function () { link.textContent = "Copy failed"; });
   });
 
   search.addEventListener("input", render);
   document.querySelectorAll(".chip[data-filter]").forEach(function (chip) {
     chip.addEventListener("click", function () {
       filter = chip.getAttribute("data-filter");
-      document.querySelectorAll(".chip[data-filter]").forEach(function (c) {
-        c.setAttribute("aria-pressed", c === chip ? "true" : "false");
-      });
+      document.querySelectorAll(".chip[data-filter]").forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
       render();
     });
   });
 
-  fetch("index.json")
-    .then(function (r) { return r.json(); })
+  fetch("index.json").then(function (r) { return r.json(); })
     .then(function (data) { entries = data.entries; render(); })
-    .catch(function () {
-      empty.textContent = "Could not load the catalog. Browse it on GitHub instead.";
-      empty.style.display = "block";
-    });
+    .catch(function () { empty.textContent = "Could not load the catalog. Browse it on GitHub instead."; empty.style.display = "block"; });
 })();
 </script>
 </body>

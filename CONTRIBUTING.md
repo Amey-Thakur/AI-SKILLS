@@ -1,45 +1,43 @@
 # Contributing
 
-AI Skills accepts skills and prompts that clear one bar: **someone who has
-never met you can pick your entry up and get better work out of their agent
-today.** Everything below serves that.
+Every entry clears one bar: a stranger can pick it up and get better work out
+of their agent today. The rules below serve that and nothing else.
 
-## Adding a skill
+## Add a skill
 
-1. One folder under `skills/`, kebab-case, one `SKILL.md` inside.
-2. Frontmatter: `name` (matching the folder) and a one-sentence
-   `description` written for the moment an agent decides whether to load it , 
-   say when to use it, not what it contains.
-3. The body is a working method, not an essay: the steps in order, what good
-   output looks like, and the boundaries (where the skill does not apply,
-   what it must never do).
-4. 300–700 words. Shorter than that is usually a prompt, longer is usually
+1. One folder under `skills/`, kebab-case, with one `SKILL.md` inside.
+2. Frontmatter carries `name` (matching the folder) and a one-sentence
+   `description` written for the moment an agent decides whether to load it.
+   Say when to use it, not what it contains.
+3. The body is a method: the steps in order, what good output looks like, and
+   the boundaries (where it does not apply, what it must never do). Not an
+   essay about the topic.
+4. Aim for 300 to 700 words. Shorter is usually a prompt; longer is usually
    two skills.
 
-## Adding a prompt
+## Add a prompt
 
-1. One file under `prompts/`, kebab-case `.md`.
-2. Frontmatter: `name`, one-sentence `description`, `variables` (every
-   `{placeholder}` in the body, with a note on what belongs in it), and
-   `settings` (temperature guidance and anything else that matters).
-3. The body is the complete prompt, ready to paste, with `{variables}` for
-   the parts the user supplies. Unknowns become variables: never invented
-   specifics.
+1. One kebab-case `.md` file under `prompts/`.
+2. Frontmatter carries `name`, a one-sentence `description`, `variables`
+   (every `{placeholder}` in the body, each with a note on what fills it), and
+   `settings` (temperature and anything else that changes the result).
+3. The body is the complete prompt, ready to paste, with `{variables}` for the
+   parts the user supplies. Unknowns become variables, never invented facts.
 
-## The review checklist
+## The bar for merging
 
-A pull request merges when every box ticks:
+A pull request merges when all five hold:
 
-- [ ] Complete: usable end to end as submitted; no "TODO", no "coming soon".
-- [ ] Self-contained: no links required to make the entry work.
-- [ ] Honest: claims match what the method actually does; limits are stated.
-- [ ] Distinct: it does a job no existing entry already covers (improve the
-      existing one instead).
-- [ ] Portable: plain markdown + YAML frontmatter, no tool-specific syntax
-      in the body.
+- **Complete.** Usable end to end as submitted. No `TODO`, no "coming soon".
+- **Self-contained.** Nothing outside the entry is needed to use it.
+- **Honest.** Claims match what it does, and limits are stated.
+- **Distinct.** It does a job no existing entry covers. If one is close,
+  improve that one instead.
+- **Portable.** Plain markdown and YAML frontmatter, no tool-specific syntax
+  in the body.
 
 ## Style
 
-Plain language over jargon. Second person ("you"), active voice, short
-sentences. Write the way the best entry in the collection is written, and
-when in doubt, read two of them first.
+Plain words over jargon. Second person, active voice, short sentences. No
+em dashes. Match the voice of the strongest entry already in the collection,
+and read two of them before you start.

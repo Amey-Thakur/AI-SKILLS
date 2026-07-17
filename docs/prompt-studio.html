@@ -3,136 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prompt Studio: build research-grade prompts in your browser | AI-SKILLS</title>
-<meta name="description" content="Free browser Prompt Studio. Describe the job and get a complete, ready-to-run prompt built on proven prompt-engineering techniques: worked examples for classification, step-by-step reasoning for logic, role and constraints for creative work, strict schemas for structured output.">
+<title>Prompt Studio: build a strong prompt in your browser | AI-SKILLS</title>
+<meta name="description" content="A free browser prompt builder. Describe the job and get a complete, ready-to-run prompt using the technique that fits: worked examples for classification, step-by-step reasoning for logic, role and constraints for writing, a strict schema for structured output.">
 <meta property="og:title" content="Prompt Studio: AI-SKILLS">
-<meta property="og:description" content="Build prompts the way prompt engineering research says to: the right technique per task, honest variables, recommended settings. Free, in your browser, nothing leaves the page.">
+<meta property="og:description" content="Describe the job, get a prompt built on what works. Free, in your browser, nothing leaves the page.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html">
+<link rel="canonical" href="https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html">
+<link rel="stylesheet" href="style.css">
 <script>
   try {
     var stored = localStorage.getItem("ai-skills-theme");
-    if (stored === "light" || stored === "dark") {
-      document.documentElement.setAttribute("data-theme", stored);
-    }
+    if (stored === "light" || stored === "dark") document.documentElement.setAttribute("data-theme", stored);
   } catch (_) {}
 </script>
 <style>
-  :root {
-    --bg: #111111; --surface: #161616; --surface-2: #1c1c1c; --border: #2a2a2a;
-    --border-hover: #3a3a3a; --text-1: #eae6e0; --text-2: #bfb9b2; --text-3: #a09a93;
-    --text-4: #8a847d; --accent: #8ab2ea; --accent-dim: #5f8ed6;
-  }
-  [data-theme="light"] {
-    --bg: #efece3; --surface: #e7e3d8; --surface-2: #dfdbcf; --border: #ccc7b8;
-    --border-hover: #b5b0a0; --text-1: #1d1c1a; --text-2: #3d3b36; --text-3: #5a574f;
-    --text-4: #767268; --accent: #2f62b8; --accent-dim: #4a70a9;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--text-2); font-family: Georgia, serif; font-size: 16px; line-height: 1.65; }
-  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+  .head { padding: 56px 0 8px; }
+  .head .kicker { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .head h1 { font-family: "Play", ui-monospace, Consolas, monospace; color: var(--text-1); font-size: clamp(32px, 5vw, 48px); letter-spacing: -1.2px; line-height: 1.08; margin-bottom: 18px; }
+  .head p.lede { color: var(--text-2); font-size: 19px; max-width: 720px; margin-bottom: 10px; }
+  .head p.small { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12.5px; color: var(--text-4); }
 
-  header.site { border-bottom: 1px solid var(--border); padding: 14px 0; position: sticky; top: 0; background: var(--bg); z-index: 10; }
-  header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  .brand { display: flex; align-items: center; gap: 9px; font-family: 'Play', ui-monospace, Consolas, monospace; font-weight: 700; color: var(--text-1); font-size: 18px; text-decoration: none; }
-  .brand span { color: var(--accent); }
-  nav.top { display: flex; gap: 20px; align-items: center; font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
-  nav.top a { color: var(--text-3); text-decoration: none; }
-  nav.top a:hover { color: var(--text-1); }
-  .theme-toggle { position: relative; width: 46px; height: 24px; padding: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; cursor: pointer; transition: border-color .2s, background-color .25s; }
-  .theme-toggle:hover { border-color: var(--accent); }
-  .tt-knob { position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: var(--accent); color: var(--bg); display: flex; align-items: center; justify-content: center; transition: transform .28s cubic-bezier(.4,0,.2,1), background-color .25s; }
-  [data-theme="light"] .tt-knob { transform: translateX(22px); }
-  .tt-knob svg { width: 11px; height: 11px; }
-  .tt-knob .tt-sun { display: none; }
-  [data-theme="light"] .tt-knob .tt-sun { display: block; }
-  [data-theme="light"] .tt-knob .tt-moon { display: none; }
-  @media (prefers-reduced-motion: reduce) { .tt-knob { transition: none; } }
+  .science { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin: 38px 0 12px; }
+  .tech { border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm); }
+  .tech b { display: block; font-family: "Play", ui-monospace, Consolas, monospace; font-size: 14px; color: var(--text-1); margin-bottom: 7px; }
+  .tech p { font-size: 14px; color: var(--text-3); line-height: 1.6; }
 
-  .head { padding: 60px 0 20px; }
-  .head .kicker { font-family: ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-dim); margin-bottom: 12px; }
-  .head h1 { font-family: 'Play', ui-monospace, Consolas, monospace; color: var(--text-1); font-size: clamp(30px, 5vw, 46px); letter-spacing: -1.2px; margin-bottom: 16px; }
-  .head p.lede { color: var(--text-2); font-size: 18px; max-width: 700px; margin-bottom: 10px; }
-  .head p.small { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); }
+  .builder { display: grid; grid-template-columns: 1fr; gap: 30px; padding: 36px 0 84px; }
+  @media (min-width: 980px) { .builder { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
 
-  .science { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 34px 0 10px; }
-  .science .tech { border: 1px solid var(--border); background: var(--surface); padding: 16px 18px; }
-  .science .tech b { display: block; font-family: ui-monospace, Consolas, monospace; font-size: 13px; color: var(--text-1); margin-bottom: 6px; }
-  .science .tech p { font-size: 13px; color: var(--text-3); line-height: 1.55; }
-
-  .builder { display: grid; grid-template-columns: 1fr; gap: 28px; padding: 34px 0 80px; }
-  @media (min-width: 960px) { .builder { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
-
-  fieldset { border: 1px solid var(--border); background: var(--surface); padding: 24px; margin-bottom: 20px; }
-  legend { font-family: ui-monospace, Consolas, monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-4); padding: 0 8px; }
-  label.f { display: block; font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); margin: 18px 0 6px; }
+  fieldset { border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius); padding: 28px; margin-bottom: 22px; box-shadow: var(--shadow-sm); }
+  legend { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-4); padding: 0 10px; }
+  label.f { display: block; font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; color: var(--text-3); margin: 20px 0 8px; }
   fieldset label.f:first-of-type { margin-top: 0; }
-  label.f .opt { opacity: 0.65; }
+  label.f .opt { color: var(--text-4); }
   input[type="text"], textarea {
-    width: 100%; background: var(--surface-2); border: 1px solid var(--border);
-    color: var(--text-1); font-family: Georgia, serif; font-size: 15px; padding: 12px 14px; outline: none;
-    transition: border-color .15s;
+    width: 100%; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    color: var(--text-1); font-family: "Iowan Old Style", Georgia, serif; font-size: 16px; padding: 13px 15px; outline: none;
+    transition: border-color .15s, box-shadow .15s;
   }
-  input[type="text"]:focus, textarea:focus { border-color: var(--accent-dim); }
-  textarea { resize: vertical; min-height: 70px; line-height: 1.55; }
-  .types { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  @media (max-width: 480px) { .types { grid-template-columns: 1fr; } }
+  input[type="text"]:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  textarea { resize: vertical; min-height: 76px; line-height: 1.6; }
+  .types { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 460px) { .types { grid-template-columns: 1fr; } }
   .type {
-    text-align: left; border: 1px solid var(--border); background: var(--surface-2); padding: 12px 14px;
-    cursor: pointer; font-family: ui-monospace, Consolas, monospace; font-size: 13px; color: var(--text-3);
-    transition: border-color .15s;
+    text-align: left; border: 1px solid var(--border); background: var(--surface-2); border-radius: var(--radius-sm);
+    padding: 14px 16px; cursor: pointer; font-family: "Play", ui-monospace, Consolas, monospace; font-size: 14px; color: var(--text-2);
+    transition: border-color .15s, background-color .15s, transform .12s;
   }
-  .type:hover { border-color: var(--border-hover); }
-  .type[aria-pressed="true"] { border-color: var(--accent); color: var(--text-1); background: var(--surface); }
-  .type small { display: block; color: var(--text-4); font-size: 11px; margin-top: 3px; font-family: Georgia, serif; }
-  .hint { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--accent-dim); margin-top: 8px; }
-  .example-btn { background: none; border: 1px solid var(--border); color: var(--text-4); font-family: ui-monospace, Consolas, monospace; font-size: 11px; padding: 6px 12px; cursor: pointer; margin-top: 10px; }
-  .example-btn:hover { border-color: var(--accent-dim); color: var(--text-1); }
+  .type:hover { border-color: var(--border-hover); transform: translateY(-1px); }
+  .type[aria-pressed="true"] { border-color: var(--accent); color: var(--text-1); background: var(--accent-soft); }
+  .type small { display: block; color: var(--text-4); font-size: 12px; margin-top: 4px; font-family: "Iowan Old Style", Georgia, serif; }
+  .hint { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12.5px; color: var(--accent); margin-top: 10px; }
+  .example-btn {
+    background: var(--surface-2); border: 1px solid var(--border); color: var(--text-3); border-radius: var(--radius-pill);
+    font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; padding: 8px 16px; cursor: pointer; margin-top: 12px; transition: border-color .15s, color .15s;
+  }
+  .example-btn:hover { border-color: var(--accent); color: var(--text-1); }
 
-  .out { position: sticky; top: 76px; }
-  .out .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
-  .out .bar span { font-family: ui-monospace, Consolas, monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-4); }
+  .out { position: sticky; top: 82px; }
+  .out .bar { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 12px; }
+  .out .bar span { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-4); }
   .out .actions { display: flex; gap: 10px; }
-  .out button { background: none; border: 1px solid var(--border); color: var(--text-3); font-family: ui-monospace, Consolas, monospace; font-size: 13px; padding: 9px 18px; cursor: pointer; }
-  .out button:hover { border-color: var(--accent-dim); color: var(--text-1); }
-  .out button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 700; }
-  .out button.primary:hover { opacity: 0.9; }
   pre#result {
-    border: 1px solid var(--border); background: var(--surface); color: var(--text-1);
-    font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 13.5px; line-height: 1.7;
-    padding: 22px; white-space: pre-wrap; word-break: break-word; min-height: 320px; max-height: 68vh; overflow: auto;
+    border: 1px solid var(--border); background: var(--surface); color: var(--text-1); border-radius: var(--radius);
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 14px; line-height: 1.75;
+    padding: 24px; white-space: pre-wrap; word-break: break-word; min-height: 340px; max-height: 66vh; overflow: auto; box-shadow: var(--shadow-sm);
   }
-  .settings { border: 1px solid var(--border); border-top: none; background: var(--surface-2); padding: 14px 18px; font-family: ui-monospace, Consolas, monospace; font-size: 12.5px; color: var(--text-3); line-height: 1.6; }
+  .settings { border: 1px solid var(--border); background: var(--surface-2); border-radius: var(--radius-sm); padding: 15px 18px; margin-top: 12px; font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; color: var(--text-3); line-height: 1.6; }
   .settings b { color: var(--text-1); }
-  .fill-note { font-family: ui-monospace, Consolas, monospace; font-size: 11.5px; color: var(--text-4); margin-top: 10px; }
-  .fill-note code { color: var(--accent-dim); }
-
-  footer { border-top: 1px solid var(--border); padding: 26px 0 44px; font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); }
-  footer a { color: var(--text-3); }
+  .fill-note { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); margin-top: 12px; line-height: 1.6; }
+  .fill-note code { color: var(--accent); }
 </style>
 </head>
 <body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="./"><svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="var(--bg)"/><rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="var(--accent)" stroke-width="4"/><rect x="12" y="38" width="10" height="14" fill="var(--accent-dim)"/><rect x="27" y="28" width="10" height="24" fill="var(--accent)"/><rect x="42" y="16" width="10" height="36" fill="var(--text-1)"/></svg>AI<span>-</span>SKILLS</a>
+    <a class="brand" href="./">
+      <svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="var(--surface-2)"/>
+        <rect x="13" y="38" width="10" height="13" rx="2" fill="var(--text-3)"/>
+        <rect x="27" y="28" width="10" height="23" rx="2" fill="var(--accent)"/>
+        <rect x="41" y="15" width="10" height="36" rx="2" fill="var(--text-1)"/>
+      </svg>
+      AI<span>-</span>SKILLS
+    </a>
     <nav class="top" aria-label="Site">
       <a href="./">Library</a>
       <a href="https://github.com/Amey-Thakur/AI-SKILLS">GitHub</a>
-      <button type="button" id="theme-toggle" class="theme-toggle" role="switch" aria-checked="false" aria-label="Light theme">
+      <button type="button" id="theme-toggle" class="theme-toggle" role="switch" aria-checked="false" aria-label="Toggle light and dark theme">
         <span class="tt-knob" aria-hidden="true">
-          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
-          </svg>
-          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
-          </svg>
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         </span>
       </button>
     </nav>
@@ -142,20 +108,19 @@
 <main class="wrap">
   <div class="head">
     <p class="kicker">Prompt Studio</p>
-    <h1>Prompts built the way<br>the research says to.</h1>
+    <h1>Describe the job.<br>Get a prompt that works.</h1>
     <p class="lede">
-      Describe the job. The Studio picks the technique that fits: worked
-      examples for sorting and extraction, step-by-step reasoning for logic,
-      role and constraints for creative work, a strict schema for structured
-      output: and assembles the complete prompt with the settings to run it.
+      The Studio picks the technique that fits your task and assembles the whole
+      prompt: worked examples for sorting, step-by-step reasoning for logic,
+      role and constraints for writing, a strict schema for structured output.
     </p>
-    <p class="small">Free · runs entirely in your browser · nothing you type leaves this page</p>
+    <p class="small">Free. Runs in your browser. Nothing you type leaves this page.</p>
   </div>
 
-  <section class="science" aria-label="The techniques behind the Studio">
-    <div class="tech"><b>Worked examples</b><p>For classification and extraction, two or three input→output pairs teach format and edge handling better than any instruction.</p></div>
-    <div class="tech"><b>Step-by-step reasoning</b><p>For logic and analysis, room to think before answering measurably reduces errors; the answer stays cleanly separated.</p></div>
-    <div class="tech"><b>Role &amp; constraints</b><p>For creative work, a role plus a few hard constraints shape voice better than a paragraph of adjectives.</p></div>
+  <section class="science" aria-label="The techniques">
+    <div class="tech"><b>Worked examples</b><p>For classification and extraction, a few input and output pairs teach the format better than any instruction.</p></div>
+    <div class="tech"><b>Step-by-step reasoning</b><p>For logic and analysis, room to think before answering reduces errors, and the answer stays separate.</p></div>
+    <div class="tech"><b>Role and constraints</b><p>For writing, a role plus a few hard constraints shapes voice better than a paragraph of adjectives.</p></div>
     <div class="tech"><b>Output contracts</b><p>For structured output, an exact schema with a rule for unknowns prevents invented values and broken parsers.</p></div>
   </section>
 
@@ -168,34 +133,34 @@
         <p class="hint" id="detect-hint" hidden></p>
         <button type="button" class="example-btn" id="try-example">Try an example</button>
 
-        <label class="f">Task type <span class="opt">,  detected automatically, tap to override</span></label>
+        <label class="f">Task type <span class="opt">(detected automatically, tap to override)</span></label>
         <div class="types" role="group" aria-label="Task type">
-          <button type="button" class="type" data-type="extract" aria-pressed="false">Classify / Extract<small>sorting, labeling, pulling data out of text</small></button>
-          <button type="button" class="type" data-type="reason" aria-pressed="false">Reason / Analyze<small>logic, math, comparisons, decisions</small></button>
-          <button type="button" class="type" data-type="create" aria-pressed="false">Create / Write<small>emails, posts, stories, copy</small></button>
+          <button type="button" class="type" data-type="extract" aria-pressed="false">Classify or Extract<small>sorting, labeling, pulling data out of text</small></button>
+          <button type="button" class="type" data-type="reason" aria-pressed="false">Reason or Analyze<small>logic, math, comparisons, decisions</small></button>
+          <button type="button" class="type" data-type="create" aria-pressed="false">Create or Write<small>emails, posts, stories, copy</small></button>
           <button type="button" class="type" data-type="structured" aria-pressed="false">Structured output<small>JSON, tables, strict formats</small></button>
         </div>
       </fieldset>
 
       <fieldset>
-        <legend>Sharpen it <span class="opt">,  every field optional</span></legend>
+        <legend>Sharpen it <span class="opt">(every field optional)</span></legend>
         <label class="f" for="context">Context the model needs</label>
         <textarea id="context" rows="2" placeholder="Background, definitions, the situation."></textarea>
 
-        <label class="f" for="examples">Worked examples <span class="opt">(input → expected output, one pair per line)</span></label>
-        <textarea id="examples" rows="3" placeholder="Refund taking 3 weeks?! → billing: payment delay complaint"></textarea>
+        <label class="f" for="examples">Worked examples <span class="opt">(input then expected output, one pair per line)</span></label>
+        <textarea id="examples" rows="3" placeholder="Refund taking 3 weeks?! -> billing, payment delay complaint"></textarea>
 
         <label class="f" for="constraints">Rules and constraints</label>
-        <textarea id="constraints" rows="2" placeholder="e.g. under 200 words; never invent order numbers; UK spelling"></textarea>
+        <textarea id="constraints" rows="2" placeholder="For example: under 200 words; never invent order numbers; UK spelling"></textarea>
 
         <label class="f" for="audience">Audience</label>
-        <input type="text" id="audience" placeholder="e.g. non-technical customers">
+        <input type="text" id="audience" placeholder="For example: non-technical customers">
 
         <label class="f" for="tone">Tone</label>
-        <input type="text" id="tone" placeholder="e.g. plain and direct">
+        <input type="text" id="tone" placeholder="For example: plain and direct">
 
         <label class="f" for="format">Output format</label>
-        <input type="text" id="format" placeholder="e.g. a five-bullet summary; JSON with fields category, reason">
+        <input type="text" id="format" placeholder="For example: a five-bullet summary; JSON with fields category, reason">
       </fieldset>
     </form>
 
@@ -203,42 +168,39 @@
       <div class="bar">
         <span>Your prompt</span>
         <div class="actions">
-          <button type="button" id="copy" class="primary">Copy</button>
-          <button type="button" id="clear">Clear</button>
+          <button type="button" id="copy" class="btn primary">Copy</button>
+          <button type="button" id="clear" class="btn">Clear</button>
         </div>
       </div>
       <pre id="result" aria-live="polite">Describe the job on the left and the prompt builds here as you type.</pre>
       <div class="settings" id="settings" hidden></div>
       <p class="fill-note">
-        Anything the Studio could not know appears as a <code>{variable}</code>
-       : fill those before running. Honest holes beat invented facts.
+        Anything the Studio cannot know appears as a <code>{variable}</code> to
+        fill before running. An honest gap beats an invented fact.
       </p>
     </div>
   </div>
 </main>
 
-<footer>
+<footer class="site">
   <div class="wrap">
-    Part of <a href="./">AI-SKILLS</a> · the same method as the
-    <a href="https://github.com/Amey-Thakur/AI-SKILLS/blob/main/skills/prompt-engineering/SKILL.md">prompt-engineering skill</a>
-    · also built into <a href="https://github.com/Amey-Thakur/NotebookLab">NotebookLab</a> · MIT license
+    Part of <a href="./">AI-SKILLS</a> ·
+    the same method as the <a href="https://github.com/Amey-Thakur/AI-SKILLS/blob/main/skills/prompt-engineering/SKILL.md">prompt-engineering skill</a> ·
+    built into <a href="https://github.com/Amey-Thakur/NotebookLab">NotebookLab</a>
   </div>
 </footer>
 
 <script>
 (function () {
   "use strict";
-
   var toggle = document.getElementById("theme-toggle");
-  function syncToggle() {
-    toggle.setAttribute("aria-checked", document.documentElement.getAttribute("data-theme") === "light" ? "true" : "false");
-  }
-  syncToggle();
+  function sync() { toggle.setAttribute("aria-checked", document.documentElement.getAttribute("data-theme") === "light" ? "true" : "false"); }
+  sync();
   toggle.addEventListener("click", function () {
     var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
     try { localStorage.setItem("ai-skills-theme", next); } catch (_) {}
-    syncToggle();
+    sync();
   });
 
   var fields = ["task", "context", "examples", "constraints", "audience", "tone", "format"];
@@ -258,63 +220,47 @@
     if (/write|draft|story|email|post|poem|copy|slogan|describe|announce|blog/.test(t)) return "create";
     return null;
   }
-
   function activeType() { return chosenType || detectType(el.task.value) || "reason"; }
 
   var SETTINGS = {
-    extract: "<b>Run it with:</b> temperature 0–0.2 · few-shot examples matter more than instructions here: add 2–3 if you can",
-    reason: "<b>Run it with:</b> temperature 0–0.3 · give the model room to think before the answer",
-    create: "<b>Run it with:</b> temperature 0.7–0.9 · constraints shape voice better than adjectives",
-    structured: "<b>Run it with:</b> temperature 0 · validate the output against your schema on arrival"
+    extract: "<b>Run it with:</b> temperature 0 to 0.2. Few-shot examples matter more than instructions here, so add 2 or 3 if you can.",
+    reason: "<b>Run it with:</b> temperature 0 to 0.3. Give the model room to think before the answer.",
+    create: "<b>Run it with:</b> temperature 0.7 to 0.9. Constraints shape voice better than adjectives.",
+    structured: "<b>Run it with:</b> temperature 0. Validate the output against your schema on arrival."
   };
-
-  function esc(text) { return text.trim(); }
+  function esc(t) { return t.trim(); }
 
   function build() {
     var task = esc(el.task.value);
     if (!task) {
       result.textContent = "Describe the job on the left and the prompt builds here as you type.";
-      settingsBox.hidden = true;
-      detectHint.hidden = true;
+      settingsBox.hidden = true; detectHint.hidden = true;
       typeButtons.forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
       return;
     }
     var type = activeType();
     var lines = [];
-
     if (type === "create") {
-      var audience = esc(el.audience.value);
-      lines.push("You are a skilled writer" + (audience ? " writing for " + audience + "." : "."));
+      var aud = esc(el.audience.value);
+      lines.push("You are a skilled writer" + (aud ? " writing for " + aud + "." : "."));
       lines.push("");
     } else if (esc(el.audience.value)) {
-      lines.push("Your reader: " + esc(el.audience.value) + ".");
-      lines.push("");
+      lines.push("Your reader: " + esc(el.audience.value) + "."); lines.push("");
     }
-
-    lines.push("Task: " + task);
-    lines.push("");
-
-    if (esc(el.context.value)) {
-      lines.push("Context:");
-      lines.push(esc(el.context.value));
-      lines.push("");
-    }
-
+    lines.push("Task: " + task); lines.push("");
+    if (esc(el.context.value)) { lines.push("Context:"); lines.push(esc(el.context.value)); lines.push(""); }
     if (type === "reason") {
       lines.push("Think through this step by step before answering: lay out the");
       lines.push("relevant facts, work through the logic, then check the result");
       lines.push("against the question. Give the reasoning first, then a clearly");
-      lines.push("separated final answer starting with \"Answer:\".");
-      lines.push("");
+      lines.push("separated final answer starting with \"Answer:\"."); lines.push("");
     }
     if (type === "structured") {
       var schema = esc(el.format.value);
       lines.push("Output ONLY the structured result, no prose around it.");
       lines.push(schema ? "Format: " + schema : "Format: {describe_your_exact_schema_here}");
-      lines.push("If a value is unknown, use null: never invent one.");
-      lines.push("");
+      lines.push("If a value is unknown, use null, never invent one."); lines.push("");
     }
-
     var rules = [];
     if (esc(el.constraints.value)) rules.push(esc(el.constraints.value));
     if (esc(el.tone.value)) rules.push("Write in a " + esc(el.tone.value) + " tone.");
@@ -323,43 +269,28 @@
     lines.push("Rules:");
     rules.forEach(function (r) { lines.push("- " + r); });
     lines.push("");
-
     var examples = esc(el.examples.value);
     if (examples) {
       lines.push("Examples of correct results:");
-      examples.split(/\n/).forEach(function (line) {
-        if (line.trim()) lines.push("- " + line.trim());
-      });
+      examples.split(/\n/).forEach(function (line) { if (line.trim()) lines.push("- " + line.trim()); });
       lines.push("");
     } else if (type === "extract") {
-      lines.push("(Add 2-3 worked examples above the input when you use this , ");
-      lines.push("for sorting and extraction they teach the format better than");
-      lines.push("any instruction.)");
-      lines.push("");
+      lines.push("(Add 2 or 3 worked examples above the input when you use this.");
+      lines.push("For sorting and extraction they teach the format better than any");
+      lines.push("instruction.)"); lines.push("");
     }
-
-    lines.push("The input:");
-    lines.push("<input>");
-    lines.push("{paste_your_input_here}");
-    lines.push("</input>");
-
+    lines.push("The input:"); lines.push("<input>"); lines.push("{paste_your_input_here}"); lines.push("</input>");
     result.textContent = lines.join("\n");
-    settingsBox.innerHTML = SETTINGS[type];
-    settingsBox.hidden = false;
-
+    settingsBox.innerHTML = SETTINGS[type]; settingsBox.hidden = false;
     if (!chosenType) {
       var detected = detectType(el.task.value);
       detectHint.hidden = !detected;
       if (detected) {
-        var names = { extract: "Classify / Extract", reason: "Reason / Analyze", create: "Create / Write", structured: "Structured output" };
-        detectHint.textContent = "Looks like: " + names[detected] + ": tap a type to override";
+        var names = { extract: "Classify or Extract", reason: "Reason or Analyze", create: "Create or Write", structured: "Structured output" };
+        detectHint.textContent = "Looks like: " + names[detected] + ". Tap a type to override.";
       }
-    } else {
-      detectHint.hidden = true;
-    }
-    typeButtons.forEach(function (b) {
-      b.setAttribute("aria-pressed", b.getAttribute("data-type") === type ? "true" : "false");
-    });
+    } else { detectHint.hidden = true; }
+    typeButtons.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-type") === type ? "true" : "false"); });
   }
 
   typeButtons.forEach(function (b) {
@@ -372,22 +303,17 @@
 
   document.getElementById("try-example").addEventListener("click", function () {
     el.task.value = "Sort incoming support emails into billing, bug, or feature request, with a one-line reason for each.";
-    el.examples.value = "Refund taking 3 weeks?! → billing: payment delay complaint\nApp crashes when I rotate my phone → bug: reproducible crash report";
-    el.constraints.value = "Never invent order numbers; if the email fits no category, label it 'other'.";
+    el.examples.value = "Refund taking 3 weeks?! -> billing, payment delay complaint\nApp crashes when I rotate my phone -> bug, reproducible crash report";
+    el.constraints.value = "Never invent order numbers; if the email fits no category, label it other.";
     build();
   });
-
   document.getElementById("copy").addEventListener("click", function () {
     navigator.clipboard.writeText(result.textContent).then(function () {
-      var btn = document.getElementById("copy");
-      btn.textContent = "Copied";
-      setTimeout(function () { btn.textContent = "Copy"; }, 1200);
+      var b = document.getElementById("copy"); b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1200);
     });
   });
   document.getElementById("clear").addEventListener("click", function () {
-    fields.forEach(function (id) { el[id].value = ""; });
-    chosenType = null;
-    build();
+    fields.forEach(function (id) { el[id].value = ""; }); chosenType = null; build();
   });
 })();
 </script>

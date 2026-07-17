@@ -4,12 +4,13 @@
 
 **Plug-and-play skills and prompts for every AI coding agent.**
 
-Claude Code · Claude Desktop · Cursor · Antigravity · OpenAI Codex ·
-Gemini CLI · any agent that reads markdown
+Claude Code · Claude Desktop · Cursor · OpenAI Codex · Gemini CLI ·
+GitHub Copilot · Windsurf · Cline · Zed · Aider · any agent that reads a file
 
 [Website](https://amey-thakur.github.io/AI-SKILLS/) ·
 [Prompt Studio](https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html) ·
-[Skills](skills/) · [Prompts](prompts/) · [Contributing](CONTRIBUTING.md)
+[Install](INSTALL.md) · [Skills](skills/) · [Prompts](prompts/) ·
+[Contributing](CONTRIBUTING.md)
 
 </div>
 
@@ -17,61 +18,51 @@ Gemini CLI · any agent that reads markdown
 
 ## What this is
 
-Two collections, one idea: **methodology beats vibes**. An agent handed a
-tested working method produces better work than one improvising, and a person
-handed a well-built prompt gets better answers than one typing the first
-thing that comes to mind.
+Two collections, one idea: a tested method beats improvisation. Hand an agent
+the way a strong engineer reviews code, and its review improves in one step.
+Hand a person a prompt built on what actually works, and the answer improves
+on the first try.
 
-- **[`skills/`](skills/)**: working methods an AI agent loads and follows:
-  how to review code, debug systematically, write a postmortem, design an
-  API. One folder per skill, one `SKILL.md` inside, in the same format
-  Claude-family agents load natively.
-- **[`prompts/`](prompts/)**: complete, ready-to-run prompts with named
-  `{variables}`, the right model settings, and an honest line about what
-  each is good at. Build your own in the browser with the
+- **[`skills/`](skills/)** are working methods an agent loads and follows:
+  reviewing code, debugging, writing a postmortem, designing an API. One
+  folder per skill, one `SKILL.md` inside, in the format Claude agents load
+  natively and every other tool can read.
+- **[`prompts/`](prompts/)** are complete prompts with named `{variables}`,
+  the model settings to run them, and one honest line on what each does well.
+  Build your own in the browser with the
   [Prompt Studio](https://amey-thakur.github.io/AI-SKILLS/prompt-studio.html).
 
-Everything is plain markdown with a small YAML header. Nothing executes;
-there is nothing to install, trust, or sandbox. Read it, use it, edit it.
+Each entry is plain markdown with a short header. That is the design, not a
+limitation: a method an agent can read is one you can read, edit, version, and
+carry to your next tool. No runtime, no framework, no format that expires when
+a product does.
 
 <br>
 
 ## Quick start
 
-**Claude Code**: one command, everything available:
+**Claude Code** loads the whole library from one command:
 
 ```
 /plugin marketplace add Amey-Thakur/AI-SKILLS
 ```
 
-Or copy just what you want:
+**Any other tool** reads plain markdown. The one-liners:
 
-```bash
-git clone https://github.com/Amey-Thakur/AI-SKILLS
-cp -r AI-SKILLS/skills/code-review ~/.claude/skills/
-```
+| Tool | One line |
+|---|---|
+| Claude Desktop, claude.ai | Upload a skill folder in Settings, Capabilities, Skills |
+| Codex, Gemini CLI, Cursor, Copilot, Windsurf, Zed, Aider | Reference a skill from your `AGENTS.md` |
+| Cline | `curl -s <raw>/skills/code-review/SKILL.md > .clinerules/code-review.md` |
+| Any API | Fetch the raw file; the body is your system prompt |
 
-**claude.ai / Claude Desktop**: upload any skill folder in
-Settings → Capabilities → Skills.
+Full per-tool instructions, including scoped Cursor `.mdc` rules and Copilot
+instruction files, are in **[INSTALL.md](INSTALL.md)**.
 
-**Cursor / Windsurf / rule-based editors**: append a skill's body to your
-rules file:
-
-```bash
-curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-review/SKILL.md >> .cursorrules
-```
-
-**OpenAI, Gemini CLI, or any API**: a skill's body is a system-prompt
-section; a prompt's body is a user message. Fetch raw and go:
-
-```
-https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/summarize-document.md
-```
-
-**AI agents reading this**: machine-readable catalog at
-[`index.json`](index.json), discovery notes in [`llms.txt`](llms.txt) and
-[`AGENTS.md`](AGENTS.md). Fetch what the task needs; everything is
-raw-URL addressable.
+**For agents:** the whole catalog is machine-readable at
+[`index.json`](index.json) (each entry with a description and a raw URL),
+mirrored in [`llms.txt`](llms.txt), with usage rules in [`AGENTS.md`](AGENTS.md).
+Fetch the index, pick by description, pull only what the task needs.
 
 <br>
 
@@ -125,19 +116,19 @@ no entry that exists to pad the count.
 
 ## FAQ
 
-**Why not just prompt harder?** A skill is the difference between telling an
-agent "review this well" and handing it the review method a strong engineer
-actually uses: priorities, verification steps, and the reporting format.
-The output difference is immediate.
+**Why not just prompt harder?** "Review this well" leaves the agent to guess
+what good means. A skill hands it the priorities, the verification steps, and
+the reporting format a strong engineer would use. The output changes on the
+next run.
 
-**Do these work with my tool?** If it can read a markdown file, yes. The
-per-tool notes above are conveniences, not requirements.
+**Does this work with my tool?** If the tool reads a markdown file, yes. The
+per-tool steps in [INSTALL.md](INSTALL.md) are conveniences, not requirements.
 
-**How is this different from a curated list?** Lists link to things. This
-repository *is* the things.
+**How is this different from a curated list?** A list links to things. This
+repository is the things: every entry is here, complete, in one format.
 
-**Can I use these commercially?** Yes: MIT. Attribution appreciated, never
-required.
+**Can I use these commercially?** Yes, under MIT. Attribution is appreciated
+and never required.
 
 <br>
 
@@ -155,8 +146,8 @@ distinct, portable.
 
 <div align="center">
 
-Made by [Amey Thakur](https://github.com/Amey-Thakur) , 
-also the maker of [NotebookLab](https://github.com/Amey-Thakur/NotebookLab),
-the offline-first AI knowledge workspace these skills grew out of.
+Made by [Amey Thakur](https://github.com/Amey-Thakur), who also builds
+[NotebookLab](https://github.com/Amey-Thakur/NotebookLab), the offline-first AI
+knowledge workspace these methods grew out of.
 
 </div>

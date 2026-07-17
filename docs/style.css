@@ -1,0 +1,136 @@
+/*
+ * AI-SKILLS site styles.
+ * A calm, spacious system: soft rounded surfaces, generous whitespace, a
+ * readable serif for prose and the Play display face for the brand and
+ * headings. Two themes, one accent. Depth comes from light shadow and border,
+ * never from noise.
+ */
+
+:root {
+  --bg: #12100e;
+  --surface: #1a1815;
+  --surface-2: #221f1b;
+  --border: #322e29;
+  --border-hover: #4a443c;
+  --text-1: #efe9df;
+  --text-2: #c8c0b3;
+  --text-3: #a49b8c;
+  --text-4: #857c6e;
+  --accent: #d8a24a;
+  --accent-soft: rgba(216, 162, 74, 0.14);
+  --accent-strong: #e6b45f;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.28);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.30);
+  --radius: 16px;
+  --radius-sm: 11px;
+  --radius-pill: 999px;
+  --maxw: 1120px;
+}
+
+:root[data-theme="light"] {
+  --bg: #f4f1ea;
+  --surface: #ffffff;
+  --surface-2: #faf7f0;
+  --border: #e3ddd0;
+  --border-hover: #cfc7b5;
+  --text-1: #221f1a;
+  --text-2: #4a453c;
+  --text-3: #6b6558;
+  --text-4: #8c8474;
+  --accent: #b07216;
+  --accent-soft: rgba(176, 114, 22, 0.10);
+  --accent-strong: #965f0c;
+  --shadow-sm: 0 1px 2px rgba(60, 50, 30, 0.06);
+  --shadow-md: 0 10px 30px rgba(60, 50, 30, 0.10);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text-2);
+  font-family: "Iowan Old Style", Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+.mono { font-family: ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace; }
+.play { font-family: "Play", ui-monospace, Consolas, monospace; }
+a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent); text-underline-offset: 3px; }
+a:hover { color: var(--accent-strong); }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+::selection { background: var(--accent-soft); }
+
+/* Header */
+header.site {
+  position: sticky; top: 0; z-index: 20;
+  padding: 15px 0;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.brand {
+  display: flex; align-items: center; gap: 11px;
+  font-family: "Play", ui-monospace, Consolas, monospace;
+  font-weight: 700; font-size: 19px; letter-spacing: -0.3px;
+  color: var(--text-1); text-decoration: none;
+}
+.brand span { color: var(--accent); }
+.brand svg { flex-shrink: 0; border-radius: 7px; }
+nav.top { display: flex; gap: 22px; align-items: center; font-family: "Play", ui-monospace, Consolas, monospace; font-size: 14px; }
+nav.top a { color: var(--text-3); text-decoration: none; }
+nav.top a:hover { color: var(--text-1); }
+
+/* Theme toggle: a knob that glides between sun and moon */
+.theme-toggle {
+  position: relative; width: 50px; height: 27px; padding: 0; flex-shrink: 0;
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--radius-pill); cursor: pointer;
+  transition: border-color .2s, background-color .25s;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tt-knob {
+  position: absolute; top: 2px; left: 2px; width: 21px; height: 21px;
+  border-radius: 50%; background: var(--accent); color: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1), background-color .25s;
+}
+:root[data-theme="light"] .tt-knob { transform: translateX(23px); }
+.tt-knob svg { width: 12px; height: 12px; }
+.tt-knob .tt-sun { display: none; }
+:root[data-theme="light"] .tt-knob .tt-sun { display: block; }
+:root[data-theme="light"] .tt-knob .tt-moon { display: none; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 24px; border-radius: var(--radius-sm);
+  font-family: "Play", ui-monospace, Consolas, monospace; font-size: 15px;
+  text-decoration: none; border: 1px solid var(--border); color: var(--text-2);
+  background: var(--surface); cursor: pointer;
+  transition: border-color .18s, color .18s, transform .18s, box-shadow .18s, background-color .18s;
+}
+.btn:hover { border-color: var(--accent); color: var(--text-1); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.btn.primary {
+  background: var(--accent); border-color: var(--accent); color: #171310;
+  font-weight: 700; box-shadow: var(--shadow-sm);
+}
+.btn.primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); color: #171310; }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Footer */
+footer.site { border-top: 1px solid var(--border); padding: 30px 0 48px; margin-top: 24px; }
+footer.site .wrap { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; color: var(--text-4); }
+footer.site a { color: var(--text-3); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 0 20px; }
+  body { font-size: 16px; }
+  nav.top { gap: 16px; }
+}
