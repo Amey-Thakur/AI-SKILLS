@@ -150,16 +150,11 @@ New skills and prompts are welcome when they clear the bar in
 [CONTRIBUTING.md](CONTRIBUTING.md): complete, self-contained, honest,
 distinct, portable.
 
-## License
+## License and author
 
-[MIT](LICENSE)
+Released under the [MIT License](LICENSE). Use these skills and prompts
+commercially or privately; attribution is appreciated and never required.
 
-<br>
-
-<div align="center">
-
-Made by [Amey Thakur](https://github.com/Amey-Thakur), who also builds
+Built by [Amey Thakur](https://github.com/Amey-Thakur), who also builds
 [NotebookLab](https://github.com/Amey-Thakur/NotebookLab), the offline-first AI
 knowledge workspace these methods grew out of.
-
-</div>
