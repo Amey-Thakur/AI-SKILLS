@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prompt Studio: build a strong prompt in your browser | AI-SKILLS</title>
+<title>Prompt Studio · AI-SKILLS</title>
 <meta name="description" content="A free browser prompt builder. Describe the job and get a complete, ready-to-run prompt using the technique that fits: worked examples for classification, step-by-step reasoning for logic, role and constraints for writing, a strict schema for structured output.">
 <meta property="og:title" content="Prompt Studio: AI-SKILLS">
 <meta property="og:description" content="Describe the job, get a prompt built on what works. Free, in your browser, nothing leaves the page.">
@@ -79,6 +79,18 @@
   }
   .settings { border: 1px solid var(--border); background: var(--surface-2); border-radius: var(--radius-sm); padding: 15px 18px; margin-top: 12px; font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; color: var(--text-3); line-height: 1.6; }
   .settings b { color: var(--text-1); }
+  .settings .temp-note { display: block; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); font-family: "Source Serif 4", Georgia, serif; font-size: 13.5px; color: var(--text-3); }
+  .build-row { display: flex; align-items: center; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+  .stages { list-style: none; display: grid; gap: 8px; }
+  .stages li { display: flex; gap: 10px; align-items: baseline; font-size: 13.5px; color: var(--text-3); }
+  .stages b { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+  .type-row { margin-top: 14px; font-size: 13px; color: var(--text-4); }
+  .type-label { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; margin-right: 6px; }
+  .type-chip { display: inline-block; border: 1px solid var(--border); border-radius: var(--radius-pill); background: var(--surface-2); color: var(--text-3); font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; padding: 4px 12px; margin: 0 6px 6px 0; cursor: pointer; }
+  .type-chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--text-1); }
+  .gap { display: flex; gap: 8px; align-items: baseline; margin-top: 10px; font-size: 13.5px; color: var(--text-2); }
+  .gap::before { content: "!"; font-family: "Play", ui-monospace, Consolas, monospace; color: var(--accent); border: 1px solid var(--accent); border-radius: 50%; width: 16px; height: 16px; line-height: 15px; text-align: center; font-size: 11px; flex-shrink: 0; }
+  #rebuild { margin-top: 12px; }
   .fill-note { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); margin-top: 12px; line-height: 1.6; }
   .fill-note code { color: var(--accent); }
 
@@ -122,59 +134,38 @@
 <main class="wrap">
   <div class="head">
     <p class="kicker">Prompt Studio</p>
-    <h1>Describe the job.<br>Get a prompt that works.</h1>
+    <h1>Say it your way.<br>Get a prompt agents obey.</h1>
     <p class="lede">
-      The Studio picks the technique that fits your task and assembles the whole
-      prompt: worked examples for sorting, step-by-step reasoning for logic,
-      role and constraints for writing, a strict schema for structured output.
+      Type the job the way it comes out: typos, half-thoughts, frustration. A
+      five-stage pipeline cleans it, works out what you actually need, and
+      builds a strict prompt an AI agent can follow with minimal back-and-forth.
     </p>
-    <p class="small">Free. Runs in your browser. Nothing you type leaves this page.</p>
+    <p class="small">Free. The whole pipeline runs in your browser. Nothing you type leaves this page.</p>
   </div>
-
-  <section class="science" aria-label="The techniques">
-    <div class="tech"><b>Worked examples</b><p>For classification and extraction, a few input and output pairs teach the format better than any instruction.</p></div>
-    <div class="tech"><b>Step-by-step reasoning</b><p>For logic and analysis, room to think before answering reduces errors, and the answer stays separate.</p></div>
-    <div class="tech"><b>Role and constraints</b><p>For writing, a role plus a few hard constraints shapes voice better than a paragraph of adjectives.</p></div>
-    <div class="tech"><b>Output contracts</b><p>For structured output, an exact schema with a rule for unknowns prevents invented values and broken parsers.</p></div>
-  </section>
 
   <div class="builder">
     <form id="form" autocomplete="off">
       <fieldset>
-        <legend>The job</legend>
-        <label class="f" for="task">What do you want the AI to do?</label>
-        <textarea id="task" rows="3" placeholder="Say it like you would to a colleague. For example: sort incoming support emails into billing, bug, or feature request, with a one-line reason for each."></textarea>
-        <p class="hint" id="detect-hint" hidden></p>
-        <button type="button" class="example-btn" id="try-example">Try an example</button>
-
-        <label class="f">Task type <span class="opt">(detected automatically, tap to override)</span></label>
-        <div class="types" role="group" aria-label="Task type">
-          <button type="button" class="type" data-type="extract" aria-pressed="false">Classify or Extract<small>sorting, labeling, pulling data out of text</small></button>
-          <button type="button" class="type" data-type="reason" aria-pressed="false">Reason or Analyze<small>logic, math, comparisons, decisions</small></button>
-          <button type="button" class="type" data-type="create" aria-pressed="false">Create or Write<small>emails, posts, stories, copy</small></button>
-          <button type="button" class="type" data-type="structured" aria-pressed="false">Structured output<small>JSON, tables, strict formats</small></button>
+        <legend>The job, in your own words</legend>
+        <label class="f" for="raw">What do you need done?</label>
+        <textarea id="raw" rows="6" placeholder="However it comes out is fine. Example: pls fix my reactt app its sooo slow, the api takes 4evr and users r leaving, i h8 this"></textarea>
+        <div class="build-row">
+          <button type="button" id="build" class="btn primary">Build the prompt</button>
+          <button type="button" class="example-btn" id="try-example">Try a messy example</button>
         </div>
       </fieldset>
 
-      <fieldset>
-        <legend>Sharpen it <span class="opt">(every field optional)</span></legend>
-        <label class="f" for="context">Context the model needs</label>
-        <textarea id="context" rows="2" placeholder="Background, definitions, the situation."></textarea>
-
-        <label class="f" for="examples">Worked examples <span class="opt">(input then expected output, one pair per line)</span></label>
-        <textarea id="examples" rows="3" placeholder="Refund taking 3 weeks?! -> billing, payment delay complaint"></textarea>
-
-        <label class="f" for="constraints">Rules and constraints</label>
-        <textarea id="constraints" rows="2" placeholder="For example: under 200 words; never invent order numbers; UK spelling"></textarea>
-
-        <label class="f" for="audience">Audience</label>
-        <input type="text" id="audience" placeholder="For example: non-technical customers">
-
-        <label class="f" for="tone">Tone</label>
-        <input type="text" id="tone" placeholder="For example: plain and direct">
-
-        <label class="f" for="format">Output format</label>
-        <input type="text" id="format" placeholder="For example: a five-bullet summary; JSON with fields category, reason">
+      <fieldset id="analysis" hidden>
+        <legend>What the pipeline did</legend>
+        <ol class="stages" id="stages"></ol>
+        <div class="type-row" id="type-row" hidden>
+          <span class="type-label">Read as:</span>
+          <span id="type-chips"></span>
+        </div>
+        <div id="gaps"></div>
+        <label class="f" for="more">Fill the gaps or correct anything <span class="opt">(plain words, then rebuild)</span></label>
+        <textarea id="more" rows="2" placeholder="Example: it is a Next.js app, the slow call is /api/search, target under 300 ms"></textarea>
+        <button type="button" id="rebuild" class="btn">Rebuild with these details</button>
       </fieldset>
     </form>
 
@@ -186,7 +177,7 @@
           <button type="button" id="clear" class="btn">Clear</button>
         </div>
       </div>
-      <pre id="result" aria-live="polite">Describe the job on the left and the prompt builds here as you type.</pre>
+      <pre id="result" aria-live="polite">Describe the job on the left, press Build, and the pipeline assembles a strict, agent-ready prompt here.</pre>
       <div class="settings" id="settings" hidden></div>
       <p class="fill-note">
         Anything the Studio cannot know appears as a <code>{variable}</code> to
@@ -199,8 +190,8 @@
 <footer class="site">
   <div class="wrap">
     Part of <a href="./">AI-SKILLS</a> ·
-    the same method as the <a href="https://github.com/Amey-Thakur/AI-SKILLS/blob/main/skills/prompt-engineering/SKILL.md">prompt-engineering skill</a> ·
-    built into <a href="https://github.com/Amey-Thakur/NotebookLab">NotebookLab</a>
+    built on the <a href="https://github.com/Amey-Thakur/AI-SKILLS/blob/main/skills/llm-engineering/prompt-engineering/SKILL.md">prompt-engineering skill</a> ·
+    also inside <a href="https://amey-thakur.github.io/NotebookLab/">NotebookLab</a>
   </div>
 </footer>
 
@@ -217,109 +208,315 @@
     sync();
   });
 
-  var fields = ["task", "context", "examples", "constraints", "audience", "tone", "format"];
-  var el = {};
-  fields.forEach(function (id) { el[id] = document.getElementById(id); });
+  var raw = document.getElementById("raw");
+  var more = document.getElementById("more");
   var result = document.getElementById("result");
   var settingsBox = document.getElementById("settings");
-  var detectHint = document.getElementById("detect-hint");
-  var typeButtons = Array.prototype.slice.call(document.querySelectorAll(".type"));
+  var analysis = document.getElementById("analysis");
+  var stagesEl = document.getElementById("stages");
+  var gapsEl = document.getElementById("gaps");
+  var typeRow = document.getElementById("type-row");
+  var typeChips = document.getElementById("type-chips");
   var chosenType = null;
 
-  function detectType(task) {
-    var t = task.toLowerCase();
-    if (/json|csv|table|schema|fields|yaml|xml|structured/.test(t)) return "structured";
-    if (/classif|categor|sort|label|tag|extract|pull out|identify|detect/.test(t)) return "extract";
-    if (/why|analy|compare|decide|calculat|math|reason|evaluate|estimate|debug|prove/.test(t)) return "reason";
-    if (/write|draft|story|email|post|poem|copy|slogan|describe|announce|blog/.test(t)) return "create";
-    return null;
+  /* Stage 1: Clean. Fix the misspellings and shorthand people actually type,
+     and read past frustration instead of copying it into the prompt. */
+  var FIXES = {
+    pls: "please", plz: "please", u: "you", r: "are", n: "and", ur: "your",
+    b4: "before", w: "with", wo: "without", thru: "through", tho: "though",
+    "2day": "today", "4evr": "forever", "4ever": "forever", h8: "hate",
+    gr8: "great", asap: "as soon as possible", idk: "I do not know",
+    imo: "in my opinion", btw: "by the way", rn: "right now", bc: "because",
+    cuz: "because", coz: "because", dont: "do not", doesnt: "does not",
+    cant: "cannot", wont: "will not", isnt: "is not", wasnt: "was not",
+    im: "I am", ive: "I have", id: "I would", theres: "there is",
+    whats: "what is", thats: "that is", its: "it is",
+    recieve: "receive", seperate: "separate", definately: "definitely",
+    occured: "occurred", untill: "until", wich: "which", teh: "the",
+    adress: "address", accross: "across", basicly: "basically",
+    begining: "beginning", beleive: "believe", calender: "calendar",
+    collegue: "colleague", enviroment: "environment", excercise: "exercise",
+    familar: "familiar", finaly: "finally", foward: "forward",
+    freind: "friend", futher: "further", grammer: "grammar",
+    happend: "happened", immediatly: "immediately", knowlege: "knowledge",
+    lenght: "length", libary: "library", maintainance: "maintenance",
+    neccessary: "necessary", noticable: "noticeable", occassion: "occasion",
+    peice: "piece", perfomance: "performance", performace: "performance",
+    posible: "possible", prefered: "preferred", probaly: "probably",
+    quik: "quick", realy: "really", reciept: "receipt", recomend: "recommend",
+    refered: "referred", relevent: "relevant", remeber: "remember",
+    responce: "response", succesful: "successful", suprise: "surprise",
+    tommorow: "tomorrow", truely: "truly", usualy: "usually",
+    wierd: "weird", withing: "within", wroking: "working",
+    javascrpt: "javascript", javasript: "javascript", pyton: "python",
+    pyhton: "python", reactjs: "react", nodejs: "node", databse: "database",
+    datbase: "database", fucntion: "function", funtion: "function",
+    varible: "variable", authetication: "authentication",
+    authentification: "authentication", kubernets: "kubernetes",
+    postgress: "postgres", mysq: "mysql", framwork: "framework",
+    deployement: "deployment", respository: "repository", repositry: "repository"
+  };
+  var VENT = /\b(i hate (this|it|everything)|so (annoying|frustrating)|driving me (crazy|nuts|insane)|wtf|ffs|omg|ugh+|argh+|aargh+|smh|kill(ing)? me|i give up|fed up|sick of (this|it)|this (stupid|dumb|damn|bloody) )\b/gi;
+  var SWEAR = /\b(damn|dammit|hell|freaking|fricking|frigging|fucking|fucked|shit|shitty|crap|crappy|bullshit)\b/gi;
+
+  function cleanStage(text) {
+    var fixes = 0;
+    var vented = false;
+    var out = text.replace(/\s+/g, " ").trim();
+    /* Collapse dramatic letter-stretching first: sooo -> so, slowwww -> slow.
+       Doing this before the vent strip lets "sooo annoying" match the pattern. */
+    out = out.replace(/([a-z])\1{2,}/gi, function (m, ch) { fixes++; return ch + ch; });
+    /* Expand shorthand next, so "i h8 this" becomes "i hate this" and the vent
+       strip below can catch it instead of letting it leak into the objective. */
+    out = out.replace(/[a-zA-Z0-9']+/g, function (word) {
+      var key = word.toLowerCase().replace(/'/g, "");
+      if (FIXES.hasOwnProperty(key)) {
+        fixes++;
+        var fixed = FIXES[key];
+        return word[0] === word[0].toUpperCase() ? fixed.charAt(0).toUpperCase() + fixed.slice(1) : fixed;
+      }
+      /* Doubled-letter typos in known tech words: reactt -> react. */
+      var squeezed = key.replace(/(.)\1/g, "$1");
+      if (key !== squeezed && TECH.indexOf(squeezed) !== -1) { fixes++; return squeezed; }
+      return word;
+    });
+    /* Now that shorthand is expanded, strip the venting so the objective reads
+       as a task, not a mood: "i h8 this" is gone, the request stays. */
+    if (VENT.test(out)) { vented = true; out = out.replace(VENT, " "); }
+    VENT.lastIndex = 0;
+    if (SWEAR.test(out)) { vented = true; out = out.replace(SWEAR, " "); }
+    SWEAR.lastIndex = 0;
+    /* Tidy the punctuation the strip left behind: stray commas, doubled spaces. */
+    out = out
+      .replace(/\s{2,}/g, " ")
+      .replace(/\s+([,.!?])/g, "$1")
+      .replace(/,\s*,/g, ",")
+      .replace(/(^[\s,]+|[\s,]+$)/g, "")
+      .trim();
+    return { text: out, fixes: fixes, vented: vented };
   }
-  function activeType() { return chosenType || detectType(el.task.value) || "reason"; }
+
+  /* Stage 2: Understand. Pull out the goal, the technology, the numbers,
+     and the hard limits the prompt must carry. */
+  var TECH = ("react next nextjs vue angular svelte javascript typescript python rust go java kotlin swift php ruby c# c++ node deno bun express django flask fastapi rails laravel spring html css tailwind bootstrap sass api rest graphql grpc websocket webhook oauth jwt sql mysql postgres postgresql sqlite mongodb redis kafka rabbitmq elasticsearch docker kubernetes terraform aws azure gcp vercel netlify heroku firebase supabase git github gitlab ci cd linux windows macos android ios flutter electron tauri figma excel csv json yaml xml pdf regex cron nginx apache stripe twilio sendgrid openai anthropic claude gpt gemini llm rag embedding chatbot webpack vite babel jest pytest selenium playwright cypress pandas numpy sklearn tensorflow pytorch jupyter airflow spark dbt snowflake bigquery powerbi tableau wordpress shopify seo email newsletter instagram youtube tiktok linkedin resume invoice contract database frontend backend fullstack devops microservice monolith cache queue auth login signup checkout payment cart dashboard admin crud form modal navbar footer landing blog cms markdown latex").split(" ");
+  var GOALS = ("fix debug build create write draft make design develop implement generate summarize summarise translate convert migrate refactor optimize optimise speed improve review audit analyze analyse compare choose decide plan organize organise sort classify label extract parse scrape clean merge split rename deploy test automate schedule explain teach document research find calculate estimate validate monitor track recover troubleshoot").split(" ");
+
+  function understandStage(text) {
+    var lower = " " + text.toLowerCase() + " ";
+    var found = { goal: null, tech: [], numbers: [], limits: [], urgency: false, hasInput: false };
+    for (var i = 0; i < GOALS.length; i++) {
+      if (lower.indexOf(" " + GOALS[i] + " ") !== -1 || lower.indexOf(" " + GOALS[i] + "ing ") !== -1) { found.goal = GOALS[i]; break; }
+    }
+    TECH.forEach(function (t) {
+      if (found.tech.length < 8 && new RegExp("(^|[^a-z0-9])" + t.replace(/[+#]/g, "\\$&") + "([^a-z0-9]|$)", "i").test(text)) found.tech.push(t);
+    });
+    var nums = text.match(/\d[\d,.]*\s?(ms|s\b|sec|seconds?|min|minutes?|hours?|days?|weeks?|words?|pages?|items?|rows?|users?|percent|%|kb|mb|gb|px|dollars?|\$)/gi);
+    if (nums) found.numbers = nums.slice(0, 6);
+    var sentences = text.split(/(?<=[.!?])\s+/);
+    sentences.forEach(function (s) {
+      if (/\b(must|should|never|no |not |only|under|below|less than|at least|at most|without|max|limit|budget|deadline|by )\b/i.test(s) && s.length < 200) {
+        if (found.limits.length < 6 && s.trim().length > 8) found.limits.push(s.trim());
+      }
+    });
+    found.urgency = /\b(urgent|as soon as possible|today|tonight|tomorrow|right now|immediately|quickly|deadline)\b/i.test(text);
+    found.hasInput = /```|~~~|\n {4}|<[a-z]+>|https?:\/\//.test(raw.value) || text.length > 600;
+    return found;
+  }
+
+  /* Stage 3: Classify. */
+  function classifyStage(text) {
+    var t = text.toLowerCase();
+    if (/json|csv|schema|yaml|xml|table of|spreadsheet|structured|fields/.test(t)) return "structured";
+    if (/\b(code|bug|error|crash|function|app|api|deploy|slow|perf|component|script|website|database|test|refactor|compile|build fail)\b/.test(t)) return "code";
+    if (/classif|categor|sort |label|tag |extract|pull out|identify|detect|parse/.test(t)) return "extract";
+    if (/write|draft|story|email|post|poem|copy|slogan|describe|announce|blog|caption|newsletter|resume|cover letter/.test(t)) return "create";
+    if (/why|analy|compare|decide|calculat|math|reason|evaluate|estimate|prove|plan|research|should i/.test(t)) return "reason";
+    return "reason";
+  }
+
+  var TYPE_NAMES = { code: "Code task", extract: "Classify or extract", reason: "Reason or analyze", create: "Create or write", structured: "Structured output" };
 
   var SETTINGS = {
     extract: "<b>Run it with:</b> temperature 0 to 0.2. Few-shot examples matter more than instructions here, so add 2 or 3 if you can.",
     reason: "<b>Run it with:</b> temperature 0 to 0.3. Give the model room to think before the answer.",
     create: "<b>Run it with:</b> temperature 0.7 to 0.9. Constraints shape voice better than adjectives.",
-    structured: "<b>Run it with:</b> temperature 0. Validate the output against your schema on arrival."
+    structured: "<b>Run it with:</b> temperature 0. Validate the output against your schema on arrival.",
+    code: "<b>Run it with:</b> temperature 0 to 0.2. Give the agent the real code and let it run what it writes."
   };
-  function esc(t) { return t.trim(); }
-
-  function build() {
-    var task = esc(el.task.value);
-    if (!task) {
-      result.textContent = "Describe the job on the left and the prompt builds here as you type.";
-      settingsBox.hidden = true; detectHint.hidden = true;
-      typeButtons.forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
-      return;
+  var TEMP_NOTE = "<span class=\"temp-note\">Temperature is the model's freedom to improvise: 0 gives the same careful answer every time, 1 takes creative leaps. Look for a “temperature” or “creativity” slider in your AI tool; no slider, no problem, the prompt works at the default.</span>";
+  /* Stage 4: Compose. A strict, sectioned prompt an agent can follow. */
+  function composeStage(text, facts, type) {
+    var L = [];
+    var domain = facts.tech.length ? facts.tech.slice(0, 3).join(", ") : null;
+    var roles = {
+      code: "You are a senior software engineer" + (domain ? " experienced with " + domain : "") + ". You ship working fixes, not advice.",
+      extract: "You are a precise data analyst. You label and extract exactly what the rules say, nothing more.",
+      reason: "You are a rigorous analyst" + (domain ? " with deep knowledge of " + domain : "") + ". You reason from evidence and say so when evidence is missing.",
+      create: "You are a skilled writer who matches the reader and the purpose, not a generic voice.",
+      structured: "You are a data formatter. You emit exactly the requested structure and nothing else."
+    };
+    L.push("# Role"); L.push(roles[type]); L.push("");
+    L.push("# Objective");
+    L.push(text.charAt(0).toUpperCase() + text.slice(1).replace(/[.!?]*$/, "."));
+    L.push("");
+    if (facts.tech.length || facts.numbers.length) {
+      L.push("# Known facts");
+      if (facts.tech.length) L.push("- Involves: " + facts.tech.join(", "));
+      facts.numbers.forEach(function (n) { L.push("- Stated figure: " + n); });
+      L.push("");
     }
-    var type = activeType();
-    var lines = [];
-    if (type === "create") {
-      var aud = esc(el.audience.value);
-      lines.push("You are a skilled writer" + (aud ? " writing for " + aud + "." : "."));
-      lines.push("");
-    } else if (esc(el.audience.value)) {
-      lines.push("Your reader: " + esc(el.audience.value) + "."); lines.push("");
+    L.push("# Constraints");
+    facts.limits.forEach(function (c) { L.push("- MUST respect: " + c.replace(/[.!?]*$/, "")); });
+    L.push("- MUST state every assumption you make, clearly marked as an assumption.");
+    L.push("- NEVER invent facts, file names, numbers, or APIs that were not provided.");
+    if (type === "code") L.push("- NEVER claim something is fixed without showing how you verified it.");
+    if (type === "structured") L.push("- NEVER wrap the output in prose or code fences unless the format requires it.");
+    if (type === "create") L.push("- NEVER pad with filler phrases; every sentence must earn its place.");
+    if (facts.urgency) L.push("- Time matters: deliver the smallest complete result first, refinements after.");
+    L.push("");
+    L.push("# Method");
+    var methods = {
+      code: [
+        "Read the provided code or error before proposing anything.",
+        "State the most likely cause in one sentence.",
+        "Make the smallest change that fixes the cause, not the symptom.",
+        "Run or trace the change; show the before and after behavior.",
+        "List any follow-up risks in one line each."
+      ],
+      extract: [
+        "Read the whole input once before labeling anything.",
+        "Apply the rules exactly; when two labels compete, pick the more specific one.",
+        "Mark anything that fits no rule as \"other\" with a one-line reason.",
+        "Do a second pass to check consistency across items."
+      ],
+      reason: [
+        "Lay out the relevant facts before any conclusion.",
+        "Work through the logic step by step.",
+        "Check the result against the original question.",
+        "Give the reasoning first, then a clearly separated final answer starting with \"Answer:\"."
+      ],
+      create: [
+        "Identify the reader and the single outcome this writing must achieve.",
+        "Draft once for substance, then edit for economy: cut every word that does no work.",
+        "Read it back as the intended reader; fix anything they would stumble on."
+      ],
+      structured: [
+        "Parse the input fully before emitting anything.",
+        "Fill every field from evidence in the input; use null for unknowns, never a guess.",
+        "Validate the output against the format before finishing."
+      ]
+    };
+    methods[type].forEach(function (s, i) { L.push((i + 1) + ". " + s); });
+    L.push("");
+    L.push("# Output");
+    var outputs = {
+      code: "The corrected code with the changed lines marked, then two sentences: what was wrong, and how you verified the fix.",
+      extract: "One line per item: label, then a dash, then a one-line reason.",
+      reason: "Reasoning first, then \"Answer:\" followed by the conclusion in plain words.",
+      create: "The finished piece only. No preamble like \"Here is\" and no notes after it.",
+      structured: "{describe the exact format, for example: JSON with fields name, date, amount}"
+    };
+    L.push(outputs[type]);
+    L.push("");
+    L.push("# If something is missing");
+    L.push("Ask at most one precise question, only if the task is impossible without the answer. Otherwise proceed and mark assumptions.");
+    if ((/\b(fix|debug|review|summarize|summarise|translate|convert|extract|parse|analyze|analyse|refactor|optimize|optimise)\b/.test(facts.goal || "") || type === "extract" || type === "structured") && !facts.hasInput) {
+      L.push("");
+      L.push("# The material");
+      L.push("<input>");
+      L.push("{paste the code, text, or data here}");
+      L.push("</input>");
     }
-    lines.push("Task: " + task); lines.push("");
-    if (esc(el.context.value)) { lines.push("Context:"); lines.push(esc(el.context.value)); lines.push(""); }
-    if (type === "reason") {
-      lines.push("Think through this step by step before answering: lay out the");
-      lines.push("relevant facts, work through the logic, then check the result");
-      lines.push("against the question. Give the reasoning first, then a clearly");
-      lines.push("separated final answer starting with \"Answer:\"."); lines.push("");
-    }
-    if (type === "structured") {
-      var schema = esc(el.format.value);
-      lines.push("Output ONLY the structured result, no prose around it.");
-      lines.push(schema ? "Format: " + schema : "Format: {describe_your_exact_schema_here}");
-      lines.push("If a value is unknown, use null, never invent one."); lines.push("");
-    }
-    var rules = [];
-    if (esc(el.constraints.value)) rules.push(esc(el.constraints.value));
-    if (esc(el.tone.value)) rules.push("Write in a " + esc(el.tone.value) + " tone.");
-    if (type !== "structured" && esc(el.format.value)) rules.push("Format the answer as " + esc(el.format.value) + ".");
-    rules.push("If information needed for the task is missing, say what is missing instead of guessing.");
-    lines.push("Rules:");
-    rules.forEach(function (r) { lines.push("- " + r); });
-    lines.push("");
-    var examples = esc(el.examples.value);
-    if (examples) {
-      lines.push("Examples of correct results:");
-      examples.split(/\n/).forEach(function (line) { if (line.trim()) lines.push("- " + line.trim()); });
-      lines.push("");
-    } else if (type === "extract") {
-      lines.push("(Add 2 or 3 worked examples above the input when you use this.");
-      lines.push("For sorting and extraction they teach the format better than any");
-      lines.push("instruction.)"); lines.push("");
-    }
-    lines.push("The input:"); lines.push("<input>"); lines.push("{paste_your_input_here}"); lines.push("</input>");
-    result.textContent = lines.join("\n");
-    settingsBox.innerHTML = SETTINGS[type]; settingsBox.hidden = false;
-    if (!chosenType) {
-      var detected = detectType(el.task.value);
-      detectHint.hidden = !detected;
-      if (detected) {
-        var names = { extract: "Classify or Extract", reason: "Reason or Analyze", create: "Create or Write", structured: "Structured output" };
-        detectHint.textContent = "Looks like: " + names[detected] + ". Tap a type to override.";
-      }
-    } else { detectHint.hidden = true; }
-    typeButtons.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-type") === type ? "true" : "false"); });
+    return L.join("\n");
   }
 
-  typeButtons.forEach(function (b) {
-    b.addEventListener("click", function () {
-      chosenType = chosenType === b.getAttribute("data-type") ? null : b.getAttribute("data-type");
-      build();
+  /* Stage 5: Check. Honest gaps, so the user can strengthen the prompt. */
+  function checkStage(text, facts, type) {
+    var gaps = [];
+    if (!facts.hasInput && /\b(fix|debug|review|summarize|summarise|translate|convert|extract|parse|refactor|optimize|optimise)\b/.test(text.toLowerCase())) {
+      gaps.push("The agent will need the actual material. Paste the code, text, or data where the prompt says {paste ...}, or describe where it lives.");
+    }
+    if (!facts.numbers.length && !facts.limits.length) {
+      gaps.push("Nothing says what done looks like. A number, a limit, or a pass condition makes the result checkable.");
+    }
+    if (!facts.tech.length && (type === "code" || type === "reason")) {
+      gaps.push("No technology or domain named. Naming the language, tool, or field sharpens every step.");
+    }
+    return gaps;
+  }
+
+  function stageLine(n, name, detail) {
+    return "<li><b>" + n + " " + name + "</b><span>" + detail + "</span></li>";
+  }
+
+  var lastFacts = null;
+  function runPipeline() {
+    var input = raw.value.trim();
+    if (!input) {
+      result.textContent = "Describe the job on the left, press Build, and the pipeline assembles a strict, agent-ready prompt here.";
+      settingsBox.hidden = true; analysis.hidden = true;
+      return;
+    }
+    var extra = more.value.trim();
+    var cleaned = cleanStage(extra ? input + ". " + extra : input);
+    var facts = understandStage(cleaned.text);
+    lastFacts = facts;
+    var type = chosenType || classifyStage(cleaned.text);
+    var prompt = composeStage(cleaned.text, facts, type);
+    var gaps = checkStage(cleaned.text, facts, type);
+
+    result.textContent = prompt;
+    settingsBox.innerHTML = SETTINGS[type] + TEMP_NOTE;
+    settingsBox.hidden = false;
+
+    var cleanDetail = cleaned.fixes ? "fixed " + cleaned.fixes + " spelling" + (cleaned.fixes === 1 ? "" : "s") : "nothing to fix";
+    if (cleaned.vented) cleanDetail += ", read past the frustration";
+    var understood = [];
+    if (facts.goal) understood.push("goal: " + facts.goal);
+    if (facts.tech.length) understood.push("involves: " + facts.tech.slice(0, 4).join(", "));
+    if (facts.numbers.length) understood.push(facts.numbers.length + " figure" + (facts.numbers.length === 1 ? "" : "s"));
+    if (facts.limits.length) understood.push(facts.limits.length + " hard limit" + (facts.limits.length === 1 ? "" : "s"));
+    stagesEl.innerHTML =
+      stageLine(1, "Clean", cleanDetail) +
+      stageLine(2, "Understand", understood.length ? understood.join(" · ") : "a short request, taken at face value") +
+      stageLine(3, "Classify", TYPE_NAMES[type] + (chosenType ? " (your override)" : "")) +
+      stageLine(4, "Compose", prompt.split("\n# ").length - 0 + " strict sections, assumptions and verification built in") +
+      stageLine(5, "Check", gaps.length ? gaps.length + " gap" + (gaps.length === 1 ? "" : "s") + " flagged below" : "no gaps found");
+
+    typeChips.innerHTML = "";
+    Object.keys(TYPE_NAMES).forEach(function (t) {
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "type-chip";
+      b.textContent = TYPE_NAMES[t];
+      b.setAttribute("aria-pressed", t === type ? "true" : "false");
+      b.addEventListener("click", function () {
+        chosenType = chosenType === t ? null : t;
+        runPipeline();
+      });
+      typeChips.appendChild(b);
     });
+    typeRow.hidden = false;
+
+    gapsEl.innerHTML = "";
+    gaps.forEach(function (g) {
+      var d = document.createElement("div");
+      d.className = "gap"; d.textContent = g;
+      gapsEl.appendChild(d);
+    });
+    analysis.hidden = false;
+  }
+
+  document.getElementById("build").addEventListener("click", runPipeline);
+  document.getElementById("rebuild").addEventListener("click", runPipeline);
+  raw.addEventListener("keydown", function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === "Enter") runPipeline();
   });
-  fields.forEach(function (id) { el[id].addEventListener("input", build); });
 
   document.getElementById("try-example").addEventListener("click", function () {
-    el.task.value = "Sort incoming support emails into billing, bug, or feature request, with a one-line reason for each.";
-    el.examples.value = "Refund taking 3 weeks?! -> billing, payment delay complaint\nApp crashes when I rotate my phone -> bug, reproducible crash report";
-    el.constraints.value = "Never invent order numbers; if the email fits no category, label it other.";
-    build();
+    raw.value = "pls fix my reactt app its sooo slow, the api call takes like 8 seconds n users r leaving, i h8 this, need it under 500ms asap";
+    more.value = "";
+    chosenType = null;
+    runPipeline();
   });
   document.getElementById("copy").addEventListener("click", function () {
     navigator.clipboard.writeText(result.textContent).then(function () {
@@ -327,7 +524,7 @@
     });
   });
   document.getElementById("clear").addEventListener("click", function () {
-    fields.forEach(function (id) { el[id].value = ""; }); chosenType = null; build();
+    raw.value = ""; more.value = ""; chosenType = null; runPipeline();
   });
 })();
 </script>

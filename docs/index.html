@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Skills: plug-and-play skills and prompts for Claude Code, Cursor, and every AI coding agent</title>
+<title>AI-SKILLS · skills for AI agents</title>
 <meta name="description" content="An open library of working methods and ready-to-run prompts for AI coding agents. Works with Claude Code, Claude Desktop, Cursor, OpenAI Codex, Gemini CLI, GitHub Copilot, Windsurf, Antigravity, Cline, Zed, Aider, and any agent that reads a file. MIT licensed.">
 <meta property="og:title" content="AI Skills">
 <meta property="og:description" content="Plug-and-play skills and prompts for every AI coding agent. One command to install, plain markdown underneath.">
@@ -77,6 +77,10 @@
   }
   .chip:hover { border-color: var(--border-hover); color: var(--text-1); }
   .chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--text-1); }
+  select.chip { appearance: none; -webkit-appearance: none; padding-right: 30px; background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%; background-size: 5px 5px; background-repeat: no-repeat; max-width: 210px; }
+  .tally { font-size: 13.5px; color: var(--text-3); margin-left: auto; white-space: nowrap; }
+  .more-row { text-align: center; padding: 4px 0 36px; }
+  #more { padding: 10px 22px; }
 
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; padding-bottom: 40px; }
   .card {
@@ -195,8 +199,11 @@
         <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
         <button class="chip" type="button" data-filter="skill" aria-pressed="false">Skills</button>
         <button class="chip" type="button" data-filter="prompt" aria-pressed="false">Prompts</button>
+        <select id="cat" class="chip" aria-label="Filter by category"><option value="">Every category</option></select>
+        <span id="tally" class="tally" role="status"></span>
       </div>
       <div class="grid" id="grid"></div>
+      <div class="more-row"><button id="more" class="chip" type="button" hidden></button></div>
       <p id="empty">Nothing matches that search.</p>
     </section>
 
@@ -216,8 +223,9 @@
 <footer class="site">
   <div class="wrap">
     Made by <a href="https://github.com/Amey-Thakur">Amey Thakur</a> ·
-    sibling of <a href="https://github.com/Amey-Thakur/NotebookLab">NotebookLab</a> ·
-    MIT license · contributions welcome
+    <a href="https://github.com/Amey-Thakur/AI-SKILLS/blob/main/LICENSE">MIT license</a> ·
+    <a href="https://github.com/Amey-Thakur/AI-SKILLS/blob/main/CONTRIBUTING.md">Contribute</a> ·
+    Try <a href="https://amey-thakur.github.io/NotebookLab/">NotebookLab</a>, the same maker's offline AI workspace
   </div>
 </footer>
 
@@ -246,30 +254,49 @@
   var grid = document.getElementById("grid");
   var empty = document.getElementById("empty");
   var search = document.getElementById("search");
+  var catSelect = document.getElementById("cat");
+  var tally = document.getElementById("tally");
+  var moreBtn = document.getElementById("more");
   var entries = [];
   var filter = "all";
+  var PAGE = 96;
+  var limit = PAGE;
+
+  function makeCard(e) {
+    var card = document.createElement("div");
+    card.className = "card";
+    var gh = "https://github.com/Amey-Thakur/AI-SKILLS/blob/main/" + e.path;
+    card.innerHTML =
+      '<span class="kind"></span><h3></h3><p></p>' +
+      '<div class="actions"><a href="' + gh + '">View</a>' +
+      '<a href="#" data-raw="' + e.raw_url + '">Copy content</a></div>';
+    card.querySelector(".kind").textContent = e.kind === "prompt" ? "prompt" : e.category;
+    card.querySelector("h3").textContent = e.name;
+    card.querySelector("p").textContent = e.description;
+    return card;
+  }
 
   function render() {
     var term = search.value.trim().toLowerCase();
-    grid.innerHTML = "";
-    var shown = 0;
-    entries.forEach(function (e) {
-      if (filter !== "all" && e.kind !== filter) return;
-      if (term && (e.name + " " + e.description).toLowerCase().indexOf(term) === -1) return;
-      shown++;
-      var card = document.createElement("div");
-      card.className = "card";
-      var gh = "https://github.com/Amey-Thakur/AI-SKILLS/blob/main/" + e.path;
-      card.innerHTML =
-        '<span class="kind">' + e.kind + "</span><h3></h3><p></p>" +
-        '<div class="actions"><a href="' + gh + '">View</a>' +
-        '<a href="#" data-raw="' + e.raw_url + '">Copy content</a></div>';
-      card.querySelector("h3").textContent = e.name;
-      card.querySelector("p").textContent = e.description;
-      grid.appendChild(card);
+    var cat = catSelect.value;
+    var matches = entries.filter(function (e) {
+      if (filter !== "all" && e.kind !== filter) return false;
+      if (cat && e.category !== cat) return false;
+      if (term && (e.name + " " + e.category + " " + e.description).toLowerCase().indexOf(term) === -1) return false;
+      return true;
     });
-    empty.style.display = shown === 0 ? "block" : "none";
+    grid.innerHTML = "";
+    var frag = document.createDocumentFragment();
+    matches.slice(0, limit).forEach(function (e) { frag.appendChild(makeCard(e)); });
+    grid.appendChild(frag);
+    var hidden = matches.length - Math.min(limit, matches.length);
+    moreBtn.hidden = hidden <= 0;
+    if (hidden > 0) moreBtn.textContent = "Show " + hidden + " more";
+    tally.textContent = matches.length ? matches.length + " of " + entries.length : "";
+    empty.style.display = matches.length === 0 ? "block" : "none";
   }
+
+  moreBtn.addEventListener("click", function () { limit = entries.length; render(); });
 
   grid.addEventListener("click", function (event) {
     var link = event.target.closest("a[data-raw]");
@@ -281,17 +308,27 @@
       .catch(function () { link.textContent = "Copy failed"; });
   });
 
-  search.addEventListener("input", render);
+  search.addEventListener("input", function () { limit = PAGE; render(); });
+  catSelect.addEventListener("change", function () { limit = PAGE; render(); });
   document.querySelectorAll(".chip[data-filter]").forEach(function (chip) {
     chip.addEventListener("click", function () {
       filter = chip.getAttribute("data-filter");
+      limit = PAGE;
       document.querySelectorAll(".chip[data-filter]").forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
       render();
     });
   });
 
   fetch("index.json").then(function (r) { return r.json(); })
-    .then(function (data) { entries = data.entries; render(); })
+    .then(function (data) {
+      entries = data.entries;
+      (data.categories || []).forEach(function (c) {
+        var opt = document.createElement("option");
+        opt.value = c; opt.textContent = c;
+        catSelect.appendChild(opt);
+      });
+      render();
+    })
     .catch(function () { empty.textContent = "Could not load the catalog. Browse it on GitHub instead."; empty.style.display = "block"; });
 
   /* The ecosystem: every major collection, linked, with per-skill counts. */

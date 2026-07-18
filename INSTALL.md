@@ -21,8 +21,8 @@ Or copy one skill into your skills folder:
 
 ```bash
 git clone https://github.com/Amey-Thakur/AI-SKILLS
-cp -r AI-SKILLS/skills/code-review ~/.claude/skills/     # global
-cp -r AI-SKILLS/skills/code-review .claude/skills/        # this project
+cp -r AI-SKILLS/skills/code-quality/code-review ~/.claude/skills/     # global
+cp -r AI-SKILLS/skills/code-quality/code-review .claude/skills/        # this project
 ```
 
 Claude picks a skill up when the task matches its description, or you invoke it
@@ -40,8 +40,8 @@ either scope:
 
 ```bash
 git clone https://github.com/Amey-Thakur/AI-SKILLS
-cp -r AI-SKILLS/skills/code-review ~/.gemini/config/skills/   # every project
-cp -r AI-SKILLS/skills/code-review .agents/skills/            # this project
+cp -r AI-SKILLS/skills/code-quality/code-review ~/.gemini/config/skills/   # every project
+cp -r AI-SKILLS/skills/code-quality/code-review .agents/skills/            # this project
 ```
 
 The agent equips a skill when the task matches its description. Antigravity
@@ -58,8 +58,8 @@ methods you want from there, so any of them can pull the full text on demand:
 
 ## Working methods
 Follow the method in the linked file when the task matches:
-- Reviewing code: https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-review/SKILL.md
-- Debugging: https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/SKILL.md
+- Reviewing code: https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review/SKILL.md
+- Debugging: https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/debugging/SKILL.md
 ```
 
 Or paste a skill's body straight into `AGENTS.md` when you want it always on.
@@ -73,7 +73,7 @@ files it applies to:
 ```bash
 mkdir -p .cursor/rules
 { printf -- '---\ndescription: Review code with severity-ranked findings\nglobs: **/*\nalwaysApply: false\n---\n\n'; \
-  curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-review/SKILL.md; \
+  curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review/SKILL.md; \
 } > .cursor/rules/code-review.mdc
 ```
 
@@ -87,7 +87,7 @@ always-on project instructions:
 
 ```bash
 mkdir -p .github
-curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-review/SKILL.md \
+curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review/SKILL.md \
   >> .github/copilot-instructions.md
 ```
 
@@ -97,7 +97,7 @@ Cline reads every file in a `.clinerules/` directory:
 
 ```bash
 mkdir -p .clinerules
-curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-review/SKILL.md \
+curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review/SKILL.md \
   > .clinerules/code-review.md
 ```
 
@@ -107,7 +107,7 @@ Roo reads every file in a `.roo/rules/` directory:
 
 ```bash
 mkdir -p .roo/rules
-curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-review/SKILL.md \
+curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review/SKILL.md \
   > .roo/rules/code-review.md
 ```
 
@@ -117,7 +117,7 @@ Windsurf reads `AGENTS.md` (above), or a project rule under `.windsurf/rules`:
 
 ```bash
 mkdir -p .windsurf/rules
-curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-review/SKILL.md \
+curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review/SKILL.md \
   > .windsurf/rules/code-review.md
 ```
 
@@ -130,7 +130,7 @@ Fetch and use it:
 import urllib.request
 
 base = "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/"
-skill = urllib.request.urlopen(base + "skills/code-review/SKILL.md").read().decode()
+skill = urllib.request.urlopen(base + "skills/code-quality/code-review/SKILL.md").read().decode()
 # strip the frontmatter, then pass the body as your system prompt
 system = skill.split("---", 2)[-1].strip()
 ```

@@ -6,209 +6,2339 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 28,
-    "prompts": 22
+    "skills": 288,
+    "prompts": 22,
+    "categories": 18
   },
+  "categories": [
+    "accessibility",
+    "apis",
+    "big-tech-processes",
+    "big-tech-roles",
+    "code-quality",
+    "databases",
+    "debugging",
+    "devops",
+    "documentation",
+    "frontend",
+    "git-collaboration",
+    "gpu-ai-infrastructure",
+    "llm-engineering",
+    "multi-agent-teams",
+    "performance",
+    "research-thinking",
+    "security",
+    "testing"
+  ],
   "entries": [
     {
       "kind": "skill",
       "name": "accessibility-review",
+      "category": "accessibility",
       "description": "Audit a UI for real accessibility, keyboard-first, with concrete failures and fixes rather than checkbox compliance. Use when reviewing or building any user interface.",
-      "path": "skills/accessibility-review/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility-review/SKILL.md"
-    },
-    {
-      "kind": "skill",
-      "name": "agent-memory",
-      "description": "Design memory for an AI agent so it recalls what matters and forgets the rest, without drowning in its own history. Use when adding persistence, context recall, or long-running state to an agent.",
-      "path": "skills/agent-memory/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/agent-memory/SKILL.md"
+      "path": "skills/accessibility/accessibility-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility/accessibility-review/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "api-design",
+      "category": "apis",
       "description": "Design HTTP and library APIs that are predictable, hard to misuse, and stable under growth. Use when creating or reviewing endpoints, public functions, or wire formats.",
-      "path": "skills/api-design/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/api-design/SKILL.md"
+      "path": "skills/apis/api-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-design/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "ci-cd",
-      "description": "Build CI/CD pipelines that are fast, trustworthy, and safe to deploy from. Use when creating or fixing continuous integration, delivery workflows, or release automation.",
-      "path": "skills/ci-cd/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/ci-cd/SKILL.md"
+      "name": "architecture-review-board",
+      "category": "big-tech-processes",
+      "description": "Run an Architecture Review Board that reviews significant technical proposals through consistent lenses, issues binding decisions recorded as ADRs, and offers an appeals path. Use when architectural choices cross team boundaries and need a durable, accountable decision rather than a hallway consensus.",
+      "path": "skills/big-tech-processes/architecture-review-board/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/architecture-review-board/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "code-documentation",
-      "description": "Write code comments and API docs that carry what the code cannot say, and nothing it already does. Use when documenting functions, modules, or tricky passages.",
-      "path": "skills/code-documentation/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-documentation/SKILL.md"
+      "name": "bar-raiser-interviewing",
+      "category": "big-tech-processes",
+      "description": "Interview as an Amazon-style bar raiser who holds an independent veto and judges each candidate against the long-term hiring bar. Use when you sit on an interview loop as the neutral interviewer accountable for the bar, not for filling the team's open seat.",
+      "path": "skills/big-tech-processes/bar-raiser-interviewing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/bar-raiser-interviewing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "canary-analysis",
+      "category": "big-tech-processes",
+      "description": "Judge a canary release against a concurrent baseline using pre-set metric gates, automatic rollback, and statistically honest windows. Use when a deploy is rolling out to a slice of production traffic and you must decide pass, hold, or revert.",
+      "path": "skills/big-tech-processes/canary-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/canary-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "chaos-gameday",
+      "category": "big-tech-processes",
+      "description": "Run a game day that injects a real failure into a system on purpose, under safety rails, to test whether monitoring, runbooks, and responders actually work. Use when you want to verify resilience before an incident does it for you, or to rehearse a team on a failure they have never handled.",
+      "path": "skills/big-tech-processes/chaos-gameday/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/chaos-gameday/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-freeze-management",
+      "category": "big-tech-processes",
+      "description": "Manage a code freeze with a scoped declaration, risk-classed changes, a fast exception process, and a planned thaw. Use when you need to stabilize a codebase ahead of a release, a holiday peak, or a high-stakes event without halting all work.",
+      "path": "skills/big-tech-processes/code-freeze-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/code-freeze-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "deprecation-program",
+      "category": "big-tech-processes",
+      "description": "Run a deprecation from telemetry through a hard sunset date so a system can be retired without breaking the callers who still depend on it. Use when you own an API, library, endpoint, or service that must be turned off and other teams still use it.",
+      "path": "skills/big-tech-processes/deprecation-program/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/deprecation-program/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "design-critique",
+      "category": "big-tech-processes",
+      "description": "Run a design critique with a clear presenter contract, feedback rules that attack the work not the person, and captured decisions. Use when a designer brings work in progress to a group for structured feedback rather than approval.",
+      "path": "skills/big-tech-processes/design-critique/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/design-critique/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "design-doc-google-style",
+      "category": "big-tech-processes",
+      "description": "Write a Google-style design doc that argues a decision through context, goals, and rejected alternatives before code is written. Use when a change is large enough that picking the wrong approach is expensive to undo.",
+      "path": "skills/big-tech-processes/design-doc-google-style/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/design-doc-google-style/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "dogfooding-program",
+      "category": "big-tech-processes",
+      "description": "Run an internal dogfooding program with staged cohorts, one feedback intake, and numeric exit criteria to general availability. Use when a pre-release product needs real internal use to surface bugs and adoption risk before it ships to customers.",
+      "path": "skills/big-tech-processes/dogfooding-program/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/dogfooding-program/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "error-budget-policy",
+      "category": "big-tech-processes",
+      "description": "Operate an error budget so reliability decisions follow a written policy instead of an argument: burn-rate alerts, feature freezes, and a clear escalation path. Use when a service has an SLO and you need to decide, without relitigating each incident, when to stop shipping features and fix reliability.",
+      "path": "skills/big-tech-processes/error-budget-policy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/error-budget-policy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "exec-briefing",
+      "category": "big-tech-processes",
+      "description": "Brief executives with the answer first, the whole thing on one page, risks paired with the decision you need, and no surprises. Use when you must get a decision or an update in front of leadership who have five minutes and no context.",
+      "path": "skills/big-tech-processes/exec-briefing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/exec-briefing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "hiring-loop-design",
+      "category": "big-tech-processes",
+      "description": "Design a hiring loop where each interview gathers distinct signal against an anchored rubric and the debrief resists groupthink. Use when standing up or fixing an interview panel and you want a decision based on evidence, not overlapping impressions.",
+      "path": "skills/big-tech-processes/hiring-loop-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/hiring-loop-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "launch-review",
+      "category": "big-tech-processes",
+      "description": "Run a launch review that gates a release behind a readiness checklist, named sign-offs, and a clear no-go authority. Use before shipping a user-facing launch where a bad release is costly to walk back.",
+      "path": "skills/big-tech-processes/launch-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/launch-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "okr-cascade",
+      "category": "big-tech-processes",
+      "description": "Cascade OKRs so team and individual goals ladder up to company strategy without sandbagged targets or scoring that rewards easy wins. Use when setting quarterly or annual objectives across more than one team and you want alignment, not a spreadsheet of restated tasks.",
+      "path": "skills/big-tech-processes/okr-cascade/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/okr-cascade/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "oncall-handoff",
+      "category": "big-tech-processes",
+      "description": "Hand off an on-call rotation by transferring open incidents, watch items, and the tribal context runbooks miss. Use at the end of a shift or rotation when the pager passes to the next responder and continuity of understanding matters.",
+      "path": "skills/big-tech-processes/oncall-handoff/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/oncall-handoff/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "open-source-review-board",
+      "category": "big-tech-processes",
+      "description": "Run an open source review board that gates incoming dependencies on license compatibility, sets the policy for contributing back, and requires a security review before adoption. Use when an organization needs consistent control over which OSS it pulls in and what it publishes.",
+      "path": "skills/big-tech-processes/open-source-review-board/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/open-source-review-board/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "perf-calibration",
+      "category": "big-tech-processes",
+      "description": "Run a performance calibration meeting so ratings across a group rest on comparable evidence and a consistent bar, not one manager's advocacy. Use when managers are finalizing performance ratings for a team or org and you need consistency and bias control before results are delivered.",
+      "path": "skills/big-tech-processes/perf-calibration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/perf-calibration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "postmortem-review-board",
+      "category": "big-tech-processes",
+      "description": "Run an org-level board that reviews incident postmortems for quality, promotes cross-cutting fixes, and surfaces trends no single incident reveals. Use when your organization produces enough postmortems that reading them one at a time misses the systemic pattern.",
+      "path": "skills/big-tech-processes/postmortem-review-board/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/postmortem-review-board/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "prfaq-working-backwards",
+      "category": "big-tech-processes",
+      "description": "Write an Amazon PR-FAQ that starts from a launch-day press release and hard customer questions so an idea is tested on the customer before it is built. Use when proposing a new product or feature and you need to prove it is worth building.",
+      "path": "skills/big-tech-processes/prfaq-working-backwards/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/prfaq-working-backwards/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "production-readiness-review",
+      "category": "big-tech-processes",
+      "description": "Run a production readiness review that checks SLOs, runbooks, capacity, and dependencies before an on-call team agrees to own a service. Use when a service is about to be onboarded to a support rotation or handed from its builders to operators.",
+      "path": "skills/big-tech-processes/production-readiness-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/production-readiness-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "promo-packet",
+      "category": "big-tech-processes",
+      "description": "Assemble a promotion packet that proves sustained impact at the next level, with calibrated scope claims and evidence a committee can verify. Use when you or someone you manage is going up for promotion and you need a case, not a list of tasks.",
+      "path": "skills/big-tech-processes/promo-packet/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/promo-packet/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "quarterly-planning",
+      "category": "big-tech-processes",
+      "description": "Run quarterly planning with honest capacity, negotiated cross-team dependencies, and an explicit cut line that names what will not get done. Use when a team commits to a quarter of work and needs the plan to survive contact with reality.",
+      "path": "skills/big-tech-processes/quarterly-planning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/quarterly-planning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "rfc-process",
+      "category": "big-tech-processes",
+      "description": "Run a Request for Comments process so a proposal reaches the right audience, collects objections inside a bounded window, and records a decision people can point to later. Use when a change affects teams beyond the author's and needs durable buy-in.",
+      "path": "skills/big-tech-processes/rfc-process/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/rfc-process/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "security-development-lifecycle",
+      "category": "big-tech-processes",
+      "description": "Apply Microsoft's Security Development Lifecycle so threat modeling, tooling, and sign-off are built into each phase instead of bolted on before ship. Use when building or shipping software that takes untrusted input or handles sensitive data and you need a repeatable security process, not a one-time audit.",
+      "path": "skills/big-tech-processes/security-development-lifecycle/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/security-development-lifecycle/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "six-pager-narrative",
+      "category": "big-tech-processes",
+      "description": "Write an Amazon six-pager, a narrative memo read in silence at the start of a meeting so a decision rests on reasoning rather than a presenter's charisma. Use when running an operating, strategy, or investment review that must reach a real decision.",
+      "path": "skills/big-tech-processes/six-pager-narrative/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/six-pager-narrative/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tech-radar",
+      "category": "big-tech-processes",
+      "description": "Maintain a tech radar that sorts technologies into adopt, trial, assess, and hold against a real evidence bar, and pairs each adoption with a sunset. Use when an organization needs a shared, current view of which tools and techniques to reach for and which to retire.",
+      "path": "skills/big-tech-processes/tech-radar/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/tech-radar/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "vendor-evaluation",
+      "category": "big-tech-processes",
+      "description": "Evaluate vendors against weighted criteria, a proof of concept that tests your real workload, and a clear-eyed accounting of exit costs before you sign. Use when choosing a paid tool or service you will depend on and a wrong pick is expensive to undo.",
+      "path": "skills/big-tech-processes/vendor-evaluation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/vendor-evaluation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "war-room-protocol",
+      "category": "big-tech-processes",
+      "description": "Run a war room for a live incident with defined roles, a steady cadence, a decision log, and explicit stand-down criteria. Use when a high-severity outage or crisis needs coordinated response across teams and the improvised version is descending into chaos.",
+      "path": "skills/big-tech-processes/war-room-protocol/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/war-room-protocol/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "accessibility-specialist-role",
+      "category": "big-tech-roles",
+      "description": "Operate as an accessibility specialist who audits against WCAG, trains teams to stop shipping the same defects, and owns the compliance sign-off. Use when a product needs to be usable with a keyboard, a screen reader, or magnification and someone must certify it before launch.",
+      "path": "skills/big-tech-roles/accessibility-specialist-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/accessibility-specialist-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "backend-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a backend engineer who designs stable API contracts, guards data integrity, and ships services that are operable on day one. Use when building or reviewing a service, API, or data path and you want production-grade engineering discipline.",
+      "path": "skills/big-tech-roles/backend-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/backend-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cloud-architect-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a cloud architect who lays the landing zone, governs cost, and sequences migration for an organization. Use when asked to stand up a cloud foundation, put guardrails and cost controls in place, or plan how workloads move to the cloud.",
+      "path": "skills/big-tech-roles/cloud-architect-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/cloud-architect-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cto-advisor-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a CTO-level advisor who turns business goals into build-or-buy calls, org design, technology bets, and a named risk posture. Use when a leader needs a technology strategy that a board and a finance team will both accept.",
+      "path": "skills/big-tech-roles/cto-advisor-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/cto-advisor-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a data engineer who ships pipelines to a freshness SLA, enforces schema contracts at the source, and owns data quality end to end. Use when building or reviewing a pipeline, warehouse table, or ingestion path that other teams will trust.",
+      "path": "skills/big-tech-roles/data-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/data-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-scientist-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a product data scientist who frames falsifiable hypotheses, analyzes experiments, and reports results without flattering the launch. Use when asked to design an A/B test, read out an experiment, or turn a metric question into a decision.",
+      "path": "skills/big-tech-roles/data-scientist-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/data-scientist-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "developer-advocate-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a developer relations (DevRel) engineer who closes the loop between external developers and the product team. Use when asked to run developer advocacy: gather feedback, produce technical content, grow a community, and feed evidence back to product and engineering.",
+      "path": "skills/big-tech-roles/developer-advocate-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/developer-advocate-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "devops-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a DevOps engineer who owns the delivery pipeline, keeps environments identical, and makes every deploy reversible. Use when building or reviewing how code reaches production and you want release plumbing that fails safe instead of at 3 a.m.",
+      "path": "skills/big-tech-roles/devops-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/devops-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "engineering-manager-role",
+      "category": "big-tech-roles",
+      "description": "Operate as an engineering manager who grows people, protects delivery health, hires deliberately, and shields the team from noise. Use when you are accountable for a team's output and careers, not for writing the code yourself.",
+      "path": "skills/big-tech-roles/engineering-manager-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/engineering-manager-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "frontend-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a frontend engineer who defends UX quality, enforces performance budgets, and partners with design instead of just closing tickets. Use when building or reviewing a user-facing web feature and you want an engineer's operating discipline, not raw code.",
+      "path": "skills/big-tech-roles/frontend-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/frontend-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "growth-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a growth engineer who moves a funnel metric through instrumented, fast experiments and refuses to win with dark patterns. Use when your job is to raise activation, retention, or conversion with measured changes, not guesses.",
+      "path": "skills/big-tech-roles/growth-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/growth-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "incident-commander-role",
+      "category": "big-tech-roles",
+      "description": "Operate as an incident commander who owns the response to a live outage: severity, coordination, and communication, not the fix itself. Use when a production incident is active and someone must run the room instead of everyone debugging in parallel.",
+      "path": "skills/big-tech-roles/incident-commander-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/incident-commander-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "ml-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as an ML engineer who takes a research model to reliable production behind eval gates and keeps it healthy across its lifecycle. Use when asked to productionize a model, build a training or serving pipeline, or set promotion criteria.",
+      "path": "skills/big-tech-roles/ml-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/ml-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mobile-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a mobile engineer who plans around release trains, a real device matrix, and app-store rules that a web engineer never faces. Use when building or reviewing an iOS or Android feature and you need mobile-specific release and compatibility discipline.",
+      "path": "skills/big-tech-roles/mobile-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/mobile-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "open-source-maintainer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a company-employed open source maintainer who runs governance, licensing hygiene, and community health for a project the business depends on. Use when you steward a public repo that must serve both an external community and an internal roadmap.",
+      "path": "skills/big-tech-roles/open-source-maintainer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/open-source-maintainer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "performance-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a performance engineer who sets budgets, gates regressions in CI, and runs profiling as a service other teams rely on. Use when latency, throughput, memory, or GPU utilization matters and you want measured wins, not folklore optimizations.",
+      "path": "skills/big-tech-roles/performance-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/performance-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "platform-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a platform engineer who builds golden paths for internal developers and earns adoption on merit. Use when asked to design an internal developer platform, pave a common workflow, or prove a platform is being adopted.",
+      "path": "skills/big-tech-roles/platform-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/platform-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "principal-architect-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a principal architect who owns the boundaries between systems, curates the technology set, and spends veto power sparingly. Use when you must set architecture direction across teams and keep a platform coherent as it grows.",
+      "path": "skills/big-tech-roles/principal-architect-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/principal-architect-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "product-designer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a product designer who designs the whole flow, specs every state, defends the work in critique, and hands off at build fidelity. Use when designing a feature, running or joining a critique, or preparing a handoff to engineering.",
+      "path": "skills/big-tech-roles/product-designer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/product-designer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "product-manager-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a product manager who picks the right problem, writes the spec, makes the tradeoff calls, and owns the launch outcome. Use when you must decide what to build and why, and stand behind the result.",
+      "path": "skills/big-tech-roles/product-manager-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/product-manager-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "qa-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a QA engineer who owns test strategy, automation coverage, and the release quality signal. Use when asked to build a test approach, decide what to automate, or give a defensible go or no-go on a release.",
+      "path": "skills/big-tech-roles/qa-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/qa-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "release-manager-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a release manager who runs release trains, enforces cut criteria, and holds rollback authority. Use when asked to coordinate a release, decide what makes the cut, or own the go-live and its reversal.",
+      "path": "skills/big-tech-roles/release-manager-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/release-manager-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "security-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a security engineer who reduces real risk through threat models, targeted reviews, scalable tooling, and incident duty. Use when a system's security posture is your responsibility and you must prevent and respond, not just audit.",
+      "path": "skills/big-tech-roles/security-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/security-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "site-reliability-engineer",
+      "category": "big-tech-roles",
+      "description": "Operate as a site reliability engineer who runs production to an error budget and holds toil below a hard cap. Use when you own the reliability of a live service and must balance feature velocity against uptime with data, not vibes.",
+      "path": "skills/big-tech-roles/site-reliability-engineer/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/site-reliability-engineer/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "solutions-architect-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a solutions architect who turns a customer's constraints into a defensible reference design and a path to production. Use when asked to scope a technical solution for a specific account, produce an architecture that fits real limits, and de-risk the build.",
+      "path": "skills/big-tech-roles/solutions-architect-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/solutions-architect-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "staff-engineer",
+      "category": "big-tech-roles",
+      "description": "Operate as a staff engineer who sets technical direction across teams and multiplies output through people rather than personal commits. Use when you are the senior technical anchor for an initiative spanning several teams or quarters.",
+      "path": "skills/big-tech-roles/staff-engineer/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/staff-engineer/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "support-engineer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a support engineer who triages by impact, reproduces before escalating, and turns recurring tickets into product fixes. Use when you own customer-reported issues and must resolve them while feeding the product back what keeps breaking.",
+      "path": "skills/big-tech-roles/support-engineer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/support-engineer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "technical-program-manager",
+      "category": "big-tech-roles",
+      "description": "Operate as a technical program manager who drives a multi-team program to a date by tracking dependencies, burning down risk, and reporting the truth upward. Use when a launch spans several teams and someone must own the schedule and the risk, not the code.",
+      "path": "skills/big-tech-roles/technical-program-manager/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/technical-program-manager/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "technical-writer-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a technical writer who owns the information architecture, runs docs through a two-gate review, and ships documentation with the feature it describes. Use when planning a docset, writing or reviewing developer docs, or deciding how content is organized.",
+      "path": "skills/big-tech-roles/technical-writer-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/technical-writer-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "ux-researcher-role",
+      "category": "big-tech-roles",
+      "description": "Operate as a UX researcher who ties every study to a pending decision, synthesizes evidence into ranked insights, and delivers findings that move the roadmap. Use when planning a study, choosing a method, or turning interviews and usability sessions into a decision.",
+      "path": "skills/big-tech-roles/ux-researcher-role/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/ux-researcher-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "api-surface-minimalism",
+      "category": "code-quality",
+      "description": "Keep the public API small by defaulting to private visibility and retiring symbols through deprecation before deletion. Use when designing a module's exports or reviewing what a package exposes to callers.",
+      "path": "skills/code-quality/api-surface-minimalism/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/api-surface-minimalism/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "assertion-density",
+      "category": "code-quality",
+      "description": "Place assertions where invariants are established or must hold: constructors, public boundaries, and loop bodies. Use when hardening code whose silent violations would otherwise surface far from their cause.",
+      "path": "skills/code-quality/assertion-density/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/assertion-density/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "boolean-parameters",
+      "category": "code-quality",
+      "description": "Replace opaque boolean flags with named enums or split functions so call sites read without the definition open. Use when a signature takes a bare boolean or a function branches on a mode flag.",
+      "path": "skills/code-quality/boolean-parameters/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/boolean-parameters/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "boy-scout-rule",
+      "category": "code-quality",
+      "description": "Leave every file you touch marginally cleaner without expanding the change beyond its purpose. Use when editing code for one task and you notice small decay worth fixing in passing.",
+      "path": "skills/code-quality/boy-scout-rule/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/boy-scout-rule/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "circular-dependencies",
+      "category": "code-quality",
+      "description": "Find dependency cycles between modules and break them with layering, interface extraction, or dependency inversion. Use when imports form a loop that blocks compilation, isolated testing, or clear reasoning about load order.",
+      "path": "skills/code-quality/circular-dependencies/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/circular-dependencies/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-comments",
+      "category": "code-quality",
+      "description": "Write comments that record why the code is shaped as it is, and delete the ones that only restate it. Use when adding, reviewing, or pruning comments in a codebase.",
+      "path": "skills/code-quality/code-comments/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-comments/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-duplication",
+      "category": "code-quality",
+      "description": "Decide when repeated code should be unified and when a duplicate is the cheaper choice. Use when tempted to extract a shared helper or facing copy-pasted code.",
+      "path": "skills/code-quality/code-duplication/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-duplication/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-formatting",
+      "category": "code-quality",
+      "description": "Hand formatting to an opinionated tool run automatically so the team stops arguing style and diffs stay readable. Use when adopting a formatter, onboarding a repo, or cleaning up noisy review diffs.",
+      "path": "skills/code-quality/code-formatting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-formatting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-metrics",
+      "category": "code-quality",
+      "description": "Read code metrics as smoke that points at where to look, not as verdicts that rank code good or bad. Use when triaging a large codebase for refactoring targets or reviewing metric-gated quality checks.",
+      "path": "skills/code-quality/code-metrics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-metrics/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "code-review",
+      "category": "code-quality",
       "description": "Review code changes for correctness, security, and maintainability with severity-ranked, evidence-based findings. Use when asked to review a diff, a pull request, or a file before merge.",
-      "path": "skills/code-review/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-review/SKILL.md"
+      "path": "skills/code-quality/code-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "commit-messages",
-      "description": "Write commit messages that explain change and intent so history stays useful. Use when committing work or asked to draft a commit message for a diff.",
-      "path": "skills/commit-messages/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/commit-messages/SKILL.md"
+      "name": "code-review-comments",
+      "category": "code-quality",
+      "description": "Write review comments that land by labeling severity and separating genuine questions from directives. Use when leaving comments on a pull request or coaching someone on how theirs read.",
+      "path": "skills/code-quality/code-review-comments/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review-comments/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "containerization",
-      "description": "Write container images and compose setups that are small, reproducible, and safe to run. Use when writing Dockerfiles, docker-compose files, or debugging container behavior.",
-      "path": "skills/containerization/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/containerization/SKILL.md"
+      "name": "cognitive-load",
+      "category": "code-quality",
+      "description": "Cut the working memory a reader needs to follow code through locality, one idea per line, and naming that carries context. Use when a function makes reviewers scroll back, re-read, or hold several facts to grasp one line.",
+      "path": "skills/code-quality/cognitive-load/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/cognitive-load/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "debugging",
-      "description": "Find the root cause of a bug with a hypothesis-driven loop instead of guess-and-patch. Use when something fails, crashes, or behaves wrongly and the cause is not yet known.",
-      "path": "skills/debugging/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/SKILL.md"
+      "name": "cyclomatic-complexity",
+      "category": "code-quality",
+      "description": "Measure a function's branching complexity and reduce it so the logic stays testable. Use when a function has many paths, deep nesting, or a long if or switch chain.",
+      "path": "skills/code-quality/cyclomatic-complexity/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/cyclomatic-complexity/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "dependency-management",
-      "description": "Choose, add, upgrade, and remove dependencies with the long-term cost in view. Use when adding a library, resolving version conflicts, or auditing a dependency tree.",
-      "path": "skills/dependency-management/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/dependency-management/SKILL.md"
+      "name": "dead-code-removal",
+      "category": "code-quality",
+      "description": "Find code that can never run and delete it without breaking a caller you missed. Use when pruning unused functions, branches, feature flags, or files.",
+      "path": "skills/code-quality/dead-code-removal/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/dead-code-removal/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "design-systems",
-      "description": "Build and maintain a design system that keeps a product visually consistent and fast to build. Use when creating design tokens, component libraries, or UI guidelines.",
-      "path": "skills/design-systems/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/design-systems/SKILL.md"
+      "name": "defensive-programming",
+      "category": "code-quality",
+      "description": "Validate untrusted data once at the boundary, then trust invariants inside and fail loudly if they ever break. Use when writing entry points, constructors, or any code that must not proceed on bad state.",
+      "path": "skills/code-quality/defensive-programming/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/defensive-programming/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "error-handling",
+      "category": "code-quality",
       "description": "Design error handling that fails loudly, recovers deliberately, and tells the person exactly what to do. Use when writing failure paths, retries, or user-facing errors.",
-      "path": "skills/error-handling/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/error-handling/SKILL.md"
+      "path": "skills/code-quality/error-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/error-handling/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "frontend-state",
-      "description": "Decide where frontend state lives and how it flows, so UIs stay predictable as they grow. Use when structuring components, adding state, or untangling prop-drilling and sync bugs.",
-      "path": "skills/frontend-state/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/frontend-state/SKILL.md"
+      "name": "error-messages",
+      "category": "code-quality",
+      "description": "Write error messages that name the specific thing, show the offending state, and state the fix as an action. Use when writing any thrown exception, log line, or user-facing failure text.",
+      "path": "skills/code-quality/error-messages/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/error-messages/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "git-workflow",
-      "description": "Use git safely and legibly: branches, history, merges, conflicts, and recovery. Use when managing branches, cleaning history, resolving conflicts, or undoing mistakes.",
-      "path": "skills/git-workflow/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-workflow/SKILL.md"
+      "name": "exhaustive-switches",
+      "category": "code-quality",
+      "description": "Make switch and match statements provably total so adding a case forces every site to handle it, with no default that hides the gap. Use when branching over an enum, union, or sealed type.",
+      "path": "skills/code-quality/exhaustive-switches/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/exhaustive-switches/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "incident-postmortem",
-      "description": "Write a blameless postmortem that finds systemic causes and produces actions that actually prevent recurrence. Use after an outage, data incident, or serious bug reaches users.",
-      "path": "skills/incident-postmortem/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/incident-postmortem/SKILL.md"
+      "name": "feature-flags-hygiene",
+      "category": "code-quality",
+      "description": "Ship code behind flags without accumulating flag rot, through disciplined naming, expiry, and cleanup sweeps. Use when adding a feature flag or auditing the flags already live in a codebase.",
+      "path": "skills/code-quality/feature-flags-hygiene/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/feature-flags-hygiene/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "mcp-server",
-      "description": "Design a Model Context Protocol server that exposes tools and data to AI agents safely and legibly. Use when building an MCP server or deciding what to expose to an agent.",
-      "path": "skills/mcp-server/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp-server/SKILL.md"
+      "name": "function-size",
+      "category": "code-quality",
+      "description": "Size functions to one clear job, extracting when they blur and leaving them long when the logic is linear. Use when a function grows hard to name or scan.",
+      "path": "skills/code-quality/function-size/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/function-size/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "observability",
-      "description": "Instrument software so production questions get answered from signals, not guesses. Use when adding logging, metrics, tracing, or alerts, or when a system is hard to debug in production.",
-      "path": "skills/observability/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/observability/SKILL.md"
+      "name": "guard-clauses",
+      "category": "code-quality",
+      "description": "Flatten nested conditionals into early returns that handle edge cases up front and keep the main path unindented. Use when logic marches rightward into deep nesting.",
+      "path": "skills/code-quality/guard-clauses/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/guard-clauses/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "performance-optimization",
-      "description": "Make code measurably faster by profiling first and fixing the actual bottleneck. Use when something is slow, uses too much memory, or needs to handle more load.",
-      "path": "skills/performance-optimization/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance-optimization/SKILL.md"
+      "name": "immutability-defaults",
+      "category": "code-quality",
+      "description": "Make immutability the default so aliasing bugs turn into compile errors or no-ops instead of action at a distance. Use when designing data structures, state updates, or any value shared across threads or call sites.",
+      "path": "skills/code-quality/immutability-defaults/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/immutability-defaults/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "prompt-engineering",
-      "description": "Build prompts that get accurate, reliably-shaped output from any LLM, choosing the right technique for the task. Use when writing, improving, or debugging a prompt.",
-      "path": "skills/prompt-engineering/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-engineering/SKILL.md"
+      "name": "legacy-code-changes",
+      "category": "code-quality",
+      "description": "Change untested legacy code safely using characterization tests, seams, and the sprout method. Use when you must modify code that has no tests and you cannot prove your change is harmless.",
+      "path": "skills/code-quality/legacy-code-changes/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/legacy-code-changes/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "rag-pipeline",
-      "description": "Design a retrieval-augmented generation pipeline that answers from sources and can be trusted. Use when building or debugging RAG: chunking, embedding, retrieval, context assembly, and grounding.",
-      "path": "skills/rag-pipeline/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/rag-pipeline/SKILL.md"
+      "name": "linting-setup",
+      "category": "code-quality",
+      "description": "Triage lint rules so bug-catchers are errors, style is left to the formatter, and every suppression carries a reason. Use when configuring a linter, taming warning noise, or setting a suppressions policy.",
+      "path": "skills/code-quality/linting-setup/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/linting-setup/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "magic-numbers",
+      "category": "code-quality",
+      "description": "Replace unexplained literal values with named constants that carry their meaning, without over-formalizing the obvious. Use when a bare number or string encodes a rule.",
+      "path": "skills/code-quality/magic-numbers/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/magic-numbers/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "module-boundaries",
+      "category": "code-quality",
+      "description": "Split modules along axes of change so things that change together live together and dependencies point one way. Use when a codebase groups by technical layer and every feature edit spans many folders.",
+      "path": "skills/code-quality/module-boundaries/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/module-boundaries/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "naming-things",
+      "category": "code-quality",
+      "description": "Choose names that carry meaning so readers grasp intent without chasing definitions. Use when naming variables, functions, types, or files, or when a name reads as vague.",
+      "path": "skills/code-quality/naming-things/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/naming-things/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "null-handling",
+      "category": "code-quality",
+      "description": "Make absence explicit in the type and resolve it at the edges so the interior never dereferences a surprise null. Use when designing return types, parsing external input, or chasing null-reference crashes.",
+      "path": "skills/code-quality/null-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/null-handling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pr-authoring",
+      "category": "code-quality",
+      "description": "Shape pull requests a reviewer can actually hold in their head, through small size, a why-first description, and a self-review pass. Use when opening a pull request or preparing a change for review.",
+      "path": "skills/code-quality/pr-authoring/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/pr-authoring/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "premature-abstraction",
+      "category": "code-quality",
+      "description": "Resist extracting shared code until a third real use reveals the true axis of variation. Use when tempted to add a helper, base class, config object, or generic layer on one or two examples.",
+      "path": "skills/code-quality/premature-abstraction/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/premature-abstraction/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "refactoring",
+      "category": "code-quality",
       "description": "Improve code structure in small, always-green steps without changing behavior. Use when asked to clean up, simplify, restructure, or de-duplicate working code.",
-      "path": "skills/refactoring/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/refactoring/SKILL.md"
+      "path": "skills/code-quality/refactoring/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/refactoring/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "research-synthesis",
-      "description": "Turn multiple sources into a defensible, source-attributed answer that separates fact from inference. Use when researching a question across documents, articles, or search results.",
-      "path": "skills/research-synthesis/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-synthesis/SKILL.md"
+      "name": "rewrite-vs-refactor",
+      "category": "code-quality",
+      "description": "Decide whether to refactor code in place or rewrite it from scratch using risk math, not frustration. Use when a component feels beyond repair and someone proposes starting over.",
+      "path": "skills/code-quality/rewrite-vs-refactor/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/rewrite-vs-refactor/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "strangler-fig",
+      "category": "code-quality",
+      "description": "Replace a legacy system incrementally behind a routing facade, moving one slice at a time instead of a big-bang rewrite. Use when retiring or rewriting a system that must keep running throughout.",
+      "path": "skills/code-quality/strangler-fig/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/strangler-fig/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "style-guides",
+      "category": "code-quality",
+      "description": "Write a code style guide people actually follow by deciding once, automating enforcement, and logging exceptions. Use when style debates recur in review or a new guide is being drafted.",
+      "path": "skills/code-quality/style-guides/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/style-guides/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tech-debt-register",
+      "category": "code-quality",
+      "description": "Track technical debt deliberately by framing each item as interest owed and budgeting steady paydown. Use when debt is piling up as vague complaints and you need to make it fundable work.",
+      "path": "skills/code-quality/tech-debt-register/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/tech-debt-register/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "todo-hygiene",
+      "category": "code-quality",
+      "description": "Keep TODO comments actionable by requiring an owner, a ticket, and an expiry, or deleting them. Use when writing, reviewing, or sweeping in-code TODO, FIXME, and HACK markers.",
+      "path": "skills/code-quality/todo-hygiene/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/todo-hygiene/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "type-safety",
+      "category": "code-quality",
+      "description": "Model data so illegal states will not compile, then turn the checker to strict and let it prove correctness for free. Use when designing types, modeling state machines, or hardening a loosely typed module.",
+      "path": "skills/code-quality/type-safety/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/type-safety/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "schema-design",
+      "category": "databases",
       "description": "Design database schemas that stay correct under growth and change. Use when creating tables, modeling relationships, or planning schema migrations.",
-      "path": "skills/schema-design/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/schema-design/SKILL.md"
-    },
-    {
-      "kind": "skill",
-      "name": "security-review",
-      "description": "Review code for the vulnerabilities that actually get exploited, ranked by real risk with concrete attack scenarios. Use when reviewing changes that touch input handling, auth, secrets, files, queries, or network calls.",
-      "path": "skills/security-review/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security-review/SKILL.md"
+      "path": "skills/databases/schema-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/schema-design/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "sql-optimization",
+      "category": "databases",
       "description": "Diagnose and fix slow SQL with the query plan as evidence, not folklore. Use when a query is slow, a table scan appears, or database load climbs.",
-      "path": "skills/sql-optimization/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql-optimization/SKILL.md"
+      "path": "skills/databases/sql-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/sql-optimization/SKILL.md"
     },
     {
       "kind": "skill",
-      "name": "staying-on-task",
-      "description": "Keep an AI agent anchored to the actual goal through long or messy work. Use at the start of any multi-step task, and whenever work begins to drift, balloon, or stall.",
-      "path": "skills/staying-on-task/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/staying-on-task/SKILL.md"
+      "name": "alerting-design",
+      "category": "debugging",
+      "description": "Design alerts that fire on the symptoms users feel, using error-budget burn rate, a page-worthiness test, and a runbook link on every rule. Use when writing or pruning alerts and you want the pager to mean something instead of crying wolf.",
+      "path": "skills/debugging/alerting-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/alerting-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "binary-search-debugging",
+      "category": "debugging",
+      "description": "Halve the search space repeatedly across code, data, time, and configuration until a single change isolates the failure. Use when the fault could live anywhere across a large surface and reading it all in order is too slow.",
+      "path": "skills/debugging/binary-search-debugging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/binary-search-debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "browser-devtools",
+      "category": "debugging",
+      "description": "Debug a slow or broken web page with the browser's built-in tools: the network waterfall, the performance panel, and source maps back to original code. Use when a page loads slowly, janks while running, or throws in minified bundle code you cannot read.",
+      "path": "skills/debugging/browser-devtools/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/browser-devtools/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "core-dumps",
+      "category": "debugging",
+      "description": "Extract the cause of a crash from a core dump using symbols, backtraces, and post-mortem inspection. Use when a native process died with a signal and left a core file, or when you have a crash dump but no live process to attach to.",
+      "path": "skills/debugging/core-dumps/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/core-dumps/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "dashboard-design",
+      "category": "debugging",
+      "description": "Build dashboards where each panel answers exactly one question, laid out by the RED method for services and the USE method for resources. Use when a board has grown into a wall of graphs nobody can read while an incident burns.",
+      "path": "skills/debugging/dashboard-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/dashboard-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "deadlock-analysis",
+      "category": "debugging",
+      "description": "Find why threads are stuck forever by dumping their state and building the wait-for graph that reveals the lock cycle. Use when a program hangs with no progress and no crash, or throughput drops to zero while CPU sits idle.",
+      "path": "skills/debugging/deadlock-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/deadlock-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "debugger-fluency",
+      "category": "debugging",
+      "description": "Drive a real debugger with breakpoints, watch expressions, and conditional stops to read live program state at the moment of failure. Use when a bug needs you to see the call stack and variables as it breaks, not reconstruct them afterward.",
+      "path": "skills/debugging/debugger-fluency/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/debugger-fluency/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "debugging",
+      "category": "debugging",
+      "description": "Find the root cause of a bug with a hypothesis-driven loop instead of guess-and-patch. Use when something fails, crashes, or behaves wrongly and the cause is not yet known.",
+      "path": "skills/debugging/debugging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "distributed-tracing",
+      "category": "debugging",
+      "description": "Follow one request across service boundaries using spans, propagated context, and critical-path reading to locate where latency and errors originate. Use when a request is slow or failing and the cause lives between services, not inside any single one.",
+      "path": "skills/debugging/distributed-tracing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/distributed-tracing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "error-tracking",
+      "category": "debugging",
+      "description": "Wire an error tracker to releases, tune grouping rules, and route each issue to an owner so exceptions become triaged work. Use when exceptions vanish into log noise and nobody knows which are new, which are spiking, or whose they are.",
+      "path": "skills/debugging/error-tracking/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/error-tracking/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "flaky-test-diagnosis",
+      "category": "debugging",
+      "description": "Turn a test that fails at random into one that fails on demand by controlling the seed, order, and clock. Use when a test passes on re-run, fails only in CI, or blocks a merge for reasons no one can reproduce.",
+      "path": "skills/debugging/flaky-test-diagnosis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/flaky-test-diagnosis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "git-bisect",
+      "category": "debugging",
+      "description": "Find the exact commit that introduced a regression by driving git bisect with an automated pass/fail script. Use when a behavior worked in an older build and you need the first bad commit out of hundreds, not a guess.",
+      "path": "skills/debugging/git-bisect/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/git-bisect/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "heisenbugs",
+      "category": "debugging",
+      "description": "Catch timing-dependent bugs that vanish under observation by amplifying the race and moving logging off the critical path. Use when a fault appears intermittently and disappears the moment you add a print or attach a debugger.",
+      "path": "skills/debugging/heisenbugs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/heisenbugs/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "log-analysis",
+      "category": "debugging",
+      "description": "Mine logs for the cause of a failure by pivoting on correlation ids, clamping the time window, and querying structured fields instead of scrolling. Use when production broke and the logs are the only record of what the system actually did.",
+      "path": "skills/debugging/log-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/log-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "log-levels",
+      "category": "debugging",
+      "description": "Assign log levels deliberately so error wakes a human, warn flags a trend, and info and debug explain later without burying the signal. Use when logs are either silent during real failures or so noisy that nobody trusts them.",
+      "path": "skills/debugging/log-levels/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/log-levels/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "memory-leaks",
+      "category": "debugging",
+      "description": "Find the object that never gets freed by comparing heap snapshots and following retention paths. Use when a process grows in memory over time, gets OOM-killed, or slows under a garbage collector that keeps working harder.",
+      "path": "skills/debugging/memory-leaks/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/memory-leaks/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "metrics-instrumentation",
+      "category": "debugging",
+      "description": "Instrument code with counters, gauges, and histograms picked to answer a specific operational question. Use when you need to watch a system's behavior over time and want the right instrument instead of a wall of unreadable numbers.",
+      "path": "skills/debugging/metrics-instrumentation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/metrics-instrumentation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "network-debugging",
+      "category": "debugging",
+      "description": "Diagnose failing or slow network calls by inspecting the actual bytes on the wire with curl, tcpdump, and TLS handshake analysis. Use when a request fails, hangs, or returns the wrong thing and you cannot tell whether the client, the network, or the server is at fault.",
+      "path": "skills/debugging/network-debugging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/network-debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "observability",
+      "category": "debugging",
+      "description": "Instrument software so production questions get answered from signals, not guesses. Use when adding logging, metrics, tracing, or alerts, or when a system is hard to debug in production.",
+      "path": "skills/debugging/observability/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/observability/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "off-by-one-errors",
+      "category": "debugging",
+      "description": "Catch fencepost bugs by writing down the boundary convention and testing the endpoints instead of the middle. Use when a loop, slice, index, or range is off by a single element, drops the last item, or reads one past the end.",
+      "path": "skills/debugging/off-by-one-errors/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/off-by-one-errors/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "postmortem-debugging",
+      "category": "debugging",
+      "description": "Reconstruct what happened from the artifacts a dead incident left behind: logs, metrics, dumps, and a timeline, when there is no live system left to poke. Use when the outage is over, the process is gone, and all you have is what was written down while it burned.",
+      "path": "skills/debugging/postmortem-debugging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/postmortem-debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "print-debugging",
+      "category": "debugging",
+      "description": "Place labeled, greppable print statements at decision points to trace the real execution, then remove them cleanly. Use when a debugger is unavailable or awkward and you need to watch values flow through the actual run.",
+      "path": "skills/debugging/print-debugging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/print-debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "production-debugging",
+      "category": "debugging",
+      "description": "Debug a live system without making the incident worse by staying read-only first, gating changes behind flags, and testing on mirrored traffic. Use when a bug only manifests in production and you must investigate against real users and real data.",
+      "path": "skills/debugging/production-debugging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/production-debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "profiling-cpu",
+      "category": "debugging",
+      "description": "Find the code that actually burns CPU time using a sampling profiler and a flame graph instead of guesswork. Use when a program is slower than it should be and you need to locate the hot path before touching any code.",
+      "path": "skills/debugging/profiling-cpu/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/profiling-cpu/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "profiling-memory",
+      "category": "debugging",
+      "description": "Attribute memory growth and allocation churn to the exact call sites that produce it using an allocation profiler. Use when a process grows without bound, spends too much time in garbage collection, or allocates far more than its working set explains.",
+      "path": "skills/debugging/profiling-memory/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/profiling-memory/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "race-conditions",
+      "category": "debugging",
+      "description": "Diagnose data races by reasoning about happens-before order, running sanitizers, and stressing the timing until the bug shows. Use when a bug appears only under load, only sometimes, or vanishes when you add a print statement.",
+      "path": "skills/debugging/race-conditions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/race-conditions/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "reproduction-first",
+      "category": "debugging",
+      "description": "Build a reliable, minimal reproduction before you write a fix so you can prove the bug is actually gone. Use when a report is vague, intermittent, or \"works on my machine\" and you need solid ground under the debugging.",
+      "path": "skills/debugging/reproduction-first/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/reproduction-first/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "rubber-duck-protocol",
+      "category": "debugging",
+      "description": "Explain the failing code line by line in writing until the sentence you cannot finish exposes the false assumption. Use when you are stuck, re-reading the same code, sure it should work, and it does not.",
+      "path": "skills/debugging/rubber-duck-protocol/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/rubber-duck-protocol/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "scientific-debugging",
+      "category": "debugging",
+      "description": "Debug by turning a belief about the code into a falsifiable hypothesis, predicting an observable, and running the one probe that can refute it. Use when a bug resists guesswork and shotgun edits are making the code murkier instead of the cause clearer.",
+      "path": "skills/debugging/scientific-debugging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/scientific-debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "stack-trace-reading",
+      "category": "debugging",
+      "description": "Read a stack trace to find the cause frame instead of stopping at the symptom on top. Use when an exception, panic, or error dump lands and you need to locate the line that is actually wrong.",
+      "path": "skills/debugging/stack-trace-reading/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/stack-trace-reading/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "structured-logging",
+      "category": "debugging",
+      "description": "Emit machine-readable key-value events instead of prose sentences, with a stable schema and controlled field cardinality. Use when logs need to be queried and aggregated, not just read one line at a time by a person.",
+      "path": "skills/debugging/structured-logging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/structured-logging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "time-travel-debugging",
+      "category": "debugging",
+      "description": "Record an execution once and replay it deterministically so you can step backward to the moment a value went wrong. Use when a bug is hard to reproduce or the failure surfaces long after its cause, and rerunning changes the outcome.",
+      "path": "skills/debugging/time-travel-debugging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/time-travel-debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "ci-cd",
+      "category": "devops",
+      "description": "Build CI/CD pipelines that are fast, trustworthy, and safe to deploy from. Use when creating or fixing continuous integration, delivery workflows, or release automation.",
+      "path": "skills/devops/ci-cd/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/ci-cd/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "containerization",
+      "category": "devops",
+      "description": "Write container images and compose setups that are small, reproducible, and safe to run. Use when writing Dockerfiles, docker-compose files, or debugging container behavior.",
+      "path": "skills/devops/containerization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/containerization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "dependency-management",
+      "category": "devops",
+      "description": "Choose, add, upgrade, and remove dependencies with the long-term cost in view. Use when adding a library, resolving version conflicts, or auditing a dependency tree.",
+      "path": "skills/devops/dependency-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/dependency-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "incident-postmortem",
+      "category": "devops",
+      "description": "Write a blameless postmortem that finds systemic causes and produces actions that actually prevent recurrence. Use after an outage, data incident, or serious bug reaches users.",
+      "path": "skills/devops/incident-postmortem/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/incident-postmortem/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-documentation",
+      "category": "documentation",
+      "description": "Write code comments and API docs that carry what the code cannot say, and nothing it already does. Use when documenting functions, modules, or tricky passages.",
+      "path": "skills/documentation/code-documentation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/code-documentation/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "technical-writing",
+      "category": "documentation",
       "description": "Write documentation, READMEs, and guides that respect the reader's time and answer their actual question. Use when drafting or editing any technical document.",
-      "path": "skills/technical-writing/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/technical-writing/SKILL.md"
+      "path": "skills/documentation/technical-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/technical-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "design-systems",
+      "category": "frontend",
+      "description": "Build and maintain a design system that keeps a product visually consistent and fast to build. Use when creating design tokens, component libraries, or UI guidelines.",
+      "path": "skills/frontend/design-systems/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/frontend/design-systems/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "frontend-state",
+      "category": "frontend",
+      "description": "Decide where frontend state lives and how it flows, so UIs stay predictable as they grow. Use when structuring components, adding state, or untangling prop-drilling and sync bugs.",
+      "path": "skills/frontend/frontend-state/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/frontend/frontend-state/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "commit-messages",
+      "category": "git-collaboration",
+      "description": "Write commit messages that explain change and intent so history stays useful. Use when committing work or asked to draft a commit message for a diff.",
+      "path": "skills/git-collaboration/commit-messages/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/commit-messages/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "git-workflow",
+      "category": "git-collaboration",
+      "description": "Use git safely and legibly: branches, history, merges, conflicts, and recovery. Use when managing branches, cleaning history, resolving conflicts, or undoing mistakes.",
+      "path": "skills/git-collaboration/git-workflow/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/git-workflow/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "checkpointing-large-training",
+      "category": "gpu-ai-infrastructure",
+      "description": "Checkpoint multi-node training runs so a save costs seconds instead of minutes and a resume reproduces the run exactly. Use when a job is large enough that a crash without a recent, verified checkpoint means losing hours of GPU time.",
+      "path": "skills/gpu-ai-infrastructure/checkpointing-large-training/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/checkpointing-large-training/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cuda-kernel-basics",
+      "category": "gpu-ai-infrastructure",
+      "description": "Write correct, reasonably fast first CUDA kernels by mapping work to the thread hierarchy, coalescing global loads, and checking occupancy. Use when you are writing or reviewing a hand-written CUDA kernel and want it to run without wasting most of the GPU.",
+      "path": "skills/gpu-ai-infrastructure/cuda-kernel-basics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/cuda-kernel-basics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "fault-tolerant-training",
+      "category": "gpu-ai-infrastructure",
+      "description": "Keep a long training job alive across GPU failures, node evictions, and stragglers so one bad host costs minutes, not the whole run. Use when a run spans enough GPUs and hours that hardware failure during the job is expected, not hypothetical.",
+      "path": "skills/gpu-ai-infrastructure/fault-tolerant-training/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/fault-tolerant-training/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "gpu-cluster-scheduling",
+      "category": "gpu-ai-infrastructure",
+      "description": "Schedule GPU jobs on a shared cluster so distributed jobs get all their GPUs at once, fragmentation stays low, and preemption is predictable. Use when several teams share a GPU pool and jobs sit pending while GPUs sit idle.",
+      "path": "skills/gpu-ai-infrastructure/gpu-cluster-scheduling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/gpu-cluster-scheduling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "gpu-cost-planning",
+      "category": "gpu-ai-infrastructure",
+      "description": "Plan GPU spend by comparing owned hardware, reserved cloud, and on-demand against real utilization and lead time, so you commit at the right break-even. Use when deciding whether to buy GPUs, reserve cloud capacity, or burst on-demand for a workload.",
+      "path": "skills/gpu-ai-infrastructure/gpu-cost-planning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/gpu-cost-planning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "gpu-memory-hierarchy",
+      "category": "gpu-ai-infrastructure",
+      "description": "Move data through the GPU memory tiers deliberately so kernels are bound by compute rather than by HBM traffic. Use when a kernel is memory-bound, when you are deciding what to stage in shared memory, or when register spills are hurting a hot loop.",
+      "path": "skills/gpu-ai-infrastructure/gpu-memory-hierarchy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/gpu-memory-hierarchy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "gpu-sharing-mig",
+      "category": "gpu-ai-infrastructure",
+      "description": "Share one physical GPU across several small workloads using MIG, MPS, or time slicing, and pick the mode whose isolation matches the risk. Use when GPUs sit at low utilization because each job needs far less than a whole A100 or H100.",
+      "path": "skills/gpu-ai-infrastructure/gpu-sharing-mig/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/gpu-sharing-mig/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "gpu-utilization-monitoring",
+      "category": "gpu-ai-infrastructure",
+      "description": "Monitor a GPU fleet so you can tell a genuinely busy GPU from one reporting 100 percent utilization while computing almost nothing, and find the wasted spend. Use when GPUs look busy on the dashboard but throughput or cost per token says otherwise.",
+      "path": "skills/gpu-ai-infrastructure/gpu-utilization-monitoring/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/gpu-utilization-monitoring/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "inference-serving-optimization",
+      "category": "gpu-ai-infrastructure",
+      "description": "Raise GPU throughput and hold tail latency for LLM serving by tuning batching, the KV cache, and paged attention against explicit SLOs. Use when a serving deployment misses its latency target or wastes GPU memory and you need to find the lever.",
+      "path": "skills/gpu-ai-infrastructure/inference-serving-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/inference-serving-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "kernel-profiling-nsight",
+      "category": "gpu-ai-infrastructure",
+      "description": "Profile GPU workloads with Nsight Systems and Nsight Compute to read the timeline, classify the bottleneck, and pull the metric that names the fix. Use when a GPU program is slower than expected and you need evidence for what to change before touching a kernel.",
+      "path": "skills/gpu-ai-infrastructure/kernel-profiling-nsight/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/kernel-profiling-nsight/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mixed-precision-deployment",
+      "category": "gpu-ai-infrastructure",
+      "description": "Ship FP16, BF16, or FP8 training and inference that keeps accuracy while capturing the speedup, using loss scaling and numeric validation. Use when moving a model off FP32 to run faster or fit in less memory and you need the result to still be correct.",
+      "path": "skills/gpu-ai-infrastructure/mixed-precision-deployment/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/mixed-precision-deployment/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "model-parallelism",
+      "category": "gpu-ai-infrastructure",
+      "description": "Split a model that will not fit on one GPU across devices using tensor, pipeline, and expert parallelism, and pick the split by its communication cost. Use when weights or activations exceed a single card and you must choose how to shard without stalling on interconnect.",
+      "path": "skills/gpu-ai-infrastructure/model-parallelism/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/model-parallelism/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "quantization-deployment",
+      "category": "gpu-ai-infrastructure",
+      "description": "Quantize a trained model to INT8 or INT4 for inference, calibrate the ranges, and gate the release on a measured quality regression. Use when you need lower latency and memory for serving and are willing to spend effort keeping accuracy inside a defined budget.",
+      "path": "skills/gpu-ai-infrastructure/quantization-deployment/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/quantization-deployment/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tensor-core-utilization",
+      "category": "gpu-ai-infrastructure",
+      "description": "Get matrix multiplies onto the tensor cores by fixing shapes, precision, and alignment, then measure that the cores are actually active. Use when a GEMM or attention kernel runs far below the GPU's advertised throughput and you suspect it is falling back to the regular CUDA cores.",
+      "path": "skills/gpu-ai-infrastructure/tensor-core-utilization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/tensor-core-utilization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tensorrt-optimization",
+      "category": "gpu-ai-infrastructure",
+      "description": "Compile a trained model into a fast TensorRT engine by choosing precision, defining dynamic shape profiles, and validating that fused kernels preserved accuracy. Use when a PyTorch or ONNX model must hit a hardware-specific latency floor and eager execution is too slow.",
+      "path": "skills/gpu-ai-infrastructure/tensorrt-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/tensorrt-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "triton-inference-server",
+      "category": "gpu-ai-infrastructure",
+      "description": "Deploy models on NVIDIA Triton with a correct model repository, ensemble pipelines, and concurrent execution tuned to keep the GPU busy. Use when serving one or more models through Triton and configuring layout, batching, instance groups, or a preprocessing-plus-inference pipeline.",
+      "path": "skills/gpu-ai-infrastructure/triton-inference-server/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/triton-inference-server/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "vllm-serving",
+      "category": "gpu-ai-infrastructure",
+      "description": "Stand up an LLM behind vLLM with continuous batching, deliberate GPU memory planning, and multi-model hosting that stays within VRAM. Use when deploying a model on vLLM and deciding memory fraction, context length, parallelism, and how many models share a card.",
+      "path": "skills/gpu-ai-infrastructure/vllm-serving/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/vllm-serving/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-memory",
+      "category": "llm-engineering",
+      "description": "Design memory for an AI agent so it recalls what matters and forgets the rest, without drowning in its own history. Use when adding persistence, context recall, or long-running state to an agent.",
+      "path": "skills/llm-engineering/agent-memory/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/agent-memory/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-server",
+      "category": "llm-engineering",
+      "description": "Design a Model Context Protocol server that exposes tools and data to AI agents safely and legibly. Use when building an MCP server or deciding what to expose to an agent.",
+      "path": "skills/llm-engineering/mcp-server/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/mcp-server/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "prompt-engineering",
+      "category": "llm-engineering",
+      "description": "Build prompts that get accurate, reliably-shaped output from any LLM, choosing the right technique for the task. Use when writing, improving, or debugging a prompt.",
+      "path": "skills/llm-engineering/prompt-engineering/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/prompt-engineering/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "rag-pipeline",
+      "category": "llm-engineering",
+      "description": "Design a retrieval-augmented generation pipeline that answers from sources and can be trusted. Use when building or debugging RAG: chunking, embedding, retrieval, context assembly, and grounding.",
+      "path": "skills/llm-engineering/rag-pipeline/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/rag-pipeline/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "staying-on-task",
+      "category": "llm-engineering",
+      "description": "Keep an AI agent anchored to the actual goal through long or messy work. Use at the start of any multi-step task, and whenever work begins to drift, balloon, or stall.",
+      "path": "skills/llm-engineering/staying-on-task/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/staying-on-task/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-arch-board",
+      "category": "multi-agent-teams",
+      "description": "Run an architecture board of agents where one proposes a design, several review it independently and blind, and a chair synthesizes a binding decision. Use when a design choice is consequential enough that one agent's opinion is not enough and you want independent scrutiny before committing.",
+      "path": "skills/multi-agent-teams/agent-arch-board/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-arch-board/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-code-review-loop",
+      "category": "multi-agent-teams",
+      "description": "Run an author agent and a reviewer agent in a loop with a strict finding format, a verification pass, and a convergence rule that ends it. Use when you want agent-to-agent code review that improves the diff instead of spinning forever on style or re-flagging fixed issues.",
+      "path": "skills/multi-agent-teams/agent-code-review-loop/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-code-review-loop/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-design-review-panel",
+      "category": "multi-agent-teams",
+      "description": "Convene several reviewer agents with fixed distinct lenses, correctness, security, cost, and simplicity, then synthesize their verdicts. Use when one review agent keeps missing whole classes of problems because it cannot hold every concern at once on a design or a plan.",
+      "path": "skills/multi-agent-teams/agent-design-review-panel/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-design-review-panel/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-docs-guild",
+      "category": "multi-agent-teams",
+      "description": "Run a team of documentation agents that finds gaps, drafts pages, gets them technically reviewed, and sweeps for staleness on a schedule. Use when a codebase has outgrown its docs and you need both fresh coverage and a way to keep pages from rotting.",
+      "path": "skills/multi-agent-teams/agent-docs-guild/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-docs-guild/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-handoff-protocol",
+      "category": "multi-agent-teams",
+      "description": "Design the handoff between two agents as an explicit artifact contract with a context budget and loss prevention. Use when work passes from one agent to the next and the receiver keeps losing constraints, re-deriving decisions, or drowning in the sender's raw transcript.",
+      "path": "skills/multi-agent-teams/agent-handoff-protocol/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-handoff-protocol/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-incident-response-team",
+      "category": "multi-agent-teams",
+      "description": "Replicate a live incident team as agents with a commander, parallel investigators, comms, and a scribe, coordinated on a fixed cadence. Use when you want an outage worked by a coordinated agent team instead of one agent debugging alone.",
+      "path": "skills/multi-agent-teams/agent-incident-response-team/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-incident-response-team/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-migration-crew",
+      "category": "multi-agent-teams",
+      "description": "Run a team of migration agents that inventories the work, transforms each slice in isolation, verifies it, and merges under strict discipline. Use when a large mechanical change like a framework bump, an API rename, or a schema move touches many files and one agent would lose track or break main.",
+      "path": "skills/multi-agent-teams/agent-migration-crew/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-migration-crew/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-pm-eng-loop",
+      "category": "multi-agent-teams",
+      "description": "Pair a product-manager agent with engineer agents through spec, pushback, scope negotiation, and acceptance so the build matches intent. Use when an agent team must turn a fuzzy request into a shipped, accepted increment.",
+      "path": "skills/multi-agent-teams/agent-pm-eng-loop/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-pm-eng-loop/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-postmortem-council",
+      "category": "multi-agent-teams",
+      "description": "Run a team of postmortem agents that builds the timeline, analyzes causes, drafts corrective actions, and reviews for blamelessness and completeness. Use after an incident when you need a rigorous, blameless writeup and action list instead of a hasty narrative that blames a person.",
+      "path": "skills/multi-agent-teams/agent-postmortem-council/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-postmortem-council/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-qa-gate",
+      "category": "multi-agent-teams",
+      "description": "Place a QA agent as the last blocking node before output ships, verifying acceptance criteria against real test evidence with the power to veto. Use when builder agents keep declaring done on work that does not actually meet its criteria and you need one gate that runs the artifact instead of trusting the claim.",
+      "path": "skills/multi-agent-teams/agent-qa-gate/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-qa-gate/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-red-team-blue-team",
+      "category": "multi-agent-teams",
+      "description": "Run attacker and defender agents in a fix-and-re-attack loop so exploitable bugs get found, triaged, fixed, and verified before ship. Use when you want a system probed and hardened by an agent team rather than one pass of review.",
+      "path": "skills/multi-agent-teams/agent-red-team-blue-team/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-red-team-blue-team/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-release-train",
+      "category": "multi-agent-teams",
+      "description": "Run release agents that draft the changelog, scan risk, verify the candidate, and gate publish behind a go/no-go check. Use when cutting a release and you want the boring parts automated and the risky parts caught before ship.",
+      "path": "skills/multi-agent-teams/agent-release-train/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-release-train/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-research-lab",
+      "category": "multi-agent-teams",
+      "description": "Run a lab of researcher agents that search in parallel, verify sources independently, and synthesize a cited answer. Use when a question needs breadth of sources and every load-bearing claim must trace to evidence.",
+      "path": "skills/multi-agent-teams/agent-research-lab/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-research-lab/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-role-definition",
+      "category": "multi-agent-teams",
+      "description": "Write role cards that pin an agent to one charter with declared inputs, outputs, refusal rules, and non-overlapping scope. Use when assembling a multi-agent team and you need each agent to stay in its lane instead of all agents drifting toward the same work.",
+      "path": "skills/multi-agent-teams/agent-role-definition/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-role-definition/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-startup-squad",
+      "category": "multi-agent-teams",
+      "description": "Run a lean startup team of agents (builder, marketer, analyst) through one disciplined weekly loop of ship, promote, and measure. Use when you want a small agent team to move a single product metric week over week.",
+      "path": "skills/multi-agent-teams/agent-startup-squad/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-startup-squad/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-support-desk",
+      "category": "multi-agent-teams",
+      "description": "Run a team of support agents that triages tickets, reproduces the issue, drafts a reply, and escalates cleanly to a human. Use when inbound support volume needs consistent handling and a person should approve every customer-facing reply before it sends.",
+      "path": "skills/multi-agent-teams/agent-support-desk/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-support-desk/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "virtual-engineering-team",
+      "category": "multi-agent-teams",
+      "description": "Run a squad of agents as a product-engineering team from spec to shipped change, with a PM, an architect, two engineers, a reviewer, and QA. Use when a task is large enough to need division of labor and a quality gate, not a single agent doing everything.",
+      "path": "skills/multi-agent-teams/virtual-engineering-team/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/virtual-engineering-team/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "algorithmic-optimization",
+      "category": "performance",
+      "description": "Replace a hot algorithm with one of better complexity, a fitter data structure, or memoized results instead of micro-tuning the slow one. Use when a profiler points at a function whose cost is inherent to its approach, not to constant-factor waste.",
+      "path": "skills/performance/algorithmic-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/algorithmic-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "async-io-patterns",
+      "category": "performance",
+      "description": "Structure async code so the event loop stays free, slow producers apply backpressure, and blocking calls never stall unrelated work. Use when writing or debugging async IO and throughput is low, latency is spiky, or the loop appears to hang.",
+      "path": "skills/performance/async-io-patterns/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/async-io-patterns/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "batching-and-debouncing",
+      "category": "performance",
+      "description": "Coalesce a flood of small operations into fewer larger ones with batch windows, debounce, or throttle, chosen by whether you need the last event or a steady rate. Use when high-frequency triggers each do expensive work: per-keystroke queries, per-event writes, per-scroll handlers.",
+      "path": "skills/performance/batching-and-debouncing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/batching-and-debouncing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "benchmark-design",
+      "category": "performance",
+      "description": "Write benchmarks that do not lie, controlling warmup, isolation, and statistics so the number reflects the code and not the environment. Use when comparing implementations, defending a performance claim, or a microbenchmark result looks too good.",
+      "path": "skills/performance/benchmark-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/benchmark-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "big-o-in-practice",
+      "category": "performance",
+      "description": "Apply complexity analysis where input size actually makes it decide performance, and ignore it where constant factors dominate. Use when choosing an algorithm or data structure and you need to know whether asymptotic cost or the real constant is what bites.",
+      "path": "skills/performance/big-o-in-practice/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/big-o-in-practice/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cache-invalidation",
+      "category": "performance",
+      "description": "Keep cached data correct as the source changes using write-through, event-driven eviction, and versioned keys. Use when a cache exists and stale reads are a risk, or when users report seeing old data after a write.",
+      "path": "skills/performance/cache-invalidation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/cache-invalidation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "caching-strategy",
+      "category": "performance",
+      "description": "Decide what to cache and where by choosing layers, key shapes, and TTLs against the read pattern and freshness need. Use when reads are hot and repeated and you are deciding whether and where to add a cache before writing invalidation code.",
+      "path": "skills/performance/caching-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/caching-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cdn-strategy",
+      "category": "performance",
+      "description": "Push work to the edge so requests never touch your origin, using cache headers, invalidation, and origin shielding. Use when origin load is high, global latency is uneven, or a CDN sits in front of your app but barely caches.",
+      "path": "skills/performance/cdn-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/cdn-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "compression-tradeoffs",
+      "category": "performance",
+      "description": "Choose a compression codec and level by weighing size reduction against CPU cost, and place compression where the bytes are actually scarce. Use when deciding whether and how to compress payloads, logs, or stored data, or when compression is burning CPU for little gain.",
+      "path": "skills/performance/compression-tradeoffs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/compression-tradeoffs/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "concurrency-tuning",
+      "category": "performance",
+      "description": "Size worker pools, queue depths, and batch widths against the real bottleneck so parallelism adds throughput instead of contention. Use when a parallel job stops scaling, saturates a resource, or spends more time coordinating than working.",
+      "path": "skills/performance/concurrency-tuning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/concurrency-tuning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "connection-pooling",
+      "category": "performance",
+      "description": "Size connection pools from throughput and latency math, then monitor for saturation and set timeout policy so a slow dependency fails fast instead of hanging. Use when a service exhausts database connections, requests queue for a connection, or pool size was picked by guess.",
+      "path": "skills/performance/connection-pooling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/connection-pooling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cpu-optimization",
+      "category": "performance",
+      "description": "Speed up a CPU-bound hot path by fixing its algorithm and memory access first, then applying micro-optimization only where the profiler still points. Use when a function dominates CPU time and you need it faster without changing what it computes.",
+      "path": "skills/performance/cpu-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/cpu-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "gc-tuning",
+      "category": "performance",
+      "description": "Cut garbage-collection pauses and overhead by lowering allocation rate, sizing the heap, and reading pause logs before touching a flag. Use when a managed-runtime service shows latency spikes, high CPU in GC, or out-of-memory errors under load.",
+      "path": "skills/performance/gc-tuning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/gc-tuning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "http-caching",
+      "category": "performance",
+      "description": "Use HTTP caching correctly with etags, max-age, and stale-while-revalidate so clients and proxies reuse responses without serving stale data. Use when responses lack cache headers, a bad deploy served stale content, or revalidation traffic is heavy.",
+      "path": "skills/performance/http-caching/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/http-caching/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "io-optimization",
+      "category": "performance",
+      "description": "Reduce input/output cost by cutting round trips, moving fewer bytes, and turning random access into sequential access. Use when a workload is IO-bound: disk, network, or syscall overhead dominates while the CPU sits idle.",
+      "path": "skills/performance/io-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/io-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "lazy-loading",
+      "category": "performance",
+      "description": "Defer expensive work until the moment it is actually needed, so startup stays fast and unused paths cost nothing. Use when initialization is slow, a page ships code it never runs, or a list renders far more rows than the screen shows.",
+      "path": "skills/performance/lazy-loading/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/lazy-loading/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "materialized-views",
+      "category": "performance",
+      "description": "Precompute expensive read queries into materialized views and pick a refresh strategy that fits a stated staleness budget. Use when an aggregate or join is read far more than the underlying data changes and recomputing it per request is too slow.",
+      "path": "skills/performance/materialized-views/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/materialized-views/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "memory-optimization",
+      "category": "performance",
+      "description": "Cut a program's memory footprint by fixing data layout, reusing allocations, and streaming input instead of buffering it whole. Use when a process is killed by the OOM killer, garbage collection dominates the profile, or heap growth tracks input size.",
+      "path": "skills/performance/memory-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/memory-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "n-plus-one-queries",
+      "category": "performance",
+      "description": "Find and eliminate N+1 database access where one query per row replaces one query for the set, using eager loading, batching, or a dataloader. Use when a list endpoint is slow, query counts scale with result size, or an ORM lazy-loads inside a loop.",
+      "path": "skills/performance/n-plus-one-queries/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/n-plus-one-queries/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pagination-performance",
+      "category": "performance",
+      "description": "Paginate large result sets so page cost stays constant by using keyset (cursor) pagination instead of OFFSET, with a stable, encoded cursor. Use when deep pages get slow, an infinite scroll drifts or duplicates rows, or OFFSET grows with page depth.",
+      "path": "skills/performance/pagination-performance/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/pagination-performance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "performance-budgets",
+      "category": "performance",
+      "description": "Set numeric performance budgets and enforce them in CI so regressions fail the build instead of reaching users. Use when performance keeps sliding release over release or a team wants to hold a latency or bundle target.",
+      "path": "skills/performance/performance-budgets/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/performance-budgets/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "performance-optimization",
+      "category": "performance",
+      "description": "Make code measurably faster by profiling first and fixing the actual bottleneck. Use when something is slow, uses too much memory, or needs to handle more load.",
+      "path": "skills/performance/performance-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/performance-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "serialization-performance",
+      "category": "performance",
+      "description": "Cut the CPU and bytes spent turning objects into wire or disk format by choosing the right format, reusing schemas and buffers, and avoiding copies. Use when serialization shows up in the profile, payloads are large, or encode/decode latency dominates a hot request path.",
+      "path": "skills/performance/serialization-performance/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/serialization-performance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "research-synthesis",
+      "category": "research-thinking",
+      "description": "Turn multiple sources into a defensible, source-attributed answer that separates fact from inference. Use when researching a question across documents, articles, or search results.",
+      "path": "skills/research-thinking/research-synthesis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/research-synthesis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "api-security",
+      "category": "security",
+      "description": "Secure an API by enforcing per-object authorization, per-caller quota, and schema-validated input on every endpoint. Use when building or reviewing an HTTP or GraphQL API that serves authenticated users, machine clients, or partner integrations.",
+      "path": "skills/security/api-security/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/api-security/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "audit-logging",
+      "category": "security",
+      "description": "Record security-relevant events in a tamper-evident, append-only log that answers who did what and when. Use when building or reviewing logging for authentication, authorization, privilege changes, or access to sensitive data.",
+      "path": "skills/security/audit-logging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/audit-logging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "authn-design",
+      "category": "security",
+      "description": "Design sign-in so credentials are hashed with a slow algorithm, guessing is rate limited, and sessions rotate on login to defeat fixation. Use when building or reviewing registration, login, or password-reset flows.",
+      "path": "skills/security/authn-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/authn-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "authz-design",
+      "category": "security",
+      "description": "Enforce authorization so access is denied by default and every request re-checks that the caller owns the specific resource, closing IDOR gaps. Use when building endpoints that read or modify data belonging to a particular user or tenant.",
+      "path": "skills/security/authz-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/authz-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "browser-storage-safety",
+      "category": "security",
+      "description": "Decide where a web app keeps tokens and state by reasoning about the XSS blast radius of each store, not by convenience. Use when choosing how to persist session tokens, auth state, or any value an attacker on your origin would want to read.",
+      "path": "skills/security/browser-storage-safety/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/browser-storage-safety/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "clickjacking-defense",
+      "category": "security",
+      "description": "Stop UI redress attacks by declaring who may frame your pages, using frame-ancestors as the primary control and X-Frame-Options as the fallback. Use when hardening any page that performs sensitive actions on a click, especially authenticated dashboards and confirmation flows.",
+      "path": "skills/security/clickjacking-defense/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/clickjacking-defense/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "command-injection-defense",
+      "category": "security",
+      "description": "Run external programs without ever building a shell string from untrusted input, using argument arrays that bypass the shell entirely. Use when a program shells out to another binary, especially with any value that came from a user, a file, or the network.",
+      "path": "skills/security/command-injection-defense/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/command-injection-defense/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "container-security",
+      "category": "security",
+      "description": "Harden container images and runtime specs with minimal bases, non-root users, read-only filesystems, and dropped capabilities. Use when writing image or Kubernetes security settings or reviewing a container for privilege risk.",
+      "path": "skills/security/container-security/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/container-security/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "crypto-usage",
+      "category": "security",
+      "description": "Use cryptography by calling vetted libraries with authenticated defaults and storing keys in a KMS, never by designing a scheme. Use when adding encryption, choosing a cipher or mode, or reviewing code that handles keys or ciphertext.",
+      "path": "skills/security/crypto-usage/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/crypto-usage/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "csrf-defense",
+      "category": "security",
+      "description": "Block cross-site request forgery with SameSite cookies, per-session anti-CSRF tokens, and strict HTTP method discipline so a forged cross-origin request cannot act as the user. Use when building state-changing endpoints authenticated by cookies.",
+      "path": "skills/security/csrf-defense/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/csrf-defense/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-encryption",
+      "category": "security",
+      "description": "Encrypt data at rest and in transit with vetted primitives and a managed key service that rotates on schedule. Use when handling sensitive data on disk or over the network, or when reviewing how a system stores and moves it.",
+      "path": "skills/security/data-encryption/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/data-encryption/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "dependency-auditing",
+      "category": "security",
+      "description": "Audit third-party packages by pinning resolved versions, scanning against advisory databases, and catching malicious lookalikes before install. Use when adding a dependency, wiring a vulnerability gate into CI, or reviewing what a project actually pulls in.",
+      "path": "skills/security/dependency-auditing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/dependency-auditing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "deserialization-safety",
+      "category": "security",
+      "description": "Treat any serialized bytes from outside the program as hostile, parsing them through schema-validated formats instead of native object reconstructors. Use when reading pickles, Java or PHP serialized objects, YAML, or any encoded structure that arrives from a user, a queue, or a cache.",
+      "path": "skills/security/deserialization-safety/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/deserialization-safety/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "file-upload-safety",
+      "category": "security",
+      "description": "Accept user file uploads without letting them become code execution, storage exhaustion, or a path into other users' data. Use when building an upload endpoint, an avatar or document feature, or any handler that writes client-supplied bytes to disk or object storage.",
+      "path": "skills/security/file-upload-safety/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/file-upload-safety/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "input-validation",
+      "category": "security",
+      "description": "Validate untrusted input at every trust boundary with allowlists, canonicalization, and hard limits so malformed data never reaches logic. Use when accepting data from requests, files, uploads, or third-party APIs.",
+      "path": "skills/security/input-validation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/input-validation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "jwt-handling",
+      "category": "security",
+      "description": "Use JSON Web Tokens safely by pinning the algorithm, keeping lifetimes short, and pairing them with a revocation path. Use when issuing or validating JWTs, designing a session scheme around them, or reviewing token-based auth.",
+      "path": "skills/security/jwt-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/jwt-handling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "least-privilege",
+      "category": "security",
+      "description": "Scope every credential to the minimum actions it uses, with per-workload identities and expiry so a leak has a small blast radius. Use when writing an IAM policy, provisioning a service account, or reviewing an access grant.",
+      "path": "skills/security/least-privilege/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/least-privilege/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mobile-app-security",
+      "category": "security",
+      "description": "Protect a mobile app by storing secrets in the platform keystore, pinning certificates only where rotation is controlled, and treating obfuscation as delay rather than defense. Use when building or reviewing an iOS or Android app that holds tokens, keys, or user data on device.",
+      "path": "skills/security/mobile-app-security/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/mobile-app-security/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "oauth-flows",
+      "category": "security",
+      "description": "Implement OAuth 2.0 and OpenID Connect flows that bind the request end to end with PKCE, state, and exact redirect allowlists. Use when adding \"sign in with\" a provider, integrating a third-party API on a user's behalf, or reviewing an OAuth client.",
+      "path": "skills/security/oauth-flows/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/oauth-flows/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "open-redirect-defense",
+      "category": "security",
+      "description": "Validate every redirect destination against a server-side allowlist so a user-controlled target cannot bounce victims onto an attacker's site. Use when an endpoint reads a next, return_to, or callback parameter and sends the browser there.",
+      "path": "skills/security/open-redirect-defense/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/open-redirect-defense/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "password-storage",
+      "category": "security",
+      "description": "Store passwords with a slow, salted, memory-hard hash and a plan to raise the cost over time. Use when building signup or login, migrating off a weak hash, or reviewing how a system persists user passwords.",
+      "path": "skills/security/password-storage/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/password-storage/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "path-traversal-defense",
+      "category": "security",
+      "description": "Stop user-supplied path components from escaping the directory you meant to confine them to. Use when a filename, path segment, or archive entry from outside the program is joined into a filesystem path for reading, writing, or serving.",
+      "path": "skills/security/path-traversal-defense/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/path-traversal-defense/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "penetration-test-prep",
+      "category": "security",
+      "description": "Prepare for a penetration test by fixing scope, rules, and access up front, then turn its findings into tracked, verified remediation. Use when commissioning an external pentest or acting on the report one delivered.",
+      "path": "skills/security/penetration-test-prep/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/penetration-test-prep/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "phishing-resistance",
+      "category": "security",
+      "description": "Design authentication whose credentials cannot be relayed to a look-alike site, using origin-bound passkeys and hardware keys over phishable codes. Use when choosing MFA factors, building a passkey flow, or reviewing account recovery.",
+      "path": "skills/security/phishing-resistance/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/phishing-resistance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pii-handling",
+      "category": "security",
+      "description": "Minimize, classify, mask, and expire personal data so any leak or legal request reaches as little of it as possible. Use when designing storage, logging, or analytics that touch names, contacts, identifiers, or other personal data.",
+      "path": "skills/security/pii-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/pii-handling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "rate-limiting",
+      "category": "security",
+      "description": "Limit requests by the cost they impose and the identity behind them, using token buckets, deliberate keys, and tiered responses to abuse. Use when protecting an API, a login flow, or any expensive endpoint from brute force, scraping, and accidental overload.",
+      "path": "skills/security/rate-limiting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/rate-limiting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "sast-integration",
+      "category": "security",
+      "description": "Wire a static analysis scanner into CI so it blocks real security bugs while staying under a defined noise budget. Use when adding a SAST tool to a pipeline or when an existing one is being ignored.",
+      "path": "skills/security/sast-integration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/sast-integration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "sbom-management",
+      "category": "security",
+      "description": "Produce signed software bills of materials from real artifacts and consume them to answer \"are we affected\" fast. Use when setting up build output, responding to a new advisory, or fielding a customer SBOM request.",
+      "path": "skills/security/sbom-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/sbom-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "secrets-management",
+      "category": "security",
+      "description": "Keep credentials out of source by loading them from a controlled store, scanning for leaks, and rotating on a schedule. Use when adding a secret to an app, cleaning one out of a repository, or setting up how a service reads credentials at runtime.",
+      "path": "skills/security/secrets-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/secrets-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "secrets-scanning",
+      "category": "security",
+      "description": "Scan commit history and CI for leaked credentials and rotate on every hit, because a pushed secret is already compromised. Use when hardening a repo against committed keys or responding to a suspected leak.",
+      "path": "skills/security/secrets-scanning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/secrets-scanning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "security-code-review",
+      "category": "security",
+      "description": "Read a diff for security by tracing attacker-controlled input to dangerous operations and checking every trust boundary it crosses. Use when reviewing code that handles input, queries, files, output rendering, or authorization.",
+      "path": "skills/security/security-code-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/security-code-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "security-headers",
+      "category": "security",
+      "description": "Set the HTTP response headers that constrain what a browser will execute, embed, and leak on behalf of your origin. Use when hardening a web app against cross-site scripting, clickjacking, or referrer leakage, or when a security scan flags missing headers.",
+      "path": "skills/security/security-headers/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/security-headers/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "security-incident-response",
+      "category": "security",
+      "description": "Run a security breach through containment, evidence preservation, and notification duties in the right order, under time pressure, without destroying the record you will need. Use when you suspect or confirm a compromise: leaked credentials, unauthorized access, malware, or exfiltrated data.",
+      "path": "skills/security/security-incident-response/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/security-incident-response/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "security-review",
+      "category": "security",
+      "description": "Review code for the vulnerabilities that actually get exploited, ranked by real risk with concrete attack scenarios. Use when reviewing changes that touch input handling, auth, secrets, files, queries, or network calls.",
+      "path": "skills/security/security-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/security-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "session-management",
+      "category": "security",
+      "description": "Handle sessions so identifiers rotate on privilege change, expire on inactivity, can be revoked server-side, and ride only on hardened cookies. Use when issuing, storing, or validating session tokens after a user signs in.",
+      "path": "skills/security/session-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/session-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "sql-injection-defense",
+      "category": "security",
+      "description": "Eliminate SQL injection by sending data as bound parameters instead of concatenated query text, and auditing every raw-SQL escape hatch. Use when writing or reviewing code that builds database queries from variables.",
+      "path": "skills/security/sql-injection-defense/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/sql-injection-defense/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "ssrf-defense",
+      "category": "security",
+      "description": "Prevent server-side request forgery by constraining where a user-influenced URL can make the server connect. Use when the server fetches a URL that came from a user: webhooks, link previews, image proxies, PDF renderers, or import-from-URL features.",
+      "path": "skills/security/ssrf-defense/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/ssrf-defense/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "supply-chain-defense",
+      "category": "security",
+      "description": "Harden the build pipeline by pinning what runs, generating provenance, and signing artifacts so tampering shows. Use when securing a CI/CD workflow, setting up artifact signing, or reviewing how releases are built and shipped.",
+      "path": "skills/security/supply-chain-defense/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/supply-chain-defense/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "threat-modeling",
+      "category": "security",
+      "description": "Map assets, entry points, and STRIDE threats before writing code so defenses land in the design instead of a later patch. Use when starting a feature that handles auth, money, personal data, or external input.",
+      "path": "skills/security/threat-modeling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/threat-modeling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tls-configuration",
+      "category": "security",
+      "description": "Configure transport layer security with modern protocol versions, automated certificate renewal, and strict transport enforcement. Use when standing up HTTPS on a server, terminating TLS at a proxy, or hardening an endpoint that already serves traffic.",
+      "path": "skills/security/tls-configuration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/tls-configuration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "vulnerability-triage",
+      "category": "security",
+      "description": "Score incoming vulnerability reports the same way every time, tie each score to a fix deadline, and run disclosure on a predictable clock. Use when a vulnerability report arrives or when standing up a process to handle them.",
+      "path": "skills/security/vulnerability-triage/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/vulnerability-triage/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "xss-defense",
+      "category": "security",
+      "description": "Prevent cross-site scripting by encoding output for its exact sink, keeping template autoescaping on, and backing it with a strict Content Security Policy. Use when rendering user-controlled data into HTML, attributes, JavaScript, or URLs.",
+      "path": "skills/security/xss-defense/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/xss-defense/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "zero-trust-basics",
+      "category": "security",
+      "description": "Apply zero trust by authenticating and authorizing every request on its own merits and issuing only short-lived, narrowly scoped credentials. Use when designing service-to-service access, internal tooling, or any system that still trusts requests because of where they came from.",
+      "path": "skills/security/zero-trust-basics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/zero-trust-basics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "api-testing",
+      "category": "testing",
+      "description": "Test an HTTP API at its boundary so status codes, response schemas, error bodies, and auth paths all hold under real requests. Use when adding or reviewing tests for a service that other clients call over HTTP.",
+      "path": "skills/testing/api-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/api-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "approval-testing",
+      "category": "testing",
+      "description": "Assert hard-to-specify output by reviewing a human-readable snapshot once, approving it, then failing on any later diff. Use when the correct result is easy to recognize but tedious to write as explicit assertions.",
+      "path": "skills/testing/approval-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/approval-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "assertion-libraries",
+      "category": "testing",
+      "description": "Pick an assertion style and write checks that fail with a message you can diagnose without a debugger. Use when test failures read as \"expected true, got false\" and you cannot tell what actually broke.",
+      "path": "skills/testing/assertion-libraries/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/assertion-libraries/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "bdd-scenarios",
+      "category": "testing",
+      "description": "Write given-when-then scenarios in domain language so stakeholders can read and confirm the behavior each test protects. Use when drafting acceptance criteria or Gherkin features for a user-facing rule.",
+      "path": "skills/testing/bdd-scenarios/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/bdd-scenarios/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "browser-matrix",
+      "category": "testing",
+      "description": "Choose which browsers, versions, and devices to test from real usage data instead of habit or a vendor's full grid. Use when cross-browser testing time or budget is finite and the matrix needs to reflect who actually visits.",
+      "path": "skills/testing/browser-matrix/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/browser-matrix/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "chaos-testing",
+      "category": "testing",
+      "description": "Inject failures like killed instances and network latency on purpose to verify a system degrades gracefully instead of collapsing. Use when validating the resilience of a distributed system that claims to tolerate faults.",
+      "path": "skills/testing/chaos-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/chaos-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "concurrency-testing",
+      "category": "testing",
+      "description": "Force the thread interleavings that expose races by using barriers, stress loops, and linearizability checks instead of hoping the scheduler hits them. Use when testing locks, shared state, or lock-free code where a bug appears once in a thousand runs.",
+      "path": "skills/testing/concurrency-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/concurrency-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "contract-testing",
+      "category": "testing",
+      "description": "Pin the request and response shape at a service boundary with a consumer-driven contract that both sides verify in CI. Use when two services deploy independently and an unannounced payload change would break the caller.",
+      "path": "skills/testing/contract-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/contract-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "coverage-strategy",
+      "category": "testing",
+      "description": "Read coverage as a map of untested risk to guide where tests go next, rather than enforcing a percentage target. Use when deciding what to test next or when a team is tempted to mandate a coverage number.",
+      "path": "skills/testing/coverage-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/coverage-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "database-testing",
+      "category": "testing",
+      "description": "Exercise data-access code, migrations, and transactions against the real database engine so constraints, rollbacks, and schema changes are proven rather than assumed. Use when tests for queries or migrations run on SQLite while production runs Postgres.",
+      "path": "skills/testing/database-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/database-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "e2e-testing",
+      "category": "testing",
+      "description": "Write end-to-end tests that earn their cost by covering complete user journeys against stable selectors. Use when protecting a critical path like signup or checkout across the full stack.",
+      "path": "skills/testing/e2e-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/e2e-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "exploratory-testing",
+      "category": "testing",
+      "description": "Run structured unscripted testing with charters, tours, and timeboxed sessions to find bugs scripted tests never imagined. Use when probing a new or risky feature for problems no one thought to write a test for.",
+      "path": "skills/testing/exploratory-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/exploratory-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "fuzz-testing",
+      "category": "testing",
+      "description": "Feed a parser or protocol handler mutated inputs from a coverage-guided fuzzer, then triage crashes to unique root causes. Use when code parses untrusted or complex input and hand-written cases cannot cover the input space.",
+      "path": "skills/testing/fuzz-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/fuzz-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "golden-master",
+      "category": "testing",
+      "description": "Capture the current output of untested legacy code as a recorded baseline so a refactor can prove it changed nothing. Use when about to restructure code whose behavior you must preserve but cannot yet specify.",
+      "path": "skills/testing/golden-master/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/golden-master/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "integration-testing",
+      "category": "testing",
+      "description": "Test the seams between modules with real dependencies where they are cheap and containerized ones where they are not. Use when verifying that components wired together honor the contracts unit tests assume in isolation.",
+      "path": "skills/testing/integration-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/integration-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "load-testing",
+      "category": "testing",
+      "description": "Simulate realistic multi-user load with ramp profiles, think time, and pacing, then find where the system saturates. Use when validating capacity or headroom for a service before a launch or expected traffic spike.",
+      "path": "skills/testing/load-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/load-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mocking-time",
+      "category": "testing",
+      "description": "Control the clock in tests through an injectable time source so \"now\" is frozen and timezone behavior is explicit. Use when code reads the wall clock and a flaky or time-dependent test needs deterministic results.",
+      "path": "skills/testing/mocking-time/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/mocking-time/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mutation-testing",
+      "category": "testing",
+      "description": "Measure how strong a test suite is by mutating the code and checking the tests notice, exposing assertions that never actually fail. Use when coverage is high but you doubt the tests would catch a real regression.",
+      "path": "skills/testing/mutation-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/mutation-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pact-verification",
+      "category": "testing",
+      "description": "Verify a provider against its consumers' recorded pacts in CI so a breaking API change fails before it ships. Use when independently deployed services share an HTTP contract and you want to catch breaks without end-to-end staging.",
+      "path": "skills/testing/pact-verification/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/pact-verification/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "performance-testing",
+      "category": "testing",
+      "description": "Benchmark code so the numbers mean something: warm up, fix inputs, report variance, and gate regressions in CI. Use when measuring the speed of a function or comparing two implementations.",
+      "path": "skills/testing/performance-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/performance-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "property-based-testing",
+      "category": "testing",
+      "description": "Generate many inputs to test invariants that must hold across a whole domain, and let shrinking reduce failures to a minimal case. Use when a rule should hold for all inputs, not just the few examples you would think to write.",
+      "path": "skills/testing/property-based-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/property-based-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "regression-tests",
+      "category": "testing",
+      "description": "Pin every fixed bug with a test that fails before the fix and passes after, kept beside the code it guards. Use when closing a bug so the same defect cannot return silently through a later refactor or merge.",
+      "path": "skills/testing/regression-tests/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/regression-tests/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "seed-data-management",
+      "category": "testing",
+      "description": "Version and share seed datasets so they stay small, realistic, and reproducible across a team. Use when tests or local environments depend on fixture data that is drifting, ballooning, or diverging between developers.",
+      "path": "skills/testing/seed-data-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/seed-data-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "smoke-tests",
+      "category": "testing",
+      "description": "Define the short, stable suite of critical-path checks that runs after every deploy and blocks promotion the instant it fails. Use when a deploy has no fast gate and breakage is found by users instead of the pipeline.",
+      "path": "skills/testing/smoke-tests/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/smoke-tests/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "snapshot-testing",
+      "category": "testing",
+      "description": "Use snapshot tests for serialized output only, with disciplined review of every diff and hard limits on snapshot size. Use when pinning stable rendered output like markup or an API response shape.",
+      "path": "skills/testing/snapshot-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/snapshot-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tdd-rhythm",
+      "category": "testing",
+      "description": "Run the red-green-refactor loop honestly with the smallest failing test first, refusing test-after backfill dressed up as TDD. Use when building code with a clear behavioral spec and you want the tests to drive the design.",
+      "path": "skills/testing/tdd-rhythm/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/tdd-rhythm/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-data-builders",
+      "category": "testing",
+      "description": "Construct test objects through builders and factories with valid defaults so each test states only the fields it cares about. Use when shared fixture files couple unrelated tests and drift as the schema grows.",
+      "path": "skills/testing/test-data-builders/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-data-builders/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-doubles",
+      "category": "testing",
+      "description": "Choose stubs, fakes, and mocks deliberately and default to verifying state over interaction so tests survive refactors. Use when a test needs to stand in for a slow, external, or nondeterministic dependency.",
+      "path": "skills/testing/test-doubles/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-doubles/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-environment-parity",
+      "category": "testing",
+      "description": "Close the gaps between test and production by matching versions, data shape, and configuration paths so a passing suite actually predicts prod behavior. Use when tests are green but production breaks in ways staging never showed.",
+      "path": "skills/testing/test-environment-parity/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-environment-parity/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-flakiness-budget",
+      "category": "testing",
+      "description": "Cap flaky tests with a measured budget, quarantine them off the merge gate, and burn them down under named owners and deadlines. Use when re-runs are how the team gets green and no one owns the flakes.",
+      "path": "skills/testing/test-flakiness-budget/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-flakiness-budget/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-isolation",
+      "category": "testing",
+      "description": "Make tests order-independent by resetting state, banning shared globals, and giving each worker its own resources. Use when tests pass in one order but fail when reordered, sharded, or run in parallel.",
+      "path": "skills/testing/test-isolation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-isolation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-maintenance",
+      "category": "testing",
+      "description": "Refactor test code with the same care as production: extract helpers, remove duplication, and delete tests that no longer earn their place. Use when the test suite has become slow to change, repetitive, or full of tests nobody trusts.",
+      "path": "skills/testing/test-maintenance/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-maintenance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-naming",
+      "category": "testing",
+      "description": "Name tests as full behavior sentences so the suite reads as a specification of what the system guarantees. Use when naming a new test or renaming vague tests like test1 or testWorks.",
+      "path": "skills/testing/test-naming/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-naming/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-pyramid-audit",
+      "category": "testing",
+      "description": "Rebalance a top-heavy test suite toward fast unit tests without dropping the coverage the slow tests provide. Use when end-to-end tests dominate the suite and CI is slow, flaky, or expensive to run.",
+      "path": "skills/testing/test-pyramid-audit/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-pyramid-audit/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-review",
+      "category": "testing",
+      "description": "Review tests with the same rigor as production code, checking that assertions truly constrain behavior, that error and edge cases exist, and that no safety was quietly deleted. Use when reviewing a pull request that adds, changes, or removes tests.",
+      "path": "skills/testing/test-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-speed",
+      "category": "testing",
+      "description": "Keep the suite fast enough to run on every change by shaping the pyramid, cutting IO from the fast tier, and sharding. Use when the suite is slow enough that developers skip it or batch changes to avoid the wait.",
+      "path": "skills/testing/test-speed/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-speed/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "test-tagging",
+      "category": "testing",
+      "description": "Tag tests by speed and scope so CI can run the right slice at the right time. Use when the suite is one undifferentiated blob and you need fast feedback on pull requests without dropping slow coverage.",
+      "path": "skills/testing/test-tagging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-tagging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "testing-in-production",
+      "category": "testing",
+      "description": "Verify changes against real traffic without risking users, using canaries, shadow traffic, and feature gates with automatic rollback. Use when a behavior cannot be trusted from staging alone and needs production load or data to prove out.",
+      "path": "skills/testing/testing-in-production/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/testing-in-production/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "testing-strategy",
+      "category": "testing",
       "description": "Decide what to test, at which level, and what to skip, so tests catch real regressions without freezing the design. Use when writing tests or planning coverage for a change.",
-      "path": "skills/testing-strategy/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing-strategy/SKILL.md"
+      "path": "skills/testing/testing-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/testing-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "unit-test-design",
+      "category": "testing",
+      "description": "Write unit tests that document behavior through explicit arrange-act-assert phases and a single assertion of intent. Use when writing or repairing a unit test that has grown hard to read.",
+      "path": "skills/testing/unit-test-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/unit-test-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "visual-regression-testing",
+      "category": "testing",
+      "description": "Catch unintended UI changes by diffing rendered screenshots against approved baselines with tuned thresholds and flake control. Use when protecting a component or page from visual drift across code changes.",
+      "path": "skills/testing/visual-regression-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/visual-regression-testing/SKILL.md"
     },
     {
       "kind": "prompt",
       "name": "api-docs-from-code",
+      "category": "prompts",
       "description": "Generate accurate reference documentation for an API from its code, marking every inference.",
       "variables": [
         "{code}: the endpoint handlers, route definitions, or public functions",
@@ -221,6 +2351,7 @@
     {
       "kind": "prompt",
       "name": "brainstorm-divergent",
+      "category": "prompts",
       "description": "Generate genuinely different ideas across the solution space, then converge on the strongest few.",
       "variables": [
         "{problem}: the problem or goal to ideate on",
@@ -233,6 +2364,7 @@
     {
       "kind": "prompt",
       "name": "bug-report-triage",
+      "category": "prompts",
       "description": "Turn a vague bug report into a structured, actionable ticket with severity and next steps.",
       "variables": [
         "{report}: the raw bug report, however messy",
@@ -245,6 +2377,7 @@
     {
       "kind": "prompt",
       "name": "changelog-from-diff",
+      "category": "prompts",
       "description": "Turn a diff or commit list into user-facing changelog entries that describe outcomes, not code.",
       "variables": [
         "{changes}: the diff, commit list, or PR descriptions",
@@ -257,6 +2390,7 @@
     {
       "kind": "prompt",
       "name": "compare-options",
+      "category": "prompts",
       "description": "Compare options against criteria that matter and end with a defensible recommendation.",
       "variables": [
         "{options}: the options being weighed",
@@ -269,6 +2403,7 @@
     {
       "kind": "prompt",
       "name": "data-to-insights",
+      "category": "prompts",
       "description": "Read a table or dataset and report what it actually shows - findings, not decoration, with honest caveats.",
       "variables": [
         "{data}: the table, CSV excerpt, or numbers",
@@ -281,6 +2416,7 @@
     {
       "kind": "prompt",
       "name": "email-professional",
+      "category": "prompts",
       "description": "Draft a professional email that gets to the point, lands the right tone, and makes the next step obvious.",
       "variables": [
         "{purpose}: what the email must achieve",
@@ -295,6 +2431,7 @@
     {
       "kind": "prompt",
       "name": "explain-code",
+      "category": "prompts",
       "description": "Explain what a piece of code does, why it is shaped that way, and where it can bite.",
       "variables": [
         "{code}: the code to explain",
@@ -307,6 +2444,7 @@
     {
       "kind": "prompt",
       "name": "explain-like-im-five",
+      "category": "prompts",
       "description": "Explain any concept in genuinely simple terms with one honest analogy, without becoming wrong.",
       "variables": [
         "{concept}: the thing to explain",
@@ -319,6 +2457,7 @@
     {
       "kind": "prompt",
       "name": "extract-action-items",
+      "category": "prompts",
       "description": "Pull every commitment, task, and deadline out of meeting notes or a thread, with owners.",
       "variables": [
         "{text}: the notes, transcript, or thread to mine"
@@ -330,6 +2469,7 @@
     {
       "kind": "prompt",
       "name": "incident-status-update",
+      "category": "prompts",
       "description": "Write a calm, honest status update during an ongoing incident, sized for its audience.",
       "variables": [
         "{situation}: what is known right now - impact, timeline, actions so far",
@@ -342,6 +2482,7 @@
     {
       "kind": "prompt",
       "name": "interview-questions",
+      "category": "prompts",
       "description": "Generate interview questions that reveal real capability for a specific role, with what good answers sound like.",
       "variables": [
         "{role}: the position and seniority",
@@ -354,6 +2495,7 @@
     {
       "kind": "prompt",
       "name": "learning-plan",
+      "category": "prompts",
       "description": "Build a realistic, practice-first plan to learn any skill, fitted to available time and a concrete goal.",
       "variables": [
         "{skill}: what to learn",
@@ -368,6 +2510,7 @@
     {
       "kind": "prompt",
       "name": "meeting-minutes",
+      "category": "prompts",
       "description": "Turn a transcript or rough notes into minutes people actually consult - decisions, actions, and open questions first.",
       "variables": [
         "{notes}: the transcript or raw notes",
@@ -380,6 +2523,7 @@
     {
       "kind": "prompt",
       "name": "rewrite-for-clarity",
+      "category": "prompts",
       "description": "Rewrite any text to be clearer and shorter without changing its meaning or losing content.",
       "variables": [
         "{text}: the text to rewrite",
@@ -392,6 +2536,7 @@
     {
       "kind": "prompt",
       "name": "risk-analysis",
+      "category": "prompts",
       "description": "Surface what can go wrong with a plan, ranked by expected damage, with mitigations that change the odds.",
       "variables": [
         "{plan}: the plan, decision, or design to stress-test",
@@ -404,6 +2549,7 @@
     {
       "kind": "prompt",
       "name": "socratic-tutor",
+      "category": "prompts",
       "description": "Teach a topic by asking questions that lead the learner to build the understanding themselves.",
       "variables": [
         "{topic}: what the learner wants to understand",
@@ -416,6 +2562,7 @@
     {
       "kind": "prompt",
       "name": "sql-from-question",
+      "category": "prompts",
       "description": "Translate a plain-language question into correct SQL against a given schema, stating every assumption.",
       "variables": [
         "{question}: what the person wants to know",
@@ -429,6 +2576,7 @@
     {
       "kind": "prompt",
       "name": "standup-summary",
+      "category": "prompts",
       "description": "Turn work notes, commits, or a task list into a crisp standup update that surfaces blockers first.",
       "variables": [
         "{notes}: raw material - commit messages, ticket updates, scratch notes"
@@ -440,6 +2588,7 @@
     {
       "kind": "prompt",
       "name": "summarize-document",
+      "category": "prompts",
       "description": "Summarize any document into a faithful, layered brief that never invents content.",
       "variables": [
         "{document}: the full text to summarize",
@@ -453,6 +2602,7 @@
     {
       "kind": "prompt",
       "name": "user-story-breakdown",
+      "category": "prompts",
       "description": "Break a feature idea into small, testable user stories with acceptance criteria and honest unknowns.",
       "variables": [
         "{feature}: the feature or goal to break down",
@@ -465,6 +2615,7 @@
     {
       "kind": "prompt",
       "name": "write-tests",
+      "category": "prompts",
       "description": "Generate meaningful tests for given code, edge cases first, in the project's own style.",
       "variables": [
         "{code}: the code under test",

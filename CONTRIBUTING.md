@@ -5,7 +5,10 @@ of their agent today. The rules below serve that and nothing else.
 
 ## Add a skill
 
-1. One folder under `skills/`, kebab-case, with one `SKILL.md` inside.
+1. One folder under `skills/<category>/`, kebab-case, with one `SKILL.md`
+   inside. Pick the existing category that fits; propose a new one only when
+   none does. Run `node scripts/build-index.mjs` after: it regenerates the
+   index, catalog, README table, and marketplace, and fails on any mistake.
 2. Frontmatter carries `name` (matching the folder) and a one-sentence
    `description` written for the moment an agent decides whether to load it.
    Say when to use it, not what it contains.

@@ -1,11 +1,13 @@
-// Build index.json and llms.txt from the skills/ and prompts/ folders, so the
-// machine-readable catalog can never drift from the actual content. Run from
-// the repository root after adding or editing entries:
+// Build every generated catalog artifact from the skills/ and prompts/
+// folders, so nothing machine-readable can drift from the actual content.
+// Run from the repository root after adding or editing entries:
 //
 //   node scripts/build-index.mjs
 //
-// Reads only frontmatter (name, description, variables); fails loudly on a
-// malformed entry rather than emitting a partial catalog.
+// Produces: index.json (+ docs/ copy), llms.txt, CATALOG.md, the README
+// category table, and .claude-plugin/marketplace.json. Reads only
+// frontmatter; fails loudly on a malformed entry rather than emitting a
+// partial catalog.
 
 import { readdirSync, readFileSync, writeFileSync, statSync } from "node:fs";
 import { join } from "node:path";
@@ -36,19 +38,26 @@ function frontmatter(path) {
 }
 
 const entries = [];
+const seenNames = new Set();
 
-for (const dir of readdirSync("skills").sort()) {
-  const path = join("skills", dir, "SKILL.md");
-  statSync(path); // throws if a skill folder lacks its SKILL.md
-  const fm = frontmatter(path);
-  if (fm.name !== dir) throw new Error(`Name mismatch: folder ${dir} vs name ${fm.name}`);
-  entries.push({
-    kind: "skill",
-    name: fm.name,
-    description: fm.description,
-    path: `skills/${dir}/SKILL.md`,
-    raw_url: `${RAW_BASE}/skills/${dir}/SKILL.md`,
-  });
+for (const category of readdirSync("skills").sort()) {
+  if (!statSync(join("skills", category)).isDirectory()) continue;
+  for (const dir of readdirSync(join("skills", category)).sort()) {
+    const path = join("skills", category, dir, "SKILL.md");
+    statSync(path); // throws if a skill folder lacks its SKILL.md
+    const fm = frontmatter(path);
+    if (fm.name !== dir) throw new Error(`Name mismatch: folder ${dir} vs name ${fm.name}`);
+    if (seenNames.has(fm.name)) throw new Error(`Duplicate skill name: ${fm.name}`);
+    seenNames.add(fm.name);
+    entries.push({
+      kind: "skill",
+      name: fm.name,
+      category,
+      description: fm.description,
+      path: `skills/${category}/${dir}/SKILL.md`,
+      raw_url: `${RAW_BASE}/skills/${category}/${dir}/SKILL.md`,
+    });
+  }
 }
 
 for (const file of readdirSync("prompts").sort()) {
@@ -61,6 +70,7 @@ for (const file of readdirSync("prompts").sort()) {
   entries.push({
     kind: "prompt",
     name: fm.name,
+    category: "prompts",
     description: fm.description,
     variables: Array.isArray(fm.variables) ? fm.variables : [],
     settings: fm.settings ?? "",
@@ -69,6 +79,10 @@ for (const file of readdirSync("prompts").sort()) {
   });
 }
 
+const skills = entries.filter((e) => e.kind === "skill");
+const prompts = entries.filter((e) => e.kind === "prompt");
+const categories = [...new Set(skills.map((e) => e.category))];
+
 const index = {
   name: "AI Skills",
   description: "Plug-and-play skills and prompts for every AI coding agent.",
@@ -76,7 +90,8 @@ const index = {
   repository: "https://github.com/Amey-Thakur/AI-SKILLS",
   ecosystem_index: `${RAW_BASE}/ecosystem.json`,
   license: "MIT",
-  count: { skills: entries.filter((e) => e.kind === "skill").length, prompts: entries.filter((e) => e.kind === "prompt").length },
+  count: { skills: skills.length, prompts: prompts.length, categories: categories.length },
+  categories,
   entries,
 };
 
@@ -86,6 +101,7 @@ writeFileSync("index.json", JSON.stringify(index, null, 2) + "\n");
 writeFileSync(join("docs", "index.json"), JSON.stringify(index, null, 2) + "\n");
 writeFileSync(join("docs", "ecosystem.json"), readFileSync("ecosystem.json"));
 
+/* llms.txt: grouped by category so an agent can skim to the right section. */
 const llms = [
   "# AI Skills",
   "",
@@ -96,40 +112,98 @@ const llms = [
   "> skill collection on GitHub (8,000+ skills reachable):",
   `> ${RAW_BASE}/ecosystem.json`,
   "",
-  "## Skills",
-  "",
-  ...entries.filter((e) => e.kind === "skill").map((e) => `- [${e.name}](${e.raw_url}): ${e.description}`),
-  "",
-  "## Prompts",
-  "",
-  ...entries.filter((e) => e.kind === "prompt").map((e) => `- [${e.name}](${e.raw_url}): ${e.description}`),
-  "",
-].join("\n");
-
-writeFileSync("llms.txt", llms);
-
-/* Regenerate the README's library table between its markers, so the list of
-   entries can never drift from the folders. */
-const skills = entries.filter((e) => e.kind === "skill");
-const prompts = entries.filter((e) => e.kind === "prompt");
-const rows = Math.max(skills.length, prompts.length);
-const tableLines = [
-  `| Skills: how to work (${skills.length}) | Prompts: ready to run (${prompts.length}) |`,
-  "|---|---|",
 ];
-for (let i = 0; i < rows; i++) {
-  const s = skills[i] ? `[${skills[i].name}](${skills[i].path})` : "";
-  const p = prompts[i] ? `[${prompts[i].name}](${prompts[i].path})` : "";
-  tableLines.push(`| ${s} | ${p} |`);
+for (const cat of categories) {
+  llms.push(`## Skills: ${cat}`, "");
+  for (const e of skills.filter((s) => s.category === cat)) {
+    llms.push(`- [${e.name}](${e.raw_url}): ${e.description}`);
+  }
+  llms.push("");
 }
-const readme = readFileSync("README.md", "utf8");
-const updated = readme.replace(
-  /<!-- library:start -->[\s\S]*<!-- library:end -->/,
-  `<!-- library:start -->\n${tableLines.join("\n")}\n<!-- library:end -->`,
+llms.push("## Prompts", "");
+for (const e of prompts) llms.push(`- [${e.name}](${e.raw_url}): ${e.description}`);
+llms.push("");
+writeFileSync("llms.txt", llms.join("\n"));
+
+/* CATALOG.md: the complete human-browsable listing, grouped by category. */
+const catalog = [
+  "# Catalog",
+  "",
+  `Every entry in the library: ${skills.length} skills in ${categories.length}`,
+  `categories, plus ${prompts.length} prompts. Generated by`,
+  "`scripts/build-index.mjs`; edit the entries, not this file.",
+  "",
+];
+for (const cat of categories) {
+  const list = skills.filter((s) => s.category === cat);
+  catalog.push(`## ${cat} (${list.length})`, "");
+  for (const e of list) catalog.push(`- [**${e.name}**](${e.path}): ${e.description}`);
+  catalog.push("");
+}
+catalog.push(`## prompts (${prompts.length})`, "");
+for (const e of prompts) catalog.push(`- [**${e.name}**](${e.path}): ${e.description}`);
+catalog.push("");
+writeFileSync("CATALOG.md", catalog.join("\n"));
+
+/* README table between markers: one row per category, linking into the
+   catalog, so the README stays readable at any library size. */
+const anchor = (cat, n) => `${cat}-${n}`.toLowerCase().replace(/[^a-z0-9-]+/g, "-");
+const tableLines = [
+  "| Category | Skills | For example |",
+  "|---|---|---|",
+];
+for (const cat of categories) {
+  const list = skills.filter((s) => s.category === cat);
+  const sample = list.slice(0, 3).map((e) => e.name).join(", ");
+  tableLines.push(`| [${cat}](CATALOG.md#${anchor(cat, list.length)}) | ${list.length} | ${sample} |`);
+}
+tableLines.push(
+  `| [prompts](CATALOG.md#${anchor("prompts", prompts.length)}) | ${prompts.length} | ${prompts
+    .slice(0, 3)
+    .map((e) => e.name)
+    .join(", ")} |`,
 );
-if (updated === readme && !readme.includes("<!-- library:start -->")) {
+const readme = readFileSync("README.md", "utf8");
+if (!readme.includes("<!-- library:start -->")) {
   throw new Error("README is missing the library markers");
 }
-writeFileSync("README.md", updated);
+writeFileSync(
+  "README.md",
+  readme.replace(
+    /<!-- library:start -->[\s\S]*<!-- library:end -->/,
+    `<!-- library:start -->\n${tableLines.join("\n")}\n<!-- library:end -->`,
+  ),
+);
 
-console.log(`index.json + llms.txt + README table: ${index.count.skills} skills, ${index.count.prompts} prompts`);
+/* Claude Code marketplace: one plugin per category, generated so the listing
+   can never drift from the folders. */
+const marketplace = {
+  name: "ai-skills",
+  owner: { name: "Amey Thakur", email: "ameythakur20@gmail.com" },
+  metadata: {
+    description: "Plug-and-play skills and prompts for every AI coding agent",
+    version: "2.0.0",
+  },
+  plugins: categories.map((cat) => {
+    const list = skills.filter((s) => s.category === cat);
+    return {
+      name: `${cat}-skills`,
+      description: `${list.length} working methods for ${cat.replace(/-/g, " ")}: ${list
+        .slice(0, 4)
+        .map((e) => e.name)
+        .join(", ")}, and more`,
+      source: "./",
+      strict: false,
+      skills: list.map((e) => `./skills/${cat}/${e.name}`),
+    };
+  }),
+};
+writeFileSync(
+  join(".claude-plugin", "marketplace.json"),
+  JSON.stringify(marketplace, null, 2) + "\n",
+);
+
+console.log(
+  `index.json + llms.txt + CATALOG.md + README table + marketplace.json: ` +
+    `${skills.length} skills in ${categories.length} categories, ${prompts.length} prompts`,
+);
