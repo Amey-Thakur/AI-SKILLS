@@ -1,52 +1,54 @@
 ---
 name: fuzz-testing
-description: Feed a parser or protocol handler mutated inputs from a coverage-guided fuzzer, then triage crashes to unique root causes. Use when code parses untrusted or complex input and hand-written cases cannot cover the input space.
+description: Fuzz a parser or protocol handler with a coverage-guided fuzzer, seed the corpus with real inputs, and triage crashes to unique root causes. Use when code consumes untrusted or complex bytes and hand-written cases cannot reach the states that break it.
 ---
 
 # Fuzz testing
 
-A parser trusts its input more than it should. The cases you wrote cover the
-shapes you imagined, and the crash is always in the byte sequence you did not:
-the truncated header, the length field that lies, the structure nested ten
-levels deep. A coverage-guided fuzzer mutates inputs and follows the branches
-they open, reaching states no hand-written test would ever construct.
+A parser trusts its input more than it should. Your cases cover the shapes you
+imagined; the crash lives in the ones you did not: the length prefix that lies,
+the header truncated mid-field, the structure nested past every buffer. A
+coverage-guided fuzzer mutates bytes and follows the branches they open,
+reaching states no hand-written test would ever assemble. The work is seeding a
+good corpus and turning crashes into fixed bugs.
 
 ## Method
 
-1. **Write a harness that maps a byte buffer to one entry point.** The target
-   takes raw bytes and feeds them straight to the parser: `LLVMFuzzerTestOneInput`,
-   Go's `f.Fuzz(func(t, b []byte))`, or Atheris's `TestOneInput`. Keep it
-   deterministic and global-state-free so any crash reproduces from input alone.
-2. **Build with sanitizers so silent corruption becomes a crash.** Compile with
-   `-fsanitize=address,undefined`; without AddressSanitizer a heap overflow can
-   pass unnoticed. In memory-safe languages, assert invariants and round-trips
-   so logic faults surface instead of returning quietly wrong output.
-3. **Seed the corpus with real, valid inputs.** Drop genuine files or packets
-   into the corpus directory. The fuzzer mutates from these, reaching deep code
-   in minutes instead of days, and a `-dict=` of keywords and magic bytes helps
-   it past format gates it would never guess.
-4. **Add a structure-aware or round-trip oracle.** Assert that
-   `parse(serialize(parse(x)))` is stable, or derive `Arbitrary` or a grammar so
-   mutations stay near-valid and exercise the semantics rather than tripping the
-   length check at the top of the function.
-5. **Triage each crash to a unique root cause.** One bug produces many crashing
-   inputs. Minimize with `-minimize_crash`, then group by the top sanitizer
-   frame or a stack hash. Fix per distinct defect, not per crashing file.
+1. **Write a harness that maps a byte buffer to one entry point.** Expose a
+   single target that feeds raw bytes straight to the parser: `fuzz_target!`
+   for cargo-fuzz, `f.Fuzz(func(t, b []byte))` in Go, or `TestOneInput` under
+   Atheris. Keep it deterministic and free of global state so any crash
+   reproduces from the input alone.
+2. **Build with sanitizers so silent corruption becomes a crash.** Compile
+   with `-fsanitize=address,undefined`; without AddressSanitizer a heap
+   overflow can pass unnoticed and return quietly wrong output the fuzzer never
+   flags.
+3. **Seed the corpus with real, valid samples.** Drop a genuine PNG, a captured
+   protocol frame, or a known-good document into the corpus directory. The
+   mutator needs valid structure to work from, and a `-dict=` of magic bytes
+   carries it past format gates it would never guess.
+4. **Add a round-trip or grammar oracle where mutation stalls.** Assert that
+   `parse(serialize(parse(x)))` is stable, or generate through a grammar or
+   protobuf mutator, so inputs stay near-valid and exercise deep semantics
+   instead of tripping the checksum at the top.
+5. **Triage each crash to one root cause.** A single bug spawns many crashing
+   inputs. Minimize with `-minimize_crash` or `cargo fuzz tmin`, then group by
+   the top sanitizer frame, and fix per distinct defect rather than per file.
 6. **Commit the minimized reproducer as a regression seed.** Save the reduced
-   bytes into the corpus and a unit test so they run on every build. Run the
-   corpus as a fast non-mutating pass in CI, and reserve long mutation runs for
-   nightly or OSS-Fuzz.
+   bytes into the corpus and a unit test so the fixed crash runs on every
+   build. Keep long mutation campaigns in a nightly or OSS-Fuzz stage, not the
+   per-commit suite.
 
 ## Checks
 
-- Does a fresh crash reproduce from the saved input alone, with no fuzzer running?
-- Is the corpus minimized so each entry adds coverage, not a duplicate path?
-- Are sanitizers on in the fuzz build, so an out-of-bounds read fails instead
-  of returning garbage?
+- Does a fresh crash reproduce from the saved input with no fuzzer running?
+- Do the corpus seeds parse cleanly, giving the mutator real structure to work?
+- Are sanitizers on in the fuzz build, so an out-of-bounds read fails loudly?
 
 ## Boundaries
 
-Fuzzing targets code that parses untrusted or complex input: decoders,
-protocol handlers, deserializers. It is wasteful on business logic with a
-small typed input space, where property-based-testing fits better. Long
-campaigns belong in a nightly or OSS-Fuzz stage, not the per-commit suite.
+Fuzzing finds crashes, hangs, and memory errors, not logic bugs where the
+process survives but the answer is wrong; pair it with property-based-testing
+for those. It suits code that eats untrusted or complex input: decoders,
+deserializers, protocol handlers. Business logic with a narrow typed input space
+rarely repays the harness.

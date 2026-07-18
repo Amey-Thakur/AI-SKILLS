@@ -90,6 +90,7 @@ One row per category; every entry, with its one-line description, is in
 |---|---|---|
 | [accessibility](CATALOG.md#accessibility-1) | 1 | accessibility-review |
 | [apis](CATALOG.md#apis-1) | 1 | api-design |
+| [architecture](CATALOG.md#architecture-3) | 3 | architecture-decision-records, hexagonal-architecture, layered-architecture |
 | [big-tech-processes](CATALOG.md#big-tech-processes-28) | 28 | architecture-review-board, bar-raiser-interviewing, canary-analysis |
 | [big-tech-roles](CATALOG.md#big-tech-roles-30) | 30 | accessibility-specialist-role, backend-engineer-role, cloud-architect-role |
 | [code-quality](CATALOG.md#code-quality-37) | 37 | api-surface-minimalism, assertion-density, boolean-parameters |
@@ -99,10 +100,10 @@ One row per category; every entry, with its one-line description, is in
 | [documentation](CATALOG.md#documentation-2) | 2 | code-documentation, technical-writing |
 | [frontend](CATALOG.md#frontend-2) | 2 | design-systems, frontend-state |
 | [git-collaboration](CATALOG.md#git-collaboration-2) | 2 | commit-messages, git-workflow |
-| [gpu-ai-infrastructure](CATALOG.md#gpu-ai-infrastructure-17) | 17 | checkpointing-large-training, cuda-kernel-basics, fault-tolerant-training |
+| [gpu-ai-infrastructure](CATALOG.md#gpu-ai-infrastructure-20) | 20 | ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics |
 | [llm-engineering](CATALOG.md#llm-engineering-5) | 5 | agent-memory, mcp-server, prompt-engineering |
-| [multi-agent-teams](CATALOG.md#multi-agent-teams-17) | 17 | agent-arch-board, agent-code-review-loop, agent-design-review-panel |
-| [performance](CATALOG.md#performance-23) | 23 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
+| [multi-agent-teams](CATALOG.md#multi-agent-teams-24) | 24 | agent-arch-board, agent-code-review-loop, agent-competitive-analysis-team |
+| [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
 | [research-thinking](CATALOG.md#research-thinking-1) | 1 | research-synthesis |
 | [security](CATALOG.md#security-43) | 43 | api-security, audit-logging, authn-design |
 | [testing](CATALOG.md#testing-41) | 41 | api-testing, approval-testing, assertion-libraries |

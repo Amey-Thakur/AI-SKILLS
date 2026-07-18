@@ -1,57 +1,59 @@
 ---
 name: cuda-kernel-basics
-description: Write correct, reasonably fast first CUDA kernels by mapping work to the thread hierarchy, coalescing global loads, and checking occupancy. Use when you are writing or reviewing a hand-written CUDA kernel and want it to run without wasting most of the GPU.
+description: Write first CUDA kernels that map work onto the grid, coalesce global memory, and keep enough warps resident to hide latency. Use when hand-writing or reviewing a CUDA kernel and it runs far below the bandwidth or FLOPs the card should reach.
 ---
 
 # CUDA kernel basics
 
-A CUDA kernel launches thousands of threads that all run the same code on
-different data. The first kernel most people write is correct and ten times
-too slow, because they index memory the way a CPU loop would and leave the
-hardware's parallelism and bandwidth on the floor. The fix is a small set of
-habits applied every time.
+A kernel launches one function across thousands of threads, each working on its
+own slice of data. The classic first attempt is correct but an order of
+magnitude too slow: it indexes memory like a serial loop and sizes thread blocks
+by guesswork. These habits, applied on every kernel, close most of that gap
+before a profiler is even involved.
 
 ## Method
 
-1. **Map one thread to one output element first.** Compute a global index
-   `int i = blockIdx.x * blockDim.x + threadIdx.x;` and guard it with
-   `if (i < n) return;` so the tail block does not read past the array.
-   Get this version correct before any optimization: it is your reference.
-2. **Pick block size in multiples of the 32-thread warp.** Threads execute
-   in warps of 32, so a block of 33 wastes 31 lanes in a second warp. Start
-   at 256 threads per block and size the grid as `(n + 255) / 256`. Never
-   launch a block dimension that is not a multiple of 32.
-3. **Coalesce global memory access.** Consecutive threads in a warp must
-   touch consecutive addresses so the hardware fuses them into one 128-byte
-   transaction. `a[i]` where `i` is the global index coalesces; `a[i * stride]`
-   or `a[threadIdx.x * width + row]` scatters and can cost 32 separate loads.
-   For a 2D layout, make `threadIdx.x` walk the contiguous (innermost) axis.
-4. **Keep divergence out of the warp.** When threads in one warp take
-   different branches of an `if`, the warp runs both sides serially. Branch on
-   `blockIdx` or on data that is uniform across the warp; avoid `if (threadIdx.x % 2)`
-   style splits inside the hot loop.
-5. **Check occupancy with the tools, not by feel.** Run
+1. **Decompose the work onto grid, block, and thread.** Compute the global
+   index as `int i = blockIdx.x * blockDim.x + threadIdx.x` and bound it with
+   `if (i >= n) return;` so the last, partly full block does not read past the
+   array. Keep this one-thread-per-element version as the reference you optimize
+   against.
+2. **Write a grid-stride loop for sizes larger than the grid.** Loop
+   `for (int i = tid; i < n; i += blockDim.x * gridDim.x)` so a fixed grid
+   handles any `n` and each thread covers several elements. This decouples the
+   launch configuration from problem size and keeps blocks busy.
+3. **Size blocks in multiples of the 32-thread warp.** Threads issue in warps of
+   32, so a block of 200 wastes 24 lanes in its final warp. Start at 128 or 256
+   threads and compute the grid as `(n + block - 1) / block`. Never launch a
+   block dimension that is not a multiple of 32.
+4. **Coalesce global loads and stores.** When the 32 threads of a warp touch
+   consecutive addresses, the hardware fuses them into one 128-byte transaction.
+   `a[i]` on the global index coalesces; `a[i * stride]` or indexing the outer
+   axis of a 2D array scatters into up to 32 separate sectors. Make
+   `threadIdx.x` walk the innermost, contiguous axis.
+5. **Check occupancy with the tools, not by feel.** Call
    `cudaOccupancyMaxPotentialBlockSize` or read the occupancy line in Nsight
-   Compute. Registers per thread and shared memory per block cap how many
-   warps a streaming multiprocessor holds; over-using either drops resident
-   warps and starves the SM of work to hide memory latency. Aim for at least
-   50 percent theoretical occupancy before blaming the algorithm.
-6. **Check every CUDA call and sync before timing.** Wrap launches with a
-   `cudaGetLastError()` plus `cudaDeviceSynchronize()` in debug builds, and run
-   the kernel once under `compute-sanitizer` to catch out-of-bounds and races
-   that silently corrupt results on some launches only.
+   Compute. Registers per thread and shared memory per block cap how many warps
+   a streaming multiprocessor keeps resident; overspending either starves the SM
+   of work to hide memory latency. Target at least 50 percent theoretical
+   occupancy before blaming the algorithm.
+6. **Prove correctness before timing anything.** Wrap launches with
+   `cudaGetLastError()` and a `cudaDeviceSynchronize()` in debug builds, and run
+   once under `compute-sanitizer` to catch out-of-bounds writes and races that
+   corrupt results only on some launches.
 
 ## Checks
 
 - Does `compute-sanitizer ./app` report zero errors on a representative input?
 - Is every block dimension a multiple of 32, and does the grid cover the tail?
-- Does Nsight Compute report the global loads as coalesced (high sectors-per-request efficiency), not scattered?
-- Does the kernel match a CPU reference within floating-point tolerance?
+- Does Nsight Compute report global accesses as coalesced (high
+  sectors-per-request efficiency) rather than scattered?
+- Does the kernel match a trusted CPU reference within floating-point tolerance?
 
 ## Boundaries
 
-This covers single-kernel correctness and first-order speed on one GPU. It does
-not cover multi-GPU or NCCL collectives, streams and overlap, or squeezing the
-last percent from a matmul. Once loads are coalesced and occupancy is healthy,
-move to a profiler-driven pass (see kernel-profiling-nsight) and to the memory
-hierarchy (see gpu-memory-hierarchy) rather than tuning by intuition.
+This is single-kernel correctness and first-order speed on one GPU. It does not
+cover streams and copy overlap, multi-GPU NCCL collectives, or wringing the last
+percent from a GEMM. Once loads coalesce and occupancy is healthy, move to a
+profiler-driven pass (kernel-profiling-nsight) and to staging data across the
+memory tiers (gpu-memory-hierarchy) instead of guessing.

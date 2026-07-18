@@ -6,13 +6,14 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 288,
+    "skills": 306,
     "prompts": 22,
-    "categories": 18
+    "categories": 19
   },
   "categories": [
     "accessibility",
     "apis",
+    "architecture",
     "big-tech-processes",
     "big-tech-roles",
     "code-quality",
@@ -49,9 +50,33 @@
     },
     {
       "kind": "skill",
+      "name": "architecture-decision-records",
+      "category": "architecture",
+      "description": "Capture each significant architecture decision as a short, immutable record of context, decision, and consequences with a tracked status. Use when a choice is costly to reverse or crosses teams and the reasoning must outlive the people who made it.",
+      "path": "skills/architecture/architecture-decision-records/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/architecture-decision-records/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "hexagonal-architecture",
+      "category": "architecture",
+      "description": "Isolate domain logic behind ports it owns while frameworks, databases, and transports live in adapters that plug into those ports. Use when business rules keep getting entangled with the web framework or database and you want the core testable and swappable in isolation.",
+      "path": "skills/architecture/hexagonal-architecture/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/hexagonal-architecture/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "layered-architecture",
+      "category": "architecture",
+      "description": "Organize a system into layers with one permitted direction of dependency and enforce that direction mechanically at the import level. Use when a codebase is sliding toward tangled cross-references and you need a rule a linter can check, not a convention people forget.",
+      "path": "skills/architecture/layered-architecture/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/layered-architecture/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "architecture-review-board",
       "category": "big-tech-processes",
-      "description": "Run an Architecture Review Board that reviews significant technical proposals through consistent lenses, issues binding decisions recorded as ADRs, and offers an appeals path. Use when architectural choices cross team boundaries and need a durable, accountable decision rather than a hallway consensus.",
+      "description": "Run an Architecture Review Board that filters proposals by blast radius, reviews them through fixed lenses, issues binding decisions recorded as ADRs, and honors an appeals path. Use when a technical choice crosses team boundaries and needs a durable, accountable decision instead of hallway consensus.",
       "path": "skills/big-tech-processes/architecture-review-board/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/architecture-review-board/SKILL.md"
     },
@@ -75,7 +100,7 @@
       "kind": "skill",
       "name": "chaos-gameday",
       "category": "big-tech-processes",
-      "description": "Run a game day that injects a real failure into a system on purpose, under safety rails, to test whether monitoring, runbooks, and responders actually work. Use when you want to verify resilience before an incident does it for you, or to rehearse a team on a failure they have never handled.",
+      "description": "Run a game day that injects a real failure on purpose under safety rails, then captures what monitoring, runbooks, and responders actually did. Use when you want to prove resilience before an incident tests it for you, or to rehearse a team on a failure it has never handled.",
       "path": "skills/big-tech-processes/chaos-gameday/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/chaos-gameday/SKILL.md"
     },
@@ -91,7 +116,7 @@
       "kind": "skill",
       "name": "deprecation-program",
       "category": "big-tech-processes",
-      "description": "Run a deprecation from telemetry through a hard sunset date so a system can be retired without breaking the callers who still depend on it. Use when you own an API, library, endpoint, or service that must be turned off and other teams still use it.",
+      "description": "Run a deprecation from usage telemetry through a hard sunset date, with migration tooling and staged comms, so a system retires without stranding its callers. Use when you own an API, endpoint, library, or service that must be turned off while other teams still depend on it.",
       "path": "skills/big-tech-processes/deprecation-program/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/deprecation-program/SKILL.md"
     },
@@ -147,7 +172,7 @@
       "kind": "skill",
       "name": "launch-review",
       "category": "big-tech-processes",
-      "description": "Run a launch review that gates a release behind a readiness checklist, named sign-offs, and a clear no-go authority. Use before shipping a user-facing launch where a bad release is costly to walk back.",
+      "description": "Run a launch review that gates a release behind a readiness checklist, named sign-offs, and a clear no-go authority. Use when a user-facing launch is about to ship and a bad release would be costly to walk back.",
       "path": "skills/big-tech-processes/launch-review/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/launch-review/SKILL.md"
     },
@@ -187,7 +212,7 @@
       "kind": "skill",
       "name": "postmortem-review-board",
       "category": "big-tech-processes",
-      "description": "Run an org-level board that reviews incident postmortems for quality, promotes cross-cutting fixes, and surfaces trends no single incident reveals. Use when your organization produces enough postmortems that reading them one at a time misses the systemic pattern.",
+      "description": "Run an org-level board that grades incident postmortems against a quality bar, promotes cross-cutting fixes to owned work, and reads across incidents for trends. Use when your organization writes enough postmortems that reviewing them one at a time hides the systemic pattern.",
       "path": "skills/big-tech-processes/postmortem-review-board/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-processes/postmortem-review-board/SKILL.md"
     },
@@ -1161,6 +1186,14 @@
     },
     {
       "kind": "skill",
+      "name": "ai-datacenter-networking",
+      "category": "gpu-ai-infrastructure",
+      "description": "Lay out the network for distributed training so collectives run on the fastest link that spans them, using NVLink, InfiniBand, and topology-aware placement. Use when a training job spans multiple GPUs or nodes and interconnect, not compute, is capping throughput.",
+      "path": "skills/gpu-ai-infrastructure/ai-datacenter-networking/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/ai-datacenter-networking/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "checkpointing-large-training",
       "category": "gpu-ai-infrastructure",
       "description": "Checkpoint multi-node training runs so a save costs seconds instead of minutes and a resume reproduces the run exactly. Use when a job is large enough that a crash without a recent, verified checkpoint means losing hours of GPU time.",
@@ -1171,9 +1204,17 @@
       "kind": "skill",
       "name": "cuda-kernel-basics",
       "category": "gpu-ai-infrastructure",
-      "description": "Write correct, reasonably fast first CUDA kernels by mapping work to the thread hierarchy, coalescing global loads, and checking occupancy. Use when you are writing or reviewing a hand-written CUDA kernel and want it to run without wasting most of the GPU.",
+      "description": "Write first CUDA kernels that map work onto the grid, coalesce global memory, and keep enough warps resident to hide latency. Use when hand-writing or reviewing a CUDA kernel and it runs far below the bandwidth or FLOPs the card should reach.",
       "path": "skills/gpu-ai-infrastructure/cuda-kernel-basics/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/cuda-kernel-basics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "distributed-training-scaling",
+      "category": "gpu-ai-infrastructure",
+      "description": "Scale training from one GPU to many by moving through data parallel and sharded FSDP modes, overlapping communication with compute, and reading the efficiency curve to find the ceiling. Use when adding GPUs stops making training proportionally faster and you need to locate where the scaling leaks.",
+      "path": "skills/gpu-ai-infrastructure/distributed-training-scaling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/distributed-training-scaling/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1203,7 +1244,7 @@
       "kind": "skill",
       "name": "gpu-memory-hierarchy",
       "category": "gpu-ai-infrastructure",
-      "description": "Move data through the GPU memory tiers deliberately so kernels are bound by compute rather than by HBM traffic. Use when a kernel is memory-bound, when you are deciding what to stage in shared memory, or when register spills are hurting a hot loop.",
+      "description": "Place data across the GPU memory tiers so a kernel is limited by math rather than by repeated trips to HBM. Use when a kernel is memory-bound, when deciding what to stage in shared memory or L2, or when register spills are stalling a hot loop.",
       "path": "skills/gpu-ai-infrastructure/gpu-memory-hierarchy/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/gpu-memory-hierarchy/SKILL.md"
     },
@@ -1227,7 +1268,7 @@
       "kind": "skill",
       "name": "inference-serving-optimization",
       "category": "gpu-ai-infrastructure",
-      "description": "Raise GPU throughput and hold tail latency for LLM serving by tuning batching, the KV cache, and paged attention against explicit SLOs. Use when a serving deployment misses its latency target or wastes GPU memory and you need to find the lever.",
+      "description": "Tune LLM serving to hold latency SLOs while raising GPU throughput, working the batch scheduler, KV cache, and paged attention together. Use when a serving replica misses its latency target or leaves memory and utilization on the table.",
       "path": "skills/gpu-ai-infrastructure/inference-serving-optimization/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/inference-serving-optimization/SKILL.md"
     },
@@ -1235,7 +1276,7 @@
       "kind": "skill",
       "name": "kernel-profiling-nsight",
       "category": "gpu-ai-infrastructure",
-      "description": "Profile GPU workloads with Nsight Systems and Nsight Compute to read the timeline, classify the bottleneck, and pull the metric that names the fix. Use when a GPU program is slower than expected and you need evidence for what to change before touching a kernel.",
+      "description": "Profile GPU work with Nsight Systems and Nsight Compute to read the timeline, name the bottleneck class, and pull the metric that dictates the fix. Use when a GPU program is slower than expected and you need evidence before touching a kernel.",
       "path": "skills/gpu-ai-infrastructure/kernel-profiling-nsight/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/kernel-profiling-nsight/SKILL.md"
     },
@@ -1243,7 +1284,7 @@
       "kind": "skill",
       "name": "mixed-precision-deployment",
       "category": "gpu-ai-infrastructure",
-      "description": "Ship FP16, BF16, or FP8 training and inference that keeps accuracy while capturing the speedup, using loss scaling and numeric validation. Use when moving a model off FP32 to run faster or fit in less memory and you need the result to still be correct.",
+      "description": "Ship FP16, BF16, or FP8 training and inference that holds accuracy while capturing the speedup, using loss scaling and numeric validation. Use when moving a model off FP32 to run faster or fit in less memory and the result must stay correct.",
       "path": "skills/gpu-ai-infrastructure/mixed-precision-deployment/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/mixed-precision-deployment/SKILL.md"
     },
@@ -1251,15 +1292,23 @@
       "kind": "skill",
       "name": "model-parallelism",
       "category": "gpu-ai-infrastructure",
-      "description": "Split a model that will not fit on one GPU across devices using tensor, pipeline, and expert parallelism, and pick the split by its communication cost. Use when weights or activations exceed a single card and you must choose how to shard without stalling on interconnect.",
+      "description": "Split a model that will not fit on one GPU across devices with tensor, pipeline, and expert parallelism, choosing each split by its communication cost. Use when weights or activations exceed a single card and you must shard without stalling on the interconnect.",
       "path": "skills/gpu-ai-infrastructure/model-parallelism/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/model-parallelism/SKILL.md"
     },
     {
       "kind": "skill",
+      "name": "onnx-export-pipelines",
+      "category": "gpu-ai-infrastructure",
+      "description": "Export a trained model to ONNX that runs portably across runtimes, closing operator gaps and proving numeric parity against the source framework. Use when a PyTorch or TensorFlow model must run outside its training stack and the export must be trusted, not just produced.",
+      "path": "skills/gpu-ai-infrastructure/onnx-export-pipelines/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/onnx-export-pipelines/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "quantization-deployment",
       "category": "gpu-ai-infrastructure",
-      "description": "Quantize a trained model to INT8 or INT4 for inference, calibrate the ranges, and gate the release on a measured quality regression. Use when you need lower latency and memory for serving and are willing to spend effort keeping accuracy inside a defined budget.",
+      "description": "Quantize a trained model to INT8 or INT4 for inference, calibrate the ranges, and gate the release on a measured quality regression. Use when serving needs lower latency and memory and you will spend effort keeping accuracy inside a defined budget.",
       "path": "skills/gpu-ai-infrastructure/quantization-deployment/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/quantization-deployment/SKILL.md"
     },
@@ -1267,7 +1316,7 @@
       "kind": "skill",
       "name": "tensor-core-utilization",
       "category": "gpu-ai-infrastructure",
-      "description": "Get matrix multiplies onto the tensor cores by fixing shapes, precision, and alignment, then measure that the cores are actually active. Use when a GEMM or attention kernel runs far below the GPU's advertised throughput and you suspect it is falling back to the regular CUDA cores.",
+      "description": "Get matrix multiplies onto the tensor cores by fixing shapes, precision, and alignment, then measure that the cores actually fired. Use when a GEMM or attention kernel runs far below the card's advertised throughput and you suspect it fell back to the CUDA cores.",
       "path": "skills/gpu-ai-infrastructure/tensor-core-utilization/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/tensor-core-utilization/SKILL.md"
     },
@@ -1275,7 +1324,7 @@
       "kind": "skill",
       "name": "tensorrt-optimization",
       "category": "gpu-ai-infrastructure",
-      "description": "Compile a trained model into a fast TensorRT engine by choosing precision, defining dynamic shape profiles, and validating that fused kernels preserved accuracy. Use when a PyTorch or ONNX model must hit a hardware-specific latency floor and eager execution is too slow.",
+      "description": "Compile a trained model into a fast, GPU-specific TensorRT engine by controlling precision, defining dynamic shape profiles, and proving the fused engine kept its accuracy. Use when a PyTorch or ONNX model must reach a hardware latency floor that eager execution cannot.",
       "path": "skills/gpu-ai-infrastructure/tensorrt-optimization/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/tensorrt-optimization/SKILL.md"
     },
@@ -1283,7 +1332,7 @@
       "kind": "skill",
       "name": "triton-inference-server",
       "category": "gpu-ai-infrastructure",
-      "description": "Deploy models on NVIDIA Triton with a correct model repository, ensemble pipelines, and concurrent execution tuned to keep the GPU busy. Use when serving one or more models through Triton and configuring layout, batching, instance groups, or a preprocessing-plus-inference pipeline.",
+      "description": "Deploy models on NVIDIA Triton with a valid model repository, ensemble pipelines, and concurrent execution tuned to keep the GPU saturated. Use when serving one or more models through Triton and configuring layout, dynamic batching, instance groups, or a preprocess-plus-inference pipeline.",
       "path": "skills/gpu-ai-infrastructure/triton-inference-server/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/triton-inference-server/SKILL.md"
     },
@@ -1291,7 +1340,7 @@
       "kind": "skill",
       "name": "vllm-serving",
       "category": "gpu-ai-infrastructure",
-      "description": "Stand up an LLM behind vLLM with continuous batching, deliberate GPU memory planning, and multi-model hosting that stays within VRAM. Use when deploying a model on vLLM and deciding memory fraction, context length, parallelism, and how many models share a card.",
+      "description": "Deploy an LLM on vLLM with continuous batching, deliberate VRAM planning, and multi-model hosting that never overcommits the card. Use when serving on vLLM and deciding memory fraction, context length, tensor parallel size, and how many models share a GPU.",
       "path": "skills/gpu-ai-infrastructure/vllm-serving/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/vllm-serving/SKILL.md"
     },
@@ -1339,7 +1388,7 @@
       "kind": "skill",
       "name": "agent-arch-board",
       "category": "multi-agent-teams",
-      "description": "Run an architecture board of agents where one proposes a design, several review it independently and blind, and a chair synthesizes a binding decision. Use when a design choice is consequential enough that one agent's opinion is not enough and you want independent scrutiny before committing.",
+      "description": "Run an architecture board of agents where one proposes a design, several review it independently and blind, and a chair synthesizes a binding decision. Use when a design choice matters enough that one agent's opinion will not do and you want independent scrutiny before committing.",
       "path": "skills/multi-agent-teams/agent-arch-board/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-arch-board/SKILL.md"
     },
@@ -1347,15 +1396,31 @@
       "kind": "skill",
       "name": "agent-code-review-loop",
       "category": "multi-agent-teams",
-      "description": "Run an author agent and a reviewer agent in a loop with a strict finding format, a verification pass, and a convergence rule that ends it. Use when you want agent-to-agent code review that improves the diff instead of spinning forever on style or re-flagging fixed issues.",
+      "description": "Run an author agent and a reviewer agent in a loop with a strict finding format, a mandatory verification pass, and a convergence rule that ends it. Use when you want agent-to-agent code review that improves the diff instead of spinning forever on style or re-flagging fixed issues.",
       "path": "skills/multi-agent-teams/agent-code-review-loop/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-code-review-loop/SKILL.md"
     },
     {
       "kind": "skill",
+      "name": "agent-competitive-analysis-team",
+      "category": "multi-agent-teams",
+      "description": "Run competitive analysis as agents that tear down assigned competitors on one template, enforce sourcing rules, and synthesize implications for your product. Use when you want a market landscape built by a coordinated agent team rather than one agent skimming marketing sites.",
+      "path": "skills/multi-agent-teams/agent-competitive-analysis-team/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-competitive-analysis-team/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-data-team",
+      "category": "multi-agent-teams",
+      "description": "Run a data team as agents that build the pipeline, gate on quality checks, run the analysis, and independently audit every headline metric. Use when you want a number produced by a coordinated agent team rather than one agent's unverified query.",
+      "path": "skills/multi-agent-teams/agent-data-team/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-data-team/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-design-review-panel",
       "category": "multi-agent-teams",
-      "description": "Convene several reviewer agents with fixed distinct lenses, correctness, security, cost, and simplicity, then synthesize their verdicts. Use when one review agent keeps missing whole classes of problems because it cannot hold every concern at once on a design or a plan.",
+      "description": "Convene several reviewer agents with fixed distinct lenses, correctness, security, cost, and simplicity, then synthesize their verdicts into one. Use when a single review agent keeps missing whole classes of problems because it cannot hold every concern at once on a design or plan.",
       "path": "skills/multi-agent-teams/agent-design-review-panel/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-design-review-panel/SKILL.md"
     },
@@ -1363,17 +1428,33 @@
       "kind": "skill",
       "name": "agent-docs-guild",
       "category": "multi-agent-teams",
-      "description": "Run a team of documentation agents that finds gaps, drafts pages, gets them technically reviewed, and sweeps for staleness on a schedule. Use when a codebase has outgrown its docs and you need both fresh coverage and a way to keep pages from rotting.",
+      "description": "Run a team of documentation agents that finds the gaps, drafts the pages, gets them reviewed against the code, and sweeps for staleness on a schedule. Use when a codebase has outrun its docs and you need both new coverage and a way to stop pages from rotting.",
       "path": "skills/multi-agent-teams/agent-docs-guild/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-docs-guild/SKILL.md"
     },
     {
       "kind": "skill",
+      "name": "agent-growth-team",
+      "category": "multi-agent-teams",
+      "description": "Run a team of growth agents that designs an experiment, builds the variant, analyzes the result, and passes an ethics gate before anything ships. Use when you want product changes tested rigorously instead of shipped on a hunch, with a guardrail against manipulative tactics.",
+      "path": "skills/multi-agent-teams/agent-growth-team/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-growth-team/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-handoff-protocol",
       "category": "multi-agent-teams",
-      "description": "Design the handoff between two agents as an explicit artifact contract with a context budget and loss prevention. Use when work passes from one agent to the next and the receiver keeps losing constraints, re-deriving decisions, or drowning in the sender's raw transcript.",
+      "description": "Design each handoff between two agents as an explicit artifact contract with a context budget and a rule for what must survive the crossing. Use when work passes from one agent to the next and the receiver keeps losing constraints, re-deriving decisions, or drowning in raw transcript.",
       "path": "skills/multi-agent-teams/agent-handoff-protocol/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-handoff-protocol/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-hiring-panel",
+      "category": "multi-agent-teams",
+      "description": "Simulate an interview panel as agents that design questions, score independently on anchored rubrics, and reconcile in a debrief. Use when you want to pressure-test a hiring loop, calibrate rubrics, or dry-run questions, not to score a real candidate.",
+      "path": "skills/multi-agent-teams/agent-hiring-panel/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-hiring-panel/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1387,9 +1468,25 @@
       "kind": "skill",
       "name": "agent-migration-crew",
       "category": "multi-agent-teams",
-      "description": "Run a team of migration agents that inventories the work, transforms each slice in isolation, verifies it, and merges under strict discipline. Use when a large mechanical change like a framework bump, an API rename, or a schema move touches many files and one agent would lose track or break main.",
+      "description": "Run a team of migration agents that inventories the work, transforms each slice in isolation, verifies it, and merges under strict discipline. Use when a large mechanical change like a framework bump, an API rename, or a schema move spans many files and one agent would lose the thread or break main.",
       "path": "skills/multi-agent-teams/agent-migration-crew/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-migration-crew/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-oncall-triage",
+      "category": "multi-agent-teams",
+      "description": "Run alert triage as agents that dedup the storm, rate severity by user impact, match a runbook, and draw a hard human-escalation line. Use when you want incoming alerts sorted and enriched by an agent team before they reach the on-call engineer.",
+      "path": "skills/multi-agent-teams/agent-oncall-triage/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-oncall-triage/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-orchestration-antipatterns",
+      "category": "multi-agent-teams",
+      "description": "Guard a multi-agent team against the structural failures single agents never hit: context lost across handoffs, false agreement, and runaway cost. Use when a team costs more than one agent or trusts its own output, and you need to find out why.",
+      "path": "skills/multi-agent-teams/agent-orchestration-antipatterns/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-orchestration-antipatterns/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1403,7 +1500,7 @@
       "kind": "skill",
       "name": "agent-postmortem-council",
       "category": "multi-agent-teams",
-      "description": "Run a team of postmortem agents that builds the timeline, analyzes causes, drafts corrective actions, and reviews for blamelessness and completeness. Use after an incident when you need a rigorous, blameless writeup and action list instead of a hasty narrative that blames a person.",
+      "description": "Run a team of postmortem agents that builds the timeline, analyzes causes, drafts corrective actions, and reviews for blamelessness and completeness. Use after an incident when you need a rigorous, blameless writeup and owned action list instead of a hasty narrative that pins it on a person.",
       "path": "skills/multi-agent-teams/agent-postmortem-council/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-postmortem-council/SKILL.md"
     },
@@ -1411,7 +1508,7 @@
       "kind": "skill",
       "name": "agent-qa-gate",
       "category": "multi-agent-teams",
-      "description": "Place a QA agent as the last blocking node before output ships, verifying acceptance criteria against real test evidence with the power to veto. Use when builder agents keep declaring done on work that does not actually meet its criteria and you need one gate that runs the artifact instead of trusting the claim.",
+      "description": "Place a QA agent as the last blocking node before output ships, checking acceptance criteria against executed test evidence with the power to veto. Use when builder agents keep declaring done on work that does not meet its criteria and you need one gate that runs the artifact instead of trusting the claim.",
       "path": "skills/multi-agent-teams/agent-qa-gate/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-qa-gate/SKILL.md"
     },
@@ -1443,9 +1540,17 @@
       "kind": "skill",
       "name": "agent-role-definition",
       "category": "multi-agent-teams",
-      "description": "Write role cards that pin an agent to one charter with declared inputs, outputs, refusal rules, and non-overlapping scope. Use when assembling a multi-agent team and you need each agent to stay in its lane instead of all agents drifting toward the same work.",
+      "description": "Write role cards that pin each agent to one charter with declared inputs, outputs, refusal rules, and non-overlapping scope. Use when assembling a multi-agent team and you need every agent to stay in its lane instead of all drifting toward the same work.",
       "path": "skills/multi-agent-teams/agent-role-definition/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-role-definition/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-security-audit-team",
+      "category": "multi-agent-teams",
+      "description": "Run a security audit as agents that map the attack surface, review each surface in parallel, skeptic-test every finding, and assemble one report. Use when you want a codebase audited by a coordinated agent team instead of a single review pass.",
+      "path": "skills/multi-agent-teams/agent-security-audit-team/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-security-audit-team/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1459,7 +1564,7 @@
       "kind": "skill",
       "name": "agent-support-desk",
       "category": "multi-agent-teams",
-      "description": "Run a team of support agents that triages tickets, reproduces the issue, drafts a reply, and escalates cleanly to a human. Use when inbound support volume needs consistent handling and a person should approve every customer-facing reply before it sends.",
+      "description": "Run a team of support agents that triages each ticket, reproduces the problem, drafts a reply, and hands clean escalations to a human. Use when inbound support volume needs consistent handling and a person must approve every customer-facing reply before it goes out.",
       "path": "skills/multi-agent-teams/agent-support-desk/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-support-desk/SKILL.md"
     },
@@ -1467,7 +1572,7 @@
       "kind": "skill",
       "name": "virtual-engineering-team",
       "category": "multi-agent-teams",
-      "description": "Run a squad of agents as a product-engineering team from spec to shipped change, with a PM, an architect, two engineers, a reviewer, and QA. Use when a task is large enough to need division of labor and a quality gate, not a single agent doing everything.",
+      "description": "Run a product-engineering squad of agents from spec to shipped change with a PM, an architect, two engineers, a reviewer, and QA. Use when a task is too large for one agent and needs both division of labor and an independent quality gate.",
       "path": "skills/multi-agent-teams/virtual-engineering-team/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/virtual-engineering-team/SKILL.md"
     },
@@ -1510,6 +1615,14 @@
       "description": "Apply complexity analysis where input size actually makes it decide performance, and ignore it where constant factors dominate. Use when choosing an algorithm or data structure and you need to know whether asymptotic cost or the real constant is what bites.",
       "path": "skills/performance/big-o-in-practice/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/big-o-in-practice/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "bundle-size",
+      "category": "performance",
+      "description": "Shrink JavaScript bundles by analyzing what ships, enabling real tree shaking, splitting heavy code, and putting the dependency list on a diet. Use when the initial JS payload is large, slow to parse, or growing unchecked.",
+      "path": "skills/performance/bundle-size/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/bundle-size/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1569,6 +1682,14 @@
     },
     {
       "kind": "skill",
+      "name": "font-loading",
+      "category": "performance",
+      "description": "Load web fonts without layout shift by subsetting the file, setting font-display, preloading first-paint weights, and matching fallback metrics. Use when custom fonts cause invisible text, a flash of restyle, or a CLS spike.",
+      "path": "skills/performance/font-loading/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/font-loading/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "gc-tuning",
       "category": "performance",
       "description": "Cut garbage-collection pauses and overhead by lowering allocation rate, sizing the heap, and reading pause logs before touching a flag. Use when a managed-runtime service shows latency spikes, high CPU in GC, or out-of-memory errors under load.",
@@ -1582,6 +1703,14 @@
       "description": "Use HTTP caching correctly with etags, max-age, and stale-while-revalidate so clients and proxies reuse responses without serving stale data. Use when responses lack cache headers, a bad deploy served stale content, or revalidation traffic is heavy.",
       "path": "skills/performance/http-caching/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/http-caching/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "image-optimization",
+      "category": "performance",
+      "description": "Serve right-sized images by encoding modern formats, generating responsive srcset widths, and deferring offscreen decode while prioritizing the hero. Use when images are the heaviest bytes on a page or the LCP element loads slowly.",
+      "path": "skills/performance/image-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/image-optimization/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1654,6 +1783,22 @@
       "description": "Cut the CPU and bytes spent turning objects into wire or disk format by choosing the right format, reusing schemas and buffers, and avoiding copies. Use when serialization shows up in the profile, payloads are large, or encode/decode latency dominates a hot request path.",
       "path": "skills/performance/serialization-performance/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/serialization-performance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "startup-time",
+      "category": "performance",
+      "description": "Cut startup latency by deferring heavy imports, precompiling ahead of time, and pruning the dependency tree that loads before first useful work. Use when CLI launch, serverless cold start, or dev-loop boot time is too slow.",
+      "path": "skills/performance/startup-time/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/startup-time/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "web-vitals",
+      "category": "performance",
+      "description": "Improve LCP, CLS, and INP by measuring field data, tracing each metric to its specific cause, and applying the fixes known to move that number. Use when Core Web Vitals are failing or a page feels slow to load, settle, or respond.",
+      "path": "skills/performance/web-vitals/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/web-vitals/SKILL.md"
     },
     {
       "kind": "skill",
@@ -2067,7 +2212,7 @@
       "kind": "skill",
       "name": "contract-testing",
       "category": "testing",
-      "description": "Pin the request and response shape at a service boundary with a consumer-driven contract that both sides verify in CI. Use when two services deploy independently and an unannounced payload change would break the caller.",
+      "description": "Verify a service boundary with a consumer-driven contract that records the payload the caller actually reads and that both sides check in CI. Use when two services deploy independently and an unannounced response change would silently break the consumer.",
       "path": "skills/testing/contract-testing/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/contract-testing/SKILL.md"
     },
@@ -2075,7 +2220,7 @@
       "kind": "skill",
       "name": "coverage-strategy",
       "category": "testing",
-      "description": "Read coverage as a map of untested risk to guide where tests go next, rather than enforcing a percentage target. Use when deciding what to test next or when a team is tempted to mandate a coverage number.",
+      "description": "Read coverage as a map of untested risk that steers the next test, rather than enforcing a percentage target. Use when deciding what to test next or when a team is tempted to mandate a coverage number.",
       "path": "skills/testing/coverage-strategy/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/coverage-strategy/SKILL.md"
     },
@@ -2107,7 +2252,7 @@
       "kind": "skill",
       "name": "fuzz-testing",
       "category": "testing",
-      "description": "Feed a parser or protocol handler mutated inputs from a coverage-guided fuzzer, then triage crashes to unique root causes. Use when code parses untrusted or complex input and hand-written cases cannot cover the input space.",
+      "description": "Fuzz a parser or protocol handler with a coverage-guided fuzzer, seed the corpus with real inputs, and triage crashes to unique root causes. Use when code consumes untrusted or complex bytes and hand-written cases cannot reach the states that break it.",
       "path": "skills/testing/fuzz-testing/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/fuzz-testing/SKILL.md"
     },
@@ -2211,7 +2356,7 @@
       "kind": "skill",
       "name": "tdd-rhythm",
       "category": "testing",
-      "description": "Run the red-green-refactor loop honestly with the smallest failing test first, refusing test-after backfill dressed up as TDD. Use when building code with a clear behavioral spec and you want the tests to drive the design.",
+      "description": "Run red-green-refactor honestly with the smallest failing test first, refusing test-after backfill dressed up as TDD. Use when building code with a clear behavioral spec and you want the tests to drive the design.",
       "path": "skills/testing/tdd-rhythm/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/tdd-rhythm/SKILL.md"
     },
@@ -2291,7 +2436,7 @@
       "kind": "skill",
       "name": "test-speed",
       "category": "testing",
-      "description": "Keep the suite fast enough to run on every change by shaping the pyramid, cutting IO from the fast tier, and sharding. Use when the suite is slow enough that developers skip it or batch changes to avoid the wait.",
+      "description": "Keep the suite fast enough to run on every change by measuring the slow tests, shaping the pyramid, cutting IO from the fast tier, and sharding. Use when the suite is slow enough that developers skip it or batch changes to avoid the wait.",
       "path": "skills/testing/test-speed/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/test-speed/SKILL.md"
     },

@@ -5,48 +5,49 @@ description: Make tests order-independent by resetting state, banning shared glo
 
 # Test isolation
 
-A suite that passes only in a fixed order is lying about which tests work. One
-test mutates a module global, seeds a row, or sets the clock, and the next test
-passes by accident on that residue. The moment you shard, parallelize, or
-reorder, the accident evaporates and you get failures nobody can reproduce.
-Isolation makes each test start from nothing and leave nothing behind.
+A suite that passes in order and fails when shuffled is hiding coupling: one
+test leaves state a later one quietly depends on. It shows up as the failure
+that vanishes on rerun and the test that only passes with the whole suite
+around it. Isolation means each test builds its own world and tears it down, so
+neither order nor parallelism can change the result.
 
 ## Method
 
-1. **Randomize order in CI and fix what breaks.** Run pytest-randomly or Jest's
-   randomized order so an order dependency fails loudly and early. A test that
-   only passes at position N has hidden shared state, and the seed in the failure
-   output reproduces it exactly.
+1. **Randomize order in CI and treat a break as a bug.** Turn on
+   pytest-randomly, RSpec `--shuffle`, or Go's default ordering, and fix any
+   order-dependent failure at the source rather than pinning a lucky seed. The
+   failing seed reproduces it exactly.
 2. **Reset every mutable global in teardown, or remove it.** Module caches,
    singletons, registered handlers, and environment variables outlive a test.
-   Restore them in a fixture with `finally` or `addCleanup`, or better, inject
-   the dependency so there is no global to reset.
+   Restore them in a fixture that runs even on failure (`addCleanup`, `finally`),
+   or inject the dependency so no global exists to reset.
 3. **Give each test its own database state via rollback.** Wrap the test in a
    transaction rolled back at teardown, or truncate the tables it touched. Never
-   depend on tests running in an order that happens to leave the DB clean for the
-   next one.
-4. **Isolate the filesystem and the clock.** Write to a per-test temp dir
-   (`tmp_path`, `mktemp`), never a shared path in the repo. Freeze time with
-   freezegun or an injected clock so a test neither reads real `now()` nor leaks
-   a frozen clock into its neighbor.
-5. **Make it parallel-safe: no shared mutable resource across workers.** Give
-   each xdist worker its own schema (keyed on `worker_id`), its own temp dir, and
-   a unique port. Two workers writing the same fixed filename or binding the same
-   port is the classic parallel flake.
-6. **Seed randomness and stub external calls inside the test.** Seed RNGs in the
-   test body, not once at import, and fake network and time so no test shares a
-   live connection or a cached token. A test hitting a shared live service is
-   order-dependent by definition.
+   rely on tests running in an order that happens to leave the rows clean for
+   the next.
+4. **Isolate the filesystem and the clock per test.** Write only to a per-test
+   temp directory (`tmp_path`, `mktemp`), never a fixed path in the repo, and
+   pin time inside the test so a frozen clock cannot leak into its neighbor. For
+   time control, defer to mocking-time.
+5. **Make parallel safe: no shared mutable resource across workers.** Give each
+   xdist worker its own schema keyed on `worker_id`, its own temp dir, and a
+   unique port. Two workers writing the same filename or binding the same port
+   is the classic parallel flake.
+6. **Stub the network and seed randomness in the test body.** A test hitting a
+   live service is order-dependent by definition; intercept it so each test
+   controls its own responses, and seed RNGs locally rather than once at import.
 
 ## Signals
 
-- Does the full suite pass with `-p randomly` and again under a different seed?
+- Does the suite pass under pytest-randomly across several different seeds?
 - Can you run any single test alone, from a clean checkout, and have it pass?
-- Does doubling the worker count stay green, or surface filename and port clashes?
+- Does doubling the worker count stay green, or surface filename and port
+  clashes?
 
 ## Boundaries
 
-This concerns state between tests, not which collaborators to replace: that
-belongs to test-doubles. Some end-to-end tests legitimately share an expensive
-fixture, so isolate their data within it rather than the whole environment.
-Chasing one specific order-dependent flake is flaky-test-diagnosis territory.
+This targets flakiness from shared state and order, not races in genuinely
+concurrent code, which concurrency-testing covers, nor the budgeting of
+irreducible flakes, which is test-flakiness-budget. A few tests legitimately
+share an expensive read-only fixture; keep that data immutable and isolate each
+test's writes within it rather than around the whole environment.

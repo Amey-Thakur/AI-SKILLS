@@ -1,60 +1,59 @@
 ---
 name: model-parallelism
-description: Split a model that will not fit on one GPU across devices using tensor, pipeline, and expert parallelism, and pick the split by its communication cost. Use when weights or activations exceed a single card and you must choose how to shard without stalling on interconnect.
+description: Split a model that will not fit on one GPU across devices with tensor, pipeline, and expert parallelism, choosing each split by its communication cost. Use when weights or activations exceed a single card and you must shard without stalling on the interconnect.
 ---
 
 # Model parallelism
 
-When a model is too big for one GPU, you cut it apart, and every cut adds
-communication. Tensor, pipeline, and expert parallelism each split along a
-different axis with a different network cost and failure mode. Choosing badly
-leaves GPUs idle waiting on an all-reduce or a pipeline bubble, so the decision
-is really about matching the split to your interconnect and your batch shape.
+When a model is too large for one GPU, you cut it apart, and every cut buys
+communication. Tensor, pipeline, and expert parallelism split along different
+axes, each with its own network cost and its own way of leaving GPUs idle. Choose
+badly and the cards wait on an all-reduce or sit in a pipeline bubble, so the
+decision is really about matching the split to your interconnect and batch shape.
 
 ## Method
 
-1. **Compute the memory shortfall first.** Weights in bytes are roughly
-   parameters times dtype bytes: a 70B model in FP16 needs about 140 GB, so it
-   will not fit one 80 GB H100. Add optimizer state and activations for
-   training. The gap tells you the minimum number of GPUs, before any strategy.
-2. **Use tensor parallelism inside a fast domain.** Tensor parallelism (Megatron
-   style) splits each matrix multiply across GPUs and all-reduces twice per
-   layer, so it demands high bandwidth. Keep the tensor-parallel group inside
-   one NVLink node (typically 8 GPUs); do not span it across slower InfiniBand
-   between nodes.
+1. **Compute the memory shortfall before choosing anything.** Weight bytes are
+   roughly parameters times dtype bytes: a 70B model in FP16 wants about 140 GB
+   and will not fit one 80 GB H100. For training, add optimizer state and
+   activations. The gap sets the minimum GPU count ahead of any strategy.
+2. **Keep tensor parallelism inside one fast domain.** Tensor parallelism
+   (Megatron style) splits each matrix multiply across GPUs and all-reduces twice
+   per layer, so it demands high bandwidth. Hold the tensor-parallel group within
+   a single NVLink node, usually 8 GPUs, and never stretch it over InfiniBand.
 3. **Use pipeline parallelism to cross node boundaries.** Pipeline parallelism
    assigns whole layer ranges to different GPUs and passes activations point to
-   point, which is cheap enough for inter-node links. The cost is the pipeline
-   bubble: idle time at the start and end of each batch.
-4. **Shrink the pipeline bubble with more microbatches.** Bubble fraction is
-   about (stages - 1) / microbatches. With 4 stages, 4 microbatches waste
-   roughly 43 percent; 16 microbatches cut that near 16 percent. Raise
-   microbatch count until the bubble is small or memory runs out.
-5. **Reach for expert parallelism only with a mixture-of-experts model.** MoE
-   routes each token to a few experts, so you place different experts on
-   different GPUs and pay an all-to-all to shuffle tokens. It scales parameter
-   count without scaling per-token compute, but the all-to-all is bursty and
-   sensitive to routing imbalance.
-6. **Compose the strategies as a grid, not a pile.** Real deployments combine
-   them: tensor parallel within a node, pipeline parallel across nodes, data
-   parallel over the whole thing. Write the factorization explicitly, for
-   example TP=8, PP=4, DP=2 for 64 GPUs, so total GPUs equal the product.
-7. **Profile the interconnect before trusting the plan.** Run an NCCL bandwidth
-   test and confirm NVLink and InfiniBand deliver expected GB/s. A tensor
-   parallel group accidentally crossing a PCIe hop, not NVLink, can halve
-   throughput while looking correctly configured.
+   point, cheap enough for inter-node links. Its cost is the pipeline bubble: the
+   idle time at the head and tail of every batch.
+4. **Cut the bubble with more microbatches.** The bubble fraction is about
+   (stages - 1) / microbatches. Four stages with four microbatches waste near 43
+   percent; sixteen microbatches bring that under 20 percent. Raise the count
+   until the bubble is small or activation memory runs out.
+5. **Reach for expert parallelism only in a mixture-of-experts model.** MoE
+   routes each token to a few experts, so you scatter experts across GPUs and pay
+   an all-to-all to shuffle tokens. It grows parameter count without growing
+   per-token compute, but the all-to-all is bursty and punishes routing
+   imbalance.
+6. **Factor the strategies as a grid, not a heap.** Real runs combine them:
+   tensor parallel within a node, pipeline parallel across nodes, data parallel
+   over the whole. Write the factorization out, for example TP=8, PP=4, DP=2 for
+   64 GPUs, so the product equals your total device count exactly.
+7. **Measure the interconnect before you trust the plan.** Run an NCCL bandwidth
+   test and confirm NVLink and InfiniBand hit their expected GB/s. A tensor
+   parallel group that accidentally crosses a PCIe hop instead of NVLink can halve
+   throughput while looking correctly configured on paper.
 
 ## Litmus tests
 
-- Does the tensor-parallel group stay within one NVLink node?
-- Is your microbatch count high enough that the pipeline bubble is under 20 percent?
-- Do TP times PP times DP equal your total GPU count exactly?
-- Did an NCCL bandwidth test confirm each parallel group runs over the link you assumed?
+- Does the tensor-parallel group stay inside one NVLink node?
+- Is the microbatch count high enough to keep the pipeline bubble under 20 percent?
+- Does TP times PP times DP equal your total GPU count exactly?
+- Did an NCCL bandwidth test confirm each group runs over the link you assumed?
 
 ## Boundaries
 
-This is about how to split one model across devices. Scaling replicas of a
-fitting model and overlapping gradient communication is distributed-training-scaling;
-sizing and running a single serving replica is vllm-serving. The exact
-partition that is optimal depends on your model shape and cluster topology, which
-is measurement, not doctrine.
+This is about splitting one model across devices. Replicating a model that does
+fit and overlapping gradient communication is distributed-training-scaling; sizing
+and running a single serving replica is vllm-serving. The partition that is
+optimal depends on your model shape and cluster topology, which is a matter of
+measurement, not doctrine.

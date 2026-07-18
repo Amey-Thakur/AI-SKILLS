@@ -1,6 +1,6 @@
 ---
 name: launch-review
-description: Run a launch review that gates a release behind a readiness checklist, named sign-offs, and a clear no-go authority. Use before shipping a user-facing launch where a bad release is costly to walk back.
+description: Run a launch review that gates a release behind a readiness checklist, named sign-offs, and a clear no-go authority. Use when a user-facing launch is about to ship and a bad release would be costly to walk back.
 ---
 
 # Launch review

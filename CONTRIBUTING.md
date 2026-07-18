@@ -40,5 +40,5 @@ A pull request merges when all five hold:
 
 ## Style
 
-Plain words over jargon. Second person, active voice, short sentences. No
-em dashes. The strongest entries in the library set the voice to match.
+Plain words over jargon. Second person, active voice, short sentences. The
+strongest entries in the library set the voice to match.

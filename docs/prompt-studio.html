@@ -28,7 +28,7 @@
   .head { padding: 56px 0 8px; }
   .head .kicker { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
   .head h1 { font-family: "Play", ui-monospace, Consolas, monospace; color: var(--text-1); font-size: clamp(32px, 5vw, 48px); letter-spacing: -1.2px; line-height: 1.08; margin-bottom: 18px; }
-  .head h1 em { font-style: normal; color: var(--accent); text-shadow: 0 0 30px var(--accent-soft); }
+  .head h1 em { font-style: normal; color: var(--accent); }
   .head p.lede { color: var(--text-2); font-size: 19px; max-width: 720px; margin-bottom: 10px; }
   .head p.small { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12.5px; color: var(--text-4); }
 
@@ -82,6 +82,9 @@
   .settings b { color: var(--text-1); }
   .settings .temp-note { display: block; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); font-family: "Source Serif 4", Georgia, serif; font-size: 13.5px; color: var(--text-3); }
   .build-row { display: flex; align-items: center; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+  .mode-toggle { display: inline-flex; gap: 0; border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 3px; margin-bottom: 18px; background: var(--surface-2); }
+  .mode-btn { border: none; background: none; color: var(--text-3); font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; padding: 7px 16px; border-radius: var(--radius-pill); cursor: pointer; transition: background-color .15s, color .15s; }
+  .mode-btn[aria-pressed="true"] { background: var(--accent); color: #12100e; }
   .stages { list-style: none; display: grid; gap: 8px; }
   .stages li { display: flex; gap: 10px; align-items: baseline; font-size: 13.5px; color: var(--text-3); }
   .stages b { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
@@ -135,7 +138,7 @@
 <main class="wrap">
   <div class="head">
     <p class="kicker">Prompt Studio</p>
-    <h1>Say it <em>your way</em>.<br>Get a prompt that <em>works</em>.</h1>
+    <h1>Say it your way.<br>Get a prompt that <em>works</em>.</h1>
     <p class="lede">
       Type the job the way it comes out: typos, half-thoughts, frustration. A
       five-stage pipeline cleans it, works out what you actually need, and
@@ -147,8 +150,12 @@
   <div class="builder">
     <form id="form" autocomplete="off">
       <fieldset>
-        <legend>The job, in your own words</legend>
-        <label class="f" for="raw">What do you need done?</label>
+        <legend id="input-legend">The job, in your own words</legend>
+        <div class="mode-toggle" role="group" aria-label="What you have">
+          <button type="button" class="mode-btn" data-mode="describe" aria-pressed="true">Describe a job</button>
+          <button type="button" class="mode-btn" data-mode="improve" aria-pressed="false">Improve a prompt</button>
+        </div>
+        <label class="f" for="raw" id="raw-label">What do you need done?</label>
         <textarea id="raw" rows="6" placeholder="However it comes out is fine. Example: pls fix my reactt app its sooo slow, the api takes 4evr and users r leaving, i h8 this"></textarea>
         <div class="build-row">
           <button type="button" id="build" class="btn primary">Build the prompt</button>
@@ -219,6 +226,7 @@
   var typeRow = document.getElementById("type-row");
   var typeChips = document.getElementById("type-chips");
   var chosenType = null;
+  var mode = "describe";
 
   /* Stage 1: Clean. Fix the misspellings and shorthand people actually type,
      and read past frustration instead of copying it into the prompt. */
@@ -358,7 +366,13 @@
     };
     L.push("# Role"); L.push(roles[type]); L.push("");
     L.push("# Objective");
-    L.push(text.charAt(0).toUpperCase() + text.slice(1).replace(/[.!?]*$/, "."));
+    /* In improve mode the input is a whole prompt, so the objective is its
+       core ask (first sentence); the rest flows into facts and constraints
+       below. In describe mode the whole description is the objective. */
+    var objective = mode === "improve"
+      ? (text.split(/(?<=[.!?])\s+/)[0] || text)
+      : text;
+    L.push(objective.charAt(0).toUpperCase() + objective.slice(1).replace(/[.!?]*$/, "."));
     L.push("");
     if (facts.tech.length || facts.numbers.length) {
       L.push("# Known facts");
@@ -470,15 +484,20 @@
     settingsBox.innerHTML = SETTINGS[type] + TEMP_NOTE;
     settingsBox.hidden = false;
 
-    var cleanDetail = cleaned.fixes ? "fixed " + cleaned.fixes + " spelling" + (cleaned.fixes === 1 ? "" : "s") : "nothing to fix";
-    if (cleaned.vented) cleanDetail += ", read past the frustration";
+    var cleanDetail;
+    if (mode === "improve") {
+      cleanDetail = cleaned.fixes ? "read the prompt, tidied " + cleaned.fixes + " thing" + (cleaned.fixes === 1 ? "" : "s") : "read the prompt as written";
+    } else {
+      cleanDetail = cleaned.fixes ? "fixed " + cleaned.fixes + " spelling" + (cleaned.fixes === 1 ? "" : "s") : "nothing to fix";
+      if (cleaned.vented) cleanDetail += ", read past the frustration";
+    }
     var understood = [];
     if (facts.goal) understood.push("goal: " + facts.goal);
     if (facts.tech.length) understood.push("involves: " + facts.tech.slice(0, 4).join(", "));
     if (facts.numbers.length) understood.push(facts.numbers.length + " figure" + (facts.numbers.length === 1 ? "" : "s"));
     if (facts.limits.length) understood.push(facts.limits.length + " hard limit" + (facts.limits.length === 1 ? "" : "s"));
     stagesEl.innerHTML =
-      stageLine(1, "Clean", cleanDetail) +
+      stageLine(1, mode === "improve" ? "Read" : "Clean", cleanDetail) +
       stageLine(2, "Understand", understood.length ? understood.join(" · ") : "a short request, taken at face value") +
       stageLine(3, "Classify", TYPE_NAMES[type] + (chosenType ? " (your override)" : "")) +
       stageLine(4, "Compose", prompt.split("\n# ").length - 0 + " strict sections, assumptions and verification built in") +
@@ -513,8 +532,53 @@
     if ((e.ctrlKey || e.metaKey) && e.key === "Enter") runPipeline();
   });
 
-  document.getElementById("try-example").addEventListener("click", function () {
-    raw.value = "pls fix my reactt app its sooo slow, the api call takes like 8 seconds n users r leaving, i h8 this, need it under 500ms asap";
+  /* Two ways to arrive: a job you describe, or a prompt you already have and
+     want stronger. The pipeline is the same; only the framing changes. */
+  var COPY = {
+    describe: {
+      legend: "The job, in your own words",
+      label: "What do you need done?",
+      placeholder: "However it comes out is fine. Example: pls fix my reactt app its sooo slow, the api takes 4evr and users r leaving, i h8 this",
+      build: "Build the prompt",
+      example: "Try a messy example",
+      sample: "pls fix my reactt app its sooo slow, the api call takes like 8 seconds n users r leaving, i h8 this, need it under 500ms asap"
+    },
+    improve: {
+      legend: "The prompt you want stronger",
+      label: "Paste your prompt",
+      placeholder: "Paste any prompt and it comes back structured. Example: write me a blog post about our app launch, make it good and not too long",
+      build: "Improve it",
+      example: "Try a weak example",
+      sample: "write me a blog post about our new app launch, make it good and engaging and not too long, aimed at students"
+    }
+  };
+  var legendEl = document.getElementById("input-legend");
+  var rawLabelEl = document.getElementById("raw-label");
+  var buildBtn = document.getElementById("build");
+  var exampleBtn = document.getElementById("try-example");
+  var modeBtns = Array.prototype.slice.call(document.querySelectorAll(".mode-btn"));
+
+  function applyMode() {
+    var c = COPY[mode];
+    legendEl.textContent = c.legend;
+    rawLabelEl.textContent = c.label;
+    raw.placeholder = c.placeholder;
+    buildBtn.textContent = c.build;
+    exampleBtn.textContent = c.example;
+    modeBtns.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-mode") === mode ? "true" : "false"); });
+  }
+  modeBtns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      if (mode === b.getAttribute("data-mode")) return;
+      mode = b.getAttribute("data-mode");
+      chosenType = null;
+      applyMode();
+      if (raw.value.trim()) runPipeline();
+    });
+  });
+
+  exampleBtn.addEventListener("click", function () {
+    raw.value = COPY[mode].sample;
     more.value = "";
     chosenType = null;
     runPipeline();

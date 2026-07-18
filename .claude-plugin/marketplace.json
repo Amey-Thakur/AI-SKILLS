@@ -28,6 +28,17 @@
       ]
     },
     {
+      "name": "architecture-skills",
+      "description": "3 working methods for architecture: architecture-decision-records, hexagonal-architecture, layered-architecture, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/architecture/architecture-decision-records",
+        "./skills/architecture/hexagonal-architecture",
+        "./skills/architecture/layered-architecture"
+      ]
+    },
+    {
       "name": "big-tech-processes-skills",
       "description": "28 working methods for big tech processes: architecture-review-board, bar-raiser-interviewing, canary-analysis, chaos-gameday, and more",
       "source": "./",
@@ -240,12 +251,14 @@
     },
     {
       "name": "gpu-ai-infrastructure-skills",
-      "description": "17 working methods for gpu ai infrastructure: checkpointing-large-training, cuda-kernel-basics, fault-tolerant-training, gpu-cluster-scheduling, and more",
+      "description": "20 working methods for gpu ai infrastructure: ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics, distributed-training-scaling, and more",
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/gpu-ai-infrastructure/ai-datacenter-networking",
         "./skills/gpu-ai-infrastructure/checkpointing-large-training",
         "./skills/gpu-ai-infrastructure/cuda-kernel-basics",
+        "./skills/gpu-ai-infrastructure/distributed-training-scaling",
         "./skills/gpu-ai-infrastructure/fault-tolerant-training",
         "./skills/gpu-ai-infrastructure/gpu-cluster-scheduling",
         "./skills/gpu-ai-infrastructure/gpu-cost-planning",
@@ -256,6 +269,7 @@
         "./skills/gpu-ai-infrastructure/kernel-profiling-nsight",
         "./skills/gpu-ai-infrastructure/mixed-precision-deployment",
         "./skills/gpu-ai-infrastructure/model-parallelism",
+        "./skills/gpu-ai-infrastructure/onnx-export-pipelines",
         "./skills/gpu-ai-infrastructure/quantization-deployment",
         "./skills/gpu-ai-infrastructure/tensor-core-utilization",
         "./skills/gpu-ai-infrastructure/tensorrt-optimization",
@@ -278,17 +292,23 @@
     },
     {
       "name": "multi-agent-teams-skills",
-      "description": "17 working methods for multi agent teams: agent-arch-board, agent-code-review-loop, agent-design-review-panel, agent-docs-guild, and more",
+      "description": "24 working methods for multi agent teams: agent-arch-board, agent-code-review-loop, agent-competitive-analysis-team, agent-data-team, and more",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/multi-agent-teams/agent-arch-board",
         "./skills/multi-agent-teams/agent-code-review-loop",
+        "./skills/multi-agent-teams/agent-competitive-analysis-team",
+        "./skills/multi-agent-teams/agent-data-team",
         "./skills/multi-agent-teams/agent-design-review-panel",
         "./skills/multi-agent-teams/agent-docs-guild",
+        "./skills/multi-agent-teams/agent-growth-team",
         "./skills/multi-agent-teams/agent-handoff-protocol",
+        "./skills/multi-agent-teams/agent-hiring-panel",
         "./skills/multi-agent-teams/agent-incident-response-team",
         "./skills/multi-agent-teams/agent-migration-crew",
+        "./skills/multi-agent-teams/agent-oncall-triage",
+        "./skills/multi-agent-teams/agent-orchestration-antipatterns",
         "./skills/multi-agent-teams/agent-pm-eng-loop",
         "./skills/multi-agent-teams/agent-postmortem-council",
         "./skills/multi-agent-teams/agent-qa-gate",
@@ -296,6 +316,7 @@
         "./skills/multi-agent-teams/agent-release-train",
         "./skills/multi-agent-teams/agent-research-lab",
         "./skills/multi-agent-teams/agent-role-definition",
+        "./skills/multi-agent-teams/agent-security-audit-team",
         "./skills/multi-agent-teams/agent-startup-squad",
         "./skills/multi-agent-teams/agent-support-desk",
         "./skills/multi-agent-teams/virtual-engineering-team"
@@ -303,7 +324,7 @@
     },
     {
       "name": "performance-skills",
-      "description": "23 working methods for performance: algorithmic-optimization, async-io-patterns, batching-and-debouncing, benchmark-design, and more",
+      "description": "28 working methods for performance: algorithmic-optimization, async-io-patterns, batching-and-debouncing, benchmark-design, and more",
       "source": "./",
       "strict": false,
       "skills": [
@@ -312,6 +333,7 @@
         "./skills/performance/batching-and-debouncing",
         "./skills/performance/benchmark-design",
         "./skills/performance/big-o-in-practice",
+        "./skills/performance/bundle-size",
         "./skills/performance/cache-invalidation",
         "./skills/performance/caching-strategy",
         "./skills/performance/cdn-strategy",
@@ -319,8 +341,10 @@
         "./skills/performance/concurrency-tuning",
         "./skills/performance/connection-pooling",
         "./skills/performance/cpu-optimization",
+        "./skills/performance/font-loading",
         "./skills/performance/gc-tuning",
         "./skills/performance/http-caching",
+        "./skills/performance/image-optimization",
         "./skills/performance/io-optimization",
         "./skills/performance/lazy-loading",
         "./skills/performance/materialized-views",
@@ -329,7 +353,9 @@
         "./skills/performance/pagination-performance",
         "./skills/performance/performance-budgets",
         "./skills/performance/performance-optimization",
-        "./skills/performance/serialization-performance"
+        "./skills/performance/serialization-performance",
+        "./skills/performance/startup-time",
+        "./skills/performance/web-vitals"
       ]
     },
     {
