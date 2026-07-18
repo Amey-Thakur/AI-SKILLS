@@ -1,0 +1,23 @@
+# Name: .gitignore
+# Purpose: Keep local and generated cruft out of the repository.
+# Description: The library is plain markdown with a small Node build script.
+#   Only dependency folders, OS files, and editor scratch need ignoring; the
+#   catalog files the script generates are committed, since they are what
+#   agents fetch.
+# License: MIT
+# Author: Amey Thakur (https://github.com/Amey-Thakur)
+# Date: 2026-07-18
+
+# Node
+node_modules/
+npm-debug.log*
+.npm/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp

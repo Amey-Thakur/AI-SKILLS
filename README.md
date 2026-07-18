@@ -109,9 +109,6 @@ One row per category; every entry, with its one-line description, is in
 | [prompts](CATALOG.md#prompts-22) | 22 | api-docs-from-code, brainstorm-divergent, bug-report-triage |
 <!-- library:end -->
 
-Every entry is complete and self-contained. No stubs, no "coming soon",
-no entry that exists to pad the count.
-
 <br>
 
 ## Principles

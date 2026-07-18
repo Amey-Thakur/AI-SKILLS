@@ -1,0 +1,29 @@
+# Name: CITATION.cff
+# Purpose: Machine-readable citation metadata for this repository.
+# Description: GitHub reads this file to offer a "Cite this repository" button
+#   and to format the reference. It lets anyone credit the library correctly
+#   in papers, posts, and other work.
+# License: MIT
+# Author: Amey Thakur (https://github.com/Amey-Thakur)
+# Date: 2026-07-18
+cff-version: 1.2.0
+title: "AI-SKILLS: skills and prompts for every AI coding agent"
+message: "If you use this library, please cite it using the metadata below."
+type: software
+authors:
+  - given-names: Amey
+    family-names: Thakur
+    email: ameythakur20@gmail.com
+    website: "https://github.com/Amey-Thakur"
+repository-code: "https://github.com/Amey-Thakur/AI-SKILLS"
+url: "https://amey-thakur.github.io/AI-SKILLS/"
+license: MIT
+version: "2.0.0"
+date-released: "2026-07-18"
+keywords:
+  - ai-skills
+  - agent-skills
+  - prompts
+  - prompt-engineering
+  - llm
+  - developer-tools

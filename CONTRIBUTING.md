@@ -1,20 +1,19 @@
 # Contributing
 
-Every entry clears one bar: a stranger can pick it up and get better work out
-of their agent today. The rules below serve that and nothing else.
+Every entry clears one bar: a stranger picks it up and gets better work from
+their AI in one step. The rules below serve that.
 
 ## Add a skill
 
 1. One folder under `skills/<category>/`, kebab-case, with one `SKILL.md`
-   inside. Pick the existing category that fits; propose a new one only when
-   none does. Run `node scripts/build-index.mjs` after: it regenerates the
+   inside. Choose the category that fits; propose a new one only when none
+   does. Run `node scripts/build-index.mjs` afterward. It regenerates the
    index, catalog, README table, and marketplace, and fails on any mistake.
 2. Frontmatter carries `name` (matching the folder) and a one-sentence
-   `description` written for the moment an agent decides whether to load it.
-   Say when to use it, not what it contains.
+   `description` for the moment an AI decides whether to load the skill. Say
+   when to use it, not what it contains.
 3. The body is a method: the steps in order, what good output looks like, and
-   the boundaries (where it does not apply, what it must never do). Not an
-   essay about the topic.
+   where it does not apply. Not an essay about the topic.
 4. Aim for 300 to 700 words. Shorter is usually a prompt; longer is usually
    two skills.
 
@@ -31,10 +30,10 @@ of their agent today. The rules below serve that and nothing else.
 
 A pull request merges when all five hold:
 
-- **Complete.** Usable end to end as submitted. No `TODO`, no "coming soon".
+- **Complete.** Usable end to end as submitted.
 - **Self-contained.** Nothing outside the entry is needed to use it.
 - **Honest.** Claims match what it does, and limits are stated.
-- **Distinct.** It does a job no existing entry covers. If one is close,
+- **Distinct.** It covers a job no existing entry covers. If one is close,
   improve that one instead.
 - **Portable.** Plain markdown and YAML frontmatter, no tool-specific syntax
   in the body.
@@ -42,5 +41,4 @@ A pull request merges when all five hold:
 ## Style
 
 Plain words over jargon. Second person, active voice, short sentences. No
-em dashes. Match the voice of the strongest entry already in the collection,
-and read two of them before you start.
+em dashes. The strongest entries in the library set the voice to match.

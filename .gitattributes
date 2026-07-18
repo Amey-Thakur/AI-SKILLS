@@ -1,0 +1,31 @@
+# Name: .gitattributes
+# Purpose: Line ending normalization and file classification for Git.
+# Description: Every text file is stored and checked out with LF endings so
+#   Windows, macOS, and Linux contributors produce identical diffs. Binary
+#   assets are marked so Git never tries to normalize or diff them, and the
+#   generated catalog files are flagged so pull request views collapse them
+#   and language stats ignore them.
+# Tech Stack: Git
+# License: MIT
+# Author: Amey Thakur (https://github.com/Amey-Thakur)
+# Date: 2026-07-18
+
+# Every text file: LF in the repository and in the working tree
+* text=auto eol=lf
+
+# Binary assets: never normalized, never text-diffed
+*.png binary
+*.svg binary
+*.ico binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# Generated catalog: collapsed in pull request diffs, excluded from stats.
+# Edit the skills and prompts, then run scripts/build-index.mjs to regenerate.
+index.json linguist-generated=true
+docs/index.json linguist-generated=true
+ecosystem.json linguist-generated=true
+docs/ecosystem.json linguist-generated=true
+llms.txt linguist-generated=true
+CATALOG.md linguist-generated=true
