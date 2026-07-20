@@ -98,12 +98,14 @@ One row per category; every entry, with its one-line description, is in
 | [debugging](CATALOG.md#debugging-32) | 32 | alerting-design, binary-search-debugging, browser-devtools |
 | [devops](CATALOG.md#devops-4) | 4 | ci-cd, containerization, dependency-management |
 | [documentation](CATALOG.md#documentation-2) | 2 | code-documentation, technical-writing |
-| [frontend](CATALOG.md#frontend-2) | 2 | design-systems, frontend-state |
+| [frontend](CATALOG.md#frontend-10) | 10 | design-systems, error-boundaries-ui, form-handling |
 | [git-collaboration](CATALOG.md#git-collaboration-2) | 2 | commit-messages, git-workflow |
 | [gpu-ai-infrastructure](CATALOG.md#gpu-ai-infrastructure-20) | 20 | ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics |
 | [llm-engineering](CATALOG.md#llm-engineering-5) | 5 | agent-memory, mcp-server, prompt-engineering |
+| [mobile](CATALOG.md#mobile-5) | 5 | deep-linking, mobile-navigation, mobile-performance |
 | [multi-agent-teams](CATALOG.md#multi-agent-teams-24) | 24 | agent-arch-board, agent-code-review-loop, agent-competitive-analysis-team |
 | [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
+| [python](CATALOG.md#python-6) | 6 | python-asyncio, python-environments, python-generators |
 | [research-thinking](CATALOG.md#research-thinking-1) | 1 | research-synthesis |
 | [security](CATALOG.md#security-43) | 43 | api-security, audit-logging, authn-design |
 | [testing](CATALOG.md#testing-41) | 41 | api-testing, approval-testing, assertion-libraries |

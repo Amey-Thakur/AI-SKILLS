@@ -231,12 +231,20 @@
     },
     {
       "name": "frontend-skills",
-      "description": "2 working methods for frontend: design-systems, frontend-state, and more",
+      "description": "10 working methods for frontend: design-systems, error-boundaries-ui, form-handling, frontend-routing, and more",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/frontend/design-systems",
-        "./skills/frontend/frontend-state"
+        "./skills/frontend/error-boundaries-ui",
+        "./skills/frontend/form-handling",
+        "./skills/frontend/frontend-routing",
+        "./skills/frontend/frontend-state",
+        "./skills/frontend/list-virtualization",
+        "./skills/frontend/optimistic-ui",
+        "./skills/frontend/react-component-design",
+        "./skills/frontend/react-hooks-discipline",
+        "./skills/frontend/ui-state-machines"
       ]
     },
     {
@@ -288,6 +296,19 @@
         "./skills/llm-engineering/prompt-engineering",
         "./skills/llm-engineering/rag-pipeline",
         "./skills/llm-engineering/staying-on-task"
+      ]
+    },
+    {
+      "name": "mobile-skills",
+      "description": "5 working methods for mobile: deep-linking, mobile-navigation, mobile-performance, offline-first-mobile, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/mobile/deep-linking",
+        "./skills/mobile/mobile-navigation",
+        "./skills/mobile/mobile-performance",
+        "./skills/mobile/offline-first-mobile",
+        "./skills/mobile/push-notifications"
       ]
     },
     {
@@ -356,6 +377,20 @@
         "./skills/performance/serialization-performance",
         "./skills/performance/startup-time",
         "./skills/performance/web-vitals"
+      ]
+    },
+    {
+      "name": "python-skills",
+      "description": "6 working methods for python: python-asyncio, python-environments, python-generators, python-packaging, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/python/python-asyncio",
+        "./skills/python/python-environments",
+        "./skills/python/python-generators",
+        "./skills/python/python-packaging",
+        "./skills/python/python-typing",
+        "./skills/python/pythonic-idioms"
       ]
     },
     {
