@@ -323,14 +323,24 @@
     },
     {
       "name": "devops-skills",
-      "description": "4 working methods for devops: ci-cd, containerization, dependency-management, incident-postmortem, and more",
+      "description": "14 working methods for devops: artifact-versioning, blue-green-deployments, capacity-planning, ci-cd, and more",
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/devops/artifact-versioning",
+        "./skills/devops/blue-green-deployments",
+        "./skills/devops/capacity-planning",
         "./skills/devops/ci-cd",
+        "./skills/devops/config-management",
         "./skills/devops/containerization",
         "./skills/devops/dependency-management",
-        "./skills/devops/incident-postmortem"
+        "./skills/devops/deployment-pipelines",
+        "./skills/devops/docker-image-optimization",
+        "./skills/devops/gitops-workflow",
+        "./skills/devops/incident-postmortem",
+        "./skills/devops/infrastructure-monitoring",
+        "./skills/devops/rollback-strategy",
+        "./skills/devops/runbook-writing"
       ]
     },
     {

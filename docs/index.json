@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 494,
+    "skills": 504,
     "prompts": 22,
     "categories": 35
   },
@@ -1650,11 +1650,43 @@
     },
     {
       "kind": "skill",
+      "name": "artifact-versioning",
+      "category": "devops",
+      "description": "Build immutable, provenance-tracked artifacts promoted unchanged through environments. Use when designing a build pipeline or fixing \"works in staging, breaks in prod\" from rebuilt binaries.",
+      "path": "skills/devops/artifact-versioning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/artifact-versioning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "blue-green-deployments",
+      "category": "devops",
+      "description": "Deploy with two swappable environments for instant cutover and rollback, handling database compatibility. Use when zero-downtime releases matter or designing a low-risk deploy mechanism.",
+      "path": "skills/devops/blue-green-deployments/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/blue-green-deployments/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "capacity-planning",
+      "category": "devops",
+      "description": "Forecast load, size headroom, discover scaling limits before they bite, and track cost curves. Use when planning capacity for growth or a known traffic event, or after a saturation incident.",
+      "path": "skills/devops/capacity-planning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/capacity-planning/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "ci-cd",
       "category": "devops",
       "description": "Build CI/CD pipelines that are fast, trustworthy, and safe to deploy from. Use when creating or fixing continuous integration, delivery workflows, or release automation.",
       "path": "skills/devops/ci-cd/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/ci-cd/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "config-management",
+      "category": "devops",
+      "description": "Separate config from code and secrets, keep environments at parity, and change config safely. Use when wiring application configuration for deployment or fixing environment-specific bugs and config drift.",
+      "path": "skills/devops/config-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/config-management/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1674,11 +1706,59 @@
     },
     {
       "kind": "skill",
+      "name": "deployment-pipelines",
+      "category": "devops",
+      "description": "Design deploy pipelines with staged gates, environment promotion, and speed budgets that keep releases safe and frequent. Use when building a CD pipeline or fixing slow, flaky, or unsafe deploys.",
+      "path": "skills/devops/deployment-pipelines/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/deployment-pipelines/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "docker-image-optimization",
+      "category": "devops",
+      "description": "Build small, fast, secure container images with layer caching, multi-stage builds, and a minimal base policy. Use when images are bloated, slow to build, or failing security scans.",
+      "path": "skills/devops/docker-image-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/docker-image-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "gitops-workflow",
+      "category": "devops",
+      "description": "Manage deployments declaratively from git as the source of truth, with reconciliation, secrets handling, and drift alerts. Use when adopting GitOps or fixing config drift and untracked cluster changes.",
+      "path": "skills/devops/gitops-workflow/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/gitops-workflow/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "incident-postmortem",
       "category": "devops",
       "description": "Write a blameless postmortem that finds systemic causes and produces actions that actually prevent recurrence. Use after an outage, data incident, or serious bug reaches users.",
       "path": "skills/devops/incident-postmortem/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/incident-postmortem/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "infrastructure-monitoring",
+      "category": "devops",
+      "description": "Monitor systems with the golden signals and USE method, alerts that page only on user impact, and runbook-linked responses. Use when instrumenting infrastructure or fixing alert fatigue.",
+      "path": "skills/devops/infrastructure-monitoring/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/infrastructure-monitoring/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "rollback-strategy",
+      "category": "devops",
+      "description": "Decide rollback versus fix-forward, handle migrations safely, and rehearse rollbacks so they work under pressure. Use when planning deploy safety or during an incident deciding how to recover.",
+      "path": "skills/devops/rollback-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/rollback-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "runbook-writing",
+      "category": "devops",
+      "description": "Write runbooks with executable steps, decision points, and per-step verification that a stressed responder can follow. Use when documenting operational procedures or reducing 3am guesswork.",
+      "path": "skills/devops/runbook-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/devops/runbook-writing/SKILL.md"
     },
     {
       "kind": "skill",
