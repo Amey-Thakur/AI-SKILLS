@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 484,
+    "skills": 494,
     "prompts": 22,
     "categories": 35
   },
@@ -2266,6 +2266,70 @@
     },
     {
       "kind": "skill",
+      "name": "context-window-management",
+      "category": "llm-engineering",
+      "description": "Budget tokens across system prompt, history, and retrieval, with compaction that keeps what matters. Use when building long-running LLM applications or debugging context overflow and mid-conversation amnesia.",
+      "path": "skills/llm-engineering/context-window-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/context-window-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "conversation-design",
+      "category": "llm-engineering",
+      "description": "Design multi-turn conversational systems with state tracking, memory injection, topic handling, and repair. Use when building chat assistants or fixing bots that forget, drift, or trap users.",
+      "path": "skills/llm-engineering/conversation-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/conversation-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "embeddings-selection",
+      "category": "llm-engineering",
+      "description": "Choose embedding models and chunking by evaluating retrieval on your own corpus, not by leaderboard rank. Use when building semantic search or RAG and deciding how to embed and chunk.",
+      "path": "skills/llm-engineering/embeddings-selection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/embeddings-selection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "fine-tuning-vs-prompting",
+      "category": "llm-engineering",
+      "description": "Decide between prompting, retrieval, and fine-tuning with eval-first discipline and honest data requirements. Use when someone proposes fine-tuning or a prompt has hit its ceiling.",
+      "path": "skills/llm-engineering/fine-tuning-vs-prompting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/fine-tuning-vs-prompting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "llm-cost-latency",
+      "category": "llm-engineering",
+      "description": "Cut LLM cost and latency with caching, model tiering, prompt diet, batching, and streaming UX. Use when the inference bill or response time needs engineering down.",
+      "path": "skills/llm-engineering/llm-cost-latency/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/llm-cost-latency/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "llm-eval-design",
+      "category": "llm-engineering",
+      "description": "Build LLM evaluations from real failures with calibrated judges and regression gates that catch quality drift. Use when an LLM feature needs quality measurement or prompts change without anyone knowing what broke.",
+      "path": "skills/llm-engineering/llm-eval-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/llm-eval-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "llm-guardrails",
+      "category": "llm-engineering",
+      "description": "Layer input filtering, output validation, injection defense, and human escalation around LLM features. Use when an LLM system faces untrusted input or its outputs carry real-world consequences.",
+      "path": "skills/llm-engineering/llm-guardrails/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/llm-guardrails/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "llm-observability",
+      "category": "llm-engineering",
+      "description": "Instrument LLM applications with request tracing, token accounting, quality signals, and feedback loops. Use when running LLM features in production or debugging why quality or cost moved.",
+      "path": "skills/llm-engineering/llm-observability/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/llm-observability/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "mcp-server",
       "category": "llm-engineering",
       "description": "Design a Model Context Protocol server that exposes tools and data to AI agents safely and legibly. Use when building an MCP server or deciding what to expose to an agent.",
@@ -2295,6 +2359,22 @@
       "description": "Keep an AI agent anchored to the actual goal through long or messy work. Use at the start of any multi-step task, and whenever work begins to drift, balloon, or stall.",
       "path": "skills/llm-engineering/staying-on-task/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/staying-on-task/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "structured-output",
+      "category": "llm-engineering",
+      "description": "Get valid structured data from LLMs with schema-constrained generation, boundary validation, and repair loops. Use when LLM output feeds code, databases, or downstream systems.",
+      "path": "skills/llm-engineering/structured-output/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/structured-output/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tool-use-design",
+      "category": "llm-engineering",
+      "description": "Design LLM tools with descriptions that steer, granularity that composes, and error returns the model can act on. Use when building agent tool sets or debugging wrong-tool and wrong-argument failures.",
+      "path": "skills/llm-engineering/tool-use-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/tool-use-design/SKILL.md"
     },
     {
       "kind": "skill",

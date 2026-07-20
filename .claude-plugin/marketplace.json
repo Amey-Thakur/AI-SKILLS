@@ -471,15 +471,25 @@
     },
     {
       "name": "llm-engineering-skills",
-      "description": "5 working methods for llm engineering: agent-memory, mcp-server, prompt-engineering, rag-pipeline, and more",
+      "description": "15 working methods for llm engineering: agent-memory, context-window-management, conversation-design, embeddings-selection, and more",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/llm-engineering/agent-memory",
+        "./skills/llm-engineering/context-window-management",
+        "./skills/llm-engineering/conversation-design",
+        "./skills/llm-engineering/embeddings-selection",
+        "./skills/llm-engineering/fine-tuning-vs-prompting",
+        "./skills/llm-engineering/llm-cost-latency",
+        "./skills/llm-engineering/llm-eval-design",
+        "./skills/llm-engineering/llm-guardrails",
+        "./skills/llm-engineering/llm-observability",
         "./skills/llm-engineering/mcp-server",
         "./skills/llm-engineering/prompt-engineering",
         "./skills/llm-engineering/rag-pipeline",
-        "./skills/llm-engineering/staying-on-task"
+        "./skills/llm-engineering/staying-on-task",
+        "./skills/llm-engineering/structured-output",
+        "./skills/llm-engineering/tool-use-design"
       ]
     },
     {

@@ -111,7 +111,7 @@ One row per category; every entry, with its one-line description, is in
 | [git-collaboration](CATALOG.md#git-collaboration-2) | 2 | commit-messages, git-workflow |
 | [gpu-ai-infrastructure](CATALOG.md#gpu-ai-infrastructure-20) | 20 | ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics |
 | [jvm-dotnet](CATALOG.md#jvm-dotnet-10) | 10 | csharp-linq, dotnet-async, dotnet-dependency-injection |
-| [llm-engineering](CATALOG.md#llm-engineering-5) | 5 | agent-memory, mcp-server, prompt-engineering |
+| [llm-engineering](CATALOG.md#llm-engineering-15) | 15 | agent-memory, context-window-management, conversation-design |
 | [machine-learning](CATALOG.md#machine-learning-12) | 12 | cross-validation, drift-monitoring, experiment-tracking |
 | [mobile](CATALOG.md#mobile-10) | 10 | app-store-readiness, deep-linking, mobile-input-ux |
 | [multi-agent-teams](CATALOG.md#multi-agent-teams-24) | 24 | agent-arch-board, agent-code-review-loop, agent-competitive-analysis-team |
