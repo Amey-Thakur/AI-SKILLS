@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 456,
+    "skills": 466,
     "prompts": 22,
-    "categories": 32
+    "categories": 33
   },
   "categories": [
     "accessibility",
@@ -37,6 +37,7 @@
     "mobile",
     "multi-agent-teams",
     "performance",
+    "product-management",
     "python",
     "research-thinking",
     "scripting-automation",
@@ -2740,6 +2741,86 @@
       "description": "Improve LCP, CLS, and INP by measuring field data, tracing each metric to its specific cause, and applying the fixes known to move that number. Use when Core Web Vitals are failing or a page feels slow to load, settle, or respond.",
       "path": "skills/performance/web-vitals/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/web-vitals/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "ab-test-design",
+      "category": "product-management",
+      "description": "Design product experiments with real hypotheses, honest sample-size math, guardrails, and peeking discipline. Use when validating a change by experiment or reviewing a test before believing its result.",
+      "path": "skills/product-management/ab-test-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/ab-test-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "customer-interviews",
+      "category": "product-management",
+      "description": "Run user interviews that surface past behavior instead of polite predictions, recruited and synthesized honestly. Use when gathering qualitative evidence for product decisions.",
+      "path": "skills/product-management/customer-interviews/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/customer-interviews/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "feature-sunsetting",
+      "category": "product-management",
+      "description": "Remove features with usage evidence, migration paths, and staged communication that preserves trust. Use when retiring product surface or making the case that something should die.",
+      "path": "skills/product-management/feature-sunsetting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/feature-sunsetting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mvp-scoping",
+      "category": "product-management",
+      "description": "Scope minimum viable products around the riskiest assumption, cut to learn fast, and hold an explicit quality floor. Use when defining a first version or rescuing an MVP that grew into a v3.",
+      "path": "skills/product-management/mvp-scoping/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/mvp-scoping/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "prioritization-frameworks",
+      "category": "product-management",
+      "description": "Prioritize with RICE-class scoring applied honestly, cost of delay, and refusals that carry reasons. Use when ordering a roadmap or defending priority calls under stakeholder pressure.",
+      "path": "skills/product-management/prioritization-frameworks/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/prioritization-frameworks/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "product-discovery",
+      "category": "product-management",
+      "description": "Validate problems before building solutions using evidence standards and opportunity mapping. Use when deciding what to build next or challenging a solution that arrived before its problem.",
+      "path": "skills/product-management/product-discovery/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/product-discovery/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "product-launch",
+      "category": "product-management",
+      "description": "Launch features through tiered rollouts, a readiness checklist, coordinated comms, and a post-launch review. Use when shipping something users will notice or coordinating a cross-team release moment.",
+      "path": "skills/product-management/product-launch/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/product-launch/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "product-metrics",
+      "category": "product-management",
+      "description": "Choose a north star with input metrics you can move, guardrails you must not break, and defenses against vanity. Use when defining product measurement or auditing a dashboard full of numbers nobody acts on.",
+      "path": "skills/product-management/product-metrics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/product-metrics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "roadmap-communication",
+      "category": "product-management",
+      "description": "Communicate roadmaps with now/next/later horizons, honest commitment levels, and audience-shaped views. Use when publishing product direction or managing the fallout of roadmap changes.",
+      "path": "skills/product-management/roadmap-communication/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/roadmap-communication/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "user-story-writing",
+      "category": "product-management",
+      "description": "Write user stories around outcomes with testable acceptance criteria, sliced thin enough to ship in days. Use when turning product intent into buildable work or fixing a backlog of vague tickets.",
+      "path": "skills/product-management/user-story-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/user-story-writing/SKILL.md"
     },
     {
       "kind": "skill",

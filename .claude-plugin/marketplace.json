@@ -555,6 +555,24 @@
       ]
     },
     {
+      "name": "product-management-skills",
+      "description": "10 working methods for product management: ab-test-design, customer-interviews, feature-sunsetting, mvp-scoping, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/product-management/ab-test-design",
+        "./skills/product-management/customer-interviews",
+        "./skills/product-management/feature-sunsetting",
+        "./skills/product-management/mvp-scoping",
+        "./skills/product-management/prioritization-frameworks",
+        "./skills/product-management/product-discovery",
+        "./skills/product-management/product-launch",
+        "./skills/product-management/product-metrics",
+        "./skills/product-management/roadmap-communication",
+        "./skills/product-management/user-story-writing"
+      ]
+    },
+    {
       "name": "python-skills",
       "description": "14 working methods for python: pytest-mastery, python-asyncio, python-cli-tools, python-concurrency, and more",
       "source": "./",

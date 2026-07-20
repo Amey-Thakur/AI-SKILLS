@@ -114,6 +114,7 @@ One row per category; every entry, with its one-line description, is in
 | [mobile](CATALOG.md#mobile-10) | 10 | app-store-readiness, deep-linking, mobile-input-ux |
 | [multi-agent-teams](CATALOG.md#multi-agent-teams-24) | 24 | agent-arch-board, agent-code-review-loop, agent-competitive-analysis-team |
 | [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
+| [product-management](CATALOG.md#product-management-10) | 10 | ab-test-design, customer-interviews, feature-sunsetting |
 | [python](CATALOG.md#python-14) | 14 | pytest-mastery, python-asyncio, python-cli-tools |
 | [research-thinking](CATALOG.md#research-thinking-1) | 1 | research-synthesis |
 | [scripting-automation](CATALOG.md#scripting-automation-10) | 10 | automation-guardrails, bash-robustness, cli-ux-design |
