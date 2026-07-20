@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 398,
+    "skills": 410,
     "prompts": 22,
-    "categories": 26
+    "categories": 27
   },
   "categories": [
     "accessibility",
@@ -30,6 +30,7 @@
     "git-collaboration",
     "gpu-ai-infrastructure",
     "llm-engineering",
+    "machine-learning",
     "mobile",
     "multi-agent-teams",
     "performance",
@@ -1934,6 +1935,102 @@
       "description": "Keep an AI agent anchored to the actual goal through long or messy work. Use at the start of any multi-step task, and whenever work begins to drift, balloon, or stall.",
       "path": "skills/llm-engineering/staying-on-task/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/staying-on-task/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cross-validation",
+      "category": "machine-learning",
+      "description": "Pick CV schemes that respect time and grouping, nest them for tuning, and read the variance, not just the mean. Use when data is too small for a single split or when validating tuning claims.",
+      "path": "skills/machine-learning/cross-validation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/cross-validation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "drift-monitoring",
+      "category": "machine-learning",
+      "description": "Detect input, prediction, and performance drift with reference windows and act through retrain or rollback triggers. Use when operating models in production or diagnosing gradual quality decay.",
+      "path": "skills/machine-learning/drift-monitoring/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/drift-monitoring/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "experiment-tracking",
+      "category": "machine-learning",
+      "description": "Record every training run's code, data, config, and results so any model is reproducible and comparisons are honest. Use when setting up ML experiment infrastructure or untangling which run produced the prod model.",
+      "path": "skills/machine-learning/experiment-tracking/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/experiment-tracking/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "feature-engineering",
+      "category": "machine-learning",
+      "description": "Build features that are leakage-free, temporally correct, and reproducible between training and serving. Use when creating model inputs or auditing a suspiciously good offline score.",
+      "path": "skills/machine-learning/feature-engineering/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/feature-engineering/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "hyperparameter-tuning",
+      "category": "machine-learning",
+      "description": "Search hyperparameters with budgets, early stopping, and validation hygiene so gains are real, not overfit to the dev set. Use when tuning models or reviewing tuning claims.",
+      "path": "skills/machine-learning/hyperparameter-tuning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/hyperparameter-tuning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "imbalanced-data",
+      "category": "machine-learning",
+      "description": "Handle skewed classes with threshold moving, weighting, and PR-based evaluation instead of reflexive resampling. Use when the positive class is rare and accuracy looks deceptively high.",
+      "path": "skills/machine-learning/imbalanced-data/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/imbalanced-data/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "ml-baselines",
+      "category": "machine-learning",
+      "description": "Establish heuristic and simple-model baselines that bound what complexity is worth. Use when starting any ML project or auditing whether a complex model earns its cost.",
+      "path": "skills/machine-learning/ml-baselines/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/ml-baselines/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "ml-error-analysis",
+      "category": "machine-learning",
+      "description": "Review model errors by hand, discover failing slices, and decide whether data or model fixes pay more. Use when a model underperforms and you need to know why before spending compute.",
+      "path": "skills/machine-learning/ml-error-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/ml-error-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "ml-problem-framing",
+      "category": "machine-learning",
+      "description": "Frame ML problems around a decision, a measurable target, and honest error costs before touching models. Use when scoping an ML project or reviewing whether one should exist.",
+      "path": "skills/machine-learning/ml-problem-framing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/ml-problem-framing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "model-deployment",
+      "category": "machine-learning",
+      "description": "Ship models through batch, online, or edge patterns with shadow testing, gated rollouts, and rollback. Use when moving a model to production or designing the serving architecture.",
+      "path": "skills/machine-learning/model-deployment/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/model-deployment/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "model-evaluation",
+      "category": "machine-learning",
+      "description": "Evaluate models with cost-aligned metrics, slice analysis, calibration, and uncertainty, not a single accuracy number. Use when choosing evaluation metrics or judging whether a model is fit to ship.",
+      "path": "skills/machine-learning/model-evaluation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/model-evaluation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "train-test-discipline",
+      "category": "machine-learning",
+      "description": "Split data before looking at it, respect time and groups, and quarantine the test set so scores mean something. Use when setting up ML evaluation or auditing why offline metrics did not survive production.",
+      "path": "skills/machine-learning/train-test-discipline/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/train-test-discipline/SKILL.md"
     },
     {
       "kind": "skill",

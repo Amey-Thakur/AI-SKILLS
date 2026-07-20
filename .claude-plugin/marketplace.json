@@ -399,6 +399,26 @@
       ]
     },
     {
+      "name": "machine-learning-skills",
+      "description": "12 working methods for machine learning: cross-validation, drift-monitoring, experiment-tracking, feature-engineering, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/machine-learning/cross-validation",
+        "./skills/machine-learning/drift-monitoring",
+        "./skills/machine-learning/experiment-tracking",
+        "./skills/machine-learning/feature-engineering",
+        "./skills/machine-learning/hyperparameter-tuning",
+        "./skills/machine-learning/imbalanced-data",
+        "./skills/machine-learning/ml-baselines",
+        "./skills/machine-learning/ml-error-analysis",
+        "./skills/machine-learning/ml-problem-framing",
+        "./skills/machine-learning/model-deployment",
+        "./skills/machine-learning/model-evaluation",
+        "./skills/machine-learning/train-test-discipline"
+      ]
+    },
+    {
       "name": "mobile-skills",
       "description": "10 working methods for mobile: app-store-readiness, deep-linking, mobile-input-ux, mobile-navigation, and more",
       "source": "./",
