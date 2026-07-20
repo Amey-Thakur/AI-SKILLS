@@ -135,6 +135,24 @@
       ]
     },
     {
+      "name": "career-communication-skills",
+      "description": "10 working methods for career communication: async-communication, conference-talks, engineering-resume, giving-feedback, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/career-communication/async-communication",
+        "./skills/career-communication/conference-talks",
+        "./skills/career-communication/engineering-resume",
+        "./skills/career-communication/giving-feedback",
+        "./skills/career-communication/mentoring-engineers",
+        "./skills/career-communication/one-on-one-meetings",
+        "./skills/career-communication/receiving-feedback",
+        "./skills/career-communication/salary-negotiation",
+        "./skills/career-communication/status-updates",
+        "./skills/career-communication/technical-interviews"
+      ]
+    },
+    {
       "name": "cloud-skills",
       "description": "12 working methods for cloud: autoscaling-policies, cloud-cost-optimization, cloud-disaster-recovery, cloud-migration, and more",
       "source": "./",
