@@ -300,15 +300,20 @@
     },
     {
       "name": "mobile-skills",
-      "description": "5 working methods for mobile: deep-linking, mobile-navigation, mobile-performance, offline-first-mobile, and more",
+      "description": "10 working methods for mobile: app-store-readiness, deep-linking, mobile-input-ux, mobile-navigation, and more",
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/mobile/app-store-readiness",
         "./skills/mobile/deep-linking",
+        "./skills/mobile/mobile-input-ux",
         "./skills/mobile/mobile-navigation",
+        "./skills/mobile/mobile-observability",
         "./skills/mobile/mobile-performance",
+        "./skills/mobile/mobile-release-strategy",
         "./skills/mobile/offline-first-mobile",
-        "./skills/mobile/push-notifications"
+        "./skills/mobile/push-notifications",
+        "./skills/mobile/react-native-architecture"
       ]
     },
     {
@@ -381,14 +386,22 @@
     },
     {
       "name": "python-skills",
-      "description": "6 working methods for python: python-asyncio, python-environments, python-generators, python-packaging, and more",
+      "description": "14 working methods for python: pytest-mastery, python-asyncio, python-cli-tools, python-concurrency, and more",
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/python/pytest-mastery",
         "./skills/python/python-asyncio",
+        "./skills/python/python-cli-tools",
+        "./skills/python/python-concurrency",
+        "./skills/python/python-dataclasses",
+        "./skills/python/python-decorators",
         "./skills/python/python-environments",
+        "./skills/python/python-error-handling",
         "./skills/python/python-generators",
         "./skills/python/python-packaging",
+        "./skills/python/python-performance",
+        "./skills/python/python-project-structure",
         "./skills/python/python-typing",
         "./skills/python/pythonic-idioms"
       ]

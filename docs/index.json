@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 325,
+    "skills": 338,
     "prompts": 22,
     "categories": 21
   },
@@ -1452,11 +1452,27 @@
     },
     {
       "kind": "skill",
+      "name": "app-store-readiness",
+      "category": "mobile",
+      "description": "Pass App Store and Play review on the first attempt and recover fast from rejections. Use when preparing a mobile submission, writing store metadata, or responding to a review rejection.",
+      "path": "skills/mobile/app-store-readiness/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mobile/app-store-readiness/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "deep-linking",
       "category": "mobile",
       "description": "Set up universal and app links that open the right in-app screen from a URL, with deferred links surviving install and a routing layer that validates every parameter. Use when adding shareable links, wiring campaign or email links into the app, or debugging links that open the browser instead.",
       "path": "skills/mobile/deep-linking/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mobile/deep-linking/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mobile-input-ux",
+      "category": "mobile",
+      "description": "Make mobile forms and controls fast to use with correct keyboards, reachable touch targets, and restrained haptics. Use when building input-heavy mobile screens or fixing form abandonment on small screens.",
+      "path": "skills/mobile/mobile-input-ux/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mobile/mobile-input-ux/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1468,11 +1484,27 @@
     },
     {
       "kind": "skill",
+      "name": "mobile-observability",
+      "category": "mobile",
+      "description": "Instrument mobile apps for crash-free rate, ANR and hang detection, and release health you can gate rollouts on. Use when setting up mobile monitoring or deciding whether a release is healthy enough to expand.",
+      "path": "skills/mobile/mobile-observability/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mobile/mobile-observability/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "mobile-performance",
       "category": "mobile",
       "description": "Make a mobile app fast where users feel it by protecting startup time, keeping lists at frame rate, handling images at display size, and keeping work off the main thread. Use when the app is slow to open, scrolling janks, or the UI freezes during work.",
       "path": "skills/mobile/mobile-performance/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mobile/mobile-performance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mobile-release-strategy",
+      "category": "mobile",
+      "description": "Ship mobile releases through phased rollouts with hotfix paths and a forced-upgrade policy that never strands users. Use when planning app releases, a rollout gate, or recovery from a bad build in the stores.",
+      "path": "skills/mobile/mobile-release-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mobile/mobile-release-strategy/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1489,6 +1521,14 @@
       "description": "Deliver mobile push that users keep enabled by asking permission at the right moment, managing token lifecycle, using categories and silent pushes correctly, and respecting quiet hours. Use when adding push, debugging non-delivery, or opt-in rates are low.",
       "path": "skills/mobile/push-notifications/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mobile/push-notifications/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "react-native-architecture",
+      "category": "mobile",
+      "description": "Structure React Native apps around clear native-module boundaries and decide honestly when RN fits. Use when starting or auditing a React Native codebase, or weighing RN against fully native development.",
+      "path": "skills/mobile/react-native-architecture/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mobile/react-native-architecture/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1908,6 +1948,14 @@
     },
     {
       "kind": "skill",
+      "name": "pytest-mastery",
+      "category": "python",
+      "description": "Structure pytest suites with fixtures, parametrize, and markers so tests stay fast, isolated, and readable. Use when writing Python tests or untangling a slow, fixture-heavy suite.",
+      "path": "skills/python/pytest-mastery/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/pytest-mastery/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "python-asyncio",
       "category": "python",
       "description": "Decide whether asyncio pays off, keep the event loop unblocked, and structure concurrency with TaskGroup and disciplined cancellation. Use when writing async Python or diagnosing a hung, slow, or silently-failing event loop.",
@@ -1916,11 +1964,51 @@
     },
     {
       "kind": "skill",
+      "name": "python-cli-tools",
+      "category": "python",
+      "description": "Build Python command-line tools with correct exit codes, stream discipline, and a distributable entry point. Use when writing or packaging a CLI in Python.",
+      "path": "skills/python/python-cli-tools/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/python-cli-tools/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "python-concurrency",
+      "category": "python",
+      "description": "Choose threads, processes, or asyncio from workload shape, and use concurrent.futures without deadlocks. Use when parallelizing Python work or debugging concurrency that is slower than sequential.",
+      "path": "skills/python/python-concurrency/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/python-concurrency/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "python-dataclasses",
+      "category": "python",
+      "description": "Choose between dataclass, NamedTuple, and pydantic, and configure frozen, slots, and validation correctly. Use when modeling structured data in Python or reviewing class boilerplate.",
+      "path": "skills/python/python-dataclasses/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/python-dataclasses/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "python-decorators",
+      "category": "python",
+      "description": "Write decorators that preserve signatures and compose cleanly, including parameterized and class-applied forms. Use when adding cross-cutting behavior to Python functions or fixing decorator-related introspection breakage.",
+      "path": "skills/python/python-decorators/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/python-decorators/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "python-environments",
       "category": "python",
       "description": "Pick an environment manager, pin dependencies with a lockfile, and produce reproducible installs that never touch system Python. Use when setting up a project's dependencies, fixing \"works on my machine\", or hardening CI installs.",
       "path": "skills/python/python-environments/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/python-environments/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "python-error-handling",
+      "category": "python",
+      "description": "Design exception hierarchies, catch narrowly, and preserve error context so failures stay diagnosable. Use when structuring errors in a Python library or application, or cleaning up broad except blocks.",
+      "path": "skills/python/python-error-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/python-error-handling/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1937,6 +2025,22 @@
       "description": "Package a Python project with a single pyproject.toml, a src layout, and a clean build/publish path to PyPI including entry points. Use when turning a script or library into an installable, distributable package.",
       "path": "skills/python/python-packaging/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/python-packaging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "python-performance",
+      "category": "python",
+      "description": "Profile first, then remove Python-level overhead through vectorization, better algorithms, or a compiled extension. Use when Python code is too slow and you must decide where and how to optimize.",
+      "path": "skills/python/python-performance/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/python-performance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "python-project-structure",
+      "category": "python",
+      "description": "Organize Python packages so imports stay clean, cycles cannot form, and the layout scales with the codebase. Use when starting a Python project or untangling circular imports and grab-bag modules.",
+      "path": "skills/python/python-project-structure/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/python-project-structure/SKILL.md"
     },
     {
       "kind": "skill",
