@@ -97,6 +97,7 @@ One row per category; every entry, with its one-line description, is in
 | [cloud](CATALOG.md#cloud-12) | 12 | autoscaling-policies, cloud-cost-optimization, cloud-disaster-recovery |
 | [code-quality](CATALOG.md#code-quality-37) | 37 | api-surface-minimalism, assertion-density, boolean-parameters |
 | [css-styling](CATALOG.md#css-styling-10) | 10 | css-animations, css-architecture, css-cascade |
+| [data-engineering](CATALOG.md#data-engineering-12) | 12 | batch-vs-streaming, change-data-capture, data-lineage |
 | [databases](CATALOG.md#databases-2) | 2 | schema-design, sql-optimization |
 | [debugging](CATALOG.md#debugging-32) | 32 | alerting-design, binary-search-debugging, browser-devtools |
 | [devops](CATALOG.md#devops-4) | 4 | ci-cd, containerization, dependency-management |

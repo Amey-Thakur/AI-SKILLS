@@ -218,6 +218,26 @@
       ]
     },
     {
+      "name": "data-engineering-skills",
+      "description": "12 working methods for data engineering: batch-vs-streaming, change-data-capture, data-lineage, data-partitioning, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/data-engineering/batch-vs-streaming",
+        "./skills/data-engineering/change-data-capture",
+        "./skills/data-engineering/data-lineage",
+        "./skills/data-engineering/data-partitioning",
+        "./skills/data-engineering/data-pipeline-design",
+        "./skills/data-engineering/data-quality-checks",
+        "./skills/data-engineering/data-retention",
+        "./skills/data-engineering/etl-vs-elt",
+        "./skills/data-engineering/incremental-processing",
+        "./skills/data-engineering/pipeline-orchestration",
+        "./skills/data-engineering/schema-evolution",
+        "./skills/data-engineering/warehouse-modeling"
+      ]
+    },
+    {
       "name": "databases-skills",
       "description": "2 working methods for databases: schema-design, sql-optimization, and more",
       "source": "./",

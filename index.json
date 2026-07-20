@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 386,
+    "skills": 398,
     "prompts": 22,
-    "categories": 25
+    "categories": 26
   },
   "categories": [
     "accessibility",
@@ -20,6 +20,7 @@
     "cloud",
     "code-quality",
     "css-styling",
+    "data-engineering",
     "databases",
     "debugging",
     "devops",
@@ -1125,6 +1126,102 @@
       "description": "Set a type scale, measure, and loading strategy that make text readable and stable across devices. Use when establishing typography for a site or fixing cramped, shifting, or slow-loading text.",
       "path": "skills/css-styling/web-typography/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/web-typography/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "batch-vs-streaming",
+      "category": "data-engineering",
+      "description": "Choose batch or streaming from honest latency requirements and operate the complexity you actually need. Use when designing a data flow or reviewing whether a streaming system earns its cost.",
+      "path": "skills/data-engineering/batch-vs-streaming/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/batch-vs-streaming/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "change-data-capture",
+      "category": "data-engineering",
+      "description": "Replicate database changes via log-based CDC with correct snapshot handling, ordering, and schema-change survival. Use when streaming OLTP changes to warehouses, caches, or search without touching app code.",
+      "path": "skills/data-engineering/change-data-capture/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/change-data-capture/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-lineage",
+      "category": "data-engineering",
+      "description": "Capture table and column-level lineage to answer impact and provenance questions before changes and during incidents. Use when planning schema changes, debugging bad numbers, or building data-platform trust.",
+      "path": "skills/data-engineering/data-lineage/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/data-lineage/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-partitioning",
+      "category": "data-engineering",
+      "description": "Partition datasets by pruning-friendly keys with healthy file sizes and scheduled compaction. Use when laying out lake or warehouse tables, or fixing slow scans and small-file explosions.",
+      "path": "skills/data-engineering/data-partitioning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/data-partitioning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-pipeline-design",
+      "category": "data-engineering",
+      "description": "Build data pipelines that rerun safely, backfill cleanly, and tolerate late data. Use when designing batch or streaming pipelines or fixing ones that need manual babysitting.",
+      "path": "skills/data-engineering/data-pipeline-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/data-pipeline-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-quality-checks",
+      "category": "data-engineering",
+      "description": "Layer freshness, volume, schema, and distribution checks with quarantine and alert discipline. Use when adding quality gates to pipelines or when consumers keep finding bad data first.",
+      "path": "skills/data-engineering/data-quality-checks/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/data-quality-checks/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-retention",
+      "category": "data-engineering",
+      "description": "Implement retention tiers, legal holds, and deletion pipelines that actually delete, including GDPR-style erasure. Use when defining how long data lives or building the machinery that enforces it.",
+      "path": "skills/data-engineering/data-retention/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/data-retention/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "etl-vs-elt",
+      "category": "data-engineering",
+      "description": "Place transformations before or after loading based on warehouse economics, governance, and reuse. Use when architecting a data platform or deciding where a transformation should live.",
+      "path": "skills/data-engineering/etl-vs-elt/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/etl-vs-elt/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "incremental-processing",
+      "category": "data-engineering",
+      "description": "Process only new and changed data with watermarks, merge strategies, and a full-refresh escape hatch. Use when full-table rebuilds get slow or costly and models must go incremental.",
+      "path": "skills/data-engineering/incremental-processing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/incremental-processing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pipeline-orchestration",
+      "category": "data-engineering",
+      "description": "Orchestrate data DAGs with data-aware scheduling, bounded retries, and SLAs that page the right owner. Use when structuring workflows in an orchestrator or fixing 3am cron archaeology.",
+      "path": "skills/data-engineering/pipeline-orchestration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/pipeline-orchestration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "schema-evolution",
+      "category": "data-engineering",
+      "description": "Evolve data schemas with compatibility rules, producer contracts, and registries so downstream never breaks silently. Use when changing event or table schemas that other teams consume.",
+      "path": "skills/data-engineering/schema-evolution/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/schema-evolution/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "warehouse-modeling",
+      "category": "data-engineering",
+      "description": "Model warehouse tables with explicit grain, conformed dimensions, and deliberate SCD handling. Use when designing analytics schemas or fixing double-counted metrics and unjoinable tables.",
+      "path": "skills/data-engineering/warehouse-modeling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/warehouse-modeling/SKILL.md"
     },
     {
       "kind": "skill",
