@@ -39,6 +39,28 @@
       ]
     },
     {
+      "name": "backend-skills",
+      "description": "14 working methods for backend: api-error-responses, api-versioning, background-jobs, file-storage-design, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/backend/api-error-responses",
+        "./skills/backend/api-versioning",
+        "./skills/backend/background-jobs",
+        "./skills/backend/file-storage-design",
+        "./skills/backend/graceful-shutdown",
+        "./skills/backend/health-checks",
+        "./skills/backend/idempotency-keys",
+        "./skills/backend/message-queues",
+        "./skills/backend/multi-tenancy",
+        "./skills/backend/request-validation",
+        "./skills/backend/rest-endpoint-design",
+        "./skills/backend/timeouts-and-retries",
+        "./skills/backend/transactional-outbox",
+        "./skills/backend/webhooks-design"
+      ]
+    },
+    {
       "name": "big-tech-processes-skills",
       "description": "28 working methods for big tech processes: architecture-review-board, bar-raiser-interviewing, canary-analysis, chaos-gameday, and more",
       "source": "./",

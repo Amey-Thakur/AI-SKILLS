@@ -6,14 +6,15 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 348,
+    "skills": 362,
     "prompts": 22,
-    "categories": 22
+    "categories": 23
   },
   "categories": [
     "accessibility",
     "apis",
     "architecture",
+    "backend",
     "big-tech-processes",
     "big-tech-roles",
     "code-quality",
@@ -74,6 +75,118 @@
       "description": "Organize a system into layers with one permitted direction of dependency and enforce that direction mechanically at the import level. Use when a codebase is sliding toward tangled cross-references and you need a rule a linter can check, not a convention people forget.",
       "path": "skills/architecture/layered-architecture/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/layered-architecture/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "api-error-responses",
+      "category": "backend",
+      "description": "Return structured problem+json errors with stable codes, retryability signals, and correlation ids. Use when standardizing API error shapes or making failures debuggable across services.",
+      "path": "skills/backend/api-error-responses/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/api-error-responses/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "api-versioning",
+      "category": "backend",
+      "description": "Version APIs so existing clients keep working while the contract evolves, with a real sunset process. Use when choosing a versioning scheme or planning a breaking API change.",
+      "path": "skills/backend/api-versioning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/api-versioning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "background-jobs",
+      "category": "backend",
+      "description": "Run asynchronous work through queues with safe retries, poison-message handling, and idempotent jobs. Use when moving work out of the request path or fixing duplicated, stuck, or lost jobs.",
+      "path": "skills/backend/background-jobs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/background-jobs/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "file-storage-design",
+      "category": "backend",
+      "description": "Store user files in object storage with presigned transfers, validation, and lifecycle rules. Use when building upload/download features or moving file handling off application servers.",
+      "path": "skills/backend/file-storage-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/file-storage-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "graceful-shutdown",
+      "category": "backend",
+      "description": "Drain servers on SIGTERM so deploys and scale-downs drop zero requests and corrupt no jobs. Use when implementing shutdown handling or chasing errors that spike during every deploy.",
+      "path": "skills/backend/graceful-shutdown/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/graceful-shutdown/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "health-checks",
+      "category": "backend",
+      "description": "Design liveness, readiness, and startup probes that heal real failures without amplifying outages. Use when wiring health endpoints or debugging restart loops and drained fleets.",
+      "path": "skills/backend/health-checks/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/health-checks/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "idempotency-keys",
+      "category": "backend",
+      "description": "Implement idempotency keys so retried requests produce one effect and one canonical response. Use when making POST endpoints retry-safe, especially payments and order creation.",
+      "path": "skills/backend/idempotency-keys/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/idempotency-keys/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "message-queues",
+      "category": "backend",
+      "description": "Choose between queues and streams, and configure ordering, consumer groups, and dead letters correctly. Use when introducing async messaging or debugging lost, duplicated, or reordered messages.",
+      "path": "skills/backend/message-queues/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/message-queues/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "multi-tenancy",
+      "category": "backend",
+      "description": "Isolate tenants in data, code, and capacity, choosing the right isolation model per tier. Use when designing SaaS data models or containing noisy-neighbor and cross-tenant risks.",
+      "path": "skills/backend/multi-tenancy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/multi-tenancy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "request-validation",
+      "category": "backend",
+      "description": "Validate requests at the boundary with schemas, reject unknown fields, and return errors clients can act on. Use when hardening API input handling or standardizing validation across endpoints.",
+      "path": "skills/backend/request-validation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/request-validation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "rest-endpoint-design",
+      "category": "backend",
+      "description": "Model REST endpoints around resources with correct status codes, partial updates, and bulk operations. Use when designing or reviewing HTTP APIs and their URL, method, and response conventions.",
+      "path": "skills/backend/rest-endpoint-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/rest-endpoint-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "timeouts-and-retries",
+      "category": "backend",
+      "description": "Set timeout budgets per hop and retry policies that cannot amplify an outage, with circuit breakers where they pay. Use when calling downstream services or diagnosing cascading latency and retry storms.",
+      "path": "skills/backend/timeouts-and-retries/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/timeouts-and-retries/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "transactional-outbox",
+      "category": "backend",
+      "description": "Publish events reliably by writing them in the same transaction as state changes and relaying asynchronously. Use when a service must update its database and emit a message without losing either.",
+      "path": "skills/backend/transactional-outbox/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/transactional-outbox/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "webhooks-design",
+      "category": "backend",
+      "description": "Deliver webhooks with signatures, retries, and ordering rules consumers can actually build against. Use when adding webhooks to a product or hardening delivery and verification on either side.",
+      "path": "skills/backend/webhooks-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/backend/webhooks-design/SKILL.md"
     },
     {
       "kind": "skill",

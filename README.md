@@ -91,6 +91,7 @@ One row per category; every entry, with its one-line description, is in
 | [accessibility](CATALOG.md#accessibility-1) | 1 | accessibility-review |
 | [apis](CATALOG.md#apis-1) | 1 | api-design |
 | [architecture](CATALOG.md#architecture-3) | 3 | architecture-decision-records, hexagonal-architecture, layered-architecture |
+| [backend](CATALOG.md#backend-14) | 14 | api-error-responses, api-versioning, background-jobs |
 | [big-tech-processes](CATALOG.md#big-tech-processes-28) | 28 | architecture-review-board, bar-raiser-interviewing, canary-analysis |
 | [big-tech-roles](CATALOG.md#big-tech-roles-30) | 30 | accessibility-specialist-role, backend-engineer-role, cloud-architect-role |
 | [code-quality](CATALOG.md#code-quality-37) | 37 | api-surface-minimalism, assertion-density, boolean-parameters |
