@@ -108,7 +108,7 @@ One row per category; every entry, with its one-line description, is in
 | [embedded-iot](CATALOG.md#embedded-iot-8) | 8 | embedded-debugging, embedded-memory-constraints, firmware-ota-updates |
 | [frontend](CATALOG.md#frontend-10) | 10 | design-systems, error-boundaries-ui, form-handling |
 | [game-development](CATALOG.md#game-development-8) | 8 | entity-component-system, game-asset-pipeline, game-input-handling |
-| [git-collaboration](CATALOG.md#git-collaboration-2) | 2 | commit-messages, git-workflow |
+| [git-collaboration](CATALOG.md#git-collaboration-10) | 10 | branch-strategy, code-owners, commit-messages |
 | [gpu-ai-infrastructure](CATALOG.md#gpu-ai-infrastructure-20) | 20 | ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics |
 | [jvm-dotnet](CATALOG.md#jvm-dotnet-10) | 10 | csharp-linq, dotnet-async, dotnet-dependency-injection |
 | [llm-engineering](CATALOG.md#llm-engineering-15) | 15 | agent-memory, context-window-management, conversation-design |

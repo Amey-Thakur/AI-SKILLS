@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 514,
+    "skills": 522,
     "prompts": 22,
     "categories": 35
   },
@@ -2162,6 +2162,22 @@
     },
     {
       "kind": "skill",
+      "name": "branch-strategy",
+      "category": "git-collaboration",
+      "description": "Choose a branching model, default to trunk-based with short-lived branches, and set protection rules. Use when establishing team git workflow or fixing long-lived-branch merge pain.",
+      "path": "skills/git-collaboration/branch-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/branch-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-owners",
+      "category": "git-collaboration",
+      "description": "Design CODEOWNERS to route reviews and balance load without turning ownership into a gatekeeping bottleneck. Use when setting up review routing or fixing slow reviews and unclear responsibility.",
+      "path": "skills/git-collaboration/code-owners/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/code-owners/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "commit-messages",
       "category": "git-collaboration",
       "description": "Write commit messages that explain change and intent so history stays useful. Use when committing work or asked to draft a commit message for a diff.",
@@ -2170,11 +2186,59 @@
     },
     {
       "kind": "skill",
+      "name": "git-history-hygiene",
+      "category": "git-collaboration",
+      "description": "Keep git history atomic, bisectable, and readable with curated commits and disciplined force-push. Use when commits are messy, history is hard to navigate, or bisect and blame mislead.",
+      "path": "skills/git-collaboration/git-history-hygiene/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/git-history-hygiene/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "git-hooks-automation",
+      "category": "git-collaboration",
+      "description": "Automate checks with git hooks that stay fast, with server-side enforcement and documented escape hatches. Use when setting up pre-commit checks or fixing hooks that developers routinely bypass.",
+      "path": "skills/git-collaboration/git-hooks-automation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/git-hooks-automation/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "git-workflow",
       "category": "git-collaboration",
       "description": "Use git safely and legibly: branches, history, merges, conflicts, and recovery. Use when managing branches, cleaning history, resolving conflicts, or undoing mistakes.",
       "path": "skills/git-collaboration/git-workflow/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/git-workflow/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "merge-vs-rebase",
+      "category": "git-collaboration",
+      "description": "Choose merge or rebase by the history you want, use interactive rebase safely, and set a team policy. Use when deciding integration mechanics or resolving debates about git history style.",
+      "path": "skills/git-collaboration/merge-vs-rebase/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/merge-vs-rebase/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "monorepo-vs-polyrepo",
+      "category": "git-collaboration",
+      "description": "Decide between one repository and many by tooling readiness, coupling, and team autonomy, and plan the migration. Use when structuring repositories for multiple projects or reconsidering a painful split.",
+      "path": "skills/git-collaboration/monorepo-vs-polyrepo/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/monorepo-vs-polyrepo/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pull-request-size",
+      "category": "git-collaboration",
+      "description": "Keep pull requests small through vertical slicing and stacking, because review quality and latency both collapse with size. Use when PRs are too big to review well or sit for days.",
+      "path": "skills/git-collaboration/pull-request-size/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/pull-request-size/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "release-tagging",
+      "category": "git-collaboration",
+      "description": "Tag releases with semantic versions and signed tags, generate changelogs, and trigger builds from tags. Use when setting up a release process or fixing ambiguous, unsigned, or manual releases.",
+      "path": "skills/git-collaboration/release-tagging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/release-tagging/SKILL.md"
     },
     {
       "kind": "skill",

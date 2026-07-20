@@ -435,12 +435,20 @@
     },
     {
       "name": "git-collaboration-skills",
-      "description": "2 working methods for git collaboration: commit-messages, git-workflow, and more",
+      "description": "10 working methods for git collaboration: branch-strategy, code-owners, commit-messages, git-history-hygiene, and more",
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/git-collaboration/branch-strategy",
+        "./skills/git-collaboration/code-owners",
         "./skills/git-collaboration/commit-messages",
-        "./skills/git-collaboration/git-workflow"
+        "./skills/git-collaboration/git-history-hygiene",
+        "./skills/git-collaboration/git-hooks-automation",
+        "./skills/git-collaboration/git-workflow",
+        "./skills/git-collaboration/merge-vs-rebase",
+        "./skills/git-collaboration/monorepo-vs-polyrepo",
+        "./skills/git-collaboration/pull-request-size",
+        "./skills/git-collaboration/release-tagging"
       ]
     },
     {
