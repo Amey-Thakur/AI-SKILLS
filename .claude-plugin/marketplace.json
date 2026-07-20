@@ -386,6 +386,24 @@
       ]
     },
     {
+      "name": "jvm-dotnet-skills",
+      "description": "10 working methods for jvm dotnet: csharp-linq, dotnet-async, dotnet-dependency-injection, dotnet-minimal-apis, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/jvm-dotnet/csharp-linq",
+        "./skills/jvm-dotnet/dotnet-async",
+        "./skills/jvm-dotnet/dotnet-dependency-injection",
+        "./skills/jvm-dotnet/dotnet-minimal-apis",
+        "./skills/jvm-dotnet/java-collections",
+        "./skills/jvm-dotnet/jvm-gc-selection",
+        "./skills/jvm-dotnet/jvm-memory-model",
+        "./skills/jvm-dotnet/jvm-profiling",
+        "./skills/jvm-dotnet/kotlin-idioms",
+        "./skills/jvm-dotnet/spring-boot-discipline"
+      ]
+    },
+    {
       "name": "llm-engineering-skills",
       "description": "5 working methods for llm engineering: agent-memory, mcp-server, prompt-engineering, rag-pipeline, and more",
       "source": "./",

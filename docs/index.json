@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 420,
+    "skills": 430,
     "prompts": 22,
-    "categories": 28
+    "categories": 29
   },
   "categories": [
     "accessibility",
@@ -29,6 +29,7 @@
     "frontend",
     "git-collaboration",
     "gpu-ai-infrastructure",
+    "jvm-dotnet",
     "llm-engineering",
     "machine-learning",
     "mobile",
@@ -1896,6 +1897,86 @@
       "description": "Deploy an LLM on vLLM with continuous batching, deliberate VRAM planning, and multi-model hosting that never overcommits the card. Use when serving on vLLM and deciding memory fraction, context length, tensor parallel size, and how many models share a GPU.",
       "path": "skills/gpu-ai-infrastructure/vllm-serving/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/vllm-serving/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "csharp-linq",
+      "category": "jvm-dotnet",
+      "description": "Use LINQ with deferred execution understood, database translation respected, and loops chosen when they win. Use when writing C# queries over collections or ORMs, or debugging surprising LINQ behavior.",
+      "path": "skills/jvm-dotnet/csharp-linq/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/csharp-linq/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "dotnet-async",
+      "category": "jvm-dotnet",
+      "description": "Write async C# that never blocks on tasks, flows cancellation everywhere, and uses ValueTask where it pays. Use when writing .NET async code or debugging thread-pool starvation and deadlocks.",
+      "path": "skills/jvm-dotnet/dotnet-async/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/dotnet-async/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "dotnet-dependency-injection",
+      "category": "jvm-dotnet",
+      "description": "Use .NET's built-in DI with correct lifetimes, the options pattern, and constructor injection free of service-locator drift. Use when wiring .NET services or debugging captive-dependency and disposal bugs.",
+      "path": "skills/jvm-dotnet/dotnet-dependency-injection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/dotnet-dependency-injection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "dotnet-minimal-apis",
+      "category": "jvm-dotnet",
+      "description": "Build ASP.NET Core minimal APIs with organized endpoint groups, filters, typed results, and a clear line to MVC. Use when structuring .NET HTTP services or deciding between minimal APIs and controllers.",
+      "path": "skills/jvm-dotnet/dotnet-minimal-apis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/dotnet-minimal-apis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "java-collections",
+      "category": "jvm-dotnet",
+      "description": "Select Java collections by access pattern, use streams where they clarify, and default to immutability and records. Use when modeling data in Java or reviewing collection-heavy code.",
+      "path": "skills/jvm-dotnet/java-collections/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/java-collections/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "jvm-gc-selection",
+      "category": "jvm-dotnet",
+      "description": "Choose and size a JVM garbage collector from latency goals and allocation behavior, and read GC logs before tuning flags. Use when configuring JVM services or diagnosing pause and memory pressure problems.",
+      "path": "skills/jvm-dotnet/jvm-gc-selection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/jvm-gc-selection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "jvm-memory-model",
+      "category": "jvm-dotnet",
+      "description": "Apply happens-before reasoning, volatile, and safe publication to write correct concurrent Java/Kotlin. Use when writing shared-state JVM code or diagnosing visibility and reordering bugs.",
+      "path": "skills/jvm-dotnet/jvm-memory-model/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/jvm-memory-model/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "jvm-profiling",
+      "category": "jvm-dotnet",
+      "description": "Profile JVM services with async-profiler and JFR, separating CPU, allocation, and lock evidence, safely in production. Use when a JVM service is slow, hot, or memory-hungry and you need the cause.",
+      "path": "skills/jvm-dotnet/jvm-profiling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/jvm-profiling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "kotlin-idioms",
+      "category": "jvm-dotnet",
+      "description": "Write Kotlin that uses null safety, data classes, and coroutines as designed, with clean Java interop. Use when writing Kotlin or migrating Java code and habits to it.",
+      "path": "skills/jvm-dotnet/kotlin-idioms/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/kotlin-idioms/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "spring-boot-discipline",
+      "category": "jvm-dotnet",
+      "description": "Keep Spring Boot apps explicit with constructor injection, typed configuration, test slices, and restrained magic. Use when building or reviewing Spring Boot services that must stay debuggable.",
+      "path": "skills/jvm-dotnet/spring-boot-discipline/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/spring-boot-discipline/SKILL.md"
     },
     {
       "kind": "skill",
