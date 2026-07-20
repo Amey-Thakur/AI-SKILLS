@@ -330,6 +330,22 @@
       ]
     },
     {
+      "name": "embedded-iot-skills",
+      "description": "8 working methods for embedded iot: embedded-debugging, embedded-memory-constraints, firmware-ota-updates, interrupt-safe-code, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/embedded-iot/embedded-debugging",
+        "./skills/embedded-iot/embedded-memory-constraints",
+        "./skills/embedded-iot/firmware-ota-updates",
+        "./skills/embedded-iot/interrupt-safe-code",
+        "./skills/embedded-iot/iot-messaging",
+        "./skills/embedded-iot/low-power-design",
+        "./skills/embedded-iot/rtos-task-design",
+        "./skills/embedded-iot/sensor-data-handling"
+      ]
+    },
+    {
       "name": "frontend-skills",
       "description": "10 working methods for frontend: design-systems, error-boundaries-ui, form-handling, frontend-routing, and more",
       "source": "./",

@@ -103,6 +103,7 @@ One row per category; every entry, with its one-line description, is in
 | [devops](CATALOG.md#devops-4) | 4 | ci-cd, containerization, dependency-management |
 | [distributed-systems](CATALOG.md#distributed-systems-12) | 12 | backpressure, clock-skew, consensus-basics |
 | [documentation](CATALOG.md#documentation-2) | 2 | code-documentation, technical-writing |
+| [embedded-iot](CATALOG.md#embedded-iot-8) | 8 | embedded-debugging, embedded-memory-constraints, firmware-ota-updates |
 | [frontend](CATALOG.md#frontend-10) | 10 | design-systems, error-boundaries-ui, form-handling |
 | [game-development](CATALOG.md#game-development-8) | 8 | entity-component-system, game-asset-pipeline, game-input-handling |
 | [git-collaboration](CATALOG.md#git-collaboration-2) | 2 | commit-messages, git-workflow |
