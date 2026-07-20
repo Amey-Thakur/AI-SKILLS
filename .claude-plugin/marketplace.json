@@ -135,6 +135,26 @@
       ]
     },
     {
+      "name": "cloud-skills",
+      "description": "12 working methods for cloud: autoscaling-policies, cloud-cost-optimization, cloud-disaster-recovery, cloud-migration, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/cloud/autoscaling-policies",
+        "./skills/cloud/cloud-cost-optimization",
+        "./skills/cloud/cloud-disaster-recovery",
+        "./skills/cloud/cloud-migration",
+        "./skills/cloud/cloud-networking",
+        "./skills/cloud/cloud-storage-selection",
+        "./skills/cloud/iam-design",
+        "./skills/cloud/infrastructure-as-code",
+        "./skills/cloud/kubernetes-workloads",
+        "./skills/cloud/managed-vs-selfhosted",
+        "./skills/cloud/multi-region-design",
+        "./skills/cloud/serverless-tradeoffs"
+      ]
+    },
+    {
       "name": "code-quality-skills",
       "description": "37 working methods for code quality: api-surface-minimalism, assertion-density, boolean-parameters, boy-scout-rule, and more",
       "source": "./",

@@ -94,6 +94,7 @@ One row per category; every entry, with its one-line description, is in
 | [backend](CATALOG.md#backend-14) | 14 | api-error-responses, api-versioning, background-jobs |
 | [big-tech-processes](CATALOG.md#big-tech-processes-28) | 28 | architecture-review-board, bar-raiser-interviewing, canary-analysis |
 | [big-tech-roles](CATALOG.md#big-tech-roles-30) | 30 | accessibility-specialist-role, backend-engineer-role, cloud-architect-role |
+| [cloud](CATALOG.md#cloud-12) | 12 | autoscaling-policies, cloud-cost-optimization, cloud-disaster-recovery |
 | [code-quality](CATALOG.md#code-quality-37) | 37 | api-surface-minimalism, assertion-density, boolean-parameters |
 | [css-styling](CATALOG.md#css-styling-10) | 10 | css-animations, css-architecture, css-cascade |
 | [databases](CATALOG.md#databases-2) | 2 | schema-design, sql-optimization |
