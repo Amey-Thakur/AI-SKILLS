@@ -104,6 +104,7 @@ One row per category; every entry, with its one-line description, is in
 | [distributed-systems](CATALOG.md#distributed-systems-12) | 12 | backpressure, clock-skew, consensus-basics |
 | [documentation](CATALOG.md#documentation-2) | 2 | code-documentation, technical-writing |
 | [frontend](CATALOG.md#frontend-10) | 10 | design-systems, error-boundaries-ui, form-handling |
+| [game-development](CATALOG.md#game-development-8) | 8 | entity-component-system, game-asset-pipeline, game-input-handling |
 | [git-collaboration](CATALOG.md#git-collaboration-2) | 2 | commit-messages, git-workflow |
 | [gpu-ai-infrastructure](CATALOG.md#gpu-ai-infrastructure-20) | 20 | ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics |
 | [jvm-dotnet](CATALOG.md#jvm-dotnet-10) | 10 | csharp-linq, dotnet-async, dotnet-dependency-injection |

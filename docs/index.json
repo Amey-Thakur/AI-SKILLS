@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 440,
+    "skills": 448,
     "prompts": 22,
-    "categories": 30
+    "categories": 31
   },
   "categories": [
     "accessibility",
@@ -27,6 +27,7 @@
     "distributed-systems",
     "documentation",
     "frontend",
+    "game-development",
     "git-collaboration",
     "gpu-ai-infrastructure",
     "jvm-dotnet",
@@ -1722,6 +1723,70 @@
       "description": "Model UI as explicit finite states so impossible combinations cannot render. Use when a component juggles interacting booleans, shows contradictory states, or a flow has grown too many flags to reason about.",
       "path": "skills/frontend/ui-state-machines/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/frontend/ui-state-machines/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "entity-component-system",
+      "category": "game-development",
+      "description": "Model game objects as entities with data components processed by systems, and know when ECS complexity pays. Use when structuring game architecture or escaping deep inheritance hierarchies.",
+      "path": "skills/game-development/entity-component-system/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/game-development/entity-component-system/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "game-asset-pipeline",
+      "category": "game-development",
+      "description": "Automate asset import, atlasing, compression, and hot reload so content flows from tools to game without hand steps. Use when building content pipelines or fixing bloated builds and stale assets.",
+      "path": "skills/game-development/game-asset-pipeline/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/game-development/game-asset-pipeline/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "game-input-handling",
+      "category": "game-development",
+      "description": "Build input systems with action mapping, buffering, dead zones, and rebinding that feel responsive and fair. Use when wiring game controls or fixing input that feels laggy or eats presses.",
+      "path": "skills/game-development/game-input-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/game-development/game-input-handling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "game-loop-architecture",
+      "category": "game-development",
+      "description": "Structure game loops with fixed-timestep simulation, interpolated rendering, and spiral-of-death protection. Use when building a game loop or fixing physics that behaves differently across frame rates.",
+      "path": "skills/game-development/game-loop-architecture/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/game-development/game-loop-architecture/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "game-performance",
+      "category": "game-development",
+      "description": "Hold frame budgets through per-frame profiling, object pooling, draw-call batching, and allocation discipline. Use when a game stutters, drops frames, or needs optimization triage.",
+      "path": "skills/game-development/game-performance/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/game-development/game-performance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "game-save-systems",
+      "category": "game-development",
+      "description": "Build save systems with versioned formats, corruption resistance, and autosave that never loses real progress. Use when designing game persistence or debugging broken saves after updates.",
+      "path": "skills/game-development/game-save-systems/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/game-development/game-save-systems/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "multiplayer-netcode",
+      "category": "game-development",
+      "description": "Build multiplayer with an authoritative server, client prediction, reconciliation, and lag compensation. Use when adding networking to a game or fixing rubber-banding and desync.",
+      "path": "skills/game-development/multiplayer-netcode/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/game-development/multiplayer-netcode/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "procedural-generation",
+      "category": "game-development",
+      "description": "Generate game content with seeded determinism, layered noise, constraint solving, and validation that guarantees playability. Use when building procedural levels, worlds, or loot, or debugging generation that breaks.",
+      "path": "skills/game-development/procedural-generation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/game-development/procedural-generation/SKILL.md"
     },
     {
       "kind": "skill",

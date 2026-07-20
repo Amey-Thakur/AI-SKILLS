@@ -348,6 +348,22 @@
       ]
     },
     {
+      "name": "game-development-skills",
+      "description": "8 working methods for game development: entity-component-system, game-asset-pipeline, game-input-handling, game-loop-architecture, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/game-development/entity-component-system",
+        "./skills/game-development/game-asset-pipeline",
+        "./skills/game-development/game-input-handling",
+        "./skills/game-development/game-loop-architecture",
+        "./skills/game-development/game-performance",
+        "./skills/game-development/game-save-systems",
+        "./skills/game-development/multiplayer-netcode",
+        "./skills/game-development/procedural-generation"
+      ]
+    },
+    {
       "name": "git-collaboration-skills",
       "description": "2 working methods for git collaboration: commit-messages, git-workflow, and more",
       "source": "./",
