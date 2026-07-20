@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 430,
+    "skills": 440,
     "prompts": 22,
-    "categories": 29
+    "categories": 30
   },
   "categories": [
     "accessibility",
@@ -37,6 +37,7 @@
     "performance",
     "python",
     "research-thinking",
+    "scripting-automation",
     "security",
     "systems-languages",
     "testing"
@@ -2729,6 +2730,86 @@
       "description": "Turn multiple sources into a defensible, source-attributed answer that separates fact from inference. Use when researching a question across documents, articles, or search results.",
       "path": "skills/research-thinking/research-synthesis/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/research-synthesis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "automation-guardrails",
+      "category": "scripting-automation",
+      "description": "Put confirmation gates, blast-radius limits, audit trails, and kill switches around automation that can destroy things. Use when building scripts or bots with destructive power.",
+      "path": "skills/scripting-automation/automation-guardrails/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/automation-guardrails/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "bash-robustness",
+      "category": "scripting-automation",
+      "description": "Write bash that fails loudly, quotes correctly, cleans up after itself, and passes shellcheck. Use when writing shell scripts that automation or other people will depend on.",
+      "path": "skills/scripting-automation/bash-robustness/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/bash-robustness/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cli-ux-design",
+      "category": "scripting-automation",
+      "description": "Design command-line interfaces with predictable flags, honest exit codes, machine-readable modes, and helpful failure text. Use when building CLI tools people other than the author will run.",
+      "path": "skills/scripting-automation/cli-ux-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/cli-ux-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "environment-config",
+      "category": "scripting-automation",
+      "description": "Manage script and tool configuration through env vars, dotenv files, and layered precedence without leaking secrets. Use when wiring configuration for CLIs, scripts, and local development.",
+      "path": "skills/scripting-automation/environment-config/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/environment-config/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "makefile-design",
+      "category": "scripting-automation",
+      "description": "Write Makefiles with honest dependencies, phony discipline, and self-documenting help, and know when make is the wrong tool. Use when standardizing project task-running or fixing rebuild bugs.",
+      "path": "skills/scripting-automation/makefile-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/makefile-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "powershell-essentials",
+      "category": "scripting-automation",
+      "description": "Write PowerShell that leans on the object pipeline, handles errors deliberately, and runs cross-platform where needed. Use when automating Windows or writing pwsh scripts for mixed fleets.",
+      "path": "skills/scripting-automation/powershell-essentials/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/powershell-essentials/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "scheduled-jobs",
+      "category": "scripting-automation",
+      "description": "Run cron and timer jobs with overlap locks, jitter, missed-run policies, and monitoring for silent absence. Use when scheduling recurring automation or debugging jobs that overlap, pile up, or quietly stop.",
+      "path": "skills/scripting-automation/scheduled-jobs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/scheduled-jobs/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "script-idempotency",
+      "category": "scripting-automation",
+      "description": "Write scripts whose reruns are always safe through check-then-act steps, atomic writes, and dry-run modes. Use when automation may run twice, die halfway, or need a safe retry.",
+      "path": "skills/scripting-automation/script-idempotency/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/script-idempotency/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "shell-portability",
+      "category": "scripting-automation",
+      "description": "Write shell that runs across POSIX sh, bash versions, and GNU/BSD userlands, or decide deliberately not to. Use when scripts must run on multiple platforms, containers, or CI images.",
+      "path": "skills/scripting-automation/shell-portability/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/shell-portability/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "text-processing",
+      "category": "scripting-automation",
+      "description": "Choose grep, sed, awk, or jq by job, prefer structured formats, and know when a one-liner should become a script. Use when slicing logs, transforming files, or wrangling command output.",
+      "path": "skills/scripting-automation/text-processing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/text-processing/SKILL.md"
     },
     {
       "kind": "skill",

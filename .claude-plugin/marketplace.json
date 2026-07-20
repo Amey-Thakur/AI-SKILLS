@@ -554,6 +554,24 @@
       ]
     },
     {
+      "name": "scripting-automation-skills",
+      "description": "10 working methods for scripting automation: automation-guardrails, bash-robustness, cli-ux-design, environment-config, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/scripting-automation/automation-guardrails",
+        "./skills/scripting-automation/bash-robustness",
+        "./skills/scripting-automation/cli-ux-design",
+        "./skills/scripting-automation/environment-config",
+        "./skills/scripting-automation/makefile-design",
+        "./skills/scripting-automation/powershell-essentials",
+        "./skills/scripting-automation/scheduled-jobs",
+        "./skills/scripting-automation/script-idempotency",
+        "./skills/scripting-automation/shell-portability",
+        "./skills/scripting-automation/text-processing"
+      ]
+    },
+    {
       "name": "security-skills",
       "description": "43 working methods for security: api-security, audit-logging, authn-design, authz-design, and more",
       "source": "./",
