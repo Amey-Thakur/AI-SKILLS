@@ -260,6 +260,26 @@
       ]
     },
     {
+      "name": "distributed-systems-skills",
+      "description": "12 working methods for distributed systems: backpressure, clock-skew, consensus-basics, consistency-models, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/distributed-systems/backpressure",
+        "./skills/distributed-systems/clock-skew",
+        "./skills/distributed-systems/consensus-basics",
+        "./skills/distributed-systems/consistency-models",
+        "./skills/distributed-systems/cqrs",
+        "./skills/distributed-systems/delivery-guarantees",
+        "./skills/distributed-systems/distributed-locks",
+        "./skills/distributed-systems/event-sourcing",
+        "./skills/distributed-systems/idempotent-consumers",
+        "./skills/distributed-systems/leader-election",
+        "./skills/distributed-systems/partition-tolerance",
+        "./skills/distributed-systems/saga-pattern"
+      ]
+    },
+    {
       "name": "documentation-skills",
       "description": "2 working methods for documentation: code-documentation, technical-writing, and more",
       "source": "./",

@@ -99,6 +99,7 @@ One row per category; every entry, with its one-line description, is in
 | [databases](CATALOG.md#databases-2) | 2 | schema-design, sql-optimization |
 | [debugging](CATALOG.md#debugging-32) | 32 | alerting-design, binary-search-debugging, browser-devtools |
 | [devops](CATALOG.md#devops-4) | 4 | ci-cd, containerization, dependency-management |
+| [distributed-systems](CATALOG.md#distributed-systems-12) | 12 | backpressure, clock-skew, consensus-basics |
 | [documentation](CATALOG.md#documentation-2) | 2 | code-documentation, technical-writing |
 | [frontend](CATALOG.md#frontend-10) | 10 | design-systems, error-boundaries-ui, form-handling |
 | [git-collaboration](CATALOG.md#git-collaboration-2) | 2 | commit-messages, git-workflow |
