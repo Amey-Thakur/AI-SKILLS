@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 504,
+    "skills": 514,
     "prompts": 22,
     "categories": 35
   },
@@ -66,11 +66,51 @@
     },
     {
       "kind": "skill",
+      "name": "api-gateway-pattern",
+      "category": "architecture",
+      "description": "Use an API gateway for cross-cutting edge concerns without letting it absorb business logic, including the BFF variant. Use when fronting services with a gateway or untangling a bloated one.",
+      "path": "skills/architecture/api-gateway-pattern/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/api-gateway-pattern/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "architecture-decision-records",
       "category": "architecture",
       "description": "Capture each significant architecture decision as a short, immutable record of context, decision, and consequences with a tracked status. Use when a choice is costly to reverse or crosses teams and the reasoning must outlive the people who made it.",
       "path": "skills/architecture/architecture-decision-records/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/architecture-decision-records/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "architecture-diagrams",
+      "category": "architecture",
+      "description": "Draw architecture diagrams at consistent C4-style levels, as code, kept honest and fit to the audience. Use when documenting a system's structure or when existing diagrams mislead more than they help.",
+      "path": "skills/architecture/architecture-diagrams/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/architecture-diagrams/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "coupling-analysis",
+      "category": "architecture",
+      "description": "Measure and manage coupling with afferent/efferent metrics, change amplification, and one-way dependency rules. Use when a codebase is hard to change safely or you are deciding where to draw module boundaries.",
+      "path": "skills/architecture/coupling-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/coupling-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "domain-driven-design",
+      "category": "architecture",
+      "description": "Apply DDD pragmatically: bounded contexts, ubiquitous language, and aggregates sized to invariants. Use when modeling a complex domain or when code and business people describe the same thing differently.",
+      "path": "skills/architecture/domain-driven-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/domain-driven-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "event-driven-architecture",
+      "category": "architecture",
+      "description": "Design event-driven systems with well-shaped events, schema contracts, and honest handling of choreography's costs. Use when decoupling services through events or debugging an event system nobody can reason about.",
+      "path": "skills/architecture/event-driven-architecture/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/event-driven-architecture/SKILL.md"
     },
     {
       "kind": "skill",
@@ -87,6 +127,46 @@
       "description": "Organize a system into layers with one permitted direction of dependency and enforce that direction mechanically at the import level. Use when a codebase is sliding toward tangled cross-references and you need a rule a linter can check, not a convention people forget.",
       "path": "skills/architecture/layered-architecture/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/layered-architecture/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "microservices-boundaries",
+      "category": "architecture",
+      "description": "Split services along business capabilities with clear data ownership, avoiding the distributed monolith. Use when decomposing a system into services or diagnosing services that must always deploy together.",
+      "path": "skills/architecture/microservices-boundaries/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/microservices-boundaries/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "monolith-first",
+      "category": "architecture",
+      "description": "Build a modular monolith with clean internal seams and split to services only on proven pressure. Use when starting a system or resisting premature microservice decomposition.",
+      "path": "skills/architecture/monolith-first/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/monolith-first/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "scalability-planning",
+      "category": "architecture",
+      "description": "Plan scalability from a load model and bottleneck math, designing for realistic growth without premature over-engineering. Use when designing for scale or after a load-driven incident.",
+      "path": "skills/architecture/scalability-planning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/scalability-planning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "service-mesh-tradeoffs",
+      "category": "architecture",
+      "description": "Judge whether a service mesh's east-west traffic features justify its operational complexity, versus a library approach. Use when evaluating a service mesh or reconsidering one that added more pain than value.",
+      "path": "skills/architecture/service-mesh-tradeoffs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/service-mesh-tradeoffs/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "technical-vision",
+      "category": "architecture",
+      "description": "Write a north-star architecture document that sequences migrations and guides decisions without pretending to be a roadmap. Use when a team's technical direction is unclear or every design debate restarts from zero.",
+      "path": "skills/architecture/technical-vision/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/architecture/technical-vision/SKILL.md"
     },
     {
       "kind": "skill",

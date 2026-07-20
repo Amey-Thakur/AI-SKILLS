@@ -29,13 +29,23 @@
     },
     {
       "name": "architecture-skills",
-      "description": "3 working methods for architecture: architecture-decision-records, hexagonal-architecture, layered-architecture, and more",
+      "description": "13 working methods for architecture: api-gateway-pattern, architecture-decision-records, architecture-diagrams, coupling-analysis, and more",
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/architecture/api-gateway-pattern",
         "./skills/architecture/architecture-decision-records",
+        "./skills/architecture/architecture-diagrams",
+        "./skills/architecture/coupling-analysis",
+        "./skills/architecture/domain-driven-design",
+        "./skills/architecture/event-driven-architecture",
         "./skills/architecture/hexagonal-architecture",
-        "./skills/architecture/layered-architecture"
+        "./skills/architecture/layered-architecture",
+        "./skills/architecture/microservices-boundaries",
+        "./skills/architecture/monolith-first",
+        "./skills/architecture/scalability-planning",
+        "./skills/architecture/service-mesh-tradeoffs",
+        "./skills/architecture/technical-vision"
       ]
     },
     {
