@@ -135,6 +135,22 @@
       ]
     },
     {
+      "name": "business-growth-skills",
+      "description": "8 working methods for business growth: churn-analysis, community-building, developer-marketing, landing-page-strategy, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/business-growth/churn-analysis",
+        "./skills/business-growth/community-building",
+        "./skills/business-growth/developer-marketing",
+        "./skills/business-growth/landing-page-strategy",
+        "./skills/business-growth/saas-metrics",
+        "./skills/business-growth/saas-pricing",
+        "./skills/business-growth/technical-seo",
+        "./skills/business-growth/user-activation"
+      ]
+    },
+    {
       "name": "career-communication-skills",
       "description": "10 working methods for career communication: async-communication, conference-talks, engineering-resume, giving-feedback, and more",
       "source": "./",

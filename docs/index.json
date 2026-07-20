@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 476,
+    "skills": 484,
     "prompts": 22,
-    "categories": 34
+    "categories": 35
   },
   "categories": [
     "accessibility",
@@ -17,6 +17,7 @@
     "backend",
     "big-tech-processes",
     "big-tech-roles",
+    "business-growth",
     "career-communication",
     "cloud",
     "code-quality",
@@ -662,6 +663,70 @@
       "description": "Operate as a UX researcher who ties every study to a pending decision, synthesizes evidence into ranked insights, and delivers findings that move the roadmap. Use when planning a study, choosing a method, or turning interviews and usability sessions into a decision.",
       "path": "skills/big-tech-roles/ux-researcher-role/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/ux-researcher-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "churn-analysis",
+      "category": "business-growth",
+      "description": "Diagnose churn through cohort decomposition, leading indicators, and exit evidence, then fix causes over symptoms. Use when retention is slipping or a churn-reduction effort needs a target.",
+      "path": "skills/business-growth/churn-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-growth/churn-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "community-building",
+      "category": "business-growth",
+      "description": "Grow product and open-source communities through seeded value, working moderation, and contributor ladders. Use when starting a community or reviving one that went quiet.",
+      "path": "skills/business-growth/community-building/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-growth/community-building/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "developer-marketing",
+      "category": "business-growth",
+      "description": "Reach developers through docs, honest content, and community trust instead of ads they ignore. Use when marketing developer tools or building a devrel content engine.",
+      "path": "skills/business-growth/developer-marketing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-growth/developer-marketing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "landing-page-strategy",
+      "category": "business-growth",
+      "description": "Build landing pages with a clear message hierarchy, credible proof, and one decisive call to action, tested where it matters. Use when creating or fixing pages that must convert visitors.",
+      "path": "skills/business-growth/landing-page-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-growth/landing-page-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "saas-metrics",
+      "category": "business-growth",
+      "description": "Define and read MRR, churn, NRR, CAC, and LTV correctly, with cohort views and benchmark honesty. Use when building SaaS financial dashboards or diagnosing growth quality.",
+      "path": "skills/business-growth/saas-metrics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-growth/saas-metrics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "saas-pricing",
+      "category": "business-growth",
+      "description": "Price SaaS around a value metric with tier design, seat-vs-usage decisions, and low-risk price testing. Use when setting or revisiting software pricing and packaging.",
+      "path": "skills/business-growth/saas-pricing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-growth/saas-pricing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "technical-seo",
+      "category": "business-growth",
+      "description": "Make sites crawlable, fast, and structured so search finds what deserves finding, without tricks that expire. Use when improving organic traffic or auditing a site's search health.",
+      "path": "skills/business-growth/technical-seo/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-growth/technical-seo/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "user-activation",
+      "category": "business-growth",
+      "description": "Move new users to their first value moment fast by defining activation, instrumenting the funnel, and cutting time-to-value. Use when signups do not become engaged users.",
+      "path": "skills/business-growth/user-activation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-growth/user-activation/SKILL.md"
     },
     {
       "kind": "skill",
