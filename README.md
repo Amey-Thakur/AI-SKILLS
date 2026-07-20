@@ -104,7 +104,7 @@ One row per category; every entry, with its one-line description, is in
 | [debugging](CATALOG.md#debugging-32) | 32 | alerting-design, binary-search-debugging, browser-devtools |
 | [devops](CATALOG.md#devops-14) | 14 | artifact-versioning, blue-green-deployments, capacity-planning |
 | [distributed-systems](CATALOG.md#distributed-systems-12) | 12 | backpressure, clock-skew, consensus-basics |
-| [documentation](CATALOG.md#documentation-2) | 2 | code-documentation, technical-writing |
+| [documentation](CATALOG.md#documentation-10) | 10 | api-reference-docs, changelog-writing, code-documentation |
 | [embedded-iot](CATALOG.md#embedded-iot-8) | 8 | embedded-debugging, embedded-memory-constraints, firmware-ota-updates |
 | [frontend](CATALOG.md#frontend-10) | 10 | design-systems, error-boundaries-ui, form-handling |
 | [game-development](CATALOG.md#game-development-8) | 8 | entity-component-system, game-asset-pipeline, game-input-handling |

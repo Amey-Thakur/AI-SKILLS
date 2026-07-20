@@ -375,12 +375,20 @@
     },
     {
       "name": "documentation-skills",
-      "description": "2 working methods for documentation: code-documentation, technical-writing, and more",
+      "description": "10 working methods for documentation: api-reference-docs, changelog-writing, code-documentation, docs-as-code, and more",
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/documentation/api-reference-docs",
+        "./skills/documentation/changelog-writing",
         "./skills/documentation/code-documentation",
-        "./skills/documentation/technical-writing"
+        "./skills/documentation/docs-as-code",
+        "./skills/documentation/docs-information-architecture",
+        "./skills/documentation/docs-maintenance",
+        "./skills/documentation/onboarding-docs",
+        "./skills/documentation/readme-writing",
+        "./skills/documentation/technical-writing",
+        "./skills/documentation/tutorial-writing"
       ]
     },
     {

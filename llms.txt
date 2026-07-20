@@ -293,8 +293,16 @@
 
 ## Skills: documentation
 
+- [api-reference-docs](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/api-reference-docs/SKILL.md): Produce API reference docs that blend generation with curation, an example per endpoint, and documented errors. Use when documenting an API or SDK for external or internal consumers.
+- [changelog-writing](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/changelog-writing/SKILL.md): Write changelogs for humans, grouped by change type, with breaking changes called out and versions dated. Use when maintaining a changelog or replacing raw commit dumps with useful release notes.
 - [code-documentation](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/code-documentation/SKILL.md): Write code comments and API docs that carry what the code cannot say, and nothing it already does. Use when documenting functions, modules, or tricky passages.
+- [docs-as-code](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/docs-as-code/SKILL.md): Treat documentation like code: in the repo, in pull requests, CI-checked, with preview builds. Use when docs drift from reality or the docs workflow is separate from the code workflow.
+- [docs-information-architecture](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/docs-information-architecture/SKILL.md): Organize documentation with the Diataxis four-quadrant model, navigable structure, and searchability. Use when structuring a docs site or when readers cannot find what they need.
+- [docs-maintenance](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/docs-maintenance/SKILL.md): Keep documentation from rotting through staleness detection, ownership, doc tests, and deliberate deprecation. Use when docs have drifted from reality or no process keeps them current.
+- [onboarding-docs](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/onboarding-docs/SKILL.md): Write onboarding docs that get a new contributor to a verified working setup and a first contribution fast. Use when new joiners struggle to get started or setup instructions keep breaking.
+- [readme-writing](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/readme-writing/SKILL.md): Write READMEs that deliver value on the first screen, quickstart before reference, and stay maintainable. Use when creating or fixing a project's front-door documentation.
 - [technical-writing](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/technical-writing/SKILL.md): Write documentation, READMEs, and guides that respect the reader's time and answer their actual question. Use when drafting or editing any technical document.
+- [tutorial-writing](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/tutorial-writing/SKILL.md): Write tutorials that take a learner from zero to a working result through tested steps with checkpoints and recovery. Use when creating learning-oriented documentation or onboarding guides.
 
 ## Skills: embedded-iot
 

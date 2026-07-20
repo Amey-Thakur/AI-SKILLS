@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 522,
+    "skills": 530,
     "prompts": 22,
     "categories": 35
   },
@@ -1938,6 +1938,22 @@
     },
     {
       "kind": "skill",
+      "name": "api-reference-docs",
+      "category": "documentation",
+      "description": "Produce API reference docs that blend generation with curation, an example per endpoint, and documented errors. Use when documenting an API or SDK for external or internal consumers.",
+      "path": "skills/documentation/api-reference-docs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/api-reference-docs/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "changelog-writing",
+      "category": "documentation",
+      "description": "Write changelogs for humans, grouped by change type, with breaking changes called out and versions dated. Use when maintaining a changelog or replacing raw commit dumps with useful release notes.",
+      "path": "skills/documentation/changelog-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/changelog-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "code-documentation",
       "category": "documentation",
       "description": "Write code comments and API docs that carry what the code cannot say, and nothing it already does. Use when documenting functions, modules, or tricky passages.",
@@ -1946,11 +1962,59 @@
     },
     {
       "kind": "skill",
+      "name": "docs-as-code",
+      "category": "documentation",
+      "description": "Treat documentation like code: in the repo, in pull requests, CI-checked, with preview builds. Use when docs drift from reality or the docs workflow is separate from the code workflow.",
+      "path": "skills/documentation/docs-as-code/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/docs-as-code/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "docs-information-architecture",
+      "category": "documentation",
+      "description": "Organize documentation with the Diataxis four-quadrant model, navigable structure, and searchability. Use when structuring a docs site or when readers cannot find what they need.",
+      "path": "skills/documentation/docs-information-architecture/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/docs-information-architecture/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "docs-maintenance",
+      "category": "documentation",
+      "description": "Keep documentation from rotting through staleness detection, ownership, doc tests, and deliberate deprecation. Use when docs have drifted from reality or no process keeps them current.",
+      "path": "skills/documentation/docs-maintenance/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/docs-maintenance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "onboarding-docs",
+      "category": "documentation",
+      "description": "Write onboarding docs that get a new contributor to a verified working setup and a first contribution fast. Use when new joiners struggle to get started or setup instructions keep breaking.",
+      "path": "skills/documentation/onboarding-docs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/onboarding-docs/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "readme-writing",
+      "category": "documentation",
+      "description": "Write READMEs that deliver value on the first screen, quickstart before reference, and stay maintainable. Use when creating or fixing a project's front-door documentation.",
+      "path": "skills/documentation/readme-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/readme-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "technical-writing",
       "category": "documentation",
       "description": "Write documentation, READMEs, and guides that respect the reader's time and answer their actual question. Use when drafting or editing any technical document.",
       "path": "skills/documentation/technical-writing/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/technical-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tutorial-writing",
+      "category": "documentation",
+      "description": "Write tutorials that take a learner from zero to a working result through tested steps with checkpoints and recovery. Use when creating learning-oriented documentation or onboarding guides.",
+      "path": "skills/documentation/tutorial-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/tutorial-writing/SKILL.md"
     },
     {
       "kind": "skill",
