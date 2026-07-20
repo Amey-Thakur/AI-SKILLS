@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 338,
+    "skills": 348,
     "prompts": 22,
-    "categories": 21
+    "categories": 22
   },
   "categories": [
     "accessibility",
@@ -17,6 +17,7 @@
     "big-tech-processes",
     "big-tech-roles",
     "code-quality",
+    "css-styling",
     "databases",
     "debugging",
     "devops",
@@ -833,6 +834,86 @@
       "description": "Model data so illegal states will not compile, then turn the checker to strict and let it prove correctness for free. Use when designing types, modeling state machines, or hardening a loosely typed module.",
       "path": "skills/code-quality/type-safety/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/type-safety/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "css-animations",
+      "category": "css-styling",
+      "description": "Animate with compositor-friendly properties, honest durations, and reduced-motion fallbacks. Use when adding UI motion or fixing janky, battery-hungry animations.",
+      "path": "skills/css-styling/css-animations/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/css-animations/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "css-architecture",
+      "category": "css-styling",
+      "description": "Organize stylesheets with scoping, co-location, and layer order so CSS stays deletable as the codebase grows. Use when structuring styles for a growing app or auditing a stylesheet nobody dares touch.",
+      "path": "skills/css-styling/css-architecture/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/css-architecture/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "css-cascade",
+      "category": "css-styling",
+      "description": "Manage specificity with layers, :where, and low-specificity selectors so overrides stay predictable. Use when styles fight each other, !important spreads, or you are setting selector conventions for a codebase.",
+      "path": "skills/css-styling/css-cascade/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/css-cascade/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "css-debugging",
+      "category": "css-styling",
+      "description": "Diagnose layout, stacking, and overflow bugs by isolating the failing rule with devtools instead of guessing. Use when an element is misplaced, invisible, unscrollable, or styled by something you cannot find.",
+      "path": "skills/css-styling/css-debugging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/css-debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "css-layout",
+      "category": "css-styling",
+      "description": "Choose between flexbox and grid by content shape and build layouts that survive real content. Use when structuring a page or component layout, or fixing overflow and alignment bugs.",
+      "path": "skills/css-styling/css-layout/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/css-layout/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "css-theming",
+      "category": "css-styling",
+      "description": "Build a custom-property token system with primitive and semantic tiers that supports runtime theme switching. Use when setting up design tokens, adding themes, or refactoring hardcoded colors.",
+      "path": "skills/css-styling/css-theming/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/css-theming/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "dark-mode",
+      "category": "css-styling",
+      "description": "Implement dark mode that honors system preference, allows manual override, and never flashes the wrong theme. Use when adding dark mode or fixing its flash, contrast, or image problems.",
+      "path": "skills/css-styling/dark-mode/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/dark-mode/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "responsive-design",
+      "category": "css-styling",
+      "description": "Build layouts that adapt through fluid sizing, container queries, and content-driven breakpoints. Use when making a design work across screen sizes or replacing a brittle pile of media queries.",
+      "path": "skills/css-styling/responsive-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/responsive-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "utility-css",
+      "category": "css-styling",
+      "description": "Use Tailwind-style utilities with discipline, extracting components at the right threshold and keeping class lists readable. Use when working in a utility-first codebase or deciding whether and how to adopt one.",
+      "path": "skills/css-styling/utility-css/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/utility-css/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "web-typography",
+      "category": "css-styling",
+      "description": "Set a type scale, measure, and loading strategy that make text readable and stable across devices. Use when establishing typography for a site or fixing cramped, shifting, or slow-loading text.",
+      "path": "skills/css-styling/web-typography/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/web-typography/SKILL.md"
     },
     {
       "kind": "skill",

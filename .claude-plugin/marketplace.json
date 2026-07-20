@@ -158,6 +158,24 @@
       ]
     },
     {
+      "name": "css-styling-skills",
+      "description": "10 working methods for css styling: css-animations, css-architecture, css-cascade, css-debugging, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/css-styling/css-animations",
+        "./skills/css-styling/css-architecture",
+        "./skills/css-styling/css-cascade",
+        "./skills/css-styling/css-debugging",
+        "./skills/css-styling/css-layout",
+        "./skills/css-styling/css-theming",
+        "./skills/css-styling/dark-mode",
+        "./skills/css-styling/responsive-design",
+        "./skills/css-styling/utility-css",
+        "./skills/css-styling/web-typography"
+      ]
+    },
+    {
       "name": "databases-skills",
       "description": "2 working methods for databases: schema-design, sql-optimization, and more",
       "source": "./",
