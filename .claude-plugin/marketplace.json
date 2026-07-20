@@ -587,6 +587,24 @@
       ]
     },
     {
+      "name": "systems-languages-skills",
+      "description": "10 working methods for systems languages: c-memory-safety, cpp-raii, ffi-boundaries, go-concurrency, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/systems-languages/c-memory-safety",
+        "./skills/systems-languages/cpp-raii",
+        "./skills/systems-languages/ffi-boundaries",
+        "./skills/systems-languages/go-concurrency",
+        "./skills/systems-languages/go-project-layout",
+        "./skills/systems-languages/rust-error-handling",
+        "./skills/systems-languages/rust-ownership",
+        "./skills/systems-languages/systems-profiling",
+        "./skills/systems-languages/unsafe-code-review",
+        "./skills/systems-languages/zero-cost-abstractions"
+      ]
+    },
+    {
       "name": "testing-skills",
       "description": "41 working methods for testing: api-testing, approval-testing, assertion-libraries, bdd-scenarios, and more",
       "source": "./",

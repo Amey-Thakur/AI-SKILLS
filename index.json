@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 410,
+    "skills": 420,
     "prompts": 22,
-    "categories": 27
+    "categories": 28
   },
   "categories": [
     "accessibility",
@@ -37,6 +37,7 @@
     "python",
     "research-thinking",
     "security",
+    "systems-languages",
     "testing"
   ],
   "entries": [
@@ -2991,6 +2992,86 @@
       "description": "Apply zero trust by authenticating and authorizing every request on its own merits and issuing only short-lived, narrowly scoped credentials. Use when designing service-to-service access, internal tooling, or any system that still trusts requests because of where they came from.",
       "path": "skills/security/zero-trust-basics/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/zero-trust-basics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "c-memory-safety",
+      "category": "systems-languages",
+      "description": "Write C with explicit ownership conventions, bounds discipline, and sanitizers wired into every test run. Use when writing or reviewing C code, or hunting memory corruption.",
+      "path": "skills/systems-languages/c-memory-safety/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/systems-languages/c-memory-safety/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cpp-raii",
+      "category": "systems-languages",
+      "description": "Manage every resource through RAII with the rule of zero, correct smart-pointer selection, and move semantics. Use when writing modern C++ or reviewing code with manual new/delete or leaky error paths.",
+      "path": "skills/systems-languages/cpp-raii/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/systems-languages/cpp-raii/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "ffi-boundaries",
+      "category": "systems-languages",
+      "description": "Design foreign-function boundaries with explicit ownership, error translation, and contained panics/exceptions. Use when binding between Rust/Go/Python and C/C++ libraries or exposing your library over a C ABI.",
+      "path": "skills/systems-languages/ffi-boundaries/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/systems-languages/ffi-boundaries/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "go-concurrency",
+      "category": "systems-languages",
+      "description": "Structure goroutines with owned lifecycles, context propagation, and channel patterns that cannot leak or race. Use when writing concurrent Go or debugging goroutine leaks and data races.",
+      "path": "skills/systems-languages/go-concurrency/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/systems-languages/go-concurrency/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "go-project-layout",
+      "category": "systems-languages",
+      "description": "Organize Go packages by domain with internal boundaries, consumer-side interfaces, and structure that grows on demand. Use when starting a Go project or refactoring one into clearer packages.",
+      "path": "skills/systems-languages/go-project-layout/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/systems-languages/go-project-layout/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "rust-error-handling",
+      "category": "systems-languages",
+      "description": "Design Rust error types with the thiserror/anyhow split, context chains, and a deliberate panic policy. Use when structuring errors in Rust libraries and applications.",
+      "path": "skills/systems-languages/rust-error-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/systems-languages/rust-error-handling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "rust-ownership",
+      "category": "systems-languages",
+      "description": "Work with the borrow checker through ownership-first design instead of fighting it with clones and unsafe. Use when writing Rust or resolving borrow-checker errors that feel unwinnable.",
+      "path": "skills/systems-languages/rust-ownership/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/systems-languages/rust-ownership/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "systems-profiling",
+      "category": "systems-languages",
+      "description": "Profile native code with perf and flamegraphs, then read cache, syscall, and allocation behavior to find the real bottleneck. Use when optimizing systems software or explaining why fast code is slow.",
+      "path": "skills/systems-languages/systems-profiling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/systems-languages/systems-profiling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "unsafe-code-review",
+      "category": "systems-languages",
+      "description": "Audit unsafe blocks by verifying documented invariants, minimizing surface, and testing under sanitizers and Miri. Use when reviewing unsafe Rust, C/C++ interop shims, or any code that bypasses language safety.",
+      "path": "skills/systems-languages/unsafe-code-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/systems-languages/unsafe-code-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "zero-cost-abstractions",
+      "category": "systems-languages",
+      "description": "Verify that abstractions actually compile away by inspecting generated code and measuring, and know the costs that remain. Use when writing performance-critical Rust/C++ or judging whether an abstraction is free.",
+      "path": "skills/systems-languages/zero-cost-abstractions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/systems-languages/zero-cost-abstractions/SKILL.md"
     },
     {
       "kind": "skill",
