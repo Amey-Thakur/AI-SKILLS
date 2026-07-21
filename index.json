@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 548,
+    "skills": 556,
     "prompts": 22,
     "categories": 35
   },
@@ -58,11 +58,75 @@
     },
     {
       "kind": "skill",
+      "name": "api-change-management",
+      "category": "apis",
+      "description": "Classify API changes as breaking or compatible, evolve additively, and gate breaking changes with compatibility tests. Use when changing an API and needing to know whether it breaks consumers.",
+      "path": "skills/apis/api-change-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-change-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "api-client-design",
+      "category": "apis",
+      "description": "Build API clients with retries, timeouts, pagination, and error surfacing baked in, and test them properly. Use when writing a client for an external or internal API.",
+      "path": "skills/apis/api-client-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-client-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "api-deprecation",
+      "category": "apis",
+      "description": "Retire API surface with sunset headers, usage tracking, migration guides, and enforced timelines. Use when removing an endpoint, field, or version that consumers depend on.",
+      "path": "skills/apis/api-deprecation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-deprecation/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "api-design",
       "category": "apis",
       "description": "Design HTTP and library APIs that are predictable, hard to misuse, and stable under growth. Use when creating or reviewing endpoints, public functions, or wire formats.",
       "path": "skills/apis/api-design/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "api-pagination-design",
+      "category": "apis",
+      "description": "Design pagination with cursors for stable ordering, sensible page limits, and awareness of total-count cost. Use when adding pagination to a list endpoint or fixing duplicate or skipped items under load.",
+      "path": "skills/apis/api-pagination-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-pagination-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "api-sdk-design",
+      "category": "apis",
+      "description": "Design SDKs that feel idiomatic per language, handle auth and resilience, and version cleanly. Use when building an official client library for your API.",
+      "path": "skills/apis/api-sdk-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-sdk-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "graphql-schema-design",
+      "category": "apis",
+      "description": "Design GraphQL schemas that model the domain, solve N+1 with dataloaders, and handle pagination and errors, knowing when REST wins. Use when building a GraphQL API or evaluating GraphQL against REST.",
+      "path": "skills/apis/graphql-schema-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/graphql-schema-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "grpc-services",
+      "category": "apis",
+      "description": "Design gRPC services with clean proto contracts, versioning, streaming patterns, and deadline propagation. Use when building high-performance service-to-service APIs or evaluating gRPC against REST.",
+      "path": "skills/apis/grpc-services/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/grpc-services/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "openapi-contracts",
+      "category": "apis",
+      "description": "Drive API development from an OpenAPI spec as the contract, with linting, codegen, and drift detection. Use when building or documenting REST APIs and wanting the spec to be the single source of truth.",
+      "path": "skills/apis/openapi-contracts/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/openapi-contracts/SKILL.md"
     },
     {
       "kind": "skill",

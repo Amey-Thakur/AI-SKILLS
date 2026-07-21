@@ -20,11 +20,19 @@
     },
     {
       "name": "apis-skills",
-      "description": "1 working methods for apis: api-design, and more",
+      "description": "9 working methods for apis: api-change-management, api-client-design, api-deprecation, api-design, and more",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/apis/api-design"
+        "./skills/apis/api-change-management",
+        "./skills/apis/api-client-design",
+        "./skills/apis/api-deprecation",
+        "./skills/apis/api-design",
+        "./skills/apis/api-pagination-design",
+        "./skills/apis/api-sdk-design",
+        "./skills/apis/graphql-schema-design",
+        "./skills/apis/grpc-services",
+        "./skills/apis/openapi-contracts"
       ]
     },
     {

@@ -13,7 +13,15 @@
 
 ## Skills: apis
 
+- [api-change-management](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-change-management/SKILL.md): Classify API changes as breaking or compatible, evolve additively, and gate breaking changes with compatibility tests. Use when changing an API and needing to know whether it breaks consumers.
+- [api-client-design](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-client-design/SKILL.md): Build API clients with retries, timeouts, pagination, and error surfacing baked in, and test them properly. Use when writing a client for an external or internal API.
+- [api-deprecation](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-deprecation/SKILL.md): Retire API surface with sunset headers, usage tracking, migration guides, and enforced timelines. Use when removing an endpoint, field, or version that consumers depend on.
 - [api-design](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-design/SKILL.md): Design HTTP and library APIs that are predictable, hard to misuse, and stable under growth. Use when creating or reviewing endpoints, public functions, or wire formats.
+- [api-pagination-design](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-pagination-design/SKILL.md): Design pagination with cursors for stable ordering, sensible page limits, and awareness of total-count cost. Use when adding pagination to a list endpoint or fixing duplicate or skipped items under load.
+- [api-sdk-design](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/api-sdk-design/SKILL.md): Design SDKs that feel idiomatic per language, handle auth and resilience, and version cleanly. Use when building an official client library for your API.
+- [graphql-schema-design](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/graphql-schema-design/SKILL.md): Design GraphQL schemas that model the domain, solve N+1 with dataloaders, and handle pagination and errors, knowing when REST wins. Use when building a GraphQL API or evaluating GraphQL against REST.
+- [grpc-services](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/grpc-services/SKILL.md): Design gRPC services with clean proto contracts, versioning, streaming patterns, and deadline propagation. Use when building high-performance service-to-service APIs or evaluating gRPC against REST.
+- [openapi-contracts](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/apis/openapi-contracts/SKILL.md): Drive API development from an OpenAPI spec as the contract, with linting, codegen, and drift detection. Use when building or documenting REST APIs and wanting the spec to be the single source of truth.
 
 ## Skills: architecture
 
