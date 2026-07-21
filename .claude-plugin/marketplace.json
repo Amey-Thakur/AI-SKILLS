@@ -513,6 +513,28 @@
       ]
     },
     {
+      "name": "javascript-typescript-skills",
+      "description": "14 working methods for javascript typescript: js-async-patterns, js-error-handling, js-event-loop, js-immutability, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/javascript-typescript/js-async-patterns",
+        "./skills/javascript-typescript/js-error-handling",
+        "./skills/javascript-typescript/js-event-loop",
+        "./skills/javascript-typescript/js-immutability",
+        "./skills/javascript-typescript/js-modules",
+        "./skills/javascript-typescript/js-tooling-selection",
+        "./skills/javascript-typescript/monorepo-workspaces",
+        "./skills/javascript-typescript/node-backend-setup",
+        "./skills/javascript-typescript/npm-publishing",
+        "./skills/javascript-typescript/ts-api-types",
+        "./skills/javascript-typescript/tsconfig-mastery",
+        "./skills/javascript-typescript/typescript-generics",
+        "./skills/javascript-typescript/typescript-narrowing",
+        "./skills/javascript-typescript/typescript-strictness"
+      ]
+    },
+    {
       "name": "jvm-dotnet-skills",
       "description": "10 working methods for jvm dotnet: csharp-linq, dotnet-async, dotnet-dependency-injection, dotnet-minimal-apis, and more",
       "source": "./",

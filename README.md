@@ -110,6 +110,7 @@ One row per category; every entry, with its one-line description, is in
 | [game-development](CATALOG.md#game-development-8) | 8 | entity-component-system, game-asset-pipeline, game-input-handling |
 | [git-collaboration](CATALOG.md#git-collaboration-10) | 10 | branch-strategy, code-owners, commit-messages |
 | [gpu-ai-infrastructure](CATALOG.md#gpu-ai-infrastructure-20) | 20 | ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics |
+| [javascript-typescript](CATALOG.md#javascript-typescript-14) | 14 | js-async-patterns, js-error-handling, js-event-loop |
 | [jvm-dotnet](CATALOG.md#jvm-dotnet-10) | 10 | csharp-linq, dotnet-async, dotnet-dependency-injection |
 | [llm-engineering](CATALOG.md#llm-engineering-20) | 20 | agent-memory, agentic-loops, coding-agent-workflow |
 | [machine-learning](CATALOG.md#machine-learning-12) | 12 | cross-validation, drift-monitoring, experiment-tracking |

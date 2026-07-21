@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 569,
+    "skills": 583,
     "prompts": 106,
-    "categories": 35
+    "categories": 36
   },
   "categories": [
     "accessibility",
@@ -33,6 +33,7 @@
     "game-development",
     "git-collaboration",
     "gpu-ai-infrastructure",
+    "javascript-typescript",
     "jvm-dotnet",
     "llm-engineering",
     "machine-learning",
@@ -2663,6 +2664,118 @@
       "description": "Deploy an LLM on vLLM with continuous batching, deliberate VRAM planning, and multi-model hosting that never overcommits the card. Use when serving on vLLM and deciding memory fraction, context length, tensor parallel size, and how many models share a GPU.",
       "path": "skills/gpu-ai-infrastructure/vllm-serving/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/gpu-ai-infrastructure/vllm-serving/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "js-async-patterns",
+      "category": "javascript-typescript",
+      "description": "Compose async JavaScript with promises and async/await correctly, propagating errors and cancelling with AbortController. Use when writing async code, running work concurrently, or debugging swallowed errors and unhandled rejections.",
+      "path": "skills/javascript-typescript/js-async-patterns/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/js-async-patterns/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "js-error-handling",
+      "category": "javascript-typescript",
+      "description": "Handle errors in JavaScript and TypeScript with proper Error subclasses, cause chains, and a policy for async and unhandled failures. Use when designing error handling or debugging lost stack traces and swallowed errors.",
+      "path": "skills/javascript-typescript/js-error-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/js-error-handling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "js-event-loop",
+      "category": "javascript-typescript",
+      "description": "Reason about the JavaScript event loop, microtasks vs macrotasks, and why blocking it freezes everything. Use when debugging ordering surprises, UI jank, or code that runs in an unexpected sequence.",
+      "path": "skills/javascript-typescript/js-event-loop/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/js-event-loop/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "js-immutability",
+      "category": "javascript-typescript",
+      "description": "Work with immutable data in JavaScript through structural updates, readonly types, and freeze where it earns its cost. Use when managing shared or reactive state, or debugging bugs from unexpected mutation.",
+      "path": "skills/javascript-typescript/js-immutability/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/js-immutability/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "js-modules",
+      "category": "javascript-typescript",
+      "description": "Navigate ESM and CommonJS, interop between them, and structure imports so bundlers can tree-shake. Use when hitting module-resolution errors, mixing ESM and CJS, or shrinking a bundle.",
+      "path": "skills/javascript-typescript/js-modules/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/js-modules/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "js-tooling-selection",
+      "category": "javascript-typescript",
+      "description": "Choose the JavaScript/TypeScript bundler, test runner, and linter for a project by its type, not by fashion. Use when setting up a toolchain or deciding whether to migrate an existing one.",
+      "path": "skills/javascript-typescript/js-tooling-selection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/js-tooling-selection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "monorepo-workspaces",
+      "category": "javascript-typescript",
+      "description": "Run a JavaScript/TypeScript monorepo with workspaces, task orchestration, and internal package versioning that scales. Use when managing multiple packages in one repo or when a growing monorepo's builds and installs get slow.",
+      "path": "skills/javascript-typescript/monorepo-workspaces/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/monorepo-workspaces/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "node-backend-setup",
+      "category": "javascript-typescript",
+      "description": "Bootstrap a Node.js backend with ESM, typed config, graceful shutdown, and structured logging from the start. Use when starting a Node service or hardening one that grew without foundations.",
+      "path": "skills/javascript-typescript/node-backend-setup/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/node-backend-setup/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "npm-publishing",
+      "category": "javascript-typescript",
+      "description": "Publish an npm package that installs and imports cleanly: correct exports map, dual formats, types, and semver. Use when releasing a library to npm or fixing a package consumers cannot import.",
+      "path": "skills/javascript-typescript/npm-publishing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/npm-publishing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "ts-api-types",
+      "category": "javascript-typescript",
+      "description": "Type the boundaries of a TypeScript codebase: public API surfaces, branded types, and runtime validation of untyped input. Use when designing types others consume, or when external data enters your program.",
+      "path": "skills/javascript-typescript/ts-api-types/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/ts-api-types/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tsconfig-mastery",
+      "category": "javascript-typescript",
+      "description": "Configure tsconfig.json deliberately: the flags that matter, module and target settings, and build vs typecheck configs. Use when setting up TypeScript compilation or debugging confusing module and output errors.",
+      "path": "skills/javascript-typescript/tsconfig-mastery/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/tsconfig-mastery/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "typescript-generics",
+      "category": "javascript-typescript",
+      "description": "Write TypeScript generics that infer well and stay readable, and know when a generic is not worth it. Use when designing typed reusable functions or APIs, or untangling generic signatures nobody can read.",
+      "path": "skills/javascript-typescript/typescript-generics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/typescript-generics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "typescript-narrowing",
+      "category": "javascript-typescript",
+      "description": "Narrow union types safely with guards, discriminated unions, and exhaustiveness checks. Use when working with values that could be several types, or when the compiler will not let you access a property you know is there.",
+      "path": "skills/javascript-typescript/typescript-narrowing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/typescript-narrowing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "typescript-strictness",
+      "category": "javascript-typescript",
+      "description": "Turn on and migrate to TypeScript's strict flags incrementally so the compiler catches real bugs. Use when configuring TypeScript strictness or tightening a loose codebase without a big-bang rewrite.",
+      "path": "skills/javascript-typescript/typescript-strictness/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/javascript-typescript/typescript-strictness/SKILL.md"
     },
     {
       "kind": "skill",
