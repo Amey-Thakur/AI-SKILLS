@@ -770,25 +770,25 @@
       ]
     },
     {
-      "name": "research-thinking-skills",
-      "description": "14 working methods for research thinking: decision-journals, deep-research, estimation-techniques, experiment-design-basics, and more",
+      "name": "research-skills",
+      "description": "14 working methods for research: decision-journals, deep-research, estimation-techniques, experiment-design-basics, and more",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/research-thinking/decision-journals",
-        "./skills/research-thinking/deep-research",
-        "./skills/research-thinking/estimation-techniques",
-        "./skills/research-thinking/experiment-design-basics",
-        "./skills/research-thinking/fact-checking",
-        "./skills/research-thinking/first-principles-thinking",
-        "./skills/research-thinking/hypothesis-driven-work",
-        "./skills/research-thinking/literature-review",
-        "./skills/research-thinking/reading-papers",
-        "./skills/research-thinking/research-planning",
-        "./skills/research-thinking/research-synthesis",
-        "./skills/research-thinking/source-evaluation",
-        "./skills/research-thinking/tradeoff-analysis",
-        "./skills/research-thinking/web-research"
+        "./skills/research/decision-journals",
+        "./skills/research/deep-research",
+        "./skills/research/estimation-techniques",
+        "./skills/research/experiment-design-basics",
+        "./skills/research/fact-checking",
+        "./skills/research/first-principles-thinking",
+        "./skills/research/hypothesis-driven-work",
+        "./skills/research/literature-review",
+        "./skills/research/reading-papers",
+        "./skills/research/research-planning",
+        "./skills/research/research-synthesis",
+        "./skills/research/source-evaluation",
+        "./skills/research/tradeoff-analysis",
+        "./skills/research/web-research"
       ]
     },
     {

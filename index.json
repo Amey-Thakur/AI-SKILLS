@@ -44,7 +44,7 @@
     "performance",
     "product-management",
     "python",
-    "research-thinking",
+    "research",
     "scripting-automation",
     "security",
     "systems-languages",
@@ -4024,114 +4024,114 @@
     {
       "kind": "skill",
       "name": "decision-journals",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Record decisions with their context and predictions to enable honest calibration and defeat hindsight bias. Use when making consequential decisions you want to learn from later.",
-      "path": "skills/research-thinking/decision-journals/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/decision-journals/SKILL.md"
+      "path": "skills/research/decision-journals/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/decision-journals/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "deep-research",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Run a thorough multi-source research investigation end to end: plan, search broadly, verify, and synthesize a cited answer. Use when a question needs deep, autonomous research across many sources, not a quick lookup.",
-      "path": "skills/research-thinking/deep-research/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/deep-research/SKILL.md"
+      "path": "skills/research/deep-research/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/deep-research/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "estimation-techniques",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Estimate unknown quantities with Fermi decomposition, reference classes, and honest error bars. Use when you need a number for a decision and no exact figure exists.",
-      "path": "skills/research-thinking/estimation-techniques/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/estimation-techniques/SKILL.md"
+      "path": "skills/research/estimation-techniques/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/estimation-techniques/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "experiment-design-basics",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Design experiments with controls, randomization, confound awareness, and pre-registered analysis. Use when testing a hypothesis empirically and needing the result to actually mean something.",
-      "path": "skills/research-thinking/experiment-design-basics/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/experiment-design-basics/SKILL.md"
+      "path": "skills/research/experiment-design-basics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/experiment-design-basics/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "fact-checking",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Verify claims before stating them: trace to the source, corroborate independently, and separate fact from inference. Use when accuracy matters, especially before an agent asserts facts, numbers, or quotes.",
-      "path": "skills/research-thinking/fact-checking/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/fact-checking/SKILL.md"
+      "path": "skills/research/fact-checking/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/fact-checking/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "first-principles-thinking",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Reason from fundamental truths by excavating assumptions and rebuilding from constraints, knowing when analogy is faster. Use when stuck in a solution space defined by convention or challenging an inherited assumption.",
-      "path": "skills/research-thinking/first-principles-thinking/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/first-principles-thinking/SKILL.md"
+      "path": "skills/research/first-principles-thinking/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/first-principles-thinking/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "hypothesis-driven-work",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Frame work as falsifiable hypotheses, test the cheapest first, and update on evidence rather than defending the plan. Use when facing uncertainty and tempted to build the whole thing before learning anything.",
-      "path": "skills/research-thinking/hypothesis-driven-work/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/hypothesis-driven-work/SKILL.md"
+      "path": "skills/research/hypothesis-driven-work/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/hypothesis-driven-work/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "literature-review",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Survey prior work systematically through search strategy, citation chasing, quality assessment, and synthesis. Use when entering a new domain or grounding a decision in what is already known.",
-      "path": "skills/research-thinking/literature-review/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/literature-review/SKILL.md"
+      "path": "skills/research/literature-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/literature-review/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "reading-papers",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Read research papers efficiently in passes, separating claims from evidence and assessing reproducibility. Use when extracting value from academic papers without reading every one cover to cover.",
-      "path": "skills/research-thinking/reading-papers/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/reading-papers/SKILL.md"
+      "path": "skills/research/reading-papers/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/reading-papers/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "research-planning",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Scope a research question, decide what evidence would answer it, and plan the search before diving in. Use when starting any research task, so effort goes to the questions that matter instead of wandering.",
-      "path": "skills/research-thinking/research-planning/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/research-planning/SKILL.md"
+      "path": "skills/research/research-planning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/research-planning/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "research-synthesis",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Turn multiple sources into a defensible, source-attributed answer that separates fact from inference. Use when researching a question across documents, articles, or search results.",
-      "path": "skills/research-thinking/research-synthesis/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/research-synthesis/SKILL.md"
+      "path": "skills/research/research-synthesis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/research-synthesis/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "source-evaluation",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Judge whether a source is credible and relevant: authority, evidence, bias, and recency. Use when deciding whether to trust and cite a source, in any research.",
-      "path": "skills/research-thinking/source-evaluation/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/source-evaluation/SKILL.md"
+      "path": "skills/research/source-evaluation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/source-evaluation/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "tradeoff-analysis",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Compare options with explicit weighted criteria, sensitivity checks, and reversibility awareness. Use when facing a consequential choice between alternatives with no obvious winner.",
-      "path": "skills/research-thinking/tradeoff-analysis/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/tradeoff-analysis/SKILL.md"
+      "path": "skills/research/tradeoff-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/tradeoff-analysis/SKILL.md"
     },
     {
       "kind": "skill",
       "name": "web-research",
-      "category": "research-thinking",
+      "category": "research",
       "description": "Search the web effectively: query construction, iterating on results, and going to primary sources. Use when researching a topic online, especially for an agent gathering current or factual information.",
-      "path": "skills/research-thinking/web-research/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/web-research/SKILL.md"
+      "path": "skills/research/web-research/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/web-research/SKILL.md"
     },
     {
       "kind": "skill",
