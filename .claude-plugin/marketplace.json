@@ -881,6 +881,24 @@
       ]
     },
     {
+      "name": "ui-ux-skills",
+      "description": "10 working methods for ui ux: empty-and-error-states, information-architecture, interaction-design, onboarding-ux, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/ui-ux/empty-and-error-states",
+        "./skills/ui-ux/information-architecture",
+        "./skills/ui-ux/interaction-design",
+        "./skills/ui-ux/onboarding-ux",
+        "./skills/ui-ux/usability-heuristics",
+        "./skills/ui-ux/usability-testing",
+        "./skills/ui-ux/user-flows",
+        "./skills/ui-ux/ux-writing",
+        "./skills/ui-ux/visual-hierarchy",
+        "./skills/ui-ux/wireframing-prototyping"
+      ]
+    },
+    {
       "name": "writing-skills",
       "description": "10 working methods for writing: audience-adaptation, clear-writing, concise-writing, editing-and-revision, and more",
       "source": "./",
