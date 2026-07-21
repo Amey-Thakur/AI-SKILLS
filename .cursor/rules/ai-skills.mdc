@@ -16,6 +16,7 @@ For any task:
    trigger or each prompt's `description`.
 3. Take the 1-3 entries that genuinely fit; one strong match beats three loose.
 4. Follow a skill's `SKILL.md` method, or fill a prompt's `{variables}` and run.
-5. Check the output against the entry's `## Boundaries` or rules before finishing.
+5. Check the output against the entry's guardrail section (`## Boundaries`,
+   `## Rules`, or similar) before finishing.
 
 The full protocol is in `AGENTS.md`.

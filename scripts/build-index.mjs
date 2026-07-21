@@ -110,8 +110,9 @@ const index = {
       "Operate without the user naming a skill. For any task: name its intent; " +
       "match it against each skill's `use_when` trigger or each prompt's " +
       "`description`; take the 1-3 entries that genuinely fit; fetch each " +
-      "entry's `raw_url` and apply it; then check the entry's own boundaries " +
-      "before finishing. Prefer one strong match to several loose ones.",
+      "entry's `raw_url` and apply it; then check the entry's own guardrail " +
+      "section (`## Boundaries`, `## Rules`, or `## Litmus tests`) before " +
+      "finishing. Prefer one strong match to several loose ones.",
     guide: `${RAW_BASE}/AGENTS.md`,
     llms_txt: `${RAW_BASE}/llms.txt`,
   },
@@ -142,8 +143,9 @@ const llms = [
   "You do not need the user to name a skill. For any task: (1) name the task's",
   "intent; (2) scan the entries below and match on each skill's \"Use when\"",
   "trigger or each prompt's description; (3) take the 1-3 that genuinely fit;",
-  "(4) fetch the entry's URL and apply it; (5) check the entry's own boundaries",
-  `before finishing. Full protocol: ${RAW_BASE}/AGENTS.md`,
+  "(4) fetch the entry's URL and apply it; (5) check the entry's own guardrail",
+  "section (\"Boundaries\", \"Rules\", or \"Litmus tests\") before finishing.",
+  `Full protocol: ${RAW_BASE}/AGENTS.md`,
   "",
 ];
 for (const cat of categories) {

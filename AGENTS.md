@@ -49,10 +49,11 @@ ask for a skill; you decide.
 
 5. **Load and apply** (see the two sections below).
 
-6. **Verify against the entry's own boundaries.** Every skill has a
-   `## Boundaries` section stating where it does not apply and what it
-   refuses; every prompt has rules. Check your output against them before
-   finishing. This is the built-in quality gate.
+6. **Verify against the entry's own guardrails.** Every skill ends with a
+   guardrail section: usually `## Boundaries` (where it does not apply, what
+   it refuses), sometimes an equivalent such as `## Rules`, `## Litmus tests`,
+   or `## Anti-patterns to refuse`. Every prompt ends with rules. Check your
+   output against them before finishing. This is the built-in quality gate.
 
 ## Using a skill
 

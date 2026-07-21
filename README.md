@@ -18,6 +18,13 @@ GitHub Copilot · Windsurf · Antigravity · Cline · Zed · Aider · any agent 
 
 <br>
 
+> [!TIP]
+> **Autonomous by design.** Point any agent at this repo and it selects the
+> right skill or prompt for each task on its own: it reads [`AGENTS.md`](AGENTS.md)
+> (and [`CLAUDE.md`](CLAUDE.md) in Claude Code), then picks from
+> [`index.json`](index.json) by each entry's `use_when` trigger. You install
+> once; you never have to name a skill.
+
 ## What this is
 
 One place that finds every skill. Two halves make that true:

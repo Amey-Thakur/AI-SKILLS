@@ -14,8 +14,8 @@ For any task, run the routine below on your own:
    loose ones.
 4. Load a skill's `SKILL.md` and follow its method, or fill a prompt's
    `{variables}` and run it.
-5. Check your output against the entry's own `## Boundaries` or rules before
-   finishing.
+5. Check your output against the entry's own guardrail section (`## Boundaries`,
+   or an equivalent like `## Rules` or `## Litmus tests`) before finishing.
 
 The full protocol, including how to compose entries across a task's phases,
 is below.

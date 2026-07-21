@@ -7,7 +7,7 @@
   "license": "MIT",
   "agents": {
     "autonomous": true,
-    "protocol": "Operate without the user naming a skill. For any task: name its intent; match it against each skill's `use_when` trigger or each prompt's `description`; take the 1-3 entries that genuinely fit; fetch each entry's `raw_url` and apply it; then check the entry's own boundaries before finishing. Prefer one strong match to several loose ones.",
+    "protocol": "Operate without the user naming a skill. For any task: name its intent; match it against each skill's `use_when` trigger or each prompt's `description`; take the 1-3 entries that genuinely fit; fetch each entry's `raw_url` and apply it; then check the entry's own guardrail section (`## Boundaries`, `## Rules`, or `## Litmus tests`) before finishing. Prefer one strong match to several loose ones.",
     "guide": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
