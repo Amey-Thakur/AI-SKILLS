@@ -19,6 +19,11 @@
   --accent: #d8a24a;
   --accent-soft: rgba(216, 162, 74, 0.14);
   --accent-strong: #e6b45f;
+  /* Primary-button surface and the text that sits on it. Dark theme's accent
+     is light gold, so dark text reads well on it. */
+  --accent-btn: #d8a24a;
+  --accent-btn-hover: #e6b45f;
+  --on-accent: #171310;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.28);
   --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.30);
   --radius: 16px;
@@ -40,6 +45,11 @@
   --accent: #b07216;
   --accent-soft: rgba(176, 114, 22, 0.10);
   --accent-strong: #965f0c;
+  /* Light theme's accent is a dark brown; white text on a slightly deeper
+     brown clears WCAG AA where the old near-black text was unreadable. */
+  --accent-btn: #965f0c;
+  --accent-btn-hover: #7d4d08;
+  --on-accent: #ffffff;
   --shadow-sm: 0 1px 2px rgba(60, 50, 30, 0.06);
   --shadow-md: 0 10px 30px rgba(60, 50, 30, 0.10);
 }
@@ -114,10 +124,10 @@ nav.top a:hover { color: var(--text-1); }
 }
 .btn:hover { border-color: var(--accent); color: var(--text-1); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
 .btn.primary {
-  background: var(--accent); border-color: var(--accent); color: #171310;
+  background: var(--accent-btn); border-color: var(--accent-btn); color: var(--on-accent);
   font-weight: 700; box-shadow: var(--shadow-sm);
 }
-.btn.primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); color: #171310; }
+.btn.primary:hover { background: var(--accent-btn-hover); border-color: var(--accent-btn-hover); color: var(--on-accent); }
 .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* Footer */

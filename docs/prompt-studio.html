@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 <script>
   try {
     var stored = localStorage.getItem("ai-skills-theme");
@@ -84,7 +84,7 @@
   .build-row { display: flex; align-items: center; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
   .mode-toggle { display: inline-flex; gap: 0; border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 3px; margin-bottom: 18px; background: var(--surface-2); }
   .mode-btn { border: none; background: none; color: var(--text-3); font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; padding: 7px 16px; border-radius: var(--radius-pill); cursor: pointer; transition: background-color .15s, color .15s; }
-  .mode-btn[aria-pressed="true"] { background: var(--accent); color: #12100e; }
+  .mode-btn[aria-pressed="true"] { background: var(--accent-btn); color: var(--on-accent); }
   .stages { list-style: none; display: grid; gap: 8px; }
   .stages li { display: flex; gap: 10px; align-items: baseline; font-size: 13.5px; color: var(--text-3); }
   .stages b { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
