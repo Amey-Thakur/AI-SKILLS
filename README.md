@@ -119,7 +119,7 @@ One row per category; every entry, with its one-line description, is in
 | [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
 | [product-management](CATALOG.md#product-management-10) | 10 | ab-test-design, customer-interviews, feature-sunsetting |
 | [python](CATALOG.md#python-14) | 14 | pytest-mastery, python-asyncio, python-cli-tools |
-| [research-thinking](CATALOG.md#research-thinking-9) | 9 | decision-journals, estimation-techniques, experiment-design-basics |
+| [research-thinking](CATALOG.md#research-thinking-14) | 14 | decision-journals, deep-research, estimation-techniques |
 | [scripting-automation](CATALOG.md#scripting-automation-10) | 10 | automation-guardrails, bash-robustness, cli-ux-design |
 | [security](CATALOG.md#security-43) | 43 | api-security, audit-logging, authn-design |
 | [systems-languages](CATALOG.md#systems-languages-10) | 10 | c-memory-safety, cpp-raii, ffi-boundaries |

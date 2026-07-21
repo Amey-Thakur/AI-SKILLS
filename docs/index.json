@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 603,
+    "skills": 608,
     "prompts": 114,
     "categories": 38
   },
@@ -3821,6 +3821,14 @@
     },
     {
       "kind": "skill",
+      "name": "deep-research",
+      "category": "research-thinking",
+      "description": "Run a thorough multi-source research investigation end to end: plan, search broadly, verify, and synthesize a cited answer. Use when a question needs deep, autonomous research across many sources, not a quick lookup.",
+      "path": "skills/research-thinking/deep-research/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/deep-research/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "estimation-techniques",
       "category": "research-thinking",
       "description": "Estimate unknown quantities with Fermi decomposition, reference classes, and honest error bars. Use when you need a number for a decision and no exact figure exists.",
@@ -3834,6 +3842,14 @@
       "description": "Design experiments with controls, randomization, confound awareness, and pre-registered analysis. Use when testing a hypothesis empirically and needing the result to actually mean something.",
       "path": "skills/research-thinking/experiment-design-basics/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/experiment-design-basics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "fact-checking",
+      "category": "research-thinking",
+      "description": "Verify claims before stating them: trace to the source, corroborate independently, and separate fact from inference. Use when accuracy matters, especially before an agent asserts facts, numbers, or quotes.",
+      "path": "skills/research-thinking/fact-checking/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/fact-checking/SKILL.md"
     },
     {
       "kind": "skill",
@@ -3869,6 +3885,14 @@
     },
     {
       "kind": "skill",
+      "name": "research-planning",
+      "category": "research-thinking",
+      "description": "Scope a research question, decide what evidence would answer it, and plan the search before diving in. Use when starting any research task, so effort goes to the questions that matter instead of wandering.",
+      "path": "skills/research-thinking/research-planning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/research-planning/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "research-synthesis",
       "category": "research-thinking",
       "description": "Turn multiple sources into a defensible, source-attributed answer that separates fact from inference. Use when researching a question across documents, articles, or search results.",
@@ -3877,11 +3901,27 @@
     },
     {
       "kind": "skill",
+      "name": "source-evaluation",
+      "category": "research-thinking",
+      "description": "Judge whether a source is credible and relevant: authority, evidence, bias, and recency. Use when deciding whether to trust and cite a source, in any research.",
+      "path": "skills/research-thinking/source-evaluation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/source-evaluation/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "tradeoff-analysis",
       "category": "research-thinking",
       "description": "Compare options with explicit weighted criteria, sensitivity checks, and reversibility awareness. Use when facing a consequential choice between alternatives with no obvious winner.",
       "path": "skills/research-thinking/tradeoff-analysis/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/tradeoff-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "web-research",
+      "category": "research-thinking",
+      "description": "Search the web effectively: query construction, iterating on results, and going to primary sources. Use when researching a topic online, especially for an agent gathering current or factual information.",
+      "path": "skills/research-thinking/web-research/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/web-research/SKILL.md"
     },
     {
       "kind": "skill",
