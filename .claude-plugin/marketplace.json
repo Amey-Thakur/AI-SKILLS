@@ -879,6 +879,24 @@
         "./skills/testing/unit-test-design",
         "./skills/testing/visual-regression-testing"
       ]
+    },
+    {
+      "name": "writing-skills",
+      "description": "10 working methods for writing: audience-adaptation, clear-writing, concise-writing, editing-and-revision, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/writing/audience-adaptation",
+        "./skills/writing/clear-writing",
+        "./skills/writing/concise-writing",
+        "./skills/writing/editing-and-revision",
+        "./skills/writing/narrative-craft",
+        "./skills/writing/persuasive-writing",
+        "./skills/writing/strong-openings",
+        "./skills/writing/structure-and-flow",
+        "./skills/writing/voice-and-tone",
+        "./skills/writing/writing-with-evidence"
+      ]
     }
   ]
 }

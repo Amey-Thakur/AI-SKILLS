@@ -124,6 +124,7 @@ One row per category; every entry, with its one-line description, is in
 | [security](CATALOG.md#security-43) | 43 | api-security, audit-logging, authn-design |
 | [systems-languages](CATALOG.md#systems-languages-10) | 10 | c-memory-safety, cpp-raii, ffi-boundaries |
 | [testing](CATALOG.md#testing-41) | 41 | api-testing, approval-testing, assertion-libraries |
+| [writing](CATALOG.md#writing-10) | 10 | audience-adaptation, clear-writing, concise-writing |
 | [prompts](CATALOG.md#prompts-114) | 114 | ad-copy, add-code-comments, adjust-tone |
 <!-- library:end -->
 

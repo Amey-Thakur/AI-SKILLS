@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 583,
+    "skills": 593,
     "prompts": 114,
-    "categories": 36
+    "categories": 37
   },
   "categories": [
     "accessibility",
@@ -46,7 +46,8 @@
     "scripting-automation",
     "security",
     "systems-languages",
-    "testing"
+    "testing",
+    "writing"
   ],
   "entries": [
     {
@@ -4712,6 +4713,86 @@
       "description": "Catch unintended UI changes by diffing rendered screenshots against approved baselines with tuned thresholds and flake control. Use when protecting a component or page from visual drift across code changes.",
       "path": "skills/testing/visual-regression-testing/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/testing/visual-regression-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "audience-adaptation",
+      "category": "writing",
+      "description": "Adapt what you write, how much, and how you frame it to the specific reader's knowledge, needs, and stakes. Use when the same content must reach different audiences, or when writing is missing its reader.",
+      "path": "skills/writing/audience-adaptation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/writing/audience-adaptation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "clear-writing",
+      "category": "writing",
+      "description": "Write so the reader understands on the first pass: plain words, concrete nouns, one idea per sentence. Use when drafting or editing any prose that must be understood without effort.",
+      "path": "skills/writing/clear-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/writing/clear-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "concise-writing",
+      "category": "writing",
+      "description": "Cut writing to its essential words so every one earns its place, without losing meaning or voice. Use when a piece is too long, dense, or padded, or whenever brevity respects the reader's time.",
+      "path": "skills/writing/concise-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/writing/concise-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "editing-and-revision",
+      "category": "writing",
+      "description": "Turn a rough draft into finished writing through structured revision passes: cut, clarify, then polish. Use when improving your own or others' writing after the first draft exists.",
+      "path": "skills/writing/editing-and-revision/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/writing/editing-and-revision/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "narrative-craft",
+      "category": "writing",
+      "description": "Tell a story that holds attention and makes a point, through character, tension, and concrete scenes. Use when using storytelling in writing: an essay, a talk, a case study, a brand story, a personal account.",
+      "path": "skills/writing/narrative-craft/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/writing/narrative-craft/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "persuasive-writing",
+      "category": "writing",
+      "description": "Make a case in writing that changes minds through a clear claim, real evidence, and honest handling of objections. Use when writing to convince: a proposal, a pitch, an argument, an opinion piece.",
+      "path": "skills/writing/persuasive-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/writing/persuasive-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "strong-openings",
+      "category": "writing",
+      "description": "Write openings that earn the next sentence: hook the reader, promise value, and get to the point fast. Use when a piece's beginning is slow, generic, or buries what matters.",
+      "path": "skills/writing/strong-openings/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/writing/strong-openings/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "structure-and-flow",
+      "category": "writing",
+      "description": "Organize writing so the reader is carried from point to point without friction: logical order, transitions, and signposting. Use when a piece feels disorganized, jumpy, or hard to follow despite clear sentences.",
+      "path": "skills/writing/structure-and-flow/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/writing/structure-and-flow/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "voice-and-tone",
+      "category": "writing",
+      "description": "Develop a consistent writing voice and adjust tone to the context without sounding generic or robotic. Use when writing needs personality, a brand voice, or a register matched to the situation.",
+      "path": "skills/writing/voice-and-tone/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/writing/voice-and-tone/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "writing-with-evidence",
+      "category": "writing",
+      "description": "Support claims with specifics, data, and examples so writing is credible and concrete instead of vague assertion. Use when writing makes claims that need backing, or reads as generic and unconvincing.",
+      "path": "skills/writing/writing-with-evidence/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/writing/writing-with-evidence/SKILL.md"
     },
     {
       "kind": "prompt",
