@@ -6,8 +6,8 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 637,
-    "prompts": 133,
+    "skills": 638,
+    "prompts": 134,
     "categories": 40
   },
   "categories": [
@@ -4279,6 +4279,14 @@
     },
     {
       "kind": "skill",
+      "name": "bug-bounty",
+      "category": "security",
+      "description": "Hunt vulnerabilities in bug bounty programs effectively and within the rules: scope, methodology, safe proof, and reports that get accepted. Use when participating in a bug bounty or coordinated disclosure program.",
+      "path": "skills/security/bug-bounty/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/bug-bounty/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "clickjacking-defense",
       "category": "security",
       "description": "Stop UI redress attacks by declaring who may frame your pages, using frame-ancestors as the primary control and X-Frame-Options as the fallback. Use when hardening any page that performs sensitive actions on a click, especially authenticated dashboards and confirmation flows.",
@@ -5423,6 +5431,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/break-down-task.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/break-down-task.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "bug-bounty-report",
+      "category": "prompts",
+      "description": "Write a clear bug bounty vulnerability report a triager can reproduce and rate fast, with steps, impact, and a fix.",
+      "variables": [
+        "{vulnerability}: what you found, where, and how you triggered it",
+        "{program}: the program, the affected asset/scope, and any required report format"
+      ],
+      "settings": "Temperature 0.2-0.4 for precision.",
+      "path": "prompts/bug-bounty-report.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/bug-bounty-report.md"
     },
     {
       "kind": "prompt",

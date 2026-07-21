@@ -814,7 +814,7 @@
     },
     {
       "name": "security-skills",
-      "description": "43 working methods for security: api-security, audit-logging, authn-design, authz-design, and more",
+      "description": "44 working methods for security: api-security, audit-logging, authn-design, authz-design, and more",
       "source": "./",
       "strict": false,
       "skills": [
@@ -823,6 +823,7 @@
         "./skills/security/authn-design",
         "./skills/security/authz-design",
         "./skills/security/browser-storage-safety",
+        "./skills/security/bug-bounty",
         "./skills/security/clickjacking-defense",
         "./skills/security/command-injection-defense",
         "./skills/security/container-security",

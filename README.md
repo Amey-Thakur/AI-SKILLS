@@ -44,6 +44,10 @@ improves on the first try.
   Where settings mention temperature: that is the model's freedom to
   improvise, 0 exact and repeatable, 1 creative. No temperature control in
   your tool? Skip it; the prompt works at the default.
+  The everyday ones have short names you run like a command: `summarize`,
+  `tldr`, `explain`, `plan`, `brainstorm`, `critique`, `improve`, `outline`,
+  `steps`, `pros-cons`, plus `goal`, `autoresearch`, and `reflect` for
+  autonomous agent runs.
 
 Each entry is plain markdown with a short header. That is the design, not a
 limitation: a method an agent can read is one you can read, edit, version, and
@@ -123,12 +127,12 @@ One row per category; every entry, with its one-line description, is in
 | [python](CATALOG.md#python-14) | 14 | pytest-mastery, python-asyncio, python-cli-tools |
 | [research](CATALOG.md#research-15) | 15 | autonomous-research, decision-journals, deep-research |
 | [scripting-automation](CATALOG.md#scripting-automation-10) | 10 | automation-guardrails, bash-robustness, cli-ux-design |
-| [security](CATALOG.md#security-43) | 43 | api-security, audit-logging, authn-design |
+| [security](CATALOG.md#security-44) | 44 | api-security, audit-logging, authn-design |
 | [systems-languages](CATALOG.md#systems-languages-10) | 10 | c-memory-safety, cpp-raii, ffi-boundaries |
 | [testing](CATALOG.md#testing-41) | 41 | api-testing, approval-testing, assertion-libraries |
 | [ui-ux](CATALOG.md#ui-ux-10) | 10 | empty-and-error-states, information-architecture, interaction-design |
 | [writing](CATALOG.md#writing-10) | 10 | audience-adaptation, clear-writing, concise-writing |
-| [prompts](CATALOG.md#prompts-133) | 133 | ad-copy, add-code-comments, adjust-tone |
+| [prompts](CATALOG.md#prompts-134) | 134 | ad-copy, add-code-comments, adjust-tone |
 <!-- library:end -->
 
 <br>
