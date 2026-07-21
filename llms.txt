@@ -534,7 +534,15 @@
 
 ## Skills: research-thinking
 
+- [decision-journals](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/decision-journals/SKILL.md): Record decisions with their context and predictions to enable honest calibration and defeat hindsight bias. Use when making consequential decisions you want to learn from later.
+- [estimation-techniques](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/estimation-techniques/SKILL.md): Estimate unknown quantities with Fermi decomposition, reference classes, and honest error bars. Use when you need a number for a decision and no exact figure exists.
+- [experiment-design-basics](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/experiment-design-basics/SKILL.md): Design experiments with controls, randomization, confound awareness, and pre-registered analysis. Use when testing a hypothesis empirically and needing the result to actually mean something.
+- [first-principles-thinking](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/first-principles-thinking/SKILL.md): Reason from fundamental truths by excavating assumptions and rebuilding from constraints, knowing when analogy is faster. Use when stuck in a solution space defined by convention or challenging an inherited assumption.
+- [hypothesis-driven-work](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/hypothesis-driven-work/SKILL.md): Frame work as falsifiable hypotheses, test the cheapest first, and update on evidence rather than defending the plan. Use when facing uncertainty and tempted to build the whole thing before learning anything.
+- [literature-review](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/literature-review/SKILL.md): Survey prior work systematically through search strategy, citation chasing, quality assessment, and synthesis. Use when entering a new domain or grounding a decision in what is already known.
+- [reading-papers](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/reading-papers/SKILL.md): Read research papers efficiently in passes, separating claims from evidence and assessing reproducibility. Use when extracting value from academic papers without reading every one cover to cover.
 - [research-synthesis](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/research-synthesis/SKILL.md): Turn multiple sources into a defensible, source-attributed answer that separates fact from inference. Use when researching a question across documents, articles, or search results.
+- [tradeoff-analysis](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research-thinking/tradeoff-analysis/SKILL.md): Compare options with explicit weighted criteria, sensitivity checks, and reversibility awareness. Use when facing a consequential choice between alternatives with no obvious winner.
 
 ## Skills: scripting-automation
 

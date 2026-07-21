@@ -686,11 +686,19 @@
     },
     {
       "name": "research-thinking-skills",
-      "description": "1 working methods for research thinking: research-synthesis, and more",
+      "description": "9 working methods for research thinking: decision-journals, estimation-techniques, experiment-design-basics, first-principles-thinking, and more",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/research-thinking/research-synthesis"
+        "./skills/research-thinking/decision-journals",
+        "./skills/research-thinking/estimation-techniques",
+        "./skills/research-thinking/experiment-design-basics",
+        "./skills/research-thinking/first-principles-thinking",
+        "./skills/research-thinking/hypothesis-driven-work",
+        "./skills/research-thinking/literature-review",
+        "./skills/research-thinking/reading-papers",
+        "./skills/research-thinking/research-synthesis",
+        "./skills/research-thinking/tradeoff-analysis"
       ]
     },
     {
