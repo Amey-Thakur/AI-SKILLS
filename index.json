@@ -7,7 +7,7 @@
   "license": "MIT",
   "count": {
     "skills": 563,
-    "prompts": 56,
+    "prompts": 72,
     "categories": 35
   },
   "categories": [
@@ -4593,6 +4593,19 @@
     },
     {
       "kind": "prompt",
+      "name": "architecture-decision-record",
+      "category": "prompts",
+      "description": "Write an ADR that captures a technical decision, its context, and its consequences so future teams know why.",
+      "variables": [
+        "{decision}: the decision made (or being made)",
+        "{context}: the forces at play, the options, and the constraints"
+      ],
+      "settings": "Temperature 0.3-0.4.",
+      "path": "prompts/architecture-decision-record.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/architecture-decision-record.md"
+    },
+    {
+      "kind": "prompt",
       "name": "brainstorm-divergent",
       "category": "prompts",
       "description": "Generate genuinely different ideas across the solution space, then converge on the strongest few.",
@@ -4753,6 +4766,19 @@
     },
     {
       "kind": "prompt",
+      "name": "design-doc",
+      "category": "prompts",
+      "description": "Write an engineering design doc that states the problem, weighs options, and lets reviewers approve or push back.",
+      "variables": [
+        "{problem}: the problem or feature the design addresses",
+        "{context}: current system, constraints, requirements, and any options you are considering"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/design-doc.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-doc.md"
+    },
+    {
+      "kind": "prompt",
       "name": "dockerfile-generate",
       "category": "prompts",
       "description": "Write a small, secure, cache-friendly Dockerfile for an application, with multi-stage builds and a non-root runtime.",
@@ -4794,6 +4820,19 @@
     },
     {
       "kind": "prompt",
+      "name": "estimate-work",
+      "category": "prompts",
+      "description": "Estimate a task or project honestly, by decomposing it, surfacing unknowns, and giving a range not a false point.",
+      "variables": [
+        "{work}: the task or project to estimate",
+        "{context}: the team, the tech, dependencies, and any deadline"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/estimate-work.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/estimate-work.md"
+    },
+    {
+      "kind": "prompt",
       "name": "excel-formula",
       "category": "prompts",
       "description": "Build or fix an Excel or Google Sheets formula from a plain-language description, explained and robust.",
@@ -4804,6 +4843,19 @@
       "settings": "Temperature 0.2 for correctness.",
       "path": "prompts/excel-formula.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/excel-formula.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "exec-one-pager",
+      "category": "prompts",
+      "description": "Write a one-page brief for executives that leads with the ask and the bottom line, backed by just enough evidence.",
+      "variables": [
+        "{topic}: what the brief is about (a decision, a proposal, an update, a request)",
+        "{details}: the situation, the options, the data, and what you want from the reader"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/exec-one-pager.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/exec-one-pager.md"
     },
     {
       "kind": "prompt",
@@ -4992,6 +5044,19 @@
     },
     {
       "kind": "prompt",
+      "name": "okr-draft",
+      "category": "prompts",
+      "description": "Draft OKRs with an inspiring objective and measurable, outcome-based key results, avoiding vanity and task-lists.",
+      "variables": [
+        "{goal}: the team or company goal or direction for the period",
+        "{context}: the timeframe, the team, and current baselines if known"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/okr-draft.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/okr-draft.md"
+    },
+    {
+      "kind": "prompt",
       "name": "optimize-code",
       "category": "prompts",
       "description": "Make code faster or lighter by finding the real bottleneck first, with measured, behavior-preserving changes.",
@@ -5002,6 +5067,32 @@
       "settings": "Temperature 0.2-0.4.",
       "path": "prompts/optimize-code.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/optimize-code.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "performance-review",
+      "category": "prompts",
+      "description": "Write a fair, specific performance review or peer feedback with concrete examples and actionable growth areas.",
+      "variables": [
+        "{person}: whose review this is and your working relationship (report, peer, self)",
+        "{observations}: what they did well, where they struggled, with specific examples"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/performance-review.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/performance-review.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "postmortem-writeup",
+      "category": "prompts",
+      "description": "Write a blameless incident postmortem that finds the systemic cause and produces real preventive actions.",
+      "variables": [
+        "{incident}: what happened, the impact, and the timeline as you know it",
+        "{details}: contributing factors, what was tried, how it was resolved"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/postmortem-writeup.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/postmortem-writeup.md"
     },
     {
       "kind": "prompt",
@@ -5018,6 +5109,45 @@
     },
     {
       "kind": "prompt",
+      "name": "pre-mortem",
+      "category": "prompts",
+      "description": "Run a pre-mortem: imagine the project already failed, work backward to the causes, and prevent them now.",
+      "variables": [
+        "{project}: the project, launch, or decision you are about to commit to",
+        "{context}: the plan, the timeline, the team, and the stakes"
+      ],
+      "settings": "Temperature 0.6-0.8 for generating failure modes.",
+      "path": "prompts/pre-mortem.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/pre-mortem.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "prfaq",
+      "category": "prompts",
+      "description": "Write an Amazon-style PR/FAQ (press release plus FAQ) to pressure-test a product idea by working backwards from the customer.",
+      "variables": [
+        "{idea}: the product or feature idea",
+        "{customer}: who it is for and the problem it solves for them"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/prfaq.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/prfaq.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "prioritize-tasks",
+      "category": "prompts",
+      "description": "Prioritize a task list by importance and urgency (Eisenhower matrix) and turn it into a clear order of action.",
+      "variables": [
+        "{tasks}: the tasks to prioritize",
+        "{goals}: what actually matters to you right now, so importance can be judged"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/prioritize-tasks.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/prioritize-tasks.md"
+    },
+    {
+      "kind": "prompt",
       "name": "product-description",
       "category": "prompts",
       "description": "Write a product description that sells the benefit, fits the channel, and stays honest about what the product is.",
@@ -5029,6 +5159,32 @@
       "settings": "Temperature 0.6-0.8.",
       "path": "prompts/product-description.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/product-description.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "product-requirements-doc",
+      "category": "prompts",
+      "description": "Write a product requirements document (PRD) that defines the problem, the users, and success, without prescribing the build.",
+      "variables": [
+        "{feature}: the product or feature",
+        "{context}: the users, the problem, the goals, and any constraints"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/product-requirements-doc.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/product-requirements-doc.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "promotion-packet",
+      "category": "prompts",
+      "description": "Write a promotion packet or self-review that frames your work as impact at the next level, with evidence.",
+      "variables": [
+        "{work}: what you did over the period (projects, results, scope, leadership)",
+        "{level}: the level you are being evaluated for, and its expectations if known"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/promotion-packet.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/promotion-packet.md"
     },
     {
       "kind": "prompt",
@@ -5122,6 +5278,19 @@
     },
     {
       "kind": "prompt",
+      "name": "rfc-proposal",
+      "category": "prompts",
+      "description": "Write a technical RFC (request for comments) that proposes a change and invites the team to challenge it.",
+      "variables": [
+        "{proposal}: the change or approach you are proposing",
+        "{context}: the current state, the motivation, and any constraints"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/rfc-proposal.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/rfc-proposal.md"
+    },
+    {
+      "kind": "prompt",
       "name": "risk-analysis",
       "category": "prompts",
       "description": "Surface what can go wrong with a plan, ranked by expected damage, with mitigations that change the odds.",
@@ -5132,6 +5301,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/risk-analysis.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/risk-analysis.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "root-cause-analysis",
+      "category": "prompts",
+      "description": "Find the real root cause of a problem with the 5 Whys, getting past symptoms to the systemic fix.",
+      "variables": [
+        "{problem}: the problem or failure to analyze",
+        "{details}: what you know about how and when it happens"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/root-cause-analysis.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/root-cause-analysis.md"
     },
     {
       "kind": "prompt",
@@ -5228,6 +5410,19 @@
     },
     {
       "kind": "prompt",
+      "name": "system-design-answer",
+      "category": "prompts",
+      "description": "Answer a system design question the way a strong senior engineer would, from requirements to tradeoffs to scale.",
+      "variables": [
+        "{problem}: the system to design (e.g. design a URL shortener, a news feed, a rate limiter)",
+        "{scale}: expected scale and constraints, if given (users, QPS, data size, latency)"
+      ],
+      "settings": "Temperature 0.3-0.5 for structured, grounded reasoning.",
+      "path": "prompts/system-design-answer.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/system-design-answer.md"
+    },
+    {
+      "kind": "prompt",
       "name": "translate-text",
       "category": "prompts",
       "description": "Translate text naturally into a target language, preserving tone, register, and meaning.",
@@ -5252,6 +5447,19 @@
       "settings": "Temperature 0.2-0.4.",
       "path": "prompts/user-story-breakdown.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/user-story-breakdown.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "weekly-plan",
+      "category": "prompts",
+      "description": "Turn a pile of tasks and goals into a realistic weekly plan focused on what actually matters.",
+      "variables": [
+        "{tasks}: everything on your plate (tasks, goals, meetings, commitments)",
+        "{constraints}: your available time, deadlines, energy patterns, fixed commitments"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/weekly-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/weekly-plan.md"
     },
     {
       "kind": "prompt",
