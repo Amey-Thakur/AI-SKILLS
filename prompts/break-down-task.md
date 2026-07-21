@@ -1,0 +1,28 @@
+---
+name: break-down-task
+description: Break a goal into an ordered, actionable plan with dependencies and a clear first step.
+variables:
+  - "{goal}: the goal or project to break down"
+  - "{constraints}: deadline, resources, skills available, if any"
+settings: "Temperature 0.4-0.6."
+---
+
+Break this goal into an actionable plan: {goal}
+
+Constraints: {constraints}
+
+Produce:
+1. The end state in one sentence: what "done" concretely looks like, so
+   progress is measurable.
+2. An ordered list of steps. Each step: a concrete action (starts with a
+   verb), roughly how big it is (minutes/hours/days), and what it depends on.
+   Order by dependency, and put the riskiest or most uncertain step early so
+   failure is cheap.
+3. The single first step you would do right now: small enough to start
+   today, concrete enough that there is no ambiguity about what to do.
+4. The biggest risk or unknown, and the cheapest way to reduce it.
+
+Rules: steps must be actions, not topics ("write the login endpoint", not
+"authentication"). Keep the list as short as the goal allows; do not
+manufacture busywork. If the goal is too vague to plan, name what needs to be
+decided first.

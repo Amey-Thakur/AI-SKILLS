@@ -7,7 +7,7 @@
   "license": "MIT",
   "count": {
     "skills": 563,
-    "prompts": 22,
+    "prompts": 36,
     "categories": 35
   },
   "categories": [
@@ -4554,6 +4554,32 @@
     },
     {
       "kind": "prompt",
+      "name": "add-code-comments",
+      "category": "prompts",
+      "description": "Add docstrings and comments that explain why, matching the code's existing style, without noise.",
+      "variables": [
+        "{code}: the code to document",
+        "{style}: docstring convention (JSDoc, Google, NumPy, rustdoc), if any"
+      ],
+      "settings": "Temperature 0.2-0.4.",
+      "path": "prompts/add-code-comments.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/add-code-comments.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "adjust-tone",
+      "category": "prompts",
+      "description": "Rewrite text in a different tone (more formal, friendlier, more direct) while keeping the meaning.",
+      "variables": [
+        "{text}: the text to adjust",
+        "{target_tone}: the tone to hit (formal, casual, warm, direct, diplomatic, confident)"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/adjust-tone.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/adjust-tone.md"
+    },
+    {
+      "kind": "prompt",
       "name": "api-docs-from-code",
       "category": "prompts",
       "description": "Generate accurate reference documentation for an API from its code, marking every inference.",
@@ -4577,6 +4603,19 @@
       "settings": "Temperature 0.8-1.0 for the divergent phase.",
       "path": "prompts/brainstorm-divergent.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/brainstorm-divergent.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "break-down-task",
+      "category": "prompts",
+      "description": "Break a goal into an ordered, actionable plan with dependencies and a clear first step.",
+      "variables": [
+        "{goal}: the goal or project to break down",
+        "{constraints}: deadline, resources, skills available, if any"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/break-down-task.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/break-down-task.md"
     },
     {
       "kind": "prompt",
@@ -4606,6 +4645,18 @@
     },
     {
       "kind": "prompt",
+      "name": "commit-message",
+      "category": "prompts",
+      "description": "Write a clear conventional-commit message from a diff or a description of the change.",
+      "variables": [
+        "{diff}: the diff, or a plain-language description of what changed"
+      ],
+      "settings": "Temperature 0.2-0.4 for precise, conventional output.",
+      "path": "prompts/commit-message.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/commit-message.md"
+    },
+    {
+      "kind": "prompt",
       "name": "compare-options",
       "category": "prompts",
       "description": "Compare options against criteria that matter and end with a defensible recommendation.",
@@ -4619,6 +4670,20 @@
     },
     {
       "kind": "prompt",
+      "name": "cover-letter",
+      "category": "prompts",
+      "description": "Draft a specific, honest cover letter matching your experience to a role, without cliches.",
+      "variables": [
+        "{role}: the role and company, and the key requirements from the posting",
+        "{background}: your relevant experience, skills, and notable results",
+        "{motivation}: why this company or role, if you have a genuine reason"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/cover-letter.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/cover-letter.md"
+    },
+    {
+      "kind": "prompt",
       "name": "data-to-insights",
       "category": "prompts",
       "description": "Read a table or dataset and report what it actually shows - findings, not decoration, with honest caveats.",
@@ -4629,6 +4694,47 @@
       "settings": "Temperature 0-0.3. Ask for the data as text/CSV, not a description of it.",
       "path": "prompts/data-to-insights.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/data-to-insights.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "debug-error",
+      "category": "prompts",
+      "description": "Diagnose an error methodically from the message, code, and context, with the most likely cause first.",
+      "variables": [
+        "{error}: the full error message and stack trace",
+        "{code}: the relevant code, if available",
+        "{context}: what you were doing, what changed recently, environment"
+      ],
+      "settings": "Temperature 0.2-0.4 for focused reasoning.",
+      "path": "prompts/debug-error.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/debug-error.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "decision-matrix",
+      "category": "prompts",
+      "description": "Build a weighted decision matrix to compare options against criteria and surface what the choice hinges on.",
+      "variables": [
+        "{decision}: the decision to make",
+        "{options}: the options under consideration",
+        "{criteria}: what matters (cost, speed, risk, fit), with rough importance if you have it"
+      ],
+      "settings": "Temperature 0.3-0.5 for structured reasoning.",
+      "path": "prompts/decision-matrix.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/decision-matrix.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "eli-expert",
+      "category": "prompts",
+      "description": "Explain a topic at an expert level, assuming deep background and going straight to the substance.",
+      "variables": [
+        "{topic}: what to explain",
+        "{background}: your field or what you already know, so the explanation can build on it"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/eli-expert.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/eli-expert.md"
     },
     {
       "kind": "prompt",
@@ -4685,6 +4791,19 @@
     },
     {
       "kind": "prompt",
+      "name": "improve-prompt",
+      "category": "prompts",
+      "description": "Rewrite a prompt to be clearer, more specific, and more likely to produce the intended result.",
+      "variables": [
+        "{prompt}: the prompt you want to improve",
+        "{goal}: what you actually want the model to produce, if not obvious"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/improve-prompt.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/improve-prompt.md"
+    },
+    {
+      "kind": "prompt",
       "name": "incident-status-update",
       "category": "prompts",
       "description": "Write a calm, honest status update during an ongoing incident, sized for its audience.",
@@ -4736,6 +4855,57 @@
       "settings": "Temperature 0-0.3.",
       "path": "prompts/meeting-minutes.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/meeting-minutes.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "name-suggestions",
+      "category": "prompts",
+      "description": "Suggest clear, precise names for a variable, function, class, or feature, with tradeoffs.",
+      "variables": [
+        "{thing}: what needs a name (what it is, what it does, what it holds)",
+        "{context}: language, codebase conventions, or domain, if relevant"
+      ],
+      "settings": "Temperature 0.5-0.7 for range.",
+      "path": "prompts/name-suggestions.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/name-suggestions.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "proofread",
+      "category": "prompts",
+      "description": "Fix grammar, spelling, and punctuation while preserving the author's voice and meaning.",
+      "variables": [
+        "{text}: the text to proofread"
+      ],
+      "settings": "Temperature 0.2-0.4 to stay faithful to the original.",
+      "path": "prompts/proofread.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/proofread.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "refactor-code",
+      "category": "prompts",
+      "description": "Suggest refactorings that improve readability and structure without changing behavior, ranked by payoff.",
+      "variables": [
+        "{code}: the code to refactor",
+        "{concern}: the specific goal (readability, testability, performance, size), if any"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/refactor-code.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/refactor-code.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "regex-builder",
+      "category": "prompts",
+      "description": "Build a regular expression from a plain-language description, with an explanation and test cases.",
+      "variables": [
+        "{requirement}: what the pattern should match, in plain language",
+        "{flavor}: the regex flavor (PCRE, JavaScript, Python, Go), if it matters"
+      ],
+      "settings": "Temperature 0.2 for correctness.",
+      "path": "prompts/regex-builder.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/regex-builder.md"
     },
     {
       "kind": "prompt",
@@ -4815,6 +4985,20 @@
       "settings": "Temperature 0-0.3. Works with any capable model.",
       "path": "prompts/summarize-document.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/summarize-document.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "translate-text",
+      "category": "prompts",
+      "description": "Translate text naturally into a target language, preserving tone, register, and meaning.",
+      "variables": [
+        "{text}: the text to translate",
+        "{target_language}: the language to translate into",
+        "{register}: formal, casual, or neutral, if it matters"
+      ],
+      "settings": "Temperature 0.3-0.5 for natural phrasing.",
+      "path": "prompts/translate-text.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/translate-text.md"
     },
     {
       "kind": "prompt",
