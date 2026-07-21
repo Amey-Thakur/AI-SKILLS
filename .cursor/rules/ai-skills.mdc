@@ -1,0 +1,21 @@
+---
+description: Operate the AI-SKILLS library autonomously, selecting the right skill or prompt for each task.
+globs: **/*
+alwaysApply: true
+---
+
+# Use this library autonomously
+
+This repository is a library of AI-agent skills (methods to follow) and prompts
+(templates to run). Use it without waiting for the user to name a skill.
+
+For any task:
+
+1. Name the task's intent (review code, write an email, debug, design, research).
+2. Open `index.json` and match the intent against each skill's `use_when`
+   trigger or each prompt's `description`.
+3. Take the 1-3 entries that genuinely fit; one strong match beats three loose.
+4. Follow a skill's `SKILL.md` method, or fill a prompt's `{variables}` and run.
+5. Check the output against the entry's `## Boundaries` or rules before finishing.
+
+The full protocol is in `AGENTS.md`.

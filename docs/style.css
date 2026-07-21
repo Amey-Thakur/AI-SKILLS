@@ -1,9 +1,9 @@
 /*
  * AI-SKILLS site styles.
- * A calm, spacious system: soft rounded surfaces, generous whitespace, a
- * readable serif for prose and the Play display face for the brand and
- * headings. Two themes, one accent. Depth comes from light shadow and border,
- * never from noise.
+ * A calm, spacious system: soft rounded surfaces, generous whitespace, the
+ * Newsreader serif for prose (a screen-optimized reading face, consistent on
+ * every OS) and the Play display face for the brand and headings. Two themes,
+ * one accent. Depth comes from light shadow and border, never from noise.
  */
 
 :root {
@@ -78,10 +78,11 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   background: var(--bg);
   color: var(--text-2);
-  font-family: "Iowan Old Style", Georgia, "Times New Roman", serif;
-  font-size: 17px;
-  line-height: 1.72;
+  font-family: "Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 .mono { font-family: ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace; }
 .play { font-family: "Play", ui-monospace, Consolas, monospace; }

@@ -8,8 +8,10 @@ the right entry for a task and apply it, without the user having to name it.
 
 - The complete machine-readable catalog is [`index.json`](index.json):
   every entry with its name, kind (`skill` | `prompt`), category,
-  description, and raw URL. Fetch it once, pick by description, fetch only
-  what the task needs.
+  description, and raw URL, plus a `use_when` trigger on each skill and the
+  `variables` a prompt needs. Its top-level `agents` block states this same
+  protocol, so the index is enough to select from on its own. Fetch it once,
+  pick by `use_when` / description, fetch only what the task needs.
 - [`llms.txt`](llms.txt) carries the same catalog as plain text if JSON is
   inconvenient.
 - Raw URL pattern:

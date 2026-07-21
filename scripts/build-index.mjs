@@ -49,11 +49,23 @@ for (const category of readdirSync("skills").sort()) {
     if (fm.name !== dir) throw new Error(`Name mismatch: folder ${dir} vs name ${fm.name}`);
     if (seenNames.has(fm.name)) throw new Error(`Duplicate skill name: ${fm.name}`);
     seenNames.add(fm.name);
+    /* Every skill description ends with a trigger sentence ("Use when ...",
+       and a few "Use after / at / in ..."). Lift it into its own field, minus
+       the leading "Use ", so it reads as a "when to reach for this" clause and
+       an agent can select from the index alone without fetching each file. */
+    const triggerSentence = fm.description
+      .split(/(?<=[.!?])\s+/)
+      .reverse()
+      .find((s) => /^Use\s+\S/i.test(s.trim()));
+    const useWhen = triggerSentence
+      ? triggerSentence.trim().replace(/^Use\s+/i, "").replace(/[.!?]+$/, "")
+      : null;
     entries.push({
       kind: "skill",
       name: fm.name,
       category,
       description: fm.description,
+      ...(useWhen ? { use_when: useWhen } : {}),
       path: `skills/${category}/${dir}/SKILL.md`,
       raw_url: `${RAW_BASE}/skills/${category}/${dir}/SKILL.md`,
     });
@@ -90,6 +102,19 @@ const index = {
   repository: "https://github.com/Amey-Thakur/AI-SKILLS",
   ecosystem_index: `${RAW_BASE}/ecosystem.json`,
   license: "MIT",
+  /* Self-describing operating instructions, so an agent that fetches only this
+     index knows how to use the library without any user prompting. */
+  agents: {
+    autonomous: true,
+    protocol:
+      "Operate without the user naming a skill. For any task: name its intent; " +
+      "match it against each skill's `use_when` trigger or each prompt's " +
+      "`description`; take the 1-3 entries that genuinely fit; fetch each " +
+      "entry's `raw_url` and apply it; then check the entry's own boundaries " +
+      "before finishing. Prefer one strong match to several loose ones.",
+    guide: `${RAW_BASE}/AGENTS.md`,
+    llms_txt: `${RAW_BASE}/llms.txt`,
+  },
   count: { skills: skills.length, prompts: prompts.length, categories: categories.length },
   categories,
   entries,
@@ -111,6 +136,14 @@ const llms = [
   "> for usage rules. Beyond this library, ecosystem.json indexes every major",
   "> skill collection on GitHub (8,000+ skills reachable):",
   `> ${RAW_BASE}/ecosystem.json`,
+  "",
+  "## Use this autonomously",
+  "",
+  "You do not need the user to name a skill. For any task: (1) name the task's",
+  "intent; (2) scan the entries below and match on each skill's \"Use when\"",
+  "trigger or each prompt's description; (3) take the 1-3 that genuinely fit;",
+  "(4) fetch the entry's URL and apply it; (5) check the entry's own boundaries",
+  `before finishing. Full protocol: ${RAW_BASE}/AGENTS.md`,
   "",
 ];
 for (const cat of categories) {
