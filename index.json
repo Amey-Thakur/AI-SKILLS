@@ -7,7 +7,7 @@
   "license": "MIT",
   "count": {
     "skills": 637,
-    "prompts": 123,
+    "prompts": 133,
     "categories": 40
   },
   "categories": [
@@ -5400,6 +5400,19 @@
     },
     {
       "kind": "prompt",
+      "name": "brainstorm",
+      "category": "prompts",
+      "description": "Generate a range of ideas for anything quickly, from safe to bold, without self-censoring. A quick /brainstorm command.",
+      "variables": [
+        "{topic}: what you want ideas for",
+        "{constraints}: any goals, limits, or must-haves, if you have them"
+      ],
+      "settings": "Temperature 0.8-1.0 for range.",
+      "path": "prompts/brainstorm.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/brainstorm.md"
+    },
+    {
+      "kind": "prompt",
       "name": "break-down-task",
       "category": "prompts",
       "description": "Break a goal into an ordered, actionable plan with dependencies and a clear first step.",
@@ -5542,6 +5555,19 @@
       "settings": "Temperature 0.5-0.7.",
       "path": "prompts/cover-letter.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/cover-letter.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "critique",
+      "category": "prompts",
+      "description": "Get honest, useful critical feedback on any piece of work, with strengths, weaknesses, and how to fix them. A quick /critique command.",
+      "variables": [
+        "{work}: the work to critique (writing, a plan, an idea, a design, code)",
+        "{goal}: what it is trying to achieve and any bar it must clear"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/critique.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/critique.md"
     },
     {
       "kind": "prompt",
@@ -5758,6 +5784,19 @@
     },
     {
       "kind": "prompt",
+      "name": "explain",
+      "category": "prompts",
+      "description": "Explain anything clearly at the right level for the reader, from beginner to expert. A quick /explain command for any concept.",
+      "variables": [
+        "{topic}: what to explain",
+        "{level}: who it is for and how deep (a beginner, a smart non-expert, a practitioner)"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/explain.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/explain.md"
+    },
+    {
+      "kind": "prompt",
       "name": "extract-action-items",
       "category": "prompts",
       "description": "Pull every commitment, task, and deadline out of meeting notes or a thread, with owners.",
@@ -5859,6 +5898,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/improve-prompt.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/improve-prompt.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "improve",
+      "category": "prompts",
+      "description": "Make any piece of work better, keeping its intent and voice while fixing the weaknesses. A quick /improve command.",
+      "variables": [
+        "{work}: the work to improve (writing, code, a plan, a message)",
+        "{goal}: what it should achieve, and anything to preserve or focus on"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/improve.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/improve.md"
     },
     {
       "kind": "prompt",
@@ -6126,6 +6178,19 @@
     },
     {
       "kind": "prompt",
+      "name": "outline",
+      "category": "prompts",
+      "description": "Turn a topic or goal into a clear structured outline before you write or build. A quick /outline command for any piece.",
+      "variables": [
+        "{topic}: what you are outlining and the format (article, doc, talk, essay, plan)",
+        "{audience}: who it is for and the one thing they should take away"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/outline.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/outline.md"
+    },
+    {
+      "kind": "prompt",
       "name": "performance-review",
       "category": "prompts",
       "description": "Write a fair, specific performance review or peer feedback with concrete examples and actionable growth areas.",
@@ -6136,6 +6201,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/performance-review.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/performance-review.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "plan",
+      "category": "prompts",
+      "description": "Turn a task or project into a clear, ordered plan with steps, milestones, and risks. A quick /plan command for anything you need to get done.",
+      "variables": [
+        "{objective}: what you want to accomplish",
+        "{context}: the constraints, resources, deadline, and what done looks like"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/plan.md"
     },
     {
       "kind": "prompt",
@@ -6266,6 +6344,19 @@
       "settings": "Temperature 0.2-0.4 to stay faithful to the original.",
       "path": "prompts/proofread.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/proofread.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "pros-cons",
+      "category": "prompts",
+      "description": "Get a quick, honest pros and cons list for a decision or option to see the tradeoffs at a glance. A quick /pros-cons command.",
+      "variables": [
+        "{subject}: the decision, option, or choice to weigh",
+        "{context}: what matters to you and what you are trying to achieve"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/pros-cons.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/pros-cons.md"
     },
     {
       "kind": "prompt",
@@ -6557,6 +6648,19 @@
     },
     {
       "kind": "prompt",
+      "name": "steps",
+      "category": "prompts",
+      "description": "Get clear step-by-step instructions for how to do something, in order, that anyone can follow. A quick /steps command.",
+      "variables": [
+        "{task}: what you want to know how to do",
+        "{context}: your situation, tools, and level, so the steps fit"
+      ],
+      "settings": "Temperature 0.3-0.5 for accuracy.",
+      "path": "prompts/steps.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/steps.md"
+    },
+    {
+      "kind": "prompt",
       "name": "story-narrative",
       "category": "prompts",
       "description": "Turn a message, brand, or experience into a story with a real arc that makes the point land and stick.",
@@ -6581,6 +6685,19 @@
       "settings": "Temperature 0-0.3. Works with any capable model.",
       "path": "prompts/summarize-document.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/summarize-document.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "summarize",
+      "category": "prompts",
+      "description": "Summarize anything (text, article, thread, transcript, notes) into the key points, fast. A quick /summarize command for any content.",
+      "variables": [
+        "{content}: the text or content to summarize",
+        "{length}: how short (a line, a few bullets, a paragraph) and any focus, if you have one"
+      ],
+      "settings": "Temperature 0.3-0.5 for faithful summaries.",
+      "path": "prompts/summarize.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/summarize.md"
     },
     {
       "kind": "prompt",
@@ -6646,6 +6763,18 @@
       "settings": "Temperature 0.5-0.7.",
       "path": "prompts/thank-you-note.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/thank-you-note.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "tldr",
+      "category": "prompts",
+      "description": "Get the one-line or few-bullet bottom line of anything long, instantly. A quick /tldr command for when you just need the gist.",
+      "variables": [
+        "{content}: the long text, thread, document, or discussion to compress"
+      ],
+      "settings": "Temperature 0.3 for a faithful gist.",
+      "path": "prompts/tldr.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/tldr.md"
     },
     {
       "kind": "prompt",

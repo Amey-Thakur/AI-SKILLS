@@ -128,7 +128,7 @@ One row per category; every entry, with its one-line description, is in
 | [testing](CATALOG.md#testing-41) | 41 | api-testing, approval-testing, assertion-libraries |
 | [ui-ux](CATALOG.md#ui-ux-10) | 10 | empty-and-error-states, information-architecture, interaction-design |
 | [writing](CATALOG.md#writing-10) | 10 | audience-adaptation, clear-writing, concise-writing |
-| [prompts](CATALOG.md#prompts-123) | 123 | ad-copy, add-code-comments, adjust-tone |
+| [prompts](CATALOG.md#prompts-133) | 133 | ad-copy, add-code-comments, adjust-tone |
 <!-- library:end -->
 
 <br>
