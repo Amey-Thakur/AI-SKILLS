@@ -100,6 +100,7 @@ One row per category; every entry, with its one-line description, is in
 | [code-quality](CATALOG.md#code-quality-37) | 37 | api-surface-minimalism, assertion-density, boolean-parameters |
 | [css-styling](CATALOG.md#css-styling-10) | 10 | css-animations, css-architecture, css-cascade |
 | [data-engineering](CATALOG.md#data-engineering-12) | 12 | batch-vs-streaming, change-data-capture, data-lineage |
+| [data-science](CATALOG.md#data-science-12) | 12 | correlation-causation, data-cleaning, data-storytelling |
 | [databases](CATALOG.md#databases-12) | 12 | backup-restore, database-migrations, database-normalization |
 | [debugging](CATALOG.md#debugging-32) | 32 | alerting-design, binary-search-debugging, browser-devtools |
 | [devops](CATALOG.md#devops-14) | 14 | artifact-versioning, blue-green-deployments, capacity-planning |

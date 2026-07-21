@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 608,
+    "skills": 620,
     "prompts": 114,
-    "categories": 38
+    "categories": 39
   },
   "categories": [
     "accessibility",
@@ -23,6 +23,7 @@
     "code-quality",
     "css-styling",
     "data-engineering",
+    "data-science",
     "databases",
     "debugging",
     "devops",
@@ -1578,6 +1579,102 @@
       "description": "Model warehouse tables with explicit grain, conformed dimensions, and deliberate SCD handling. Use when designing analytics schemas or fixing double-counted metrics and unjoinable tables.",
       "path": "skills/data-engineering/warehouse-modeling/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-engineering/warehouse-modeling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "correlation-causation",
+      "category": "data-science",
+      "description": "Tell correlation from causation and avoid the confounding, selection, and reverse-causation traps. Use when data shows a relationship and someone is about to claim one thing causes another.",
+      "path": "skills/data-science/correlation-causation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/correlation-causation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-cleaning",
+      "category": "data-science",
+      "description": "Clean and prepare messy data (missing values, outliers, types, duplicates) with decisions that preserve signal and avoid leakage. Use when raw data needs to be made analysis-ready without corrupting it.",
+      "path": "skills/data-science/data-cleaning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/data-cleaning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-storytelling",
+      "category": "data-science",
+      "description": "Turn analysis into a clear narrative that drives a decision, leading with the insight and backing it with the right evidence. Use when presenting findings to stakeholders who need to act, not admire charts.",
+      "path": "skills/data-science/data-storytelling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/data-storytelling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-visualization",
+      "category": "data-science",
+      "description": "Choose and design charts that reveal the truth in data clearly and honestly, matching the chart to the question. Use when visualizing data for exploration or communication, or fixing a misleading or cluttered chart.",
+      "path": "skills/data-science/data-visualization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/data-visualization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "exploratory-data-analysis",
+      "category": "data-science",
+      "description": "Explore a new dataset systematically to understand its shape, quality, and signal before modeling. Use when you first get a dataset and need to know what is in it, what is wrong with it, and what is worth pursuing.",
+      "path": "skills/data-science/exploratory-data-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/exploratory-data-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "feature-engineering-tabular",
+      "category": "data-science",
+      "description": "Engineer features for tabular models (aggregations, encodings, interactions) that add signal without leaking. Use when building features for a tabular ML or Kaggle problem, where features often matter more than the model.",
+      "path": "skills/data-science/feature-engineering-tabular/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/feature-engineering-tabular/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "gradient-boosting-tuning",
+      "category": "data-science",
+      "description": "Tune gradient-boosted trees (XGBoost, LightGBM, CatBoost) effectively: the parameters that matter and the order to tune them. Use when using gradient boosting on tabular data and wanting real gains from tuning.",
+      "path": "skills/data-science/gradient-boosting-tuning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/gradient-boosting-tuning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "kaggle-competition-workflow",
+      "category": "data-science",
+      "description": "Approach a Kaggle (or any ML competition) systematically: trustworthy validation, strong baseline, then disciplined iteration. Use when entering a data competition and want to place well without wasting the timeline.",
+      "path": "skills/data-science/kaggle-competition-workflow/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/kaggle-competition-workflow/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "leaderboard-strategy",
+      "category": "data-science",
+      "description": "Trust your cross-validation over the public leaderboard, avoid overfitting it, and select final submissions wisely. Use in the endgame of a Kaggle competition, where rank is won or lost by validation discipline.",
+      "path": "skills/data-science/leaderboard-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/leaderboard-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "model-ensembling",
+      "category": "data-science",
+      "description": "Combine diverse models through averaging, blending, and stacking to beat any single model. Use when squeezing maximum accuracy from a competition or high-stakes prediction, after strong single models exist.",
+      "path": "skills/data-science/model-ensembling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/model-ensembling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "statistical-inference",
+      "category": "data-science",
+      "description": "Draw honest conclusions from samples using hypothesis tests, confidence intervals, and significance read correctly. Use when deciding whether an effect is real, comparing groups, or reporting uncertainty.",
+      "path": "skills/data-science/statistical-inference/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/statistical-inference/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "time-series-analysis",
+      "category": "data-science",
+      "description": "Analyze and forecast time-ordered data respecting trend, seasonality, autocorrelation, and the arrow of time. Use when working with data indexed by time: metrics, sales, sensor readings, or any forecast.",
+      "path": "skills/data-science/time-series-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/time-series-analysis/SKILL.md"
     },
     {
       "kind": "skill",
