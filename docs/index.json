@@ -7,7 +7,7 @@
   "license": "MIT",
   "count": {
     "skills": 583,
-    "prompts": 106,
+    "prompts": 114,
     "categories": 36
   },
   "categories": [
@@ -4872,6 +4872,19 @@
     },
     {
       "kind": "prompt",
+      "name": "api-design",
+      "category": "prompts",
+      "description": "Design a clean REST or GraphQL API from requirements, with sensible resources, methods, status codes, and error shapes.",
+      "variables": [
+        "{requirements}: what the API needs to do and the data/entities involved",
+        "{style}: REST or GraphQL, and any constraints (auth, versioning, consumers)"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/api-design.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/api-design.md"
+    },
+    {
+      "kind": "prompt",
       "name": "api-docs-from-code",
       "category": "prompts",
       "description": "Generate accurate reference documentation for an API from its code, marking every inference.",
@@ -4977,6 +4990,19 @@
     },
     {
       "kind": "prompt",
+      "name": "checklist-sop",
+      "category": "prompts",
+      "description": "Turn a process into a clear checklist or standard operating procedure (SOP) anyone can follow without you.",
+      "variables": [
+        "{process}: the process or task to document, in your own words",
+        "{audience}: who will follow it and their level of familiarity"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/checklist-sop.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/checklist-sop.md"
+    },
+    {
+      "kind": "prompt",
       "name": "cold-email",
       "category": "prompts",
       "description": "Write a short, specific cold outreach email that respects the reader's time and gives a real reason to reply.",
@@ -5070,6 +5096,19 @@
     },
     {
       "kind": "prompt",
+      "name": "database-schema",
+      "category": "prompts",
+      "description": "Design a database schema from requirements with sensible tables, keys, relationships, indexes, and constraints.",
+      "variables": [
+        "{requirements}: what the app does and the data it needs to store",
+        "{database}: the database (PostgreSQL, MySQL, a NoSQL store) and any scale or access-pattern notes"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/database-schema.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/database-schema.md"
+    },
+    {
+      "kind": "prompt",
       "name": "debug-error",
       "category": "prompts",
       "description": "Diagnose an error methodically from the message, code, and context, with the most likely cause first.",
@@ -5147,6 +5186,20 @@
       "settings": "Temperature 0.2-0.4 for correctness.",
       "path": "prompts/dockerfile-generate.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/dockerfile-generate.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "elevator-pitch",
+      "category": "prompts",
+      "description": "Write a tight elevator pitch for a product, startup, or yourself that lands the value in 30 seconds.",
+      "variables": [
+        "{subject}: what you are pitching (a startup, product, project, or yourself)",
+        "{audience}: who you are pitching to and what they care about",
+        "{goal}: what you want from the pitch (interest, a meeting, funding, a hire)"
+      ],
+      "settings": "Temperature 0.6-0.8.",
+      "path": "prompts/elevator-pitch.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/elevator-pitch.md"
     },
     {
       "kind": "prompt",
@@ -5295,6 +5348,19 @@
     },
     {
       "kind": "prompt",
+      "name": "git-help",
+      "category": "prompts",
+      "description": "Get the right git commands for a task or to safely undo a mistake, explained, with the destructive parts flagged.",
+      "variables": [
+        "{situation}: what you want to do, or the mess you are trying to get out of",
+        "{state}: relevant context (branch, whether changes are committed/pushed, git status output)"
+      ],
+      "settings": "Temperature 0.2 for correctness.",
+      "path": "prompts/git-help.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/git-help.md"
+    },
+    {
+      "kind": "prompt",
       "name": "headline-hooks",
       "category": "prompts",
       "description": "Generate strong headlines and hooks that earn attention honestly, in a range of angles to test.",
@@ -5412,6 +5478,19 @@
       "settings": "Temperature 0.6-0.8.",
       "path": "prompts/linkedin-post.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/linkedin-post.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "meeting-agenda",
+      "category": "prompts",
+      "description": "Build a focused meeting agenda with clear objectives, timeboxed topics, and the decisions the meeting must produce.",
+      "variables": [
+        "{meeting}: the purpose of the meeting and who attends",
+        "{topics}: what needs to be covered, and any decisions or outcomes required"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/meeting-agenda.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/meeting-agenda.md"
     },
     {
       "kind": "prompt",
@@ -5952,6 +6031,19 @@
     },
     {
       "kind": "prompt",
+      "name": "survey-questions",
+      "category": "prompts",
+      "description": "Write survey or research questions that get honest, useful data without leading, loading, or confusing respondents.",
+      "variables": [
+        "{goal}: what you want to learn and the decision it will inform",
+        "{audience}: who you are surveying and how (email, in-app, interview)"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/survey-questions.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/survey-questions.md"
+    },
+    {
+      "kind": "prompt",
       "name": "swot-analysis",
       "category": "prompts",
       "description": "Run a SWOT analysis (strengths, weaknesses, opportunities, threats) that is specific and leads to actions.",
@@ -5975,6 +6067,19 @@
       "settings": "Temperature 0.3-0.5 for structured, grounded reasoning.",
       "path": "prompts/system-design-answer.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/system-design-answer.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "test-plan",
+      "category": "prompts",
+      "description": "Write a test plan for a feature or release: what to test, the scenarios and edge cases, and the risk-based priorities.",
+      "variables": [
+        "{feature}: the feature, change, or release to test, and how it should behave",
+        "{context}: the users, the risks, the environments, and any constraints"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/test-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/test-plan.md"
     },
     {
       "kind": "prompt",
