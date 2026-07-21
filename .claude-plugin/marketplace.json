@@ -283,12 +283,22 @@
     },
     {
       "name": "databases-skills",
-      "description": "2 working methods for databases: schema-design, sql-optimization, and more",
+      "description": "12 working methods for databases: backup-restore, database-migrations, database-normalization, indexing-strategy, and more",
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/databases/backup-restore",
+        "./skills/databases/database-migrations",
+        "./skills/databases/database-normalization",
+        "./skills/databases/indexing-strategy",
+        "./skills/databases/nosql-modeling",
+        "./skills/databases/orm-tradeoffs",
+        "./skills/databases/query-plan-reading",
         "./skills/databases/schema-design",
-        "./skills/databases/sql-optimization"
+        "./skills/databases/sharding-partitioning",
+        "./skills/databases/sql-optimization",
+        "./skills/databases/time-series-data",
+        "./skills/databases/transactions-isolation"
       ]
     },
     {

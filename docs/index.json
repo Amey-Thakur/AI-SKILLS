@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 530,
+    "skills": 540,
     "prompts": 22,
     "categories": 35
   },
@@ -1458,6 +1458,62 @@
     },
     {
       "kind": "skill",
+      "name": "backup-restore",
+      "category": "databases",
+      "description": "Design backups around tested restores, point-in-time recovery, and backup security. Use when setting up database backups or verifying that existing backups would actually work in a disaster.",
+      "path": "skills/databases/backup-restore/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/backup-restore/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "database-migrations",
+      "category": "databases",
+      "description": "Change schemas safely with expand-contract, online DDL, batched backfills, and rollback awareness. Use when altering a production schema or when a migration risks locking or downtime.",
+      "path": "skills/databases/database-migrations/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/database-migrations/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "database-normalization",
+      "category": "databases",
+      "description": "Apply normal forms pragmatically and denormalize deliberately, weighing update anomalies against read performance. Use when designing a relational schema or deciding whether to denormalize.",
+      "path": "skills/databases/database-normalization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/database-normalization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "indexing-strategy",
+      "category": "databases",
+      "description": "Design indexes from query patterns with correct column order, covering indexes, and write-cost awareness. Use when queries are slow or a table has too many or too few indexes.",
+      "path": "skills/databases/indexing-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/indexing-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "nosql-modeling",
+      "category": "databases",
+      "description": "Model NoSQL data from access patterns first, with single-table and denormalization discipline. Use when designing for a document or key-value store, or when a relational mindset is fighting a NoSQL database.",
+      "path": "skills/databases/nosql-modeling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/nosql-modeling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "orm-tradeoffs",
+      "category": "databases",
+      "description": "Use ORMs for their productivity while avoiding N+1 queries and knowing when to drop to raw SQL. Use when working with an ORM or debugging the performance problems ORMs quietly cause.",
+      "path": "skills/databases/orm-tradeoffs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/orm-tradeoffs/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "query-plan-reading",
+      "category": "databases",
+      "description": "Read EXPLAIN ANALYZE output to find the real cause of a slow query and fix the right thing. Use when a query is slow and you need to know why before changing indexes or SQL.",
+      "path": "skills/databases/query-plan-reading/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/query-plan-reading/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "schema-design",
       "category": "databases",
       "description": "Design database schemas that stay correct under growth and change. Use when creating tables, modeling relationships, or planning schema migrations.",
@@ -1466,11 +1522,35 @@
     },
     {
       "kind": "skill",
+      "name": "sharding-partitioning",
+      "category": "databases",
+      "description": "Scale databases by partitioning and sharding with a good key, handling resharding and cross-shard queries, and knowing when to avoid it. Use when one database can no longer hold or serve the load.",
+      "path": "skills/databases/sharding-partitioning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/sharding-partitioning/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "sql-optimization",
       "category": "databases",
       "description": "Diagnose and fix slow SQL with the query plan as evidence, not folklore. Use when a query is slow, a table scan appears, or database load climbs.",
       "path": "skills/databases/sql-optimization/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/sql-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "time-series-data",
+      "category": "databases",
+      "description": "Store time-series data with retention downsampling, compression, out-of-order handling, and the right store choice. Use when handling metrics, events, or sensor streams that grow relentlessly by time.",
+      "path": "skills/databases/time-series-data/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/time-series-data/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "transactions-isolation",
+      "category": "databases",
+      "description": "Choose isolation levels by the anomalies they prevent, understand locking versus MVCC, and retry on serialization failures. Use when transactional correctness matters or concurrency bugs appear under load.",
+      "path": "skills/databases/transactions-isolation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/databases/transactions-isolation/SKILL.md"
     },
     {
       "kind": "skill",
