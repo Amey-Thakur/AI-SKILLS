@@ -7,7 +7,7 @@
   "license": "MIT",
   "count": {
     "skills": 563,
-    "prompts": 36,
+    "prompts": 56,
     "categories": 35
   },
   "categories": [
@@ -4645,6 +4645,20 @@
     },
     {
       "kind": "prompt",
+      "name": "cold-email",
+      "category": "prompts",
+      "description": "Write a short, specific cold outreach email that respects the reader's time and gives a real reason to reply.",
+      "variables": [
+        "{recipient}: who they are and why you are reaching out to them specifically",
+        "{offer}: what you want or are offering, and the value to them",
+        "{about_you}: who you are, briefly, and any credibility that matters"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/cold-email.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/cold-email.md"
+    },
+    {
+      "kind": "prompt",
       "name": "commit-message",
       "category": "prompts",
       "description": "Write a clear conventional-commit message from a diff or a description of the change.",
@@ -4667,6 +4681,20 @@
       "settings": "Temperature 0.2-0.4.",
       "path": "prompts/compare-options.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/compare-options.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "convert-code",
+      "category": "prompts",
+      "description": "Translate code from one language or framework to another, idiomatic to the target, with the tricky parts flagged.",
+      "variables": [
+        "{code}: the code to convert",
+        "{from}: the source language/framework",
+        "{to}: the target language/framework"
+      ],
+      "settings": "Temperature 0.2-0.4 for faithful translation.",
+      "path": "prompts/convert-code.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/convert-code.md"
     },
     {
       "kind": "prompt",
@@ -4725,6 +4753,19 @@
     },
     {
       "kind": "prompt",
+      "name": "dockerfile-generate",
+      "category": "prompts",
+      "description": "Write a small, secure, cache-friendly Dockerfile for an application, with multi-stage builds and a non-root runtime.",
+      "variables": [
+        "{app}: the app (language, framework, build command, run command, port)",
+        "{constraints}: base image policy, size or security requirements, if any"
+      ],
+      "settings": "Temperature 0.2-0.4 for correctness.",
+      "path": "prompts/dockerfile-generate.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/dockerfile-generate.md"
+    },
+    {
+      "kind": "prompt",
       "name": "eli-expert",
       "category": "prompts",
       "description": "Explain a topic at an expert level, assuming deep background and going straight to the substance.",
@@ -4750,6 +4791,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/email-professional.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/email-professional.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "excel-formula",
+      "category": "prompts",
+      "description": "Build or fix an Excel or Google Sheets formula from a plain-language description, explained and robust.",
+      "variables": [
+        "{task}: what you want the formula to do, and the relevant cells/columns",
+        "{tool}: Excel or Google Sheets (they differ on some functions)"
+      ],
+      "settings": "Temperature 0.2 for correctness.",
+      "path": "prompts/excel-formula.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/excel-formula.md"
     },
     {
       "kind": "prompt",
@@ -4788,6 +4842,46 @@
       "settings": "Temperature 0-0.2; precision matters more than prose.",
       "path": "prompts/extract-action-items.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/extract-action-items.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "faq-generator",
+      "category": "prompts",
+      "description": "Generate an FAQ from a product, doc, or topic, answering the questions people actually ask, concisely.",
+      "variables": [
+        "{source}: the product, documentation, or topic (paste it or describe it)",
+        "{audience}: who is asking (customers, users, developers)"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/faq-generator.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/faq-generator.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "flashcards",
+      "category": "prompts",
+      "description": "Turn notes or a topic into study flashcards that test recall of the things worth knowing, not trivia.",
+      "variables": [
+        "{material}: the notes, text, or topic to make flashcards from",
+        "{count}: roughly how many cards, and any focus (definitions, concepts, formulas)"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/flashcards.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/flashcards.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "follow-up-email",
+      "category": "prompts",
+      "description": "Write a polite, effective follow-up email that adds value and prompts a reply without nagging.",
+      "variables": [
+        "{situation}: what you are following up on and how much time has passed",
+        "{prior}: what was said before (the original ask, any response), briefly",
+        "{goal}: what you want to happen now"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/follow-up-email.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/follow-up-email.md"
     },
     {
       "kind": "prompt",
@@ -4830,6 +4924,20 @@
     },
     {
       "kind": "prompt",
+      "name": "job-description",
+      "category": "prompts",
+      "description": "Write a clear, honest job description that attracts the right candidates and screens out the wrong ones.",
+      "variables": [
+        "{role}: the role, team, level, and what the person will actually do",
+        "{requirements}: the genuine must-haves and nice-to-haves",
+        "{company}: the company, location/remote, and anything that sells the role"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/job-description.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/job-description.md"
+    },
+    {
+      "kind": "prompt",
       "name": "learning-plan",
       "category": "prompts",
       "description": "Build a realistic, practice-first plan to learn any skill, fitted to available time and a concrete goal.",
@@ -4842,6 +4950,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/learning-plan.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/learning-plan.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "linkedin-post",
+      "category": "prompts",
+      "description": "Write a LinkedIn post that reads as a real professional story or insight, with a strong first line and a genuine takeaway.",
+      "variables": [
+        "{topic}: what you want to post about (a lesson, a launch, an opinion, a win)",
+        "{goal}: what you want from it (visibility, hiring, discussion, thought leadership)"
+      ],
+      "settings": "Temperature 0.6-0.8.",
+      "path": "prompts/linkedin-post.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/linkedin-post.md"
     },
     {
       "kind": "prompt",
@@ -4868,6 +4989,46 @@
       "settings": "Temperature 0.5-0.7 for range.",
       "path": "prompts/name-suggestions.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/name-suggestions.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "optimize-code",
+      "category": "prompts",
+      "description": "Make code faster or lighter by finding the real bottleneck first, with measured, behavior-preserving changes.",
+      "variables": [
+        "{code}: the code to optimize",
+        "{goal}: what to improve (speed, memory, latency) and any measured numbers"
+      ],
+      "settings": "Temperature 0.2-0.4.",
+      "path": "prompts/optimize-code.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/optimize-code.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "pr-description",
+      "category": "prompts",
+      "description": "Write a pull request description that helps reviewers: what changed, why, and how to verify, from a diff.",
+      "variables": [
+        "{diff}: the diff or a summary of the changes",
+        "{context}: the issue/ticket, the motivation, anything reviewers should know"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/pr-description.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/pr-description.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "product-description",
+      "category": "prompts",
+      "description": "Write a product description that sells the benefit, fits the channel, and stays honest about what the product is.",
+      "variables": [
+        "{product}: the product, its features, and who it is for",
+        "{channel}: where it appears (ecommerce listing, landing page, marketplace, catalog)",
+        "{tone}: brand voice (premium, playful, technical, minimal), if you have one"
+      ],
+      "settings": "Temperature 0.6-0.8.",
+      "path": "prompts/product-description.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/product-description.md"
     },
     {
       "kind": "prompt",
@@ -4909,6 +5070,45 @@
     },
     {
       "kind": "prompt",
+      "name": "release-notes",
+      "category": "prompts",
+      "description": "Write user-facing release notes from a changelog or list of changes, grouped and written for the reader.",
+      "variables": [
+        "{changes}: the changes in this release (commits, changelog, or a description)",
+        "{audience}: who reads them (end users, developers, both)"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/release-notes.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/release-notes.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "resume-bullets",
+      "category": "prompts",
+      "description": "Turn your work into strong resume bullet points with action verbs and quantified impact, honestly.",
+      "variables": [
+        "{experience}: what you did (the role, the projects, the work), in your own words",
+        "{role}: the role you are applying for, so bullets can be tailored"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/resume-bullets.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/resume-bullets.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "review-my-code",
+      "category": "prompts",
+      "description": "Review code for bugs, security issues, and clarity, with severity-ranked findings and concrete fixes.",
+      "variables": [
+        "{code}: the code to review (a function, file, or diff)",
+        "{context}: language, what it does, and any specific concern"
+      ],
+      "settings": "Temperature 0.2-0.4 for careful, grounded review.",
+      "path": "prompts/review-my-code.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/review-my-code.md"
+    },
+    {
+      "kind": "prompt",
       "name": "rewrite-for-clarity",
       "category": "prompts",
       "description": "Rewrite any text to be clearer and shorter without changing its meaning or losing content.",
@@ -4932,6 +5132,33 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/risk-analysis.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/risk-analysis.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "shell-command",
+      "category": "prompts",
+      "description": "Get the right terminal command for a task, explained, with the dangerous parts flagged before you run it.",
+      "variables": [
+        "{task}: what you want to do in the terminal",
+        "{environment}: OS and shell (macOS/zsh, Linux/bash, Windows/PowerShell), and any tools available"
+      ],
+      "settings": "Temperature 0.2 for correctness.",
+      "path": "prompts/shell-command.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/shell-command.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "social-media-post",
+      "category": "prompts",
+      "description": "Write a social media post or caption tuned to the platform, with a hook, a point, and a clear call to action.",
+      "variables": [
+        "{message}: what you want to say or promote",
+        "{platform}: the platform (X/Twitter, Instagram, LinkedIn, Facebook, TikTok caption)",
+        "{goal}: what the post should achieve (engagement, clicks, signups, awareness)"
+      ],
+      "settings": "Temperature 0.7-0.9 for range.",
+      "path": "prompts/social-media-post.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/social-media-post.md"
     },
     {
       "kind": "prompt",
@@ -4988,6 +5215,19 @@
     },
     {
       "kind": "prompt",
+      "name": "swot-analysis",
+      "category": "prompts",
+      "description": "Run a SWOT analysis (strengths, weaknesses, opportunities, threats) that is specific and leads to actions.",
+      "variables": [
+        "{subject}: the company, product, project, or decision to analyze",
+        "{context}: the market, competitors, goals, and any constraints"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/swot-analysis.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/swot-analysis.md"
+    },
+    {
+      "kind": "prompt",
       "name": "translate-text",
       "category": "prompts",
       "description": "Translate text naturally into a target language, preserving tone, register, and meaning.",
@@ -5012,6 +5252,33 @@
       "settings": "Temperature 0.2-0.4.",
       "path": "prompts/user-story-breakdown.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/user-story-breakdown.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-blog-post",
+      "category": "prompts",
+      "description": "Write a blog post with a clear angle, a scannable structure, and a real takeaway, in your voice not generic filler.",
+      "variables": [
+        "{topic}: what the post is about",
+        "{audience}: who reads it and what they should get from it",
+        "{angle}: your specific take or the one point the post makes, if you have one"
+      ],
+      "settings": "Temperature 0.6-0.8 for voice, lower for technical accuracy.",
+      "path": "prompts/write-blog-post.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-blog-post.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-documentation",
+      "category": "prompts",
+      "description": "Write clear documentation for code, an API, or a feature, structured for the reader who needs to use it.",
+      "variables": [
+        "{subject}: the code, API, or feature to document (paste it or describe it)",
+        "{audience}: who reads this (new contributor, API consumer, end user)"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/write-documentation.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-documentation.md"
     },
     {
       "kind": "prompt",
