@@ -10,7 +10,8 @@ Treat people with respect. Assume good faith. Give feedback on the work, not
 the person. Welcome newcomers and questions.
 
 These are out of bounds: harassment, insults, discrimination, personal
-attacks, sharing others' private information, and any conduct that would be
+attacks, sharing others' private information, spam, and unsolicited
+self-promotion or advertising, along with any conduct that would be
 unreasonable in a professional setting.
 
 ## Scope
@@ -22,7 +23,9 @@ someone is representing the project in public.
 
 Report unacceptable behavior privately to **ameythakur20@gmail.com**. Every
 report is reviewed and handled discreetly. The maintainer may warn, remove
-content, or ban a contributor whose behavior does not stop.
+content, or ban a contributor whose behavior does not stop. Spam and
+unsolicited promotion are removed on sight and the account is blocked, with no
+warning required.
 
 ## Attribution
 

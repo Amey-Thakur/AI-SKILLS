@@ -182,7 +182,9 @@ and never required.
 
 New skills and prompts are welcome when they clear the bar in
 [CONTRIBUTING.md](CONTRIBUTING.md): complete, self-contained, honest,
-distinct, portable.
+distinct, portable. By taking part you agree to the
+[Code of Conduct](CODE_OF_CONDUCT.md). Found something that could cause harm?
+Follow the [security policy](SECURITY.md), not a public issue.
 
 ## License and author
 

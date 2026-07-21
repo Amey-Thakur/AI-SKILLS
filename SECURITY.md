@@ -9,6 +9,9 @@ kinds of issue are worth reporting.
 - **A skill or prompt that could cause harm if followed.** For example, a
   method that quietly weakens security, leaks secrets, or gives dangerous
   advice as if it were safe.
+- **Content that tries to hijack the agent reading it.** Hidden or obfuscated
+  instructions in a skill or prompt meant to make an AI agent exfiltrate data,
+  run unintended commands, or ignore its own user.
 - **A flaw in the build script** (`scripts/build-index.mjs`) or the website
   under `docs/`.
 
