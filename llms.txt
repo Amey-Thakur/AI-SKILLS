@@ -677,17 +677,24 @@
 
 ## Prompts
 
+- [ad-copy](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/ad-copy.md): Write advertising copy that leads with the benefit, speaks to one audience, and drives one clear action.
 - [add-code-comments](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/add-code-comments.md): Add docstrings and comments that explain why, matching the code's existing style, without noise.
 - [adjust-tone](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/adjust-tone.md): Rewrite text in a different tone (more formal, friendlier, more direct) while keeping the meaning.
+- [agent-eval-design](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-eval-design.md): Design an evaluation for an AI agent or LLM feature: what to test, how to grade it, and how to catch regressions.
+- [agent-system-prompt](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-system-prompt.md): Write a system prompt for an AI agent that defines its role, tools, boundaries, and output clearly enough to act reliably.
+- [agent-task-breakdown](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-task-breakdown.md): Decompose a complex task into clear subtasks an AI agent (or agents) can execute and verify step by step.
+- [agent-tool-definition](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-tool-definition.md): Write a tool/function definition for an AI agent with a description that steers use and parameters it fills correctly.
 - [api-docs-from-code](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/api-docs-from-code.md): Generate accurate reference documentation for an API from its code, marking every inference.
 - [architecture-decision-record](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/architecture-decision-record.md): Write an ADR that captures a technical decision, its context, and its consequences so future teams know why.
 - [brainstorm-divergent](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/brainstorm-divergent.md): Generate genuinely different ideas across the solution space, then converge on the strongest few.
 - [break-down-task](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/break-down-task.md): Break a goal into an ordered, actionable plan with dependencies and a clear first step.
 - [bug-report-triage](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/bug-report-triage.md): Turn a vague bug report into a structured, actionable ticket with severity and next steps.
+- [case-study](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/case-study.md): Write a customer case study with the classic problem-solution-results arc and concrete, credible outcomes.
 - [changelog-from-diff](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/changelog-from-diff.md): Turn a diff or commit list into user-facing changelog entries that describe outcomes, not code.
 - [cold-email](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/cold-email.md): Write a short, specific cold outreach email that respects the reader's time and gives a real reason to reply.
 - [commit-message](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/commit-message.md): Write a clear conventional-commit message from a diff or a description of the change.
 - [compare-options](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/compare-options.md): Compare options against criteria that matter and end with a defensible recommendation.
+- [content-outline](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/content-outline.md): Outline an article, course, or long piece so the structure is sound before you write a word.
 - [convert-code](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/convert-code.md): Translate code from one language or framework to another, idiomatic to the target, with the tricky parts flagged.
 - [cover-letter](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/cover-letter.md): Draft a specific, honest cover letter matching your experience to a role, without cliches.
 - [data-to-insights](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/data-to-insights.md): Read a table or dataset and report what it actually shows - findings, not decoration, with honest caveats.
@@ -706,20 +713,26 @@
 - [faq-generator](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/faq-generator.md): Generate an FAQ from a product, doc, or topic, answering the questions people actually ask, concisely.
 - [flashcards](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/flashcards.md): Turn notes or a topic into study flashcards that test recall of the things worth knowing, not trivia.
 - [follow-up-email](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/follow-up-email.md): Write a polite, effective follow-up email that adds value and prompts a reply without nagging.
+- [headline-hooks](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/headline-hooks.md): Generate strong headlines and hooks that earn attention honestly, in a range of angles to test.
 - [improve-prompt](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/improve-prompt.md): Rewrite a prompt to be clearer, more specific, and more likely to produce the intended result.
 - [incident-status-update](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/incident-status-update.md): Write a calm, honest status update during an ongoing incident, sized for its audience.
 - [interview-questions](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/interview-questions.md): Generate interview questions that reveal real capability for a specific role, with what good answers sound like.
 - [job-description](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/job-description.md): Write a clear, honest job description that attracts the right candidates and screens out the wrong ones.
+- [landing-page-copy](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/landing-page-copy.md): Write landing page copy with a clear headline, benefit-led sections, proof, and one decisive call to action.
 - [learning-plan](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/learning-plan.md): Build a realistic, practice-first plan to learn any skill, fitted to available time and a concrete goal.
 - [linkedin-post](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/linkedin-post.md): Write a LinkedIn post that reads as a real professional story or insight, with a strong first line and a genuine takeaway.
 - [meeting-minutes](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/meeting-minutes.md): Turn a transcript or rough notes into minutes people actually consult - decisions, actions, and open questions first.
+- [multi-agent-workflow](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/multi-agent-workflow.md): Design a multi-agent workflow: which agents, how they divide the work, how they hand off, and how to verify.
 - [name-suggestions](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/name-suggestions.md): Suggest clear, precise names for a variable, function, class, or feature, with tradeoffs.
+- [newsletter](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/newsletter.md): Write an email newsletter people actually open and read, with a hook subject, one clear theme, and real value.
 - [okr-draft](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/okr-draft.md): Draft OKRs with an inspiring objective and measurable, outcome-based key results, avoiding vanity and task-lists.
 - [optimize-code](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/optimize-code.md): Make code faster or lighter by finding the real bottleneck first, with measured, behavior-preserving changes.
+- [orchestrator-prompt](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/orchestrator-prompt.md): Write an orchestrator prompt that coordinates worker agents: delegating, tracking, and synthesizing their results.
 - [performance-review](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/performance-review.md): Write a fair, specific performance review or peer feedback with concrete examples and actionable growth areas.
 - [postmortem-writeup](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/postmortem-writeup.md): Write a blameless incident postmortem that finds the systemic cause and produces real preventive actions.
 - [pr-description](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/pr-description.md): Write a pull request description that helps reviewers: what changed, why, and how to verify, from a diff.
 - [pre-mortem](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/pre-mortem.md): Run a pre-mortem: imagine the project already failed, work backward to the causes, and prevent them now.
+- [press-release](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/press-release.md): Write a press release in standard format that leads with the news and reads like journalism, not a brochure.
 - [prfaq](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/prfaq.md): Write an Amazon-style PR/FAQ (press release plus FAQ) to pressure-test a product idea by working backwards from the customer.
 - [prioritize-tasks](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/prioritize-tasks.md): Prioritize a task list by importance and urgency (Eisenhower matrix) and turn it into a clear order of action.
 - [product-description](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/product-description.md): Write a product description that sells the benefit, fits the channel, and stays honest about what the product is.
@@ -735,17 +748,22 @@
 - [rfc-proposal](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/rfc-proposal.md): Write a technical RFC (request for comments) that proposes a change and invites the team to challenge it.
 - [risk-analysis](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/risk-analysis.md): Surface what can go wrong with a plan, ranked by expected damage, with mitigations that change the odds.
 - [root-cause-analysis](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/root-cause-analysis.md): Find the real root cause of a problem with the 5 Whys, getting past symptoms to the systemic fix.
+- [seo-article](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/seo-article.md): Write an SEO article that genuinely answers the search intent, structured for readers and search engines both.
 - [shell-command](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/shell-command.md): Get the right terminal command for a task, explained, with the dangerous parts flagged before you run it.
 - [social-media-post](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/social-media-post.md): Write a social media post or caption tuned to the platform, with a hook, a point, and a clear call to action.
 - [socratic-tutor](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/socratic-tutor.md): Teach a topic by asking questions that lead the learner to build the understanding themselves.
 - [sql-from-question](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/sql-from-question.md): Translate a plain-language question into correct SQL against a given schema, stating every assumption.
 - [standup-summary](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/standup-summary.md): Turn work notes, commits, or a task list into a crisp standup update that surfaces blockers first.
+- [story-narrative](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/story-narrative.md): Turn a message, brand, or experience into a story with a real arc that makes the point land and stick.
 - [summarize-document](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/summarize-document.md): Summarize any document into a faithful, layered brief that never invents content.
 - [swot-analysis](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/swot-analysis.md): Run a SWOT analysis (strengths, weaknesses, opportunities, threats) that is specific and leads to actions.
 - [system-design-answer](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/system-design-answer.md): Answer a system design question the way a strong senior engineer would, from requirements to tradeoffs to scale.
 - [translate-text](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/translate-text.md): Translate text naturally into a target language, preserving tone, register, and meaning.
+- [tweet-thread](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/tweet-thread.md): Write an X/Twitter thread with a scroll-stopping first post, one idea per post, and a payoff that earns the read.
 - [user-story-breakdown](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/user-story-breakdown.md): Break a feature idea into small, testable user stories with acceptance criteria and honest unknowns.
+- [video-description](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/video-description.md): Write a YouTube video description that hooks the reader, helps search, and includes the standard useful sections.
 - [weekly-plan](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/weekly-plan.md): Turn a pile of tasks and goals into a realistic weekly plan focused on what actually matters.
 - [write-blog-post](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-blog-post.md): Write a blog post with a clear angle, a scannable structure, and a real takeaway, in your voice not generic filler.
 - [write-documentation](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-documentation.md): Write clear documentation for code, an API, or a feature, structured for the reader who needs to use it.
 - [write-tests](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-tests.md): Generate meaningful tests for given code, edge cases first, in the project's own style.
+- [youtube-script](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/youtube-script.md): Write a YouTube video script with a strong hook, a clear structure, and retention built in, in your voice.
