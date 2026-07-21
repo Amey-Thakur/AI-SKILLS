@@ -7,7 +7,7 @@
   "license": "MIT",
   "count": {
     "skills": 563,
-    "prompts": 90,
+    "prompts": 106,
     "categories": 35
   },
   "categories": [
@@ -4594,6 +4594,32 @@
     },
     {
       "kind": "prompt",
+      "name": "agent-build-feature",
+      "category": "prompts",
+      "description": "A strict brief that makes a coding agent implement a feature end to end, matching the codebase and verifying it works.",
+      "variables": [
+        "{feature}: what to build and how it should behave (the acceptance criteria)",
+        "{context}: the repo, where it fits, constraints, and the definition of done"
+      ],
+      "settings": "Paste into your coding agent. Be specific about acceptance criteria.",
+      "path": "prompts/agent-build-feature.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-build-feature.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "agent-complete-task",
+      "category": "prompts",
+      "description": "A strict, goal-focused brief that makes a coding agent (Claude Code, Cursor, Antigravity) finish a task correctly and verify it.",
+      "variables": [
+        "{task}: exactly what you want done",
+        "{context}: the repo, the relevant files, constraints, and the definition of done"
+      ],
+      "settings": "Paste into your coding agent. Keep the goal and done-criteria specific.",
+      "path": "prompts/agent-complete-task.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-complete-task.md"
+    },
+    {
+      "kind": "prompt",
       "name": "agent-eval-design",
       "category": "prompts",
       "description": "Design an evaluation for an AI agent or LLM feature: what to test, how to grade it, and how to catch regressions.",
@@ -4604,6 +4630,45 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/agent-eval-design.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-eval-design.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "agent-explain-codebase",
+      "category": "prompts",
+      "description": "A focused brief that makes a coding agent map an unfamiliar codebase so you (or it) can work in it confidently.",
+      "variables": [
+        "{codebase}: the repo or the part you want understood",
+        "{focus}: what you want to know (the architecture, how feature X works, where to make a change)"
+      ],
+      "settings": "Paste into your coding agent (Claude Code, Cursor, Antigravity).",
+      "path": "prompts/agent-explain-codebase.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-explain-codebase.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "agent-fix-bug",
+      "category": "prompts",
+      "description": "A strict brief that makes a coding agent find the root cause of a bug, fix it minimally, and prove it is fixed.",
+      "variables": [
+        "{bug}: the symptom, how to reproduce it, and the expected vs actual behavior",
+        "{context}: the repo, relevant files, error messages, and any logs"
+      ],
+      "settings": "Paste into your coding agent (Claude Code, Cursor, Antigravity).",
+      "path": "prompts/agent-fix-bug.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-fix-bug.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "agent-refactor-code",
+      "category": "prompts",
+      "description": "A strict brief that makes a coding agent refactor code without changing behavior, verifying nothing broke.",
+      "variables": [
+        "{target}: what to refactor and the goal (readability, structure, remove duplication, split a large module)",
+        "{context}: the repo, the files, and any constraints"
+      ],
+      "settings": "Paste into your coding agent. Refactor means behavior stays identical.",
+      "path": "prompts/agent-refactor-code.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-refactor-code.md"
     },
     {
       "kind": "prompt",
@@ -4669,6 +4734,20 @@
       "settings": "Temperature 0.3-0.4.",
       "path": "prompts/architecture-decision-record.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/architecture-decision-record.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "blog-outline",
+      "category": "prompts",
+      "description": "Outline a blog post with a clear angle and a section flow before you write, so the draft comes easily.",
+      "variables": [
+        "{topic}: what the post is about",
+        "{audience}: who reads it and what they should take away",
+        "{angle}: your specific take, if you have one"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/blog-outline.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/blog-outline.md"
     },
     {
       "kind": "prompt",
@@ -4858,6 +4937,19 @@
     },
     {
       "kind": "prompt",
+      "name": "decline-politely",
+      "category": "prompts",
+      "description": "Say no clearly and kindly, to a request, invitation, or offer, without burning the relationship or over-explaining.",
+      "variables": [
+        "{request}: what you are declining and who is asking",
+        "{reason}: why you are declining, and whether you want to leave a door open"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/decline-politely.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/decline-politely.md"
+    },
+    {
+      "kind": "prompt",
       "name": "design-doc",
       "category": "prompts",
       "description": "Write an engineering design doc that states the problem, weighs options, and lets reviewers approve or push back.",
@@ -4868,6 +4960,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/design-doc.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-doc.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "devils-advocate",
+      "category": "prompts",
+      "description": "Stress-test an idea, plan, or decision by arguing against it honestly, to find the flaws before reality does.",
+      "variables": [
+        "{idea}: the idea, plan, or decision you want challenged",
+        "{context}: the reasoning behind it and what is at stake"
+      ],
+      "settings": "Temperature 0.6-0.8.",
+      "path": "prompts/devils-advocate.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/devils-advocate.md"
     },
     {
       "kind": "prompt",
@@ -5123,6 +5228,19 @@
     },
     {
       "kind": "prompt",
+      "name": "linkedin-about",
+      "category": "prompts",
+      "description": "Write a LinkedIn headline and About section that reads as a real person, leads with value, and invites the right connections.",
+      "variables": [
+        "{background}: your role, experience, skills, and what makes you distinctive",
+        "{goal}: what you want the profile to do (attract recruiters, clients, opportunities, credibility)"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/linkedin-about.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/linkedin-about.md"
+    },
+    {
+      "kind": "prompt",
       "name": "linkedin-post",
       "category": "prompts",
       "description": "Write a LinkedIn post that reads as a real professional story or insight, with a strong first line and a genuine takeaway.",
@@ -5149,6 +5267,19 @@
     },
     {
       "kind": "prompt",
+      "name": "mental-models",
+      "category": "prompts",
+      "description": "Apply relevant mental models to a problem or decision to see it from angles you would otherwise miss.",
+      "variables": [
+        "{problem}: the problem, decision, or situation you are thinking through",
+        "{context}: the details and what you are trying to figure out"
+      ],
+      "settings": "Temperature 0.6-0.8.",
+      "path": "prompts/mental-models.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/mental-models.md"
+    },
+    {
+      "kind": "prompt",
       "name": "multi-agent-workflow",
       "category": "prompts",
       "description": "Design a multi-agent workflow: which agents, how they divide the work, how they hand off, and how to verify.",
@@ -5172,6 +5303,19 @@
       "settings": "Temperature 0.5-0.7 for range.",
       "path": "prompts/name-suggestions.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/name-suggestions.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "negotiation-prep",
+      "category": "prompts",
+      "description": "Prepare for a negotiation with your goals, your walk-away, the other side's interests, and your best alternative.",
+      "variables": [
+        "{negotiation}: what you are negotiating and with whom",
+        "{context}: your goals, constraints, what you know about the other side, and the stakes"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/negotiation-prep.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/negotiation-prep.md"
     },
     {
       "kind": "prompt",
@@ -5410,6 +5554,32 @@
     },
     {
       "kind": "prompt",
+      "name": "reply-to-email",
+      "category": "prompts",
+      "description": "Draft a clear, appropriate reply to an email that addresses what was asked and moves it forward.",
+      "variables": [
+        "{email}: the email you received (paste it)",
+        "{intent}: what you want to say or achieve in the reply, and the tone"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/reply-to-email.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/reply-to-email.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "repurpose-content",
+      "category": "prompts",
+      "description": "Turn one piece of content into formats for other channels, adapted to each rather than copy-pasted.",
+      "variables": [
+        "{content}: the source content (a blog post, talk, video, or its key points)",
+        "{targets}: the formats/channels you want (Twitter thread, LinkedIn post, newsletter, video script, carousel)"
+      ],
+      "settings": "Temperature 0.6-0.8.",
+      "path": "prompts/repurpose-content.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/repurpose-content.md"
+    },
+    {
+      "kind": "prompt",
       "name": "resume-bullets",
       "category": "prompts",
       "description": "Turn your work into strong resume bullet points with action verbs and quantified impact, honestly.",
@@ -5420,6 +5590,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/resume-bullets.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/resume-bullets.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "resume-summary",
+      "category": "prompts",
+      "description": "Write a resume summary or professional profile that positions you for a specific role in three or four strong lines.",
+      "variables": [
+        "{background}: your experience, key skills, and strongest achievements",
+        "{role}: the role you are targeting"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/resume-summary.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/resume-summary.md"
     },
     {
       "kind": "prompt",
@@ -5485,6 +5668,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/root-cause-analysis.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/root-cause-analysis.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "second-order-thinking",
+      "category": "prompts",
+      "description": "Think through the downstream consequences of a decision, past the obvious first effect to what it causes next.",
+      "variables": [
+        "{decision}: the decision or action you are considering",
+        "{context}: the situation, the goal, and the system it affects"
+      ],
+      "settings": "Temperature 0.6-0.8.",
+      "path": "prompts/second-order-thinking.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/second-order-thinking.md"
     },
     {
       "kind": "prompt",
@@ -5618,6 +5814,19 @@
       "settings": "Temperature 0.3-0.5 for structured, grounded reasoning.",
       "path": "prompts/system-design-answer.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/system-design-answer.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "thank-you-note",
+      "category": "prompts",
+      "description": "Write a genuine thank-you note that is specific about what you appreciated, not generic gratitude.",
+      "variables": [
+        "{recipient}: who you are thanking and your relationship",
+        "{reason}: what they did and why it mattered to you"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/thank-you-note.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/thank-you-note.md"
     },
     {
       "kind": "prompt",
