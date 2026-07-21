@@ -596,7 +596,7 @@
     },
     {
       "name": "llm-engineering-skills",
-      "description": "20 working methods for llm engineering: agent-memory, agentic-loops, coding-agent-workflow, context-engineering, and more",
+      "description": "22 working methods for llm engineering: agent-memory, agentic-loops, coding-agent-workflow, context-engineering, and more",
       "source": "./",
       "strict": false,
       "skills": [
@@ -608,6 +608,7 @@
         "./skills/llm-engineering/conversation-design",
         "./skills/llm-engineering/embeddings-selection",
         "./skills/llm-engineering/fine-tuning-vs-prompting",
+        "./skills/llm-engineering/goal-driven-execution",
         "./skills/llm-engineering/llm-cost-latency",
         "./skills/llm-engineering/llm-eval-design",
         "./skills/llm-engineering/llm-guardrails",
@@ -617,6 +618,7 @@
         "./skills/llm-engineering/prompt-engineering",
         "./skills/llm-engineering/rag-pipeline",
         "./skills/llm-engineering/retrieval-reranking",
+        "./skills/llm-engineering/self-reflection",
         "./skills/llm-engineering/staying-on-task",
         "./skills/llm-engineering/structured-output",
         "./skills/llm-engineering/tool-use-design"
@@ -771,10 +773,11 @@
     },
     {
       "name": "research-skills",
-      "description": "14 working methods for research: decision-journals, deep-research, estimation-techniques, experiment-design-basics, and more",
+      "description": "15 working methods for research: autonomous-research, decision-journals, deep-research, estimation-techniques, and more",
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/research/autonomous-research",
         "./skills/research/decision-journals",
         "./skills/research/deep-research",
         "./skills/research/estimation-techniques",

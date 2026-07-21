@@ -114,21 +114,21 @@ One row per category; every entry, with its one-line description, is in
 | [gpu-ai-infrastructure](CATALOG.md#gpu-ai-infrastructure-20) | 20 | ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics |
 | [javascript-typescript](CATALOG.md#javascript-typescript-14) | 14 | js-async-patterns, js-error-handling, js-event-loop |
 | [jvm-dotnet](CATALOG.md#jvm-dotnet-10) | 10 | csharp-linq, dotnet-async, dotnet-dependency-injection |
-| [llm-engineering](CATALOG.md#llm-engineering-20) | 20 | agent-memory, agentic-loops, coding-agent-workflow |
+| [llm-engineering](CATALOG.md#llm-engineering-22) | 22 | agent-memory, agentic-loops, coding-agent-workflow |
 | [machine-learning](CATALOG.md#machine-learning-12) | 12 | cross-validation, drift-monitoring, experiment-tracking |
 | [mobile](CATALOG.md#mobile-10) | 10 | app-store-readiness, deep-linking, mobile-input-ux |
 | [multi-agent-teams](CATALOG.md#multi-agent-teams-25) | 25 | agent-arch-board, agent-code-review-loop, agent-competitive-analysis-team |
 | [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
 | [product-management](CATALOG.md#product-management-10) | 10 | ab-test-design, customer-interviews, feature-sunsetting |
 | [python](CATALOG.md#python-14) | 14 | pytest-mastery, python-asyncio, python-cli-tools |
-| [research](CATALOG.md#research-14) | 14 | decision-journals, deep-research, estimation-techniques |
+| [research](CATALOG.md#research-15) | 15 | autonomous-research, decision-journals, deep-research |
 | [scripting-automation](CATALOG.md#scripting-automation-10) | 10 | automation-guardrails, bash-robustness, cli-ux-design |
 | [security](CATALOG.md#security-43) | 43 | api-security, audit-logging, authn-design |
 | [systems-languages](CATALOG.md#systems-languages-10) | 10 | c-memory-safety, cpp-raii, ffi-boundaries |
 | [testing](CATALOG.md#testing-41) | 41 | api-testing, approval-testing, assertion-libraries |
 | [ui-ux](CATALOG.md#ui-ux-10) | 10 | empty-and-error-states, information-architecture, interaction-design |
 | [writing](CATALOG.md#writing-10) | 10 | audience-adaptation, clear-writing, concise-writing |
-| [prompts](CATALOG.md#prompts-120) | 120 | ad-copy, add-code-comments, adjust-tone |
+| [prompts](CATALOG.md#prompts-123) | 123 | ad-copy, add-code-comments, adjust-tone |
 <!-- library:end -->
 
 <br>

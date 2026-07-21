@@ -6,8 +6,8 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 634,
-    "prompts": 120,
+    "skills": 637,
+    "prompts": 123,
     "categories": 40
   },
   "categories": [
@@ -3135,6 +3135,14 @@
     },
     {
       "kind": "skill",
+      "name": "goal-driven-execution",
+      "category": "llm-engineering",
+      "description": "Pursue a high-level goal to completion autonomously: lock the done-condition, decompose, execute with verification, adapt, and know when to stop. Use when an agent is handed an outcome to achieve rather than a step to perform.",
+      "path": "skills/llm-engineering/goal-driven-execution/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/goal-driven-execution/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "llm-cost-latency",
       "category": "llm-engineering",
       "description": "Cut LLM cost and latency with caching, model tiering, prompt diet, batching, and streaming UX. Use when the inference bill or response time needs engineering down.",
@@ -3204,6 +3212,14 @@
       "description": "Improve RAG answer quality by reranking retrieved candidates so the most relevant chunks reach the model. Use when a retrieval system returns roughly-right documents but the best ones are not on top, or answers miss available evidence.",
       "path": "skills/llm-engineering/retrieval-reranking/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/retrieval-reranking/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "self-reflection",
+      "category": "llm-engineering",
+      "description": "Have an agent critique and improve its own output before delivering, catching errors a first pass misses, without spiraling. Use when correctness matters and an agent should check its own work rather than ship the first draft.",
+      "path": "skills/llm-engineering/self-reflection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/self-reflection/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4020,6 +4036,14 @@
       "description": "Apply Python idioms where they cut bookkeeping and clarify intent, and refuse them where the clever form hides control flow. Use when writing loops, resource handling, or unpacking and deciding how idiomatic to make it.",
       "path": "skills/python/pythonic-idioms/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/pythonic-idioms/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "autonomous-research",
+      "category": "research",
+      "description": "Build and run an autonomous research agent that plans, searches, verifies, and synthesizes reliably, with the safeguards a naive research loop lacks. Use when an AI agent must research a question end to end without a human checking every step.",
+      "path": "skills/research/autonomous-research/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/research/autonomous-research/SKILL.md"
     },
     {
       "kind": "skill",
@@ -5336,6 +5360,19 @@
     },
     {
       "kind": "prompt",
+      "name": "autoresearch",
+      "category": "prompts",
+      "description": "Run a full autonomous research investigation and return a verified, cited report: plan, search broadly, check primary sources, verify adversarially, and synthesize. Run like an /autoresearch command for a deep, trustworthy answer.",
+      "variables": [
+        "{question}: the research question to investigate",
+        "{scope}: depth, recency needs, and what a good answer must cover, if any"
+      ],
+      "settings": "Paste into a research-capable agent (with web access). Give a specific question.",
+      "path": "prompts/autoresearch.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/autoresearch.md"
+    },
+    {
+      "kind": "prompt",
       "name": "blog-outline",
       "category": "prompts",
       "description": "Outline a blog post with a clear angle and a section flow before you write, so the draft comes easily.",
@@ -5786,6 +5823,19 @@
     },
     {
       "kind": "prompt",
+      "name": "goal",
+      "category": "prompts",
+      "description": "Give an AI agent a goal and have it pursue it autonomously to completion, planning, executing, tracking, and verifying with minimal intervention. Run like a /goal command with a coding or task agent.",
+      "variables": [
+        "{goal}: the goal to achieve, stated as an outcome",
+        "{context}: the environment, resources, constraints, and what done looks like"
+      ],
+      "settings": "Paste into an agent. State the goal as an outcome and the done-condition clearly.",
+      "path": "prompts/goal.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/goal.md"
+    },
+    {
+      "kind": "prompt",
       "name": "headline-hooks",
       "category": "prompts",
       "description": "Generate strong headlines and hooks that earn attention honestly, in a range of angles to test.",
@@ -6229,6 +6279,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/refactor-code.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/refactor-code.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "reflect",
+      "category": "prompts",
+      "description": "Have an AI agent critique and improve its own work before delivering it, catching errors and gaps a first pass misses. Run like a /reflect command over a draft, plan, or answer.",
+      "variables": [
+        "{work}: the work to reflect on (a draft, answer, plan, or piece of code)",
+        "{goal}: what it is supposed to achieve and any requirements it must meet"
+      ],
+      "settings": "Paste in the work, or invoke over your own output before finishing.",
+      "path": "prompts/reflect.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/reflect.md"
     },
     {
       "kind": "prompt",
