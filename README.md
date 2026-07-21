@@ -44,10 +44,12 @@ improves on the first try.
   Where settings mention temperature: that is the model's freedom to
   improvise, 0 exact and repeatable, 1 creative. No temperature control in
   your tool? Skip it; the prompt works at the default.
-  The everyday ones have short names you run like a command: `summarize`,
-  `tldr`, `explain`, `plan`, `brainstorm`, `critique`, `improve`, `outline`,
-  `steps`, `pros-cons`, plus `goal`, `autoresearch`, and `reflect` for
-  autonomous agent runs.
+  In Claude Code every prompt installs as a slash command: `/summarize`,
+  `/tldr`, `/explain`, `/plan`, `/brainstorm`, `/critique`, `/improve`,
+  `/outline`, `/steps`, `/pros-cons`, plus `/goal`, `/autoresearch`, and
+  `/reflect` (the generated [`commands/`](commands/) folder). Cursor and
+  Antigravity read the same prompts as slash commands too;
+  [INSTALL.md](INSTALL.md) has the one-line copy step per tool.
 
 Each entry is plain markdown with a short header. That is the design, not a
 limitation: a method an agent can read is one you can read, edit, version, and

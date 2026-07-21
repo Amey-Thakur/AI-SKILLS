@@ -9,7 +9,7 @@
 // frontmatter; fails loudly on a malformed entry rather than emitting a
 // partial catalog.
 
-import { readdirSync, readFileSync, writeFileSync, statSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, statSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
 const RAW_BASE = "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main";
@@ -175,6 +175,41 @@ writeFileSync(
   ),
 );
 
+/* Slash commands: every prompt, regenerated as a Claude Code command so it
+   installs plug-and-play (/summarize, /goal, and the rest). The same plain
+   markdown drops into any other tool that reads a commands folder. */
+mkdirSync("commands", { recursive: true });
+const commandFiles = [];
+for (const p of prompts) {
+  const raw = readFileSync(p.path, "utf8");
+  const body = raw.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, "").trim();
+  const firstVar = p.variables[0]
+    ? String(p.variables[0]).replace(/^\{?([\w-]+)\}?.*$/, "$1")
+    : "input";
+  const desc = p.description.replace(/\s+/g, " ").trim();
+  const command = [
+    "---",
+    `description: ${JSON.stringify(desc)}`,
+    `argument-hint: ${JSON.stringify(`[${firstVar}]`)}`,
+    "---",
+    "",
+    "You were invoked as a slash command. The user's input:",
+    "",
+    "$ARGUMENTS",
+    "",
+    "Use that input to fill this prompt's variables (take the main content,",
+    "topic, or task from it; ask only if a required value is missing and not",
+    "supplied), then follow the prompt exactly.",
+    "",
+    "---",
+    "",
+    body,
+    "",
+  ].join("\n");
+  writeFileSync(join("commands", `${p.name}.md`), command);
+  commandFiles.push(`./commands/${p.name}.md`);
+}
+
 /* Claude Code marketplace: one plugin per category, generated so the listing
    can never drift from the folders. */
 const marketplace = {
@@ -184,19 +219,28 @@ const marketplace = {
     description: "Plug-and-play skills and prompts for every AI coding agent",
     version: "2.0.0",
   },
-  plugins: categories.map((cat) => {
-    const list = skills.filter((s) => s.category === cat);
-    return {
-      name: `${cat}-skills`,
-      description: `${list.length} working methods for ${cat.replace(/-/g, " ")}: ${list
-        .slice(0, 4)
-        .map((e) => e.name)
-        .join(", ")}, and more`,
+  plugins: [
+    ...categories.map((cat) => {
+      const list = skills.filter((s) => s.category === cat);
+      return {
+        name: `${cat}-skills`,
+        description: `${list.length} working methods for ${cat.replace(/-/g, " ")}: ${list
+          .slice(0, 4)
+          .map((e) => e.name)
+          .join(", ")}, and more`,
+        source: "./",
+        strict: false,
+        skills: list.map((e) => `./skills/${cat}/${e.name}`),
+      };
+    }),
+    {
+      name: "ai-skills-commands",
+      description: `${prompts.length} ready-to-run prompts as slash commands: summarize, tldr, explain, plan, goal, autoresearch, and more`,
       source: "./",
       strict: false,
-      skills: list.map((e) => `./skills/${cat}/${e.name}`),
-    };
-  }),
+      commands: commandFiles,
+    },
+  ],
 };
 writeFileSync(
   join(".claude-plugin", "marketplace.json"),

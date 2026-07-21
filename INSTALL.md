@@ -17,6 +17,15 @@ Skills load natively. Add the whole library as a plugin marketplace:
 /plugin marketplace add Amey-Thakur/AI-SKILLS
 ```
 
+That installs the skills (the agent equips them by description) and every
+prompt as a slash command: type `/summarize`, `/tldr`, `/goal`,
+`/autoresearch`, and the rest. Or copy one command on its own:
+
+```bash
+cp AI-SKILLS/commands/summarize.md ~/.claude/commands/    # global
+cp AI-SKILLS/commands/summarize.md .claude/commands/      # this project
+```
+
 Or copy one skill into your skills folder:
 
 ```bash
@@ -46,6 +55,18 @@ cp -r AI-SKILLS/skills/code-quality/code-review .agents/skills/            # thi
 
 The agent equips a skill when the task matches its description. Antigravity
 also reads `AGENTS.md` (below).
+
+Every prompt also works as an Antigravity workflow, its slash commands.
+Workflow files live in `.agent/workflows/` (or
+`~/.gemini/antigravity/global_workflows/` for every workspace) and each needs
+YAML frontmatter with a `description`, which the prompts already carry. Copy
+one in and invoke it as `/summarize`:
+
+```bash
+mkdir -p .agent/workflows
+curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/summarize.md \
+  > .agent/workflows/summarize.md
+```
 
 ## AGENTS.md standard
 
@@ -79,6 +100,16 @@ mkdir -p .cursor/rules
 
 The `.mdc` extension and frontmatter are required; a plain `.md` in that folder
 is ignored.
+
+For a slash command instead of a rule, Cursor reads Markdown prompts from
+`.cursor/commands/` (or `~/.cursor/commands/` globally). Copy one in and run it
+by typing `/summarize` in chat:
+
+```bash
+mkdir -p .cursor/commands
+curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/summarize.md \
+  > .cursor/commands/summarize.md
+```
 
 ## GitHub Copilot
 
