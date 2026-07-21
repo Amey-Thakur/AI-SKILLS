@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 628,
+    "skills": 634,
     "prompts": 120,
     "categories": 40
   },
@@ -1583,6 +1583,14 @@
     },
     {
       "kind": "skill",
+      "name": "cohort-analysis",
+      "category": "data-science",
+      "description": "Group users by a shared start and track them over time to see retention, behavior, and trends that aggregates hide. Use when a blended metric looks stable or improving but you suspect the underlying behavior is changing.",
+      "path": "skills/data-science/cohort-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/cohort-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "correlation-causation",
       "category": "data-science",
       "description": "Tell correlation from causation and avoid the confounding, selection, and reverse-causation traps. Use when data shows a relationship and someone is about to claim one thing causes another.",
@@ -1615,6 +1623,14 @@
     },
     {
       "kind": "skill",
+      "name": "experiment-analysis",
+      "category": "data-science",
+      "description": "Analyze A/B test results correctly: effect size with intervals, guardrails, segments, and the peeking and Simpson traps. Use when reading out an experiment and deciding whether the change worked, before you ship it.",
+      "path": "skills/data-science/experiment-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/experiment-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "exploratory-data-analysis",
       "category": "data-science",
       "description": "Explore a new dataset systematically to understand its shape, quality, and signal before modeling. Use when you first get a dataset and need to know what is in it, what is wrong with it, and what is worth pursuing.",
@@ -1628,6 +1644,14 @@
       "description": "Engineer features for tabular models (aggregations, encodings, interactions) that add signal without leaking. Use when building features for a tabular ML or Kaggle problem, where features often matter more than the model.",
       "path": "skills/data-science/feature-engineering-tabular/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/feature-engineering-tabular/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "funnel-analysis",
+      "category": "data-science",
+      "description": "Analyze conversion funnels to find where users drop off and why, and size the opportunity of fixing each step. Use when diagnosing where a multi-step flow loses people, or prioritizing what to fix.",
+      "path": "skills/data-science/funnel-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/funnel-analysis/SKILL.md"
     },
     {
       "kind": "skill",
@@ -1660,6 +1684,30 @@
       "description": "Combine diverse models through averaging, blending, and stacking to beat any single model. Use when squeezing maximum accuracy from a competition or high-stakes prediction, after strong single models exist.",
       "path": "skills/data-science/model-ensembling/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/model-ensembling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "probability-fundamentals",
+      "category": "data-science",
+      "description": "Reason correctly about probability, base rates, conditional probability, and expected value, avoiding the common intuition traps. Use when interpreting likelihoods, test results, risks, or any uncertain quantity.",
+      "path": "skills/data-science/probability-fundamentals/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/probability-fundamentals/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "regression-analysis",
+      "category": "data-science",
+      "description": "Fit and interpret regression models for insight, reading coefficients, fit, and caveats honestly rather than as causal truth. Use when using regression to understand relationships in data, not to build a predictive model.",
+      "path": "skills/data-science/regression-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/regression-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "sampling-and-bias",
+      "category": "data-science",
+      "description": "Judge whether a sample represents the population and spot the selection, survivorship, and response biases that invalidate conclusions. Use when drawing conclusions from data that is a sample of something larger, which is almost always.",
+      "path": "skills/data-science/sampling-and-bias/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/data-science/sampling-and-bias/SKILL.md"
     },
     {
       "kind": "skill",

@@ -298,20 +298,26 @@
     },
     {
       "name": "data-science-skills",
-      "description": "12 working methods for data science: correlation-causation, data-cleaning, data-storytelling, data-visualization, and more",
+      "description": "18 working methods for data science: cohort-analysis, correlation-causation, data-cleaning, data-storytelling, and more",
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/data-science/cohort-analysis",
         "./skills/data-science/correlation-causation",
         "./skills/data-science/data-cleaning",
         "./skills/data-science/data-storytelling",
         "./skills/data-science/data-visualization",
+        "./skills/data-science/experiment-analysis",
         "./skills/data-science/exploratory-data-analysis",
         "./skills/data-science/feature-engineering-tabular",
+        "./skills/data-science/funnel-analysis",
         "./skills/data-science/gradient-boosting-tuning",
         "./skills/data-science/kaggle-competition-workflow",
         "./skills/data-science/leaderboard-strategy",
         "./skills/data-science/model-ensembling",
+        "./skills/data-science/probability-fundamentals",
+        "./skills/data-science/regression-analysis",
+        "./skills/data-science/sampling-and-bias",
         "./skills/data-science/statistical-inference",
         "./skills/data-science/time-series-analysis"
       ]
