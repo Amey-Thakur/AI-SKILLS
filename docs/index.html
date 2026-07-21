@@ -50,8 +50,8 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Play:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=5">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=6">
 <script>
   try {
     var stored = localStorage.getItem("ai-skills-theme");
@@ -95,7 +95,7 @@
     border-radius: var(--radius-sm); cursor: pointer; transition: border-color .15s, color .15s;
   }
   .copy-btn:hover { border-color: var(--accent); color: var(--text-1); }
-  .install .more { margin-top: 16px; font-size: 15px; color: var(--text-3); }
+  .install .more { margin-top: 16px; font-size: 15px; color: var(--text-3); text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 
   .toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 24px; }
   #search {
@@ -125,7 +125,7 @@
   .card:hover { border-color: var(--border-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
   .card .kind { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
   .card h3 { font-family: "Play", ui-monospace, Consolas, monospace; color: var(--text-1); font-size: 17px; letter-spacing: -0.2px; }
-  .card p { font-size: 14.5px; color: var(--text-3); flex: 1; line-height: 1.6; }
+  .card p { font-size: 14.5px; color: var(--text-3); flex: 1; line-height: 1.6; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
   .card .actions { display: flex; gap: 9px; margin-top: 6px; }
   .card .actions a {
     font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-3); text-decoration: none;
@@ -134,8 +134,8 @@
   .card .actions a:hover { border-color: var(--accent); color: var(--text-1); }
   #empty { color: var(--text-4); font-family: "Play", ui-monospace, Consolas, monospace; font-size: 14px; padding: 40px 0; display: none; }
 
-  .eco-lede { font-size: 16px; color: var(--text-3); max-width: 680px; margin-bottom: 22px; }
-  .eco-lede .mono { white-space: nowrap; }
+  .eco-lede { font-size: 16px; color: var(--text-3); margin-bottom: 22px; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+  .eco-lede .mono { white-space: nowrap; -webkit-hyphens: none; hyphens: none; }
   .card .meta { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); }
   .card .meta b { color: var(--accent); font-weight: 400; }
 

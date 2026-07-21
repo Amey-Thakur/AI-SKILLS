@@ -1,7 +1,7 @@
 /*
  * AI-SKILLS site styles.
  * A calm, spacious system: soft rounded surfaces, generous whitespace, the
- * Newsreader serif for prose (a screen-optimized reading face, consistent on
+ * Inter sans for prose (a clean, highly legible reading face, consistent on
  * every OS) and the Play display face for the brand and headings. Two themes,
  * one accent. Depth comes from light shadow and border, never from noise.
  */
@@ -78,9 +78,9 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   background: var(--bg);
   color: var(--text-2);
-  font-family: "Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.7;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
