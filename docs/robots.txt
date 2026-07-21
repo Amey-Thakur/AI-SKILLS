@@ -1,0 +1,6 @@
+# AI-SKILLS - https://amey-thakur.github.io/AI-SKILLS/
+# Open library of skills and prompts for AI agents. Crawl freely.
+User-agent: *
+Allow: /
+
+Sitemap: https://amey-thakur.github.io/AI-SKILLS/sitemap.xml
