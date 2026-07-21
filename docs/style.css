@@ -8,6 +8,9 @@
 
 :root {
   --bg: #12100e;
+  /* Theme the browser's native controls (scrollbars, the category select's
+     dropdown popup and its scrollbar) to the dark scheme. */
+  color-scheme: dark;
   --surface: #1a1815;
   --surface-2: #221f1b;
   --border: #322e29;
@@ -34,6 +37,7 @@
 
 :root[data-theme="light"] {
   --bg: #f4f1ea;
+  color-scheme: light;
   --surface: #ffffff;
   --surface-2: #faf7f0;
   --border: #e3ddd0;
@@ -56,6 +60,21 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+/* Themed scrollbars, seamless in both light and dark. Firefox/standard uses
+   scrollbar-color; WebKit uses the pseudo-elements. The thumb rides a
+   transparent track with a bg-colored border so it reads as inset. */
+* { scrollbar-color: var(--border-hover) transparent; scrollbar-width: thin; }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-hover);
+  border-radius: var(--radius-pill);
+  border: 3px solid var(--bg);
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background-color: var(--accent); }
+::-webkit-scrollbar-corner { background: transparent; }
 body {
   background: var(--bg);
   color: var(--text-2);
