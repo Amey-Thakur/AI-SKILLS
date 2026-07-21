@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 563,
+    "skills": 569,
     "prompts": 106,
     "categories": 35
   },
@@ -2754,6 +2754,30 @@
     },
     {
       "kind": "skill",
+      "name": "agentic-loops",
+      "category": "llm-engineering",
+      "description": "Build reliable agent loops (plan, act, observe) with termination, error recovery, and progress guarantees. Use when building an LLM agent that takes multiple tool-using steps toward a goal.",
+      "path": "skills/llm-engineering/agentic-loops/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/agentic-loops/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "coding-agent-workflow",
+      "category": "llm-engineering",
+      "description": "Direct and supervise a coding agent (Claude Code, Cursor, Antigravity) so it ships correct, verified work. Use when delegating engineering tasks to an AI agent and you want reliable results, not plausible-looking ones.",
+      "path": "skills/llm-engineering/coding-agent-workflow/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/coding-agent-workflow/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "context-engineering",
+      "category": "llm-engineering",
+      "description": "Assemble what goes into an LLM's context on each call: selecting, ordering, and formatting the right information. Use when deciding what to put in a prompt or debugging why a model ignores or misuses provided information.",
+      "path": "skills/llm-engineering/context-engineering/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/context-engineering/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "context-window-management",
       "category": "llm-engineering",
       "description": "Budget tokens across system prompt, history, and retrieval, with compaction that keeps what matters. Use when building long-running LLM applications or debugging context overflow and mid-conversation amnesia.",
@@ -2826,6 +2850,14 @@
     },
     {
       "kind": "skill",
+      "name": "prompt-caching",
+      "category": "llm-engineering",
+      "description": "Cut LLM cost and latency by caching stable prompt prefixes, structuring prompts so the cache actually hits. Use when the same system prompt, tools, or examples repeat across calls and cost or time-to-first-token matters.",
+      "path": "skills/llm-engineering/prompt-caching/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/prompt-caching/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "prompt-engineering",
       "category": "llm-engineering",
       "description": "Build prompts that get accurate, reliably-shaped output from any LLM, choosing the right technique for the task. Use when writing, improving, or debugging a prompt.",
@@ -2839,6 +2871,14 @@
       "description": "Design a retrieval-augmented generation pipeline that answers from sources and can be trusted. Use when building or debugging RAG: chunking, embedding, retrieval, context assembly, and grounding.",
       "path": "skills/llm-engineering/rag-pipeline/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/rag-pipeline/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "retrieval-reranking",
+      "category": "llm-engineering",
+      "description": "Improve RAG answer quality by reranking retrieved candidates so the most relevant chunks reach the model. Use when a retrieval system returns roughly-right documents but the best ones are not on top, or answers miss available evidence.",
+      "path": "skills/llm-engineering/retrieval-reranking/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/llm-engineering/retrieval-reranking/SKILL.md"
     },
     {
       "kind": "skill",
@@ -3063,6 +3103,14 @@
       "description": "Run competitive analysis as agents that tear down assigned competitors on one template, enforce sourcing rules, and synthesize implications for your product. Use when you want a market landscape built by a coordinated agent team rather than one agent skimming marketing sites.",
       "path": "skills/multi-agent-teams/agent-competitive-analysis-team/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-competitive-analysis-team/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-context-isolation",
+      "category": "multi-agent-teams",
+      "description": "Give each agent in a system only the context it needs, so failures stay contained and context stays clean. Use when designing a multi-agent system and deciding what each agent sees and shares.",
+      "path": "skills/multi-agent-teams/agent-context-isolation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-context-isolation/SKILL.md"
     },
     {
       "kind": "skill",

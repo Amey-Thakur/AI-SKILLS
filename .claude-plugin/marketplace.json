@@ -532,11 +532,14 @@
     },
     {
       "name": "llm-engineering-skills",
-      "description": "15 working methods for llm engineering: agent-memory, context-window-management, conversation-design, embeddings-selection, and more",
+      "description": "20 working methods for llm engineering: agent-memory, agentic-loops, coding-agent-workflow, context-engineering, and more",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/llm-engineering/agent-memory",
+        "./skills/llm-engineering/agentic-loops",
+        "./skills/llm-engineering/coding-agent-workflow",
+        "./skills/llm-engineering/context-engineering",
         "./skills/llm-engineering/context-window-management",
         "./skills/llm-engineering/conversation-design",
         "./skills/llm-engineering/embeddings-selection",
@@ -546,8 +549,10 @@
         "./skills/llm-engineering/llm-guardrails",
         "./skills/llm-engineering/llm-observability",
         "./skills/llm-engineering/mcp-server",
+        "./skills/llm-engineering/prompt-caching",
         "./skills/llm-engineering/prompt-engineering",
         "./skills/llm-engineering/rag-pipeline",
+        "./skills/llm-engineering/retrieval-reranking",
         "./skills/llm-engineering/staying-on-task",
         "./skills/llm-engineering/structured-output",
         "./skills/llm-engineering/tool-use-design"
@@ -593,13 +598,14 @@
     },
     {
       "name": "multi-agent-teams-skills",
-      "description": "24 working methods for multi agent teams: agent-arch-board, agent-code-review-loop, agent-competitive-analysis-team, agent-data-team, and more",
+      "description": "25 working methods for multi agent teams: agent-arch-board, agent-code-review-loop, agent-competitive-analysis-team, agent-context-isolation, and more",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/multi-agent-teams/agent-arch-board",
         "./skills/multi-agent-teams/agent-code-review-loop",
         "./skills/multi-agent-teams/agent-competitive-analysis-team",
+        "./skills/multi-agent-teams/agent-context-isolation",
         "./skills/multi-agent-teams/agent-data-team",
         "./skills/multi-agent-teams/agent-design-review-panel",
         "./skills/multi-agent-teams/agent-docs-guild",
