@@ -437,6 +437,22 @@
       ]
     },
     {
+      "name": "email-skills",
+      "description": "8 working methods for email: clear-emails, difficult-emails, email-etiquette, email-follow-ups, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/email/clear-emails",
+        "./skills/email/difficult-emails",
+        "./skills/email/email-etiquette",
+        "./skills/email/email-follow-ups",
+        "./skills/email/email-structure",
+        "./skills/email/email-subject-lines",
+        "./skills/email/email-tone",
+        "./skills/email/inbox-management"
+      ]
+    },
+    {
       "name": "embedded-iot-skills",
       "description": "8 working methods for embedded iot: embedded-debugging, embedded-memory-constraints, firmware-ota-updates, interrupt-safe-code, and more",
       "source": "./",

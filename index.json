@@ -6,9 +6,9 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 620,
-    "prompts": 114,
-    "categories": 39
+    "skills": 628,
+    "prompts": 120,
+    "categories": 40
   },
   "categories": [
     "accessibility",
@@ -29,6 +29,7 @@
     "devops",
     "distributed-systems",
     "documentation",
+    "email",
     "embedded-iot",
     "frontend",
     "game-development",
@@ -2315,6 +2316,70 @@
       "description": "Write tutorials that take a learner from zero to a working result through tested steps with checkpoints and recovery. Use when creating learning-oriented documentation or onboarding guides.",
       "path": "skills/documentation/tutorial-writing/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/tutorial-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "clear-emails",
+      "category": "email",
+      "description": "Write emails that get read and acted on: one clear purpose, the ask up front, and only what the reader needs. Use when writing any email that must be understood and answered without back-and-forth.",
+      "path": "skills/email/clear-emails/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/clear-emails/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "difficult-emails",
+      "category": "email",
+      "description": "Write the hard emails (bad news, saying no, complaints, corrections) so they are clear, kind, and preserve the relationship. Use when an email must deliver something unwelcome without making it worse.",
+      "path": "skills/email/difficult-emails/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/difficult-emails/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "email-etiquette",
+      "category": "email",
+      "description": "Follow email conventions that keep you professional and considerate: CC/BCC, reply-all, response times, and threading. Use when unsure of the norms, or to avoid the mistakes that annoy colleagues and burn goodwill.",
+      "path": "skills/email/email-etiquette/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/email-etiquette/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "email-follow-ups",
+      "category": "email",
+      "description": "Follow up on unanswered emails effectively: the right timing, adding value, and knowing when to stop. Use when an email went unanswered and you need a reply without nagging or damaging the relationship.",
+      "path": "skills/email/email-follow-ups/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/email-follow-ups/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "email-structure",
+      "category": "email",
+      "description": "Structure an email so a skimming reader gets the point, the context, and the ask in the right order. Use when an email has more than a line or two and the layout decides whether it is understood.",
+      "path": "skills/email/email-structure/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/email-structure/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "email-subject-lines",
+      "category": "email",
+      "description": "Write subject lines that get emails opened and found later: specific, honest, and action-signaling. Use when the subject line decides whether your email is opened, prioritized, or buried.",
+      "path": "skills/email/email-subject-lines/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/email-subject-lines/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "email-tone",
+      "category": "email",
+      "description": "Get the tone of an email right: warm, professional, and matched to the reader and situation, without the coldness email invites. Use when an email's wording could land wrong, or when the relationship matters as much as the message.",
+      "path": "skills/email/email-tone/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/email-tone/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "inbox-management",
+      "category": "email",
+      "description": "Manage an email inbox so it is a task list you control, not a source of stress: triage, process, and protect focus. Use when email volume is overwhelming or the inbox has become an anxiety pile.",
+      "path": "skills/email/inbox-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/inbox-management/SKILL.md"
     },
     {
       "kind": "skill",
@@ -5197,6 +5262,19 @@
     },
     {
       "kind": "prompt",
+      "name": "apology-email",
+      "category": "prompts",
+      "description": "Write a sincere, professional apology email that owns the mistake, addresses the impact, and offers a fix.",
+      "variables": [
+        "{situation}: what went wrong and who was affected",
+        "{context}: your relationship to the recipient and what you can do to make it right"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/apology-email.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/apology-email.md"
+    },
+    {
+      "kind": "prompt",
       "name": "architecture-decision-record",
       "category": "prompts",
       "description": "Write an ADR that captures a technical decision, its context, and its consequences so future teams know why.",
@@ -5712,6 +5790,19 @@
     },
     {
       "kind": "prompt",
+      "name": "introduction-email",
+      "category": "prompts",
+      "description": "Write an introduction email, whether introducing yourself or connecting two other people, that is warm and useful.",
+      "variables": [
+        "{type}: introducing yourself, or connecting two other people",
+        "{details}: who is involved, the reason for the introduction, and the desired outcome"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/introduction-email.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/introduction-email.md"
+    },
+    {
+      "kind": "prompt",
       "name": "job-description",
       "category": "prompts",
       "description": "Write a clear, honest job description that attracts the right candidates and screens out the wrong ones.",
@@ -5806,6 +5897,19 @@
     },
     {
       "kind": "prompt",
+      "name": "meeting-request-email",
+      "category": "prompts",
+      "description": "Write an email requesting a meeting that states the purpose, respects their time, and makes scheduling easy.",
+      "variables": [
+        "{purpose}: what the meeting is about and what you want to achieve",
+        "{context}: who you are asking, the relationship, and any scheduling constraints"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/meeting-request-email.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/meeting-request-email.md"
+    },
+    {
+      "kind": "prompt",
       "name": "mental-models",
       "category": "prompts",
       "description": "Apply relevant mental models to a problem or decision to see it from angles you would otherwise miss.",
@@ -5855,6 +5959,19 @@
       "settings": "Temperature 0.5-0.7.",
       "path": "prompts/negotiation-prep.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/negotiation-prep.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "networking-email",
+      "category": "prompts",
+      "description": "Write a networking email that starts a genuine professional connection, leading with them and asking for little.",
+      "variables": [
+        "{recipient}: who you want to connect with and why them specifically",
+        "{context}: who you are, any shared connection or common ground, and what you hope for"
+      ],
+      "settings": "Temperature 0.5-0.7.",
+      "path": "prompts/networking-email.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/networking-email.md"
     },
     {
       "kind": "prompt",
@@ -6093,6 +6210,19 @@
     },
     {
       "kind": "prompt",
+      "name": "reminder-email",
+      "category": "prompts",
+      "description": "Write a polite reminder email about a deadline, task, payment, or event that prompts action without nagging.",
+      "variables": [
+        "{reminder}: what you are reminding them about and any deadline",
+        "{context}: the relationship, what happened before, and how urgent it is"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/reminder-email.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/reminder-email.md"
+    },
+    {
+      "kind": "prompt",
       "name": "reply-to-email",
       "category": "prompts",
       "description": "Draft a clear, appropriate reply to an email that addresses what was asked and moves it forward.",
@@ -6116,6 +6246,19 @@
       "settings": "Temperature 0.6-0.8.",
       "path": "prompts/repurpose-content.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/repurpose-content.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "request-email",
+      "category": "prompts",
+      "description": "Write an email that asks for something (a favor, information, approval, help) clearly and in a way that gets a yes.",
+      "variables": [
+        "{request}: what you are asking for and from whom",
+        "{context}: your relationship, why you need it, and any deadline"
+      ],
+      "settings": "Temperature 0.4-0.6.",
+      "path": "prompts/request-email.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/request-email.md"
     },
     {
       "kind": "prompt",

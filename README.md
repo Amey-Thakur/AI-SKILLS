@@ -106,6 +106,7 @@ One row per category; every entry, with its one-line description, is in
 | [devops](CATALOG.md#devops-14) | 14 | artifact-versioning, blue-green-deployments, capacity-planning |
 | [distributed-systems](CATALOG.md#distributed-systems-12) | 12 | backpressure, clock-skew, consensus-basics |
 | [documentation](CATALOG.md#documentation-10) | 10 | api-reference-docs, changelog-writing, code-documentation |
+| [email](CATALOG.md#email-8) | 8 | clear-emails, difficult-emails, email-etiquette |
 | [embedded-iot](CATALOG.md#embedded-iot-8) | 8 | embedded-debugging, embedded-memory-constraints, firmware-ota-updates |
 | [frontend](CATALOG.md#frontend-10) | 10 | design-systems, error-boundaries-ui, form-handling |
 | [game-development](CATALOG.md#game-development-8) | 8 | entity-component-system, game-asset-pipeline, game-input-handling |
@@ -127,7 +128,7 @@ One row per category; every entry, with its one-line description, is in
 | [testing](CATALOG.md#testing-41) | 41 | api-testing, approval-testing, assertion-libraries |
 | [ui-ux](CATALOG.md#ui-ux-10) | 10 | empty-and-error-states, information-architecture, interaction-design |
 | [writing](CATALOG.md#writing-10) | 10 | audience-adaptation, clear-writing, concise-writing |
-| [prompts](CATALOG.md#prompts-114) | 114 | ad-copy, add-code-comments, adjust-tone |
+| [prompts](CATALOG.md#prompts-120) | 120 | ad-copy, add-code-comments, adjust-tone |
 <!-- library:end -->
 
 <br>

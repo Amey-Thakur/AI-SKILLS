@@ -344,6 +344,17 @@
 - [technical-writing](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/technical-writing/SKILL.md): Write documentation, READMEs, and guides that respect the reader's time and answer their actual question. Use when drafting or editing any technical document.
 - [tutorial-writing](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/documentation/tutorial-writing/SKILL.md): Write tutorials that take a learner from zero to a working result through tested steps with checkpoints and recovery. Use when creating learning-oriented documentation or onboarding guides.
 
+## Skills: email
+
+- [clear-emails](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/clear-emails/SKILL.md): Write emails that get read and acted on: one clear purpose, the ask up front, and only what the reader needs. Use when writing any email that must be understood and answered without back-and-forth.
+- [difficult-emails](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/difficult-emails/SKILL.md): Write the hard emails (bad news, saying no, complaints, corrections) so they are clear, kind, and preserve the relationship. Use when an email must deliver something unwelcome without making it worse.
+- [email-etiquette](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/email-etiquette/SKILL.md): Follow email conventions that keep you professional and considerate: CC/BCC, reply-all, response times, and threading. Use when unsure of the norms, or to avoid the mistakes that annoy colleagues and burn goodwill.
+- [email-follow-ups](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/email-follow-ups/SKILL.md): Follow up on unanswered emails effectively: the right timing, adding value, and knowing when to stop. Use when an email went unanswered and you need a reply without nagging or damaging the relationship.
+- [email-structure](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/email-structure/SKILL.md): Structure an email so a skimming reader gets the point, the context, and the ask in the right order. Use when an email has more than a line or two and the layout decides whether it is understood.
+- [email-subject-lines](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/email-subject-lines/SKILL.md): Write subject lines that get emails opened and found later: specific, honest, and action-signaling. Use when the subject line decides whether your email is opened, prioritized, or buried.
+- [email-tone](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/email-tone/SKILL.md): Get the tone of an email right: warm, professional, and matched to the reader and situation, without the coldness email invites. Use when an email's wording could land wrong, or when the relationship matters as much as the message.
+- [inbox-management](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/email/inbox-management/SKILL.md): Manage an email inbox so it is a task list you control, not a source of stress: triage, process, and protect focus. Use when email volume is overwhelming or the inbox has become an anxiety pile.
+
 ## Skills: embedded-iot
 
 - [embedded-debugging](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/embedded-iot/embedded-debugging/SKILL.md): Debug firmware with JTAG/SWD workflows, console-free logging, and hard-fault analysis that names the faulting line. Use when a device crashes, hangs, or misbehaves only in the field.
@@ -760,6 +771,7 @@
 - [agent-tool-definition](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-tool-definition.md): Write a tool/function definition for an AI agent with a description that steers use and parameters it fills correctly.
 - [api-design](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/api-design.md): Design a clean REST or GraphQL API from requirements, with sensible resources, methods, status codes, and error shapes.
 - [api-docs-from-code](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/api-docs-from-code.md): Generate accurate reference documentation for an API from its code, marking every inference.
+- [apology-email](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/apology-email.md): Write a sincere, professional apology email that owns the mistake, addresses the impact, and offers a fix.
 - [architecture-decision-record](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/architecture-decision-record.md): Write an ADR that captures a technical decision, its context, and its consequences so future teams know why.
 - [blog-outline](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/blog-outline.md): Outline a blog post with a clear angle and a section flow before you write, so the draft comes easily.
 - [brainstorm-divergent](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/brainstorm-divergent.md): Generate genuinely different ideas across the solution space, then converge on the strongest few.
@@ -799,6 +811,7 @@
 - [improve-prompt](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/improve-prompt.md): Rewrite a prompt to be clearer, more specific, and more likely to produce the intended result.
 - [incident-status-update](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/incident-status-update.md): Write a calm, honest status update during an ongoing incident, sized for its audience.
 - [interview-questions](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/interview-questions.md): Generate interview questions that reveal real capability for a specific role, with what good answers sound like.
+- [introduction-email](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/introduction-email.md): Write an introduction email, whether introducing yourself or connecting two other people, that is warm and useful.
 - [job-description](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/job-description.md): Write a clear, honest job description that attracts the right candidates and screens out the wrong ones.
 - [landing-page-copy](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/landing-page-copy.md): Write landing page copy with a clear headline, benefit-led sections, proof, and one decisive call to action.
 - [learning-plan](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/learning-plan.md): Build a realistic, practice-first plan to learn any skill, fitted to available time and a concrete goal.
@@ -806,10 +819,12 @@
 - [linkedin-post](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/linkedin-post.md): Write a LinkedIn post that reads as a real professional story or insight, with a strong first line and a genuine takeaway.
 - [meeting-agenda](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/meeting-agenda.md): Build a focused meeting agenda with clear objectives, timeboxed topics, and the decisions the meeting must produce.
 - [meeting-minutes](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/meeting-minutes.md): Turn a transcript or rough notes into minutes people actually consult - decisions, actions, and open questions first.
+- [meeting-request-email](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/meeting-request-email.md): Write an email requesting a meeting that states the purpose, respects their time, and makes scheduling easy.
 - [mental-models](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/mental-models.md): Apply relevant mental models to a problem or decision to see it from angles you would otherwise miss.
 - [multi-agent-workflow](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/multi-agent-workflow.md): Design a multi-agent workflow: which agents, how they divide the work, how they hand off, and how to verify.
 - [name-suggestions](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/name-suggestions.md): Suggest clear, precise names for a variable, function, class, or feature, with tradeoffs.
 - [negotiation-prep](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/negotiation-prep.md): Prepare for a negotiation with your goals, your walk-away, the other side's interests, and your best alternative.
+- [networking-email](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/networking-email.md): Write a networking email that starts a genuine professional connection, leading with them and asking for little.
 - [newsletter](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/newsletter.md): Write an email newsletter people actually open and read, with a hook subject, one clear theme, and real value.
 - [okr-draft](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/okr-draft.md): Draft OKRs with an inspiring objective and measurable, outcome-based key results, avoiding vanity and task-lists.
 - [optimize-code](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/optimize-code.md): Make code faster or lighter by finding the real bottleneck first, with measured, behavior-preserving changes.
@@ -828,8 +843,10 @@
 - [refactor-code](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/refactor-code.md): Suggest refactorings that improve readability and structure without changing behavior, ranked by payoff.
 - [regex-builder](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/regex-builder.md): Build a regular expression from a plain-language description, with an explanation and test cases.
 - [release-notes](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/release-notes.md): Write user-facing release notes from a changelog or list of changes, grouped and written for the reader.
+- [reminder-email](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/reminder-email.md): Write a polite reminder email about a deadline, task, payment, or event that prompts action without nagging.
 - [reply-to-email](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/reply-to-email.md): Draft a clear, appropriate reply to an email that addresses what was asked and moves it forward.
 - [repurpose-content](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/repurpose-content.md): Turn one piece of content into formats for other channels, adapted to each rather than copy-pasted.
+- [request-email](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/request-email.md): Write an email that asks for something (a favor, information, approval, help) clearly and in a way that gets a yes.
 - [resume-bullets](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/resume-bullets.md): Turn your work into strong resume bullet points with action verbs and quantified impact, honestly.
 - [resume-summary](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/resume-summary.md): Write a resume summary or professional profile that positions you for a specific role in three or four strong lines.
 - [review-my-code](https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/review-my-code.md): Review code for bugs, security issues, and clarity, with severity-ranked findings and concrete fixes.
