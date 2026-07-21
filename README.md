@@ -88,7 +88,7 @@ One row per category; every entry, with its one-line description, is in
 <!-- library:start -->
 | Category | Skills | For example |
 |---|---|---|
-| [accessibility](CATALOG.md#accessibility-1) | 1 | accessibility-review |
+| [accessibility](CATALOG.md#accessibility-8) | 8 | accessibility-review, accessible-forms, alt-text-writing |
 | [apis](CATALOG.md#apis-9) | 9 | api-change-management, api-client-design, api-deprecation |
 | [architecture](CATALOG.md#architecture-13) | 13 | api-gateway-pattern, architecture-decision-records, architecture-diagrams |
 | [backend](CATALOG.md#backend-14) | 14 | api-error-responses, api-versioning, background-jobs |

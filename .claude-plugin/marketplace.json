@@ -11,11 +11,18 @@
   "plugins": [
     {
       "name": "accessibility-skills",
-      "description": "1 working methods for accessibility: accessibility-review, and more",
+      "description": "8 working methods for accessibility: accessibility-review, accessible-forms, alt-text-writing, aria-usage, and more",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/accessibility/accessibility-review"
+        "./skills/accessibility/accessibility-review",
+        "./skills/accessibility/accessible-forms",
+        "./skills/accessibility/alt-text-writing",
+        "./skills/accessibility/aria-usage",
+        "./skills/accessibility/color-contrast",
+        "./skills/accessibility/focus-management",
+        "./skills/accessibility/keyboard-navigation",
+        "./skills/accessibility/screen-reader-testing"
       ]
     },
     {

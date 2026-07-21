@@ -6,7 +6,7 @@
   "ecosystem_index": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/ecosystem.json",
   "license": "MIT",
   "count": {
-    "skills": 556,
+    "skills": 563,
     "prompts": 22,
     "categories": 35
   },
@@ -55,6 +55,62 @@
       "description": "Audit a UI for real accessibility, keyboard-first, with concrete failures and fixes rather than checkbox compliance. Use when reviewing or building any user interface.",
       "path": "skills/accessibility/accessibility-review/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility/accessibility-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "accessible-forms",
+      "category": "accessibility",
+      "description": "Build forms with associated labels, identified errors, clear instructions, and autocomplete attributes. Use when creating or auditing forms for accessibility.",
+      "path": "skills/accessibility/accessible-forms/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility/accessible-forms/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "alt-text-writing",
+      "category": "accessibility",
+      "description": "Write alt text that conveys an image's purpose, marks decorative images empty, and handles functional and complex images. Use when adding images to content or auditing alt text.",
+      "path": "skills/accessibility/alt-text-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility/alt-text-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "aria-usage",
+      "category": "accessibility",
+      "description": "Use ARIA correctly by preferring native HTML, applying roles/states/properties only where needed, and following known widget patterns. Use when making custom components accessible or fixing broken ARIA.",
+      "path": "skills/accessibility/aria-usage/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility/aria-usage/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "color-contrast",
+      "category": "accessibility",
+      "description": "Meet WCAG contrast ratios for text and non-text, never rely on color alone, and verify with tools including in dark mode. Use when choosing colors for UI or auditing readability.",
+      "path": "skills/accessibility/color-contrast/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility/color-contrast/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "focus-management",
+      "category": "accessibility",
+      "description": "Manage focus on route changes, in modals, and after actions, with visible focus indicators. Use when building single-page apps, dialogs, or dynamic UI where focus can get lost.",
+      "path": "skills/accessibility/focus-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility/focus-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "keyboard-navigation",
+      "category": "accessibility",
+      "description": "Make interfaces fully keyboard-operable with logical focus order, no traps, skip links, and roving tabindex where needed. Use when building interactive UI or auditing keyboard accessibility.",
+      "path": "skills/accessibility/keyboard-navigation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility/keyboard-navigation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "screen-reader-testing",
+      "category": "accessibility",
+      "description": "Test with real screen readers, verifying announcements, live regions, and navigation, not just automated checks. Use when validating accessibility of UI that automated tools cannot fully assess.",
+      "path": "skills/accessibility/screen-reader-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/accessibility/screen-reader-testing/SKILL.md"
     },
     {
       "kind": "skill",
