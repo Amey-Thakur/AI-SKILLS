@@ -1,0 +1,74 @@
+## Name: ci.yml
+## Purpose: Continuous integration pipeline.
+## Description: index.json, its docs/ copy, llms.txt, CATALOG.md, the README
+##   category table, and marketplace.json are all generated from skills/ and
+##   prompts/ by scripts/build-index.mjs. This job rebuilds them and fails if
+##   the result differs from what is committed, so content added without
+##   running the script cannot ship a stale catalog. NotebookLab's Prompt
+##   Studio fetches index.json at runtime, so drift there breaks a shipped
+##   integration rather than only this repository. The script also fails
+##   loudly on malformed frontmatter, which makes this a validation pass over
+##   every entry as well. Third-party actions are pinned to commit SHAs.
+## Tech Stack: GitHub Actions, Node.js
+## License: MIT
+## Authors: Amey Thakur (https://github.com/Amey-Thakur)
+## Date: 2026-07-27
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "prompts/**"
+      - "scripts/**"
+      - "index.json"
+      - "docs/index.json"
+      - "llms.txt"
+      - "CATALOG.md"
+      - "README.md"
+      - ".claude-plugin/marketplace.json"
+      - ".github/workflows/ci.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "prompts/**"
+      - "scripts/**"
+      - "index.json"
+      - "docs/index.json"
+      - "llms.txt"
+      - "CATALOG.md"
+      - "README.md"
+      - ".claude-plugin/marketplace.json"
+      - ".github/workflows/ci.yml"
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: "22"
+
+jobs:
+  catalog:
+    name: Catalog in sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # Rebuilds every generated artifact. Throws on malformed frontmatter
+      # rather than emitting a partial catalog, so a broken entry fails here.
+      - name: Rebuild the generated catalog
+        run: node scripts/build-index.mjs
+
+      - name: Fail if a generated file drifted
+        run: |
+          if ! git diff --exit-code; then
+            echo "::error::Generated catalog files are out of date. Run 'node scripts/build-index.mjs' from the repository root and commit the result."
+            exit 1
+          fi
