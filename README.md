@@ -113,6 +113,7 @@ One row per category; every entry, with its one-line description, is in
 | [code-quality](CATALOG.md#code-quality-37) | 37 | api-surface-minimalism, assertion-density, boolean-parameters |
 | [css-styling](CATALOG.md#css-styling-10) | 10 | css-animations, css-architecture, css-cascade |
 | [data-engineering](CATALOG.md#data-engineering-12) | 12 | batch-vs-streaming, change-data-capture, data-lineage |
+| [data-privacy](CATALOG.md#data-privacy-11) | 11 | consent-management, cookie-compliance, cross-border-transfers |
 | [data-science](CATALOG.md#data-science-18) | 18 | cohort-analysis, correlation-causation, data-cleaning |
 | [databases](CATALOG.md#databases-12) | 12 | backup-restore, database-migrations, database-normalization |
 | [debugging](CATALOG.md#debugging-32) | 32 | alerting-design, binary-search-debugging, browser-devtools |
@@ -130,7 +131,8 @@ One row per category; every entry, with its one-line description, is in
 | [llm-engineering](CATALOG.md#llm-engineering-22) | 22 | agent-memory, agentic-loops, coding-agent-workflow |
 | [machine-learning](CATALOG.md#machine-learning-12) | 12 | cross-validation, drift-monitoring, experiment-tracking |
 | [mobile](CATALOG.md#mobile-10) | 10 | app-store-readiness, deep-linking, mobile-input-ux |
-| [multi-agent-teams](CATALOG.md#multi-agent-teams-25) | 25 | agent-arch-board, agent-code-review-loop, agent-competitive-analysis-team |
+| [multi-agent-teams](CATALOG.md#multi-agent-teams-37) | 37 | agent-arch-board, agent-board-reporting, agent-code-review-loop |
+| [networking](CATALOG.md#networking-4) | 4 | dns-fundamentals, load-balancing, tls-and-certificates |
 | [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
 | [product-management](CATALOG.md#product-management-10) | 10 | ab-test-design, customer-interviews, feature-sunsetting |
 | [python](CATALOG.md#python-14) | 14 | pytest-mastery, python-asyncio, python-cli-tools |
