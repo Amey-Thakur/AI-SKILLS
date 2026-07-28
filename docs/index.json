@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 832,
+    "skills": 844,
     "prompts": 134,
-    "categories": 53
+    "categories": 54
   },
   "categories": [
     "accessibility",
@@ -24,6 +24,7 @@
     "backend",
     "big-tech-processes",
     "big-tech-roles",
+    "business-fundamentals",
     "business-growth",
     "career-communication",
     "cloud",
@@ -1097,6 +1098,114 @@
       "use_when": "when planning a study, choosing a method, or turning interviews and usability sessions into a decision",
       "path": "skills/big-tech-roles/ux-researcher-role/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/big-tech-roles/ux-researcher-role/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "business-model-design",
+      "category": "business-fundamentals",
+      "description": "Decide how the business creates, delivers, and captures value, and check the pieces are consistent with each other. Use when starting something, or when growth is not converting into a viable business.",
+      "use_when": "when starting something, or when growth is not converting into a viable business",
+      "path": "skills/business-fundamentals/business-model-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/business-model-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "capital-allocation",
+      "category": "business-fundamentals",
+      "description": "Decide where to spend limited money and attention across competing opportunities, with a consistent basis for comparison. Use when planning a budget or choosing between investments.",
+      "use_when": "when planning a budget or choosing between investments",
+      "path": "skills/business-fundamentals/capital-allocation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/capital-allocation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cash-flow-management",
+      "category": "business-fundamentals",
+      "description": "Manage the timing of money in and out so the business can pay what it owes when it is due. Use when growing fast, when payment terms are long, or whenever runway is under a year.",
+      "use_when": "when growing fast, when payment terms are long, or whenever runway is under a year",
+      "path": "skills/business-fundamentals/cash-flow-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/cash-flow-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "competitive-strategy",
+      "category": "business-fundamentals",
+      "description": "Decide where to compete and how to sustain an advantage, rather than assuming a better product wins. Use when entering a market, responding to a competitor, or explaining why you will win.",
+      "use_when": "when entering a market, responding to a competitor, or explaining why you will win",
+      "path": "skills/business-fundamentals/competitive-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/competitive-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cost-structure-analysis",
+      "category": "business-fundamentals",
+      "description": "Understand which costs are fixed, variable, and step, so you know how profit responds to volume and where cuts actually help. Use when planning capacity, cutting costs, or explaining why margin is not improving with growth.",
+      "use_when": "when planning capacity, cutting costs, or explaining why margin is not improving with growth",
+      "path": "skills/business-fundamentals/cost-structure-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/cost-structure-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "financial-statements-literacy",
+      "category": "business-fundamentals",
+      "description": "Read a profit and loss, balance sheet, and cash flow statement well enough to see what a business is actually doing. Use when reviewing your own numbers, a partner's, or an acquisition target's.",
+      "use_when": "when reviewing your own numbers, a partner's, or an acquisition target's",
+      "path": "skills/business-fundamentals/financial-statements-literacy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/financial-statements-literacy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "market-sizing",
+      "category": "business-fundamentals",
+      "description": "Estimate how large an opportunity actually is, from the bottom up, and state the assumptions that drive the number. Use when evaluating a market, writing a plan, or challenging a large number in a deck.",
+      "use_when": "when evaluating a market, writing a plan, or challenging a large number in a deck",
+      "path": "skills/business-fundamentals/market-sizing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/market-sizing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "negotiation-fundamentals",
+      "category": "business-fundamentals",
+      "description": "Prepare and conduct a negotiation around interests and alternatives rather than positions, so agreements are better and hold. Use before any commercial conversation with something at stake.",
+      "use_when": "before any commercial conversation with something at stake",
+      "path": "skills/business-fundamentals/negotiation-fundamentals/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/negotiation-fundamentals/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "operations-management",
+      "category": "business-fundamentals",
+      "description": "Run repeatable delivery reliably by finding the constraint, reducing variability, and measuring flow rather than utilisation. Use when delivery is inconsistent or slower than the work itself requires.",
+      "use_when": "when delivery is inconsistent or slower than the work itself requires",
+      "path": "skills/business-fundamentals/operations-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/operations-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "organizational-design",
+      "category": "business-fundamentals",
+      "description": "Structure teams, ownership, and decision rights so work flows rather than queueing at handoffs. Use when coordination cost is rising faster than headcount.",
+      "use_when": "when coordination cost is rising faster than headcount",
+      "path": "skills/business-fundamentals/organizational-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/organizational-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "stakeholder-management",
+      "category": "business-fundamentals",
+      "description": "Identify who is affected by a decision, what each needs, and how to keep them informed enough to stay aligned. Use when a project crosses teams or when decisions keep getting reopened.",
+      "use_when": "when a project crosses teams or when decisions keep getting reopened",
+      "path": "skills/business-fundamentals/stakeholder-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/stakeholder-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "unit-economics",
+      "category": "business-fundamentals",
+      "description": "Work out whether one customer or one transaction makes money, before scaling anything. Use when deciding to grow, raise prices, or cut costs, and when growth is not producing profit.",
+      "use_when": "when deciding to grow, raise prices, or cut costs, and when growth is not producing profit",
+      "path": "skills/business-fundamentals/unit-economics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/business-fundamentals/unit-economics/SKILL.md"
     },
     {
       "kind": "skill",

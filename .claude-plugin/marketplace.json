@@ -180,6 +180,26 @@
       ]
     },
     {
+      "name": "business-fundamentals-skills",
+      "description": "12 working methods for business fundamentals: business-model-design, capital-allocation, cash-flow-management, competitive-strategy, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/business-fundamentals/business-model-design",
+        "./skills/business-fundamentals/capital-allocation",
+        "./skills/business-fundamentals/cash-flow-management",
+        "./skills/business-fundamentals/competitive-strategy",
+        "./skills/business-fundamentals/cost-structure-analysis",
+        "./skills/business-fundamentals/financial-statements-literacy",
+        "./skills/business-fundamentals/market-sizing",
+        "./skills/business-fundamentals/negotiation-fundamentals",
+        "./skills/business-fundamentals/operations-management",
+        "./skills/business-fundamentals/organizational-design",
+        "./skills/business-fundamentals/stakeholder-management",
+        "./skills/business-fundamentals/unit-economics"
+      ]
+    },
+    {
       "name": "business-growth-skills",
       "description": "8 working methods for business growth: churn-analysis, community-building, developer-marketing, landing-page-strategy, and more",
       "source": "./",
