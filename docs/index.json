@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 951,
+    "skills": 963,
     "prompts": 134,
-    "categories": 63
+    "categories": 64
   },
   "categories": [
     "accessibility",
@@ -75,6 +75,7 @@
     "scripting-automation",
     "search-relevance",
     "security",
+    "spreadsheets",
     "sql",
     "systems-languages",
     "testing",
@@ -7893,6 +7894,114 @@
       "use_when": "when designing service-to-service access, internal tooling, or any system that still trusts requests because of where they came from",
       "path": "skills/security/zero-trust-basics/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/zero-trust-basics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "conditional-formatting",
+      "category": "spreadsheets",
+      "description": "Use formatting rules to surface exceptions and patterns automatically, without turning the sheet into a colour chart. Use when readers need to spot outliers or status at a glance.",
+      "use_when": "when readers need to spot outliers or status at a glance",
+      "path": "skills/spreadsheets/conditional-formatting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/conditional-formatting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-validation-rules",
+      "category": "spreadsheets",
+      "description": "Constrain what can be entered into a spreadsheet so errors are prevented at input rather than found in analysis. Use when a spreadsheet is filled in by people.",
+      "use_when": "when a spreadsheet is filled in by people",
+      "path": "skills/spreadsheets/data-validation-rules/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/data-validation-rules/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "excel-formulas",
+      "category": "spreadsheets",
+      "description": "Write formulas that stay correct when rows are added and readable when someone else opens the file. Use when building any calculation in a spreadsheet.",
+      "use_when": "when building any calculation in a spreadsheet",
+      "path": "skills/spreadsheets/excel-formulas/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/excel-formulas/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "financial-functions",
+      "category": "spreadsheets",
+      "description": "Use present value, rate, and payment functions correctly, with consistent periods and sign conventions. Use when modelling loans, investments, or discounted cash flows.",
+      "use_when": "when modelling loans, investments, or discounted cash flows",
+      "path": "skills/spreadsheets/financial-functions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/financial-functions/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "lookup-functions",
+      "category": "spreadsheets",
+      "description": "Join data between sheets reliably using modern lookup functions, handling missing matches and duplicates explicitly. Use when combining data from more than one table.",
+      "use_when": "when combining data from more than one table",
+      "path": "skills/spreadsheets/lookup-functions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/lookup-functions/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pivot-tables",
+      "category": "spreadsheets",
+      "description": "Summarise and cross-tabulate large tables quickly with pivots, keeping the source data clean and the refresh reliable. Use when aggregating data by category, period, or dimension.",
+      "use_when": "when aggregating data by category, period, or dimension",
+      "path": "skills/spreadsheets/pivot-tables/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/pivot-tables/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "power-query",
+      "category": "spreadsheets",
+      "description": "Build repeatable data transformations that refresh on demand, replacing manual cleaning steps with a recorded pipeline. Use when the same import and cleaning happens more than once.",
+      "use_when": "when the same import and cleaning happens more than once",
+      "path": "skills/spreadsheets/power-query/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/power-query/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "spreadsheet-automation",
+      "category": "spreadsheets",
+      "description": "Automate repetitive spreadsheet work with scripts, knowing when the task has outgrown a spreadsheet entirely. Use when the same manual steps are repeated on a schedule.",
+      "use_when": "when the same manual steps are repeated on a schedule",
+      "path": "skills/spreadsheets/spreadsheet-automation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/spreadsheet-automation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "spreadsheet-charts",
+      "category": "spreadsheets",
+      "description": "Build charts that make the point clearly, choosing the type by the question and removing everything that does not carry meaning. Use when presenting spreadsheet data visually.",
+      "use_when": "when presenting spreadsheet data visually",
+      "path": "skills/spreadsheets/spreadsheet-charts/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/spreadsheet-charts/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "spreadsheet-collaboration",
+      "category": "spreadsheets",
+      "description": "Share workbooks so several people can work without overwriting each other or creating competing versions. Use when more than one person edits the same spreadsheet.",
+      "use_when": "when more than one person edits the same spreadsheet",
+      "path": "skills/spreadsheets/spreadsheet-collaboration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/spreadsheet-collaboration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "spreadsheet-data-cleaning",
+      "category": "spreadsheets",
+      "description": "Turn messy imported data into a clean flat table, fixing types, whitespace, duplicates, and inconsistent categories. Use before any analysis on data that came from elsewhere.",
+      "use_when": "before any analysis on data that came from elsewhere",
+      "path": "skills/spreadsheets/spreadsheet-data-cleaning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/spreadsheet-data-cleaning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "spreadsheet-performance",
+      "category": "spreadsheets",
+      "description": "Diagnose and fix slow spreadsheets by reducing volatile formulas, whole-column references, and unnecessary recalculation. Use when a workbook takes seconds to respond to an edit.",
+      "use_when": "when a workbook takes seconds to respond to an edit",
+      "path": "skills/spreadsheets/spreadsheet-performance/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/spreadsheets/spreadsheet-performance/SKILL.md"
     },
     {
       "kind": "skill",

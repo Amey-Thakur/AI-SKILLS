@@ -1342,6 +1342,26 @@
       ]
     },
     {
+      "name": "spreadsheets-skills",
+      "description": "12 working methods for spreadsheets: conditional-formatting, data-validation-rules, excel-formulas, financial-functions, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/spreadsheets/conditional-formatting",
+        "./skills/spreadsheets/data-validation-rules",
+        "./skills/spreadsheets/excel-formulas",
+        "./skills/spreadsheets/financial-functions",
+        "./skills/spreadsheets/lookup-functions",
+        "./skills/spreadsheets/pivot-tables",
+        "./skills/spreadsheets/power-query",
+        "./skills/spreadsheets/spreadsheet-automation",
+        "./skills/spreadsheets/spreadsheet-charts",
+        "./skills/spreadsheets/spreadsheet-collaboration",
+        "./skills/spreadsheets/spreadsheet-data-cleaning",
+        "./skills/spreadsheets/spreadsheet-performance"
+      ]
+    },
+    {
       "name": "sql-skills",
       "description": "12 working methods for sql: common-table-expressions, deduplication-queries, null-semantics, pivot-and-unpivot, and more",
       "source": "./",

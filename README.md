@@ -159,6 +159,7 @@ One row per category; every entry, with its one-line description, is in
 | [scripting-automation](CATALOG.md#scripting-automation-10) | 10 | automation-guardrails, bash-robustness, cli-ux-design |
 | [search-relevance](CATALOG.md#search-relevance-12) | 12 | autocomplete-design, faceted-search, full-text-search-design |
 | [security](CATALOG.md#security-44) | 44 | api-security, audit-logging, authn-design |
+| [spreadsheets](CATALOG.md#spreadsheets-12) | 12 | conditional-formatting, data-validation-rules, excel-formulas |
 | [sql](CATALOG.md#sql-12) | 12 | common-table-expressions, deduplication-queries, null-semantics |
 | [systems-languages](CATALOG.md#systems-languages-10) | 10 | c-memory-safety, cpp-raii, ffi-boundaries |
 | [testing](CATALOG.md#testing-41) | 41 | api-testing, approval-testing, assertion-libraries |
