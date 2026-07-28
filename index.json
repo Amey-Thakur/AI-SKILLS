@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 904,
+    "skills": 915,
     "prompts": 134,
-    "categories": 59
+    "categories": 60
   },
   "categories": [
     "accessibility",
@@ -64,6 +64,7 @@
     "payments-billing",
     "performance",
     "product-management",
+    "project-management",
     "prompt-writing",
     "python",
     "realtime-collaboration",
@@ -6395,6 +6396,105 @@
       "use_when": "when turning product intent into buildable work or fixing a backlog of vague tickets",
       "path": "skills/product-management/user-story-writing/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/user-story-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cross-team-coordination",
+      "category": "project-management",
+      "description": "Keep work moving across team boundaries with explicit interfaces, owners, and shared checkpoints. Use when a project spans teams and progress stalls at handoffs.",
+      "use_when": "when a project spans teams and progress stalls at handoffs",
+      "path": "skills/project-management/cross-team-coordination/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/cross-team-coordination/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "milestone-planning",
+      "category": "project-management",
+      "description": "Break a project into milestones that each prove something, so progress is verifiable rather than asserted. Use when a project is long enough that the end is not visible from the start.",
+      "use_when": "when a project is long enough that the end is not visible from the start",
+      "path": "skills/project-management/milestone-planning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/milestone-planning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "project-closure",
+      "category": "project-management",
+      "description": "End a project deliberately, with handover, documentation, and a decision about what happens to what was built. Use when a project reaches its goal or is being stopped.",
+      "use_when": "when a project reaches its goal or is being stopped",
+      "path": "skills/project-management/project-closure/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/project-closure/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "project-kickoff",
+      "category": "project-management",
+      "description": "Start a project with shared understanding of goal, roles, and working agreements, so early ambiguity does not become late rework. Use at the start of any multi-person project.",
+      "use_when": "at the start of any multi-person project",
+      "path": "skills/project-management/project-kickoff/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/project-kickoff/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "project-retrospective",
+      "category": "project-management",
+      "description": "Review a completed project to extract what should change next time, focusing on systems rather than individuals. Use at the end of a project or a significant phase.",
+      "use_when": "at the end of a project or a significant phase",
+      "path": "skills/project-management/project-retrospective/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/project-retrospective/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "project-risk-management",
+      "category": "project-management",
+      "description": "Identify what could derail a project, decide responses in advance, and track them rather than reacting when they happen. Use at project start and at every major checkpoint.",
+      "use_when": "at project start and at every major checkpoint",
+      "path": "skills/project-management/project-risk-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/project-risk-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "project-scoping",
+      "category": "project-management",
+      "description": "Define what a project includes, excludes, and depends on before work starts, so scope disagreements surface early. Use when starting a project or when a project keeps growing.",
+      "use_when": "when starting a project or when a project keeps growing",
+      "path": "skills/project-management/project-scoping/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/project-scoping/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "project-status-reporting",
+      "category": "project-management",
+      "description": "Report progress in a form that surfaces problems early and lets a reader act, rather than reassuring. Use when reporting to sponsors or across teams.",
+      "use_when": "when reporting to sponsors or across teams",
+      "path": "skills/project-management/project-status-reporting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/project-status-reporting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "resource-planning",
+      "category": "project-management",
+      "description": "Match people and capacity to project needs over time, accounting for partial allocation, ramp-up, and the cost of splitting attention. Use when planning who works on what across projects.",
+      "use_when": "when planning who works on what across projects",
+      "path": "skills/project-management/resource-planning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/resource-planning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "schedule-and-critical-path",
+      "category": "project-management",
+      "description": "Sequence work by dependency to find which tasks actually determine the finish date, and manage those. Use when a project has many parallel workstreams and an immovable date.",
+      "use_when": "when a project has many parallel workstreams and an immovable date",
+      "path": "skills/project-management/schedule-and-critical-path/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/schedule-and-critical-path/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "scope-change-control",
+      "category": "project-management",
+      "description": "Handle new requests mid-project by making the trade-off visible rather than absorbing them silently. Use when a project is accumulating additions and the date is not moving.",
+      "use_when": "when a project is accumulating additions and the date is not moving",
+      "path": "skills/project-management/scope-change-control/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/project-management/scope-change-control/SKILL.md"
     },
     {
       "kind": "skill",

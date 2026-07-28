@@ -1088,6 +1088,25 @@
       ]
     },
     {
+      "name": "project-management-skills",
+      "description": "11 working methods for project management: cross-team-coordination, milestone-planning, project-closure, project-kickoff, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/project-management/cross-team-coordination",
+        "./skills/project-management/milestone-planning",
+        "./skills/project-management/project-closure",
+        "./skills/project-management/project-kickoff",
+        "./skills/project-management/project-retrospective",
+        "./skills/project-management/project-risk-management",
+        "./skills/project-management/project-scoping",
+        "./skills/project-management/project-status-reporting",
+        "./skills/project-management/resource-planning",
+        "./skills/project-management/schedule-and-critical-path",
+        "./skills/project-management/scope-change-control"
+      ]
+    },
+    {
       "name": "prompt-writing-skills",
       "description": "12 working methods for prompt writing: chain-of-thought-prompting, context-placement, few-shot-examples, negative-instructions, and more",
       "source": "./",
