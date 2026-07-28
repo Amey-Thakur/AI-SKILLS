@@ -1,0 +1,34 @@
+## Name: dependabot.yml
+## Purpose: Keep the pinned GitHub Actions current without giving up pinning.
+## Description: The workflow pins every third-party action to a full commit SHA,
+##   which is the right supply-chain posture and also means the pins go stale
+##   silently: a SHA never tells you a newer release exists. Dependabot watches
+##   them and opens one grouped pull request a month with the new SHAs and the
+##   version each maps to. There is no npm or Cargo entry because the library is
+##   markdown and the build script has no dependencies at all. Major bumps stay
+##   excluded, since an action's major version can change its inputs and this
+##   repository's release path depends on them behaving exactly as configured.
+## Tech Stack: GitHub Actions, Dependabot
+## License: MIT
+## Authors: Amey Thakur (https://github.com/Amey-Thakur)
+## Date: 2026-07-28
+
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 1
+    labels:
+      - ci
+    groups:
+      actions:
+        patterns:
+          - "*"
+    ignore:
+      # Block every major bump until it is checked by hand. An action's major
+      # can rename or remove inputs, and a grouped pull request that mixes a
+      # breaking bump with safe ones cannot be merged at all.
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
