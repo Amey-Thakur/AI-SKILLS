@@ -69,9 +69,9 @@ cheaper options first, and if you must shard, get the key right.
   often the right stopping point (see data-partitioning).
 - Sharding trades the simplicity of one database (joins,
   transactions, one place to query and back up) for scale;
-  it is a distributed-systems commitment (see distributed-
-  systems category) that reshapes the application, not a
-  config flag.
+  it is a distributed-systems commitment (see
+  distributed-systems category) that reshapes the
+  application, not a config flag.
 - The shard key is expensive to change (it requires moving
   data by a new scheme); this makes the key choice a
   high-stakes upfront decision that rewards deep analysis

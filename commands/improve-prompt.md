@@ -26,7 +26,7 @@ Diagnose first, then rewrite:
    explicit about the output format and length, clear on constraints and what
    to avoid, and structured (role, task, context, format) if that helps.
 3. Note what the improved prompt assumes: if it needs information only the
-   user has (data, examples, tone), mark those as {placeholders} to fill in.
+   user has (data, examples, tone), mark those as [placeholders] to fill in.
 
 Rules: clearer and more specific, not longer for its own sake: cut vague
 filler, add only the precision that changes the output. Preserve the user's

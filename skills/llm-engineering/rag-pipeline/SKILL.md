@@ -1,6 +1,6 @@
 ---
 name: rag-pipeline
-description: Design a retrieval-augmented generation pipeline that answers from sources and can be trusted. Use when building or debugging RAG: chunking, embedding, retrieval, context assembly, and grounding.
+description: "Design a retrieval-augmented generation pipeline that answers from sources and can be trusted. Use when building or debugging RAG: chunking, embedding, retrieval, context assembly, and grounding."
 ---
 
 # RAG pipeline

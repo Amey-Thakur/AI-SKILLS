@@ -17,8 +17,9 @@ Structure (problem, solution, results):
   60%").
 - The customer and their context: who they are, so the reader can see
   themselves in it.
-- The challenge: the problem they faced and what it was costing them, concretely.
-  The reader should recognize their own situation here.
+- The challenge: the problem they faced and what it was
+  costing them, concretely. The reader should recognize
+  their own situation here.
 - The solution: what they did, how the product/approach fit, and how it rolled
   out. Focus on the customer's journey, not a feature dump.
 - The results: the outcomes, with numbers wherever possible (time saved,

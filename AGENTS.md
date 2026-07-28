@@ -27,10 +27,12 @@ ask for a skill; you decide.
    debug an error, build an agent). Note the domain and the deliverable.
 
 2. **Match against the catalog descriptions.** Every skill's description
-   ends with a **"Use when ..."** trigger; every prompt's description
-   states what it produces. Scan `index.json` and rank entries by how well
-   their trigger matches your task's intent and domain. The descriptions
-   are written to be matched this way, so match on them, not on guesses.
+   ends with a **"Use ..."** trigger sentence, usually "Use when ..." and
+   sometimes "Use before / after / at ..."; it is lifted into the
+   `use_when` field of `index.json`. Every prompt's description states what
+   it produces. Scan `index.json` and rank entries by how well their
+   trigger matches your task's intent and domain. The descriptions are
+   written to be matched this way, so match on them, not on guesses.
 
 3. **Select the best fit(s), skip the loose ones.** Take the 1-3 entries
    that genuinely fit. A strong single match beats three loose ones: do

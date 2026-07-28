@@ -25,13 +25,13 @@ prompts must be structured to keep that prefix stable.
 3. **Know your provider's mechanism and thresholds.** Providers differ on
    whether caching is automatic or explicitly marked, the minimum
    cacheable size, the cache lifetime (often minutes), and the discount.
-   Read the current contract for your platform rather than assuming (see
-   claude-api-adjacent docs for the specifics).
+   Read the current contract for your platform rather than assuming (your
+   provider's documentation is the authority).
 4. **Design multi-turn and agent loops to reuse the prefix.** In a
    conversation or an agent loop (see agentic-loops), the growing history
    after the fixed prefix still lets the prefix hit; keep the system
-   layer stable across turns so every call reuses it. Frequent system-
-   prompt edits forfeit the cache on every turn.
+   layer stable across turns so every call reuses it. Frequent
+   system-prompt edits forfeit the cache on every turn.
 5. **Verify hit rates, do not assume them.** Instrument cached-token
    counts in telemetry (see llm-observability); a prompt you believe is
    cached but is not (a stray variable in the prefix) pays full price

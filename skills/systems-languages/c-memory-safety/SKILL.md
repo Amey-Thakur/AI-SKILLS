@@ -12,13 +12,13 @@ ship the corruption the other two would have caught.
 
 ## Method
 
-1. **Declare ownership in names and comments.** Every pointer-
-   returning or pointer-taking function states who frees: suffix
-   conventions (`_create/_destroy`, `_take` for ownership transfer,
-   `_borrow`/const for no transfer), a `/* caller owns result */`
-   comment where names cannot carry it. Ambiguity here is where
-   double-frees and leaks breed; the convention is your borrow
-   checker.
+1. **Declare ownership in names and comments.** Every
+   pointer-returning or pointer-taking function states who frees:
+   suffix conventions (`_create/_destroy`, `_take` for ownership
+   transfer, `_borrow`/const for no transfer), a
+   `/* caller owns result */` comment where names cannot carry it.
+   Ambiguity here is where double-frees and leaks breed; the
+   convention is your borrow checker.
 2. **Pair every resource with one owner and one release path.**
    Allocate and free in the same module; single-exit cleanup with
    `goto err` chains (release in reverse order) keeps error paths

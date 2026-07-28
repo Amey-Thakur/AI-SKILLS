@@ -30,6 +30,7 @@ Rules of engagement:
    warnings or broken behavior, and the change is minimal and focused.
 
 Report at the end: what you changed (files and why), how you verified it, and
-anything you could not do or that needs my decision. Be honest: if it is not
-fully working, say exactly what remains. Do not claim success you have not
-verified.
+anything you could not do or that needs my decision.
+
+Rules: be honest: if it is not fully working, say exactly what remains. Do not
+claim success you have not verified.

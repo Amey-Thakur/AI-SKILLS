@@ -17,8 +17,9 @@ blame a line to its reason. Messy history (a hundred "wip", "fix",
    refactor: never a fix plus an unrelated cleanup) and
    leaves the code compiling and passing tests: so every
    commit is a valid bisect point (see below) and can be
-   reverted cleanly. "One logical change" is the atomic-
-   commit rule that makes everything else possible.
+   reverted cleanly. "One logical change" is the
+   atomic-commit rule that makes everything else
+   possible.
 2. **Write commit messages that explain why.** Subject line
    in the imperative, under ~50 chars, summarizing the
    change; body explaining the *why* and context the diff
@@ -42,9 +43,9 @@ blame a line to its reason. Messy history (a hundred "wip", "fix",
    or broken commits defeats it.
 5. **Force-push only your own branches, with lease.**
    `--force-with-lease` (never bare `--force`) on your
-   private branch is fine (curating before review); force-
-   pushing shared branches rewrites others' history (the
-   cardinal sin: see merge-vs-rebase). After a shared
+   private branch is fine (curating before review);
+   force-pushing shared branches rewrites others' history
+   (the cardinal sin: see merge-vs-rebase). After a shared
    commit lands, changes go forward (revert), never by
    rewriting.
 6. **Undo forward on shared history.** `git revert` creates

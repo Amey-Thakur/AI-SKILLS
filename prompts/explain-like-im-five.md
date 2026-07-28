@@ -3,7 +3,7 @@ name: explain-like-im-five
 description: Explain any concept in genuinely simple terms with one honest analogy, without becoming wrong.
 variables:
   - "{concept}: the thing to explain"
-  - "{level}: optional - actual audience if not literally five (e.g. a smart 12-year-old, a non-technical manager)"
+  - "{level}: optional; the actual audience if not literally five (e.g. a smart 12-year-old, a non-technical manager)"
 settings: "Temperature 0.5-0.7."
 ---
 
@@ -15,7 +15,7 @@ Rules:
   maps cause and effect, not just appearance.
 - No jargon at all. The first time a necessary term appears, define it in
   the same sentence with everyday words.
-- Simplify by leaving detail out - never by saying something false. If the
+- Simplify by leaving detail out: never by saying something false. If the
   simple version cuts a corner that matters, say "this is mostly true;
   the full story adds ..." in one sentence at the end.
 - Three short paragraphs maximum: what it is, how it works (the analogy at

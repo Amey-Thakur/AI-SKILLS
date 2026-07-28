@@ -13,13 +13,13 @@ errors built in, so every caller does not reinvent them badly.
 ## Method
 
 1. **Bake in timeouts and retries.** Every request has a
-   timeout (connect and read: never infinite: see timeouts-
-   and-retries), and retries with exponential backoff and
-   jitter for the retryable failures (timeouts, 429, 5xx),
-   respecting Retry-After. This logic lives in the client
-   once, correctly, not copy-pasted into every call site
-   where half will get it wrong (see the retry-amplification
-   warning in timeouts-and-retries).
+   timeout (connect and read: never infinite: see
+   timeouts-and-retries), and retries with exponential
+   backoff and jitter for the retryable failures (timeouts,
+   429, 5xx), respecting Retry-After. This logic lives in
+   the client once, correctly, not copy-pasted into every
+   call site where half will get it wrong (see the
+   retry-amplification warning in timeouts-and-retries).
 2. **Surface errors clearly and typed.** Map the API's
    errors (see api-error-responses) into meaningful,
    catchable types the caller can branch on
@@ -46,11 +46,11 @@ errors built in, so every caller does not reinvent them badly.
 5. **Add connection pooling and rate-limit respect.** Reuse
    connections (see connection-pooling: creating a
    connection per request is slow and exhausts sockets),
-   and respect the API's rate limits proactively (client-
-   side throttling, honoring rate-limit headers: see
-   rate-limiting) so you slow down before the API rejects
-   you. A client that hammers an API into 429s and then
-   retries the 429s is a self-inflicted outage.
+   and respect the API's rate limits proactively
+   (client-side throttling, honoring rate-limit headers:
+   see rate-limiting) so you slow down before the API
+   rejects you. A client that hammers an API into 429s and
+   then retries the 429s is a self-inflicted outage.
 6. **Test against contracts and failures.** Test the client
    against a mock or contract (see contract-testing) for the
    happy path, and specifically test the failure handling:
@@ -66,10 +66,9 @@ errors built in, so every caller does not reinvent them badly.
   auth, retries, and pagination the SDK already got right
   is wasted effort and new bugs. Hand-build only when no
   good SDK exists.
-- Generated clients (from OpenAPI/proto: see openapi-
-  contracts, grpc-services) give the typed request/
-  response layer; you may still wrap them with the
-  resilience layer (retries, pagination helpers) this
+- Generated clients (from OpenAPI/proto: see openapi-contracts,
+  grpc-services) give the typed request/ response layer; you may still
+  wrap them with the resilience layer (retries, pagination helpers) this
   skill describes.
 - The client is a boundary to an untrusted external system;
   validate responses (a malformed response should not crash

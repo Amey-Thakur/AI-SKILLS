@@ -1,6 +1,6 @@
 ---
 name: context-engineering
-description: Assemble what goes into an LLM's context on each call: selecting, ordering, and formatting the right information. Use when deciding what to put in a prompt or debugging why a model ignores or misuses provided information.
+description: "Assemble what goes into an LLM's context on each call: selecting, ordering, and formatting the right information. Use when deciding what to put in a prompt or debugging why a model ignores or misuses provided information."
 ---
 
 # Context engineering

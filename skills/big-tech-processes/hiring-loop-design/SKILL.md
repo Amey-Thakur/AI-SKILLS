@@ -19,8 +19,9 @@ work is deciding what each hour measures and holding the panel to it.
    algorithms, you buy redundant signal and leave a competency untested.
 2. **Standardize the questions and the rubric.** Use a shared question bank with
    a scoring rubric that carries anchored examples: what a weak, solid, and
-   strong answer to this exact question looks like. Consistent questions are what
-   make candidates comparable and what gives the interview predictive validity.
+   strong answer to this exact question looks like. Consistent questions are
+   what make candidates comparable and what gives the interview predictive
+   validity.
 3. **Calibrate interviewers to the bar.** New interviewers shadow and
    reverse-shadow before they score alone, and the panel agrees what the target
    level's "strong" looks like. An uncalibrated interviewer measures their own
@@ -34,16 +35,16 @@ work is deciding what each hour measures and holding the panel to it.
    how directly the interview tested it. One well-evidenced no-hire on a core
    competency outranks three warm "seemed nice" impressions.
 6. **Add an independent bar-raiser for consistency.** Include a panelist from
-   outside the hiring team whose job is the long-term bar, not filling this seat.
-   Amazon's Bar Raiser is the archetype: it counters a hiring manager's urgency
-   to say yes just to close an open req.
+   outside the hiring team whose job is the long-term bar, not filling this
+   seat. Amazon's Bar Raiser is the archetype: it counters a hiring manager's
+   urgency to say yes just to close an open req.
 
 ## Litmus tests
 
 - Can you name, for each interview in the loop, the one competency it exists to
   measure and how it differs from every other slot?
-- Are written hire and no-hire calls locked in before the debrief, or formed live
-  in the room?
+- Are written hire and no-hire calls locked in before the debrief, or formed
+  live in the room?
 - Would two different interviewers score the same candidate answer within one
   rubric band?
 

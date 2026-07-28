@@ -24,16 +24,19 @@ different numbers is worse than no export, so the work is conversion plus proof.
    graph the runtime sees matches the model you meant to ship.
 3. **Hunt the operator gaps early.** List the op set in the graph and diff it
    against the target runtime's supported operators for that opset. Watch for
-   `aten::` leftovers, custom CUDA ops, and control flow that traced into a fixed
-   branch. A missing op means a plugin, a rewrite, or a decomposition, decided now.
+   `aten::` leftovers, custom CUDA ops, and control flow that traced into a
+   fixed branch. A missing op means a plugin, a rewrite, or a decomposition,
+   decided now.
 4. **Kill data-dependent shapes and Python control flow.** Anything that
    branches on tensor values, like `.item()`, boolean indexing, or a Python
    `if` on a shape, traces to one path. Replace it with `torch.where`, masking,
-   or `torch.onnx` scripting so the exported graph handles the inputs the trace never saw.
+   or `torch.onnx` scripting so the exported graph handles the inputs the trace
+   never saw.
 5. **Run parity against the source framework on real inputs.** Feed identical
    batches to the framework and to ONNX Runtime, then
-   `np.testing.assert_allclose` with rtol 1e-3 and atol 1e-5 for FP32. Loosen for
-   FP16, and check task metrics too: close logits still let argmax flip a label.
+   `np.testing.assert_allclose` with rtol 1e-3 and atol 1e-5 for FP32. Loosen
+   for FP16, and check task metrics too: close logits still let argmax flip a
+   label.
 6. **Test on the execution provider you will deploy, not just CPU.** Parity on
    the CPU provider hides kernel differences in the CUDA and TensorRT providers.
    Run the same parity check under `CUDAExecutionProvider`, since that is the
@@ -45,9 +48,11 @@ different numbers is worse than no export, so the work is conversion plus proof.
 
 ## Checks
 
-- Does the exported model accept every batch and sequence length production sends?
+- Does the exported model accept every batch and sequence length production
+  sends?
 - Did shape inference and `onnx.checker` both pass with no `aten::` ops left?
-- Does ONNX Runtime match the framework within tolerance on the deployment provider?
+- Does ONNX Runtime match the framework within tolerance on the deployment
+  provider?
 - Do the saved golden outputs still hold after the latest re-export?
 
 ## Boundaries

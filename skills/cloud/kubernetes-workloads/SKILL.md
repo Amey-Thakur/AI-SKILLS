@@ -18,12 +18,11 @@ is a missing or dishonest declaration.
    idempotent work; see background-jobs). Wrong controller choices
    surface as workarounds everywhere else.
 2. **Set requests from measurement; cap memory, not CPU.** Requests are
-   the scheduling contract: set them at observed p95 (see
-   get-available-resources thinking: measure, then declare). Memory
-   limit = request (Guaranteed-ish, avoids surprise OOM from
-   overcommit); CPU limit usually omitted, since throttling a bursty
-   service hurts more than sharing. OOMKilled pods mean the limit lies
-   or the app leaks (see memory-leaks).
+   the scheduling contract: set them at observed p95 (measure first,
+   then declare). Memory limit = request (Guaranteed-ish, avoids
+   surprise OOM from overcommit); CPU limit usually omitted, since
+   throttling a bursty service hurts more than sharing. OOMKilled pods
+   mean the limit lies or the app leaks (see memory-leaks).
 3. **Wire all three probes honestly.** Liveness = process health only;
    readiness = can serve (dependencies); startup covers slow boots so
    liveness can stay tight; full reasoning in health-checks. Probe

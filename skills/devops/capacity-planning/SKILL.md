@@ -68,6 +68,6 @@ Black Friday becomes a postmortem.
   provisioning for the tail forever.
 - Multi-region and DR capacity is a separate axis (can one
   region absorb another's load on failover: see
-  multi-region-design, cloud-disaster-recovery); steady-
-  state planning that ignores it under-provisions the
-  failure case.
+  multi-region-design, cloud-disaster-recovery);
+  steady-state planning that ignores it under-provisions
+  the failure case.

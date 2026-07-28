@@ -41,4 +41,4 @@ believing an hour ago.
 - Realtime for data that changes rarely is usually unjustified
   complexity over simple polling.
 - Ordering guarantees come from your protocol rather than the transport
-  (see message-ordering).
+  (see delivery-guarantees).

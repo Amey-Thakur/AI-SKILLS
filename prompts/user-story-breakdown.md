@@ -12,7 +12,7 @@ Break this feature into user stories: {feature}
 Context: {context}
 
 For each story:
-- **Story**: As a {user type}, I want {capability}, so that {outcome}. The
+- **Story**: As a [user type], I want [capability], so that [outcome]. The
   outcome must be a user benefit, not a system behavior.
 - **Acceptance criteria**: 2-5 testable statements ("given X, when Y, then
   Z"). Each one checkable by a person or a test without interpretation.
@@ -24,7 +24,7 @@ Rules:
   that a user could touch comes first (walking skeleton), enhancements
   after.
 - Include the unglamorous stories reality requires: empty states, errors,
-  permissions, the migration for existing data - if the context implies
+  permissions, the migration for existing data, if the context implies
   them.
 - Do not invent requirements the context does not support. Collect real
   gaps under **Open questions** at the end, each phrased so a product owner

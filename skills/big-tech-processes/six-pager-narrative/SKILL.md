@@ -14,25 +14,25 @@ to how confidently it was pitched.
 ## Method
 
 1. **Hold the line at six pages of narrative.** The cap is the discipline: it
-   forces you to decide what matters and cut the rest. Push data, dashboards, and
-   detail into appendices that do not count against the six, and never shrink the
-   font to smuggle in more.
+   forces you to decide what matters and cut the rest. Push data, dashboards,
+   and detail into appendices that do not count against the six, and never
+   shrink the font to smuggle in more.
 2. **Write in paragraphs, not bullets.** Each claim becomes a sentence with a
    subject and a verb, so "improved efficiency" has to say what improved, by how
    much, and why. If a section only works as bullets, the connective logic is
    still missing.
 3. **Build it as an argument that lands on an ask.** Situation, complication,
-   options, recommendation, then the specific thing you want the room to approve.
-   A memo that informs without asking has wasted the most expensive hour on the
-   calendar.
+   options, recommendation, then the specific thing you want the room to
+   approve. A memo that informs without asking has wasted the most expensive
+   hour on the calendar.
 4. **Move every number to the appendix and cite it inline.** The narrative makes
    the case; the appendix lets a skeptic check it. Charts live there with axes
-   labeled and sources named, so a reviewer can trace any figure without breaking
-   the flow of the argument.
+   labeled and sources named, so a reviewer can trace any figure without
+   breaking the flow of the argument.
 5. **Start the meeting with ten to twenty minutes of silent reading.** Everyone
    reads the same document at the same time, in the room, so no one bluffs
-   through a skim. It also ends the meeting where the author narrates slides while
-   the room waits.
+   through a skim. It also ends the meeting where the author narrates slides
+   while the room waits.
 6. **Collect comments in the margins, then debate the hard parts.** Reviewers
    mark up the doc as they read; discussion goes to the objections and the
    decision, not a page-by-page recap. The author's job in the room is to defend
@@ -51,4 +51,5 @@ to how confidently it was pitched.
 The six-pager is for decisions and reviews, not for pitching a brand-new product
 to customers: for that, use the prfaq-working-backwards skill. This is Amazon's
 format and cadence, and other companies handle pre-reads differently, so match
-the local norm on length and on whether reading happens in the room or before it.
+the local norm on length and on whether reading happens in the room or before
+it.

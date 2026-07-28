@@ -24,8 +24,9 @@ and it becomes paperwork; run it as gates and it changes what ships.
    threat, and make the threat model a gate no design review passes without.
 3. **Constrain the toolchain in implementation.** Pin approved compiler and
    linker versions with hardening flags on (/GS, /DYNAMICBASE, control flow
-   guard). Ban unsafe APIs (strcpy, sprintf, gets) with a checked banned-function
-   list, and scan dependencies for known CVEs before they enter the build.
+   guard). Ban unsafe APIs (strcpy, sprintf, gets) with a checked
+   banned-function list, and scan dependencies for known CVEs before they
+   enter the build.
 4. **Gate merges on static analysis.** Run SAST on every pull request and fail
    the build on bug-bar findings rather than posting a warning someone can
    ignore. Route open-source components through software composition analysis

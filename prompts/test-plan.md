@@ -1,6 +1,6 @@
 ---
 name: test-plan
-description: Write a test plan for a feature or release: what to test, the scenarios and edge cases, and the risk-based priorities.
+description: "Write a test plan for a feature or release: what to test, the scenarios and edge cases, and the risk-based priorities."
 variables:
   - "{feature}: the feature, change, or release to test, and how it should behave"
   - "{context}: the users, the risks, the environments, and any constraints"
@@ -27,8 +27,8 @@ Produce:
   to ship).
 
 Rules: think adversarially: how would this break, what would a hostile or
-careless user do, what happens at the boundaries and when things fail. Prioritize
-by risk, not by what is easy to test. Be specific (a real scenario with inputs
-and expected result, not "test the login"). Distinguish must-pass from
-nice-to-have. Flag the areas where a failure would be worst so they get the most
-attention. Note anything that needs test data or a specific environment.
+careless user do, what happens at the boundaries and when things fail.
+Prioritize by risk, not by what is easy to test. Be specific (a real scenario
+with inputs and expected result, not "test the login"). Distinguish must-pass
+from nice-to-have. Flag the areas where a failure would be worst so they get the
+most attention. Note anything that needs test data or a specific environment.

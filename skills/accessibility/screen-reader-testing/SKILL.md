@@ -26,8 +26,8 @@ and it routinely surprises sighted developers.
    users navigate by structure, jumping between headings
    and landmarks, not reading top to bottom. Testing this
    way reveals whether your heading hierarchy and landmarks
-   (see docs-information-architecture's structure, aria-
-   usage) actually help navigation.
+   (see docs-information-architecture's structure,
+   aria-usage) actually help navigation.
 3. **Verify announcements make sense.** Tab through and
    listen: is each control announced with its name, role,
    and state ("Save, button", "Email, edit, required")?
@@ -51,8 +51,9 @@ and it routinely surprises sighted developers.
    submit a form): the individual pieces can each be
    accessible while the flow is confusing (focus lands
    somewhere unexpected after an action, an error is not
-   announced, a modal does not manage focus: see focus-
-   management). The end-to-end experience is what matters.
+   announced, a modal does not manage focus: see
+   focus-management). The end-to-end experience is what
+   matters.
 6. **Combine automated and manual testing.** Run automated
    checkers (axe, WAVE, Lighthouse) first to catch the
    mechanical issues (missing alt, low contrast, missing

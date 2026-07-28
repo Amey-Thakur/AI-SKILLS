@@ -16,8 +16,8 @@ late.
 
 - **PM agent** (`product-manager-role`): owns the problem, the metric, the
   acceptance criteria.
-- **Engineer agents** (`backend-engineer-role`, `frontend-engineer-role`): build,
-  and push back on cost.
+- **Engineer agents** (`backend-engineer-role`, `frontend-engineer-role`):
+  build, and push back on cost.
 - **Acceptance agent** (`qa-engineer-role`): checks the build against criteria,
   no self-grading.
 
@@ -25,16 +25,16 @@ Shape: a negotiation loop, then build, then an acceptance gate.
 
 ## Method
 
-1. **PM writes the spec first.** `spec.md` states the problem, one success metric
-   and its guardrail, non-goals, and acceptance criteria as checkable statements
-   ("a signed-out user hitting /app lands on login in under 300ms"). A criterion
-   you cannot check is a wish.
-2. **Engineers return a pushback memo.** Before building, they flag the expensive
-   20 percent, name feasibility risks, and propose a cheaper path. An agent that
-   silently complies hides the tradeoff instead of surfacing it.
-3. **Negotiate scope in the open.** The PM cuts to a real v1 and records deferred
-   items with reasons in a "later" list. Deferral is a decision on the record,
-   not a dropped ball.
+1. **PM writes the spec first.** `spec.md` states the problem, one success
+   metric and its guardrail, non-goals, and acceptance criteria as checkable
+   statements ("a signed-out user hitting /app lands on login in under 300ms").
+   A criterion you cannot check is a wish.
+2. **Engineers return a pushback memo.** Before building, they flag the
+   expensive 20 percent, name feasibility risks, and propose a cheaper path. An
+   agent that silently complies hides the tradeoff instead of surfacing it.
+3. **Negotiate scope in the open.** The PM cuts to a real v1 and records
+   deferred items with reasons in a "later" list. Deferral is a decision on
+   the record, not a dropped ball.
 4. **Freeze the criteria.** Lock the acceptance list before code; later changes
    go to a dated change log in `spec.md`, so "done" does not move while the work
    is in flight.

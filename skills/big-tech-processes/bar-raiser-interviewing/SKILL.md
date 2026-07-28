@@ -34,10 +34,10 @@ toward the median of whoever happened to be available.
    work with them" but "is this person better than half of current employees at
    this level in this role". A hire who lowers the median is a no even when the
    team is desperate.
-6. **Run the debrief to surface dissent, not bury it.** Ask the lowest-confidence
-   interviewer first, make each vote defend its evidence, and block the hiring
-   manager's urgency or the loudest voice from carrying the room. Consensus
-   reached by fatigue is not consensus.
+6. **Run the debrief to surface dissent, not bury it.** Ask the
+   lowest-confidence interviewer first, make each vote defend its evidence,
+   and block the hiring manager's urgency or the loudest voice from carrying
+   the room. Consensus reached by fatigue is not consensus.
 7. **Exercise the veto when the bar is not met, and write down why.** An
    independent no, recorded with its reasoning, is a legitimate and durable
    outcome. Reopening the search costs weeks; a mis-hire costs the team for
@@ -45,15 +45,16 @@ toward the median of whoever happened to be available.
 
 ## Litmus tests
 
-- Could you defend the decision to someone who joins the company in two years and
-  reads only the written feedback?
-- Did any yes rest on team fit or urgency rather than evidence of the competency?
+- Could you defend the decision to someone who joins the company in two years
+  and reads only the written feedback?
+- Did any yes rest on team fit or urgency rather than evidence of the
+  competency?
 - Would this candidate raise the median of the current team at this level?
 
 ## Boundaries
 
-The bar raiser judges the hire against the long-term bar, not sourcing diversity,
-comp negotiation, or the hiring manager's read on day-to-day team fit. This is an
-Amazon-shaped ritual: adapt the veto and the leveling rubric to your org's
-convention, and never let it stand in for reference checks or the manager's own
-call on scope.
+The bar raiser judges the hire against the long-term bar, not sourcing
+diversity, comp negotiation, or the hiring manager's read on day-to-day team
+fit. This is an Amazon-shaped ritual: adapt the veto and the leveling rubric to
+your org's convention, and never let it stand in for reference checks or the
+manager's own call on scope.

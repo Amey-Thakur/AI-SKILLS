@@ -1,6 +1,6 @@
 ---
 name: clear-writing
-description: Write so the reader understands on the first pass: plain words, concrete nouns, one idea per sentence. Use when drafting or editing any prose that must be understood without effort.
+description: "Write so the reader understands on the first pass: plain words, concrete nouns, one idea per sentence. Use when drafting or editing any prose that must be understood without effort."
 ---
 
 # Clear writing

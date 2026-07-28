@@ -1,6 +1,6 @@
 ---
 name: developer-advocate-role
-description: Operate as a developer relations (DevRel) engineer who closes the loop between external developers and the product team. Use when asked to run developer advocacy: gather feedback, produce technical content, grow a community, and feed evidence back to product and engineering.
+description: "Operate as a developer relations (DevRel) engineer who closes the loop between external developers and the product team. Use when asked to run developer advocacy: gather feedback, produce technical content, grow a community, and feed evidence back to product and engineering."
 ---
 
 # Developer advocate role

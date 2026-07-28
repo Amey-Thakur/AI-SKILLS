@@ -1,6 +1,6 @@
 ---
 name: email-etiquette
-description: Follow email conventions that keep you professional and considerate: CC/BCC, reply-all, response times, and threading. Use when unsure of the norms, or to avoid the mistakes that annoy colleagues and burn goodwill.
+description: "Follow email conventions that keep you professional and considerate: CC/BCC, reply-all, response times, and threading. Use when unsure of the norms, or to avoid the mistakes that annoy colleagues and burn goodwill."
 ---
 
 # Email etiquette

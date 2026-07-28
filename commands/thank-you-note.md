@@ -29,8 +29,10 @@ Rules for a note that lands:
 - Match the medium and formality to the relationship (a quick warm message to a
   colleague, a more considered note for a mentor or after an interview).
 
-Output the note, ready to send. For an interview thank-you, also reinforce your
-interest and one specific thing from the conversation. Rules: specific and
-sincere over generic and effusive. Do not overdo it (excessive gratitude reads
-as insincere or as wanting something). Match the length to the relationship. If
-I have not given enough detail to be specific, ask what exactly they did.
+Output the note, ready to send. For an interview thank-you, also reinforce
+your interest and one specific thing from the conversation.
+
+Rules: specific and sincere over generic and effusive. Do not overdo it
+(excessive gratitude reads as insincere or as wanting something). Match the
+length to the relationship. If I have not given enough detail to be specific,
+ask what exactly they did.

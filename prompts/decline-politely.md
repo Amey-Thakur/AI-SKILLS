@@ -26,8 +26,9 @@ Rules for a good no:
   intend.
 - Close warmly.
 
-Output the message, ready to send. Rules: kind but clear (the two are not in
-tension: clarity is a kindness). Firm without being cold. No groveling, no
-false promises, no leaving the door open if it is actually closed. Give a
-warmer version and a briefer, firmer version so I can pick based on the
-relationship.
+Output the message, ready to send.
+
+Rules: kind but clear (the two are not in tension: clarity is a kindness).
+Firm without being cold. No groveling, no false promises, no leaving the door
+open if it is actually closed. Give a warmer version and a briefer, firmer
+version so I can pick based on the relationship.

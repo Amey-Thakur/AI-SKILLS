@@ -35,12 +35,12 @@ easy or maddening, and where drop-off is won or lost.
    half-designed.
 5. **Match effort to commitment.** Do not demand a full signup before the
    user has seen value; defer heavy asks until the user is invested (let
-   them try, then ask to save; see user-activation, mvp-scoping). Front-
-   loading friction kills flows before the payoff.
+   them try, then ask to save; see user-activation, mvp-scoping).
+   Front-loading friction kills flows before the payoff.
 6. **Show progress in long flows.** Multi-step flows tell the user where
    they are and how much remains (a stepper, a progress bar), so the end
    feels reachable. Uncertainty about length causes abandonment (see
-   loading-states, interaction-design).
+   empty-and-error-states, interaction-design).
 
 ## Boundaries
 

@@ -17,10 +17,10 @@ trace as a map from where you are to your own code that put you there.
    rule broke and the message says on what value. That pair alone often
    names the cause before you look at a single frame.
 2. **Find the boundary between your code and the library.** Traces run
-   deepest-call-on-top in most runtimes (Java, JS, Ruby) and deepest-on-
-   bottom in Python. Scan for the first frame in a path you own, next to
-   the framework or standard-library frames. The bug usually sits at that
-   seam, where your data entered someone else's code.
+   deepest-call-on-top in most runtimes (Java, JS, Ruby) and
+   deepest-on-bottom in Python. Scan for the first frame in a path you
+   own, next to the framework or standard-library frames. The bug usually
+   sits at that seam, where your data entered someone else's code.
 3. **Separate cause frames from symptom frames.** The top frame is where it
    threw. The frame that passed the bad value is a few steps down, in your
    code. A null dereferenced in a library means your caller handed it null;

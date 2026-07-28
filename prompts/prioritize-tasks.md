@@ -24,9 +24,11 @@ Sort each task into the Eisenhower quadrants:
 Judge "important" against my actual goals, not by how loud or anxiety-inducing
 the task is: urgency masquerades as importance constantly.
 
-Output: the four quadrants with tasks sorted, then a clear recommended order of
-action (what to do now, schedule, delegate, drop). Rules: the value is
-distinguishing important from urgent, so push back where I have miscategorized
-(a task that feels urgent but does not serve my goals belongs in "minimize").
-Be decisive: prioritization means some things lose. If everything is marked
-important-and-urgent, that is a sign to help me choose, not to agree.
+Output: the four quadrants with tasks sorted, then a clear recommended order
+of action (what to do now, schedule, delegate, drop).
+
+Rules: the value is distinguishing important from urgent, so push back where I
+have miscategorized (a task that feels urgent but does not serve my goals
+belongs in "minimize"). Be decisive: prioritization means some things lose. If
+everything is marked important-and-urgent, that is a sign to help me choose,
+not to agree.

@@ -66,10 +66,10 @@ autofill enabled.
 ## Boundaries
 
 - Accessible forms combine several techniques (labels,
-  errors, keyboard, focus: see keyboard-navigation, focus-
-  management, screen-reader-testing); a form is accessible
-  only when all hold, and the whole task can be completed
-  with keyboard and screen reader.
+  errors, keyboard, focus: see keyboard-navigation,
+  focus-management, screen-reader-testing); a form is
+  accessible only when all hold, and the whole task can be
+  completed with keyboard and screen reader.
 - Complex custom form controls (date pickers, comboboxes,
   multi-selects) need the full ARIA widget patterns (see
   aria-usage) and are easy to get wrong; prefer native

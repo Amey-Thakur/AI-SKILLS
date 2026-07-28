@@ -36,10 +36,10 @@ action clear. It is where analysis becomes impact.
    trust when found out; honest framing ("this is associated with X;
    causation would need a test") builds it and still supports action.
 6. **Adapt to the audience.** An executive wants the implication and the
-   ask; a technical peer wants the method and the caveats; a cross-
-   functional room wants the plain-language story (see audience-adaptation).
-   Same finding, different telling. Anticipate the "so what?" and the
-   obvious objection, and answer them.
+   ask; a technical peer wants the method and the caveats; a
+   cross-functional room wants the plain-language story (see
+   audience-adaptation). Same finding, different telling. Anticipate the "so
+   what?" and the obvious objection, and answer them.
 
 ## Boundaries
 

@@ -1,6 +1,6 @@
 ---
 name: email-tone
-description: Get the tone of an email right: warm, professional, and matched to the reader and situation, without the coldness email invites. Use when an email's wording could land wrong, or when the relationship matters as much as the message.
+description: "Get the tone of an email right: warm, professional, and matched to the reader and situation, without the coldness email invites. Use when an email's wording could land wrong, or when the relationship matters as much as the message."
 ---
 
 # Email tone

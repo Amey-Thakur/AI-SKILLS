@@ -29,8 +29,8 @@ is no plan for the day after, since attention decays fast.
 6. **Plan the follow-through.** What happens to the people who came and
    did not convert is usually where the real return is.
 7. **Review honestly afterwards.** What worked, what the traffic
-   actually did, and whether the goal was met (see agent-postmortem-
-   council).
+   actually did, and whether the goal was met (see
+   agent-postmortem-council).
 
 ## Boundaries
 

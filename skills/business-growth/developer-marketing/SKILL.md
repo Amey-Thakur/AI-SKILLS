@@ -66,7 +66,7 @@ credibility compounds while hype depreciates.
    engineering blog posts, conference talks (see
    conference-talks), livestreamed builds: supported
    by editing and amplification rather than ghostwritten
-   into corporate voice (see writing-style instincts:
+   into corporate voice (see voice-and-tone instincts:
    the author's fingerprints are the credibility).
 
 ## Boundaries

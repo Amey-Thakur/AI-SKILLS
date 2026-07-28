@@ -51,5 +51,5 @@ making progress.
   actions (delete, send, deploy) need confirmation gates or dry-run
   steps, not blind execution (see llm-guardrails).
 - Multi-agent orchestration is a different tool; a single robust loop
-  beats a fleet for most tasks (see multi-agent-teams for when the fan-out
-  genuinely pays).
+  beats a fleet for most tasks (see agent-orchestration-antipatterns
+  for when the fan-out genuinely pays).

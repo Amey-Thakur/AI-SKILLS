@@ -19,8 +19,7 @@ the schema so the model can succeed.
    prompt-only JSON instructions (last resort, always with
    repair). Check what your provider actually enforces:
    "JSON mode" often guarantees syntax, not your schema
-   (see claude-api-adjacent docs for your platform's
-   contract).
+   (your provider's documentation is the authority).
 2. **Design schemas the model can fill.** Flat over deeply
    nested, few required fields, enums for closed choices,
    descriptions on every field (they are prompt text:
@@ -74,4 +73,4 @@ the schema so the model can succeed.
 - Streaming structured output to UIs needs incremental
   parsing and progressive rendering decisions; the
   boundary-validation rule still applies at completion
-  (see loading-states for the UX half).
+  (see empty-and-error-states for the UX half).

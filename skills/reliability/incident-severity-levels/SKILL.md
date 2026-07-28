@@ -17,14 +17,14 @@ quietly. Levels make the response proportionate and automatic.
    more produces debate about classification during the incident.
 3. **Attach the response to the level.** Who is paged, how fast, who
    communicates, and how often, so classification is the only decision
-   needed (see incident-response).
+   needed (see runbook-writing).
 4. **Allow upgrading and require downgrading to be explicit.** Incidents
    evolve, and a stated change keeps everyone aligned.
 5. **Classify quickly and imperfectly.** A rough level immediately beats
    a precise one after twenty minutes of discussion.
 6. **Define data and security incidents separately.** They have legal
    notification obligations that operational severity does not capture
-   (see data-privacy).
+   (see pii-handling).
 7. **Review classifications afterwards.** Consistently misclassified
    incidents mean the definitions need work (see incident-postmortem).
 

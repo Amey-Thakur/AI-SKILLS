@@ -16,10 +16,11 @@ discover the premise was false) is the expensive way to learn.
 1. **State beliefs as falsifiable hypotheses.** "Users will
    pay for X", "this cache will cut latency 50%", "the bug
    is in the auth layer": phrased so a specific observation
-   would prove them wrong (see mvp-scoping's riskiest-
-   assumption, ml-problem-framing's falsifiable framing). A
-   belief you cannot imagine disproving is not a hypothesis,
-   it is a faith you will defend against evidence.
+   would prove them wrong (see mvp-scoping's
+   riskiest-assumption, ml-problem-framing's falsifiable
+   framing). A belief you cannot imagine disproving is not a
+   hypothesis, it is a faith you will defend against
+   evidence.
 2. **Rank by risk times cost-of-being-wrong.** Test the
    hypothesis that, if false, kills the whole effort, and
    that is cheapest to test: the riskiest assumption first
@@ -49,11 +50,12 @@ discover the premise was false) is the expensive way to learn.
    ego separation, sunk-cost awareness). Pivoting on
    evidence is success, not failure.
 6. **Keep a trail of hypotheses and outcomes.** What you
-   believed, tested, found, and decided (see decision-
-   journals, experiment-tracking): so the reasoning is
-   auditable, patterns emerge across tests, and you do not
-   re-test the same dead hypothesis. The accumulated map of
-   what is true is the compounding asset.
+   believed, tested, found, and decided (see
+   decision-journals, experiment-tracking): so the
+   reasoning is auditable, patterns emerge across tests,
+   and you do not re-test the same dead hypothesis. The
+   accumulated map of what is true is the compounding
+   asset.
 
 ## Boundaries
 

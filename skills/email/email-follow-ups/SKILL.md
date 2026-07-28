@@ -1,6 +1,6 @@
 ---
 name: email-follow-ups
-description: Follow up on unanswered emails effectively: the right timing, adding value, and knowing when to stop. Use when an email went unanswered and you need a reply without nagging or damaging the relationship.
+description: "Follow up on unanswered emails effectively: the right timing, adding value, and knowing when to stop. Use when an email went unanswered and you need a reply without nagging or damaging the relationship."
 ---
 
 # Email follow-ups

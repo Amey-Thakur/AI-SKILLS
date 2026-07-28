@@ -27,8 +27,8 @@ Shape: parallel fan-out, then a verification gate, then synthesis; see the
    precise question, then splits it into non-overlapping sub-questions, one per
    searcher, so fan-out does not duplicate work.
 2. **Fan searchers out in parallel.** Each returns `sources.jsonl` records:
-   claim, url, publication date, exact quote, and the source's incentive. Primary
-   sources (spec, paper, changelog) outrank commentary about them.
+   claim, url, publication date, exact quote, and the source's incentive.
+   Primary sources (spec, paper, changelog) outrank commentary about them.
 3. **Assign one agent to the negation.** Someone searches for disconfirming
    evidence explicitly, so the lab is not just a confirmation machine for the
    first hypothesis.
@@ -36,11 +36,11 @@ Shape: parallel fan-out, then a verification gate, then synthesis; see the
    confirms the quote exists and supports the claim, and marks it confirmed,
    refuted, or unsupported. Unsupported citations are cut, not softened.
 5. **Reconcile conflicts on the record.** Where sources disagree, adjudicate by
-   recency and method, or declare the point genuinely unsettled. A synthesis that
-   hides its conflicts is an advertisement.
+   recency and method, or declare the point genuinely unsettled. A synthesis
+   that hides its conflicts is an advertisement.
 6. **Synthesize in three layers.** `report.md` gives the answer in two or three
-   sentences, then the attributed evidence, then the edges: what is uncertain and
-   what would settle it. Mark every inference as inference.
+   sentences, then the attributed evidence, then the edges: what is uncertain
+   and what would settle it. Mark every inference as inference.
 
 ## Run it
 
@@ -48,8 +48,9 @@ In Claude Code, spawn searchers as parallel subagents in one turn, each with a
 sub-question and web access, writing to a shared `sources.jsonl`; then run the
 verifier as its own subagent over that file before the synthesizer reads only
 verified rows. Port it to CrewAI as parallel search tasks feeding a synthesis
-task, to AutoGen as a GroupChat with a dedicated fact-checker, or to LangGraph as
-a fan-out then fan-in graph with a verification node between search and synthesis.
+task, to AutoGen as a GroupChat with a dedicated fact-checker, or to LangGraph
+as a fan-out then fan-in graph with a verification node between search and
+synthesis.
 
 ## Signals it works
 

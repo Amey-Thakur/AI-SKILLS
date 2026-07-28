@@ -15,8 +15,8 @@ size ceiling, and a rule for what has to survive the crossing.
 
 1. **Define the artifact contract.** The envelope is structured, not prose:
    `task`, `inputs`, `constraints`, `done_criteria`, `provenance`. Pick a format
-   the receiver can parse, JSON or fenced fields in markdown, and reject anything
-   that fails the schema on arrival.
+   the receiver can parse, JSON or fenced fields in markdown, and reject
+   anything that fails the schema on arrival.
 2. **Set a context budget.** Cap the payload in tokens, often one to two
    thousand. The sender summarizes decisions and their reasons; it does not
    forward the chat log. A payload over the cap is a signal to split the task,

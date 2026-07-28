@@ -19,10 +19,10 @@ reclaiming space when they leave.
    GPUs it holds and can deadlock two jobs that each hold half of what the other
    needs.
 2. **Bin-pack to fight fragmentation.** Prefer filling a partly-used node over
-   spreading across many. Free GPUs scattered as one or two per host across eight
-   nodes cannot run an 8-GPU job even though the count exists. Set the scheduler
-   to a binpack or MostAllocated policy, and drain-and-defragment when a large
-   job queues behind scattered capacity.
+   spreading across many. Free GPUs scattered as one or two per host across
+   eight nodes cannot run an 8-GPU job even though the count exists. Set the
+   scheduler to a binpack or MostAllocated policy, and drain-and-defragment when
+   a large job queues behind scattered capacity.
 3. **Respect topology for tightly coupled jobs.** Place all ranks of a
    tensor-parallel job inside one NVLink or NVSwitch domain, and multi-node jobs
    on the same leaf switch or rail. Label nodes by NVLink group and place
@@ -44,9 +44,11 @@ reclaiming space when they leave.
 
 ## Litmus tests
 
-- Can a 32-GPU job either start fully or stay pending, never hold 20 GPUs idle while waiting?
+- Can a 32-GPU job either start fully or stay pending, never hold 20 GPUs idle
+  while waiting?
 - Do free GPUs cluster into runnable blocks, or scatter as unusable singletons?
-- When production preempts batch, does the batch job get a SIGTERM window to checkpoint?
+- When production preempts batch, does the batch job get a SIGTERM window to
+  checkpoint?
 - Is there a per-team quota, so no single user drains the shared pool?
 
 ## Boundaries

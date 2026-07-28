@@ -19,8 +19,8 @@ default set once and forgotten.
    can lose; measure before assuming it helps.
 2. **Pick the codec by the ratio-versus-speed curve.** LZ4 and Snappy compress
    and decompress fastest at a modest ratio, good for hot internal traffic and
-   on-disk blocks. Zstd is the strong default: near-LZ4 speed at low levels, near
-   gzip ratio higher up, tunable across the range. Gzip is the
+   on-disk blocks. Zstd is the strong default: near-LZ4 speed at low levels,
+   near gzip ratio higher up, tunable across the range. Gzip is the
    compatible-everywhere middle. Brotli reaches the best ratio for static web
    assets at high CPU cost.
 3. **Tune the level to the access pattern, not the maximum.** Compress-once
@@ -30,16 +30,17 @@ default set once and forgotten.
    latency for bytes nobody rereads.
 4. **Place compression where it fits the resource.** Compress web responses at
    the CDN or gateway edge, database and log storage at rest, internal RPC only
-   when the payload and link make it pay. Precompress static assets at build time
-   so the server serves a stored `.br` or `.gz`, not one recomputed per request.
+   when the payload and link make it pay. Precompress static assets at build
+   time so the server serves a stored `.br` or `.gz`, not one recomputed per
+   request.
 5. **Never double-compress or compress the incompressible.** Already-compressed
    data (JPEG, PNG, MP4, an encrypted or gzipped blob) gains nothing and wastes
    CPU; skip it. Content negotiation must not re-gzip a body the origin already
    compressed.
-6. **Benchmark on representative data.** Ratio and speed swing wildly by content;
-   measure your real payloads with `zstd -b`, a codec benchmark, or end-to-end
-   timing that counts CPU and transfer together. Choose the point on the curve
-   that minimizes total time or cost, not peak ratio.
+6. **Benchmark on representative data.** Ratio and speed swing wildly by
+   content; measure your real payloads with `zstd -b`, a codec benchmark, or
+   end-to-end timing that counts CPU and transfer together. Choose the point
+   on the curve that minimizes total time or cost, not peak ratio.
 
 ## Signals
 

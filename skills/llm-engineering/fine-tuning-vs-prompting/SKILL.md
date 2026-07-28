@@ -34,9 +34,9 @@ exists; build it first, then climb only while the numbers demand.
    (see structured-output first), domain-dialect fluency
    (specialized notation), latency/cost (distilling a big
    model's behavior on your narrow task into a small one:
-   see llm-cost-latency's tiering: fine-tuning is how
-   the small tier passes the bar), and instruction-
-   following patterns prompts keep failing to pin.
+   see llm-cost-latency's tiering: fine-tuning is how the
+   small tier passes the bar), and instruction-following
+   patterns prompts keep failing to pin.
 4. **Cost the data honestly before committing.** Hundreds
    to thousands of high-quality input/output pairs shaped
    exactly like production traffic: curated, deduplicated,

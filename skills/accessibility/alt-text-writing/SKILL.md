@@ -48,11 +48,11 @@ decorative images that should be silent.
    graphs, infographics, and diagrams carry data that a
    short alt cannot: provide the information in accessible
    text (a data table for a chart, a text summary of a
-   diagram: see the data-behind-the-visual in scientific-
-   visualization) so the content, not just "bar chart", is
-   available. The image is a convenience for sighted users;
-   the text is the accessible source of the same
-   information.
+   diagram: see the data-behind-the-visual in
+   scientific-visualization) so the content, not just "bar
+   chart", is available. The image is a convenience for
+   sighted users; the text is the accessible source of the
+   same information.
 6. **Do not start with "image of" and do not stuff
    keywords.** Screen readers already announce it as an
    image, so "image of a cat" is redundant ("a cat"

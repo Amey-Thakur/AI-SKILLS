@@ -62,5 +62,5 @@ approval interrupt on every iteration.
 Agents assemble and draft; a human speaks and owns every word published.
 Never let an agent post directly. Incidents involving personal data,
 safety, or regulated services carry notification obligations with legal
-deadlines and need counsel immediately (see data-privacy). Apologies and
+deadlines and need counsel immediately (see pii-handling). Apologies and
 liability statements have legal consequences.

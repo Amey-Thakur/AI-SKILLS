@@ -22,12 +22,12 @@ confidence.
    three steps later. A setup guide that assumes prior state
    fails every actual new hire.
 2. **Automate setup where you can, document the rest.** A
-   setup script or dev container (see docker-image-
-   optimization) that does the mechanical steps, with docs
-   explaining what it did and the manual pieces it cannot;
-   the less a human must hand-execute, the fewer ways it
-   breaks. Automated-and-documented beats a twenty-step
-   manual checklist that drifts.
+   setup script or dev container (see
+   docker-image-optimization) that does the mechanical
+   steps, with docs explaining what it did and the manual
+   pieces it cannot; the less a human must hand-execute,
+   the fewer ways it breaks. Automated-and-documented
+   beats a twenty-step manual checklist that drifts.
 3. **Provide a first-contribution path.** A curated set of
    good-first-issues (see community-building,
    open-source-maintainer-role), a walkthrough of the
@@ -41,16 +41,16 @@ confidence.
    (link the vision and ADRs: see technical-vision,
    architecture-decision-records), the non-obvious
    conventions, who owns what (see code-owners), where to
-   ask for help. This is the highest-value and most-often-
-   missing onboarding content, because the people who know
-   it forgot they had to learn it.
+   ask for help. This is the highest-value and
+   most-often-missing onboarding content, because the
+   people who know it forgot they had to learn it.
 5. **Map the codebase and the workflow.** A high-level tour
-   (what lives where, the main flows: see architecture-
-   diagrams at Context/Container level) and the day-to-day
-   rhythm (standups, reviews, releases: see standup,
-   deployment-pipelines): orientation, not exhaustive
-   detail. The newcomer needs a map to explore from, not
-   the whole territory memorized.
+   (what lives where, the main flows: see
+   architecture-diagrams at Context/Container level) and
+   the day-to-day rhythm (standups, reviews, releases: see
+   standup, deployment-pipelines): orientation, not
+   exhaustive detail. The newcomer needs a map to explore
+   from, not the whole territory memorized.
 6. **Let each new hire fix the onboarding.** The newest
    person is the only one who can see what the docs assume
    and omit; make "improve the onboarding doc" their first
@@ -61,10 +61,9 @@ confidence.
 
 ## Boundaries
 
-- Onboarding docs get someone productive; they are not
-  comprehensive reference (see docs-information-
-  architecture) and should not try to be, a newcomer
-  drowns in completeness. Orient and launch, link the
+- Onboarding docs get someone productive; they are not comprehensive
+  reference (see docs-information-architecture) and should not try to
+  be, a newcomer drowns in completeness. Orient and launch, link the
   depth.
 - The docs cannot replace human onboarding (a buddy,
   questions answered: see mentoring-engineers); they

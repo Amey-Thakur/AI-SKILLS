@@ -28,7 +28,9 @@ Build the plan:
    overcommitment.
 
 Output: the top outcomes for the week, then a realistic day-by-day or
-priority-ordered plan, then the "not this week" list. Rules: realistic over
-ambitious (an overpacked plan you abandon by Tuesday is worse than an honest
-one). Protect the important work from the urgent. If the load genuinely exceeds
-the time, say so and help me cut, do not pretend it fits.
+priority-ordered plan, then the "not this week" list.
+
+Rules: realistic over ambitious (an overpacked plan you abandon by Tuesday is
+worse than an honest one). Protect the important work from the urgent. If the
+load genuinely exceeds the time, say so and help me cut, do not pretend it
+fits.

@@ -30,5 +30,7 @@ Judge names by:
 - Length: as short as possible while staying clear; scope-appropriate (loop
   index can be terse, a module-level export cannot).
 
-End with your single recommendation and why. If the naming difficulty signals
-the thing is doing too much (hard to name = unclear responsibility), say so.
+End with your single recommendation and why.
+
+Rules: if the naming difficulty signals the thing is doing too much (hard to
+name = unclear responsibility), say so.

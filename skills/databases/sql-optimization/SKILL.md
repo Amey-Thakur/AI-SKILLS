@@ -35,7 +35,7 @@ others quietly worse.
    - Restructure the query: select only needed columns, filter before
      joining, replace correlated subqueries with joins or window functions,
      paginate by keyset (`WHERE id > ?`) not `OFFSET` at depth.
-   - Only then reach for denormalization, materialized views, or caching , 
+   - Only then reach for denormalization, materialized views, or caching:
      real costs that need the earlier steps ruled out.
 4. **Verify against the same measurement,** same data, same parameters.
    Then check the write side: every index taxes every insert and update on

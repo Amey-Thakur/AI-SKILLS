@@ -1,6 +1,6 @@
 ---
 name: persuasive-writing
-description: Make a case in writing that changes minds through a clear claim, real evidence, and honest handling of objections. Use when writing to convince: a proposal, a pitch, an argument, an opinion piece.
+description: "Make a case in writing that changes minds through a clear claim, real evidence, and honest handling of objections. Use when writing to convince: a proposal, a pitch, an argument, an opinion piece."
 ---
 
 # Persuasive writing

@@ -35,7 +35,8 @@ Process, in order:
 5. Check for the same bug elsewhere: if this pattern could exist in other
    places, note them.
 
-Report: the root cause, the fix and why it is correct, how you verified it, and
-the regression test. Be honest if the root cause is uncertain or the fix is a
-mitigation rather than a true fix. Do not claim it is fixed without
-demonstrating it.
+Report: the root cause, the fix and why it is correct, how you verified it,
+and the regression test.
+
+Rules: be honest if the root cause is uncertain or the fix is a mitigation
+rather than a true fix. Do not claim it is fixed without demonstrating it.

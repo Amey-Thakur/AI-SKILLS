@@ -19,9 +19,9 @@ breaks?" (impact) and "this number is wrong, where did it come from?"
 2. **Get table-level everywhere, column-level where it pays.**
    Table-level answers most impact questions cheaply. Column-level
    matters on the money paths: PII propagation (see pii-handling),
-   metric definitions (which columns feed "revenue"), and breaking-
-   change analysis for schema-evolution. Full column lineage on
-   everything is expensive to maintain; target it.
+   metric definitions (which columns feed "revenue"), and
+   breaking-change analysis for schema-evolution. Full column
+   lineage on everything is expensive to maintain; target it.
 3. **Extend to the edges.** Lineage that stops at the warehouse
    boundary misses the point of origin (producing services, CDC
    streams; see change-data-capture) and the point of impact

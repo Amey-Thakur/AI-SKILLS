@@ -31,7 +31,7 @@ reviewers who do not exist.
 7. **Decide the emergency path in advance.** Who can bypass, how it is
    recorded, and what review happens afterwards, because an
    unconsidered bypass path becomes the normal one (see
-   incident-response).
+   incident-severity-levels).
 
 ## Boundaries
 

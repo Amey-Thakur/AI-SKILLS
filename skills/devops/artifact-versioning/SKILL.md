@@ -62,10 +62,10 @@ Immutability and provenance are the whole discipline.
   threat model justifies the effort (see
   supply-chain-defense).
 - Configuration is not baked into the artifact (that
-  would require a rebuild per environment: the anti-
-  pattern); config is injected at deploy (see
-  config-management), and the artifact stays environment-
-  agnostic.
+  would require a rebuild per environment: the
+  anti-pattern); config is injected at deploy (see
+  config-management), and the artifact stays
+  environment-agnostic.
 - Interpreted-language deploys still have an artifact (the
   locked dependency set + code at a commit); "we just
   deploy from git" without a lockfile is rebuilding

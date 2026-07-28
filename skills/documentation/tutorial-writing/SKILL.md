@@ -38,8 +38,9 @@ tutorials that overwhelm and reference that cannot teach.
    are tested: a failing tutorial destroys the beginner's
    confidence, not just their afternoon); resist the urge to
    show every option or handle every case: those belong in
-   reference and how-to guides (see docs-information-
-   architecture). One path, working, start to finish.
+   reference and how-to guides (see
+   docs-information-architecture). One path, working, start
+   to finish.
 5. **Provide recovery for the likely failures.** Where
    learners commonly get stuck (a permission error, a
    missing dependency), a short "if you see X, do Y":

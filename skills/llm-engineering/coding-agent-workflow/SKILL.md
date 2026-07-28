@@ -51,4 +51,4 @@ accountable engineer, not a spectator.
   check the result. Underspecified creative architecture is still yours.
 - This is human-directs-agent supervision; multi-agent orchestration
   (agents coordinating agents) is a separate discipline with its own
-  costs (see multi-agent-teams, multi-agent-workflow).
+  costs (see agent-orchestration-antipatterns, multi-agent-workflow).

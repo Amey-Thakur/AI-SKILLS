@@ -41,7 +41,8 @@ bug and watch it fail for the real reason.
 ## Litmus tests
 
 - Did the test fail before the fix and pass after, both confirmed by running it?
-- Does the assertion describe behavior a user sees rather than an internal frame?
+- Does the assertion describe behavior a user sees rather than an internal
+  frame?
 - Could a reader find the original bug report from the test's name or comment?
 
 ## Boundaries

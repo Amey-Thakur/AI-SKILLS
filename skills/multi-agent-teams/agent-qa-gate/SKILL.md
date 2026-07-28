@@ -24,9 +24,9 @@ authority is the point: a gate you can talk past is decoration.
    test log, command output, a screenshot, a captured response. "It works" is
    rejected. The evidence bundle is what the verdict rests on.
 4. **Map every criterion and fail on any gap.** Build a table: criterion,
-   evidence, pass or fail. A criterion with no evidence is a fail, not a pending.
-   Partial coverage is a no-go, because the unmapped criterion is where the
-   defect hides.
+   evidence, pass or fail. A criterion with no evidence is a fail, not a
+   pending. Partial coverage is a no-go, because the unmapped criterion is
+   where the defect hides.
 5. **Exercise the unhappy paths.** Empty input, malformed input, the permission
    edge, the concurrent case. A gate that confirms only the demo path has
    verified the least interesting part of the work.
@@ -43,14 +43,16 @@ files; it returns an acceptance report, criterion to evidence to verdict, plus a
 go or no-go. The orchestrator treats a no-go as terminal: route back to the
 builders, do not proceed. To port, the gate is a CrewAI final task whose
 guardrail fails the crew, an AutoGen agent with a termination check on the
-evidence, or a LangGraph conditional edge that loops back to the build node until
-every criterion passes.
+evidence, or a LangGraph conditional edge that loops back to the build node
+until every criterion passes.
 
 ## Signals it works
 
-- Every acceptance criterion links to a piece of executed evidence, none pending.
+- Every acceptance criterion links to a piece of executed evidence, none
+  pending.
 - The gate has actually run the artifact, not just read the diff.
-- A no-go blocks the pipeline until a fix or a named human override, never a nag.
+- A no-go blocks the pipeline until a fix or a named human override, never a
+  nag.
 
 ## Boundaries
 

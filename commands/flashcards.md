@@ -33,7 +33,9 @@ Rules for cards that actually build knowledge:
   memorization where it applies.
 
 Output as clean Question / Answer pairs (a format I can paste into Anki or a
-flashcard app: front and back clearly separated). Keep answers tight: a card
-with a paragraph answer should be split. If the material has natural cloze
-(fill-in-the-blank) candidates, offer some. Flag anything in the material that
-is ambiguous or that I should verify before memorizing.
+flashcard app: front and back clearly separated).
+
+Rules: keep answers tight: a card with a paragraph answer should be split. If
+the material has natural cloze (fill-in-the-blank) candidates, offer some.
+Flag anything in the material that is ambiguous or that I should verify before
+memorizing.

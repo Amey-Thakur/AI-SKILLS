@@ -32,8 +32,8 @@ on purpose.
    with TTLs and safe defaults, DNS answers held, workers finishing
    current jobs. A data plane that dies when the control plane blinks
    has inverted its dependency arrows.
-5. **Make degraded modes explicit features.** Read-only mode, queue-
-   and-apologize (accept intents, reconcile after heal, with a
+5. **Make degraded modes explicit features.** Read-only mode,
+   queue-and-apologize (accept intents, reconcile after heal, with a
    conflict story), reduced functionality banners. Fail safe by
    domain: a paywall fails closed, a fraud check may fail open with
    limits; each such default is a product decision to record.

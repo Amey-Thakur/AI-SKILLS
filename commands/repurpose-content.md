@@ -30,9 +30,10 @@ For each target format:
 - Keep the core message and value consistent across formats, even as the
   packaging changes.
 
-Output each requested format separately, labeled, ready to use. Rules: adapt,
-do not duplicate (the same text pasted everywhere underperforms and reads
-lazy). Each format should work standalone for someone who never saw the
-original. Preserve the source's accuracy and voice. Flag if a particular format
-is a poor fit for this content and why. Suggest one format I did not ask for
-if the content is a natural fit.
+Output each requested format separately, labeled, ready to use.
+
+Rules: adapt, do not duplicate (the same text pasted everywhere underperforms
+and reads lazy). Each format should work standalone for someone who never saw
+the original. Preserve the source's accuracy and voice. Flag if a particular
+format is a poor fit for this content and why. Suggest one format I did not
+ask for if the content is a natural fit.

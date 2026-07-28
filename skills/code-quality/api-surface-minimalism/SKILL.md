@@ -26,8 +26,9 @@ need and to withdraw capability on a schedule, never by surprise.
    decision distinct from the feature. Ask whether it could ship internal first
    and graduate to public once a second caller actually appears.
 5. **Deprecate before you delete.** Mark the old symbol with `@Deprecated`,
-   `warnings.warn(DeprecationWarning)`, or a doc note stating the replacement and
-   the removal version. Keep it working at least one minor release.
+   `warnings.warn(DeprecationWarning)`, or a doc note stating the
+   replacement and the removal version. Keep it working at least one minor
+   release.
 6. **Delete on a published cadence.** Remove deprecated symbols only at a major
    version or an announced window, and record each in the changelog. Silent
    removal turns a routine upgrade into an outage for someone downstream.
@@ -35,7 +36,8 @@ need and to withdraw capability on a schedule, never by surprise.
 ## Checks
 
 - Grep the exports: can you name a caller outside the module for each one?
-- Does removing a symbol force a major bump, or did it never reach release notes?
+- Does removing a symbol force a major bump, or did it never reach release
+  notes?
 - For each deprecation, are the replacement and removal version stated together?
 
 ## Boundaries

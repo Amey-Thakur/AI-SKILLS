@@ -34,11 +34,11 @@ rank rarely survives contact with a specific domain.
    trades precision (small: exact matches, lost context)
    against recall of complete answers (large: context kept,
    diluted relevance); 200-500 tokens with overlap is a
-   common start, but your eval set decides. Respect
-   structure (split on headings/paragraphs, never mid-
-   sentence), keep metadata (source, section) on each chunk
-   (see rag-pipeline's citation needs), and consider
-   parent-child (embed small, return the enclosing section).
+   common start, but your eval set decides. Respect structure
+   (split on headings/paragraphs, never mid-sentence), keep
+   metadata (source, section) on each chunk (see
+   rag-pipeline's citation needs), and consider parent-child
+   (embed small, return the enclosing section).
 4. **Test the pairing, because they interact.** The same
    model performs differently across chunk sizes; evaluate
    model-and-chunking as one grid on the eval set, not
@@ -71,6 +71,7 @@ rank rarely survives contact with a specific domain.
   freshness and authority are metadata-and-ranking
   concerns layered on top, not properties of the vector.
 - Vector-store choice (index type, filtering, scale) is a
-  separate infrastructure decision (see cloud-storage-
-  selection instincts); the embedding decision comes first
-  and constrains it (dimensions, distance metric).
+  separate infrastructure decision (see
+  cloud-storage-selection instincts); the embedding
+  decision comes first and constrains it (dimensions,
+  distance metric).

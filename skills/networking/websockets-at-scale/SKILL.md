@@ -23,7 +23,7 @@ messages when some clients are slower than the sender.
 3. **Make the client reconnect politely.** Automatic reconnection with
    exponential backoff and jitter, plus resumption of missed state,
    turns a server restart into a hiccup. Every client reconnecting at
-   once is a self-inflicted stampede (see retry-strategies).
+   once is a self-inflicted stampede (see timeouts-and-retries).
 4. **Apply backpressure to slow consumers.** Track per-connection send
    queues and coalesce, drop, or disconnect when a client cannot keep
    up. Unbounded queues turn one slow client into an out-of-memory
@@ -44,4 +44,4 @@ messages when some clients are slower than the sender.
 - Sockets do not survive network changes on mobile, so treat frequent
   reconnection as normal rather than as an error path.
 - Ordering and delivery guarantees come from the protocol you build on
-  top, not from the transport (see message-ordering, idempotency).
+  top, not from the transport (see delivery-guarantees, idempotency).

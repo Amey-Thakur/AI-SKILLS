@@ -15,10 +15,10 @@ shared across requests.
 1. **Choose lifetimes from state, shortest first.** Transient for
    stateless lightweight services (the default answer); Scoped for
    anything per-request (DbContext, unit-of-work, request caches);
-   Singleton only for genuinely shared, thread-safe, stateless-or-
-   immutable services (config, clients built for sharing like
-   HttpClient handlers, caches designed for concurrency: see
-   jvm-memory-model's singleton rule mirrored).
+   Singleton only for genuinely shared, thread-safe,
+   stateless-or-immutable services (config, clients built for
+   sharing like HttpClient handlers, caches designed for
+   concurrency: see jvm-memory-model's singleton rule mirrored).
 2. **Never let a long life capture a short one.** A singleton
    injecting a scoped service freezes one instance of it forever:
    the captive-dependency bug (scope-validation catches it in

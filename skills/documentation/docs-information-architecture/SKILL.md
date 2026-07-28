@@ -29,13 +29,13 @@ the whole findable.
    how-tos and reference serve work. Placing each piece
    correctly on these axes tells you how to write it and
    where it goes.
-3. **Make navigation match the reader's mental model.** Top-
-   level structure by the reader's task or the product's
+3. **Make navigation match the reader's mental model.**
+   Top-level structure by the reader's task or the product's
    domains, not by your org chart or file layout; a reader
    should predict where a topic lives. Progressive
    disclosure (overview to detail), consistent depth, and a
-   clear "you are here" (the same clarity architecture-
-   diagrams needs, for docs).
+   clear "you are here" (the same clarity
+   architecture-diagrams needs, for docs).
 4. **Invest in search.** Most readers search, not browse:
    good search (indexed, with useful titles and metadata,
    fast) is often the primary navigation (see technical-seo
@@ -70,5 +70,5 @@ the whole findable.
   docs is well-arranged misinformation.
 - Discoverability includes getting readers *to* the docs
   (in-product links, error messages pointing to relevant
-  pages: see error-messages, cli-ux-design); the best-
-  organized docs help nobody who never finds them.
+  pages: see error-messages, cli-ux-design); the
+  best-organized docs help nobody who never finds them.

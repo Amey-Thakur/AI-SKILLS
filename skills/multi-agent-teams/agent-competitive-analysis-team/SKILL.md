@@ -16,21 +16,23 @@ fact.
 
 - **Lead** (`product-manager-role`): scopes competitors and the comparison
   dimensions.
-- **Analysts** (`ux-researcher-role`): one competitor each, on a shared template.
+- **Analysts** (`ux-researcher-role`): one competitor each, on a shared
+  template.
 - **Evidence checker**: enforces sourcing and kills marketing-only claims.
-- **Synthesizer** (`research-synthesis`): builds the matrix and the implications.
+- **Synthesizer** (`research-synthesis`): builds the matrix and the
+  implications.
 
 Shape: parallel fan-out of teardowns, an evidence gate, then synthesis.
 
 ## Method
 
 1. **Lead fixes the comparison frame first.** Pick three to five competitors and
-   the same dimensions for each (pricing, onboarding, core workflow, integrations,
-   gaps), so teardowns are comparable, not five essays. Output `scope.md` with a
-   shared template.
+   the same dimensions for each (pricing, onboarding, core workflow,
+   integrations, gaps), so teardowns are comparable, not five essays. Output
+   `scope.md` with a shared template.
 2. **Assign one analyst per competitor, same template.** Parallel fan-out. Each
-   fills `teardown-<competitor>.md` dimension by dimension so the synthesizer can
-   lay them side by side.
+   fills `teardown-<competitor>.md` dimension by dimension so the synthesizer
+   can lay them side by side.
 3. **Enforce evidence rules: source every claim, rank the source.** Each line
    cites where it came from (docs page, pricing page, hands-on trial, changelog,
    third-party review) with a date. Primary and hands-on beat the vendor's
@@ -43,8 +45,8 @@ Shape: parallel fan-out of teardowns, an evidence gate, then synthesis.
    took. A teardown built only from the marketing site describes the marketing
    site.
 6. **Checker gates claims before synthesis.** It downgrades unsourced or
-   marketing-only claims and flags anything stale, for example pricing older than
-   90 days. Only surviving claims reach the synthesizer.
+   marketing-only claims and flags anything stale, for example pricing
+   older than 90 days. Only surviving claims reach the synthesizer.
 7. **Synthesize into a decision, not a table dump.** `landscape.md` gives the
    matrix, then two or three implications for your product: where you win, where
    you are exposed, the gap to close. A matrix with no "so what" is trivia.

@@ -14,15 +14,14 @@ is why serious APIs use it.
 ## Method
 
 1. **Default to cursor pagination for stability.** A cursor
-   encodes "where the last page ended" (an opaque token
-   over the sort key); the next page continues from there,
-   so inserts and deletes between page fetches do not
-   duplicate or skip items. Offset pagination (`LIMIT 20
-   OFFSET 40`) skips or repeats items when rows shift under
-   it (a new item at the top pushes everything down a slot):
-   the classic "I saw the same item twice while scrolling"
-   bug (see the connections pattern in graphql-schema-
-   design).
+   encodes "where the last page ended" (an opaque token over
+   the sort key); the next page continues from there, so
+   inserts and deletes between page fetches do not duplicate
+   or skip items. Offset pagination (`LIMIT 20 OFFSET 40`)
+   skips or repeats items when rows shift under it (a new
+   item at the top pushes everything down a slot): the
+   classic "I saw the same item twice while scrolling" bug
+   (see the connections pattern in graphql-schema-design).
 2. **Base cursors on a stable, unique sort.** The cursor
    must encode a total ordering (a unique column, or a
    composite like `(created_at, id)` to break ties): sorting
@@ -39,12 +38,12 @@ is why serious APIs use it.
    problem.
 4. **Treat total counts as expensive, make them optional.**
    Counting all matching rows can be as costly as the query
-   itself on large tables (a full scan: see query-plan-
-   reading); do not compute it on every page by default.
-   Offer it as an opt-in, use an estimate where exactness is
-   not needed, or provide "has more" (cheaper: fetch one
-   extra) instead of a precise total. Many clients want
-   "next page" not "page 47 of 3,912".
+   itself on large tables (a full scan: see
+   query-plan-reading); do not compute it on every page by
+   default. Offer it as an opt-in, use an estimate where
+   exactness is not needed, or provide "has more" (cheaper:
+   fetch one extra) instead of a precise total. Many clients
+   want "next page" not "page 47 of 3,912".
 5. **Return pagination metadata consistently.** A predictable
    envelope: the items, a next-page cursor (null when
    done), and optionally a previous cursor and count (see

@@ -19,7 +19,7 @@ loss encodes what errors you consider serious.
    labels.
 3. **Handle class imbalance in the loss.** Weighting or focal variants
    stop a rare positive class being ignored, since accuracy on an
-   imbalanced set is trivially high (see class-imbalance).
+   imbalanced set is trivially high (see imbalanced-data).
 4. **Align the loss with the deployment metric.** When they differ,
    either choose a closer surrogate or select checkpoints on the real
    metric rather than on loss.

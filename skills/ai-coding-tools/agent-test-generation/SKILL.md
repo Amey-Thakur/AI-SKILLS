@@ -14,7 +14,7 @@ capable of failing.
 
 1. **Ask for behaviour tests, not coverage.** Given this input, expect
    this output, rather than exercising every branch for its own sake
-   (see test-design).
+   (see unit-test-design).
 2. **Specify the cases you care about.** Edge cases, boundaries, and
    error paths, since agents over-produce happy-path tests.
 3. **Verify each test can fail.** Break the implementation deliberately

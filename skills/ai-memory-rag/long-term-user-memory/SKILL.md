@@ -36,7 +36,7 @@ which is why writing memory needs more discipline than reading it.
 ## Boundaries
 
 Memory is personal data with consent, retention, and erasure
-obligations (see data-privacy). Inferred facts can be wrong and
+obligations (see pii-handling). Inferred facts can be wrong and
 sensitive, and inferring protected characteristics is a serious harm
 even when accurate. Memory improves relevance; it cannot substitute for
 asking when something matters.

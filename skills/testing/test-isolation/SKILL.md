@@ -19,8 +19,8 @@ neither order nor parallelism can change the result.
    failing seed reproduces it exactly.
 2. **Reset every mutable global in teardown, or remove it.** Module caches,
    singletons, registered handlers, and environment variables outlive a test.
-   Restore them in a fixture that runs even on failure (`addCleanup`, `finally`),
-   or inject the dependency so no global exists to reset.
+   Restore them in a fixture that runs even on failure (`addCleanup`,
+   `finally`), or inject the dependency so no global exists to reset.
 3. **Give each test its own database state via rollback.** Wrap the test in a
    transaction rolled back at teardown, or truncate the tables it touched. Never
    rely on tests running in an order that happens to leave the rows clean for

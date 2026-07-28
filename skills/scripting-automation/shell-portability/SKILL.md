@@ -40,9 +40,10 @@ at 2am.
    same discipline as browser-matrix, aimed at userlands).
 5. **Test on the actual matrix in CI.** A container job per
    supported environment (debian, alpine/busybox, macOS runner)
-   running the script's test invocations (see test-environment-
-   parity); portability claims without CI coverage are folklore.
-   Pin the images so the matrix is versioned like any dependency.
+   running the script's test invocations (see
+   test-environment-parity); portability claims without CI
+   coverage are folklore. Pin the images so the matrix is
+   versioned like any dependency.
 6. **Escalate to a portable runtime when the matrix hurts.**
    Two or more of: associative data, JSON, retries with backoff,
    Windows support: switch to Python (stdlib-only for

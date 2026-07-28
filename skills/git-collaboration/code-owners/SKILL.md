@@ -62,11 +62,10 @@ bottleneck every PR waits on.
   review itself (see code-review) or a healthy review
   culture. Automated routing to a disengaged owner is
   worse than no routing.
-- Ownership as accountability is healthy; ownership as
-  territory ("nobody touches my code") is toxic and
-  slows the whole org: the goal is the right reviewer
-  fast, not a fiefdom (see boy-scout-rule's shared-
-  ownership spirit).
+- Ownership as accountability is healthy; ownership as territory
+  ("nobody touches my code") is toxic and slows the whole org: the goal
+  is the right reviewer fast, not a fiefdom (see boy-scout-rule's
+  shared-ownership spirit).
 - Fine-grained ownership needs maintenance proportional
   to its granularity; start coarse (team-per-major-area)
   and refine where load or expertise genuinely demands.

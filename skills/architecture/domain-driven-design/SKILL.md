@@ -1,6 +1,6 @@
 ---
 name: domain-driven-design
-description: Apply DDD pragmatically: bounded contexts, ubiquitous language, and aggregates sized to invariants. Use when modeling a complex domain or when code and business people describe the same thing differently.
+description: "Apply DDD pragmatically: bounded contexts, ubiquitous language, and aggregates sized to invariants. Use when modeling a complex domain or when code and business people describe the same thing differently."
 ---
 
 # Domain-driven design

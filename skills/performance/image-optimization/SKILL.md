@@ -12,10 +12,10 @@ format, the right dimensions for the viewport, and decode off the critical path.
 
 ## Method
 
-1. **Encode to a modern format.** Serve AVIF or WebP with a JPEG fallback through
-   `<picture>`. AVIF is often 30 to 50 percent smaller than JPEG at equal
-   quality. Produce it with `sharp`, Squoosh, or a build step; never ship the
-   camera's original file.
+1. **Encode to a modern format.** Serve AVIF or WebP with a JPEG fallback
+   through `<picture>`. AVIF is often 30 to 50 percent smaller than JPEG at
+   equal quality. Produce it with `sharp`, Squoosh, or a build step; never
+   ship the camera's original file.
 2. **Generate responsive widths with srcset.** Produce several sizes and let the
    browser choose: `srcset` plus `sizes` so a phone downloads a 400px image and
    not the 2000px desktop one. On mobile this is the single biggest byte win.

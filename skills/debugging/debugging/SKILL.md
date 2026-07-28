@@ -45,5 +45,5 @@ without understanding is a second bug waiting.
 ## When stuck
 
 Explain the bug out loud to the reader: symptom, everything ruled out, the
-remaining suspects. Half of these explanations end mid-sentence with "…oh."
+remaining suspects. Half of these explanations end mid-sentence with "...oh."
 The other half hand the next person a real map instead of a shrug.

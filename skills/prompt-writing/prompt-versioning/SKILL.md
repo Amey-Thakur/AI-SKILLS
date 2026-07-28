@@ -29,8 +29,8 @@ produced which output.
 6. **Write the intent in the commit.** What behaviour this change is
    meant to alter, which is what makes the history useful later.
 7. **Pin the model version alongside.** A prompt is tuned to a model,
-   and the pairing is what reproduces behaviour (see claude-api model
-   pinning practice).
+   and the pairing is what reproduces behaviour (pin the model
+   identifier, never a floating alias).
 
 ## Boundaries
 

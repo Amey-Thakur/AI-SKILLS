@@ -19,10 +19,10 @@ Resilience means bounding every call and failing deliberately.
    default of a minute.
 3. **Retry only what is safe and transient.** Timeouts and server errors
    with backoff and jitter; never retry a non-idempotent write without a
-   key (see retry-strategies, payment-idempotency).
+   key (see timeouts-and-retries, payment-idempotency).
 4. **Break the circuit on sustained failure.** Stop calling a dependency
    that is clearly down, which protects both your resources and their
-   recovery (see circuit-breakers).
+   recovery (see graceful-degradation).
 5. **Define the fallback per call site.** Cached data, a default, or a
    clear error, decided by what the user needs rather than uniformly.
 6. **Isolate the resources each integration uses.** Separate pools mean

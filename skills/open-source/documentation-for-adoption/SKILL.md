@@ -1,6 +1,6 @@
 ---
 name: documentation-for-adoption
-description: Write the docs that decide whether someone adopts a project: a truthful readme, a working quickstart, and answers to the first questions. Use when a project is capable but nobody gets past the first ten minutes.
+description: "Write the docs that decide whether someone adopts a project: a truthful readme, a working quickstart, and answers to the first questions. Use when a project is capable but nobody gets past the first ten minutes."
 ---
 
 # Documentation for adoption

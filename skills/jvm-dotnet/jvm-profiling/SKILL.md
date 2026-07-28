@@ -49,10 +49,11 @@ and reading past the framework noise to your code.
    one shows standing stock, the other flow.
 6. **Benchmark micro-claims with JMH, not loops.** JIT warmup,
    dead-code elimination, and OSR make naive timing loops lie;
-   JMH handles warmup/forking/blackholes (the zero-cost-
-   abstractions verification ethic on the JVM). Macro changes
-   validate under load against SLO metrics (see benchmark-design,
-   load-testing); a micro win that disappears at p99 was noise.
+   JMH handles warmup/forking/blackholes (the
+   zero-cost-abstractions verification ethic on the JVM). Macro
+   changes validate under load against SLO metrics (see
+   benchmark-design, load-testing); a micro win that disappears
+   at p99 was noise.
 
 ## Boundaries
 

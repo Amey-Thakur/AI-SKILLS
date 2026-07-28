@@ -35,6 +35,6 @@ authoritative.
 
 Spreadsheets suit modelling and analysis, not production data processing
 or multi-user workflows, where a database and an application belong (see
-database-design). Complex models become unmaintainable and should move
+schema-design). Complex models become unmaintainable and should move
 to code. Financial models used for decisions need review by someone who
 did not build them.

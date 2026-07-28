@@ -18,7 +18,8 @@ and every green result earned.
    0, expected 80." A numeric symptom is testable; "discounts look off" is not.
 2. **Write one hypothesis that can be false.** "The rate arrives as a string
    and multiplies to 0" is refutable. "Something with types" is not. Hold to a
-   single hypothesis per cycle, or no probe can tell you which claim it answered.
+   single hypothesis per cycle, or no probe can tell you which claim it
+   answered.
 3. **Predict the reading before you run.** Commit out loud: if this is right,
    `type(rate)` is `str` and the product is `""`. Writing the expected value
    first stops you from rationalizing whatever the probe happens to show.
@@ -41,7 +42,8 @@ and every green result earned.
 - Can you state the single observation that would prove your current
   hypothesis wrong, and have you gone and looked for it?
 - Does your log show the suspect region strictly shrinking, probe by probe?
-- When an edit made the bug disappear, can you name which hypothesis it confirmed?
+- When an edit made the bug disappear, can you name which hypothesis it
+  confirmed?
 
 ## Boundaries
 

@@ -24,7 +24,7 @@ possession of it.
    data-minimization).
 4. **Segment any system that must handle card data.** If a flow
    genuinely requires it, isolate it on its own network and hosts so the
-   rest of the estate stays out of scope (see network-segmentation).
+   rest of the estate stays out of scope (see zero-trust-basics).
 5. **Know which validation level and questionnaire applies.** It depends
    on volume and integration method, and choosing the integration
    changes the questionnaire dramatically.

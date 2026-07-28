@@ -50,6 +50,7 @@ thread dump if you know how to read the waits.
 ## Boundaries
 
 This covers mutual-exclusion deadlocks between threads in one process.
-Distributed deadlocks across services, database lock waits, and connection-
-pool exhaustion wear the same mask but resolve with transaction timeouts,
-lock ordering at the database, or pool sizing, not with a thread dump.
+Distributed deadlocks across services, database lock waits, and
+connection-pool exhaustion wear the same mask but resolve with transaction
+timeouts, lock ordering at the database, or pool sizing, not with a thread
+dump.

@@ -23,7 +23,7 @@ starts from a question.
    surveying every module (see mental-model-building).
 4. **Read the tests to learn the contract.** Tests state intended
    behaviour and edge cases more honestly than comments, and they show
-   how the code is meant to be called (see test-design).
+   how the code is meant to be called (see unit-test-design).
 5. **Use the debugger and the call graph over guessing.** Stepping
    through a real execution answers in minutes what reading answers in
    hours, particularly with dynamic dispatch (see debugging).

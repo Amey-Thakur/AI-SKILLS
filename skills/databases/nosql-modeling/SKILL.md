@@ -18,9 +18,9 @@ process.
    list-orders-for-user, find-active-sessions. In NoSQL the
    data model is designed *for* these patterns, so they must
    be known first (unlike relational, where you can query
-   any shape later: see the OLTP flexibility of schema-
-   design). An access pattern discovered after launch may
-   require a data-model change, not just a new query.
+   any shape later: see the OLTP flexibility of
+   schema-design). An access pattern discovered after launch
+   may require a data-model change, not just a new query.
 2. **Denormalize deliberately, own the consequences.**
    Duplicate data so a query reads from one place instead of
    joining (embed the order items in the order document,
@@ -31,8 +31,8 @@ process.
    accidental.
 3. **Design keys for the query.** Partition/hash key spreads
    data and is queried by equality; sort/range key enables
-   ranges and ordering within a partition (see data-
-   partitioning's key selection). Composite keys and
+   ranges and ordering within a partition (see
+   data-partitioning's key selection). Composite keys and
    secondary indexes serve additional patterns. The key
    design *is* the query capability; get it wrong and the
    query you need becomes a full scan.
@@ -57,8 +57,8 @@ process.
    slight staleness, use strongly-consistent reads only
    where correctness demands (and pay the cost), and handle
    the lack of multi-item transactions (or use the store's
-   limited transaction support deliberately: see delivery-
-   guarantees, idempotency-keys).
+   limited transaction support deliberately: see
+   delivery-guarantees, idempotency-keys).
 
 ## Boundaries
 
@@ -66,8 +66,8 @@ process.
   flexibility and relational integrity for scale and
   access-pattern-optimized performance. If you need
   flexible ad-hoc queries and strong relational integrity,
-  a relational database is the right tool (see schema-
-  design, transactions-isolation).
+  a relational database is the right tool (see
+  schema-design, transactions-isolation).
 - "NoSQL" spans very different stores (document, key-value,
   wide-column, graph): the access-pattern-first principle
   is common, the modeling specifics differ hugely per

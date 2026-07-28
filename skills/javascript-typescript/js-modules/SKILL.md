@@ -38,7 +38,7 @@ configured on purpose. Get the model straight and the errors resolve.
 5. **Use dynamic `import()` for code-splitting and lazy loading.**
    `await import("./heavy")` loads a module on demand, splitting it into
    its own chunk: the mechanism behind route-level and feature-level lazy
-   loading (see lazy-loading, frontend-build-tooling). It also bridges CJS
+   loading (see lazy-loading, bundle-size). It also bridges CJS
    to ESM where needed.
 6. **Publish libraries dual-format deliberately.** If others consume your
    package, provide both ESM and CJS builds via the `exports` map

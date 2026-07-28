@@ -29,5 +29,5 @@ Work through it in this order:
 4. If the evidence is insufficient, name the ONE piece of information (a log
    line, a value to print, a command to run) that would most narrow it down.
 
-Do not guess wildly or list ten possibilities. Reason from the actual error
-and stack trace to the most probable cause.
+Rules: do not guess wildly or list ten possibilities. Reason from the actual
+error and stack trace to the most probable cause.

@@ -1,6 +1,6 @@
 ---
 name: editing-and-revision
-description: Turn a rough draft into finished writing through structured revision passes: cut, clarify, then polish. Use when improving your own or others' writing after the first draft exists.
+description: "Turn a rough draft into finished writing through structured revision passes: cut, clarify, then polish. Use when improving your own or others' writing after the first draft exists."
 ---
 
 # Editing and revision

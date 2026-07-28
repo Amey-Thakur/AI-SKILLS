@@ -31,20 +31,24 @@ escalation line.
    incident, not fifty pages.
 2. **Suppress known noise before rating.** Match against a flapping list and
    maintenance windows; a blip that self-recovers within the window is logged,
-   not escalated. Record the suppression so a muted-but-real alert stays auditable.
+   not escalated. Record the suppression so a muted-but-real alert stays
+   auditable.
 3. **Severity from user impact, not the alert label.** The rater scores blast
    radius (users affected, revenue path, data integrity) into SEV1 to SEV3, not
-   the monitor's own priority field. A CPU spike on a spare replica is not a SEV1.
-4. **Match a runbook and propose the first step, not the fix.** The matcher links
-   the runbook for the signature and quotes the first diagnostic action ("check
-   deploy 4471, roll back if error rate holds"). It suggests; it does not execute.
+   the monitor's own priority field. A CPU spike on a spare replica is not a
+   SEV1.
+4. **Match a runbook and propose the first step, not the fix.** The matcher
+   links the runbook for the signature and quotes the first diagnostic action
+   ("check deploy 4471, roll back if error rate holds"). It suggests; it does
+   not execute.
 5. **Draw the human escalation line explicitly.** The gate pages a human for
-   SEV1 and SEV2, anything touching data integrity, and anything with no matching
-   runbook. Unknown means human; it never auto-closes an unmatched alert. Lower
-   severities open a ticket.
-6. **Hand off context a paged human can use cold.** `triage-<id>.md` carries what
-   fired, the dedup count, severity and why, the runbook link, the suggested first
-   step, and what was already ruled out. The 3 a.m. reader does not start at zero.
+   SEV1 and SEV2, anything touching data integrity, and anything with no
+   matching runbook. Unknown means human; it never auto-closes an unmatched
+   alert. Lower severities open a ticket.
+6. **Hand off context a paged human can use cold.** `triage-<id>.md` carries
+   what fired, the dedup count, severity and why, the runbook link, the
+   suggested first step, and what was already ruled out. The 3 a.m. reader does
+   not start at zero.
 7. **Loop the stream and close on recovery.** Update the incident as new alerts
    arrive; close it when the source clears for a set window. Escalation and any
    mitigation stay a human decision.

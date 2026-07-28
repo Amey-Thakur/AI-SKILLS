@@ -43,12 +43,13 @@ about, provenance you can verify, and a release process that is one
    commit messages (conventional-commits-style: see
    commit-messages) let tooling generate the changelog
    grouped by type (features, fixes, breaking): honest,
-   complete, and free (see changelog-writing for the human-
-   facing polish on top). Hand-written changelogs drift and
-   omit; generated-then-curated is the reliable middle.
-6. **Handle pre-releases and patches explicitly.** Pre-
-   release tags (`v2.0.0-rc.1`) for release candidates that
-   tooling and users treat as unstable; patch releases
+   complete, and free (see changelog-writing for the
+   human-facing polish on top). Hand-written changelogs
+   drift and omit; generated-then-curated is the reliable
+   middle.
+6. **Handle pre-releases and patches explicitly.**
+   Pre-release tags (`v2.0.0-rc.1`) for release candidates
+   that tooling and users treat as unstable; patch releases
    cherry-picked onto a release branch for supported older
    versions (see branch-strategy's release-branch model).
    Know which versions you support and can patch before you

@@ -28,7 +28,7 @@ Knowing both is what makes the analysis useful.
    matters depends on whether an adversary chooses your input.
 6. **Check the real input size before optimising.** Quadratic on twenty
    items is instant, and replacing it with a complex linear algorithm is
-   a net loss (see premature-optimization).
+   a net loss (see performance-optimization).
 7. **Measure to confirm.** Constants, cache behaviour, and allocation
    dominate at small sizes, so analysis predicts the shape and
    measurement gives the answer (see profiling-cpu).

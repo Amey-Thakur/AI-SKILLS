@@ -19,12 +19,12 @@ to make coordination faster than the incident.
    If two people think they are in charge, no one is.
 2. **Fill the three other roles explicitly.** An operations lead who drives the
    technical fix, a scribe who owns the log, and a communications lead who
-   updates status page and stakeholders. Say the names out loud in the channel so
-   the room knows who does what.
+   updates status page and stakeholders. Say the names out loud in the channel
+   so the room knows who does what.
 3. **Set a fixed sync cadence and hold it.** Every 15 or 30 minutes by severity,
    the commander calls a checkpoint: current impact, what changed, next action,
-   next check-in time. Between syncs people work, they do not narrate. The cadence
-   is what stops the endless scroll of unstructured chatter.
+   next check-in time. Between syncs people work, they do not narrate. The
+   cadence is what stops the endless scroll of unstructured chatter.
 4. **Keep a running decision log with timestamps.** The scribe records every
    decision, who made it, why, and what was ruled out. "14:32 rolled back deploy
    4471, error rate flat, ruling out config" is a log entry. This is your
@@ -34,10 +34,11 @@ to make coordination faster than the incident.
    bleeding: roll back, fail over, shed load, flip the flag. The fix that
    explains why can wait until users are served again. A war room that debugs
    before it mitigates is optimizing the wrong clock.
-6. **Declare stand-down against written criteria.** Impact resolved, metrics back
-   in normal range for a defined window, no active mitigations holding it up by
-   hand. The commander calls it, names the postmortem owner and date, and closes
-   the channel. An incident that never formally ends never gets learned from.
+6. **Declare stand-down against written criteria.** Impact resolved, metrics
+   back in normal range for a defined window, no active mitigations holding it
+   up by hand. The commander calls it, names the postmortem owner and date, and
+   closes the channel. An incident that never formally ends never gets learned
+   from.
 
 ## Signals
 
@@ -49,5 +50,5 @@ to make coordination faster than the incident.
 
 This covers running the live response, not the retrospective that follows: route
 the after-action to a postmortem skill, which owns blameless analysis and
-follow-up tracking. Severity thresholds and paging policy are company convention;
-match your on-call runbook rather than inventing a scale mid-crisis.
+follow-up tracking. Severity thresholds and paging policy are company
+convention; match your on-call runbook rather than inventing a scale mid-crisis.

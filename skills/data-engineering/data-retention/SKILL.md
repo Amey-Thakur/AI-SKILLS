@@ -37,8 +37,8 @@ the second.
    lineage/catalog everywhere the subject's data lives, delete or
    anonymize, and handle the backup problem: either restore-time
    re-deletion (documented, tested) or crypto-shredding (per-subject
-   keys destroyed on request; see event-sourcing for the immutable-
-   log variant). Log the fulfillment as evidence.
+   keys destroyed on request; see event-sourcing for the
+   immutable-log variant). Log the fulfillment as evidence.
 5. **Implement legal hold as an override switch.** Holds pause
    deletion for named scopes (custodian, matter, dataset) above all
    retention rules; release resumes normal expiry. The deletion

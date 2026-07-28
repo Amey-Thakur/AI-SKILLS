@@ -56,10 +56,11 @@ interfaces must move focus deliberately and always show where it is.
 6. **Test focus by keyboard through real flows.** Tab
    through and perform tasks (open a modal, close it,
    delete an item, navigate): watch where focus goes at
-   each step (see keyboard-navigation, screen-reader-
-   testing). Focus bugs are invisible to visual and
-   automated testing; only following focus through the
-   actual flow reveals the strandings and traps.
+   each step (see keyboard-navigation,
+   screen-reader-testing). Focus bugs are invisible to
+   visual and automated testing; only following focus
+   through the actual flow reveals the strandings and
+   traps.
 
 ## Boundaries
 
@@ -69,9 +70,10 @@ interfaces must move focus deliberately and always show where it is.
   changes without page loads, the more explicit focus
   management it needs.
 - It pairs with the other keyboard and screen-reader
-  practices (see keyboard-navigation, screen-reader-
-  testing, aria-usage); focus management without visible
-  indicators or with a broken tab order is incomplete.
+  practices (see keyboard-navigation,
+  screen-reader-testing, aria-usage); focus management
+  without visible indicators or with a broken tab order
+  is incomplete.
 - Over-managing focus (moving it on every minor change)
   is as disorienting as never managing it; move focus
   for meaningful transitions and user actions, leave it

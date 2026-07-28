@@ -23,8 +23,8 @@ badly, it just hands the outcome to whoever argues hardest.
    the anchor, so the standard is the rubric and not the room's mood.
 3. **Compare like work across managers.** Line up people at the same level and
    ask whether a "meets" from one team would be a "meets" on another. This
-   cross-manager comparison is the whole point: it catches the lenient grader and
-   the harsh one and pulls both toward a common bar.
+   cross-manager comparison is the whole point: it catches the lenient grader
+   and the harsh one and pulls both toward a common bar.
 4. **Run bias interrupts explicitly.** Name the biases in the moment: recency
    (weighting the last month over the year), halo and horns (one trait coloring
    everything), and similar-to-me. Watch the language for patterns, such as warm
@@ -32,8 +32,8 @@ badly, it just hands the outcome to whoever argues hardest.
    thing. Assign someone to call these out.
 5. **Give the facilitator authority.** A neutral facilitator, often HR or a
    skip-level, keeps one loud manager from setting every rating, holds the group
-   to evidence, and makes sure quiet managers' reports get equal airtime. Without
-   that role, calibration rewards confidence over accuracy.
+   to evidence, and makes sure quiet managers' reports get equal airtime.
+   Without that role, calibration rewards confidence over accuracy.
 6. **Record the rationale and close the loop.** For every rating that moved,
    write down why, so the decision is auditable and the manager can deliver it
    with a straight story. Feed systematic gaps, such as a whole team rated low,

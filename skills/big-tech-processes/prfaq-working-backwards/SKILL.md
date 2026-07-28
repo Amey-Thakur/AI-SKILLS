@@ -8,8 +8,8 @@ description: Write an Amazon PR-FAQ that starts from a launch-day press release 
 Amazon's PR-FAQ makes you write the launch announcement first, before any code,
 so the idea has to survive contact with a customer who never read your roadmap.
 Working backwards from that press release exposes the products that sparkle in a
-planning deck but have no sentence a real person would care about. If the release
-is boring to write, the product will be boring to use.
+planning deck but have no sentence a real person would care about. If the
+release is boring to write, the product will be boring to use.
 
 ## Method
 
@@ -22,19 +22,19 @@ is boring to write, the product will be boring to use.
    cannot compress the value into that subhead, the idea is unfocused, and no
    amount of body copy will rescue it.
 3. **Write the customer FAQ in the customer's voice.** What it costs, what it
-   replaces, what it will not do, how their data is handled. Answer plainly. This
-   is where "delightful experience" phrasing dies and concrete commitments take
-   its place.
-4. **Write the internal FAQ so it hurts.** The questions leadership will actually
-   ask: unit economics, the riskiest assumption, why now, why us, what breaks at
-   scale, what you will cut. A PR-FAQ that ducks its hardest question is
-   marketing, and reviewers smell it instantly.
+   replaces, what it will not do, how their data is handled. Answer plainly.
+   This is where "delightful experience" phrasing dies and concrete commitments
+   take its place.
+4. **Write the internal FAQ so it hurts.** The questions leadership will
+   actually ask: unit economics, the riskiest assumption, why now, why us, what
+   breaks at scale, what you will cut. A PR-FAQ that ducks its hardest question
+   is marketing, and reviewers smell it instantly.
 5. **Size both the prize and the bill.** Rough market size, expected adoption,
    and the build cost. Working backwards includes admitting when the reachable
    audience cannot justify the engineering. Killing an idea on paper is the
    cheapest kill you will ever get.
-6. **Iterate the document, never a slide deck.** Circulate the PR-FAQ, absorb the
-   review's objections, and rewrite until the press release is one you would
+6. **Iterate the document, never a slide deck.** Circulate the PR-FAQ, absorb
+   the review's objections, and rewrite until the press release is one you would
    truly publish. The doc is the deliverable; the meeting exists only to sharpen
    it.
 

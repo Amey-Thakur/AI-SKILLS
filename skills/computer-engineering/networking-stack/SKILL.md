@@ -30,7 +30,7 @@ established, or a response that arrived slowly.
    timeouts, which is where mysterious behaviour usually originates.
 6. **Set timeouts at every layer.** Connect, read, and total, since a
    missing timeout at one layer makes the others irrelevant (see
-   retry-strategies).
+   timeouts-and-retries).
 7. **Test on realistic networks.** Mobile and international links behave
    nothing like a local one, and the differences are qualitative rather
    than a slower version of the same thing.

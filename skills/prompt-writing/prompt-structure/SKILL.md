@@ -17,7 +17,7 @@ which is most of prompt quality.
    job interprets the context without a frame.
 2. **Separate instructions from material explicitly.** Delimiters or
    tags around provided content, with a statement that it is data rather
-   than instruction, which also blunts injection (see prompt-injection).
+   than instruction, which also blunts injection (see llm-guardrails).
 3. **Put the output specification near the end.** The requirement
    closest to generation has the strongest effect on format (see
    output-format-control).

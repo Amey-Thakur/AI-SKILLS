@@ -21,7 +21,7 @@ guarantee. Both facts must be designed for rather than discovered.
    payment event twice is the failure this prevents (see idempotency).
 4. **Do not assume order.** Events arrive out of sequence, so use
    timestamps or version numbers in the payload rather than arrival
-   order (see message-ordering).
+   order (see delivery-guarantees).
 5. **Handle unknown event types gracefully.** Providers add types, and
    an endpoint that errors on unrecognised events generates retries and
    alerts for no reason.

@@ -9899,7 +9899,7 @@
       "kind": "prompt",
       "name": "data-to-insights",
       "category": "prompts",
-      "description": "Read a table or dataset and report what it actually shows - findings, not decoration, with honest caveats.",
+      "description": "Read a table or dataset and report what it actually shows: findings, not decoration, with honest caveats.",
       "variables": [
         "{data}: the table, CSV excerpt, or numbers",
         "{question}: what decision or question the analysis serves"
@@ -10310,7 +10310,7 @@
       "description": "Explain any concept in genuinely simple terms with one honest analogy, without becoming wrong.",
       "variables": [
         "{concept}: the thing to explain",
-        "{level}: optional - actual audience if not literally five (e.g. a smart 12-year-old, a non-technical manager)"
+        "{level}: optional; the actual audience if not literally five (e.g. a smart 12-year-old, a non-technical manager)"
       ],
       "settings": "Temperature 0.5-0.7.",
       "path": "prompts/explain-like-im-five.md",
@@ -10543,7 +10543,7 @@
       "category": "prompts",
       "description": "Write a calm, honest status update during an ongoing incident, sized for its audience.",
       "variables": [
-        "{situation}: what is known right now - impact, timeline, actions so far",
+        "{situation}: what is known right now, including impact, timeline, and actions so far",
         "{audience}: who reads it (customers, internal stakeholders, engineering)"
       ],
       "settings": "Temperature 0-0.3. Re-run for each audience rather than one update for all.",
@@ -10739,7 +10739,7 @@
       "kind": "prompt",
       "name": "meeting-minutes",
       "category": "prompts",
-      "description": "Turn a transcript or rough notes into minutes people actually consult - decisions, actions, and open questions first.",
+      "description": "Turn a transcript or rough notes into minutes people actually consult: decisions, actions, and open questions first.",
       "variables": [
         "{notes}: the transcript or raw notes",
         "{meeting}: what the meeting was and who attended, if not in the notes"
@@ -11798,7 +11798,7 @@
       "category": "prompts",
       "description": "Turn work notes, commits, or a task list into a crisp standup update that surfaces blockers first.",
       "variables": [
-        "{notes}: raw material - commit messages, ticket updates, scratch notes"
+        "{notes}: raw material such as commit messages, ticket updates, and scratch notes"
       ],
       "settings": "Temperature 0-0.3.",
       "path": "prompts/standup-summary.md",

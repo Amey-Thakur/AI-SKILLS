@@ -27,8 +27,9 @@ Craft:
 - Match the brand voice consistently.
 
 Give me the description in the channel's format (paragraph + bullets as
-appropriate), and if useful, a short punchy version and a longer one. Rules:
-honest, never overclaim or invent features/specs I did not give (mark unknowns
-as placeholders). No hype cliches. Include the key specs a buyer needs to
-decide. If SEO matters for the channel, work in the natural search terms a
-buyer would use, without keyword-stuffing.
+appropriate), and if useful, a short punchy version and a longer one.
+
+Rules: honest, never overclaim or invent features/specs I did not give (mark
+unknowns as placeholders). No hype cliches. Include the key specs a buyer
+needs to decide. If SEO matters for the channel, work in the natural search
+terms a buyer would use, without keyword-stuffing.

@@ -18,8 +18,9 @@ modes GraphQL uniquely enables.
    domain connects (a user has posts, a post has comments),
    letting clients traverse naturally: this is GraphQL's
    strength over REST's fixed endpoints. Design from the
-   client's questions and the domain (see domain-driven-
-   design), not by mechanically exposing tables.
+   client's questions and the domain (see
+   domain-driven-design), not by mechanically exposing
+   tables.
 2. **Solve N+1 with dataloaders from day one.** GraphQL's
    nested resolvers naturally produce N+1 queries (resolving
    100 posts, then 100 separate author queries: see
@@ -54,9 +55,9 @@ modes GraphQL uniquely enables.
    GraphQL evolves without versions: add fields and types
    freely (clients request only what they use), deprecate
    old fields with `@deprecated` and a reason, track usage,
-   and remove once unused (see api-deprecation, api-change-
-   management). This is a real advantage, but only if you
-   monitor field usage before removing.
+   and remove once unused (see api-deprecation,
+   api-change-management). This is a real advantage, but
+   only if you monitor field usage before removing.
 
 ## Boundaries
 

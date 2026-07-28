@@ -1,6 +1,6 @@
 ---
 name: assertion-density
-description: Place assertions where invariants are established or must hold: constructors, public boundaries, and loop bodies. Use when hardening code whose silent violations would otherwise surface far from their cause.
+description: "Place assertions where invariants are established or must hold: constructors, public boundaries, and loop bodies. Use when hardening code whose silent violations would otherwise surface far from their cause."
 ---
 
 # Assertion density
@@ -21,10 +21,12 @@ debugging sessions into one clear failure. The skill is knowing those places.
    range ordered. An object that cannot exist badly never spreads a bad state.
 3. **Guard the loop invariant inside the loop.** Assert the property the loop
    maintains each pass: an index stays in bounds, a running sum stays
-   non-negative, a heap stays ordered. The assert catches the pass that breaks it.
+   non-negative, a heap stays ordered. The assert catches the pass that
+   breaks it.
 4. **Check postconditions before returning.** Ahead of `return result`, assert
-   what you promised: the output is sorted, its length matches the input, no null
-   slipped through. This defends the contract callers are about to rely on.
+   what you promised: the output is sorted, its length matches the input, no
+   null slipped through. This defends the contract callers are about to rely
+   on.
 5. **Assert the impossible branch.** In an else or default you believe
    unreachable, write `assert False, "unreachable: " + state` rather than a
    silent pass. If reality disagrees, you learn at once and precisely.
@@ -35,7 +37,8 @@ debugging sessions into one clear failure. The skill is knowing those places.
 ## Litmus tests
 
 - When this assert fires, does the message point at the cause or a symptom?
-- Would stripping assertions in a release build change any behavior? It must not.
+- Would stripping assertions in a release build change any behavior? It must
+  not.
 - Can you name the invariant each assert defends in a sentence? If not, cut it.
 
 ## Boundaries

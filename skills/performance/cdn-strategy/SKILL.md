@@ -13,17 +13,19 @@ making assets and safe responses cacheable, then keeping them fresh.
 ## Method
 
 1. **Read your cache hit ratio before touching config.** Pull the edge hit
-   ratio from your provider (Fastly `Fastly-Debug`, Cloudflare `cf-cache-status`,
-   CloudFront `X-Cache`). Below 80% on static assets means headers, not
-   capacity, are the problem. Fix the misses you can name first.
+   ratio from your provider (Fastly `Fastly-Debug`, Cloudflare
+   `cf-cache-status`, CloudFront `X-Cache`). Below 80% on static assets
+   means headers, not capacity, are the problem. Fix the misses you can
+   name first.
 2. **Separate immutable from mutable at the URL.** Fingerprint static assets
    (`app.4f1a.js`) and serve them `Cache-Control: public, max-age=31536000,
    immutable`. HTML and API responses get short or zero TTLs. One caching
    policy per content class, keyed off the path, not per route guesswork.
 3. **Split browser TTL from edge TTL.** Use `s-maxage` for the CDN and
    `max-age` for the browser so you can hold a response at the edge for an
-   hour while telling clients to revalidate in a minute. `stale-while-revalidate`
-   lets the edge serve stale bytes while it refetches in the background.
+   hour while telling clients to revalidate in a minute.
+   `stale-while-revalidate` lets the edge serve stale bytes while it
+   refetches in the background.
 4. **Invalidate by tag, not by guessing.** Attach surrogate keys (Fastly
    `Surrogate-Key`, Cloudflare Cache-Tag) to responses so publishing an
    article purges `article:912` everywhere in one call. Path purges miss

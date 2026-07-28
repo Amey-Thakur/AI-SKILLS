@@ -1,6 +1,6 @@
 ---
 name: multi-agent-workflow
-description: Design a multi-agent workflow: which agents, how they divide the work, how they hand off, and how to verify.
+description: "Design a multi-agent workflow: which agents, how they divide the work, how they hand off, and how to verify."
 variables:
   - "{task}: the task or system you want multiple agents to accomplish"
   - "{constraints}: tools available, cost/latency budget, quality bar, if any"
@@ -24,7 +24,8 @@ Work through the design:
    delegates and synthesizes), or a loop (until a condition). Match it to the
    task's dependency structure.
 4. Define the handoffs: exactly what each agent passes on (structured, not
-   loose prose), so the next agent has what it needs (see agent-handoff).
+   loose prose), so the next agent has what it needs (see
+   agent-handoff-protocol).
 5. Add verification: an adversarial or independent checking step for anything
    that must be correct, because agents are confidently wrong (a reviewer agent,
    a majority vote, a validation gate).

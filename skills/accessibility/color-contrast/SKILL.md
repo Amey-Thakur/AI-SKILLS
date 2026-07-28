@@ -30,12 +30,12 @@ can verify.
    second channel.
 3. **Meet non-text contrast too.** UI components and
    meaningful graphics (form field borders, button edges,
-   icons, focus indicators, chart elements) need 3:1
-   against adjacent colors (WCAG 1.4.11): a form input whose
-   border barely differs from the background is invisible to
+   icons, focus indicators, chart elements) need 3:1 against
+   adjacent colors (WCAG 1.4.11): a form input whose border
+   barely differs from the background is invisible to
    low-vision users. Focus indicators especially must be
-   clearly visible (see keyboard-navigation, focus-
-   management).
+   clearly visible (see keyboard-navigation,
+   focus-management).
 4. **Verify with tools, do not eyeball.** Contrast checkers
    (browser devtools, WebAIM contrast checker, axe: see
    screen-reader-testing's automated layer) compute the
@@ -70,6 +70,6 @@ can verify.
   (respect `forced-colors`: see dark-mode's boundary).
 - Contrast is one WCAG success criterion among many; a
   page with perfect contrast can still be inaccessible in
-  other ways (keyboard, screen reader: see keyboard-
-  navigation, screen-reader-testing). It is necessary,
-  not sufficient.
+  other ways (keyboard, screen reader: see
+  keyboard-navigation, screen-reader-testing). It is
+  necessary, not sufficient.

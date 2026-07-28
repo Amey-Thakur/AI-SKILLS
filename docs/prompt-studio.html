@@ -40,7 +40,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=7">
 <script>
   try {
     var stored = localStorage.getItem("ai-skills-theme");
@@ -134,6 +134,7 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="./">
@@ -158,10 +159,10 @@
   </div>
 </header>
 
-<main class="wrap">
+<main id="main" tabindex="-1" class="wrap">
   <div class="head">
     <p class="kicker">Prompt Studio</p>
-    <h1>Say it your way.<br>Get a prompt that <em>works</em>.</h1>
+    <h1>Say it your way. <br>Get a prompt that <em>works</em>.</h1>
     <p class="lede">
       Type the job the way it comes out: typos, half-thoughts, frustration. A
       five-stage pipeline cleans it, works out what you actually need, and
@@ -261,8 +262,8 @@
     imo: "in my opinion", btw: "by the way", rn: "right now", bc: "because",
     cuz: "because", coz: "because", dont: "do not", doesnt: "does not",
     cant: "cannot", wont: "will not", isnt: "is not", wasnt: "was not",
-    im: "I am", ive: "I have", id: "I would", theres: "there is",
-    whats: "what is", thats: "that is", its: "it is",
+    im: "I am", ive: "I have", theres: "there is",
+    whats: "what is", thats: "that is",
     recieve: "receive", seperate: "separate", definately: "definitely",
     occured: "occurred", untill: "until", wich: "which", teh: "the",
     adress: "address", accross: "across", basicly: "basically",
@@ -288,7 +289,11 @@
     postgress: "postgres", mysq: "mysql", framwork: "framework",
     deployement: "deployment", respository: "repository", repositry: "repository"
   };
-  var VENT = /\b(i hate (this|it|everything)|so (annoying|frustrating)|driving me (crazy|nuts|insane)|wtf|ffs|omg|ugh+|argh+|aargh+|smh|kill(ing)? me|i give up|fed up|sick of (this|it)|this (stupid|dumb|damn|bloody) )\b/gi;
+  /* Expanded only when written with an apostrophe, because the apostrophe-free
+     spelling is a different, common word: "its" (possessive) and "id"
+     (identifier, which this tool's users type constantly). */
+  var APOSTROPHE_ONLY = { its: "it is", id: "I would" };
+  var VENT =/\b(i hate (this|it|everything)|so (annoying|frustrating)|driving me (crazy|nuts|insane)|wtf|ffs|omg|ugh+|argh+|aargh+|smh|kill(ing)? me|i give up|fed up|sick of (this|it)|this (stupid|dumb|damn|bloody) )\b/gi;
   var SWEAR = /\b(damn|dammit|hell|freaking|fricking|frigging|fucking|fucked|shit|shitty|crap|crappy|bullshit)\b/gi;
 
   function cleanStage(text) {
@@ -302,6 +307,14 @@
        strip below can catch it instead of letting it leak into the objective. */
     out = out.replace(/[a-zA-Z0-9']+/g, function (word) {
       var key = word.toLowerCase().replace(/'/g, "");
+      /* These only expand when the writer actually typed the apostrophe:
+         bare "its" is the possessive and bare "id" is an identifier, both
+         common in this tool's input, and expanding them mangles the text. */
+      if (word.indexOf("'") !== -1 && APOSTROPHE_ONLY.hasOwnProperty(key)) {
+        fixes++;
+        var exp = APOSTROPHE_ONLY[key];
+        return word[0] === word[0].toUpperCase() ? exp.charAt(0).toUpperCase() + exp.slice(1) : exp;
+      }
       if (FIXES.hasOwnProperty(key)) {
         fixes++;
         var fixed = FIXES[key];
@@ -375,7 +388,7 @@
     structured: "<b>Run it with:</b> temperature 0. Validate the output against your schema on arrival.",
     code: "<b>Run it with:</b> temperature 0 to 0.2. Give the agent the real code and let it run what it writes."
   };
-  var TEMP_NOTE = "<span class=\"temp-note\">Temperature is the model's freedom to improvise: 0 gives the same careful answer every time, 1 takes creative leaps. Look for a “temperature” or “creativity” slider in your AI tool; no slider, no problem, the prompt works at the default.</span>";
+  var TEMP_NOTE = "<span class=\"temp-note\">Temperature is the model's freedom to improvise: 0 gives the same careful answer every time, 1 takes creative leaps. Look for a \"temperature\" or \"creativity\" slider in your AI tool; no slider, no problem, the prompt works at the default.</span>";
   /* Stage 4: Compose. A strict, sectioned prompt an agent can follow. */
   function composeStage(text, facts, type) {
     var L = [];

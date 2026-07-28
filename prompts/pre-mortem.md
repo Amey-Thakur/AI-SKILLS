@@ -1,6 +1,6 @@
 ---
 name: pre-mortem
-description: Run a pre-mortem: imagine the project already failed, work backward to the causes, and prevent them now.
+description: "Run a pre-mortem: imagine the project already failed, work backward to the causes, and prevent them now."
 variables:
   - "{project}: the project, launch, or decision you are about to commit to"
   - "{context}: the plan, the timeline, the team, and the stakes"

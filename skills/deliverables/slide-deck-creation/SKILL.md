@@ -13,7 +13,7 @@ audience reading instead of listening.
 
 1. **Write the argument first, in sentences.** The narrative decides the
    slides; slides made first produce a sequence of topics rather than an
-   argument (see storytelling-with-data).
+   argument (see data-storytelling).
 2. **One idea per slide.** If a slide needs a paragraph to explain, it
    is two slides or a spoken point with a simple visual.
 3. **Make the headline the point.** Revenue grew forty percent after

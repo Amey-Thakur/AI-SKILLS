@@ -25,10 +25,10 @@ into a short reconfigure-and-continue instead of a lost run.
    percent drags every all-reduce to its pace. Log per-rank step time and flag
    any rank more than 20 percent slower than the median. Cordon that node and
    let elastic training re-form without it rather than paying the tax each step.
-4. **Keep spares warm for a fast reconfigure.** Hold a few idle nodes in the same
-   rendezvous so a failed rank is replaced in seconds and the world size stays
-   constant. Without spares, dropping ranks shrinks the global batch and quietly
-   shifts the learning-rate schedule.
+4. **Keep spares warm for a fast reconfigure.** Hold a few idle nodes in the
+   same rendezvous so a failed rank is replaced in seconds and the world size
+   stays constant. Without spares, dropping ranks shrinks the global batch and
+   quietly shifts the learning-rate schedule.
 5. **Resume from a verified checkpoint, not the crash point.** On restart, load
    the latest checkpoint that passed its resume check (see
    checkpointing-large-training), restore dataloader offset and RNG, and reseed
@@ -41,9 +41,12 @@ into a short reconfigure-and-continue instead of a lost run.
 
 ## Signals
 
-- Does killing one node mid-run trigger an automatic resume within minutes, no one paged?
-- Is per-rank step time logged, so you can name the straggler rather than just feel it?
-- Does the run cap restarts and denylist hardware, so a flapping node cannot loop forever?
+- Does killing one node mid-run trigger an automatic resume within minutes, no
+  one paged?
+- Is per-rank step time logged, so you can name the straggler rather than just
+  feel it?
+- Does the run cap restarts and denylist hardware, so a flapping node cannot
+  loop forever?
 - After a reconfigure, are the global batch size and LR schedule unchanged?
 
 ## Boundaries

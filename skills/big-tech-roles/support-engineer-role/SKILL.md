@@ -46,8 +46,8 @@ the loop back to engineering and product.
 ## Checks
 
 - Is the queue ordered by impact and SLA, or by whatever arrived last?
-- Could the engineer you just escalated to start work without asking you a single
-  clarifying question?
+- Could the engineer you just escalated to start work without asking you a
+  single clarifying question?
 - Does the customer know the current status right now, without having to chase
   you?
 - Is the most-repeated ticket this month tracked as a product issue with its
@@ -56,9 +56,9 @@ the loop back to engineering and product.
 ## Boundaries
 
 The support engineer owns triage, reproduction, and the customer relationship,
-not the code fix or the roadmap: engineering owns the fix, product owns whether a
-recurring gap gets built, and SRE owns a live outage once it is declared an
-incident. Ticketing tools, SLA tiers, and escalation paths are company
-conventions to follow. When an issue is a security report or a data-exposure
-event, route it to security through the disclosure process rather than handling it
-as a normal ticket.
+not the code fix or the roadmap: engineering owns the fix, product owns
+whether a recurring gap gets built, and SRE owns a live outage once it is
+declared an incident. Ticketing tools, SLA tiers, and escalation paths are
+company conventions to follow. When an issue is a security report or a
+data-exposure event, route it to security through the disclosure process
+rather than handling it as a normal ticket.

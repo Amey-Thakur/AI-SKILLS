@@ -1,6 +1,6 @@
 ---
 name: browser-devtools
-description: Debug a slow or broken web page with the browser's built-in tools: the network waterfall, the performance panel, and source maps back to original code. Use when a page loads slowly, janks while running, or throws in minified bundle code you cannot read.
+description: "Debug a slow or broken web page with the browser's built-in tools: the network waterfall, the performance panel, and source maps back to original code. Use when a page loads slowly, janks while running, or throws in minified bundle code you cannot read."
 ---
 
 # Browser DevTools

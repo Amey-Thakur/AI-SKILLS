@@ -1,6 +1,6 @@
 ---
 name: narrative-craft
-description: Tell a story that holds attention and makes a point, through character, tension, and concrete scenes. Use when using storytelling in writing: an essay, a talk, a case study, a brand story, a personal account.
+description: "Tell a story that holds attention and makes a point, through character, tension, and concrete scenes. Use when using storytelling in writing: an essay, a talk, a case study, a brand story, a personal account."
 ---
 
 # Narrative craft

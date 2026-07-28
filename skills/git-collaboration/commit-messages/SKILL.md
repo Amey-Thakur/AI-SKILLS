@@ -17,7 +17,7 @@ years from now.
 2. **Subject line: imperative, ≤ 50 characters, no trailing period.**
    "Fix stale cache on user switch", not "Fixed some caching issues". The
    test: the subject completes the sentence *"If applied, this commit will
-   …"*.
+   ..."*.
 3. **Body: the why, not the what.** The diff already shows what changed.
    The body carries what the diff cannot: why this approach, what else was
    tried, what breaks without it, which trade-off was accepted. Wrap at 72

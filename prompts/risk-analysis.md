@@ -30,5 +30,5 @@ Method:
 5. End with **Kill criteria**: the observable conditions under which this
    plan should be stopped or changed, decided now while heads are cool.
 
-Ground every risk in the plan and context given; a risk you cannot tie to
-a specific element of the plan is filler - leave it out.
+Rules: ground every risk in the plan and context given; a risk you cannot tie
+to a specific element of the plan is filler, so leave it out.

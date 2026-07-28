@@ -1,6 +1,6 @@
 ---
 name: structure-and-flow
-description: Organize writing so the reader is carried from point to point without friction: logical order, transitions, and signposting. Use when a piece feels disorganized, jumpy, or hard to follow despite clear sentences.
+description: "Organize writing so the reader is carried from point to point without friction: logical order, transitions, and signposting. Use when a piece feels disorganized, jumpy, or hard to follow despite clear sentences."
 ---
 
 # Structure and flow

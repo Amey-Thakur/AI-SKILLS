@@ -19,7 +19,7 @@ a small edit silently changes behaviour for every user.
    result (see agent-ensemble-voting).
 3. **Include adversarial and boundary cases.** Empty input, very long
    input, contradictory instructions, and injection attempts (see
-   prompt-injection).
+   llm-guardrails).
 4. **Test on every model you deploy.** Behaviour differs between
    providers and versions enough that one model's results do not
    transfer.
@@ -38,4 +38,4 @@ Testing shows behaviour on the tested cases; the long tail remains
 unknown. Judge-based scoring inherits the judge's biases and needs
 periodic human calibration. Non-determinism means thresholds rather than
 guarantees, and flaky tests need statistical handling (see
-flaky-test-management).
+test-flakiness-budget).

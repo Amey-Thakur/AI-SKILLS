@@ -21,7 +21,7 @@ safely changes reach users.
    optimising one at the other's expense.
 4. **Measure time to restore.** How quickly a bad change is recovered
    matters more than preventing every bad change (see
-   incident-response).
+   incident-severity-levels).
 5. **Add developer-reported friction.** Surveys catch what telemetry
    cannot, such as unclear ownership and painful local setup.
 6. **Segment by team and service.** Aggregates hide the one team blocked

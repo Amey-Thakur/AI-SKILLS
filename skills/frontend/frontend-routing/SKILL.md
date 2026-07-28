@@ -6,8 +6,8 @@ description: Structure client routes so the URL is the source of truth, data loa
 # Frontend routing
 
 The URL is shared, addressable, restorable state. Every piece of navigational
-state kept only in memory is a thing that breaks refresh, back, and paste-a-
-link. Route design is deciding what the URL owns.
+state kept only in memory is a thing that breaks refresh, back, and
+paste-a-link. Route design is deciding what the URL owns.
 
 ## Method
 
@@ -40,8 +40,8 @@ link. Route design is deciding what the URL owns.
 
 ## Boundaries
 
-- SSR, streaming, and server-component routing add hydration and data-
-  serialization concerns beyond this client-focused method.
+- SSR, streaming, and server-component routing add hydration and
+  data-serialization concerns beyond this client-focused method.
 - Auth guards and redirects need their own flow; this covers route structure
   and data, not session enforcement.
 - Deep-link and native-app routing schemes differ from web history and are

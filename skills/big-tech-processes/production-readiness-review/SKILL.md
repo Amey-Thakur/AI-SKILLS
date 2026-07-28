@@ -5,11 +5,12 @@ description: Run a production readiness review that checks SLOs, runbooks, capac
 
 # Production readiness review
 
-The PRR is Google SRE's gate for deciding whether a service is fit to be operated
-by people who did not build it. It exists because the failure modes that page an
-engineer at 3 a.m. are rarely visible from the code: they live in missing alerts,
-untested recovery, and a dependency the team forgot it had. Skip the PRR and the
-on-call team inherits every one of those surprises, one incident at a time.
+The PRR is Google SRE's gate for deciding whether a service is fit to be
+operated by people who did not build it. It exists because the failure modes
+that page an engineer at 3 a.m. are rarely visible from the code: they live in
+missing alerts, untested recovery, and a dependency the team forgot it had. Skip
+the PRR and the on-call team inherits every one of those surprises, one incident
+at a time.
 
 ## Method
 
@@ -20,17 +21,18 @@ on-call team inherits every one of those surprises, one incident at a time.
    worst possible hour.
 2. **Demand runbooks for each alert, not a wiki of prose.** Every page a
    responder can receive needs a runbook with symptoms, diagnosis steps, and the
-   exact remediation. A runbook that says "investigate the issue" is a blank page
-   with a title; test it by having someone off the team follow it cold.
+   exact remediation. A runbook that says "investigate the issue" is a blank
+   page with a title; test it by having someone off the team follow it cold.
 3. **Audit every dependency and its failure behavior.** List the databases,
    queues, and upstream services this one calls, each one's own SLO, and what
    happens when it is slow or down. Confirm timeouts, retries with backoff, and
    circuit breakers exist, so a dependency's bad day does not become a full
    outage here.
-4. **Prove capacity against real load with headroom.** Show load-test numbers, the
-   current utilization, the autoscaling limits, and the quota ceilings. State the
-   traffic multiple the service survives before it falls over, and confirm the
-   plan for the next growth step rather than assuming linear scaling holds.
+4. **Prove capacity against real load with headroom.** Show load-test numbers,
+   the current utilization, the autoscaling limits, and the quota ceilings.
+   State the traffic multiple the service survives before it falls over, and
+   confirm the plan for the next growth step rather than assuming linear
+   scaling holds.
 5. **Verify observability covers the SLOs.** Dashboards for the golden signals,
    alerts wired to the error budget, structured logs, and distributed tracing
    across the request path. If an SLO can be violated without a page firing, the
@@ -52,5 +54,5 @@ on-call team inherits every one of those surprises, one incident at a time.
 
 A PRR judges whether a service can be operated, not whether one release should
 ship: the go decision for a specific launch belongs to the launch-review skill.
-Scale the depth to the risk, follow your SRE org's PRR template where one exists,
-and route the incidents it fails to prevent into a postmortem.
+Scale the depth to the risk, follow your SRE org's PRR template where one
+exists, and route the incidents it fails to prevent into a postmortem.

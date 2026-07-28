@@ -16,8 +16,9 @@ one actually guarantees before you split a card.
 1. **Use MIG for hard isolation between tenants.** Multi-Instance GPU partitions
    an A100 or H100 into up to seven instances, each with dedicated SMs, an L2
    slice, and its own memory (profiles like 1g.10gb or 3g.40gb). Faults and
-   memory pressure stay inside a slice, and a neighbor's spike does not move your
-   latency. Choose MIG when tenants do not trust each other or need a firm QoS.
+   memory pressure stay inside a slice, and a neighbor's spike does not move
+   your latency. Choose MIG when tenants do not trust each other or need a firm
+   QoS.
 2. **Size the MIG profile to the workload, not evenly.** Profiles are fixed
    geometries: a 1g.10gb slice gives one seventh of the compute and 10GB. A
    model needing 18GB OOMs on a 10GB slice and wastes 22GB on a 40GB one.
@@ -45,8 +46,10 @@ one actually guarantees before you split a card.
 
 ## Checks
 
-- Does each tenant's mechanism match its trust level: MIG across teams, MPS within one?
-- Do MIG profiles fit the models, with neither OOMs nor tens of gigabytes stranded?
+- Does each tenant's mechanism match its trust level: MIG across teams, MPS
+  within one?
+- Do MIG profiles fit the models, with neither OOMs nor tens of gigabytes
+  stranded?
 - On time slicing, have you accepted that one heavy pod can stall its neighbors?
 - Does the scheduler see and place individual MIG slices, not just whole cards?
 

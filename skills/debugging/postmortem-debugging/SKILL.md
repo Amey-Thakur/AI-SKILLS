@@ -1,6 +1,6 @@
 ---
 name: postmortem-debugging
-description: Reconstruct what happened from the artifacts a dead incident left behind: logs, metrics, dumps, and a timeline, when there is no live system left to poke. Use when the outage is over, the process is gone, and all you have is what was written down while it burned.
+description: "Reconstruct what happened from the artifacts a dead incident left behind: logs, metrics, dumps, and a timeline, when there is no live system left to poke. Use when the outage is over, the process is gone, and all you have is what was written down while it burned."
 ---
 
 # Postmortem debugging

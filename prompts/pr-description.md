@@ -1,6 +1,6 @@
 ---
 name: pr-description
-description: Write a pull request description that helps reviewers: what changed, why, and how to verify, from a diff.
+description: "Write a pull request description that helps reviewers: what changed, why, and how to verify, from a diff."
 variables:
   - "{diff}: the diff or a summary of the changes"
   - "{context}: the issue/ticket, the motivation, anything reviewers should know"

@@ -14,9 +14,11 @@ panel: reviewers run independently, then a moderator merges their verdicts.
 ## Team
 
 - **Correctness** (`code-review`): does the design meet the spec on every path.
-- **Security** (`security-engineer-role`): injection, authz gaps, secret handling.
+- **Security** (`security-engineer-role`): injection, authz gaps, secret
+  handling.
 - **Cost** (`cloud-architect-role`): compute, latency, and spend at real scale.
-- **Simplicity** (`principal-architect-role`): what can be deleted and still work.
+- **Simplicity** (`principal-architect-role`): what can be deleted and still
+  work.
 - **Moderator** (`staff-engineer`): merges the four verdicts into one decision.
 
 ## Method
@@ -27,10 +29,10 @@ panel: reviewers run independently, then a moderator merges their verdicts.
 2. **Run them in isolation.** No reviewer sees another's findings before forming
    its own. Cross-talk collapses four independent opinions into one loud one,
    which is the exact failure the panel exists to prevent.
-3. **Fix a common finding format.** Each reviewer returns findings as `severity,
-   location, concern, recommendation` plus a one-word lens verdict: approve,
-   revise, or reject. A uniform shape lets the moderator merge without re-reading
-   four styles.
+3. **Fix a common finding format.** Each reviewer returns findings as
+   `severity, location, concern, recommendation` plus a one-word lens verdict:
+   approve, revise, or reject. A uniform shape lets the moderator merge without
+   re-reading four styles.
 4. **Merge, dedupe, and rank by lens priority.** The moderator collapses
    duplicate findings and resolves conflicts by a stated order: a security
    reject outranks a cost revise. It never overrules a lens on that lens's own

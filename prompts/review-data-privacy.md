@@ -1,6 +1,6 @@
 ---
 name: review-data-privacy
-description: Review a feature for privacy: what is collected, where it goes, how long it stays, and whether deletion works.
+description: "Review a feature for privacy: what is collected, where it goes, how long it stays, and whether deletion works."
 variables:
   - "{feature}: what the feature does and what data it touches"
   - "{context}: users, jurisdictions, vendors, and existing policies"

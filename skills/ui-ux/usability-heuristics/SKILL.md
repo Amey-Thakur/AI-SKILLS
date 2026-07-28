@@ -15,8 +15,8 @@ problems cheaply, before a single user is tested.
 1. **Show system status.** The interface tells the user what is happening:
    loading states, progress, confirmation that an action worked, where
    they are. Silence after a click leaves the user guessing whether it
-   registered (see empty-and-error-states, loading-states). Feedback within
-   the moment the user expects it.
+   registered (see empty-and-error-states, empty-and-error-states).
+   Feedback within the moment the user expects it.
 2. **Match the real world.** Use the user's language and mental model, not
    the system's internals. Labels, icons, and flows should map to how the
    user thinks about the task, not how the database is structured (see

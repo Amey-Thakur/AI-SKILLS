@@ -21,10 +21,10 @@ before anything downstream reads the value.
    and reject the rest. Blocklists lose: attackers find the encoding, the
    Unicode homoglyph, or the case you did not enumerate.
 3. **Canonicalize before you check.** Normalize first, validate second, or
-   an attacker slips past with an alternate encoding. Decode percent-
-   encoding, resolve `..` and symlinks in paths, apply Unicode NFC,
-   lowercase the host. Validating the raw form then using the decoded form
-   is the classic path-traversal bug.
+   an attacker slips past with an alternate encoding. Decode
+   percent-encoding, resolve `..` and symlinks in paths, apply Unicode
+   NFC, lowercase the host. Validating the raw form then using the decoded
+   form is the classic path-traversal bug.
 4. **Cap length, count, and depth.** Set a maximum on every string, array,
    upload, and nested-JSON depth. A 2 GB "username" or a 10,000-level nested
    object is a denial of service you accepted by omission. Reject at the

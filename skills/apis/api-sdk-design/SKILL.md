@@ -24,11 +24,11 @@ apps built on it.
 2. **Handle auth and resilience so users do not.** Token
    management and refresh (see oauth-flows), retries with
    backoff, timeouts, connection pooling, and rate-limit
-   respect built in with sensible defaults (see api-client-
-   design: the SDK is the definitive client): the user
-   configures credentials and gets a robust integration.
-   Making users implement resilience themselves guarantees
-   most integrations do it badly.
+   respect built in with sensible defaults (see
+   api-client-design: the SDK is the definitive client):
+   the user configures credentials and gets a robust
+   integration. Making users implement resilience
+   themselves guarantees most integrations do it badly.
 3. **Make the common case one obvious line, the rare case
    possible.** The 90% use case (create a resource, list
    with pagination) is trivial and discoverable

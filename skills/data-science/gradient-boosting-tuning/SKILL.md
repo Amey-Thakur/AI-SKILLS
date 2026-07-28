@@ -1,6 +1,6 @@
 ---
 name: gradient-boosting-tuning
-description: Tune gradient-boosted trees (XGBoost, LightGBM, CatBoost) effectively: the parameters that matter and the order to tune them. Use when using gradient boosting on tabular data and wanting real gains from tuning.
+description: "Tune gradient-boosted trees (XGBoost, LightGBM, CatBoost) effectively: the parameters that matter and the order to tune them. Use when using gradient boosting on tabular data and wanting real gains from tuning."
 ---
 
 # Gradient boosting tuning

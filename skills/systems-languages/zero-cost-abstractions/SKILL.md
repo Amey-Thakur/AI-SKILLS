@@ -19,14 +19,14 @@ matters, and account for the costs that are real but hiding elsewhere.
    cpp-raii): these disappear under optimization essentially always.
    Write them without guilt; rewriting them as manual loops is
    pessimization by superstition.
-2. **Know the reliably-not-free list.** Dynamic dispatch
-   (`dyn Trait`/virtual: indirect call, blocked inlining), heap-
-   backed abstractions (`String`, `Vec`, `Box` in hot loops),
-   bounds checks the compiler cannot prove away, `shared_ptr`
-   refcount traffic, exceptions' happy-path table cost vs cold-path
+2. **Know the reliably-not-free list.** Dynamic dispatch (`dyn
+   Trait`/virtual: indirect call, blocked inlining), heap-backed
+   abstractions (`String`, `Vec`, `Box` in hot loops), bounds
+   checks the compiler cannot prove away, `shared_ptr` refcount
+   traffic, exceptions' happy-path table cost vs cold-path
    explosion, async state machines' size. Each has its place; the
-   cost just belongs in the decision (see rust-ownership,
-   cpp-raii pointer selection).
+   cost just belongs in the decision (see rust-ownership, cpp-raii
+   pointer selection).
 3. **Inspect the generated code at the hot spots.** Compiler
    Explorer or `cargo asm`/`objdump` on the specific function:
    check the loop kernel for vectorization (SIMD registers),
@@ -41,13 +41,13 @@ matters, and account for the costs that are real but hiding elsewhere.
    (see benchmark-design). If abstract and manual versions produce
    identical assembly, stop optimizing and keep the abstraction.
 5. **Mind the costs that ship elsewhere.** Monomorphization
-   multiplies code per instantiated type: binary size, instruction-
-   cache pressure, and compile time (see bundle-size instincts,
-   natively). Where a generic is instantiated many ways on a cold
-   path, `dyn`/type-erasure trades a nanosecond for smaller code:
-   the right trade off the hot path. Debug-build performance also
-   suffers where release is free; games and simulations care (see
-   game-performance).
+   multiplies code per instantiated type: binary size,
+   instruction-cache pressure, and compile time (see bundle-size
+   instincts, natively). Where a generic is instantiated many ways
+   on a cold path, `dyn`/type-erasure trades a nanosecond for
+   smaller code: the right trade off the hot path. Debug-build
+   performance also suffers where release is free; games and
+   simulations care (see game-performance).
 6. **Preserve optimizer-friendliness in the abstraction's design.**
    Expose slices/contiguous data rather than element-at-a-time
    virtual calls; keep closures small and capture-light; give the

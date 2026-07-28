@@ -10,7 +10,7 @@ refactoring or passes while the product is broken has failed at its one job.
 
 ## Method
 
-1. **Test behavior, not implementation.** Assert what the caller observes , 
+1. **Test behavior, not implementation.** Assert what the caller observes:
    return values, emitted events, stored rows, rendered text: never private
    internals or call sequences. The test that breaks on a faithful refactor
    is a bug in the test.

@@ -15,11 +15,12 @@ happened to what you expected and actually learn.
 
 1. **Record the decision and its context at the time.** What
    was decided, the situation, the information available, and
-   the alternatives considered (see architecture-decision-
-   records for the technical-architecture instance, tradeoff-
-   analysis for the comparison). Capture this *before* the
-   outcome is known, because afterward memory reconstructs it
-   to fit what happened.
+   the alternatives considered (see
+   architecture-decision-records for the
+   technical-architecture instance, tradeoff-analysis for the
+   comparison). Capture this *before* the outcome is known,
+   because afterward memory reconstructs it to fit what
+   happened.
 2. **Write down the reasoning and the key assumptions.** Why
    this option, what you believed had to be true for it to
    work, and what would make it wrong: the load-bearing
@@ -31,8 +32,8 @@ happened to what you expected and actually learn.
    or a range): "70% this cuts support tickets by a third
    within two months". The prediction plus confidence is
    what makes calibration possible: without it, every
-   outcome feels like what you expected (see estimation-
-   techniques' error bars).
+   outcome feels like what you expected (see
+   estimation-techniques' error bars).
 4. **Note your emotional and situational state.** Time
    pressure, who was pushing, how you felt: these shape
    decisions and reveal patterns (you decide worse under
@@ -62,9 +63,10 @@ happened to what you expected and actually learn.
 - Honesty is the whole mechanism; a journal written to look
   good in hindsight, or reviewed defensively, teaches
   nothing. The value requires admitting wrong predictions
-  and bad reasoning (see the ego separation in receiving-
-  feedback).
+  and bad reasoning (see the ego separation in
+  receiving-feedback).
 - Decision journaling improves individual and team
   calibration over time; it does not make any single hard
-  decision easy (that is tradeoff-analysis, hypothesis-
-  driven-work). It is a long-game learning tool.
+  decision easy (that is tradeoff-analysis,
+  hypothesis-driven-work). It is a long-game learning
+  tool.

@@ -23,6 +23,8 @@ Tune to the platform:
 - Suggest 3-5 relevant hashtags where the platform uses them (relevant, not a
   wall), and note if the post assumes an image/video.
 
-Give me 2-3 variations with different hooks so I can pick. Keep them concrete
-and specific, not generic hype. No fake urgency, no engagement-bait, no
-cliches. If a claim needs a fact I have not given, mark it as a placeholder.
+Give me 2-3 variations with different hooks so I can pick.
+
+Rules: keep them concrete and specific, not generic hype. No fake urgency, no
+engagement-bait, no cliches. If a claim needs a fact I have not given, mark it
+as a placeholder.

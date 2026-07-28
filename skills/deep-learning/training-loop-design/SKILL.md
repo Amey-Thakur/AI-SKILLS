@@ -37,5 +37,5 @@ incorrectly. The loop is short and unforgiving.
 
 A correct loop does not make a model learn a task it cannot represent.
 Distributed training adds synchronisation concerns beyond the single
-loop (see distributed-training). Framework abstractions hide the loop
+loop (see distributed-training-scaling). Framework abstractions hide the loop
 and its bugs equally.

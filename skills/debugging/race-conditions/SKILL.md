@@ -32,14 +32,15 @@ cannot patch what you cannot see, so first make it reproducible.
    it will eventually happen. "The window is tiny" is not synchronization.
 4. **Stress the timing to force the failure on demand.** Wrap the suspect
    operation in a loop of thousands of iterations across more threads than
-   cores, add randomized `sched_yield`/`Thread.sleep(0)` at the read-modify-
-   write seam, and pin to fewer cores to widen the window. A test that fails
-   1 in 10 now instead of 1 in a million is a test you can debug.
+   cores, add randomized `sched_yield`/`Thread.sleep(0)` at the
+   read-modify-write seam, and pin to fewer cores to widen the window. A
+   test that fails 1 in 10 now instead of 1 in a million is a test you can
+   debug.
 5. **Fix by establishing ordering, not by narrowing the window.** Put every
-   access to the shared state under the same lock, replace a read-modify-
-   write with an atomic compare-and-swap, make the data immutable after
-   publication, or hand ownership to one thread. Adding a sleep or a second
-   check narrows the race, it does not close it.
+   access to the shared state under the same lock, replace a
+   read-modify-write with an atomic compare-and-swap, make the data
+   immutable after publication, or hand ownership to one thread. Adding a
+   sleep or a second check narrows the race, it does not close it.
 6. **Re-run the stress loop and the sanitizer clean.** The stress harness
    from step 4 must survive a long run, and the sanitizer must report zero
    races. A green sanitizer with a still-flaky stress test means a second

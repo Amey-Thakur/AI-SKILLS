@@ -1,6 +1,6 @@
 ---
 name: ts-api-types
-description: Type the boundaries of a TypeScript codebase: public API surfaces, branded types, and runtime validation of untyped input. Use when designing types others consume, or when external data enters your program.
+description: "Type the boundaries of a TypeScript codebase: public API surfaces, branded types, and runtime validation of untyped input. Use when designing types others consume, or when external data enters your program."
 ---
 
 # TS API types

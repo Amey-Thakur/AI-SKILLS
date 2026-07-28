@@ -24,7 +24,7 @@ ambiguous.
 4. **Parallelise independent work.** Most build graphs have substantial
    parallelism that sequential scripts waste.
 5. **Fail fast on cheap checks.** Ordering quick checks before slow ones
-   returns most failures in seconds (see continuous-integration).
+   returns most failures in seconds (see ci-cd).
 6. **Keep local and CI builds identical.** Divergence produces the works
    on my machine class of problem, which is expensive to diagnose.
 7. **Measure and budget build time.** A tracked number with a threshold

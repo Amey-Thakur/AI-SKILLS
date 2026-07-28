@@ -38,12 +38,12 @@ readers build on, so getting it right serves multiple needs at once.
    close (see focus-management): deliberate and reversible,
    never accidental and permanent.
 4. **Provide skip links.** A "skip to main content" link as
-   the first focusable element lets keyboard and screen-
-   reader users bypass repeated navigation (tabbing through
-   fifty nav links on every page is exhausting): visible on
-   focus, jumping focus to the main content. This small
-   addition dramatically improves the experience for
-   keyboard users on content-heavy sites.
+   the first focusable element lets keyboard and
+   screen-reader users bypass repeated navigation (tabbing
+   through fifty nav links on every page is exhausting):
+   visible on focus, jumping focus to the main content.
+   This small addition dramatically improves the experience
+   for keyboard users on content-heavy sites.
 5. **Use roving tabindex for composite widgets.** In widgets
    like menus, toolbars, and grids, the whole widget is one
    tab stop, and arrow keys move *within* it (roving

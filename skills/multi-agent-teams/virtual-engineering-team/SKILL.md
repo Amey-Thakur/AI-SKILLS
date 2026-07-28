@@ -13,10 +13,14 @@ out to two parallel builders, converges through review, and ends at a QA gate.
 
 ## Team
 
-- **PM** (`product-manager-role`): turns the request into a frozen, testable spec.
-- **Architect** (`principal-architect-role`): produces the design and the file split.
-- **Backend engineer** (`backend-engineer-role`): builds only the server files it owns.
-- **Frontend engineer** (`frontend-engineer-role`): builds only the client files it owns.
+- **PM** (`product-manager-role`): turns the request into a frozen, testable
+  spec.
+- **Architect** (`principal-architect-role`): produces the design and the file
+  split.
+- **Backend engineer** (`backend-engineer-role`): builds only the server files
+  it owns.
+- **Frontend engineer** (`frontend-engineer-role`): builds only the client files
+  it owns.
 - **Reviewer** (`code-review`): reads both diffs and files blocking findings.
 - **QA** (`qa-engineer-role`): runs the merged branch against every criterion.
 
@@ -43,14 +47,15 @@ out to two parallel builders, converges through review, and ends at a QA gate.
 ## Run it
 
 In Claude Code, give each role its own subagent through the Task tool and paste
-the matching role skill into that subagent's prompt so it holds one charter.
-The orchestrator walks the spine in order, spawns the two engineers in a single
+the matching role skill into that subagent's prompt so it holds one charter. The
+orchestrator walks the spine in order, spawns the two engineers in a single
 parallel batch, then runs reviewer and QA. Pass artifacts as files on a shared
 branch: `spec.md`, `design.md`, the diffs, the findings list. Stop when QA
 returns go with all criteria green and no open blockers, or when the review loop
 hits its cap and escalates. To port, model the spine as a CrewAI sequential Crew
 with a parallel engineer task group, an AutoGen GroupChat, or a LangGraph graph
-with a fan-out node and a QA node that conditionally routes back to the builders.
+with a fan-out node and a QA node that conditionally routes back to the
+builders.
 
 ## Signals it works
 

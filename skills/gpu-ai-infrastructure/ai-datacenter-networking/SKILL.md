@@ -20,7 +20,8 @@ each communication pattern to the fastest link that contains its group.
 2. **Bind each collective to the tier that spans its group.** Keep the
    tensor-parallel all-reduce, the chattiest collective, inside one NVLink node
    of 8 GPUs. Let data-parallel gradient all-reduce and pipeline point-to-point
-   cross nodes on InfiniBand, where their lower frequency tolerates the slower link.
+   cross nodes on InfiniBand, where their lower frequency tolerates the slower
+   link.
 3. **Demand a rail-optimized topology.** In a rail design each GPU reaches the
    leaf switch through its own NIC on a fixed rail, so same-rank GPUs across
    nodes talk without crossing the spine. Confirm one NIC per GPU and rail
@@ -30,9 +31,9 @@ each communication pattern to the fastest link that contains its group.
    GPU-to-NIC DMA, and supply a `NCCL_TOPO_FILE` so NCCL builds rings and trees
    that follow the real wiring instead of guessing across a PCIe hop.
 5. **Place ranks with a topology-aware scheduler.** Use SLURM block placement or
-   the cluster's topology plugin to pack a job into adjacent nodes under one leaf
-   switch. Scattering 64 ranks across a congested spine adds hops and queueing
-   that no NCCL tuning recovers.
+   the cluster's topology plugin to pack a job into adjacent nodes under one
+   leaf switch. Scattering 64 ranks across a congested spine adds hops and
+   queueing that no NCCL tuning recovers.
 6. **Prefer in-network reduction and adaptive routing where the fabric offers
    it.** SHARP offloads all-reduce into the switch ASIC, cutting data that
    crosses the wire. Adaptive routing spreads flows so a single hot link does
@@ -45,7 +46,8 @@ each communication pattern to the fastest link that contains its group.
 ## Signals
 
 - Do tensor-parallel groups stay within a single NVLink node in the placement?
-- Does nccl-tests busbw land near peak for both the NVLink and InfiniBand groups?
+- Does nccl-tests busbw land near peak for both the NVLink and InfiniBand
+  groups?
 - Is every GPU mapped to its own rail-aligned NIC with GPUDirect RDMA active?
 - Did the scheduler pack ranks under shared leaf switches instead of the spine?
 

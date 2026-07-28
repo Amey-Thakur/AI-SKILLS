@@ -36,4 +36,4 @@ question with an answer.
 Objectives describe reliability and do not deliver it. A target agreed
 without the investment to meet it is a fiction. Some failures are so
 severe that budget accounting is irrelevant and the response is
-immediate regardless (see incident-response).
+immediate regardless (see incident-severity-levels).

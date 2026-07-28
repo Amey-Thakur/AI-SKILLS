@@ -36,12 +36,12 @@ assessment, and synthesis into a coherent picture.
    conversation a field is having with itself.
 4. **Assess quality, do not just collect.** Not all sources
    are equal: venue and peer-review status, methodology
-   rigor, sample size and reproducibility (see scholar-
-   evaluation, scientific-critical-thinking), citation count
-   as a weak signal, and recency vs foundational-ness.
-   Weight the strong evidence; note but discount the weak. A
-   review that treats a blog post and a replicated study as
-   equal is not a review.
+   rigor, sample size and reproducibility (see
+   source-evaluation, fact-checking), citation count as a
+   weak signal, and recency vs foundational-ness. Weight the
+   strong evidence; note but discount the weak. A review
+   that treats a blog post and a replicated study as equal
+   is not a review.
 5. **Synthesize into themes, not a list.** Organize by idea
    (what is agreed, what is contested, what is unknown), not
    paper-by-paper: a matrix of sources against dimensions
@@ -58,12 +58,10 @@ assessment, and synthesis into a coherent picture.
 
 ## Boundaries
 
-- A literature review establishes what is known and
-  claimed; it does not verify the claims (that is
-  replication and critical appraisal: see scientific-
-  critical-thinking). Consensus in the literature can be
-  wrong, and a review should flag weakly-supported
-  consensus.
+- A literature review establishes what is known and claimed; it does not
+  verify the claims (that is replication and critical appraisal: see
+  fact-checking). Consensus in the literature can be wrong, and a review
+  should flag weakly-supported consensus.
 - Scope discipline is essential: the goal is enough
   coverage to ground the decision or research, not
   exhaustive coverage of an unbounded field. Know when you

@@ -26,7 +26,7 @@ the common failure is mixing levels of abstraction on one canvas.
 6. **Use consistent shapes and colour with a legend.** Convention within
    your organisation matters more than any standard notation.
 7. **Keep it small enough to read.** If it does not fit legibly on a
-   screen, it is several diagrams (see scientific-schematics).
+   screen, it is several diagrams (see architecture-diagrams).
 
 ## Boundaries
 

@@ -7,10 +7,10 @@ description: Run a data team as agents that build the pipeline, gate on quality 
 
 A number from one agent is a query you cannot see and a pipeline you cannot
 re-run. Split the work the way a real data team does: a builder makes the
-pipeline reproducible, a quality checker gates the output, an analyst answers the
-question with the query attached, and an auditor re-derives every published
-figure. The auditor is the point, because a confident dashboard on a lossy
-pipeline is the default failure.
+pipeline reproducible, a quality checker gates the output, an analyst
+answers the question with the query attached, and an auditor re-derives
+every published figure. The auditor is the point, because a confident
+dashboard on a lossy pipeline is the default failure.
 
 ## Team
 
@@ -26,9 +26,9 @@ gate before publishing.
 ## Method
 
 1. **Builder writes an idempotent pipeline, not a one-off script.** Extract,
-   transform, load with an explicit schema, partition keys, and re-runnable steps
-   (dbt models or an Airflow DAG). It hands off a materialized table plus
-   `schema.sql`, not a notebook.
+   transform, load with an explicit schema, partition keys, and re-runnable
+   steps (dbt models or an Airflow DAG). It hands off a materialized table
+   plus `schema.sql`, not a notebook.
 2. **Quality checker gates on assertions, not eyeballing.** Row counts against
    source, null rates on required columns, primary-key uniqueness, referential
    integrity, freshness within SLA, and range checks. Output `dq-report.md`; a
@@ -55,10 +55,11 @@ gate before publishing.
 In Claude Code, run builder, checker, analyst, and auditor as sequential
 subagents over a shared warehouse connection and directory; the orchestrator
 reads `dq-report.md` and blocks the analyst subagent if any check failed, and
-keeps the auditor a separate subagent that never sees the analyst's queries. Port
-it to CrewAI as a sequential process with the checker as a gating task, to
-AutoGen as agents where the checker's tool result halts the chain, or to
-LangGraph as a linear graph with conditional edges on the quality and audit gates.
+keeps the auditor a separate subagent that never sees the analyst's queries.
+Port it to CrewAI as a sequential process with the checker as a gating task,
+to AutoGen as agents where the checker's tool result halts the chain, or to
+LangGraph as a linear graph with conditional edges on the quality and audit
+gates.
 
 ## Signals it works
 

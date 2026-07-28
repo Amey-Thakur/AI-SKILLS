@@ -40,4 +40,4 @@ they rarely occur on a developer's fast local network.
 - Simulated networks approximate real ones and miss mobile-specific
   behaviour such as radio state transitions.
 - Realistic multi-client tests are slow and flaky-prone, so they need
-  care to stay trustworthy (see flaky-test-management).
+  care to stay trustworthy (see test-flakiness-budget).

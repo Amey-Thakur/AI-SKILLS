@@ -14,12 +14,12 @@ data. Expand-contract and online techniques make it survivable.
 
 1. **Split every breaking change into expand and contract.**
    Never change schema and code in one incompatible step.
-   Expand: add the new (column, table) in a backward-
-   compatible way; deploy code that writes both old and new;
-   backfill existing data; switch reads to new; only then,
-   a release later, contract (drop the old). This is what
-   makes deploys rollback-able across the change (see
-   rollback-strategy, blue-green-deployments: the same
+   Expand: add the new (column, table) in a
+   backward-compatible way; deploy code that writes both old
+   and new; backfill existing data; switch reads to new;
+   only then, a release later, contract (drop the old). This
+   is what makes deploys rollback-able across the change
+   (see rollback-strategy, blue-green-deployments: the same
    compatibility window).
 2. **Make each step backward-compatible.** During the
    migration, the currently-running (old) code must keep
@@ -38,9 +38,9 @@ data. Expand-contract and online techniques make it survivable.
 4. **Backfill in batches, not one statement.** Updating
    millions of rows in a single transaction holds locks,
    bloats, and can time out; batch it (a few thousand rows
-   at a time, with pauses, resumable: see script-
-   idempotency, incremental-processing) so it does not
-   overwhelm the database or block other work (see
+   at a time, with pauses, resumable: see
+   script-idempotency, incremental-processing) so it does
+   not overwhelm the database or block other work (see
    backpressure). Backfills are their own careful operation,
    separate from the DDL.
 5. **Run migrations forward-only, decoupled from code

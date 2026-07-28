@@ -1,6 +1,6 @@
 ---
 name: security-incident-response
-description: Run a security breach through containment, evidence preservation, and notification duties in the right order, under time pressure, without destroying the record you will need. Use when you suspect or confirm a compromise: leaked credentials, unauthorized access, malware, or exfiltrated data.
+description: "Run a security breach through containment, evidence preservation, and notification duties in the right order, under time pressure, without destroying the record you will need. Use when you suspect or confirm a compromise: leaked credentials, unauthorized access, malware, or exfiltrated data."
 ---
 
 # Security incident response

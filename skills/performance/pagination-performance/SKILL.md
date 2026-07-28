@@ -14,26 +14,26 @@ far in you are.
 ## Method
 
 1. **Diagnose the OFFSET cost.** `EXPLAIN ANALYZE` a deep page and watch rows
-   scanned climb with the offset while the limit stays fixed. That linear growth,
-   plus duplicate or skipped rows under concurrent writes, is the signal to
-   abandon offset.
+   scanned climb with the offset while the limit stays fixed. That linear
+   growth, plus duplicate or skipped rows under concurrent writes, is the
+   signal to abandon offset.
 2. **Paginate by keyset on a stable ordered column.** Order by a unique,
    monotonic key and carry the last row's value forward:
    `WHERE (created_at, id) < (:last_ts, :last_id) ORDER BY created_at DESC, id
    DESC LIMIT 20`. The index seeks straight to the boundary, so page 10,000
    costs what page 1 did.
-3. **Break ties with a unique tiebreaker.** Order on a non-unique column alone (a
-   timestamp) and rows sharing a value straddle the boundary, dropping or
-   repeating on the seam. Append the primary key to make the sort total, and
-   compare as a tuple (row value) so the boundary is exact.
+3. **Break ties with a unique tiebreaker.** Order on a non-unique column
+   alone (a timestamp) and rows sharing a value straddle the boundary,
+   dropping or repeating on the seam. Append the primary key to make the
+   sort total, and compare as a tuple (row value) so the boundary is exact.
 4. **Encode the cursor opaquely and completely.** Return an opaque token (base64
    of the sort-key tuple), not a raw offset, so clients cannot fabricate
    positions and you can evolve the shape later. Include every column the
    ORDER BY uses; a cursor missing the tiebreaker cannot seek correctly.
 5. **Match the index to the sort exactly.** The composite index must cover the
-   ORDER BY columns in the same order and direction, or the database sorts on the
-   fly and the seek advantage is lost. Verify the plan uses an index scan, not a
-   sort node above it.
+   ORDER BY columns in the same order and direction, or the database sorts on
+   the fly and the seek advantage is lost. Verify the plan uses an index scan,
+   not a sort node above it.
 6. **Give up offset-only features honestly.** Keyset offers next and previous,
    not jump-to-page-500 or an exact total; a full `COUNT(*)` on a large table is
    its own scan. Offer next-page and an estimated count, or keep offset only for

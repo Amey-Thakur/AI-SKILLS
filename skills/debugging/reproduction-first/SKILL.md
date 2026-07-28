@@ -13,8 +13,9 @@ red light that you drive to green: build that light before you touch anything.
 ## Method
 
 1. **Harvest the exact conditions from the report.** Input values, build
-   version, OS, locale, environment variables, data state, and the click-by-
-   click sequence. Ask for the failing input itself, not a prose summary of it.
+   version, OS, locale, environment variables, data state, and the
+   click-by-click sequence. Ask for the failing input itself, not a prose
+   summary of it.
 2. **Reproduce once in the crudest way that works.** Full app, real data,
    whatever it takes to watch the failure with your own eyes. You cannot
    minimize a failure you have never actually seen happen.

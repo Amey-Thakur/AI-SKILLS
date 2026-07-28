@@ -1,5 +1,5 @@
 ---
-description: "Turn a transcript or rough notes into minutes people actually consult - decisions, actions, and open questions first."
+description: "Turn a transcript or rough notes into minutes people actually consult: decisions, actions, and open questions first."
 argument-hint: "[notes]"
 ---
 

@@ -7,9 +7,9 @@ description: Set up universal and app links that open the right in-app screen fr
 
 A deep link maps an external URL to an in-app destination. Done right, a
 shared link opens the app on the exact screen; done wrong, it bounces to
-the website or a blank home screen. The setup is fiddly and platform-
-specific: association files, intent filters, and a router that treats every
-incoming URL as untrusted.
+the website or a blank home screen. The setup is fiddly and
+platform-specific: association files, intent filters, and a router that
+treats every incoming URL as untrusted.
 
 ## Method
 
@@ -48,7 +48,8 @@ incoming URL as untrusted.
 ## Testing matrix
 
 - App state: not installed, installed-not-running, backgrounded,
-  foreground. Trigger each with `adb shell am start -a android.intent.action.VIEW -d "<url>"`
+  foreground. Trigger each with
+  `adb shell am start -a android.intent.action.VIEW -d "<url>"`
   and `xcrun simctl openurl booted "<url>"`.
 - Source: browser address bar, Notes/Messages tap, email client, another
   app. Some sources strip or wrap URLs; a link that works pasted may fail

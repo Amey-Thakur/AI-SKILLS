@@ -30,7 +30,8 @@ Do it in this order:
    actual behavior. Report what you ran.
 
 Definition of done: the feature works as specified, meets the acceptance
-criteria, existing tests still pass, and the code matches the codebase's style.
-Report what you built, how it works, how you verified it, and anything left
-undone or needing a decision. Do not claim it is complete without demonstrating
-it works.
+criteria, existing tests still pass, and the code matches the codebase's
+style. Report what you built, how it works, how you verified it, and anything
+left undone or needing a decision.
+
+Rules: do not claim it is complete without demonstrating it works.

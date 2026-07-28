@@ -16,8 +16,8 @@ scrolling you cannot afford. Design each board as a short list of questions.
    meeting its 2s p99?". The title states what the reader should learn, and a
    panel that answers no clear question gets cut. The board then reads as a list
    of questions, not a pile of metrics.
-2. **Cover services with RED: rate, errors, duration.** For each request-
-   serving component, show request rate, error rate, and a duration
+2. **Cover services with RED: rate, errors, duration.** For each
+   request-serving component, show request rate, error rate, and a duration
    distribution. Those three answer "is it up, is it failing, is it slow" for
    anything that handles requests, which is most of what pages you.
 3. **Cover resources with USE: utilization, saturation, errors.** For CPU,

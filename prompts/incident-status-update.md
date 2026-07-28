@@ -2,7 +2,7 @@
 name: incident-status-update
 description: Write a calm, honest status update during an ongoing incident, sized for its audience.
 variables:
-  - "{situation}: what is known right now - impact, timeline, actions so far"
+  - "{situation}: what is known right now, including impact, timeline, and actions so far"
   - "{audience}: who reads it (customers, internal stakeholders, engineering)"
 settings: "Temperature 0-0.3. Re-run for each audience rather than one update for all."
 ---

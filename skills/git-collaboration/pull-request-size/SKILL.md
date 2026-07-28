@@ -29,8 +29,8 @@ control.
    are small *and* complete.
 3. **Stack dependent PRs.** A large feature becomes a stack
    of small PRs, each building on the last, each reviewed
-   independently (stacked-diff tooling, or manual base-
-   branch chaining): the reviewer sees small coherent
+   independently (stacked-diff tooling, or manual
+   base-branch chaining): the reviewer sees small coherent
    pieces instead of one wall. This is how you keep PRs
    small without blocking on a big feature landing all at
    once.

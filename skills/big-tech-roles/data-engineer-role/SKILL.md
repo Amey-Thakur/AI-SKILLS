@@ -30,16 +30,17 @@ notices.
    incident recovery risks double-counting revenue.
 4. **Test data quality as code, and fail closed.** Assert key uniqueness,
    referential integrity, accepted ranges, and volume anomalies with dbt tests
-   or Great Expectations. Quarantine the bad partition rather than publishing it;
-   a pipeline that passes bad data quietly is worse than one that stops.
+   or Great Expectations. Quarantine the bad partition rather than publishing
+   it; a pipeline that passes bad data quietly is worse than one that stops.
 5. **Model in layers for the consumer.** Structure the warehouse (BigQuery,
    Snowflake, Redshift) as raw, staging, and marts, or bronze, silver, gold.
    Document each table in a catalog and expose column-level lineage through
    OpenLineage, Dataplex, or Unity Catalog so a consumer can trace a number back
    to its source.
-6. **Plan schema change and backfill as a migration.** Evolve expand-then-
-   contract, version the change, and keep backfills reproducible and dated.
-   Announce breaking changes before you ship them, not in the postmortem.
+6. **Plan schema change and backfill as a migration.** Evolve
+   expand-then-contract, version the change, and keep backfills
+   reproducible and dated. Announce breaking changes before you ship them,
+   not in the postmortem.
 7. **Hand off with the contract visible.** Give the data scientist documented
    tables and their freshness SLA, give the ML engineer versioned feature
    definitions or a feature store, and give the on-call rotation the runbook for

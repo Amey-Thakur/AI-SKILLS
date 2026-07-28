@@ -28,7 +28,7 @@ surface and be resolved.
    precision is false here (a 7.3 vs 6.8 is noise), so keep
    it coarse and focus on the clear differences. Steelman
    each option's strengths, including the one you lean
-   against (see scientific-critical-thinking's fairness).
+   against (see fact-checking's fairness).
 3. **Check sensitivity to the weights.** Does the winner
    change if you shift the weights a little? A robust
    decision wins across reasonable weightings; a fragile one
@@ -42,9 +42,9 @@ surface and be resolved.
    mvp-scoping); irreversible ones (one-way doors: data
    migrations, public commitments, architecture you cannot
    easily unwind) deserve much deeper analysis. Matching
-   analysis depth to reversibility is the single highest-
-   leverage tradeoff-analysis habit (see the effort
-   calibration below).
+   analysis depth to reversibility is the single
+   highest-leverage tradeoff-analysis habit (see the
+   effort calibration below).
 5. **Surface the assumptions and unknowns.** What must be
    true for each option to be the right one, and what you do
    not know that would change the answer: sometimes the

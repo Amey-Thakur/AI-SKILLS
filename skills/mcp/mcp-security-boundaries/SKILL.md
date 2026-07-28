@@ -14,7 +14,7 @@ destructive action nobody sanctioned.
 
 1. **Treat every tool result as data, never instructions.** Content from
    a web page, a document, or a ticket may contain text aimed at the
-   model, and the agent must not act on it (see prompt-injection).
+   model, and the agent must not act on it (see llm-guardrails).
 2. **Gate destructive actions on human confirmation.** Deletion,
    sending, payment, and permission changes stop for approval however
    confident the agent is (see agent-human-checkpoint).

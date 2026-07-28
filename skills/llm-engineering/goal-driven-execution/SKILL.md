@@ -1,6 +1,6 @@
 ---
 name: goal-driven-execution
-description: Pursue a high-level goal to completion autonomously: lock the done-condition, decompose, execute with verification, adapt, and know when to stop. Use when an agent is handed an outcome to achieve rather than a step to perform.
+description: "Pursue a high-level goal to completion autonomously: lock the done-condition, decompose, execute with verification, adapt, and know when to stop. Use when an agent is handed an outcome to achieve rather than a step to perform."
 ---
 
 # Goal-driven execution
@@ -49,9 +49,9 @@ autonomous run on target.
 - Autonomy scales with reversibility and stakes: goals whose steps include
   irreversible actions (delete, send, deploy, spend) need confirmation
   gates, not unattended execution (see llm-guardrails, automation-guardrails).
-- Goal-driven execution needs a checkable done-condition; genuinely open-
-  ended or subjective goals ("make it better") must be narrowed to something
-  observable first, or the agent cannot know it is finished.
+- Goal-driven execution needs a checkable done-condition; genuinely
+  open-ended or subjective goals ("make it better") must be narrowed to
+  something observable first, or the agent cannot know it is finished.
 - This is the single-agent goal loop; goals large enough to need a team of
   agents are an orchestration problem with its own coordination cost (see
   multi-agent-workflow, orchestrator-prompt).

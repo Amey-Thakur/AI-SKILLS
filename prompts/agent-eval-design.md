@@ -1,6 +1,6 @@
 ---
 name: agent-eval-design
-description: Design an evaluation for an AI agent or LLM feature: what to test, how to grade it, and how to catch regressions.
+description: "Design an evaluation for an AI agent or LLM feature: what to test, how to grade it, and how to catch regressions."
 variables:
   - "{system}: the agent or LLM feature to evaluate and what it is supposed to do"
   - "{failures}: known or feared failure modes, if any"

@@ -41,18 +41,18 @@ for the few that earn it.
    causation (see experiment-design-basics), an improvement
    that is within noise. Read the results and their
    limitations, not the abstract's summary of them (see
-   scientific-critical-thinking's claim-vs-evidence).
+   source-evaluation's claim-vs-evidence).
 5. **Assess reproducibility and rigor.** Is there code and
    data? Is the sample size adequate and the comparison
    fair (baselines, ablations)? Are the limitations honestly
    stated? Has it been replicated or only published (see
-   scholar-evaluation)? A striking result with no code, a
+   source-evaluation)? A striking result with no code, a
    tiny sample, and no replication is a hypothesis, not a
    finding: weight accordingly.
 6. **Extract into your own notes and synthesis.** Capture
    the contribution, method, key result, and your
    assessment in your own words (see research-synthesis,
-   citation-management): the act of restating tests your
+   research-synthesis): the act of restating tests your
    understanding, and the notes feed the literature review
    without re-reading. Note how it connects to and
    disagrees with other work.
@@ -66,9 +66,9 @@ for the few that earn it.
   first-passed.
 - A single paper is one data point; extraordinary claims
   need replication and convergent evidence before you
-  build on them (see the replication ethic in scientific-
-  critical-thinking). Published does not mean true.
+  build on them (see the replication ethic in
+  source-evaluation). Published does not mean true.
 - Peer review and venue are weak quality signals, not
   guarantees; strong papers appear in weak venues and
   flawed papers in strong ones. Judge the work, not just
-  the stamp (see scholar-evaluation).
+  the stamp (see source-evaluation).

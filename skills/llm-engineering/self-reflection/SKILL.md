@@ -33,9 +33,9 @@ critique genuine and bounded, not theater or an infinite loop.
    must-fixes. Not every observation deserves a rewrite; the goal is a
    correct, clear result, not an endlessly buffed one.
 5. **Bound the reflection.** One or two reflection passes catch most of the
-   value; beyond that, returns diminish and the agent can spiral, second-
-   guessing correct work or oscillating between versions. Set a cap, and if
-   reflection stops finding real problems, stop and deliver (see
+   value; beyond that, returns diminish and the agent can spiral,
+   second-guessing correct work or oscillating between versions. Set a cap,
+   and if reflection stops finding real problems, stop and deliver (see
    agentic-loops' termination).
 6. **Know when reflection cannot self-correct.** An agent blind to its own
    error (a wrong assumption it also uses to check) will not catch it by

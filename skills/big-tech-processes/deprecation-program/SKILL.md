@@ -16,11 +16,13 @@ wiki page and good intentions.
 1. **Instrument the surface before you say a word.** Add per-caller telemetry:
    which team, service, and code path hits it, and at what rate. Tagged access
    logs or OpenTelemetry spans beat an aggregate counter, because "2M calls a
-   day" names nobody to email. You cannot deprecate a caller you cannot identify.
+   day" names nobody to email. You cannot deprecate a caller you cannot
+   identify.
 2. **Publish a notice carrying a hard date and the replacement.** State the
    exact date the system stops answering, the migration target, and the reason.
    Emit the warning at the call site too: a `Sunset` response header (RFC 8594),
-   a `@Deprecated` annotation, a startup log line. A notice with no date is a wish.
+   a `@Deprecated` annotation, a startup log line. A notice with no date is a
+   wish.
 3. **Ship the migration, not just the docs.** Write the codemod (jscodeshift,
    OpenRewrite, a scripted sed pass), the shim, or the adapter that does the
    mechanical rewrite. Every hour of toil left on a caller multiplies by the
@@ -36,11 +38,12 @@ wiki page and good intentions.
 6. **Rehearse the shutoff with a reversible brownout.** Before the real date,
    fail all calls for a scheduled hour, then restore. Stragglers feel the break
    while you can still undo it, and hidden dependencies surface before they
-   become an outage. Keep a logged, expiring break-glass path for true emergencies.
+   become an outage. Keep a logged, expiring break-glass path for true
+   emergencies.
 7. **Delete the code and tombstone the address.** Remove the implementation and
    leave a clear error at the old entry point pointing at the replacement. Code
-   kept "just in case" gets re-adopted and quietly un-deprecates itself, so close
-   the program by making the old path impossible to return to.
+   kept "just in case" gets re-adopted and quietly un-deprecates itself, so
+   close the program by making the old path impossible to return to.
 
 ## Checks
 
@@ -58,4 +61,5 @@ This covers retiring a system you own that has external callers. A purely
 internal refactor with no downstream consumers needs none of the ceremony. A
 security kill switch that must fire now overrides the comms calendar: run your
 incident process, not a 90-day burndown. Match the notice window to your
-organization's API deprecation policy and any contractual commitments to customers.
+organization's API deprecation policy and any contractual commitments to
+customers.

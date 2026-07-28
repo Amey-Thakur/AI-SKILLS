@@ -44,7 +44,7 @@ certificate, an incomplete chain, or a name that does not match.
 
 - TLS secures data in transit between two endpoints; it says nothing
   about storage, authorization, or what the server does with the data
-  afterwards (see encryption-at-rest, authn-design).
+  afterwards (see data-encryption, authn-design).
 - A valid certificate proves control of a name, not that the operator
   is honest. Trust in the party is a separate question.
 - Terminating TLS at a proxy leaves the hop beyond it in the clear

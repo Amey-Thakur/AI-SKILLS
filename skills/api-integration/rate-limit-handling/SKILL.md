@@ -21,7 +21,7 @@ proactively rather than reacting to rejections.
    the limit prevents most rejections entirely (see rate-limiting).
 4. **Back off exponentially with jitter.** Synchronised retries from
    many workers reproduce the burst that caused the limit (see
-   thundering-herd).
+   timeouts-and-retries).
 5. **Queue rather than drop where the work matters.** Deferring work to
    stay within quota is usually better than failing it, provided the
    queue is bounded.

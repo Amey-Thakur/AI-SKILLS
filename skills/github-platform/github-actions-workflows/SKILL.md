@@ -26,7 +26,7 @@ rather than routing around it.
    since the matrix multiplies cost.
 5. **Fail fast on cheap checks.** Lint and type checks before the long
    test suite, so an obvious error returns in a minute rather than
-   twenty (see continuous-integration).
+   twenty (see ci-cd).
 6. **Pin actions to a commit, not a tag.** A tag can be moved, which
    makes it an unpinned dependency in a privileged context (see
    actions-security).

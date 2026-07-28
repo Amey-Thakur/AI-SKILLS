@@ -32,7 +32,7 @@ surprises people.
    explicit checks.
 7. **Choose precision deliberately.** Single precision is faster and
    smaller and runs out of significant digits sooner than people expect
-   (see gpu-precision-modes).
+   (see mixed-precision-deployment).
 
 ## Boundaries
 

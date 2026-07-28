@@ -1,6 +1,6 @@
 ---
 name: source-evaluation
-description: Judge whether a source is credible and relevant: authority, evidence, bias, and recency. Use when deciding whether to trust and cite a source, in any research.
+description: "Judge whether a source is credible and relevant: authority, evidence, bias, and recency. Use when deciding whether to trust and cite a source, in any research."
 ---
 
 # Source evaluation

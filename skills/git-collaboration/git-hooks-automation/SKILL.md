@@ -34,10 +34,10 @@ local hooks are advisory.
    early for the developer's benefit; CI catches them for
    the team's safety. Do not rely on local hooks for
    anything that must not slip through.
-4. **Prevent the catastrophic-and-permanent.** The highest-
-   value hooks stop things that are painful to undo:
-   secrets committed (see secrets-scanning: a leaked key
-   stays in history), large binaries (bloat the repo
+4. **Prevent the catastrophic-and-permanent.** The
+   highest-value hooks stop things that are painful to
+   undo: secrets committed (see secrets-scanning: a leaked
+   key stays in history), large binaries (bloat the repo
    forever: see git-history-hygiene), and broken merge
    markers. These earn their place even in a fast hook
    because the cost of missing them is disproportionate.

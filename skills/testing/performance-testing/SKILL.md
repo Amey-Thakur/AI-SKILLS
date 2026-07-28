@@ -1,6 +1,6 @@
 ---
 name: performance-testing
-description: Benchmark code so the numbers mean something: warm up, fix inputs, report variance, and gate regressions in CI. Use when measuring the speed of a function or comparing two implementations.
+description: "Benchmark code so the numbers mean something: warm up, fix inputs, report variance, and gate regressions in CI. Use when measuring the speed of a function or comparing two implementations."
 ---
 
 # Performance testing

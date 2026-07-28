@@ -9,7 +9,7 @@ settings: "Temperature 0-0.2; precision matters more than prose."
 Extract every action item from the text below.
 
 For each item output one line:
-- [ ] {task, stated as an imperative}: owner: {name or "unassigned"} , 
+- [ ] {task, stated as an imperative}: owner: {name or "unassigned"},
   due: {date or "no date given"}
 
 Rules:

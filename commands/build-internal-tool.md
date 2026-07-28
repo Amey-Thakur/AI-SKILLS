@@ -19,7 +19,8 @@ Specify an internal tool for:
 
 Constraints: {constraints}
 
-Use toil-reduction, self-service-infrastructure, and internal-developer-platform.
+Use toil-reduction, self-service-infrastructure, and
+internal-developer-platform.
 
 Produce:
 - The manual work today, quantified per week.

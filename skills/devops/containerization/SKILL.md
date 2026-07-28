@@ -32,10 +32,11 @@ small, deterministic, and unprivileged, and the promise holds.
    Configuration and secrets arrive by environment or mounted secret
    files at runtime, never baked into the image; anything COPYed in is
    published to everyone who can pull.
-6. **Compose for local truthfulness:** service per process, healthcheck-
-   based depends_on so ordering is real, named volumes for anything that
-   must survive, and a .dockerignore that keeps .git, node_modules, and
-   local env files out of the build context (both for speed and secrecy).
+6. **Compose for local truthfulness:** service per process,
+   healthcheck-based depends_on so ordering is real, named volumes for
+   anything that must survive, and a .dockerignore that keeps .git,
+   node_modules, and local env files out of the build context (both for
+   speed and secrecy).
 
 ## Debugging order
 

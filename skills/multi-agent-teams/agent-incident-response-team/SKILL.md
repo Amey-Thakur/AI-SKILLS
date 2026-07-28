@@ -29,9 +29,9 @@ Shape: a coordinating hub with parallel investigation and a cadence loop; see
    user-visible impact (SEV1 full outage, SEV2 major degraded path, SEV3
    contained), opens `incident.md`, and assigns surfaces. One named commander
    ends the "someone else owns it" gap.
-2. **Fan investigators out on disjoint hypotheses.** No two chase the same graph.
-   Each returns a hypothesis card: symptom, hypothesis, test run, result. The
-   commander reassigns as cards come back.
+2. **Fan investigators out on disjoint hypotheses.** No two chase the same
+   graph. Each returns a hypothesis card: symptom, hypothesis, test run,
+   result. The commander reassigns as cards come back.
 3. **Run the scribe as a passive logger.** It subscribes to every agent's output
    and appends a timestamped line to `timeline.md`: "14:32 rolled back deploy
    4471, error rate flat." This is the postmortem's raw material.
@@ -39,21 +39,21 @@ Shape: a coordinating hub with parallel investigation and a cadence loop; see
    by severity, even when it reads "still investigating, next update 14:50." A
    human approves before anything posts to a public status page.
 5. **Drive to mitigation before root cause.** The commander picks the fastest
-   safe stop: roll back, fail over, flip the flag, shed load. Forensics wait; the
-   customer's minutes do not.
+   safe stop: roll back, fail over, flip the flag, shed load. Forensics wait;
+   the customer's minutes do not.
 6. **Declare resolved against written criteria, then hand off.** Metrics normal
-   for a set window with no manual mitigation holding them up. The commander names
-   a postmortem owner and date and closes the channel.
+   for a set window with no manual mitigation holding them up. The commander
+   names a postmortem owner and date and closes the channel.
 
 ## Run it
 
 In Claude Code, launch investigators as parallel subagents in one orchestrator
-turn, each with the incident brief and a distinct hypothesis; the commander agent
-(or you as orchestrator) reads their cards and the scribe's timeline to pick the
-next move, and comms output routes to a human gate before external posting. Port
-it to CrewAI as a hierarchical crew with the commander as manager, to AutoGen as
-a GroupChat with a manager agent, or to LangGraph as a supervisor routing to
-investigator nodes over a shared state object.
+turn, each with the incident brief and a distinct hypothesis; the commander
+agent (or you as orchestrator) reads their cards and the scribe's timeline to
+pick the next move, and comms output routes to a human gate before external
+posting. Port it to CrewAI as a hierarchical crew with the commander as manager,
+to AutoGen as a GroupChat with a manager agent, or to LangGraph as a supervisor
+routing to investigator nodes over a shared state object.
 
 ## Signals it works
 

@@ -37,9 +37,9 @@ breaking change cannot ship by accident.
    refunds in the total, or returns local time instead of
    UTC. No automated check catches this; it requires human
    awareness and, when unavoidable, a new field or a
-   version, never a silent redefinition (see schema-
-   evolution's identical warning). This one causes the most
-   surprising outages.
+   version, never a silent redefinition (see
+   schema-evolution's identical warning). This one causes
+   the most surprising outages.
 4. **Enforce the classification with compatibility tests.**
    Contract tests (see contract-testing, pact-verification)
    and schema-diff checks in CI that flag breaking changes
@@ -49,12 +49,12 @@ breaking change cannot ship by accident.
    someone discovers in production. The tooling makes the
    taxonomy enforceable.
 5. **When you must break, version and migrate.** A genuine
-   breaking change goes through versioning (see api-
-   versioning) and deprecation (see api-deprecation): new
-   version alongside old, migration path, usage tracking,
-   timeline. Never break in place on a stable API; the
-   compatibility promise is what lets consumers depend on
-   you.
+   breaking change goes through versioning (see
+   api-versioning) and deprecation (see api-deprecation):
+   new version alongside old, migration path, usage
+   tracking, timeline. Never break in place on a stable
+   API; the compatibility promise is what lets consumers
+   depend on you.
 6. **Communicate every change at the right volume.**
    Compatible changes: changelog (see changelog-writing).
    Breaking changes: prominent notice, migration guide,
@@ -72,12 +72,12 @@ breaking change cannot ship by accident.
   open"). Tolerant readers (see the robustness principle)
   make more changes safe.
 - Internal APIs with coordinated deploys can make breaking
-  changes by updating all consumers together (see api-
-  versioning's internal-vs-external); the taxonomy still
-  tells you *that* it is breaking, which is what you need
-  to know to coordinate.
+  changes by updating all consumers together (see
+  api-versioning's internal-vs-external); the taxonomy
+  still tells you *that* it is breaking, which is what you
+  need to know to coordinate.
 - This governs the API contract; the implementation behind
-  it can change freely as long as the contract holds
-  (that is the point of the contract: see openapi-
-  contracts). Confusing internal refactors with API
-  changes causes needless caution or needless breakage.
+  it can change freely as long as the contract holds (that
+  is the point of the contract: see openapi-contracts).
+  Confusing internal refactors with API changes causes
+  needless caution or needless breakage.

@@ -38,7 +38,8 @@ you cannot say with a straight face.
 ## Litmus tests
 
 - Did you write full sentences, or skim and call it explaining?
-- Which specific sentence did you stall on, and did you verify it before moving on?
+- Which specific sentence did you stall on, and did you verify it before moving
+  on?
 - Can you now state the false belief you held in one plain sentence?
 
 ## Boundaries

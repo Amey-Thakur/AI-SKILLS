@@ -36,30 +36,35 @@ Shape: a fixed weekly loop, build to ship to measure to decide.
    tracked and has a baseline; a number you start counting post-launch proves
    nothing.
 5. **Analyst reads the result against the bet.** `readout.md` states the metric,
-   the change, and whether the bet moved it, with the confounders named honestly.
+   the change, and whether the bet moved it, with the confounders named
+   honestly.
 6. **Make the Friday call.** Keep, iterate, or kill, recorded with a reason. The
    loop is a week, not "when it is done."
-7. **Enforce the kill rule.** If the north-star metric has not moved across a set
-   number of cycles (say four), stop the line of work rather than nursing it.
+7. **Enforce the kill rule.** If the north-star metric has not moved across a
+   set number of cycles (say four), stop the line of work rather than nursing
+   it.
 
 ## Run it
 
 In Claude Code, run one loop per orchestrator pass: spawn the builder subagent,
-then the marketer (gated on human approval for anything public), then the analyst
-reading real metrics, each writing its file into a dated week directory the next
-reads. A `/loop` or scheduled run makes the cadence literal. Port it to CrewAI as
-a sequential crew re-kicked weekly, to AutoGen as a round-robin GroupChat, or to
-LangGraph as a cyclic graph with the decision node closing each week.
+then the marketer (gated on human approval for anything public), then the
+analyst reading real metrics, each writing its file into a dated week directory
+the next reads. A `/loop` or scheduled run makes the cadence literal. Port it to
+CrewAI as a sequential crew re-kicked weekly, to AutoGen as a round-robin
+GroupChat, or to LangGraph as a cyclic graph with the decision node closing each
+week.
 
 ## Signals it works
 
 - Every week ends with a written keep, iterate, or kill, not a rolling backlog.
 - The metric was instrumented before ship, so the readout is real.
-- Killed bets actually stop; the squad is not carrying four half-live experiments.
+- Killed bets actually stop; the squad is not carrying four half-live
+  experiments.
 
 ## Boundaries
 
 This drives the operating loop, not the company: fundraising, hiring, legal, and
 real customer relationships are human work. Agents can draft marketing but a
 person owns the brand and approves public posts. The north-star metric and kill
-threshold are yours to set from real business context, not the squad's to invent.
+threshold are yours to set from real business context, not the squad's to
+invent.

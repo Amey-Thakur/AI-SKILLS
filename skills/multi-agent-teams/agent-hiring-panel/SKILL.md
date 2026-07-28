@@ -18,7 +18,8 @@ whoever spoke first.
   assigns one owner per signal.
 - **Interviewers** (`bar-raiser-interviewing`): each owns one competency, writes
   questions, scores independently.
-- **Bar raiser** (`bar-raiser-interviewing`): holds the same bar across the panel.
+- **Bar raiser** (`bar-raiser-interviewing`): holds the same bar across the
+  panel.
 - **Debrief chair** (`perf-calibration`, `engineering-manager-role`): reconciles
   scores.
 
@@ -27,17 +28,17 @@ calibration debrief.
 
 ## Method
 
-1. **Designer builds a competency matrix, one owner per signal.** Map the role to
-   four to six competencies (coding, system design, project depth, collaboration)
-   and assign each to exactly one interviewer, so no signal is tested twice and
-   none is missed. Output `loop-plan.md`.
+1. **Designer builds a competency matrix, one owner per signal.** Map the role
+   to four to six competencies (coding, system design, project depth,
+   collaboration) and assign each to exactly one interviewer, so no signal is
+   tested twice and none is missed. Output `loop-plan.md`.
 2. **Each interviewer writes questions to an anchored rubric.** Define what a 1,
    2, 3, and 4 answer looks like with a concrete example per level before the
    interview. A question that probes three competencies scores none well.
 3. **Score independently and in writing before sharing.** Each submits
-   `scorecard-<name>.md`: question, response summary, an evidence quote, a rating,
-   and a hire or no-hire on its competency, locked before debrief. Shared scores
-   in advance manufacture consensus.
+   `scorecard-<name>.md`: question, response summary, an evidence quote, a
+   rating, and a hire or no-hire on its competency, locked before debrief.
+   Shared scores in advance manufacture consensus.
 4. **Separate evidence from impression.** Every rating cites what the candidate
    said or built, not "seemed strong." A score with no evidence line is dropped
    in debrief.
@@ -58,8 +59,9 @@ parallel subagents that cannot read each other's output directory until each has
 written its locked scorecard; the chair subagent reads all scorecards plus the
 bar raiser's notes to produce `debrief.md`. Port it to CrewAI as a design task
 feeding parallel interview tasks then a debrief task, to AutoGen as a GroupChat
-where the chair opens turns only after scorecards are filed, or to LangGraph as a
-fan-out with a barrier that blocks the debrief node until every scorecard commits.
+where the chair opens turns only after scorecards are filed, or to LangGraph as
+a fan-out with a barrier that blocks the debrief node until every scorecard
+commits.
 
 ## Signals it works
 

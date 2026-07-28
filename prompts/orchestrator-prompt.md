@@ -1,6 +1,6 @@
 ---
 name: orchestrator-prompt
-description: Write an orchestrator prompt that coordinates worker agents: delegating, tracking, and synthesizing their results.
+description: "Write an orchestrator prompt that coordinates worker agents: delegating, tracking, and synthesizing their results."
 variables:
   - "{goal}: what the orchestrated system should accomplish"
   - "{workers}: the worker agents/roles available and what each does"

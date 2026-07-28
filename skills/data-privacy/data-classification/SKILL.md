@@ -22,7 +22,7 @@ automatically rather than depending on who is looking.
 3. **Attach controls to the label, not the system.** Encryption,
    access approval, logging, retention, and export rules should be
    defined once per level and applied wherever that level appears (see
-   encryption-at-rest, audit-logging).
+   data-encryption, audit-logging).
 4. **Label at creation and carry it downstream.** A classified field
    copied into a warehouse, an export, or a log keeps its
    classification, and pipelines must propagate the label rather than

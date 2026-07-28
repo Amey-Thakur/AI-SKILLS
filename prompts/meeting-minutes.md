@@ -1,6 +1,6 @@
 ---
 name: meeting-minutes
-description: Turn a transcript or rough notes into minutes people actually consult - decisions, actions, and open questions first.
+description: "Turn a transcript or rough notes into minutes people actually consult: decisions, actions, and open questions first."
 variables:
   - "{notes}: the transcript or raw notes"
   - "{meeting}: what the meeting was and who attended, if not in the notes"

@@ -15,32 +15,34 @@ changes someone owns.
 ## Method
 
 1. **Open with the presenter contract.** Before showing a single screen, the
-   designer states the problem being solved, the constraints, the fidelity stage,
-   and the two or three decisions they actually want feedback on. Without that
-   frame, the room defaults to bikeshedding whatever is easiest to have an
-   opinion about.
+   designer states the problem being solved, the constraints, the fidelity
+   stage, and the two or three decisions they actually want feedback on.
+   Without that frame, the room defaults to bikeshedding whatever is easiest
+   to have an opinion about.
 2. **Frame the user and the metric, not the feature.** Present the
    job-to-be-done, who has it, and what success looks like. Reviewers cannot
-   judge a checkout flow without knowing whether the goal is fewer steps or fewer
-   errors, and those pull in opposite directions.
+   judge a checkout flow without knowing whether the goal is fewer steps or
+   fewer errors, and those pull in opposite directions.
 3. **Enforce the feedback rules out loud.** Critique the design against the
    stated goal, not personal preference; ask "what problem does this solve"
-   before proposing an alternative; and separate observation from prescription. A
-   facilitator names it when someone jumps to a fix: "that is a solution, what is
-   the problem you saw".
+   before proposing an alternative; and separate observation from
+   prescription. A facilitator names it when someone jumps to a fix: "that
+   is a solution, what is the problem you saw".
 4. **Match critique altitude to fidelity.** Wireframes get flow and hierarchy
    feedback, not typography notes. Debating font pairing on a gray-box layout
    burns the session on decisions that were never on the table.
-5. **Sort feedback by weight as it lands.** Tag each point blocking, consider, or
-   nit. Blocking means the goal is not met, consider is the designer's call, and
-   a nit never justifies a redesign. Untagged feedback all sounds equally urgent.
+5. **Sort feedback by weight as it lands.** Tag each point blocking, consider,
+   or nit. Blocking means the goal is not met, consider is the designer's call,
+   and a nit never justifies a redesign. Untagged feedback all sounds equally
+   urgent.
 6. **Capture decisions, open questions, and owners in a running doc.** Write
    "Decided: single-step guest checkout. Open: forced login for returning users,
    owner Priya, due Friday." A critique held only in memory is one the group
    re-argues next week.
 7. **Close with the designer synthesizing.** The presenter restates what will
-   change, what they are deferring, and what they are rejecting and why. Critique
-   advises; the designer decides. If the room votes, it was never a critique.
+   change, what they are deferring, and what they are rejecting and why.
+   Critique advises; the designer decides. If the room votes, it was never a
+   critique.
 
 ## Signals
 

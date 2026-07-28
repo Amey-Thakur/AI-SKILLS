@@ -39,4 +39,4 @@ worse.
 Batch size is constrained by memory, which is often the binding
 constraint regardless of what is optimal. Its generalisation effect is
 smaller than data quality and architecture. Distributed training changes
-the effective batch across workers (see distributed-training).
+the effective batch across workers (see distributed-training-scaling).

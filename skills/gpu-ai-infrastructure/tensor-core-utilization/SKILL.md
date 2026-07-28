@@ -14,10 +14,10 @@ conditions and then confirm the cores lit up.
 
 ## Method
 
-1. **Feed the shapes the MMA units want.** The units work on fixed tiles, so keep
-   M, N, and K multiples of 8 for FP16 and BF16, and multiples of 16 for INT8.
-   On A100 and newer, cuBLAS is happiest when all three are multiples of 16. Pad
-   a dimension like 4095 up rather than leaving it odd.
+1. **Feed the shapes the MMA units want.** The units work on fixed tiles, so
+   keep M, N, and K multiples of 8 for FP16 and BF16, and multiples of 16 for
+   INT8. On A100 and newer, cuBLAS is happiest when all three are multiples of
+   16. Pad a dimension like 4095 up rather than leaving it odd.
 2. **Use a precision the cores accept.** Tensor cores run FP16, BF16, TF32,
    INT8, and FP8 on Hopper, not plain FP32. On Ampere and later, enable TF32
    (`torch.backends.cuda.matmul.allow_tf32 = True`) so existing FP32 matmuls
@@ -41,7 +41,8 @@ conditions and then confirm the cores lit up.
 6. **Raise arithmetic intensity so the cores stay fed.** Tensor cores are fast
    enough that many GEMMs turn memory-bound. Fuse the epilogue (bias,
    activation) into the GEMM, batch small matmuls together, and increase tile
-   reuse so HBM bandwidth is not the ceiling that hides the compute you unlocked.
+   reuse so HBM bandwidth is not the ceiling that hides the compute you
+   unlocked.
 
 ## Checks
 

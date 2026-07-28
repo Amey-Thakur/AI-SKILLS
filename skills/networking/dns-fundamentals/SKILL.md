@@ -33,8 +33,8 @@ nobody queries, or a stale cache still holds the old answer.
    an hour editing a zone nobody queries.
 5. **Give DNS its own redundancy.** Multiple nameservers across
    providers survive one provider's outage, and health-checked records
-   steer traffic away from a dead endpoint (see dns-failover-and-
-   traffic-steering). DNS is a dependency like any other.
+   steer traffic away from a dead endpoint (see multi-region-design).
+   DNS is a dependency like any other.
 
 ## Boundaries
 

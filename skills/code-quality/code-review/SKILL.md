@@ -37,7 +37,7 @@ evidence from the code in front of you.
 
 ## Reporting format
 
-For each finding: **file:line: one-sentence defect: the failing scenario , 
+For each finding: **file:line: one-sentence defect: the failing scenario,
 a suggested fix.** Lead with the verdict: "N findings, worst is X" so the
 reader knows the stakes in the first line. If the change is good, say so
 plainly and stop; inventing findings to look thorough is a defect in the

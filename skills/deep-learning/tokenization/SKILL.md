@@ -21,7 +21,7 @@ directly from where the boundaries fall.
 3. **Account for language cost differences.** Text in languages
    under-represented in the vocabulary uses several times more tokens
    for the same content, affecting both cost and effective context (see
-   i18n-localization).
+   character-encoding).
 4. **Measure context in tokens, not characters.** A character estimate
    is a rough approximation that fails exactly when the content is
    unusual (see context-window-management).

@@ -1,6 +1,6 @@
 ---
 name: io-optimization
-description: Reduce input/output cost by cutting round trips, moving fewer bytes, and turning random access into sequential access. Use when a workload is IO-bound: disk, network, or syscall overhead dominates while the CPU sits idle.
+description: "Reduce input/output cost by cutting round trips, moving fewer bytes, and turning random access into sequential access. Use when a workload is IO-bound: disk, network, or syscall overhead dominates while the CPU sits idle."
 ---
 
 # IO optimization
@@ -31,9 +31,9 @@ shrinking payloads, and following the medium's grain.
    even on SSDs. Sort work by key before reading, lay files out to be read the
    way they are written, and let the page cache and prefetcher help.
 5. **Move fewer bytes.** Request only the columns and rows you need instead of
-   `SELECT *` then filtering in code. Compress payloads that cross a slow link so
-   you trade cheap CPU for scarce bandwidth. Cache or memoize reads whose source
-   has not changed.
+   `SELECT *` then filtering in code. Compress payloads that cross a slow link
+   so you trade cheap CPU for scarce bandwidth. Cache or memoize reads whose
+   source has not changed.
 6. **Overlap IO with work.** Issue reads ahead of when they are consumed, use
    async or a small thread pool so a request in flight does not block unrelated
    computation, and pipeline stages so disk and CPU stay busy at once.

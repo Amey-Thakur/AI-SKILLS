@@ -19,10 +19,10 @@ merge order are the entire game.
    slice. Nothing transforms before the inventory is complete, because a missed
    call site is a broken build later.
 2. **Slice along dependency edges.** Group items into slices small enough to
-   review in one sitting, ordered so no slice depends on one not yet merged. Leaf
-   modules first, shared core last.
-3. **Transformers work in isolated worktrees.** Fan out one agent per slice, each
-   on its own git worktree touching only that slice's files. Load
+   review in one sitting, ordered so no slice depends on one not yet merged.
+   Leaf modules first, shared core last.
+3. **Transformers work in isolated worktrees.** Fan out one agent per slice,
+   each on its own git worktree touching only that slice's files. Load
    `backend-engineer-role`. Output a branch and a diff. Isolation is why two
    transformers never poison each other's context.
 4. **Verifier gates each slice.** Load `qa-engineer-role`. Run the slice's tests
@@ -34,20 +34,20 @@ merge order are the entire game.
    freshly merged main and re-running the suite before the next. Never merge two
    at once; that is how a green pair turns red together.
 6. **Keep main releasable throughout.** Every merged slice leaves main building
-   and passing. If a merge breaks main, revert it at once and send the slice back
-   rather than stacking fixes on a broken base.
+   and passing. If a merge breaks main, revert it at once and send the slice
+   back rather than stacking fixes on a broken base.
 
 ## Run it
 
 In Claude Code, run the inventory agent first, then spawn transformer subagents
 in a parallel batch, each in its own worktree so edits never collide. Run the
-verifier per slice, then merge sequentially as orchestrator. Pass `inventory.csv`
-and the per-slice verify files as shared artifacts. Terminate when every
-inventory row is transformed, verified, and merged with main green, or when a
-slice fails verify twice and escalates for a design fix. To port, use LangGraph
-with a fan-out over slices and a sequential merge node, a CrewAI Crew with
-parallel transform tasks and a gating verify task, or AutoGen agents coordinating
-through a shared task list.
+verifier per slice, then merge sequentially as orchestrator. Pass
+`inventory.csv` and the per-slice verify files as shared artifacts. Terminate
+when every inventory row is transformed, verified, and merged with main green,
+or when a slice fails verify twice and escalates for a design fix. To port, use
+LangGraph with a fan-out over slices and a sequential merge node, a CrewAI Crew
+with parallel transform tasks and a gating verify task, or AutoGen agents
+coordinating through a shared task list.
 
 ## Signals it works
 
@@ -58,6 +58,6 @@ through a shared task list.
 ## Boundaries
 
 This crew handles mechanical migrations where the target state is known, not
-redesigns where the new shape is still in question. It defers the cutover and any
-data backfill to the team's release process, and it will not merge a slice a
-human owner has not signed off when the change is irreversible.
+redesigns where the new shape is still in question. It defers the cutover
+and any data backfill to the team's release process, and it will not merge a
+slice a human owner has not signed off when the change is irreversible.

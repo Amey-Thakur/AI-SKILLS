@@ -1,6 +1,6 @@
 ---
 name: tsconfig-mastery
-description: Configure tsconfig.json deliberately: the flags that matter, module and target settings, and build vs typecheck configs. Use when setting up TypeScript compilation or debugging confusing module and output errors.
+description: "Configure tsconfig.json deliberately: the flags that matter, module and target settings, and build vs typecheck configs. Use when setting up TypeScript compilation or debugging confusing module and output errors."
 ---
 
 # tsconfig mastery

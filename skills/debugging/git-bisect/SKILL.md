@@ -24,7 +24,8 @@ script that exits 0 or non-zero.
    trip on this specific regression, not on unrelated breakage along the way.
 4. **Automate the walk with `git bisect run`.** Pass the command:
    `git bisect run ./check.sh`. Git tests each midpoint unattended and names the
-   first bad commit in about log2(N) steps, roughly nine for five hundred commits.
+   first bad commit in about log2(N) steps, roughly nine for five hundred
+   commits.
 5. **Exit 125 for commits you cannot test.** If a midpoint fails to build for an
    unrelated reason, have the script `exit 125` so git skips it instead of
    scoring it good or bad and corrupting the result.

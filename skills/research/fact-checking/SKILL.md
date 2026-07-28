@@ -1,6 +1,6 @@
 ---
 name: fact-checking
-description: Verify claims before stating them: trace to the source, corroborate independently, and separate fact from inference. Use when accuracy matters, especially before an agent asserts facts, numbers, or quotes.
+description: "Verify claims before stating them: trace to the source, corroborate independently, and separate fact from inference. Use when accuracy matters, especially before an agent asserts facts, numbers, or quotes."
 ---
 
 # Fact-checking

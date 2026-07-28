@@ -1,6 +1,6 @@
 ---
 name: batching-and-debouncing
-description: Coalesce a flood of small operations into fewer larger ones with batch windows, debounce, or throttle, chosen by whether you need the last event or a steady rate. Use when high-frequency triggers each do expensive work: per-keystroke queries, per-event writes, per-scroll handlers.
+description: "Coalesce a flood of small operations into fewer larger ones with batch windows, debounce, or throttle, chosen by whether you need the last event or a steady rate. Use when high-frequency triggers each do expensive work: per-keystroke queries, per-event writes, per-scroll handlers."
 ---
 
 # Batching and debouncing
@@ -29,10 +29,10 @@ either drop work you needed or run work you did not.
    coalesces more but delays every item by up to its length. Choose it against
    the tolerable delay: micro-batching writes at 10ms is invisible; a 5s window
    on a user action is not.
-5. **Preserve correctness across the coalesce.** For debounce, capture the latest
-   arguments, not the first. For batch, cap the buffer and flush on shutdown so
-   queued work is not lost on crash or deploy. Make the flush idempotent so a
-   retried batch does not double-apply.
+5. **Preserve correctness across the coalesce.** For debounce, capture the
+   latest arguments, not the first. For batch, cap the buffer and flush on
+   shutdown so queued work is not lost on crash or deploy. Make the flush
+   idempotent so a retried batch does not double-apply.
 6. **Give trailing edges and errors a policy.** Decide leading versus trailing
    invocation: fire immediately then go quiet, or wait then fire. On a failed
    batch flush, retry with backoff or dead-letter the items; never silently drop

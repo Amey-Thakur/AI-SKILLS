@@ -33,11 +33,12 @@ skill.
    interval is weakly known. Give the interval, and remember that with
    enough data, tiny, unimportant effects become significant (see
    statistical-inference).
-5. **Check the assumptions and the specification.** Multicollinearity (correlated
-   predictors make individual coefficients unstable and uninterpretable),
-   the right functional form (linear in the right variables, interactions
-   where they matter), and influential outliers. A model that violates its
-   assumptions produces confident, wrong coefficients.
+5. **Check the assumptions and the specification.** Multicollinearity
+   (correlated predictors make individual coefficients unstable and
+   uninterpretable), the right functional form (linear in the right
+   variables, interactions where they matter), and influential outliers. A
+   model that violates its assumptions produces confident, wrong
+   coefficients.
 6. **Resist the causal leap.** A regression coefficient is an association,
    not the effect of intervening, unless the data came from an experiment or
    you have carefully handled confounding. "Controlling for X" in a

@@ -20,8 +20,8 @@ than none because it buys false confidence.
    SSE-KMS, RDS, Cloud SQL. Switch it on at creation, because retrofitting an
    unencrypted volume is a full migration, not a config toggle.
 3. **Hold keys in a KMS, never in code.** Use AWS KMS, GCP KMS, or HashiCorp
-   Vault, and let the application call the service to encrypt, decrypt, or unwrap
-   a data key without ever touching the master key. Scan the repo for
+   Vault, and let the application call the service to encrypt, decrypt, or
+   unwrap a data key without ever touching the master key. Scan the repo for
    high-entropy strings before each release.
 4. **Use envelope encryption for bulk data.** Generate a data encryption key
    (DEK) per object, encrypt the payload with it, wrap the DEK under the KMS

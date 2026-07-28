@@ -19,7 +19,7 @@ with policy, which is faster and, done properly, safer.
    cloud-cost-optimization).
 3. **Provision with sensible defaults.** Encryption, backups, tagging,
    and network placement correct without the requester specifying them
-   (see encryption-at-rest).
+   (see data-encryption).
 4. **Require ownership metadata to provision.** Owner, purpose, and
    environment attached at creation, since untagged resources are
    unattributable later (see repository-permissions).

@@ -6,10 +6,10 @@ description: Shrink JavaScript bundles by analyzing what ships, enabling real tr
 # Bundle size
 
 A JavaScript bundle is code the browser must download, parse, and execute before
-the page becomes usable, and it accretes weight silently as dependencies pile up.
-Nobody adds a megabyte on purpose: it arrives one convenient import at a time.
-Shrink it by seeing what is inside, removing what is dead, and choosing lighter
-dependencies.
+the page becomes usable, and it accretes weight silently as dependencies pile
+up. Nobody adds a megabyte on purpose: it arrives one convenient import at a
+time. Shrink it by seeing what is inside, removing what is dead, and choosing
+lighter dependencies.
 
 ## Method
 
@@ -17,17 +17,17 @@ dependencies.
    `webpack-bundle-analyzer`, or Rollup's visualizer plugin. Find the biggest
    modules and the surprises: a date library, an entire icon set, the same
    package bundled twice.
-2. **Enable and verify tree shaking.** Ship ES modules rather than CommonJS, mark
-   `"sideEffects": false` where it holds, and build in production mode. Import
-   named exports (`import { debounce }`) instead of the whole namespace so the
-   bundler can drop what you do not use.
-3. **Put heavy, rarely used code behind a dynamic import.** Code-split routes and
-   large widgets, a charting library or a rich-text editor, with `import()` so
-   they load on demand instead of riding in the initial bundle.
+2. **Enable and verify tree shaking.** Ship ES modules rather than CommonJS,
+   mark `"sideEffects": false` where it holds, and build in production mode.
+   Import named exports (`import { debounce }`) instead of the whole namespace
+   so the bundler can drop what you do not use.
+3. **Put heavy, rarely used code behind a dynamic import.** Code-split routes
+   and large widgets, a charting library or a rich-text editor, with
+   `import()` so they load on demand instead of riding in the initial bundle.
 4. **Put the dependencies on a diet.** Replace `moment` with `date-fns` or
-   `Temporal`, swap all of `lodash` for per-method imports or native equivalents,
-   and pull only the components you use from a large UI library. Check the cost on
-   Bundlephobia before adding anything.
+   `Temporal`, swap all of `lodash` for per-method imports or native
+   equivalents, and pull only the components you use from a large UI
+   library. Check the cost on Bundlephobia before adding anything.
 5. **Dedupe transitive bloat.** Several versions of one package inflate the
    bundle. Run `npm dedupe`, inspect the lockfile, and collapse to a single copy
    with `resolutions` or `overrides`.

@@ -30,9 +30,9 @@ deferring without turning it into a stall on the first call.
    nodes as the user scrolls. A 10,000-row table then costs the twenty-odd
    visible rows, not all of them.
 5. **Defer off-screen media and data.** Add `loading="lazy"` to below-the-fold
-   images and iframes, and fetch a tab or panel's data when it opens, not on page
-   load. Prefetch on hover or intent so the deferred cost lands before the user
-   notices it.
+   images and iframes, and fetch a tab or panel's data when it opens, not on
+   page load. Prefetch on hover or intent so the deferred cost lands before the
+   user notices it.
 6. **Guard against the lazy stall and the waterfall.** A defer that runs a heavy
    synchronous load on first interaction just relocates the jank. Show a
    placeholder, load in the background, and avoid chains where each lazy step

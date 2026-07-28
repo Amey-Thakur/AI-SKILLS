@@ -13,14 +13,15 @@ occupancy and throughput metrics, not the headline gauge, and DCGM exposes them.
 ## Method
 
 1. **Stop trusting GPU-Util alone.** `DCGM_FI_DEV_GPU_UTIL` is time-based: the
-   fraction of samples with any active kernel. It says nothing about how many SMs
-   ran. A memory-bound or launch-latency-bound loop reads 100 percent while doing
-   a fraction of the FLOPs. Treat it as "not idle," never as "working hard."
+   fraction of samples with any active kernel. It says nothing about how many
+   SMs ran. A memory-bound or launch-latency-bound loop reads 100 percent
+   while doing a fraction of the FLOPs. Treat it as "not idle," never as
+   "working hard."
 2. **Measure SM activity and occupancy.** Pull `DCGM_FI_PROF_SM_ACTIVE`, the
    fraction of SMs with a resident warp, and `DCGM_FI_PROF_SM_OCCUPANCY`,
    resident warps against the maximum. SM_ACTIVE well below GPU_UTIL means the
-   card is busy running work that occupies few SMs: kernels too small or the grid
-   undersized.
+   card is busy running work that occupies few SMs: kernels too small or the
+   grid undersized.
 3. **Watch the tensor cores and memory pipes.** For mixed-precision training the
    metric that matters is `DCGM_FI_PROF_PIPE_TENSOR_ACTIVE`; on an A100 or H100
    doing real matmuls it should sit around 0.4 to 0.8. Compare it with
@@ -44,9 +45,12 @@ occupancy and throughput metrics, not the headline gauge, and DCGM exposes them.
 
 ## Signals
 
-- For a training job, is `PIPE_TENSOR_ACTIVE` high, or is GPU-Util masking near-idle tensor cores?
-- Can you list GPUs allocated to a job but sitting at SM_ACTIVE near zero right now?
-- Does power draw track the workload, or are cards coasting far below TDP while marked busy?
+- For a training job, is `PIPE_TENSOR_ACTIVE` high, or is GPU-Util masking
+  near-idle tensor cores?
+- Can you list GPUs allocated to a job but sitting at SM_ACTIVE near zero right
+  now?
+- Does power draw track the workload, or are cards coasting far below TDP while
+  marked busy?
 - Is every GPU metric tagged to an owner, so each pool of waste has a name?
 
 ## Boundaries

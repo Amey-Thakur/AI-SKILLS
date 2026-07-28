@@ -29,7 +29,7 @@ question with claims you can defend, each traceable to evidence.
 5. **Write the answer in three layers:**
    - *The answer*: two or three sentences, direct, first.
    - *The evidence*: the claims that support it, each attributed ("per the
-     v2 spec…", "the 2025 benchmark found…").
+     v2 spec...", "the 2025 benchmark found...").
    - *The edges*: what is uncertain, contested, or unknown, and what
      evidence would settle it.
 6. **Mark inference as inference.** When you bridge a gap ("A implies

@@ -42,8 +42,8 @@ abuse differently.
 ## Litmus tests
 
 - Does the limit cost more tokens for expensive endpoints than cheap ones?
-- Does login limiting key on both account and source, defeating single-
-  account brute force and single-IP spraying?
+- Does login limiting key on both account and source, defeating
+  single-account brute force and single-IP spraying?
 - Do counters survive across instances, or does adding a replica quietly
   raise the effective limit?
 - Does a throttled response carry 429 and `Retry-After`, not a bare 500 or a

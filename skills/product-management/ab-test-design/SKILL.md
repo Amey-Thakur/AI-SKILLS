@@ -26,7 +26,7 @@ error bars.
    honest answer is "eleven weeks", change the plan: bigger
    lever, higher-traffic surface, or a different method (see
    Boundaries). Underpowered tests produce coin-flips read as
-   insight (see statistical-power for the math).
+   insight (see statistical-inference for the math).
 3. **Randomize at the right unit, verify the split.** User-level
    (stable across sessions) for most product changes;
    cluster-level where users interact (marketplaces, social:

@@ -1,6 +1,6 @@
 ---
 name: email-subject-lines
-description: Write subject lines that get emails opened and found later: specific, honest, and action-signaling. Use when the subject line decides whether your email is opened, prioritized, or buried.
+description: "Write subject lines that get emails opened and found later: specific, honest, and action-signaling. Use when the subject line decides whether your email is opened, prioritized, or buried."
 ---
 
 # Email subject lines

@@ -1,6 +1,6 @@
 ---
 name: docs-as-code
-description: Treat documentation like code: in the repo, in pull requests, CI-checked, with preview builds. Use when docs drift from reality or the docs workflow is separate from the code workflow.
+description: "Treat documentation like code: in the repo, in pull requests, CI-checked, with preview builds. Use when docs drift from reality or the docs workflow is separate from the code workflow."
 ---
 
 # Docs as code

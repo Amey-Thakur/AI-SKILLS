@@ -28,12 +28,13 @@ The hard part is not caching, it is reconciling two histories that diverged.
    Assign ids client-side (UUIDs) so records exist and relate before the
    server ever sees them, avoiding the round-trip-for-an-id trap that
    forces online-only creation.
-4. **Choose a conflict policy per field, and write it down.** Last-write-
-   wins is acceptable for independent scalar fields with trustworthy
-   timestamps; it silently destroys data on concurrently edited text or
-   counters. Use per-field merge for documents, server-authoritative
-   resolution for money and inventory, and CRDTs only where true concurrent
-   editing is a product requirement, since they add real complexity.
+4. **Choose a conflict policy per field, and write it down.**
+   Last-write-wins is acceptable for independent scalar fields with
+   trustworthy timestamps; it silently destroys data on concurrently edited
+   text or counters. Use per-field merge for documents,
+   server-authoritative resolution for money and inventory, and CRDTs only
+   where true concurrent editing is a product requirement, since they add
+   real complexity.
 5. **Surface sync state honestly without blocking on it.** Show pending,
    synced, and failed at the record level, not a global spinner. Let the
    user keep working while a background sync runs. Escalate to the user only

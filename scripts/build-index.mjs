@@ -25,7 +25,19 @@ function frontmatter(path) {
     const kv = line.match(/^(\w[\w-]*):\s*(.*)$/);
     if (kv) {
       currentKey = kv[1];
-      fields[currentKey] = kv[2].trim().replace(/^"(.*)"$/, "$1");
+      const raw = kv[2].trim();
+      /* A YAML plain scalar may not contain ": ", so an unquoted value with a
+         colon makes the whole block unparseable for every real YAML loader
+         (Claude Code, Cursor) even though this regex reader would accept it.
+         Reject it here rather than shipping a skill that silently fails to
+         load. Quote the value in the file to fix. */
+      if (!/^["']/.test(raw) && /:\s/.test(raw)) {
+        throw new Error(
+          `Unquoted "${currentKey}" contains ": " in ${path}\n` +
+            `  ${raw}\n  Wrap the value in double quotes so the frontmatter is valid YAML.`
+        );
+      }
+      fields[currentKey] = raw.replace(/^"(.*)"$/, "$1");
     } else if (/^\s+-\s+/.test(line) && currentKey) {
       if (!Array.isArray(fields[currentKey])) fields[currentKey] = [];
       fields[currentKey].push(line.replace(/^\s+-\s+/, "").replace(/^"(.*)"$/, "$1"));
@@ -57,9 +69,16 @@ for (const category of readdirSync("skills").sort()) {
       .split(/(?<=[.!?])\s+/)
       .reverse()
       .find((s) => /^Use\s+\S/i.test(s.trim()));
+    if (!triggerSentence) {
+      throw new Error(
+        `No "Use ..." trigger sentence in ${path}\n` +
+          `  Agents select from index.json on use_when, so a skill without one is unfindable.`
+      );
+    }
     const useWhen = triggerSentence
-      ? triggerSentence.trim().replace(/^Use\s+/i, "").replace(/[.!?]+$/, "")
-      : null;
+      .trim()
+      .replace(/^Use\s+/i, "")
+      .replace(/[.!?]+$/, "");
     entries.push({
       kind: "skill",
       name: fm.name,

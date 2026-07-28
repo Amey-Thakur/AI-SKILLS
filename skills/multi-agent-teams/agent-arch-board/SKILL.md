@@ -15,16 +15,17 @@ reviewers who can read each other's scores converge and stop thinking.
 
 1. **Proposer writes the design.** Load `principal-architect-role`. Output
    `rfc.md` in the shape the `rfc-process` skill defines: context, at least two
-   options weighed, the recommendation, and the trade-offs it accepts. A proposal
-   with one option is advocacy, not design.
+   options weighed, the recommendation, and the trade-offs it accepts. A
+   proposal with one option is advocacy, not design.
 2. **Fan out to blind reviewers.** Spawn reviewers in parallel, each in an
    isolated context that cannot see the others. Give each a lens: load
-   `cloud-architect-role` for cost and scale, `security-engineer-role` for threat
-   surface, `site-reliability-engineer` for operability. Blindness is enforced,
-   not requested.
+   `cloud-architect-role` for cost and scale, `security-engineer-role` for
+   threat surface, `site-reliability-engineer` for operability. Blindness is
+   enforced, not requested.
 3. **Each reviewer scores against a rubric.** Output `review-<lens>.md`: a
-   verdict of approve, approve-with-conditions, or reject, with rationale tied to
-   named RFC sections. A reject must state what would turn it into an approve.
+   verdict of approve, approve-with-conditions, or reject, with rationale tied
+   to named RFC sections. A reject must state what would turn it into an
+   approve.
 4. **Chair synthesizes a binding decision.** Load `staff-engineer`. Read every
    review together, reconcile the conflicts, and issue `decision.md` as an
    architecture decision record: the call, the conditions attached, and which

@@ -20,13 +20,13 @@ in advance and repeatedly, that recovery works.
    not nightly dumps; RTO of one hour needs a restore
    process rehearsed to fit it.
 2. **Combine full backups with point-in-time recovery.**
-   Periodic full/base backups plus continuous transaction-
-   log archiving (WAL/binlog shipping) lets you restore to
-   any moment, not just the last nightly snapshot: essential
-   for recovering to just before a corruption or bad
-   migration (see database-migrations' pre-destructive
-   backup). Snapshot-only backups lose everything since the
-   last snapshot.
+   Periodic full/base backups plus continuous
+   transaction-log archiving (WAL/binlog shipping) lets you
+   restore to any moment, not just the last nightly
+   snapshot: essential for recovering to just before a
+   corruption or bad migration (see database-migrations'
+   pre-destructive backup). Snapshot-only backups lose
+   everything since the last snapshot.
 3. **Test restores on a schedule, automatically.** Regularly
    restore a backup to a scratch environment, verify the
    data (row counts, integrity checks, a smoke query),
@@ -42,15 +42,15 @@ in advance and repeatedly, that recovery works.
    and store copies isolated from production (separate
    account/credentials) so a compromise or operator error
    cannot destroy both primary and backups at once (the
-   ransomware and fat-finger threat: see cloud-disaster-
-   recovery's separate-account rule). A backup a compromised
-   admin can delete is not a backup.
+   ransomware and fat-finger threat: see
+   cloud-disaster-recovery's separate-account rule). A
+   backup a compromised admin can delete is not a backup.
 5. **Follow 3-2-1, cross-region.** Three copies, two media/
    locations, one off-site: in cloud terms, backups in a
-   different region and a different account (see cloud-
-   storage-selection's tiers for cost). A second copy in the
-   same account and region survives a disk failure but not
-   an account compromise or a regional outage.
+   different region and a different account (see
+   cloud-storage-selection's tiers for cost). A second copy
+   in the same account and region survives a disk failure
+   but not an account compromise or a regional outage.
 6. **Retain by policy, prune deliberately.** Keep backups
    long enough to recover from problems discovered late
    (corruption noticed a week later) and to meet compliance
@@ -68,8 +68,8 @@ in advance and repeatedly, that recovery works.
   too).
 - Restore time grows with data size; for large databases,
   RTO may require standby replicas or snapshot-based fast
-  restore, not a from-backup rebuild (see cloud-disaster-
-  recovery's tiers).
+  restore, not a from-backup rebuild (see
+  cloud-disaster-recovery's tiers).
 - Application-level backup (exporting logical data) and
   physical backup (the database's own mechanism) have
   different restore speeds and consistency guarantees;

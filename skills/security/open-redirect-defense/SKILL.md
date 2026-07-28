@@ -19,8 +19,8 @@ declining any destination you did not approve in advance.
 2. **If you must accept a URL, allowlist the host after parsing.** Parse the
    target with a real URL parser, then confirm the host matches an explicit
    list of your domains by exact comparison. Never judge with `startsWith` or a
-   substring: `https://yoursite.com.evil.com` and `https://evil.com/?u=yoursite.com`
-   both beat prefix checks.
+   substring: `https://yoursite.com.evil.com` and
+   `https://evil.com/?u=yoursite.com` both beat prefix checks.
 3. **Default to relative paths only.** When the feature only moves within your
    app, accept a target that begins with a single `/` and reject the rest.
    Block `//evil.com` and `/\evil.com`, which browsers read as

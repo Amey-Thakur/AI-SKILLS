@@ -33,7 +33,8 @@ footprint by attacking layout, allocation rate, and retention, in that order.
 5. **Stream instead of buffering the whole payload.** Reading a file or response
    into one string peaks at its full size; iterate line by line or in fixed
    chunks so peak memory is a window, not the total. Use generators, `io`
-   readers, or a SAX-style parser rather than loading a full document into a DOM.
+   readers, or a SAX-style parser rather than loading a full document into a
+   DOM.
 6. **Cap what you retain.** Bound caches and queues with an eviction policy (LRU
    with a max size) so retained memory has a ceiling. A cache with no bound is a
    slow leak that a heap profile eventually blames on the wrong code.

@@ -33,6 +33,8 @@ Rules for ads that convert:
 
 Give me 3-5 variations with different angles (benefit-led, problem-led,
 curiosity-led, social-proof-led) so they can be tested, plus headline and
-description split where the platform uses them. Rules: honest, no false claims
-or fake urgency (they underperform and risk the account). Match the audience's
-language. Mark any claim needing a real stat as a placeholder.
+description split where the platform uses them.
+
+Rules: honest, no false claims or fake urgency (they underperform and risk the
+account). Match the audience's language. Mark any claim needing a real stat as
+a placeholder.

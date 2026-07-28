@@ -68,6 +68,7 @@ everything else: cost control, quality, drift, and the eval suite.
   request is its own cost center): sample representatively
   and oversample the tails (errors, high-cost, flagged).
 - Vendor dashboards cover their slice (API calls); your
-  application's semantic layer (retrieval, tools, post-
-  processing, user outcomes) is yours to instrument, and
-  it is where the interesting failures live.
+  application's semantic layer (retrieval, tools,
+  post-processing, user outcomes) is yours to
+  instrument, and it is where the interesting failures
+  live.

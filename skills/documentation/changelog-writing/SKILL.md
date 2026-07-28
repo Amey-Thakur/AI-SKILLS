@@ -19,10 +19,10 @@ not a changelog, it is a diff with worse formatting.
    not internal commit-speak. "Refactored the auth module"
    means nothing to a user; "Sessions now expire after 24h
    (was 7 days)" tells them what to do.
-2. **Group by type, newest version first.** The keep-a-
-   changelog convention: per version, sections for Added,
-   Changed, Deprecated, Removed, Fixed, Security: so a
-   reader scans to the category they care about. A flat
+2. **Group by type, newest version first.** The
+   keep-a-changelog convention: per version, sections for
+   Added, Changed, Deprecated, Removed, Fixed, Security: so
+   a reader scans to the category they care about. A flat
    chronological list forces reading everything to find the
    breaking change buried in the middle.
 3. **Call out breaking changes loudly, with migration.**
@@ -41,10 +41,10 @@ not a changelog, it is a diff with worse formatting.
    commits (conventional-commits: see commit-messages) let
    tooling draft the changelog grouped by type; then a human
    edits for the user's perspective (merging noise, writing
-   the migration notes, promoting what matters): generated-
-   then-curated is complete without being a commit dump.
-   Pure generation lists every "fix typo"; pure hand-writing
-   omits things.
+   the migration notes, promoting what matters):
+   generated-then-curated is complete without being a commit
+   dump. Pure generation lists every "fix typo"; pure
+   hand-writing omits things.
 6. **Keep an Unreleased section, update as you go.** Add
    entries when the change lands (in the same PR: see
    docs-as-code), accumulating under Unreleased, promoted to

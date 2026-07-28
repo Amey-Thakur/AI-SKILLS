@@ -23,14 +23,15 @@ the code assumed impossible.
    weakest level that prevents the anomalies your logic
    cannot tolerate, and know what your database's default
    actually permits.
-2. **Match the level to the correctness need.** A read-
-   modify-write that must not lose updates (increment a
-   balance) needs repeatable-read-or-stronger, or explicit
-   locking, or an atomic operation: at read committed, two
-   transactions read the same value and one overwrites the
-   other (the lost update). Financial and inventory
-   invariants often need serializable; a dashboard read
-   tolerates read committed. Decide per transaction.
+2. **Match the level to the correctness need.** A
+   read-modify-write that must not lose updates (increment
+   a balance) needs repeatable-read-or-stronger, or
+   explicit locking, or an atomic operation: at read
+   committed, two transactions read the same value and one
+   overwrites the other (the lost update). Financial and
+   inventory invariants often need serializable; a
+   dashboard read tolerates read committed. Decide per
+   transaction.
 3. **Understand your engine: locking vs MVCC.** MVCC
    databases (Postgres, Oracle, MySQL/InnoDB) give readers a
    consistent snapshot without blocking writers (readers do
@@ -43,11 +44,11 @@ the code assumed impossible.
    sometimes repeatable read), the database aborts a
    transaction that would violate isolation rather than
    blocking: your code must catch the serialization-failure
-   error and retry the whole transaction (see timeouts-and-
-   retries's idempotent-retry discipline). Code that treats
-   these aborts as fatal errors breaks under load at
-   stronger isolation; the retry loop is mandatory, not
-   optional.
+   error and retry the whole transaction (see
+   timeouts-and-retries's idempotent-retry discipline). Code
+   that treats these aborts as fatal errors breaks under
+   load at stronger isolation; the retry loop is mandatory,
+   not optional.
 5. **Keep transactions short and focused.** Long
    transactions hold locks/snapshots longer, increasing
    contention, deadlocks, and (in MVCC) bloat from retained
@@ -56,12 +57,13 @@ the code assumed impossible.
    rule): open late, commit early, touch only what the unit
    of work needs.
 6. **Use explicit locking and atomic ops deliberately.**
-   `SELECT ... FOR UPDATE` to lock rows for a read-modify-
-   write, `SKIP LOCKED` for work-queue patterns (see
-   background-jobs), and atomic single-statement updates
-   (`SET balance = balance + ?`) to avoid the read-modify-
-   write race entirely. Often the cleanest fix is not a
-   higher isolation level but an atomic operation.
+   `SELECT ... FOR UPDATE` to lock rows for a
+   read-modify-write, `SKIP LOCKED` for work-queue
+   patterns (see background-jobs), and atomic
+   single-statement updates (`SET balance = balance + ?`)
+   to avoid the read-modify-write race entirely. Often the
+   cleanest fix is not a higher isolation level but an
+   atomic operation.
 
 ## Boundaries
 

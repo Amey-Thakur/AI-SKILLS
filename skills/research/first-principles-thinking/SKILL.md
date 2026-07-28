@@ -18,7 +18,7 @@ and slow, so reserve it for the problems where convention is the trap.
    cost $600/kWh" was treated as fixed until someone asked
    what the *materials* cost. Most stuck problems are stuck
    inside an assumption nobody has questioned (see
-   scientific-critical-thinking's interrogation).
+   hypothesis-driven-work's interrogation).
 2. **Separate hard constraints from inherited choices.**
    Physics, math, budget, and law are real constraints;
    "we've always done it this way", "the industry standard",
@@ -70,6 +70,6 @@ and slow, so reserve it for the problems where convention is the trap.
   assumptions carefully, not recklessly.
 - The output is hypotheses, not conclusions; a
   first-principles argument still needs empirical
-  validation (see scientific-critical-thinking), because
+  validation (see hypothesis-driven-work), because
   reasoning from fundamentals can be rigorous and still
   wrong about which fundamentals apply.

@@ -18,14 +18,14 @@ means choosing what not to serve so the remainder succeeds.
    begins, since work done then discarded is doubly wasteful.
 3. **Return a clear signal.** A proper overload response with retry
    guidance lets clients back off rather than retrying immediately (see
-   retry-strategies).
+   timeouts-and-retries).
 4. **Shed based on measured health.** Queue depth and latency, not just
    request rate, because capacity varies with what requests are doing.
 5. **Protect the critical path first.** Health checks and control
    operations must survive, or recovery becomes impossible.
 6. **Prevent retry amplification.** Clients retrying shed requests
    multiply load, so the response must discourage immediate retry (see
-   thundering-herd).
+   timeouts-and-retries).
 7. **Alert on shedding.** It is a capacity signal that needs a response
    even though the system is behaving correctly (see capacity-planning).
 

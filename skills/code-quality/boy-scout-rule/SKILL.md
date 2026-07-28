@@ -23,10 +23,12 @@ refactor no reviewer signed up for, and the original change drowns.
    mechanical diff and reads the real one closely, instead of untangling both.
 4. **Prefer reversible, low-risk edits.** Formatting, naming, extracting a
    constant, tightening a type: yes. Reordering call sequences, changing error
-   handling, swapping a data structure: no, those are changes in their own right.
-5. **Format the touched file, not the repo.** Run `prettier --write path/to/file`
-   or `ruff check --fix path/to/file`. A repo-wide reformat buries your real
-   change under thousands of unrelated lines and poisons the blame history.
+   handling, swapping a data structure: no, those are changes in their own
+   right.
+5. **Format the touched file, not the repo.** Run
+   `prettier --write path/to/file` or `ruff check --fix path/to/file`. A
+   repo-wide reformat buries your real change under thousands of unrelated
+   lines and poisons the blame history.
 6. **File larger rot, do not chase it.** Open a tracking issue naming the file
    and line, or add a comment linking that issue number. The rule improves what
    you pass through; it does not license a detour into a rewrite.

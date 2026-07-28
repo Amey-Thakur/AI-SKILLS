@@ -1,6 +1,6 @@
 ---
 name: ssrf-defense
-description: Prevent server-side request forgery by constraining where a user-influenced URL can make the server connect. Use when the server fetches a URL that came from a user: webhooks, link previews, image proxies, PDF renderers, or import-from-URL features.
+description: "Prevent server-side request forgery by constraining where a user-influenced URL can make the server connect. Use when the server fetches a URL that came from a user: webhooks, link previews, image proxies, PDF renderers, or import-from-URL features."
 ---
 
 # SSRF defense

@@ -1,6 +1,6 @@
 ---
 name: interaction-design
-description: Design how users act and the interface responds: affordances, feedback, states, and forgiving flows. Use when designing controls, flows, and interactive behavior, or fixing an interface that confuses or frustrates.
+description: "Design how users act and the interface responds: affordances, feedback, states, and forgiving flows. Use when designing controls, flows, and interactive behavior, or fixing an interface that confuses or frustrates."
 ---
 
 # Interaction design
@@ -19,7 +19,7 @@ promises obvious and the responses immediate.
    fail here; signal interactivity clearly (see visual-hierarchy).
 2. **Give immediate, proportional feedback.** Every action gets a response
    the user can perceive, fast: a button depresses, a toggle animates, a
-   save confirms, a long operation shows progress (see loading-states,
+   save confirms, a long operation shows progress (see empty-and-error-states,
    usability-heuristics). The response confirms the system heard them.
    Silence makes users click again and doubt.
 3. **Design all the states, not just the happy one.** Every interactive

@@ -38,8 +38,8 @@ field.
    PC. This handler is twenty lines and pays for itself the
    first week (see stack-trace-reading's ethic, bare-metal).
 4. **Treat reset causes as first-class telemetry.** Read and
-   log the reset-cause register every boot (watchdog, brown-
-   out, software, pin): fleets summarize it (see
+   log the reset-cause register every boot (watchdog,
+   brown-out, software, pin): fleets summarize it (see
    mobile-observability's crash-rate analog); a rising
    watchdog-reset rate is a hang epidemic announcing itself.
    Watchdog design: kicked from a health-checking task (never

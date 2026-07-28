@@ -55,4 +55,4 @@ guardrail.
   certain) causal case where experiments are impossible.
 - Causal inference from observational data is a deep field; this skill is
   the guardrail against the common leap, not the full methodology (see
-  experiment-design-basics, statistical-analysis).
+  experiment-design-basics, statistical-inference).

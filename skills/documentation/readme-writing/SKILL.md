@@ -26,11 +26,11 @@ material where it belongs: below, or elsewhere.
    configuration options and architecture buries the moment
    that earns their investment (see user-activation's
    time-to-value, docs edition).
-3. **Show, then tell.** A concrete runnable example (copy-
-   pasteable, actually tested: see docs-as-code) teaches more
-   than paragraphs of description; lead each capability with
-   what it looks like in use. Abstract feature lists convince
-   nobody; a working snippet does.
+3. **Show, then tell.** A concrete runnable example
+   (copy-pasteable, actually tested: see docs-as-code)
+   teaches more than paragraphs of description; lead each
+   capability with what it looks like in use. Abstract
+   feature lists convince nobody; a working snippet does.
 4. **Structure for scanning.** Clear headings in a
    predictable order (what, install, quickstart, usage,
    configuration, contributing, license), short paragraphs,

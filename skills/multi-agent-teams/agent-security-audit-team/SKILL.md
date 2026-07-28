@@ -17,7 +17,8 @@ role, because an unverified finding is a pattern match wearing a severity score.
   and trust boundaries.
 - **Reviewers** (`security-code-review`, `security-engineer-role`): one per
   surface, in parallel.
-- **Exploit skeptic** (`vulnerability-triage`): demands reachability and a repro.
+- **Exploit skeptic** (`vulnerability-triage`): demands reachability and a
+  repro.
 - **Assembler** (`technical-writer-role`): merges surviving findings into one
   report.
 
@@ -37,14 +38,15 @@ then assembly.
    no finding.
 4. **Run the exploit skeptic as a gate.** For each finding it asks: is the path
    reachable with realistic input, does auth block it, is there a compensating
-   control. Downgrade or drop unreachable ones, keeping the CWE note as hardening.
+   control. Downgrade or drop unreachable ones, keeping the CWE note as
+   hardening.
 5. **Score with CVSS adjusted for reachability, and dedupe.** The skeptic sets
    final severity; the reviewer's number is a claim. Collapse one root cause
    reported on two surfaces into a single finding.
 6. **Assemble one report ordered by risk.** `audit-report.md`: summary, findings
-   critical-first with repro and fix, the surfaces reviewed with nothing found so
-   scope is legible, and residual risk. Stop when every surface has a verdict and
-   every critical and high has a skeptic ruling.
+   critical-first with repro and fix, the surfaces reviewed with nothing found
+   so scope is legible, and residual risk. Stop when every surface has a verdict
+   and every critical and high has a skeptic ruling.
 
 ## Run it
 

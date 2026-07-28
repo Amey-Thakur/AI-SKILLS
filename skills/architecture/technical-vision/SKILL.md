@@ -39,12 +39,12 @@ is the coherence that lets teams decide locally and still converge.
    the vision brittle.
 4. **Make it decision-useful.** The test of a vision: can a
    team facing a design choice consult it and know which
-   option moves toward the destination? Encode the load-
-   bearing principles (data ownership, sync vs async, build
-   vs buy defaults: see managed-vs-selfhosted) so daily
-   decisions (see architecture-decision-records) ladder up
-   to it without a meeting. A vision nobody consults while
-   deciding is decoration.
+   option moves toward the destination? Encode the
+   load-bearing principles (data ownership, sync vs async,
+   build vs buy defaults: see managed-vs-selfhosted) so
+   daily decisions (see architecture-decision-records)
+   ladder up to it without a meeting. A vision nobody
+   consults while deciding is decoration.
 5. **Build it with the people who will execute it.** A
    vision handed down is resisted; one shaped with the
    engineers who will build it and the stakeholders it

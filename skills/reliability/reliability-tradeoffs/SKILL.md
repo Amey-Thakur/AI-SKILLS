@@ -22,7 +22,7 @@ both under-investment and gold-plating.
    failing.
 4. **Consider cheaper alternatives first.** Faster recovery is often
    more cost-effective than preventing failure, and users tolerate a
-   short outage better than a slow product (see incident-response).
+   short outage better than a slow product (see rollback-strategy).
 5. **Include the velocity cost.** Heavy change control buys stability
    and slows delivery, which is a real cost to state (see
    error-budget-policy).

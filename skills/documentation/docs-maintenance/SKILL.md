@@ -15,11 +15,11 @@ systematic because good intentions do not survive a busy quarter.
 
 1. **Test what can be tested.** Code examples run in CI (see
    docs-as-code, tutorial-writing), links checked, generated
-   reference regenerated on every build (see api-reference-
-   docs): so the mechanically-verifiable parts of docs break
-   the build when they drift, not the reader's afternoon
-   three months later. This catches the highest-impact
-   staleness automatically.
+   reference regenerated on every build (see
+   api-reference-docs): so the mechanically-verifiable parts
+   of docs break the build when they drift, not the reader's
+   afternoon three months later. This catches the
+   highest-impact staleness automatically.
 2. **Change docs with the code that invalidates them.** The
    PR that changes behavior updates the affected docs (see
    docs-as-code): this is the single most effective
@@ -45,17 +45,17 @@ systematic because good intentions do not survive a busy quarter.
    features get removed (see feature-sunsetting's honesty);
    superseded guides get a redirect or a clear "outdated,
    see X"; the docs graveyard of half-true old pages is its
-   own information-architecture problem (see docs-
-   information-architecture). Deleting stale docs is
+   own information-architecture problem (see
+   docs-information-architecture). Deleting stale docs is
    maintenance, not loss: a wrong page removed is a reader
    un-misled.
 6. **Make maintenance low-friction and shared.** If fixing a
    doc is a one-line PR with a preview (see docs-as-code),
-   the whole team fixes what they notice (see boy-scout-
-   rule); if it requires a separate CMS and process, only
-   the docs silo touches it and drift wins. Low friction
-   plus shared ownership is what makes maintenance actually
-   happen.
+   the whole team fixes what they notice (see
+   boy-scout-rule); if it requires a separate CMS and
+   process, only the docs silo touches it and drift wins.
+   Low friction plus shared ownership is what makes
+   maintenance actually happen.
 
 ## Boundaries
 

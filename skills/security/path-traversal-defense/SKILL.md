@@ -30,10 +30,10 @@ location and prove it still sits inside the jail.
    client id to a server-held path through a lookup table or a UUID, so the
    user never supplies path text at all. No traversal is possible against a
    value that is never concatenated into a path.
-5. **Decode before you validate, once.** Percent-decode and Unicode-
-   normalize the input, then check, so `%2e%2e%2f` and overlong encodings do
-   not slip past a filter that ran on the raw string. Decode exactly once to
-   avoid double-decoding surprises.
+5. **Decode before you validate, once.** Percent-decode and
+   Unicode-normalize the input, then check, so `%2e%2e%2f` and overlong
+   encodings do not slip past a filter that ran on the raw string. Decode
+   exactly once to avoid double-decoding surprises.
 6. **Validate archive entries on extraction.** Zip Slip is traversal by
    another name: check every entry's resolved destination against the target
    directory before writing, because an archive can carry `../` in member

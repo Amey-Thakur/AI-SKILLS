@@ -14,7 +14,7 @@ deliberately getting out of the way.
 
 1. **Give the community one clear job.** Peer support,
    show-and-tell, contributor coordination, practice
-   exchange (see the multi-agent-teams' role-clarity
+   exchange (see the agent-role-definition' role-clarity
    instinct, applied to humans): the job decides the
    platform (forum for searchable knowledge that
    compounds: see technical-seo's durable-content logic;

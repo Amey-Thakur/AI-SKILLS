@@ -25,7 +25,7 @@ handing someone capability and handing them a working procedure.
    instruction.
 5. **Name them for the outcome.** review_pull_request rather than
    analysis_prompt, since users pick from a list by what they want to
-   achieve (see prompt-templates).
+   achieve (see system-prompt-design).
 6. **Version them with the server.** A template referencing a tool that
    changed shape produces confusing failures.
 7. **Test across the models your users run.** Prompt behaviour differs

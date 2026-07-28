@@ -31,8 +31,10 @@ Rules for strong bullets:
 - Start each with a strong, varied verb; no "responsible for", "helped with",
   "worked on".
 
-Give me 3-5 bullets per role/project, best first. Rules: honest, every bullet
-must be something I could defend in an interview: do not inflate or fabricate.
-Cut vague filler and buzzwords (detail-oriented, team player, synergy).
-Concise: one line each where possible. If a bullet is weak because the
-underlying work is unclear, tell me what detail would make it stronger.
+Give me 3-5 bullets per role/project, best first.
+
+Rules: honest, every bullet must be something I could defend in an interview:
+do not inflate or fabricate. Cut vague filler and buzzwords (detail-oriented,
+team player, synergy). Concise: one line each where possible. If a bullet is
+weak because the underlying work is unclear, tell me what detail would make it
+stronger.

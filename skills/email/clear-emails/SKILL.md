@@ -1,6 +1,6 @@
 ---
 name: clear-emails
-description: Write emails that get read and acted on: one clear purpose, the ask up front, and only what the reader needs. Use when writing any email that must be understood and answered without back-and-forth.
+description: "Write emails that get read and acted on: one clear purpose, the ask up front, and only what the reader needs. Use when writing any email that must be understood and answered without back-and-forth."
 ---
 
 # Clear emails

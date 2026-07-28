@@ -6,9 +6,10 @@ description: Cut the CPU and bytes spent turning objects into wire or disk forma
 # Serialization performance
 
 Every service that crosses a process boundary pays to encode and decode, and on
-a hot path that cost can rival the work itself. JSON is readable and slow; binary
-formats are fast and opaque. The wins come from choosing the format for the job,
-reusing the expensive setup, and not copying bytes you could read in place.
+a hot path that cost can rival the work itself. JSON is readable and slow;
+binary formats are fast and opaque. The wins come from choosing the format for
+the job, reusing the expensive setup, and not copying bytes you could read in
+place.
 
 ## Method
 
@@ -24,18 +25,18 @@ reusing the expensive setup, and not copying bytes you could read in place.
    schema, or JSON schema once and hold it; recompiling per call is pure waste.
    Reuse a configured encoder (a pooled encoder, a `TSerializer`) rather than
    constructing one per message.
-4. **Reuse buffers to cut allocation.** Encode into a pooled or preallocated byte
-   buffer (`sync.Pool`, a reused `bytes.Buffer`, a scratch array) so a high-QPS
-   path does not allocate and free a fresh buffer per message and feed the
-   collector.
+4. **Reuse buffers to cut allocation.** Encode into a pooled or preallocated
+   byte buffer (`sync.Pool`, a reused `bytes.Buffer`, a scratch array) so a
+   high-QPS path does not allocate and free a fresh buffer per message and feed
+   the collector.
 5. **Read in place with zero-copy where the format allows.** Flatbuffers and
    Cap'n Proto let you access fields with no parse step; memory-mapped Arrow and
    read-only byte views avoid copying large blobs. Slice or view the underlying
    bytes instead of duplicating them into new objects.
 6. **Serialize only what the consumer needs.** Trim fields the reader ignores,
    project columns for a columnar format, and stream a large collection
-   record-by-record instead of building one giant in-memory document. Fewer bytes
-   encoded is less CPU and less GC.
+   record-by-record instead of building one giant in-memory document. Fewer
+   bytes encoded is less CPU and less GC.
 
 ## Litmus tests
 
@@ -48,6 +49,6 @@ reusing the expensive setup, and not copying bytes you could read in place.
 ## Boundaries
 
 This covers turning objects into bytes and back. Compressing those bytes after
-encoding, and picking the codec, is compression-tradeoffs; reducing the number of
-round trips that carry them is io-optimization. Schema evolution and versioning
-are the format's own contract, not a performance question.
+encoding, and picking the codec, is compression-tradeoffs; reducing the number
+of round trips that carry them is io-optimization. Schema evolution and
+versioning are the format's own contract, not a performance question.

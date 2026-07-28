@@ -21,10 +21,10 @@ Must include: {key_points}
 Tone: {tone}
 
 Rules:
-- Subject line first: specific and scannable ("Contract renewal - decision
+- Subject line first: specific and scannable ("Contract renewal: decision
   needed by Friday", never "Quick question").
 - First sentence states why you are writing. No "hope this finds you well"
-  unless the relationship genuinely calls for warmth - and then one line,
+  unless the relationship genuinely calls for warmth, and then one line,
   specific, not boilerplate.
 - One paragraph per point from {key_points}, shortest workable version.
 - If anything is being asked of the recipient, end with exactly what and by

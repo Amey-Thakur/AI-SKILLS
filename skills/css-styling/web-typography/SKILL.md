@@ -34,8 +34,8 @@ right and the design is 80% done before a single decorative choice.
 6. **Turn on the quiet features.** `text-wrap: balance` on headings,
    `text-wrap: pretty` on paragraphs where supported;
    `font-variant-numeric: tabular-nums` in tables; real quotes and
-   `hyphens: auto` for justified or narrow columns; `-webkit-font-
-   smoothing` left alone.
+   `hyphens: auto` for justified or narrow columns;
+   `-webkit-font-smoothing` left alone.
 
 ## Boundaries
 

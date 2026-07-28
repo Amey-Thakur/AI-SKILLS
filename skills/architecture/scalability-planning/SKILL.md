@@ -30,13 +30,13 @@ that is architecture astronomy you will rebuild before you reach it.
    scary-looking one.
 3. **Scale horizontally by removing shared state.** Stateless
    services scale by adding instances (see
-   autoscaling-policies); the hard part is the stateful
-   tier. Push state to the data layer, make services share
-   nothing, and design the data layer to scale
-   (read replicas for read-heavy, sharding/partitioning for
-   write-heavy: see sharding-partitioning, materialized-
-   views, caching-strategy). The stateless tier is easy;
-   the plan is really a data-scaling plan.
+   autoscaling-policies); the hard part is the stateful tier.
+   Push state to the data layer, make services share nothing,
+   and design the data layer to scale (read replicas for
+   read-heavy, sharding/partitioning for write-heavy: see
+   sharding-partitioning, materialized-views,
+   caching-strategy). The stateless tier is easy; the plan is
+   really a data-scaling plan.
 4. **Design for the next 10x, not the current 1x or a
    fantasy 1000x.** Architect so the known next order of
    magnitude does not require a rewrite, and no further:

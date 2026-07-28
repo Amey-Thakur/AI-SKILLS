@@ -34,15 +34,15 @@ weighed anything else or simply picked the first idea that compiled.
    privacy, latency, and on-call load. Reviewers from those areas read straight
    to their paragraph, and a missing one bounces the doc back before the design
    is even discussed.
-6. **Circulate for comment, then hold the review.** Share the doc days ahead, let
-   reviewers leave inline comments, and resolve each in the doc before or during
-   a scheduled review with the tech lead and affected teams. Approval is an owner
-   marking it LGTM, not silence on a thread.
+6. **Circulate for comment, then hold the review.** Share the doc days ahead,
+   let reviewers leave inline comments, and resolve each in the doc before or
+   during a scheduled review with the tech lead and affected teams. Approval is
+   an owner marking it LGTM, not silence on a thread.
 
 ## Litmus tests
 
-- Could a reviewer who dislikes your choice find the paragraph that answers their
-  objection, or would they have to raise it live?
+- Could a reviewer who dislikes your choice find the paragraph that answers
+  their objection, or would they have to raise it live?
 - Does every rejected alternative carry a reason specific to it, not boilerplate
   that would fit any option?
 - Are the non-goals load-bearing, so that deleting one would widen scope?
@@ -51,5 +51,6 @@ weighed anything else or simply picked the first idea that compiled.
 
 A one-day bug fix needs no doc: the ritual pays off only when a wrong approach
 costs more than writing the argument does. Follow the team's template and
-approval convention where one exists, and defer to the rfc-process skill when the
-decision needs a wider, time-boxed audience than a single review can gather.
+approval convention where one exists, and defer to the rfc-process skill when
+the decision needs a wider, time-boxed audience than a single review can
+gather.

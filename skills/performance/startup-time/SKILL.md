@@ -28,11 +28,12 @@ precompiling what must run, and pruning what should not be there at all.
    lines where you can.
 5. **Defer connections and warmups past the critical path.** Opening database
    pools, fetching config over the network, or priming caches at import time
-   blocks the first response. Do it lazily or in the background after the process
-   reports ready.
-6. **Measure cold and warm starts separately.** For serverless, a fresh container
-   and a warm invocation differ by an order of magnitude. Time both and optimize
-   the one that hits your p99: cold start for spiky, bursty traffic.
+   blocks the first response. Do it lazily or in the background after the
+   process reports ready.
+6. **Measure cold and warm starts separately.** For serverless, a fresh
+   container and a warm invocation differ by an order of magnitude. Time both
+   and optimize the one that hits your p99: cold start for spiky, bursty
+   traffic.
 
 ## Signals
 

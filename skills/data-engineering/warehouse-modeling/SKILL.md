@@ -18,8 +18,8 @@ and every metric downstream double-counts.
    don't match" tickets.
 2. **Facts are events with foreign keys and measures.** Numeric,
    additive measures (amounts, quantities, durations) plus keys to
-   dimensions; no free-text descriptions in facts. Keep facts append-
-   friendly and thin; width belongs in dimensions.
+   dimensions; no free-text descriptions in facts. Keep facts
+   append-friendly and thin; width belongs in dimensions.
 3. **Dimensions carry the descriptive weight, conformed.** One
    `dim_customer`, one `dim_date`, shared by every fact so metrics
    slice consistently across marts. Surrogate keys (hash or sequence)

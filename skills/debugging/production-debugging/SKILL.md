@@ -30,10 +30,10 @@ possible, escalating from pure observation to reversible action to writes.
    it. Test the fix on your own account first.
 4. **Add targeted observability instead of guessing.** When the existing
    signals fall short, add a scoped log line or span for the specific code
-   path and ship it, or attach a sampling profiler (`py-spy`, `async-
-   profiler`, `perf`) that reads a live process without stopping it. Never
-   attach a breakpoint debugger to a serving instance: it freezes every
-   request on that node.
+   path and ship it, or attach a sampling profiler (`py-spy`,
+   `async-profiler`, `perf`) that reads a live process without stopping
+   it. Never attach a breakpoint debugger to a serving instance: it
+   freezes every request on that node.
 5. **Isolate the blast radius before you write.** If a write is truly
    required, scope it to one tenant or one record, wrap it in a transaction
    you can roll back, and confirm the row count before commit. Take a backup

@@ -14,10 +14,10 @@ for a control. Build for an environment where the user may be the adversary.
 ## Method
 
 1. **Store secrets in the hardware-backed store, not flat files.** Put tokens
-   and keys in the iOS Keychain with `kSecAttrAccessibleWhenUnlockedThisDeviceOnly`,
-   or the Android Keystore, never in `UserDefaults`, `SharedPreferences`,
-   SQLite, or a plist. Those sit in cleartext in the sandbox and in cloud
-   backups.
+   and keys in the iOS Keychain with
+   `kSecAttrAccessibleWhenUnlockedThisDeviceOnly`, or the Android Keystore,
+   never in `UserDefaults`, `SharedPreferences`, SQLite, or a plist. Those
+   sit in cleartext in the sandbox and in cloud backups.
 2. **Ship no long-lived secret in the binary.** Anything compiled in falls out
    to `strings`, Hopper, or jadx. Keep API secrets server-side, hand the app
    short-lived tokens, and route any third-party call that needs a secret

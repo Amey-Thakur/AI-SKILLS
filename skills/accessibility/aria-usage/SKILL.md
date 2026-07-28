@@ -14,13 +14,13 @@ require. Native first, ARIA carefully.
 ## Method
 
 1. **Prefer native HTML elements (the first rule of ARIA).**
-   A `<button>` is accessible for free: focusable, keyboard-
-   operable, announced as a button. A `<div role="button">`
-   requires you to add tabindex, keyboard handlers, and
-   states manually, and you will miss some. Use `<button>`,
-   `<a>`, `<input>`, `<select>`, `<nav>`, `<main>` before
-   reaching for ARIA: native semantics beat reimplemented
-   ones every time.
+   A `<button>` is accessible for free: focusable,
+   keyboard-operable, announced as a button. A
+   `<div role="button">` requires you to add tabindex,
+   keyboard handlers, and states manually, and you will miss
+   some. Use `<button>`, `<a>`, `<input>`, `<select>`,
+   `<nav>`, `<main>` before reaching for ARIA: native
+   semantics beat reimplemented ones every time.
 2. **Understand roles, states, and properties.** Role (what
    it is: `role="tab"`), states (current condition, dynamic:
    `aria-selected="true"`, `aria-expanded="false"`),

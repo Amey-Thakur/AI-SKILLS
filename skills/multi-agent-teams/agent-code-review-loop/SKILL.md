@@ -14,8 +14,10 @@ loop over.
 
 ## Roles
 
-- **Author** (`backend-engineer-role` or the owning builder): defends and fixes the diff.
-- **Reviewer** (`code-review`): files verified findings and audits the resolutions.
+- **Author** (`backend-engineer-role` or the owning builder): defends and fixes
+  the diff.
+- **Reviewer** (`code-review`): files verified findings and audits the
+  resolutions.
 
 ## Method
 
@@ -26,19 +28,19 @@ loop over.
    defect, failing scenario, suggested fix`. Severity is blocker, major, minor,
    or nit. A finding with no location and no scenario is a question, and it is
    filed as one.
-3. **Require a verification pass.** Before reporting, the reviewer constructs the
-   concrete input or state that triggers the defect and the wrong result it
+3. **Require a verification pass.** Before reporting, the reviewer constructs
+   the concrete input or state that triggers the defect and the wrong result it
    produces. If it cannot build that scenario, the finding is dropped. This one
    rule kills invented nitpicks.
 4. **Author resolves each finding explicitly.** For every item: fixed, with the
-   commit, or rebutted, with a reason. No silent drops. The resolution log is the
-   artifact the next round reads, so nothing is lost between passes.
+   commit, or rebutted, with a reason. No silent drops. The resolution log is
+   the artifact the next round reads, so nothing is lost between passes.
 5. **Enforce the convergence rule.** The loop ends when no blockers or majors
    remain open and the latest pass surfaced no new ones. Cap at three rounds;
    past that, escalate the disagreement to a human rather than iterate on taste.
 6. **Forbid reopening without new evidence.** A reviewer cannot re-raise a
-   resolved finding unless it names a fresh failing scenario. This stops the loop
-   from thrashing on the same line across rounds.
+   resolved finding unless it names a fresh failing scenario. This stops
+   the loop from thrashing on the same line across rounds.
 
 ## Run it
 

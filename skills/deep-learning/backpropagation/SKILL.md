@@ -27,9 +27,10 @@ gradient that vanished, exploded, or never reached a parameter.
 5. **Verify gradients when implementing anything custom.** Comparing
    against numerical estimates catches sign and indexing errors that
    otherwise present as mysteriously poor training.
-6. **Remember what stops gradients.** Detached tensors, non-
-   differentiable operations, and no-gradient contexts silently cut the
-   path, and a parameter that never updates usually has one upstream.
+6. **Remember what stops gradients.** Detached tensors,
+   non-differentiable operations, and no-gradient contexts silently cut
+   the path, and a parameter that never updates usually has one
+   upstream.
 7. **Inspect gradient norms during training.** Per-layer norms show
    where signal is lost far more directly than the loss curve does (see
    training-loop-design).
@@ -40,4 +41,4 @@ Understanding backpropagation explains training dynamics; it does not
 determine whether an architecture suits a problem. Frameworks handle the
 mechanics correctly, so hand-derivation is rarely needed. Numerical
 precision affects gradients materially at low precision (see
-gpu-precision-modes).
+mixed-precision-deployment).

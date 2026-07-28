@@ -1,6 +1,6 @@
 ---
 name: inbox-management
-description: Manage an email inbox so it is a task list you control, not a source of stress: triage, process, and protect focus. Use when email volume is overwhelming or the inbox has become an anxiety pile.
+description: "Manage an email inbox so it is a task list you control, not a source of stress: triage, process, and protect focus. Use when email volume is overwhelming or the inbox has become an anxiety pile."
 ---
 
 # Inbox management

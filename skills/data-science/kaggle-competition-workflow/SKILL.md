@@ -1,6 +1,6 @@
 ---
 name: kaggle-competition-workflow
-description: Approach a Kaggle (or any ML competition) systematically: trustworthy validation, strong baseline, then disciplined iteration. Use when entering a data competition and want to place well without wasting the timeline.
+description: "Approach a Kaggle (or any ML competition) systematically: trustworthy validation, strong baseline, then disciplined iteration. Use when entering a data competition and want to place well without wasting the timeline."
 ---
 
 # Kaggle competition workflow

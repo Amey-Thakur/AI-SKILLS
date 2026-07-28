@@ -25,7 +25,7 @@ Method:
    maintenance burden). State them and why each matters here.
 2. Assess every option against every criterion with specifics, not
    adjectives: what it costs, what breaks, what it forecloses. Where you
-   lack the information, write "unknown - would need {what}" instead of
+   lack the information, write "unknown: would need [what]" instead of
    guessing.
 3. Note any option that is dominated (worse on everything) and set it
    aside explicitly.

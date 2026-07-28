@@ -1,6 +1,6 @@
 ---
 name: deep-research
-description: Run a thorough multi-source research investigation end to end: plan, search broadly, verify, and synthesize a cited answer. Use when a question needs deep, autonomous research across many sources, not a quick lookup.
+description: "Run a thorough multi-source research investigation end to end: plan, search broadly, verify, and synthesize a cited answer. Use when a question needs deep, autonomous research across many sources, not a quick lookup."
 ---
 
 # Deep research
@@ -52,9 +52,9 @@ autonomously without cutting corners.
   justify it. Most questions need a quick lookup and a source check, not
   the full loop (see research-planning's depth budget).
 - Thoroughness is not the appearance of it: many low-quality sources are
-  not depth, and a long report is not a good one. Depth is verified
-  primary evidence and real synthesis, not volume (see the completeness-vs-
-  padding tension in scientific-critical-thinking).
+  not depth, and a long report is not a good one. Depth is verified primary
+  evidence and real synthesis, not volume (see the completeness-vs-padding
+  tension in research-synthesis).
 - For an autonomous agent, the loop must include verification and
   grounding at every step; an agent that searches and synthesizes without
   fact-checking confidently launders errors into a citation-shaped answer

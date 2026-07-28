@@ -69,7 +69,7 @@ deliberately as code, is what stops "works in staging" bugs and
   powerful and dangerous: it needs the same validation,
   audit, and rollback as deploys, or it becomes an
   ungoverned change channel (see automation-guardrails).
-- Config-as-code stops at secrets; the encrypted-or-
-  referenced rule (see secrets-management, gitops-workflow)
-  is the hard boundary, because a leaked config repo must
-  not be a leaked credential set.
+- Config-as-code stops at secrets; the
+  encrypted-or-referenced rule (see secrets-management,
+  gitops-workflow) is the hard boundary, because a leaked
+  config repo must not be a leaked credential set.

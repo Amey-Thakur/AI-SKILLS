@@ -43,7 +43,8 @@ into milliseconds instead of shaving percent.
 
 - Did a profiler, not a hunch, name this function as the bottleneck?
 - Can you state the old and new complexity class in Big-O terms?
-- At production n, is the replacement measurably faster, not just asymptotically?
+- At production n, is the replacement measurably faster, not just
+  asymptotically?
 - If you memoized, are the inputs genuinely repeated and the function pure?
 
 ## Boundaries

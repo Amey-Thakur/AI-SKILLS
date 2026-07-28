@@ -32,8 +32,10 @@ Structure for retention:
   satisfied, not begged at the start.
 
 Write it as spoken language (short sentences, natural rhythm, how you actually
-talk), not written prose. Mark [b-roll], [on-screen text], or [demo] cues where
-they help. Rules: in your real voice, not generic YouTuber patter. Specific and
-valuable over filler (viewers leave when it drags). Deliver on the hook's
-promise: clickbait that does not pay off kills the channel. Suggest 2-3 title
-options and a hook variation.
+talk), not written prose. Mark [b-roll], [on-screen text], or [demo] cues
+where they help.
+
+Rules: in your real voice, not generic YouTuber patter. Specific and valuable
+over filler (viewers leave when it drags). Deliver on the hook's promise:
+clickbait that does not pay off kills the channel. Suggest 2-3 title options
+and a hook variation.

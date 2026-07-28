@@ -1,6 +1,6 @@
 ---
 name: experiment-analysis
-description: Analyze A/B test results correctly: effect size with intervals, guardrails, segments, and the peeking and Simpson traps. Use when reading out an experiment and deciding whether the change worked, before you ship it.
+description: "Analyze A/B test results correctly: effect size with intervals, guardrails, segments, and the peeking and Simpson traps. Use when reading out an experiment and deciding whether the change worked, before you ship it."
 ---
 
 # Experiment analysis

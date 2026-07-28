@@ -1,6 +1,6 @@
 ---
 name: npm-publishing
-description: Publish an npm package that installs and imports cleanly: correct exports map, dual formats, types, and semver. Use when releasing a library to npm or fixing a package consumers cannot import.
+description: "Publish an npm package that installs and imports cleanly: correct exports map, dual formats, types, and semver. Use when releasing a library to npm or fixing a package consumers cannot import."
 ---
 
 # npm publishing

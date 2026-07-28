@@ -19,10 +19,10 @@ report that lands in a drawer while the same holes stay open.
    plus named exclusions (third-party SaaS you cannot authorize) keeps the
    effort where it pays.
 2. **Write rules of engagement before anyone connects.** Agree on the test
-   window, permitted intensity, whether social engineering and denial-of-
-   service are allowed, a data-handling clause for anything sensitive found,
-   and an emergency stop contact. Get written authorization from the asset
-   owner: testing without it is a crime, not a test.
+   window, permitted intensity, whether social engineering and
+   denial-of-service are allowed, a data-handling clause for anything
+   sensitive found, and an emergency stop contact. Get written authorization
+   from the asset owner: testing without it is a crime, not a test.
 3. **Choose the access model deliberately.** Decide black-box, gray-box, or
    white-box, and provision test accounts at each privilege level, staging
    credentials, and source or API docs accordingly. A gray-box test with real

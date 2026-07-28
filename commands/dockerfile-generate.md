@@ -33,6 +33,8 @@ Requirements:
   and anything secret.
 
 Output the Dockerfile and the .dockerignore, both in code blocks, with brief
-comments explaining the non-obvious lines. Note any assumption you made about
-the build or run command, and warn if any step would need adjustment for
-production (secrets, healthcheck, signal handling).
+comments explaining the non-obvious lines.
+
+Rules: note any assumption you made about the build or run command, and warn
+if any step would need adjustment for production (secrets, healthcheck, signal
+handling).

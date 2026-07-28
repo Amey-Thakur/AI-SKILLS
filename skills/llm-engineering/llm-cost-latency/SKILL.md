@@ -54,7 +54,7 @@ cheaper model, or start visibly sooner.
    message-queues' latency-class separation).
 6. **Engineer perceived latency.** Stream tokens to the UI
    (time-to-first-token becomes the felt latency),
-   show progressive structure (see loading-states),
+   show progressive structure (see empty-and-error-states),
    parallelize independent calls, and pre-warm/speculate
    where flows are predictable (draft the likely next
    step while the user reads). Semantic caching (same
@@ -71,7 +71,7 @@ cheaper model, or start visibly sooner.
   length dominate; when the product needs instant, the
   design answer may be a smaller task (classify then
   fetch) rather than a faster generation.
-- Self-hosting for cost (see inference-serving-
-  optimization, vllm-serving) trades bill for
-  operational burden; run the managed-vs-selfhosted
-  math with real utilization, not peak-hour dreams.
+- Self-hosting for cost (see inference-serving-optimization,
+  vllm-serving) trades bill for operational burden; run the
+  managed-vs-selfhosted math with real utilization, not peak-hour
+  dreams.

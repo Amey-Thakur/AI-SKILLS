@@ -26,7 +26,7 @@ maintained.
    data-anonymization).
 5. **Isolate environments properly.** Shared databases and queues
    between environments produce interference that presents as flaky
-   tests (see flaky-test-management).
+   tests (see test-flakiness-budget).
 6. **Keep the local environment close too.** Developers running
    something meaningfully different from production find problems late
    (see local-development-setup).

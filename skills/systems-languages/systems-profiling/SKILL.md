@@ -7,8 +7,8 @@ description: Profile native code with perf and flamegraphs, then read cache, sys
 
 At the systems level, the question shifts from "which function is hot"
 to "why is the CPU stalled": cache misses, branch mispredicts,
-syscalls, lock contention, and allocator churn hide inside innocent-
-looking hot functions.
+syscalls, lock contention, and allocator churn hide inside
+innocent-looking hot functions.
 
 ## Method
 

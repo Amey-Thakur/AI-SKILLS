@@ -31,7 +31,7 @@ what is real versus planned.
    looks most complete.
 3. **Diagram as code, versioned with the system.** Mermaid,
    PlantUML, or Structurizr in the repo (see
-   markdown-mermaid-writing, docs-as-code): text diffs in
+   technical-diagrams, docs-as-code): text diffs in
    pull requests, rendered in docs, updated in the same
    change that alters the architecture. Diagrams drawn in a
    GUI tool and pasted as images are stale by definition

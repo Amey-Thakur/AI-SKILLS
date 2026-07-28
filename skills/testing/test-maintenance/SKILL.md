@@ -1,6 +1,6 @@
 ---
 name: test-maintenance
-description: Refactor test code with the same care as production: extract helpers, remove duplication, and delete tests that no longer earn their place. Use when the test suite has become slow to change, repetitive, or full of tests nobody trusts.
+description: "Refactor test code with the same care as production: extract helpers, remove duplication, and delete tests that no longer earn their place. Use when the test suite has become slow to change, repetitive, or full of tests nobody trusts."
 ---
 
 # Test maintenance

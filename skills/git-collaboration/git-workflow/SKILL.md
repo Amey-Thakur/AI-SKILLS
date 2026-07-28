@@ -1,6 +1,6 @@
 ---
 name: git-workflow
-description: Use git safely and legibly: branches, history, merges, conflicts, and recovery. Use when managing branches, cleaning history, resolving conflicts, or undoing mistakes.
+description: "Use git safely and legibly: branches, history, merges, conflicts, and recovery. Use when managing branches, cleaning history, resolving conflicts, or undoing mistakes."
 ---
 
 # Git workflow

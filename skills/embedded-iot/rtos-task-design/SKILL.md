@@ -62,9 +62,9 @@ talk without deadlocking or inverting priorities.
   timing domains, not for fashion (the monolith-first instinct,
   firmware edition).
 - Hard real-time guarantees require WCET analysis and
-  interrupt-latency bounds beyond this checklist; safety-
-  certified domains (motor control, medical) follow their
-  standards' methods (see iso-13485-adjacent processes).
+  interrupt-latency bounds beyond this checklist;
+  safety-certified domains (motor control, medical)
+  follow their standards' methods.
 - Zephyr/FreeRTOS/ThreadX differ in API and IPC costs; the
   design rules transfer, the primitives' fine print does not:
   read the specific kernel's docs for priority counts and

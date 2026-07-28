@@ -1,6 +1,6 @@
 ---
 name: strong-openings
-description: Write openings that earn the next sentence: hook the reader, promise value, and get to the point fast. Use when a piece's beginning is slow, generic, or buries what matters.
+description: "Write openings that earn the next sentence: hook the reader, promise value, and get to the point fast. Use when a piece's beginning is slow, generic, or buries what matters."
 ---
 
 # Strong openings

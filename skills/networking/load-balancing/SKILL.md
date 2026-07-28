@@ -46,4 +46,4 @@ happens to in-flight work, and whether requests may be sticky.
 - Layer 4 balancing cannot see paths, headers, or cookies; content
   routing needs layer 7, at some CPU and latency cost.
 - Retrying past a balancer can amplify an overload into a stampede, so
-  pair retries with budgets and backoff (see retry-strategies).
+  pair retries with budgets and backoff (see timeouts-and-retries).

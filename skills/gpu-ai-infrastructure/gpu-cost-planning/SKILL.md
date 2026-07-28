@@ -22,8 +22,8 @@ honest utilization number.
    life near three years, add power, cooling, networking, and colo, then divide
    by expected busy GPU-hours to get a real dollar-per-GPU-hour. Set it against
    reserved cloud, a one-to-three-year commit at roughly 40 to 60 percent off
-   on-demand, and against on-demand list. Owning usually wins only above about 60
-   to 70 percent sustained utilization.
+   on-demand, and against on-demand list. Owning usually wins only above about
+   60 to 70 percent sustained utilization.
 3. **Layer commitment to the demand curve.** Buy or reserve the steady baseline,
    burst the peaks on on-demand, and run interruptible work such as
    checkpointed batch training on spot at a 60 to 90 percent discount. Never
@@ -31,24 +31,27 @@ honest utilization number.
    discount.
 4. **Price in lead time and capacity queues.** New H100 or H200 capacity carries
    weeks-to-months lead time for owned hardware and can be quota-limited or
-   waitlisted even in the cloud. If the roadmap needs GPUs in Q3, a cheaper owned
-   option arriving in Q4 is not cheaper. Hold a reserved or on-demand bridge for
-   the gap.
+   waitlisted even in the cloud. If the roadmap needs GPUs in Q3, a cheaper
+   owned option arriving in Q4 is not cheaper. Hold a reserved or on-demand
+   bridge for the gap.
 5. **Count total cost, not the sticker.** Add interconnect (InfiniBand or NVLink
    switches), storage, egress, the ops headcount to run a cluster, and idle-time
-   overhead. Cloud folds these into the hourly rate; owned hides them. Egress and
-   cross-zone traffic in particular can dwarf the compute line for data-heavy
-   jobs.
+   overhead. Cloud folds these into the hourly rate; owned hides them. Egress
+   and cross-zone traffic in particular can dwarf the compute line for
+   data-heavy jobs.
 6. **Revisit on a fixed cadence.** GPU prices, new silicon that can cut cost per
    token by two to three times, and your own utilization all move. Re-run the
-   break-even quarterly and before any multi-year commit, and keep the commitment
-   horizon shorter than the hardware stays competitive.
+   break-even quarterly and before any multi-year commit, and keep the
+   commitment horizon shorter than the hardware stays competitive.
 
 ## Litmus tests
 
-- Is the buy-versus-rent call backed by a measured duty cycle, not a hoped-for one?
-- Does the break-even include power, cooling, networking, and ops, not just the card?
-- Is the steady baseline committed and only the spiky peak left on on-demand or spot?
+- Is the buy-versus-rent call backed by a measured duty cycle, not a hoped-for
+  one?
+- Does the break-even include power, cooling, networking, and ops, not just the
+  card?
+- Is the steady baseline committed and only the spiky peak left on on-demand or
+  spot?
 - Does the plan account for procurement lead time and cloud capacity quotas?
 
 ## Boundaries

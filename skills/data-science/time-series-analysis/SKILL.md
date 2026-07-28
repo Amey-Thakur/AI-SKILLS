@@ -1,6 +1,6 @@
 ---
 name: time-series-analysis
-description: Analyze and forecast time-ordered data respecting trend, seasonality, autocorrelation, and the arrow of time. Use when working with data indexed by time: metrics, sales, sensor readings, or any forecast.
+description: "Analyze and forecast time-ordered data respecting trend, seasonality, autocorrelation, and the arrow of time. Use when working with data indexed by time: metrics, sales, sensor readings, or any forecast."
 ---
 
 # Time series analysis

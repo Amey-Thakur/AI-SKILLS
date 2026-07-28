@@ -46,8 +46,10 @@ and resumes trustworthy.
 
 - Does a save stall the training step by under five seconds at your model size?
 - Does resuming reproduce the loss curve, not merely start running again?
-- If you `kill -9` a rank mid-save, does the previous checkpoint still load clean?
-- Do checkpoints include RNG, dataloader offset, optimizer moments, and scheduler state?
+- If you `kill -9` a rank mid-save, does the previous checkpoint still load
+  clean?
+- Do checkpoints include RNG, dataloader offset, optimizer moments, and
+  scheduler state?
 
 ## Boundaries
 

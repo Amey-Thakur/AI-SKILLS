@@ -22,7 +22,7 @@ painful when their model leaked through your codebase.
    (see canary-analysis).
 4. **Migrate behind a flag with a rollback.** Percentage cutover with an
    immediate revert path, because the problems appear at volume (see
-   feature-flags).
+   feature-flags-hygiene).
 5. **Plan data migration separately.** Identifiers, historical records,
    and stored references need their own migration and often outlive the
    API cutover (see data-mapping).

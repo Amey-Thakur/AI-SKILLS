@@ -39,11 +39,11 @@ the cost.
    no confirmed benefit (see premature-abstraction's
    instinct, schema edition).
 4. **When you denormalize, own the consistency.** Duplicated
-   data must be kept in sync: application logic, triggers,
-   or a rebuild process that updates every copy on change
-   (see the update-anomaly you just reintroduced). Undocumented
-   denormalization where copies silently diverge is a data-
-   integrity bug factory; make the sync mechanism explicit
+   data must be kept in sync: application logic, triggers, or a
+   rebuild process that updates every copy on change (see the
+   update-anomaly you just reintroduced). Undocumented
+   denormalization where copies silently diverge is a
+   data-integrity bug factory; make the sync mechanism explicit
    and tested.
 5. **Enforce integrity with constraints, normalized or
    not.** Foreign keys, unique constraints, check
@@ -53,11 +53,11 @@ the cost.
    normalized schema without constraints still permits the
    corruption normalization was meant to prevent.
 6. **Match the model to the workload (OLTP vs OLAP).**
-   Transactional systems (many small writes, integrity-
-   critical) favor normalization; analytical systems (heavy
-   reads, aggregations) favor denormalized star schemas
-   (see warehouse-modeling): the same data is modeled
-   differently for different jobs, often with the
+   Transactional systems (many small writes,
+   integrity-critical) favor normalization; analytical
+   systems (heavy reads, aggregations) favor denormalized
+   star schemas (see warehouse-modeling): the same data is
+   modeled differently for different jobs, often with the
    analytical copy derived from the normalized source (see
    etl-vs-elt). Do not force one model to serve both.
 

@@ -13,13 +13,13 @@ bottleneck.
 
 ## Method
 
-1. **Get the real plan with actual numbers.** `EXPLAIN
-   ANALYZE` (not just `EXPLAIN`, which estimates): it runs
-   the query and reports actual rows and time per node.
-   Read it against realistic data volume (a plan on ten dev
-   rows tells you nothing about ten million: see test-
-   environment-parity); the planner's choices change with
-   size.
+1. **Get the real plan with actual numbers.**
+   `EXPLAIN ANALYZE` (not just `EXPLAIN`, which estimates):
+   it runs the query and reports actual rows and time per
+   node. Read it against realistic data volume (a plan on
+   ten dev rows tells you nothing about ten million: see
+   test-environment-parity); the planner's choices change
+   with size.
 2. **Find the expensive node.** Plans are trees; read for
    the node consuming the most time and the one processing
    the most rows. The costly operations to spot: sequential
@@ -64,8 +64,9 @@ bottleneck.
 
 - Reading the plan finds where time goes; it does not
   decide whether the query should exist (an N+1 pattern is
-  a code problem, not a plan problem: see n-plus-one-
-  queries, orm-tradeoffs). Sometimes the fix is upstream.
+  a code problem, not a plan problem: see
+  n-plus-one-queries, orm-tradeoffs). Sometimes the fix is
+  upstream.
 - Planner behavior is engine-specific (Postgres, MySQL,
   and others differ in operators and hints); the *method*
   (read the plan, find the expensive node, fix the cause)

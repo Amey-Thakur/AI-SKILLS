@@ -28,7 +28,9 @@ Rules for a cold email that gets replies:
   asks and a calendar link dump.
 - A subject line that is specific and honest, not clickbait.
 
-Write the subject line and the email. Plain, direct, human: no corporate
-jargon, no false flattery, no fake urgency, no "I hope this email finds you
-well". If the offer is weak or the reason to contact them is not specific,
-say so: a cold email without a real reason should not be sent.
+Write the subject line and the email.
+
+Rules: plain, direct, human: no corporate jargon, no false flattery, no fake
+urgency, no "I hope this email finds you well". If the offer is weak or the
+reason to contact them is not specific, say so: a cold email without a real
+reason should not be sent.

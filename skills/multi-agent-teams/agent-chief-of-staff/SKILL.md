@@ -1,6 +1,6 @@
 ---
 name: agent-chief-of-staff
-description: Run the management layer above specialist desks: set the week's priorities, route work, chase what is stuck, and end every cycle with decisions and owners. Use when several agent desks exist but nothing coordinates them into finished work.
+description: "Run the management layer above specialist desks: set the week's priorities, route work, chase what is stuck, and end every cycle with decisions and owners. Use when several agent desks exist but nothing coordinates them into finished work."
 ---
 
 # Agent chief of staff

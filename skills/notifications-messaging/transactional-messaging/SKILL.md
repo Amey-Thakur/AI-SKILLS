@@ -38,6 +38,6 @@ what it may contain.
 
 Transactional exemptions from consent rules are narrow and depend on
 content; adding promotion can remove the exemption (see
-data-privacy). Delivery is best effort even at high reliability, so
+pii-handling). Delivery is best effort even at high reliability, so
 critical flows need an in-product path that does not depend on a message
 arriving.

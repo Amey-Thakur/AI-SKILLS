@@ -23,9 +23,9 @@ serving traffic.
    sidecar process shares the GPU; push toward 0.95 only on a dedicated card
    where nothing else allocates, or the next allocation crashes the server.
 3. **Cap `--max-model-len` to real traffic.** vLLM reserves KV space for the
-   declared context up front. Declaring 128k when your p99 prompt-plus-completion
-   is 8k starves the batch of concurrent slots. Set the length to what requests
-   actually use, not the model's architectural maximum.
+   declared context up front. Declaring 128k when your p99
+   prompt-plus-completion is 8k starves the batch of concurrent slots. Set the
+   length to what requests actually use, not the model's architectural maximum.
 4. **Read the KV block count vLLM prints at startup.** The log reports GPU KV
    cache size and a number of blocks. Block count times block size is your true
    concurrency budget. If it is small, shorten context or quantize before you
@@ -53,6 +53,6 @@ serving traffic.
 ## Boundaries
 
 This covers running and sizing vLLM itself. Setting batch size against a latency
-SLO and the theory behind KV sizing is inference-serving-optimization; sharding a
-model across nodes is model-parallelism. For graph-compiled engines or non-vLLM
-runtimes, see tensorrt-optimization and triton-inference-server.
+SLO and the theory behind KV sizing is inference-serving-optimization; sharding
+a model across nodes is model-parallelism. For graph-compiled engines or
+non-vLLM runtimes, see tensorrt-optimization and triton-inference-server.

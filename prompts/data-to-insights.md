@@ -1,6 +1,6 @@
 ---
 name: data-to-insights
-description: Read a table or dataset and report what it actually shows - findings, not decoration, with honest caveats.
+description: "Read a table or dataset and report what it actually shows: findings, not decoration, with honest caveats."
 variables:
   - "{data}: the table, CSV excerpt, or numbers"
   - "{question}: what decision or question the analysis serves"
@@ -18,7 +18,7 @@ Method:
 3. Distinguish three levels explicitly:
    - **Shown**: directly in the data.
    - **Suggested**: a pattern consistent with the data but with plausible
-     alternative explanations - name them.
+     alternative explanations: name them.
    - **Not answerable**: parts of {question} this data cannot address, and
      what data would.
 4. Check before claiming: differing denominators, small sample sizes,

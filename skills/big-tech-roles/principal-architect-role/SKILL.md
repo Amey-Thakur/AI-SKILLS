@@ -50,14 +50,15 @@ the technology set, and spends authority only where reversal is expensive.
 - Can any team point to the ADR or RFC that settled a cross-system choice, or
   is it folklore?
 - In the last quarter, did you veto more one-way doors than paint colors?
-- Does the radar reflect what teams actually run, or an aspiration nobody adopted?
+- Does the radar reflect what teams actually run, or an aspiration nobody
+  adopted?
 - Would a boundary violation trip a check in CI before it reaches production?
 
 ## Boundaries
 
 The principal architect sets technical direction, not delivery dates, headcount,
-or people decisions: those belong to engineering management and the TPM. Cross-org
-strategy above a single platform sits with a distinguished engineer or the CTO's
-staff. The exact review forum and title ladder vary by company. When a choice is
-really a product or commercial tradeoff, surface it to product and leadership
-rather than settling it as an architecture call.
+or people decisions: those belong to engineering management and the TPM.
+Cross-org strategy above a single platform sits with a distinguished engineer or
+the CTO's staff. The exact review forum and title ladder vary by company. When a
+choice is really a product or commercial tradeoff, surface it to product and
+leadership rather than settling it as an architecture call.

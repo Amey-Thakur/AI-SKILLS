@@ -40,12 +40,12 @@ conclusions that are worse than no experiment.
    variable affecting the outcome that also differs between
    groups: control for known ones (blocking, stratification,
    or including them in analysis), and randomize to handle
-   unknown ones (see statistical-analysis, experimental-
-   design for the rigorous versions). The confound you did
-   not think of is why the surprising result later
-   evaporates.
+   unknown ones (see statistical-inference,
+   experiment-design-basics for the rigorous versions). The
+   confound you did not think of is why the surprising
+   result later evaporates.
 5. **Pre-register the analysis.** Decide the primary metric,
-   the sample size (see statistical-power, ab-test-design's
+   the sample size (see statistical-inference, ab-test-design's
    sizing), and the analysis method before collecting data:
    so you cannot (even unconsciously) fish for a significant
    result among many comparisons (see the peeking and
@@ -63,13 +63,13 @@ conclusions that are worse than no experiment.
 
 - This is the pragmatic core; rigorous experimental design
   (factorial designs, power analysis, mixed models: see
-  experimental-design, statistical-power, statistical-
-  analysis) goes deeper where stakes and publication
-  demand it.
+  experiment-design-basics, statistical-inference,
+  statistical-inference) goes deeper where stakes and
+  publication demand it.
 - Not everything can be experimented on (ethics, cost,
   irreversibility); observational methods and natural
   experiments substitute, with weaker causal claims that
-  must be stated as such (see scientific-critical-thinking).
+  must be stated as such (see fact-checking).
 - A well-designed experiment can still be wrong if
   underpowered or if the effect does not replicate; single
   experiments are evidence, not proof (see the replication

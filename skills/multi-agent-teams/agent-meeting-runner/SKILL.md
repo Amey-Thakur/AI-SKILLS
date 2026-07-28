@@ -34,6 +34,6 @@ which is where most of the value and nearly all of the failure lives.
 
 Agents prepare and record; humans meet, argue, and decide. Recording
 people speaking has consent and privacy implications that vary by
-jurisdiction (see data-privacy), and sensitive discussions about
+jurisdiction (see pii-handling), and sensitive discussions about
 individuals must not go into shared agent-readable notes. An agent
 cannot read the room, which is often where the real decision happens.

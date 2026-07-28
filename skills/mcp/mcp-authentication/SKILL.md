@@ -40,4 +40,4 @@ Authentication establishes identity; it does not constrain what an agent
 attempts, which is what scoping and confirmation are for. Local stdio
 servers inherit the user's session and need a different model. Consent
 for a user's data to be reachable by an agent is a separate question
-(see data-privacy).
+(see pii-handling).

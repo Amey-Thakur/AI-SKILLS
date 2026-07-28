@@ -17,17 +17,18 @@ FP32 baseline before trusting the speedup.
 1. **Prefer BF16 over FP16 when the hardware offers it.** BF16 keeps FP32's
    8-bit exponent, so it shares the same dynamic range and rarely overflows or
    underflows; it simply carries fewer mantissa bits. On Ampere, Hopper, and
-   TPUs this removes the need for loss scaling. Reserve FP16 for Volta and Turing
-   or when its extra mantissa precision measurably helps.
+   TPUs this removes the need for loss scaling. Reserve FP16 for Volta and
+   Turing or when its extra mantissa precision measurably helps.
 2. **Use dynamic loss scaling with FP16 training.** Small gradients underflow
    FP16's range to zero. Multiply the loss by a scale before backward so
-   gradients land in representable range, then unscale before the optimizer step.
-   `torch.cuda.amp.GradScaler` raises the scale until it overflows, backs off,
-   and skips that step automatically.
+   gradients land in representable range, then unscale before the optimizer
+   step. `torch.cuda.amp.GradScaler` raises the scale until it overflows,
+   backs off, and skips that step automatically.
 3. **Keep master weights and reductions in FP32.** Run the forward and backward
    math under autocast, but store the optimizer's weights in FP32 and accumulate
-   wide sums (softmax denominators, layernorm statistics, the loss) in FP32. That
-   split is what "mixed" names: compute in half, accumulate and update in full.
+   wide sums (softmax denominators, layernorm statistics, the loss) in FP32.
+   That split is what "mixed" names: compute in half, accumulate and update in
+   full.
 4. **Treat FP8 as a scaled format, not a drop-in.** On Hopper, FP8 (E4M3 for
    weights and activations, E5M2 for gradients) needs per-tensor scale factors
    tracked over recent history, as in Transformer Engine's delayed scaling. Do

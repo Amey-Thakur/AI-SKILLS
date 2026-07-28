@@ -1,6 +1,6 @@
 ---
 name: bug-bounty
-description: Hunt vulnerabilities in bug bounty programs effectively and within the rules: scope, methodology, safe proof, and reports that get accepted. Use when participating in a bug bounty or coordinated disclosure program.
+description: "Hunt vulnerabilities in bug bounty programs effectively and within the rules: scope, methodology, safe proof, and reports that get accepted. Use when participating in a bug bounty or coordinated disclosure program."
 ---
 
 # Bug bounty

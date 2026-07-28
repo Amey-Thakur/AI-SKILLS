@@ -15,9 +15,9 @@ Security Policy backstop the encoding you forget.
 
 1. **Encode at output, for the specific context.** HTML body needs
    HTML-entity encoding; an attribute needs attribute encoding; inside
-   `<script>` needs JavaScript-string encoding; a URL needs percent-
-   encoding. Encoding for the wrong context still lets script through.
-   Encode when you write to the page, not when you store.
+   `<script>` needs JavaScript-string encoding; a URL needs
+   percent-encoding. Encoding for the wrong context still lets script
+   through. Encode when you write to the page, not when you store.
 2. **Keep template autoescaping on and never bypass it blindly.** Jinja2,
    Django, React (`{}`), and Handlebars escape HTML by default. Audit every
    bypass: `|safe`, `mark_safe`, `dangerouslySetInnerHTML`, `v-html`,

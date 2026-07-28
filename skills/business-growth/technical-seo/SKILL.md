@@ -13,17 +13,16 @@ build nothing that depends on a loophole.
 ## Method
 
 1. **Verify crawl and index basics first.** Search Console
-   as the ground truth: coverage report for what is
-   indexed vs excluded and why; robots.txt not blocking
-   what should rank; XML sitemap generated from the real
-   page set (see docs-as-code: generate, never hand-
-   maintain), canonical tags on every page (self-
-   referencing by default) so URL variants (params, trailing
-   slashes, http/https) consolidate instead of competing;
-   404s for gone content, 301s for moved (chains
-   collapsed), and pagination/faceted URLs deliberately
-   managed (noindex or canonical) so crawl budget is not
-   spent on infinite filter permutations.
+   as the ground truth: coverage report for what is indexed
+   vs excluded and why; robots.txt not blocking what should
+   rank; XML sitemap generated from the real page set (see
+   docs-as-code: generate, never hand-maintain), canonical
+   tags on every page (self-referencing by default) so URL
+   variants (params, trailing slashes, http/https)
+   consolidate instead of competing; 404s for gone content,
+   301s for moved (chains collapsed), and pagination/faceted
+   URLs deliberately managed (noindex or canonical) so crawl
+   budget is not spent on infinite filter permutations.
 2. **Make rendering crawler-friendly.** Server-render or
    pre-render the content that must rank (client-only
    rendering delays and sometimes loses indexing: see

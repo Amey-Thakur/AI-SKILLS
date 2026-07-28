@@ -37,4 +37,4 @@ line.
 Good errors improve recovery; they cannot fix a tool that fails for the
 wrong reasons. Error text is model-visible, so it must be safe to
 disclose. Retry policy belongs with the caller, and the server's job is
-to give it enough to decide (see retry-strategies).
+to give it enough to decide (see timeouts-and-retries).

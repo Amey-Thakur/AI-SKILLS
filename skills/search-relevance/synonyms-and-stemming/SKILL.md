@@ -36,7 +36,7 @@ acceptable.
 ## Boundaries
 
 - Stemming rules are language-specific and cannot be shared across
-  languages (see i18n-localization).
+  languages (see plural-and-gender-rules).
 - Aggressive stemming destroys identifiers and codes, which need an
   unanalysed field.
 - Synonym lists are maintenance, and an unmaintained list slowly becomes

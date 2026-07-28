@@ -17,7 +17,7 @@ treatment.
    improving then worsening is the classic overfit turning point.
 2. **Check for leakage first.** Validation performance that is
    suspiciously good, or better than training, usually means information
-   from validation reached training (see data-leakage).
+   from validation reached training (see train-test-discipline).
 3. **Verify the split is honest.** Random splits leak across time,
    groups, and duplicates, and the split must respect the structure of
    the data (see cross-validation).

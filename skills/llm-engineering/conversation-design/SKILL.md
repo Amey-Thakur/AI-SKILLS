@@ -32,8 +32,8 @@ gets lost.
    forward references ("it", "that one") by resolving them
    against tracked state, and re-inject constraints the model
    drifts from over long conversations (tone, role, refusal
-   rules: see llm-guardrails). Long chats erode instruction-
-   following; periodic re-grounding is the fix.
+   rules: see llm-guardrails). Long chats erode
+   instruction-following; periodic re-grounding is the fix.
 4. **Design repair explicitly.** Misunderstanding recovery
    (the user says "no, I meant X": update state, do not
    restart), clarification when genuinely ambiguous (ask,

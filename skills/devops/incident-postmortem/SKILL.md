@@ -42,7 +42,7 @@ in the next one.
   only.
 - Write for the engineer who joins next year: no unexpanded acronyms, no
   tribal context assumed.
-- If the same class of incident has happened before, say so and link it , 
+- If the same class of incident has happened before, say so and link it:
   a repeat is a statement about the previous action items.
 
 ## Litmus test

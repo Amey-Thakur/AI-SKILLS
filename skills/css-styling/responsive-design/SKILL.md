@@ -12,9 +12,9 @@ rearrangement.
 ## Method
 
 1. **Start mobile, one column, content in priority order.** The narrow
-   view forces the hierarchy conversation; widening is additive. Desktop-
-   first CSS accumulates unsetting rules (`float: none`, `width: auto`)
-   that exist only to undo itself.
+   view forces the hierarchy conversation; widening is additive.
+   Desktop-first CSS accumulates unsetting rules (`float: none`,
+   `width: auto`) that exist only to undo itself.
 2. **Make size fluid before making it conditional.**
    `font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem)` and spacing built
    from the same pattern remove entire classes of breakpoints. Grid

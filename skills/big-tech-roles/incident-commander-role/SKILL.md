@@ -1,6 +1,6 @@
 ---
 name: incident-commander-role
-description: Operate as an incident commander who owns the response to a live outage: severity, coordination, and communication, not the fix itself. Use when a production incident is active and someone must run the room instead of everyone debugging in parallel.
+description: "Operate as an incident commander who owns the response to a live outage: severity, coordination, and communication, not the fix itself. Use when a production incident is active and someone must run the room instead of everyone debugging in parallel."
 ---
 
 # Incident commander role

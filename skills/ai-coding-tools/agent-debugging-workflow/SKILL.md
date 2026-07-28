@@ -36,4 +36,4 @@ when the actual error output would have been decisive.
 An agent cannot observe your running system and works only from what you
 show it. Intermittent and environment-specific bugs are the hardest to
 delegate. A fix that passes tests may still be wrong about the cause
-(see flaky-test-management).
+(see test-flakiness-budget).

@@ -25,16 +25,16 @@ ships whatever they wanted from the start.
    tells the author the exact moment they are cleared to move.
 4. **Make silence a stated rule, not a hope.** Declare up front what silence
    means, usually lazy consensus: no objection by the deadline counts as assent.
-   Then ping the required approvers directly, so their quiet is a real choice and
-   not an unread thread.
+   Then ping the required approvers directly, so their quiet is a real choice
+   and not an unread thread.
 5. **Resolve every substantive comment in writing.** Reply inline with accepted,
    rejected and why, or deferred to a follow-up. A reviewer who raised a genuine
-   concern should see what became of it without having to ask. Open threads block
-   acceptance.
-6. **Record the outcome where the next person will look.** Mark the RFC accepted,
-   rejected, or superseded, date it, and link it from the code or the team index.
-   A decision no one can find gets remade in six months by someone who never knew
-   it happened.
+   concern should see what became of it without having to ask. Open threads
+   block acceptance.
+6. **Record the outcome where the next person will look.** Mark the RFC
+   accepted, rejected, or superseded, date it, and link it from the code or the
+   team index. A decision no one can find gets remade in six months by someone
+   who never knew it happened.
 
 ## Signals
 

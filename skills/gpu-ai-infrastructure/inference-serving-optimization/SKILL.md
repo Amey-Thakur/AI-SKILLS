@@ -7,9 +7,9 @@ description: Tune LLM serving to hold latency SLOs while raising GPU throughput,
 
 A serving replica has two failure modes that trace back to the same place: the
 GPU sits half idle, or tail latency blows past budget. Both come from how the
-loop forms batches and how it spends memory on the key-value (KV) cache. The work
-is to trade throughput against tail latency on purpose, one dial at a time,
-instead of guessing and breaking a second target while fixing the first.
+loop forms batches and how it spends memory on the key-value (KV) cache. The
+work is to trade throughput against tail latency on purpose, one dial at a
+time, instead of guessing and breaking a second target while fixing the first.
 
 ## Method
 
@@ -31,8 +31,8 @@ instead of guessing and breaking a second target while fixing the first.
    what lets a large continuous batch actually reside on the card.
 5. **Run continuous batching, not static batches.** Admit and retire sequences
    every decode step rather than waiting for a fixed batch to drain. When output
-   lengths vary widely, which is the normal case for chat, this keeps the GPU fed
-   instead of stalling on the one request still generating.
+   lengths vary widely, which is the normal case for chat, this keeps the GPU
+   fed instead of stalling on the one request still generating.
 6. **Quantize the cache only after you have profiled.** An FP8 or INT8 KV cache
    roughly halves decode memory and lifts the concurrency ceiling; AWQ or GPTQ
    weights free more room for KV. Confirm quality on your eval set first, since

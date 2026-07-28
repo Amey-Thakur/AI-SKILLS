@@ -43,8 +43,8 @@ watch what it emits.
    builder. Fighting the ORM to express a query SQL does
    naturally is a signal to drop down; the ORM is not a
    religion.
-5. **Understand lazy loading and session boundaries.** Lazy-
-   loaded relations accessed outside the ORM session/
+5. **Understand lazy loading and session boundaries.**
+   Lazy-loaded relations accessed outside the ORM session/
    transaction throw or silently re-query; know your ORM's
    loading semantics and identity map. Accessing a lazy
    relation in a serializer after the session closed is a

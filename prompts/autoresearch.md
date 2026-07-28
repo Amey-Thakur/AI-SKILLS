@@ -1,6 +1,6 @@
 ---
 name: autoresearch
-description: Run a full autonomous research investigation and return a verified, cited report: plan, search broadly, check primary sources, verify adversarially, and synthesize. Run like an /autoresearch command for a deep, trustworthy answer.
+description: "Run a full autonomous research investigation and return a verified, cited report: plan, search broadly, check primary sources, verify adversarially, and synthesize. Run like an /autoresearch command for a deep, trustworthy answer."
 variables:
   - "{question}: the research question to investigate"
   - "{scope}: depth, recency needs, and what a good answer must cover, if any"

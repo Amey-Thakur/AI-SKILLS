@@ -14,18 +14,18 @@ same lesson again at a higher price.
 ## Method
 
 1. **Gate entry on severity and impact, never on volunteering.** Every SEV1 and
-   SEV2, plus any incident above a stated customer or revenue threshold, comes to
-   the board. Route lower severities to team-local review so the board reads the
-   incidents that carry org-wide signal instead of drowning in all of them.
+   SEV2, plus any incident above a stated customer or revenue threshold, comes
+   to the board. Route lower severities to team-local review so the board reads
+   the incidents that carry org-wide signal instead of drowning in all of them.
 2. **Grade against a written rubric before the discussion starts.** A pass needs
-   a real timeline, a root cause that survives "five whys" past the first human in
-   the chain, contributing factors, and action items with named owners and dates.
-   "Operator error" is where the analysis quit, not a root cause. Bounce failing
-   writeups instead of workshopping them live.
+   a real timeline, a root cause that survives "five whys" past the first human
+   in the chain, contributing factors, and action items with named owners and
+   dates. "Operator error" is where the analysis quit, not a root cause. Bounce
+   failing writeups instead of workshopping them live.
 3. **Keep it blameless, out loud and every time.** The board judges the system
    and the writeup, never the responder. The first review that turns into a
-   tribunal is the last honest postmortem you get: the next one arrives sanitized,
-   and sanitized postmortems are the board's blind spot.
+   tribunal is the last honest postmortem you get: the next one arrives
+   sanitized, and sanitized postmortems are the board's blind spot.
 4. **Split team-local fixes from cross-cutting actions.** For each incident, ask
    whether the remedy protects only the team that got paged or a weakness others
    share. Promote the shared ones to tracked, owned work with an executive
@@ -39,20 +39,22 @@ same lesson again at a higher price.
 6. **Read across the corpus, not just down each report.** Tag every incident by
    trigger class: deploy, config change, capacity, dependency failure, expiry.
    Each quarter, name the top classes and the teams they cluster in. That
-   cross-sectional pattern is invisible in any single document and is the board's
-   real output.
-7. **Route the trends into planning.** Convert the recurring classes into roadmap
-   input: a hardening project, a guardrail, a paved path off the sharp edge. A
-   trend report that reaches no planning cycle changes nothing next quarter, and
-   the board decays into a reading group.
+   cross-sectional pattern is invisible in any single document and is the
+   board's real output.
+7. **Route the trends into planning.** Convert the recurring classes into
+   roadmap input: a hardening project, a guardrail, a paved path off the sharp
+   edge. A trend report that reaches no planning cycle changes nothing next
+   quarter, and the board decays into a reading group.
 
 ## Signals
 
 - Would a postmortem that blamed a person and stopped there get sent back, or
   wave through on a busy day?
-- Can you state this quarter's top three trigger classes and who owns reducing each?
+- Can you state this quarter's top three trigger classes and who owns reducing
+  each?
 - Is open action-item age trending down, or does the backlog only accumulate?
-- When an incident recurs, does the board notice that its prior fix never shipped?
+- When an incident recurs, does the board notice that its prior fix never
+  shipped?
 
 ## Boundaries
 

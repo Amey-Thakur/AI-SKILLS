@@ -39,4 +39,4 @@ and the other does not.
 These effects matter in hot loops and are irrelevant in most application
 code, where clarity should win. Architectures differ substantially, so
 tuning for one may not transfer. Managed runtimes and interpreters add
-layers that dominate these effects (see premature-optimization).
+layers that dominate these effects (see performance-optimization).

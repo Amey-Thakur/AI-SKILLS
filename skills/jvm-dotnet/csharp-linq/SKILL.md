@@ -18,7 +18,7 @@ you are holding.
    time, not definition time; an `IEnumerable` returned up the stack
    may execute long after its data source changed. Materialize
    deliberately with `ToList()`/`ToArray()` exactly once at the
-   boundary where results are needed (see frontend-data-fetching's
+   boundary where results are needed (see caching-strategy's
    cache-boundary instinct, applied in-process).
 2. **Keep provider queries translatable.** Inside an `IQueryable`,
    only what the provider can turn into SQL belongs: no local method

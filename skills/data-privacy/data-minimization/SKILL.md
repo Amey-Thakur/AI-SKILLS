@@ -27,7 +27,7 @@ and never appears in a breach notice.
 4. **Watch the accidental collectors.** Logs, crash reports, analytics
    payloads, and support screenshots collect personal data nobody
    planned for. Redact at the point of capture rather than promising to
-   clean it up later (see logging-practices).
+   clean it up later (see structured-logging).
 5. **Set an expiry with the field, not afterwards.** Deciding how long
    something lives at the moment you add it is far easier than
    reconstructing a retention policy for a table that has grown for
@@ -40,7 +40,7 @@ and never appears in a breach notice.
 
 - Minimization reduces exposure; it does not replace access control or
   encryption for what you do keep (see authz-design,
-  encryption-at-rest).
+  data-encryption).
 - Some data is legally required to retain, and minimizing it is not
   yours to decide (see data-classification, vendor-data-processing).
 - Aggregation is not automatically anonymous; small groups remain

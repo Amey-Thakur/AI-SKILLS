@@ -20,15 +20,15 @@ the fact and immediately stale.
    enables parallel work (frontend against a mock, backend
    against the contract), and produces the documentation for
    free. Code-first (annotations generating the spec) is
-   viable for existing APIs but tends toward implementation-
-   shaped rather than consumer-shaped design.
+   viable for existing APIs but tends toward
+   implementation-shaped rather than consumer-shaped design.
 2. **Lint the spec for consistency.** A spec linter
    (Spectral-class) enforces naming conventions, required
    descriptions, error-response coverage, and org-wide rules
    (see style-guides for the API): so every endpoint across
-   the org is consistent and documented, caught at spec-
-   review not after shipping. An unlinted spec drifts into
-   inconsistency endpoint by endpoint.
+   the org is consistent and documented, caught at
+   spec-review not after shipping. An unlinted spec drifts
+   into inconsistency endpoint by endpoint.
 3. **Generate clients and server stubs from the spec.**
    Client SDKs (see api-sdk-design), server request/response
    models, and validation from the one spec: so the code
@@ -40,16 +40,16 @@ the fact and immediately stale.
    outgoing responses conform to the spec (in test/staging
    at least): catches the drift where the implementation
    quietly stops matching the contract (a field added in
-   code but not the spec, or vice versa: see request-
-   validation). Contract and implementation staying in sync
-   is the whole point; verify it, do not assume it.
+   code but not the spec, or vice versa: see
+   request-validation). Contract and implementation staying
+   in sync is the whole point; verify it, do not assume it.
 5. **Detect drift in CI.** Compare the spec against the
-   actual API behavior (contract tests: see contract-
-   testing) and fail the build on divergence; diff spec
-   changes in PRs to catch breaking changes (see api-
-   change-management: a removed field or tightened type in
-   the spec is a breaking change flagged at review). The
-   spec is only a source of truth if drift from it is caught.
+   actual API behavior (contract tests: see contract-testing)
+   and fail the build on divergence; diff spec changes in PRs
+   to catch breaking changes (see api-change-management: a
+   removed field or tightened type in the spec is a breaking
+   change flagged at review). The spec is only a source of
+   truth if drift from it is caught.
 6. **Serve the spec as living documentation.** Interactive
    docs (Swagger UI / Redoc) generated from the spec, always
    matching the real API because it is the same artifact

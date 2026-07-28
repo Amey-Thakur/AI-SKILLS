@@ -12,9 +12,10 @@ mysterious failure rather than a scale problem.
 
 ## Method
 
-1. **Use the standard scheme for your activation.** The variance-
-   preserving initialisers are derived for specific activation
-   functions, and using the wrong pairing degrades deep networks.
+1. **Use the standard scheme for your activation.** The
+   variance-preserving initialisers are derived for specific
+   activation functions, and using the wrong pairing degrades
+   deep networks.
 2. **Never initialise weights to zero or a constant.** Identical
    parameters receive identical gradients and stay identical, so the
    network has one effective unit per layer.
@@ -31,7 +32,7 @@ mysterious failure rather than a scale problem.
    zero keeps very deep networks stable at the start.
 7. **Load pretrained weights where available.** Transfer from a
    pretrained model beats any initialisation scheme when the domains are
-   related (see transfer-learning).
+   related (see fine-tuning-vs-prompting).
 
 ## Boundaries
 

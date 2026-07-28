@@ -28,7 +28,7 @@ Rules:
 - Use only what the notes contain; no padding, no invented progress.
 - An item that appears in Next repeatedly is a hidden blocker; if the
   notes show the same item twice, flag it under Blockers with "stalled:
-  {item}, needs a decision or help".
+  [item], needs a decision or help".
 - Plain sentences a teammate outside the immediate work can follow: expand
   or drop internal shorthand.
 - Whole update under 90 words. Standups are read in ten seconds.

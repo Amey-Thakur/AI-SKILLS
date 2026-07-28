@@ -36,9 +36,9 @@ reference, and every failure message saying what to do next.
 4. **Exit codes are the contract.** 0 success; 1 operational
    failure; 2 usage error; distinct codes for outcomes scripts
    branch on (diff-style "found differences" vs "error"),
-   documented in help. Interrupts exit 130 cleanly with partial-
-   state cleaned or reported (see graceful-shutdown at process
-   scale).
+   documented in help. Interrupts exit 130 cleanly with
+   partial-state cleaned or reported (see graceful-shutdown at
+   process scale).
 5. **Make failure text actionable.** Error = what failed + the
    specific input + the next step: `config not found at
    ~/.tool/config.yml: run 'tool init' to create it`. Suggest
