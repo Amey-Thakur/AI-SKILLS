@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 773,
+    "skills": 785,
     "prompts": 134,
-    "categories": 48
+    "categories": 49
   },
   "categories": [
     "accessibility",
@@ -50,6 +50,7 @@
     "mobile",
     "multi-agent-teams",
     "networking",
+    "notifications-messaging",
     "open-source",
     "payments-billing",
     "performance",
@@ -4755,6 +4756,114 @@
       "use_when": "when building realtime features on WebSockets or a similar long-lived transport",
       "path": "skills/networking/websockets-at-scale/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/networking/websockets-at-scale/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "delivery-tracking",
+      "category": "notifications-messaging",
+      "description": "Know whether a message was accepted, delivered, opened, and acted on, and treat failures as events rather than statistics. Use when messages are assumed delivered and support tickets say otherwise.",
+      "use_when": "when messages are assumed delivered and support tickets say otherwise",
+      "path": "skills/notifications-messaging/delivery-tracking/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/delivery-tracking/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "digest-design",
+      "category": "notifications-messaging",
+      "description": "Batch many low-urgency events into one periodic summary that is worth opening, rather than sending each as it happens. Use when individual events are too frequent or too minor to interrupt.",
+      "use_when": "when individual events are too frequent or too minor to interrupt",
+      "path": "skills/notifications-messaging/digest-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/digest-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "email-deliverability",
+      "category": "notifications-messaging",
+      "description": "Get email into the inbox rather than the spam folder, through authentication, reputation, and list hygiene. Use when email is not arriving or engagement suddenly drops.",
+      "use_when": "when email is not arriving or engagement suddenly drops",
+      "path": "skills/notifications-messaging/email-deliverability/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/email-deliverability/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "in-app-messaging",
+      "category": "notifications-messaging",
+      "description": "Deliver messages inside the product where they are contextual and non-interruptive, using the right surface for each urgency. Use when a message relates to what the user is doing right now.",
+      "use_when": "when a message relates to what the user is doing right now",
+      "path": "skills/notifications-messaging/in-app-messaging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/in-app-messaging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "multi-channel-orchestration",
+      "category": "notifications-messaging",
+      "description": "Coordinate across push, email, in-app, and SMS so a user gets one message rather than the same thing four times. Use when several channels exist and users receive duplicates.",
+      "use_when": "when several channels exist and users receive duplicates",
+      "path": "skills/notifications-messaging/multi-channel-orchestration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/multi-channel-orchestration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "notification-batching",
+      "category": "notifications-messaging",
+      "description": "Group related events so a burst of activity produces one message instead of twenty, with rules that stay predictable. Use when a single action generates many notifications or activity comes in bursts.",
+      "use_when": "when a single action generates many notifications or activity comes in bursts",
+      "path": "skills/notifications-messaging/notification-batching/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/notification-batching/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "notification-fatigue",
+      "category": "notifications-messaging",
+      "description": "Detect and reverse the point where users stop reading, by measuring engagement decay and cutting volume before they mute. Use when open rates are falling or mute rates are rising.",
+      "use_when": "when open rates are falling or mute rates are rising",
+      "path": "skills/notifications-messaging/notification-fatigue/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/notification-fatigue/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "notification-strategy",
+      "category": "notifications-messaging",
+      "description": "Decide what deserves a notification, on which channel, and at what urgency, before building any of it. Use when notifications are added per feature and users are starting to mute everything.",
+      "use_when": "when notifications are added per feature and users are starting to mute everything",
+      "path": "skills/notifications-messaging/notification-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/notification-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "push-notification-permissions",
+      "category": "notifications-messaging",
+      "description": "Ask for push permission at a moment when the value is obvious, and handle denial gracefully, because the prompt only comes once. Use when adding push to a mobile or web product.",
+      "use_when": "when adding push to a mobile or web product",
+      "path": "skills/notifications-messaging/push-notification-permissions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/push-notification-permissions/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "quiet-hours-and-timing",
+      "category": "notifications-messaging",
+      "description": "Send at times that respect the recipient's local hours and working pattern, deferring anything non-urgent. Use when notifications reach people at night or on weekends.",
+      "use_when": "when notifications reach people at night or on weekends",
+      "path": "skills/notifications-messaging/quiet-hours-and-timing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/quiet-hours-and-timing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "transactional-messaging",
+      "category": "notifications-messaging",
+      "description": "Send the messages a user is waiting for, such as receipts, resets, and confirmations, with reliability and clarity that marketing messages do not need. Use when building password resets, receipts, or order confirmations.",
+      "use_when": "when building password resets, receipts, or order confirmations",
+      "path": "skills/notifications-messaging/transactional-messaging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/transactional-messaging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "unsubscribe-and-preferences",
+      "category": "notifications-messaging",
+      "description": "Give users real control over what they receive, with granular options and an honest one-click exit. Use when building preference centres or reducing complaint rates.",
+      "use_when": "when building preference centres or reducing complaint rates",
+      "path": "skills/notifications-messaging/unsubscribe-and-preferences/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/notifications-messaging/unsubscribe-and-preferences/SKILL.md"
     },
     {
       "kind": "skill",

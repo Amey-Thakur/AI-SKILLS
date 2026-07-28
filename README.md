@@ -134,6 +134,7 @@ One row per category; every entry, with its one-line description, is in
 | [mobile](CATALOG.md#mobile-10) | 10 | app-store-readiness, deep-linking, mobile-input-ux |
 | [multi-agent-teams](CATALOG.md#multi-agent-teams-73) | 73 | agent-accountability-loop, agent-analytics-desk, agent-arch-board |
 | [networking](CATALOG.md#networking-4) | 4 | dns-fundamentals, load-balancing, tls-and-certificates |
+| [notifications-messaging](CATALOG.md#notifications-messaging-12) | 12 | delivery-tracking, digest-design, email-deliverability |
 | [open-source](CATALOG.md#open-source-12) | 12 | code-of-conduct-enforcement, contributor-onboarding, documentation-for-adoption |
 | [payments-billing](CATALOG.md#payments-billing-12) | 12 | failed-payment-recovery, invoicing-and-receipts, payment-idempotency |
 | [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |

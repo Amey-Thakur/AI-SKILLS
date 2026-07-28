@@ -795,6 +795,26 @@
       ]
     },
     {
+      "name": "notifications-messaging-skills",
+      "description": "12 working methods for notifications messaging: delivery-tracking, digest-design, email-deliverability, in-app-messaging, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/notifications-messaging/delivery-tracking",
+        "./skills/notifications-messaging/digest-design",
+        "./skills/notifications-messaging/email-deliverability",
+        "./skills/notifications-messaging/in-app-messaging",
+        "./skills/notifications-messaging/multi-channel-orchestration",
+        "./skills/notifications-messaging/notification-batching",
+        "./skills/notifications-messaging/notification-fatigue",
+        "./skills/notifications-messaging/notification-strategy",
+        "./skills/notifications-messaging/push-notification-permissions",
+        "./skills/notifications-messaging/quiet-hours-and-timing",
+        "./skills/notifications-messaging/transactional-messaging",
+        "./skills/notifications-messaging/unsubscribe-and-preferences"
+      ]
+    },
+    {
       "name": "open-source-skills",
       "description": "12 working methods for open source: code-of-conduct-enforcement, contributor-onboarding, documentation-for-adoption, forking-and-vendoring, and more",
       "source": "./",
