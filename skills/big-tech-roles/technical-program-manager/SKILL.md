@@ -52,7 +52,7 @@ architecture to engineering.
 
 The TPM owns coordination, schedule, and risk, not the product scope, which
 is the PM's, nor the people and delivery of a single team, which is the
-manager's, nor the technical design, which belongs to the staff engineer.
-Whether TPMs sit central or embedded, and how much authority they carry,
-differs by company. When priorities across teams truly conflict, that is a
-leadership decision to force, not one to absorb.
+manager's, nor the technical design, which belongs to the staff engineer
+(see staff-engineer). Whether TPMs sit central or embedded, and how much
+authority they carry, differs by company. When priorities across teams
+truly conflict, that is a leadership decision to force, not one to absorb.

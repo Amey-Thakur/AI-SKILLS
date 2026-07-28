@@ -60,8 +60,9 @@ release nobody can undo once it goes wrong.
 
 ## Boundaries
 
-Application logic and per-service SLOs belong to the backend engineer and the
-site reliability engineer; this role delivers their code safely and consumes
-their targets. Live incident command defers to the SRE skill. Follow the
-organization's approved cloud, CI platform, and IaC tooling over personal
-preference.
+Application logic and per-service SLOs belong to the backend engineer
+(see backend-engineer-role) and the site reliability engineer (see
+site-reliability-engineer); this role delivers their code safely and
+consumes their targets. Live incident command defers to the SRE skill.
+Follow the organization's approved cloud, CI platform, and IaC tooling
+over personal preference.

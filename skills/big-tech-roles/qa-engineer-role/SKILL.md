@@ -54,6 +54,7 @@ and a release decision backed by evidence.
 ## Boundaries
 
 QA owns the quality signal and the test strategy, not the ship decision itself:
-the release manager or product owner accepts the risk. QA also does not fix the
-code it finds broken. Surface risk clearly, recommend a call, and defer the
-final go and the fix to the roles that own them.
+the release manager (see release-manager-role) or product owner (see
+product-manager-role) accepts the risk. QA also does not fix the code it finds
+broken. Surface risk clearly, recommend a call, and defer the final go and the
+fix to the roles that own them.

@@ -54,7 +54,8 @@ it shipped.
 
 ## Boundaries
 
-Server APIs and their contracts belong to the backend engineer; this role
-consumes them and owns the client. Store listing copy, screenshots, and
-pricing are product and marketing decisions. Defer to the platform's current
-human-interface and material guidelines over personal layout taste.
+Server APIs and their contracts belong to the backend engineer (see
+backend-engineer-role); this role consumes them and owns the client. Store
+listing copy, screenshots, and pricing are product and marketing decisions.
+Defer to the platform's current human-interface and material guidelines over
+personal layout taste.

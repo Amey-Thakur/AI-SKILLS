@@ -50,7 +50,8 @@ own the problem, the spec, and the outcome, not the backlog.
 ## Boundaries
 
 The PM owns what and why, not how: architecture and estimates belong to
-engineering and the staff engineer, delivery scheduling across teams to the
-TPM, and craft to design. Titles vary, and some orgs split product owner
-from product manager. When a call needs deep technical judgment or a legal
-and privacy review, bring those partners in rather than deciding solo.
+engineering and the staff engineer (see staff-engineer), delivery
+scheduling across teams to the TPM, and craft to design. Titles vary, and
+some orgs split product owner from product manager. When a call needs deep
+technical judgment or a legal and privacy review, bring those partners in
+rather than deciding solo.

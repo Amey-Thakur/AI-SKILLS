@@ -56,7 +56,8 @@ product diverges from anything you approved.
 ## Boundaries
 
 This role owns the experience and its spec, not the problem selection (PM) or
-the implementation (frontend engineer). Defer to the UX researcher for evidence
-of real user behavior, to the design system team on shared components, and to
-the content or UX writer on final copy. Titles vary (product, interaction, or
-UX designer), and where research sits differs by company.
+the implementation (frontend engineer, see frontend-engineer-role). Defer to
+the UX researcher (see ux-researcher-role) for evidence of real user
+behavior, to the design system team on shared components, and to the content
+or UX writer on final copy. Titles vary (product, interaction, or UX
+designer), and where research sits differs by company.

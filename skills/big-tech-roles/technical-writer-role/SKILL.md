@@ -58,5 +58,6 @@ support tickets.
 This role owns the docs and their architecture, not the product (PM) or the API
 design (engineering), though it reports friction back to both. Defer to the
 company style guide and to localization and legal review before publishing. It
-differs from the developer advocate, who evangelizes and builds samples; the
-writer owns the reference and task documentation the samples rest on.
+differs from the developer advocate (see developer-advocate-role), who
+evangelizes and builds samples; the writer owns the reference and task
+documentation the samples rest on.

@@ -50,7 +50,8 @@ your hours where one decision changes many teams' quarters.
 ## Boundaries
 
 Staff engineering is technical leadership, not people management: performance
-plans, headcount, and pay stay with the engineering manager. The exact ladder
-expectations differ by company, and a principal or distinguished engineer
-owns cross-org strategy above your area. When the charter is really about
-delivery dates across teams, that is a TPM's job, not yours.
+plans, headcount, and pay stay with the engineering manager (see
+engineering-manager-role). The exact ladder expectations differ by company,
+and a principal or distinguished engineer owns cross-org strategy above your
+area. When the charter is really about delivery dates across teams, that is a
+TPM's job, not yours.

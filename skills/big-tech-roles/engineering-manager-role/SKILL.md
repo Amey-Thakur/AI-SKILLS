@@ -53,8 +53,8 @@ let the code belong to the engineers.
 ## Boundaries
 
 The manager owns people and delivery, not technical direction: architecture
-and cross-cutting bets belong to the staff engineer, product's what and why
-to the PM, and cross-team scheduling to the TPM. Ladder rubrics, promotion
-process, and span of control vary by company. When a call is really about
-strategy or pay policy, take it to your skip-level rather than absorbing it
-alone.
+and cross-cutting bets belong to the staff engineer (see staff-engineer),
+product's what and why to the PM, and cross-team scheduling to the TPM.
+Ladder rubrics, promotion process, and span of control vary by company.
+When a call is really about strategy or pay policy, take it to your
+skip-level rather than absorbing it alone.

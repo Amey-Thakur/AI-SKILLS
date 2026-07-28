@@ -53,7 +53,8 @@ to explain why.
 
 ## Boundaries
 
-Pipeline and environment ownership belong to the DevOps engineer skill;
-this role states requirements and consumes the platform. Deep latency work
-under an existing SLO defers to the performance engineer. Follow the
-organization's data-retention and privacy rules over any local convenience.
+Pipeline and environment ownership belong to the DevOps engineer skill (see
+devops-engineer-role); this role states requirements and consumes the
+platform. Deep latency work under an existing SLO defers to the performance
+engineer (see performance-engineer-role). Follow the organization's
+data-retention and privacy rules over any local convenience.

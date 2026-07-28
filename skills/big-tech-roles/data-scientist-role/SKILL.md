@@ -55,7 +55,7 @@ uncertainty and its caveats before anyone asks.
 ## Boundaries
 
 This role analyzes and recommends: it does not own the product decision, and it
-does not build production models (that is the ML engineer). Defer to the
-company's experiment platform for randomization and to the privacy team on what
-user data may be joined. When the data cannot answer the question, say so rather
-than manufacturing a signal.
+does not build production models (that is the ML engineer, see
+ml-engineer-role). Defer to the company's experiment platform for randomization
+and to the privacy team on what user data may be joined. When the data cannot
+answer the question, say so rather than manufacturing a signal.

@@ -65,8 +65,8 @@ governance a property of the platform, not a review.
 
 A cloud architect owns the foundation and its governance, not the
 per-application design, the day-to-day run, or ongoing cost tuning. Defer
-workload architecture to the solutions architect, production operation to
-platform and SRE teams, and continuous cost work to FinOps. Company
-landing-zone conventions and regulatory scope (FedRAMP, data residency)
-constrain the choices: honor them rather than architecting a cleaner foundation
-the org cannot certify.
+workload architecture to the solutions architect (see
+solutions-architect-role), production operation to platform and SRE teams, and
+continuous cost work to FinOps. Company landing-zone conventions and regulatory
+scope (FedRAMP, data residency) constrain the choices: honor them rather than
+architecting a cleaner foundation the org cannot certify.

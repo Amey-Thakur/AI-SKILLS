@@ -54,7 +54,8 @@ praised in the readout and ignored in planning.
 ## Boundaries
 
 Research informs the decision; it does not own it (the PM does) or make the
-design (the product designer does). Defer to legal and privacy on consent and
-data handling, and to the data scientist on statistical prevalence across the
-whole user base. Titles vary (UX researcher, design researcher, insights), and
-mixed-methods scope differs by company.
+design (the product designer, see product-designer-role does). Defer to legal
+and privacy on consent and data handling, and to the data scientist (see
+data-scientist-role) on statistical prevalence across the whole user base.
+Titles vary (UX researcher, design researcher, insights), and mixed-methods
+scope differs by company.

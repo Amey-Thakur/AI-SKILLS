@@ -57,7 +57,8 @@ notices.
 ## Boundaries
 
 This role owns pipelines, contracts, and data quality, not the product analysis
-(data scientist) or model serving (ML engineer). Warehouse and orchestration
-choices follow the company platform, and PII handling defers to the governance
-and privacy team. When a producer refuses a contract, escalate rather than
-patching around bad data forever.
+(data scientist, see data-scientist-role) or model serving (ML engineer, see
+ml-engineer-role). Warehouse and orchestration choices follow the company
+platform, and PII handling defers to the governance and privacy team. When a
+producer refuses a contract, escalate rather than patching around bad data
+forever.

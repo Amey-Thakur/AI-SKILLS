@@ -56,6 +56,6 @@ catches decay before users do.
 
 This role productionizes and operates models: it does not invent architectures
 (that is applied research) and does not own upstream pipeline SLAs (that is the
-data engineer). Defer to the company's MLOps platform and to the SRE on-call
-model for incident response. When an eval gate fails, hold the launch rather
-than waiving the gate.
+data engineer, see data-engineer-role). Defer to the company's MLOps platform
+and to the SRE on-call model for incident response. When an eval gate fails,
+hold the launch rather than waiving the gate.

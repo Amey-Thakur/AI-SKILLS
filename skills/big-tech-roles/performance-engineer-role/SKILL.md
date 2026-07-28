@@ -60,5 +60,6 @@ org's software fast as it changes underneath you.
 
 Choosing the product's latency target is a product and SRE decision; this role
 measures against it and defends it. Broad reliability, capacity planning, and
-on-call belong to the site reliability engineer skill. Render budgets inside a
-single web feature stay with the frontend engineer role.
+on-call belong to the site reliability engineer skill (see
+site-reliability-engineer). Render budgets inside a single web feature stay
+with the frontend engineer role (see frontend-engineer-role).

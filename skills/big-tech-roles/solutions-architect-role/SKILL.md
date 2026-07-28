@@ -59,5 +59,5 @@ as the design inputs, not as objections to overcome.
 A solutions architect designs and de-risks: it does not run the long-term
 build, own the commercial negotiation, or set product direction. Escalate
 delivery to professional services, pricing to the account team, and missing
-capabilities to the product manager rather than architecting around a gap the
-product should close.
+capabilities to the product manager (see product-manager-role) rather than
+architecting around a gap the product should close.

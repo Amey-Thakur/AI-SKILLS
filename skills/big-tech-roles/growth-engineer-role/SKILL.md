@@ -56,7 +56,7 @@ would convert.
 
 The growth engineer owns instrumented experiments against a funnel, not the
 overall product strategy or the roadmap, which sit with product management, nor
-the statistical rigor of a full causal analysis, which a data scientist may own.
-Design owns the craft of the surfaces you test. When an experiment touches
-sensitive data, consent, or a regulated flow, route it through privacy and legal
-rather than shipping it as just another variant.
+the statistical rigor of a full causal analysis, which a data scientist (see
+data-scientist-role) may own. Design owns the craft of the surfaces you test.
+When an experiment touches sensitive data, consent, or a regulated flow, route
+it through privacy and legal rather than shipping it as just another variant.
