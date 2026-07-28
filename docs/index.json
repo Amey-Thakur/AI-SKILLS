@@ -12,7 +12,7 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 761,
+    "skills": 773,
     "prompts": 134,
     "categories": 48
   },
@@ -4092,6 +4092,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-blackboard-workspace",
+      "category": "multi-agent-teams",
+      "description": "Coordinate agents through a shared written workspace they each read and update, instead of passing messages. Use when several agents contribute to one artefact over time and message passing loses state.",
+      "use_when": "when several agents contribute to one artefact over time and message passing loses state",
+      "path": "skills/multi-agent-teams/agent-blackboard-workspace/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-blackboard-workspace/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-board-reporting",
       "category": "multi-agent-teams",
       "description": "Assemble an investor or board update from source metrics with agents that draft, fact-check every number, and surface bad news rather than bury it. Use when periodic reporting eats days and the numbers keep needing correction.",
@@ -4209,6 +4218,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-debate-protocol",
+      "category": "multi-agent-teams",
+      "description": "Have agents argue opposing positions from the same evidence, then synthesize, so the strongest case for each option is heard before deciding. Use when a decision is genuinely contested and one agent's answer would hide the trade-off.",
+      "use_when": "when a decision is genuinely contested and one agent's answer would hide the trade-off",
+      "path": "skills/multi-agent-teams/agent-debate-protocol/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-debate-protocol/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-decision-log",
       "category": "multi-agent-teams",
       "description": "Record what was decided, by whom, on what basis, and when to revisit, so decisions are not relitigated or silently forgotten. Use when the same discussion recurs and nobody remembers why the current approach was chosen.",
@@ -4254,6 +4272,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-ensemble-voting",
+      "category": "multi-agent-teams",
+      "description": "Run the same task several times independently and combine the results by agreement, to damp variance on judgement calls. Use when output varies between runs and being consistently right matters more than being fast.",
+      "use_when": "when output varies between runs and being consistently right matters more than being fast",
+      "path": "skills/multi-agent-teams/agent-ensemble-voting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-ensemble-voting/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-escalation-ladder",
       "category": "multi-agent-teams",
       "description": "Define what gets escalated, to whom, and how fast, so problems reach a decision maker at the right moment rather than too early or too late. Use when issues either sit unresolved or interrupt the wrong people constantly.",
@@ -4287,6 +4314,15 @@
       "use_when": "when preparing to raise and the story keeps changing between meetings",
       "path": "skills/multi-agent-teams/agent-fundraising-room/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-fundraising-room/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-generate-and-verify",
+      "category": "multi-agent-teams",
+      "description": "Pair every generating agent with an independent verifier whose only job is to refute the output, so plausible-but-wrong work is caught before it ships. Use when an agent's output will be acted on and being wrong is expensive.",
+      "use_when": "when an agent's output will be acted on and being wrong is expensive",
+      "path": "skills/multi-agent-teams/agent-generate-and-verify/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-generate-and-verify/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4326,6 +4362,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-human-checkpoint",
+      "category": "multi-agent-teams",
+      "description": "Place human approval at the points where being wrong is expensive or irreversible, with enough context to decide quickly. Use when agents perform work that has real consequences.",
+      "use_when": "when agents perform work that has real consequences",
+      "path": "skills/multi-agent-teams/agent-human-checkpoint/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-human-checkpoint/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-incident-response-team",
       "category": "multi-agent-teams",
       "description": "Replicate a live incident team as agents with a commander, parallel investigators, comms, and a scribe, coordinated on a fixed cadence. Use when you want an outage worked by a coordinated agent team instead of one agent debugging alone.",
@@ -4335,12 +4380,39 @@
     },
     {
       "kind": "skill",
+      "name": "agent-iterative-refinement",
+      "category": "multi-agent-teams",
+      "description": "Improve output through repeated critique and revision against a fixed standard, stopping when the standard is met or gains stop. Use when first-pass output is close but not good enough and the quality bar is writable.",
+      "use_when": "when first-pass output is close but not good enough and the quality bar is writable",
+      "path": "skills/multi-agent-teams/agent-iterative-refinement/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-iterative-refinement/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-legal-desk",
       "category": "multi-agent-teams",
       "description": "Use agents to triage contracts and policies, extract obligations, flag unusual terms, and prepare a lawyer's review rather than replace it. Use when routine agreements pile up and nothing is tracked after signature.",
       "use_when": "when routine agreements pile up and nothing is tracked after signature",
       "path": "skills/multi-agent-teams/agent-legal-desk/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-legal-desk/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-loop-until-exhausted",
+      "category": "multi-agent-teams",
+      "description": "Keep running discovery rounds until several consecutive rounds find nothing new, rather than stopping at a fixed count. Use when searching for an unknown number of items such as bugs, risks, or edge cases.",
+      "use_when": "when searching for an unknown number of items such as bugs, risks, or edge cases",
+      "path": "skills/multi-agent-teams/agent-loop-until-exhausted/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-loop-until-exhausted/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-map-reduce",
+      "category": "multi-agent-teams",
+      "description": "Split a large task across parallel agents that each handle one slice, then merge their outputs deliberately. Use when the work exceeds one context window or would take too long serially.",
+      "use_when": "when the work exceeds one context window or would take too long serially",
+      "path": "skills/multi-agent-teams/agent-map-reduce/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-map-reduce/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4416,6 +4488,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-plan-execute-replan",
+      "category": "multi-agent-teams",
+      "description": "Separate planning from execution and replan when reality diverges, so a long task does not follow a plan that stopped being true. Use when work has many steps and early assumptions are likely to be wrong.",
+      "use_when": "when work has many steps and early assumptions are likely to be wrong",
+      "path": "skills/multi-agent-teams/agent-plan-execute-replan/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-plan-execute-replan/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-pm-eng-loop",
       "category": "multi-agent-teams",
       "description": "Pair a product-manager agent with engineer agents through spec, pushback, scope negotiation, and acceptance so the build matches intent. Use when an agent team must turn a fuzzy request into a shipped, accepted increment.",
@@ -4449,6 +4530,15 @@
       "use_when": "when choosing tools or suppliers and comparisons keep drifting on vendor marketing",
       "path": "skills/multi-agent-teams/agent-procurement-desk/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-procurement-desk/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-progressive-disclosure",
+      "category": "multi-agent-teams",
+      "description": "Give agents context in stages, escalating to more capable models or fuller context only when the cheap path proves insufficient. Use when most tasks are easy but a few are hard and cost or latency matters.",
+      "use_when": "when most tasks are easy but a few are hard and cost or latency matters",
+      "path": "skills/multi-agent-teams/agent-progressive-disclosure/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-progressive-disclosure/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4533,6 +4623,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-specialist-router",
+      "category": "multi-agent-teams",
+      "description": "Route each request to the agent best suited to it, with a fallback and an explicit unknown path, instead of one generalist handling everything. Use when tasks vary enough that one prompt serves none of them well.",
+      "use_when": "when tasks vary enough that one prompt serves none of them well",
+      "path": "skills/multi-agent-teams/agent-specialist-router/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-specialist-router/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-startup-squad",
       "category": "multi-agent-teams",
       "description": "Run a lean startup team of agents (builder, marketer, analyst) through one disciplined weekly loop of ship, promote, and measure. Use when you want a small agent team to move a single product metric week over week.",
@@ -4566,6 +4665,15 @@
       "use_when": "when inbound support volume needs consistent handling and a person must approve every customer-facing reply before it goes out",
       "path": "skills/multi-agent-teams/agent-support-desk/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-support-desk/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-tournament-selection",
+      "category": "multi-agent-teams",
+      "description": "Generate several independent attempts, score them against explicit criteria, and select or combine the winner, instead of iterating one attempt. Use when the solution space is wide and the first approach may not be the best.",
+      "use_when": "when the solution space is wide and the first approach may not be the best",
+      "path": "skills/multi-agent-teams/agent-tournament-selection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-tournament-selection/SKILL.md"
     },
     {
       "kind": "skill",
