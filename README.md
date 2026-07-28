@@ -137,6 +137,7 @@ One row per category; every entry, with its one-line description, is in
 | [jvm-dotnet](CATALOG.md#jvm-dotnet-10) | 10 | csharp-linq, dotnet-async, dotnet-dependency-injection |
 | [llm-engineering](CATALOG.md#llm-engineering-22) | 22 | agent-memory, agentic-loops, coding-agent-workflow |
 | [machine-learning](CATALOG.md#machine-learning-12) | 12 | cross-validation, drift-monitoring, experiment-tracking |
+| [marketing](CATALOG.md#marketing-12) | 12 | community-led-growth, competitive-messaging, content-marketing-strategy |
 | [mcp](CATALOG.md#mcp-12) | 12 | mcp-authentication, mcp-client-integration, mcp-context-budgeting |
 | [media-processing](CATALOG.md#media-processing-11) | 11 | audio-processing, document-parsing, format-selection |
 | [mobile](CATALOG.md#mobile-10) | 10 | app-store-readiness, deep-linking, mobile-input-ux |

@@ -804,6 +804,26 @@
       ]
     },
     {
+      "name": "marketing-skills",
+      "description": "12 working methods for marketing: community-led-growth, competitive-messaging, content-marketing-strategy, conversion-rate-optimization, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/marketing/community-led-growth",
+        "./skills/marketing/competitive-messaging",
+        "./skills/marketing/content-marketing-strategy",
+        "./skills/marketing/conversion-rate-optimization",
+        "./skills/marketing/customer-personas",
+        "./skills/marketing/email-marketing",
+        "./skills/marketing/launch-marketing",
+        "./skills/marketing/marketing-attribution",
+        "./skills/marketing/paid-acquisition",
+        "./skills/marketing/positioning-and-messaging",
+        "./skills/marketing/retention-marketing",
+        "./skills/marketing/social-media-strategy"
+      ]
+    },
+    {
       "name": "mcp-skills",
       "description": "12 working methods for mcp: mcp-authentication, mcp-client-integration, mcp-context-budgeting, mcp-error-handling, and more",
       "source": "./",

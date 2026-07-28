@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 892,
+    "skills": 904,
     "prompts": 134,
-    "categories": 58
+    "categories": 59
   },
   "categories": [
     "accessibility",
@@ -53,6 +53,7 @@
     "jvm-dotnet",
     "llm-engineering",
     "machine-learning",
+    "marketing",
     "mcp",
     "media-processing",
     "mobile",
@@ -4630,6 +4631,114 @@
       "use_when": "when setting up ML evaluation or auditing why offline metrics did not survive production",
       "path": "skills/machine-learning/train-test-discipline/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/train-test-discipline/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "community-led-growth",
+      "category": "marketing",
+      "description": "Grow through a community that supports and advocates for itself, with genuine investment rather than extraction. Use when the product benefits from peer knowledge and users want to talk to each other.",
+      "use_when": "when the product benefits from peer knowledge and users want to talk to each other",
+      "path": "skills/marketing/community-led-growth/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/community-led-growth/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "competitive-messaging",
+      "category": "marketing",
+      "description": "Talk about competitors accurately and fairly in a way that helps buyers decide, without claims you cannot support. Use when buyers ask how you compare or a competitor is winning deals.",
+      "use_when": "when buyers ask how you compare or a competitor is winning deals",
+      "path": "skills/marketing/competitive-messaging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/competitive-messaging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "content-marketing-strategy",
+      "category": "marketing",
+      "description": "Plan content that reaches buyers at the moment they are looking, with a cadence you can sustain and a way to tell whether it worked. Use when publishing sporadically without knowing whether it helps.",
+      "use_when": "when publishing sporadically without knowing whether it helps",
+      "path": "skills/marketing/content-marketing-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/content-marketing-strategy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "conversion-rate-optimization",
+      "category": "marketing",
+      "description": "Improve the proportion of visitors who take the desired action, through evidence about where they drop rather than opinions about design. Use when traffic is adequate and conversion is not.",
+      "use_when": "when traffic is adequate and conversion is not",
+      "path": "skills/marketing/conversion-rate-optimization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/conversion-rate-optimization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "customer-personas",
+      "category": "marketing",
+      "description": "Build audience profiles from evidence rather than imagination, capturing the job, the trigger, and the objection. Use when marketing targets everyone and converts nobody.",
+      "use_when": "when marketing targets everyone and converts nobody",
+      "path": "skills/marketing/customer-personas/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/customer-personas/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "email-marketing",
+      "category": "marketing",
+      "description": "Run lifecycle and campaign email that people open, with segmentation, timing, and permission handled properly. Use when email is a channel you own and want to keep.",
+      "use_when": "when email is a channel you own and want to keep",
+      "path": "skills/marketing/email-marketing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/email-marketing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "launch-marketing",
+      "category": "marketing",
+      "description": "Coordinate a launch so attention arrives when the product is ready and converts rather than dissipating. Use when releasing something significant enough to warrant a moment.",
+      "use_when": "when releasing something significant enough to warrant a moment",
+      "path": "skills/marketing/launch-marketing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/launch-marketing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "marketing-attribution",
+      "category": "marketing",
+      "description": "Assign credit for conversions across touchpoints honestly, knowing what each model hides. Use when deciding where to spend and channels each claim the same conversions.",
+      "use_when": "when deciding where to spend and channels each claim the same conversions",
+      "path": "skills/marketing/marketing-attribution/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/marketing-attribution/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "paid-acquisition",
+      "category": "marketing",
+      "description": "Buy traffic profitably by measuring against payback and lifetime value rather than cost per click. Use when considering paid channels or when spend is rising without profit.",
+      "use_when": "when considering paid channels or when spend is rising without profit",
+      "path": "skills/marketing/paid-acquisition/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/paid-acquisition/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "positioning-and-messaging",
+      "category": "marketing",
+      "description": "Decide what you are, who for, and against what alternative, then say it in words customers use. Use when nobody can explain the product in one sentence or the same product is described differently everywhere.",
+      "use_when": "when nobody can explain the product in one sentence or the same product is described differently everywhere",
+      "path": "skills/marketing/positioning-and-messaging/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/positioning-and-messaging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "retention-marketing",
+      "category": "marketing",
+      "description": "Keep and re-engage existing customers, which is usually cheaper and more valuable than acquiring new ones. Use when churn is high or growth is entirely dependent on new acquisition.",
+      "use_when": "when churn is high or growth is entirely dependent on new acquisition",
+      "path": "skills/marketing/retention-marketing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/retention-marketing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "social-media-strategy",
+      "category": "marketing",
+      "description": "Choose platforms and a cadence you can sustain, with content native to each rather than cross-posted. Use when social presence is scattered and producing nothing.",
+      "use_when": "when social presence is scattered and producing nothing",
+      "path": "skills/marketing/social-media-strategy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/marketing/social-media-strategy/SKILL.md"
     },
     {
       "kind": "skill",
