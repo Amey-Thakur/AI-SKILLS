@@ -23,9 +23,14 @@
 
 # Generated catalog: collapsed in pull request diffs, excluded from stats.
 # Edit the skills and prompts, then run scripts/build-index.mjs to regenerate.
+# Every path below is written by that script; nothing else belongs here.
 index.json linguist-generated=true
 docs/index.json linguist-generated=true
-ecosystem.json linguist-generated=true
 docs/ecosystem.json linguist-generated=true
 llms.txt linguist-generated=true
 CATALOG.md linguist-generated=true
+commands/*.md linguist-generated=true
+.claude-plugin/marketplace.json linguist-generated=true
+
+# ecosystem.json is hand-maintained (the script only copies it into docs/), so
+# it stays reviewable: its edits are the curation, not build output.
