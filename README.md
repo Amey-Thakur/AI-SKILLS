@@ -139,6 +139,7 @@ One row per category; every entry, with its one-line description, is in
 | [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
 | [product-management](CATALOG.md#product-management-10) | 10 | ab-test-design, customer-interviews, feature-sunsetting |
 | [python](CATALOG.md#python-14) | 14 | pytest-mastery, python-asyncio, python-cli-tools |
+| [realtime-collaboration](CATALOG.md#realtime-collaboration-12) | 12 | collaborative-editing-models, comments-and-annotations, conflict-resolution-ux |
 | [research](CATALOG.md#research-15) | 15 | autonomous-research, decision-journals, deep-research |
 | [scripting-automation](CATALOG.md#scripting-automation-10) | 10 | automation-guardrails, bash-robustness, cli-ux-design |
 | [search-relevance](CATALOG.md#search-relevance-12) | 12 | autocomplete-design, faceted-search, full-text-search-design |

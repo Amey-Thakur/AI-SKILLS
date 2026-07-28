@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 725,
+    "skills": 737,
     "prompts": 134,
-    "categories": 47
+    "categories": 48
   },
   "categories": [
     "accessibility",
@@ -55,6 +55,7 @@
     "performance",
     "product-management",
     "python",
+    "realtime-collaboration",
     "research",
     "scripting-automation",
     "search-relevance",
@@ -5114,6 +5115,114 @@
       "use_when": "when writing loops, resource handling, or unpacking and deciding how idiomatic to make it",
       "path": "skills/python/pythonic-idioms/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/python/pythonic-idioms/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "collaborative-editing-models",
+      "category": "realtime-collaboration",
+      "description": "Choose between operational transformation, CRDTs, and locking for multi-user editing, and understand what each costs. Use when more than one person can edit the same document at the same time.",
+      "use_when": "when more than one person can edit the same document at the same time",
+      "path": "skills/realtime-collaboration/collaborative-editing-models/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/collaborative-editing-models/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "comments-and-annotations",
+      "category": "realtime-collaboration",
+      "description": "Attach comments to content that keeps changing, so anchors survive edits and threads stay resolvable. Use when adding review, feedback, or discussion to a document or design.",
+      "use_when": "when adding review, feedback, or discussion to a document or design",
+      "path": "skills/realtime-collaboration/comments-and-annotations/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/comments-and-annotations/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "conflict-resolution-ux",
+      "category": "realtime-collaboration",
+      "description": "Present merge conflicts to users so they can resolve them confidently, rather than resolving silently and losing work. Use when concurrent edits cannot be merged automatically.",
+      "use_when": "when concurrent edits cannot be merged automatically",
+      "path": "skills/realtime-collaboration/conflict-resolution-ux/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/conflict-resolution-ux/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "live-cursors-and-selection",
+      "category": "realtime-collaboration",
+      "description": "Render other people's cursors and selections so they inform rather than distract, and stay correct as content changes. Use when showing where collaborators are working in a shared document.",
+      "use_when": "when showing where collaborators are working in a shared document",
+      "path": "skills/realtime-collaboration/live-cursors-and-selection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/live-cursors-and-selection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "offline-sync",
+      "category": "realtime-collaboration",
+      "description": "Let clients work disconnected and reconcile changes on reconnect without losing edits or resurrecting deletions. Use when building an application that must work on an unreliable network.",
+      "use_when": "when building an application that must work on an unreliable network",
+      "path": "skills/realtime-collaboration/offline-sync/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/offline-sync/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "optimistic-ui-updates",
+      "category": "realtime-collaboration",
+      "description": "Apply changes locally before the server confirms, then reconcile or roll back honestly when it does not. Use when latency makes a correct-but-slow interface feel broken.",
+      "use_when": "when latency makes a correct-but-slow interface feel broken",
+      "path": "skills/realtime-collaboration/optimistic-ui-updates/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/optimistic-ui-updates/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "presence-and-awareness",
+      "category": "realtime-collaboration",
+      "description": "Show who is here, where they are, and what they are doing, at a cost that scales and without leaking more than intended. Use when adding cursors, avatars, or typing indicators to a shared surface.",
+      "use_when": "when adding cursors, avatars, or typing indicators to a shared surface",
+      "path": "skills/realtime-collaboration/presence-and-awareness/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/presence-and-awareness/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "realtime-data-sync",
+      "category": "realtime-collaboration",
+      "description": "Keep client state current with server changes using subscriptions, deltas, and resync, without drift or memory growth. Use when a UI must reflect data that other users or systems are changing.",
+      "use_when": "when a UI must reflect data that other users or systems are changing",
+      "path": "skills/realtime-collaboration/realtime-data-sync/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/realtime-data-sync/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "realtime-permissions",
+      "category": "realtime-collaboration",
+      "description": "Enforce and revoke access on live connections so a permission change takes effect immediately rather than at the next page load. Use when shared documents have varying access levels.",
+      "use_when": "when shared documents have varying access levels",
+      "path": "skills/realtime-collaboration/realtime-permissions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/realtime-permissions/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "realtime-scaling",
+      "category": "realtime-collaboration",
+      "description": "Scale collaborative sessions across instances with room routing, shared state, and controlled fan-out. Use when one server can no longer hold all active sessions.",
+      "use_when": "when one server can no longer hold all active sessions",
+      "path": "skills/realtime-collaboration/realtime-scaling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/realtime-scaling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "realtime-testing",
+      "category": "realtime-collaboration",
+      "description": "Test collaborative features against concurrency, reconnection, and ordering rather than only the single-user path. Use when a realtime feature works in development and breaks with real users.",
+      "use_when": "when a realtime feature works in development and breaks with real users",
+      "path": "skills/realtime-collaboration/realtime-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/realtime-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "version-history-ux",
+      "category": "realtime-collaboration",
+      "description": "Keep and present document history so users can see what changed, who changed it, and restore safely. Use when edits are shared or when accidental loss must be recoverable.",
+      "use_when": "when edits are shared or when accidental loss must be recoverable",
+      "path": "skills/realtime-collaboration/version-history-ux/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/version-history-ux/SKILL.md"
     },
     {
       "kind": "skill",

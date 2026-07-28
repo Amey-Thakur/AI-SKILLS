@@ -875,6 +875,26 @@
       ]
     },
     {
+      "name": "realtime-collaboration-skills",
+      "description": "12 working methods for realtime collaboration: collaborative-editing-models, comments-and-annotations, conflict-resolution-ux, live-cursors-and-selection, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/realtime-collaboration/collaborative-editing-models",
+        "./skills/realtime-collaboration/comments-and-annotations",
+        "./skills/realtime-collaboration/conflict-resolution-ux",
+        "./skills/realtime-collaboration/live-cursors-and-selection",
+        "./skills/realtime-collaboration/offline-sync",
+        "./skills/realtime-collaboration/optimistic-ui-updates",
+        "./skills/realtime-collaboration/presence-and-awareness",
+        "./skills/realtime-collaboration/realtime-data-sync",
+        "./skills/realtime-collaboration/realtime-permissions",
+        "./skills/realtime-collaboration/realtime-scaling",
+        "./skills/realtime-collaboration/realtime-testing",
+        "./skills/realtime-collaboration/version-history-ux"
+      ]
+    },
+    {
       "name": "research-skills",
       "description": "15 working methods for research: autonomous-research, decision-journals, deep-research, estimation-techniques, and more",
       "source": "./",
