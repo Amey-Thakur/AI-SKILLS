@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 701,
+    "skills": 713,
     "prompts": 134,
-    "categories": 45
+    "categories": 46
   },
   "categories": [
     "accessibility",
@@ -51,6 +51,7 @@
     "multi-agent-teams",
     "networking",
     "open-source",
+    "payments-billing",
     "performance",
     "product-management",
     "python",
@@ -4536,6 +4537,114 @@
       "use_when": "when running a project that could have security issues, or when you receive a report",
       "path": "skills/open-source/vulnerability-disclosure/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/vulnerability-disclosure/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "failed-payment-recovery",
+      "category": "payments-billing",
+      "description": "Recover revenue from failed recurring charges with retries, clear notice, and a graceful path back, without harassing customers. Use when involuntary churn from card failures is material.",
+      "use_when": "when involuntary churn from card failures is material",
+      "path": "skills/payments-billing/failed-payment-recovery/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/failed-payment-recovery/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "invoicing-and-receipts",
+      "category": "payments-billing",
+      "description": "Produce invoices and receipts that are accurate, immutable, and contain what tax authorities and customers require. Use when billing businesses or operating where invoices are legally regulated.",
+      "use_when": "when billing businesses or operating where invoices are legally regulated",
+      "path": "skills/payments-billing/invoicing-and-receipts/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/invoicing-and-receipts/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "payment-idempotency",
+      "category": "payments-billing",
+      "description": "Make payment operations safe to retry so a network timeout never charges a customer twice. Use when calling a payment API, processing webhooks, or building any money-moving endpoint.",
+      "use_when": "when calling a payment API, processing webhooks, or building any money-moving endpoint",
+      "path": "skills/payments-billing/payment-idempotency/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/payment-idempotency/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "payment-integration",
+      "category": "payments-billing",
+      "description": "Integrate a payment provider so charges are authorised, confirmed, and recorded correctly even when the customer closes the tab. Use when adding checkout or moving to a new payment provider.",
+      "use_when": "when adding checkout or moving to a new payment provider",
+      "path": "skills/payments-billing/payment-integration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/payment-integration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "payment-reconciliation",
+      "category": "payments-billing",
+      "description": "Match provider settlements against your own records so every charge, fee, refund, and payout is accounted for. Use when closing books, chasing a discrepancy, or building financial reporting.",
+      "use_when": "when closing books, chasing a discrepancy, or building financial reporting",
+      "path": "skills/payments-billing/payment-reconciliation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/payment-reconciliation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pci-scope-reduction",
+      "category": "payments-billing",
+      "description": "Keep card data out of your systems so compliance obligations stay minimal, and know what remains in scope when it cannot. Use when handling card payments or preparing for a compliance assessment.",
+      "use_when": "when handling card payments or preparing for a compliance assessment",
+      "path": "skills/payments-billing/pci-scope-reduction/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/pci-scope-reduction/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pricing-change-migration",
+      "category": "payments-billing",
+      "description": "Change prices or plan structure without breaking trust or billing, deciding who moves, when, and with what notice. Use when raising prices, restructuring plans, or retiring a legacy tier.",
+      "use_when": "when raising prices, restructuring plans, or retiring a legacy tier",
+      "path": "skills/payments-billing/pricing-change-migration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/pricing-change-migration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "refunds-and-disputes",
+      "category": "payments-billing",
+      "description": "Handle refunds, chargebacks, and disputes with evidence, deadlines, and a policy applied consistently. Use when building refund flows or responding to a chargeback.",
+      "use_when": "when building refund flows or responding to a chargeback",
+      "path": "skills/payments-billing/refunds-and-disputes/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/refunds-and-disputes/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "revenue-recognition-basics",
+      "category": "payments-billing",
+      "description": "Understand why cash collected is not revenue earned, and record deferred revenue so financial reporting reflects delivery. Use when building billing data models or reporting on a subscription business.",
+      "use_when": "when building billing data models or reporting on a subscription business",
+      "path": "skills/payments-billing/revenue-recognition-basics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/revenue-recognition-basics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "subscription-billing",
+      "category": "payments-billing",
+      "description": "Model recurring plans, cycles, upgrades, and cancellations so what a customer is charged always matches what they agreed to. Use when building or changing recurring billing.",
+      "use_when": "when building or changing recurring billing",
+      "path": "skills/payments-billing/subscription-billing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/subscription-billing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tax-calculation",
+      "category": "payments-billing",
+      "description": "Determine, apply, and record sales tax or VAT correctly by jurisdiction, product type, and customer status. Use when selling across borders or when tax handling is currently a flat assumption.",
+      "use_when": "when selling across borders or when tax handling is currently a flat assumption",
+      "path": "skills/payments-billing/tax-calculation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/tax-calculation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "usage-based-metering",
+      "category": "payments-billing",
+      "description": "Meter consumption accurately enough to bill on it, with reconciliation, limits, and transparency the customer can verify. Use when charging by usage rather than a flat subscription.",
+      "use_when": "when charging by usage rather than a flat subscription",
+      "path": "skills/payments-billing/usage-based-metering/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/payments-billing/usage-based-metering/SKILL.md"
     },
     {
       "kind": "skill",

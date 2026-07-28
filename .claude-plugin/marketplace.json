@@ -779,6 +779,26 @@
       ]
     },
     {
+      "name": "payments-billing-skills",
+      "description": "12 working methods for payments billing: failed-payment-recovery, invoicing-and-receipts, payment-idempotency, payment-integration, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/payments-billing/failed-payment-recovery",
+        "./skills/payments-billing/invoicing-and-receipts",
+        "./skills/payments-billing/payment-idempotency",
+        "./skills/payments-billing/payment-integration",
+        "./skills/payments-billing/payment-reconciliation",
+        "./skills/payments-billing/pci-scope-reduction",
+        "./skills/payments-billing/pricing-change-migration",
+        "./skills/payments-billing/refunds-and-disputes",
+        "./skills/payments-billing/revenue-recognition-basics",
+        "./skills/payments-billing/subscription-billing",
+        "./skills/payments-billing/tax-calculation",
+        "./skills/payments-billing/usage-based-metering"
+      ]
+    },
+    {
       "name": "performance-skills",
       "description": "28 working methods for performance: algorithmic-optimization, async-io-patterns, batching-and-debouncing, benchmark-design, and more",
       "source": "./",
