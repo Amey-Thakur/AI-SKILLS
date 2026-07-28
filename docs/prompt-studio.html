@@ -97,7 +97,9 @@
   .stages b { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
   .type-row { margin-top: 14px; font-size: 13px; color: var(--text-4); }
   .type-label { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; margin-right: 6px; }
-  .type-chip { display: inline-block; border: 1px solid var(--border); border-radius: var(--radius-pill); background: var(--surface-2); color: var(--text-3); font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; padding: 4px 12px; margin: 0 6px 6px 0; cursor: pointer; }
+  /* 6px vertical padding puts the box past 24px tall, so the tap target meets
+     WCAG 2.2 target size outright instead of leaning on the spacing exception. */
+  .type-chip { display: inline-block; border: 1px solid var(--border); border-radius: var(--radius-pill); background: var(--surface-2); color: var(--text-3); font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; padding: 6px 12px; margin: 0 6px 6px 0; cursor: pointer; }
   .type-chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--text-1); }
   .gap { display: flex; gap: 8px; align-items: baseline; margin-top: 10px; font-size: 13.5px; color: var(--text-2); }
   .gap::before { content: "!"; font-family: "Play", ui-monospace, Consolas, monospace; color: var(--accent); border: 1px solid var(--accent); border-radius: 50%; width: 16px; height: 16px; line-height: 15px; text-align: center; font-size: 11px; flex-shrink: 0; }
@@ -276,6 +278,17 @@
      spelling is a different, common word: "its" (possessive) and "id"
      (identifier, which this tool's users type constantly). */
   var APOSTROPHE_ONLY = { its: "it is", id: "I would" };
+  /* Words whose correct spelling doubles the very letter people stretch, so
+     collapsing the run to one letter under-corrects. Applied only to words the
+     stretch rule modified. */
+  var RESTORE_DOUBLE = {
+    to: "too", god: "good", col: "cool", hm: "hmm", se: "see", fre: "free",
+    ned: "need", kep: "keep", wek: "week", ben: "been", lok: "look", bok: "book",
+    son: "soon", rom: "room", dor: "door", flor: "floor", fel: "feel",
+    stil: "still", smal: "small", ful: "full", wel: "well", les: "less",
+    of: "off", al: "all", tel: "tell", cal: "call", fal: "fall", wil: "will",
+    bal: "ball", il: "ill", ad: "add", od: "odd", eg: "egg", scrol: "scroll"
+  };
   /* Letter-stretching is collapsed to a doubled letter before this runs, so
      "sooo annoying" arrives as "soo annoying" and "omgggg" as "omgg". Every
      stretch-prone token therefore ends in "+" so both spellings match. */
@@ -286,11 +299,24 @@
     var fixes = 0;
     var vented = false;
     var out = text.replace(/\s+/g, " ").trim();
-    /* Collapse dramatic letter-stretching first: a run of three or more becomes
-       a pair, so "soooo" -> "soo" and "slowwww" -> "sloww". Two is the floor
-       because real words double letters ("committee"), and the vent pattern
-       above accepts the doubled spelling. */
-    out = out.replace(/([a-z])\1{2,}/gi, function (m, ch) { fixes++; return ch + ch; });
+    /* Collapse dramatic letter-stretching first. No English word contains a run
+       of three identical letters, so such a run is always deliberate: reduce it
+       to one, which is right for the overwhelming majority ("soooo" -> "so",
+       "slowwww" -> "slow", "yesss" -> "yes"). Collapsing to a pair instead would
+       leave non-words like "soo" and "sloww" in the objective. The handful of
+       base words that genuinely double the stretched letter are restored below,
+       and only for words this rule actually touched, so an ordinary "to" is
+       never turned into "too". */
+    out = out.replace(/[a-zA-Z]+/g, function (word) {
+      if (!/([a-z])\1{2,}/i.test(word)) return word;
+      fixes++;
+      var squashed = word.replace(/([a-z])\1{2,}/gi, function (m, ch) { return ch; });
+      var base = RESTORE_DOUBLE[squashed.toLowerCase()];
+      if (!base) return squashed;
+      return squashed[0] === squashed[0].toUpperCase()
+        ? base.charAt(0).toUpperCase() + base.slice(1)
+        : base;
+    });
     /* Expand shorthand next, so "i h8 this" becomes "i hate this" and the vent
        strip below can catch it instead of letting it leak into the objective. */
     out = out.replace(/[a-zA-Z0-9']+/g, function (word) {
@@ -620,9 +646,14 @@
     runPipeline();
   });
   document.getElementById("copy").addEventListener("click", function () {
-    navigator.clipboard.writeText(result.textContent).then(function () {
-      var b = document.getElementById("copy"); b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1200);
-    });
+    var b = document.getElementById("copy");
+    /* Clipboard access can be refused or unavailable; say so rather than
+       leaving the button silent on a rejected promise. */
+    Promise.resolve()
+      .then(function () { return navigator.clipboard.writeText(result.textContent); })
+      .then(function () { b.textContent = "Copied"; })
+      .catch(function () { b.textContent = "Copy failed"; })
+      .then(function () { setTimeout(function () { b.textContent = "Copy"; }, 1200); });
   });
   document.getElementById("clear").addEventListener("click", function () {
     raw.value = ""; more.value = ""; chosenType = null; runPipeline();
