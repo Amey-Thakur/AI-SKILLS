@@ -42,7 +42,10 @@
     C.textDim = g("--text-4", "#8e8578");
     C.accent = g("--accent", "#d8a24a");
     C.skill = g("--text-3", "#a49b8c");
-    C.prompt = g("--accent-strong", "#e6b45f");
+    /* --accent, not --accent-strong: that token is now the deep tone used for
+       link hover, which would paint prompt dots almost black on the light
+       theme. The plot reads as grey skills against amber prompts. */
+    C.prompt = g("--accent", "#d8a24a");
   }
   window.readColors = readColors;
   readColors();
