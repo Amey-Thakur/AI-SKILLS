@@ -31,7 +31,19 @@ function frontmatter(path) {
          (Claude Code, Cursor) even though this regex reader would accept it.
          Reject it here rather than shipping a skill that silently fails to
          load. Quote the value in the file to fix. */
-      if (!/^["']/.test(raw) && /:\s/.test(raw)) {
+      if (/^'/.test(raw)) {
+        /* Single quotes satisfy YAML but not this reader: the stripper below
+           only removes double quotes, so a single-quoted value would keep its
+           quotes and any ": " inside it would silently reach index.json,
+           llms.txt and the plugin description. Reject rather than half-parse,
+           and say which quote to use, since CONTRIBUTING tells contributors to
+           quote a value containing a colon without naming the style. */
+        throw new Error(
+          `Single-quoted "${currentKey}" in ${path}\n` +
+            `  ${raw}\n  Use double quotes; this reader only strips those.`
+        );
+      }
+      if (!/^"/.test(raw) && /:\s/.test(raw)) {
         throw new Error(
           `Unquoted "${currentKey}" contains ": " in ${path}\n` +
             `  ${raw}\n  Wrap the value in double quotes so the frontmatter is valid YAML.`
