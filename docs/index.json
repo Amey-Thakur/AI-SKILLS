@@ -13,7 +13,7 @@
   },
   "count": {
     "skills": 1000,
-    "prompts": 150,
+    "prompts": 166,
     "categories": 67
   },
   "categories": [
@@ -9402,6 +9402,31 @@
     },
     {
       "kind": "prompt",
+      "name": "business-case",
+      "category": "prompts",
+      "description": "Make the case for an investment with costs, benefits, risks, and the option of not doing it.",
+      "variables": [
+        "{proposal}: what you want to do and why now",
+        "{context}: current situation, constraints, and who decides"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/business-case.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/business-case.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "business-model-canvas",
+      "category": "prompts",
+      "description": "Lay out how a business creates, delivers, and captures value, and check the pieces are consistent with each other.",
+      "variables": [
+        "{business}: what it does, for whom, and how it charges today or intends to"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/business-model-canvas.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/business-model-canvas.md"
+    },
+    {
+      "kind": "prompt",
       "name": "case-study",
       "category": "prompts",
       "description": "Write a customer case study with the classic problem-solution-results arc and concrete, credible outcomes.",
@@ -9480,6 +9505,19 @@
     },
     {
       "kind": "prompt",
+      "name": "competitive-analysis",
+      "category": "prompts",
+      "description": "Compare competitors on what buyers actually weigh, using only public information.",
+      "variables": [
+        "{competitors}: who to compare, including the do-nothing alternative",
+        "{criteria}: what your buyers actually decide on"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/competitive-analysis.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/competitive-analysis.md"
+    },
+    {
+      "kind": "prompt",
       "name": "content-outline",
       "category": "prompts",
       "description": "Outline an article, course, or long piece so the structure is sound before you write a word.",
@@ -9490,6 +9528,19 @@
       "settings": "Temperature 0.5-0.7.",
       "path": "prompts/content-outline.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/content-outline.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "contract-review-checklist",
+      "category": "prompts",
+      "description": "Extract the terms that matter from an agreement and flag deviations for a lawyer, without giving legal advice.",
+      "variables": [
+        "{contract}: the agreement text or its key clauses",
+        "{position}: your standard positions on liability, term, and data"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/contract-review-checklist.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/contract-review-checklist.md"
     },
     {
       "kind": "prompt",
@@ -9504,6 +9555,19 @@
       "settings": "Temperature 0.2-0.4 for faithful translation.",
       "path": "prompts/convert-code.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/convert-code.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "cost-reduction-plan",
+      "category": "prompts",
+      "description": "Find genuine cost reduction ranked by size and risk, distinguishing waste from capability being cut.",
+      "variables": [
+        "{costs}: the current cost breakdown, ideally by category and driver",
+        "{constraints}: what must not be degraded and any target"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/cost-reduction-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/cost-reduction-plan.md"
     },
     {
       "kind": "prompt",
@@ -9837,6 +9901,19 @@
     },
     {
       "kind": "prompt",
+      "name": "financial-forecast",
+      "category": "prompts",
+      "description": "Build a forecast from stated drivers rather than a growth percentage, with the assumptions exposed.",
+      "variables": [
+        "{history}: actuals for recent periods, with the drivers behind them",
+        "{horizon}: how far ahead and what decision the forecast supports"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/financial-forecast.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/financial-forecast.md"
+    },
+    {
+      "kind": "prompt",
       "name": "flashcards",
       "category": "prompts",
       "description": "Turn notes or a topic into study flashcards that test recall of the things worth knowing, not trivia.",
@@ -9900,6 +9977,19 @@
       "settings": "Temperature 0.8-1.0 for range.",
       "path": "prompts/headline-hooks.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/headline-hooks.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "hiring-plan",
+      "category": "prompts",
+      "description": "Plan hiring against real capacity gaps, with sequencing, cost, and ramp-up time included.",
+      "variables": [
+        "{gaps}: the work not getting done and the skills missing",
+        "{constraints}: budget, timeline, and current team shape"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/hiring-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/hiring-plan.md"
     },
     {
       "kind": "prompt",
@@ -9968,6 +10058,19 @@
     },
     {
       "kind": "prompt",
+      "name": "investor-update",
+      "category": "prompts",
+      "description": "Write a periodic investor update that leads with the numbers, states the asks, and does not bury bad news.",
+      "variables": [
+        "{period}: the period covered and the key metrics with their prior values",
+        "{events}: what happened, including what went wrong"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/investor-update.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/investor-update.md"
+    },
+    {
+      "kind": "prompt",
       "name": "job-description",
       "category": "prompts",
       "description": "Write a clear, honest job description that attracts the right candidates and screens out the wrong ones.",
@@ -10033,6 +10136,19 @@
       "settings": "Temperature 0.6-0.8.",
       "path": "prompts/linkedin-post.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/linkedin-post.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "market-sizing",
+      "category": "prompts",
+      "description": "Estimate a market from the bottom up, with assumptions visible enough to argue with.",
+      "variables": [
+        "{market}: the product or service, the buyer, and the geography",
+        "{known}: any figures you already have, such as pricing or population data"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/market-sizing.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/market-sizing.md"
     },
     {
       "kind": "prompt",
@@ -10206,6 +10322,19 @@
     },
     {
       "kind": "prompt",
+      "name": "partnership-proposal",
+      "category": "prompts",
+      "description": "Propose a partnership stating what each side gains, with a small first step rather than a broad commitment.",
+      "variables": [
+        "{partner}: who they are, what they do, and why they would care",
+        "{opportunity}: what you want to do together and what you bring"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/partnership-proposal.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/partnership-proposal.md"
+    },
+    {
+      "kind": "prompt",
       "name": "performance-review",
       "category": "prompts",
       "description": "Write a fair, specific performance review or peer feedback with concrete examples and actionable growth areas.",
@@ -10323,6 +10452,19 @@
     },
     {
       "kind": "prompt",
+      "name": "pricing-proposal",
+      "category": "prompts",
+      "description": "Propose a pricing structure with the value, margin, and competitive cases argued, and the migration cost stated.",
+      "variables": [
+        "{product}: what is being priced, its costs, and its current pricing if any",
+        "{market}: who buys, what alternatives cost them, and what they gain"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/pricing-proposal.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/pricing-proposal.md"
+    },
+    {
+      "kind": "prompt",
       "name": "prioritize-tasks",
       "category": "prompts",
       "description": "Prioritize a task list by importance and urgency (Eisenhower matrix) and turn it into a clear order of action.",
@@ -10333,6 +10475,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/prioritize-tasks.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/prioritize-tasks.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "procurement-brief",
+      "category": "prompts",
+      "description": "Write requirements for a purchase before looking at vendors, so the comparison is not shaped by whoever demos best.",
+      "variables": [
+        "{need}: the problem to solve, current workaround, and who will use it",
+        "{constraints}: budget, timeline, integration, and compliance requirements"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/procurement-brief.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/procurement-brief.md"
     },
     {
       "kind": "prompt",
@@ -10398,6 +10553,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/pros-cons.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/pros-cons.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "quarterly-planning",
+      "category": "prompts",
+      "description": "Turn objectives into a quarter of committed work that fits real capacity, with what is being dropped named.",
+      "variables": [
+        "{objectives}: what the quarter must achieve and why",
+        "{capacity}: team size, known absences, and existing commitments"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/quarterly-planning.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/quarterly-planning.md"
     },
     {
       "kind": "prompt",
@@ -10729,6 +10897,19 @@
     },
     {
       "kind": "prompt",
+      "name": "stakeholder-map",
+      "category": "prompts",
+      "description": "Identify who is affected by a decision, what each needs, and how they should be engaged.",
+      "variables": [
+        "{initiative}: the decision or project and its scope",
+        "{organization}: the teams, roles, and any known tensions"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/stakeholder-map.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/stakeholder-map.md"
+    },
+    {
+      "kind": "prompt",
       "name": "standup-summary",
       "category": "prompts",
       "description": "Turn work notes, commits, or a task list into a crisp standup update that surfaces blockers first.",
@@ -10898,6 +11079,19 @@
     },
     {
       "kind": "prompt",
+      "name": "unit-economics-analysis",
+      "category": "prompts",
+      "description": "Work out whether one customer or transaction makes money, with every variable cost included.",
+      "variables": [
+        "{numbers}: revenue per unit, known costs, retention, and acquisition spend",
+        "{unit}: what one unit is, such as a customer, an order, or a seat"
+      ],
+      "settings": "Temperature 0.2 for arithmetic care.",
+      "path": "prompts/unit-economics-analysis.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/unit-economics-analysis.md"
+    },
+    {
+      "kind": "prompt",
       "name": "user-story-breakdown",
       "category": "prompts",
       "description": "Break a feature idea into small, testable user stories with acceptance criteria and honest unknowns.",
@@ -10908,6 +11102,19 @@
       "settings": "Temperature 0.2-0.4.",
       "path": "prompts/user-story-breakdown.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/user-story-breakdown.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "vendor-evaluation",
+      "category": "prompts",
+      "description": "Compare vendors against weighted criteria fixed before the vendor list, including total and exit cost.",
+      "variables": [
+        "{need}: what problem the vendor must solve and the constraints",
+        "{candidates}: the vendors under consideration"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/vendor-evaluation.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/vendor-evaluation.md"
     },
     {
       "kind": "prompt",
