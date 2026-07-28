@@ -147,7 +147,10 @@ nav.top a:hover { color: var(--text-1); }
 .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .tt-knob {
   position: absolute; top: 2px; left: 2px; width: 21px; height: 21px;
-  border-radius: 50%; background: var(--accent); color: var(--bg);
+  /* --on-accent, not --bg: the knob is the amber in both themes, so the icon
+     has to be the dark tone that sits on it. Using --bg made the light theme's
+     sun a near-white shape on amber, about 2:1 and effectively invisible. */
+  border-radius: 50%; background: var(--accent); color: var(--on-accent);
   display: flex; align-items: center; justify-content: center;
   transition: transform .3s cubic-bezier(.4, 0, .2, 1), background-color .25s;
 }

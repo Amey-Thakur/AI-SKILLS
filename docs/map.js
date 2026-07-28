@@ -32,14 +32,15 @@
     var s = getComputedStyle(document.documentElement);
     var g = function (n, f) { return (s.getPropertyValue(n) || f).trim(); };
     C.line = g("--border", "#322e29");
-    /* --accent-display, not --accent: on the light theme's white plot the full
-       amber sits at about 2.3:1, below the 3:1 that graphics need. The display
-       token is the same amber taken far enough down to clear it, and is
-       identical to --accent in the dark theme. */
-    C.lineHot = g("--accent-display", "#d8a24a");
+    /* Nodes use --accent, the one brand amber, so the plot matches the buttons
+       and headings rather than drifting to its own shade. On the light theme's
+       white plot that sits near 2.3:1, under the 3:1 guideline for graphics;
+       the labels, tooltip and detail panel below carry the same information in
+       readable text, so no meaning depends on telling the dots apart. */
+    C.lineHot = g("--accent", "#d8a24a");
     C.text = g("--text-2", "#c8c0b3");
     C.textDim = g("--text-4", "#8e8578");
-    C.accent = g("--accent-display", "#d8a24a");
+    C.accent = g("--accent", "#d8a24a");
     C.skill = g("--text-3", "#a49b8c");
     C.prompt = g("--accent-strong", "#e6b45f");
   }
