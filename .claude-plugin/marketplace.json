@@ -646,6 +646,26 @@
       ]
     },
     {
+      "name": "github-platform-skills",
+      "description": "12 working methods for github platform: actions-security, branch-protection, dependency-scanning-setup, github-actions-workflows, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/github-platform/actions-security",
+        "./skills/github-platform/branch-protection",
+        "./skills/github-platform/dependency-scanning-setup",
+        "./skills/github-platform/github-actions-workflows",
+        "./skills/github-platform/github-api-automation",
+        "./skills/github-platform/issue-and-project-tracking",
+        "./skills/github-platform/pr-automation",
+        "./skills/github-platform/release-automation",
+        "./skills/github-platform/repository-hygiene",
+        "./skills/github-platform/repository-permissions",
+        "./skills/github-platform/repository-structure",
+        "./skills/github-platform/secret-scanning"
+      ]
+    },
+    {
       "name": "gpu-ai-infrastructure-skills",
       "description": "20 working methods for gpu ai infrastructure: ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics, distributed-training-scaling, and more",
       "source": "./",

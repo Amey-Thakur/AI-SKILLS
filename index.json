@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 880,
+    "skills": 892,
     "prompts": 134,
-    "categories": 57
+    "categories": 58
   },
   "categories": [
     "accessibility",
@@ -46,6 +46,7 @@
     "frontend",
     "game-development",
     "git-collaboration",
+    "github-platform",
     "gpu-ai-infrastructure",
     "i18n-localization",
     "javascript-typescript",
@@ -3711,6 +3712,114 @@
       "use_when": "when setting up a release process or fixing ambiguous, unsigned, or manual releases",
       "path": "skills/git-collaboration/release-tagging/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/git-collaboration/release-tagging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "actions-security",
+      "category": "github-platform",
+      "description": "Prevent workflow automation from becoming an attack path, through pinned actions, scoped tokens, and careful handling of untrusted input. Use when workflows handle secrets or run on pull requests from forks.",
+      "use_when": "when workflows handle secrets or run on pull requests from forks",
+      "path": "skills/github-platform/actions-security/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/actions-security/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "branch-protection",
+      "category": "github-platform",
+      "description": "Configure rules that stop unreviewed or broken code reaching the default branch, without making routine work impossible. Use when setting up a shared repository or after an incident traced to a direct push.",
+      "use_when": "when setting up a shared repository or after an incident traced to a direct push",
+      "path": "skills/github-platform/branch-protection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/branch-protection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "dependency-scanning-setup",
+      "category": "github-platform",
+      "description": "Configure automated dependency and vulnerability scanning at a cadence people will actually act on. Use when dependencies drift or vulnerabilities go unnoticed.",
+      "use_when": "when dependencies drift or vulnerabilities go unnoticed",
+      "path": "skills/github-platform/dependency-scanning-setup/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/dependency-scanning-setup/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "github-actions-workflows",
+      "category": "github-platform",
+      "description": "Write CI workflows that are fast, readable, and cheap, with the right triggers, caching, and matrix strategy. Use when setting up or fixing automation on a repository.",
+      "use_when": "when setting up or fixing automation on a repository",
+      "path": "skills/github-platform/github-actions-workflows/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/github-actions-workflows/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "github-api-automation",
+      "category": "github-platform",
+      "description": "Script repository operations reliably, respecting rate limits, pagination, and permissions. Use when managing repositories at scale or building tooling around the platform.",
+      "use_when": "when managing repositories at scale or building tooling around the platform",
+      "path": "skills/github-platform/github-api-automation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/github-api-automation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "issue-and-project-tracking",
+      "category": "github-platform",
+      "description": "Structure issues, labels, and boards so the tracker reflects reality and answers what is being worked on. Use when the backlog has grown beyond what anyone reads.",
+      "use_when": "when the backlog has grown beyond what anyone reads",
+      "path": "skills/github-platform/issue-and-project-tracking/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/issue-and-project-tracking/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pr-automation",
+      "category": "github-platform",
+      "description": "Automate the mechanical parts of pull requests, such as labelling, assignment, checks, and merging, so review effort goes to the code. Use when review process consumes attention on bookkeeping.",
+      "use_when": "when review process consumes attention on bookkeeping",
+      "path": "skills/github-platform/pr-automation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/pr-automation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "release-automation",
+      "category": "github-platform",
+      "description": "Automate tagging, building, and publishing releases so shipping is repeatable and the artefacts match the tag. Use when releases are manual, inconsistent, or occasionally wrong.",
+      "use_when": "when releases are manual, inconsistent, or occasionally wrong",
+      "path": "skills/github-platform/release-automation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/release-automation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "repository-hygiene",
+      "category": "github-platform",
+      "description": "Keep a repository free of stale branches, dead files, oversized objects, and abandoned configuration. Use when a repository has grown cluttered or slow to clone.",
+      "use_when": "when a repository has grown cluttered or slow to clone",
+      "path": "skills/github-platform/repository-hygiene/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/repository-hygiene/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "repository-permissions",
+      "category": "github-platform",
+      "description": "Grant repository and organisation access through teams and least privilege, and review it before it drifts. Use when managing access for a growing organisation or auditing who can do what.",
+      "use_when": "when managing access for a growing organisation or auditing who can do what",
+      "path": "skills/github-platform/repository-permissions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/repository-permissions/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "repository-structure",
+      "category": "github-platform",
+      "description": "Organise a repository so a newcomer finds what they need and automation has predictable paths. Use when starting a repository or when nobody can find anything in an existing one.",
+      "use_when": "when starting a repository or when nobody can find anything in an existing one",
+      "path": "skills/github-platform/repository-structure/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/repository-structure/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "secret-scanning",
+      "category": "github-platform",
+      "description": "Detect committed credentials, respond correctly when one is found, and prevent the next one. Use when setting up a repository or after a credential appears in history.",
+      "use_when": "when setting up a repository or after a credential appears in history",
+      "path": "skills/github-platform/secret-scanning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/github-platform/secret-scanning/SKILL.md"
     },
     {
       "kind": "skill",

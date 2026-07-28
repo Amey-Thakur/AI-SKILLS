@@ -130,6 +130,7 @@ One row per category; every entry, with its one-line description, is in
 | [frontend](CATALOG.md#frontend-10) | 10 | design-systems, error-boundaries-ui, form-handling |
 | [game-development](CATALOG.md#game-development-8) | 8 | entity-component-system, game-asset-pipeline, game-input-handling |
 | [git-collaboration](CATALOG.md#git-collaboration-10) | 10 | branch-strategy, code-owners, commit-messages |
+| [github-platform](CATALOG.md#github-platform-12) | 12 | actions-security, branch-protection, dependency-scanning-setup |
 | [gpu-ai-infrastructure](CATALOG.md#gpu-ai-infrastructure-20) | 20 | ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics |
 | [i18n-localization](CATALOG.md#i18n-localization-12) | 12 | character-encoding, currency-localization, locale-aware-sorting |
 | [javascript-typescript](CATALOG.md#javascript-typescript-14) | 14 | js-async-patterns, js-error-handling, js-event-loop |
