@@ -522,6 +522,26 @@
       ]
     },
     {
+      "name": "deliverables-skills",
+      "description": "12 working methods for deliverables: dashboard-building, documentation-site, form-design, newsletter-production, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/deliverables/dashboard-building",
+        "./skills/deliverables/documentation-site",
+        "./skills/deliverables/form-design",
+        "./skills/deliverables/newsletter-production",
+        "./skills/deliverables/pdf-generation",
+        "./skills/deliverables/print-ready-output",
+        "./skills/deliverables/proposal-writing",
+        "./skills/deliverables/report-writing",
+        "./skills/deliverables/slide-deck-creation",
+        "./skills/deliverables/spreadsheet-modeling",
+        "./skills/deliverables/technical-diagrams",
+        "./skills/deliverables/website-building"
+      ]
+    },
+    {
       "name": "devops-skills",
       "description": "14 working methods for devops: artifact-versioning, blue-green-deployments, capacity-planning, ci-cd, and more",
       "source": "./",

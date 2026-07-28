@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 927,
+    "skills": 939,
     "prompts": 134,
-    "categories": 61
+    "categories": 62
   },
   "categories": [
     "accessibility",
@@ -39,6 +39,7 @@
     "databases",
     "debugging",
     "deep-learning",
+    "deliverables",
     "devops",
     "distributed-systems",
     "documentation",
@@ -3103,6 +3104,114 @@
       "use_when": "when a deep network fails to train from the start or diverges immediately",
       "path": "skills/deep-learning/weight-initialization/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/weight-initialization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "dashboard-building",
+      "category": "deliverables",
+      "description": "Build dashboards that answer specific questions at a glance, rather than displaying every available metric. Use when a team needs shared visibility into an ongoing situation.",
+      "use_when": "when a team needs shared visibility into an ongoing situation",
+      "path": "skills/deliverables/dashboard-building/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/dashboard-building/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "documentation-site",
+      "category": "deliverables",
+      "description": "Structure a documentation site so readers find answers by task, with working examples and a maintenance path. Use when documenting a product or library for external users.",
+      "use_when": "when documenting a product or library for external users",
+      "path": "skills/deliverables/documentation-site/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/documentation-site/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "form-design",
+      "category": "deliverables",
+      "description": "Design forms people complete, with the fewest fields, clear labels, and error handling that helps rather than punishes. Use when collecting any information from users.",
+      "use_when": "when collecting any information from users",
+      "path": "skills/deliverables/form-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/form-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "newsletter-production",
+      "category": "deliverables",
+      "description": "Produce a recurring newsletter with a sustainable format, a clear reason to open, and rendering that survives email clients. Use when publishing regularly to a subscribed audience.",
+      "use_when": "when publishing regularly to a subscribed audience",
+      "path": "skills/deliverables/newsletter-production/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/newsletter-production/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pdf-generation",
+      "category": "deliverables",
+      "description": "Produce PDFs programmatically with correct fonts, page breaks, and accessibility, from templates that survive content changes. Use when generating invoices, reports, certificates, or statements.",
+      "use_when": "when generating invoices, reports, certificates, or statements",
+      "path": "skills/deliverables/pdf-generation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/pdf-generation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "print-ready-output",
+      "category": "deliverables",
+      "description": "Prepare documents for physical printing with correct colour, bleed, resolution, and fonts, so what prints matches what you designed. Use when producing anything that will be professionally printed.",
+      "use_when": "when producing anything that will be professionally printed",
+      "path": "skills/deliverables/print-ready-output/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/print-ready-output/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "proposal-writing",
+      "category": "deliverables",
+      "description": "Write a proposal that states the client's problem, your approach, and the commercial terms clearly enough to be accepted or declined quickly. Use when bidding for work or pitching a project.",
+      "use_when": "when bidding for work or pitching a project",
+      "path": "skills/deliverables/proposal-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/proposal-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "report-writing",
+      "category": "deliverables",
+      "description": "Write a report that leads with findings, supports them with evidence, and states its own limitations. Use when presenting analysis, results, or an investigation in writing.",
+      "use_when": "when presenting analysis, results, or an investigation in writing",
+      "path": "skills/deliverables/report-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/report-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "slide-deck-creation",
+      "category": "deliverables",
+      "description": "Build a deck that supports a spoken argument, with one idea per slide and visuals that carry meaning. Use when presenting to an audience rather than sending a document.",
+      "use_when": "when presenting to an audience rather than sending a document",
+      "path": "skills/deliverables/slide-deck-creation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/slide-deck-creation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "spreadsheet-modeling",
+      "category": "deliverables",
+      "description": "Build spreadsheet models that are auditable and hard to break, separating inputs, calculations, and outputs. Use when modelling finances, forecasts, or scenarios.",
+      "use_when": "when modelling finances, forecasts, or scenarios",
+      "path": "skills/deliverables/spreadsheet-modeling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/spreadsheet-modeling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "technical-diagrams",
+      "category": "deliverables",
+      "description": "Draw system, sequence, and flow diagrams that clarify rather than decorate, at a consistent level of abstraction. Use when explaining a system to people who did not build it.",
+      "use_when": "when explaining a system to people who did not build it",
+      "path": "skills/deliverables/technical-diagrams/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/technical-diagrams/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "website-building",
+      "category": "deliverables",
+      "description": "Build and ship a small site that loads fast, reads well, and can be updated, choosing the simplest stack that fits. Use when creating a marketing site, portfolio, documentation site, or landing page.",
+      "use_when": "when creating a marketing site, portfolio, documentation site, or landing page",
+      "path": "skills/deliverables/website-building/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deliverables/website-building/SKILL.md"
     },
     {
       "kind": "skill",
