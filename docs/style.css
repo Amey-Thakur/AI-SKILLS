@@ -85,7 +85,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 .mono { font-family: ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace; }
-.play { font-family: "Play", ui-monospace, Consolas, monospace; }
 a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent); text-underline-offset: 3px; }
 a:hover { color: var(--accent-strong); }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }

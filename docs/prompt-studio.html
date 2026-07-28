@@ -55,11 +55,6 @@
   .head p.lede { color: var(--text-2); font-size: 19px; max-width: 720px; margin-bottom: 10px; }
   .head p.small { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12.5px; color: var(--text-4); }
 
-  .science { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin: 38px 0 12px; }
-  .tech { border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm); }
-  .tech b { display: block; font-family: "Play", ui-monospace, Consolas, monospace; font-size: 14px; color: var(--text-1); margin-bottom: 7px; }
-  .tech p { font-size: 14px; color: var(--text-3); line-height: 1.6; }
-
   .builder { display: grid; grid-template-columns: 1fr; gap: 30px; padding: 36px 0 84px; }
   @media (min-width: 980px) { .builder { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
 
@@ -75,17 +70,6 @@
   }
   input[type="text"]:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
   textarea { resize: vertical; min-height: 76px; line-height: 1.6; }
-  .types { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  @media (max-width: 460px) { .types { grid-template-columns: 1fr; } }
-  .type {
-    text-align: left; border: 1px solid var(--border); background: var(--surface-2); border-radius: var(--radius-sm);
-    padding: 14px 16px; cursor: pointer; font-family: "Play", ui-monospace, Consolas, monospace; font-size: 14px; color: var(--text-2);
-    transition: border-color .15s, background-color .15s, transform .12s;
-  }
-  .type:hover { border-color: var(--border-hover); transform: translateY(-1px); }
-  .type[aria-pressed="true"] { border-color: var(--accent); color: var(--text-1); background: var(--accent-soft); }
-  .type small { display: block; color: var(--text-4); font-size: 12px; margin-top: 4px; font-family: "Iowan Old Style", Georgia, serif; }
-  .hint { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12.5px; color: var(--accent); margin-top: 10px; }
   .example-btn {
     background: var(--surface-2); border: 1px solid var(--border); color: var(--text-3); border-radius: var(--radius-pill);
     font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; padding: 8px 16px; cursor: pointer; margin-top: 12px; transition: border-color .15s, color .15s;
@@ -128,7 +112,6 @@
     .head { padding: 40px 0 8px; }
     .head p.lede { font-size: 17px; }
     fieldset { padding: 22px; }
-    .science { margin: 28px 0 8px; }
     pre#result { padding: 18px; font-size: 13.5px; }
   }
 </style>
