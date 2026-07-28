@@ -102,6 +102,7 @@ One row per category; every entry, with its one-line description, is in
 | Category | Skills | For example |
 |---|---|---|
 | [accessibility](CATALOG.md#accessibility-8) | 8 | accessibility-review, accessible-forms, alt-text-writing |
+| [ai-memory-rag](CATALOG.md#ai-memory-rag-12) | 12 | chunking-strategies, citation-grounding, context-compression |
 | [apis](CATALOG.md#apis-9) | 9 | api-change-management, api-client-design, api-deprecation |
 | [architecture](CATALOG.md#architecture-13) | 13 | api-gateway-pattern, architecture-decision-records, architecture-diagrams |
 | [backend](CATALOG.md#backend-14) | 14 | api-error-responses, api-versioning, background-jobs |

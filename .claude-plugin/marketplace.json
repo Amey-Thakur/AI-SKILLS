@@ -26,6 +26,26 @@
       ]
     },
     {
+      "name": "ai-memory-rag-skills",
+      "description": "12 working methods for ai memory rag: chunking-strategies, citation-grounding, context-compression, conversation-memory, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/ai-memory-rag/chunking-strategies",
+        "./skills/ai-memory-rag/citation-grounding",
+        "./skills/ai-memory-rag/context-compression",
+        "./skills/ai-memory-rag/conversation-memory",
+        "./skills/ai-memory-rag/knowledge-graph-memory",
+        "./skills/ai-memory-rag/long-term-user-memory",
+        "./skills/ai-memory-rag/memory-consolidation",
+        "./skills/ai-memory-rag/memory-forgetting-policy",
+        "./skills/ai-memory-rag/multi-hop-retrieval",
+        "./skills/ai-memory-rag/rag-evaluation",
+        "./skills/ai-memory-rag/rag-freshness",
+        "./skills/ai-memory-rag/vector-store-operations"
+      ]
+    },
+    {
       "name": "apis-skills",
       "description": "9 working methods for apis: api-change-management, api-client-design, api-deprecation, api-design, and more",
       "source": "./",
