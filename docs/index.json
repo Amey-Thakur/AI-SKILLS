@@ -13,7 +13,7 @@
   },
   "count": {
     "skills": 1000,
-    "prompts": 214,
+    "prompts": 230,
     "categories": 67
   },
   "categories": [
@@ -9349,6 +9349,19 @@
     },
     {
       "kind": "prompt",
+      "name": "audit-accessibility",
+      "category": "prompts",
+      "description": "Audit a product against real assistive technology use, prioritised by who is blocked.",
+      "variables": [
+        "{product}: the pages or flows to audit and their purpose",
+        "{scope}: what has been tested already and what tools are available"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/audit-accessibility.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/audit-accessibility.md"
+    },
+    {
+      "kind": "prompt",
       "name": "autoresearch",
       "category": "prompts",
       "description": "Run a full autonomous research investigation and return a verified, cited report: plan, search broadly, check primary sources, verify adversarially, and synthesize. Run like an /autoresearch command for a deep, trustworthy answer.",
@@ -9451,6 +9464,32 @@
       "settings": "Temperature 0-0.3.",
       "path": "prompts/bug-report-triage.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/bug-report-triage.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "build-spreadsheet-model",
+      "category": "prompts",
+      "description": "Specify a spreadsheet model that is auditable, with inputs separated and checks built in.",
+      "variables": [
+        "{model}: what is being modelled and the decision it supports",
+        "{inputs}: the known figures, assumptions, and their sources"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/build-spreadsheet-model.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/build-spreadsheet-model.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "build-website",
+      "category": "prompts",
+      "description": "Build a small site with the simplest stack that fits, fast by default and editable afterwards.",
+      "variables": [
+        "{site}: what the site is for, its pages, and who maintains it",
+        "{content}: the actual copy, or the sections it needs"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/build-website.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/build-website.md"
     },
     {
       "kind": "prompt",
@@ -9899,6 +9938,19 @@
     },
     {
       "kind": "prompt",
+      "name": "design-diagram",
+      "category": "prompts",
+      "description": "Specify a technical diagram that answers one question at one level of abstraction.",
+      "variables": [
+        "{system}: the system, its components, and how they relate",
+        "{question}: what the diagram must make clear, and for whom"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/design-diagram.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-diagram.md"
+    },
+    {
+      "kind": "prompt",
       "name": "design-doc",
       "category": "prompts",
       "description": "Write an engineering design doc that states the problem, weighs options, and lets reviewers approve or push back.",
@@ -9912,6 +9964,45 @@
     },
     {
       "kind": "prompt",
+      "name": "design-form",
+      "category": "prompts",
+      "description": "Design a form with the fewest fields that works, clear labels, and errors that help.",
+      "variables": [
+        "{purpose}: what the form collects and why each field is needed",
+        "{context}: where it appears, who fills it, and on what devices"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/design-form.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-form.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "design-mcp-server",
+      "category": "prompts",
+      "description": "Design an MCP server with tools an agent selects correctly and boundaries that keep it safe.",
+      "variables": [
+        "{capability}: what the server exposes and to which systems",
+        "{consumers}: who connects, locally or remotely, and with what trust"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/design-mcp-server.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-mcp-server.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "design-notification-system",
+      "category": "prompts",
+      "description": "Design notifications with a frequency budget, the right channel per message, and real user control.",
+      "variables": [
+        "{events}: what the product would notify about and how urgent each is",
+        "{users}: who they are and how they currently receive updates"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/design-notification-system.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-notification-system.md"
+    },
+    {
+      "kind": "prompt",
       "name": "design-observability",
       "category": "prompts",
       "description": "Decide what to log, measure, and trace for a service so failures are diagnosable without adding noise.",
@@ -9922,6 +10013,19 @@
       "settings": "Temperature 0.3.",
       "path": "prompts/design-observability.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-observability.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "design-slide-deck",
+      "category": "prompts",
+      "description": "Turn an argument into a deck with one idea per slide and headlines that carry the point.",
+      "variables": [
+        "{argument}: what you are arguing and the evidence for it",
+        "{context}: audience, time available, and the decision wanted"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/design-slide-deck.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-slide-deck.md"
     },
     {
       "kind": "prompt",
@@ -10211,6 +10315,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/follow-up-email.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/follow-up-email.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "generate-pdf-document",
+      "category": "prompts",
+      "description": "Specify a generated PDF that survives variable content, with fonts, page breaks, and accessibility handled.",
+      "variables": [
+        "{document}: what the document is, its sections, and what varies per instance",
+        "{context}: how it is generated, at what volume, and who reads it"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/generate-pdf-document.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/generate-pdf-document.md"
     },
     {
       "kind": "prompt",
@@ -10738,6 +10855,19 @@
     },
     {
       "kind": "prompt",
+      "name": "plan-localization",
+      "category": "prompts",
+      "description": "Plan localisation covering extraction, translation workflow, and the layout and format issues that follow.",
+      "variables": [
+        "{product}: what is being localised and its current state",
+        "{markets}: target languages and regions, and why those"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/plan-localization.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/plan-localization.md"
+    },
+    {
+      "kind": "prompt",
       "name": "plan-migration",
       "category": "prompts",
       "description": "Plan a migration between systems, versions, or providers with staged cutover and a rollback at every step.",
@@ -10748,6 +10878,32 @@
       "settings": "Temperature 0.3.",
       "path": "prompts/plan-migration.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/plan-migration.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "plan-observability-rollout",
+      "category": "prompts",
+      "description": "Plan instrumentation across a system in stages, starting where blindness costs most.",
+      "variables": [
+        "{systems}: the services involved and their current instrumentation",
+        "{pain}: recent incidents where you could not see what was happening"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/plan-observability-rollout.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/plan-observability-rollout.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "plan-rag-system",
+      "category": "prompts",
+      "description": "Plan a retrieval system with chunking, evaluation, and freshness decided before building.",
+      "variables": [
+        "{corpus}: the documents, their structure, size, and how often they change",
+        "{questions}: what users will ask and how precise answers must be"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/plan-rag-system.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/plan-rag-system.md"
     },
     {
       "kind": "prompt",
@@ -11190,6 +11346,19 @@
       "settings": "Temperature 0.2.",
       "path": "prompts/review-accessibility.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/review-accessibility.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "review-data-privacy",
+      "category": "prompts",
+      "description": "Review a feature for privacy: what is collected, where it goes, how long it stays, and whether deletion works.",
+      "variables": [
+        "{feature}: what the feature does and what data it touches",
+        "{context}: users, jurisdictions, vendors, and existing policies"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/review-data-privacy.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/review-data-privacy.md"
     },
     {
       "kind": "prompt",
@@ -11821,6 +11990,19 @@
     },
     {
       "kind": "prompt",
+      "name": "write-eval-suite",
+      "category": "prompts",
+      "description": "Build an evaluation suite for an AI feature with cases, criteria, and thresholds fixed in advance.",
+      "variables": [
+        "{feature}: what the AI feature does and what good output looks like",
+        "{failures}: known failure modes or examples of bad output"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/write-eval-suite.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-eval-suite.md"
+    },
+    {
+      "kind": "prompt",
       "name": "write-integration-test",
       "category": "prompts",
       "description": "Write integration tests that exercise real boundaries and fail for real reasons rather than mirroring the implementation.",
@@ -11844,6 +12026,32 @@
       "settings": "Temperature 0.3.",
       "path": "prompts/write-load-test.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-load-test.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-proposal",
+      "category": "prompts",
+      "description": "Write a client proposal that shows you understood the problem, with scope, price, and risks stated.",
+      "variables": [
+        "{brief}: what the client asked for and what you understand their problem to be",
+        "{approach}: how you would do it, the timeline, and the commercial terms"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/write-proposal.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-proposal.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-report",
+      "category": "prompts",
+      "description": "Write a report that leads with the finding, supports it proportionally, and states its own limits.",
+      "variables": [
+        "{findings}: what you found, the evidence, and the method",
+        "{audience}: who reads it and what they will decide"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/write-report.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-report.md"
     },
     {
       "kind": "prompt",
