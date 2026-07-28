@@ -22,6 +22,10 @@
   --accent: #d8a24a;
   --accent-soft: rgba(216, 162, 74, 0.14);
   --accent-strong: #e6b45f;
+  /* On a dark surface the amber is already well past 4.5:1, so small accent
+     text uses it unchanged; only the light theme needs a darker variant. */
+  --accent-text: #d8a24a;
+  --accent-display: #d8a24a;
   /* Primary-button surface and the text that sits on it. Dark theme's accent
      is light gold, so dark text reads well on it. */
   --accent-btn: #d8a24a;
@@ -45,18 +49,22 @@
   --text-1: #221f1a;
   --text-2: #4a453c;
   --text-3: #6b6558;
-  /* The faintest text tier and the accent both carry real content (meta
-     lines, section labels, inline links) at 10-16px, so both clear 4.5:1
-     against every surface they sit on, not just against white. */
   --text-4: #6f685c;
-  --accent: #976213;
-  --accent-soft: rgba(151, 98, 19, 0.10);
-  --accent-strong: #965f0c;
-  /* Light theme's accent is a dark brown; white text on a slightly deeper
-     brown clears WCAG AA where the old near-black text was unreadable. */
-  --accent-btn: #965f0c;
-  --accent-btn-hover: #7d4d08;
-  --on-accent: #ffffff;
+  /* One brand amber in both themes. Buttons put dark text on it exactly as the
+     dark theme does, which measures about 8:1. */
+  --accent: #d8a24a;
+  --accent-soft: rgba(216, 162, 74, 0.22);
+  --accent-strong: #b8801f;
+  --accent-btn: #d8a24a;
+  --accent-btn-hover: #e6b45f;
+  --on-accent: #171310;
+  /* The amber cannot go on light backgrounds at small sizes: at 10-13px on a
+     white card it lands near 2:1. Rather than just darkening it, which drains
+     the colour toward brown, these hold the brand hue (37deg) and push
+     saturation to .85, so they read as a deeper gold. Both are at least as
+     chromatic as the base amber. */
+  --accent-text: #97620c;    /* 4.6:1, for text under 24px */
+  --accent-display: #bd7a0f; /* 3.1:1, for large headings and the plot */
   --shadow-sm: 0 1px 2px rgba(60, 50, 30, 0.06);
   --shadow-md: 0 10px 30px rgba(60, 50, 30, 0.10);
 }
@@ -88,7 +96,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 .mono { font-family: ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace; }
-a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent); text-underline-offset: 3px; }
+a { color: var(--accent-text); text-decoration-color: color-mix(in srgb, var(--accent-text) 45%, transparent); text-underline-offset: 3px; }
 a:hover { color: var(--accent-strong); }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
 ::selection { background: var(--accent-soft); }
@@ -122,7 +130,7 @@ header.site .wrap { display: flex; align-items: center; justify-content: space-b
   font-weight: 700; font-size: 19px; letter-spacing: -0.3px;
   color: var(--text-1); text-decoration: none;
 }
-.brand span { color: var(--accent); }
+.brand span { color: var(--accent-text); }
 .brand svg { flex-shrink: 0; border-radius: 7px; }
 nav.top { display: flex; gap: 22px; align-items: center; font-family: "Play", ui-monospace, Consolas, monospace; font-size: 14px; }
 nav.top a { color: var(--text-3); text-decoration: none; }

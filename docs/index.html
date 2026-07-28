@@ -51,7 +51,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=10">
 <script>
   try {
     var stored = localStorage.getItem("ai-skills-theme");
@@ -65,7 +65,7 @@
     color: var(--text-1); font-size: clamp(38px, 6.5vw, 62px);
     letter-spacing: -1.5px; line-height: 1.04; margin: 0 auto 22px; max-width: 15ch;
   }
-  .hero h1 em { color: var(--accent); font-style: normal; }
+  .hero h1 em { color: var(--accent-display); font-style: normal; }
   .hero p.lede { font-size: 20px; color: var(--text-2); max-width: 620px; margin: 0 auto 18px; }
   .hero .cta { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 30px; }
   .works { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; margin: 42px auto 0; max-width: 760px; }
@@ -137,7 +137,7 @@
     border-radius: 6px; outline: none;
   }
   .selectlist li:hover, .selectlist li:focus { background: var(--accent-soft); color: var(--text-1); }
-  .selectlist li[aria-selected="true"] { background: var(--accent-soft); color: var(--accent); }
+  .selectlist li[aria-selected="true"] { background: var(--accent-soft); color: var(--accent-text); }
   .selectlist li[aria-selected="true"]::after { content: " ✓"; }
   .tally { font-size: 13.5px; color: var(--text-3); margin-left: auto; white-space: nowrap; }
   .more-row { text-align: center; padding: 4px 0 36px; }
@@ -150,7 +150,7 @@
     transition: border-color .18s, transform .18s, box-shadow .18s;
   }
   .card:hover { border-color: var(--border-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-  .card .kind { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+  .card .kind { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-text); }
   .card h3 { font-family: "Play", ui-monospace, Consolas, monospace; color: var(--text-1); font-size: 17px; letter-spacing: -0.2px; }
   .card p { font-size: 14.5px; color: var(--text-3); flex: 1; line-height: 1.6; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
   .card .actions { display: flex; gap: 9px; margin-top: 6px; }
@@ -164,7 +164,7 @@
   .eco-lede { font-size: 16px; color: var(--text-3); margin-bottom: 22px; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
   .eco-lede .mono { white-space: nowrap; -webkit-hyphens: none; hyphens: none; }
   .card .meta { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; color: var(--text-4); }
-  .card .meta b { color: var(--accent); font-weight: 400; }
+  .card .meta b { color: var(--accent-text); font-weight: 400; }
 
   @media (max-width: 640px) {
     .hero { padding: 56px 0 30px; }

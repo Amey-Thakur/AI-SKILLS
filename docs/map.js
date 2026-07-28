@@ -23,21 +23,26 @@
   var legend = document.getElementById("legend");
   var linkCountEl = document.getElementById("link-count");
 
-  /* The canvas keeps the dark palette in both themes. Light mode darkens the
-     accent to clear 4.5:1 for small text, which turns the dots muddy brown and
-     is the wrong trade for graphics: on a dark plot the amber reads at 7:1 and
-     the map looks the same whichever theme the rest of the page is in. */
-  var C = {
-    bg: "#12100e",
-    line: "#3a352e",
-    lineHot: "#d8a24a",
-    text: "#c8c0b3",
-    textDim: "#857c6e",
-    accent: "#d8a24a",
-    skill: "#a49b8c",
-    prompt: "#e6b45f",
-  };
-  function readColors() { /* palette is fixed; kept so the theme toggle can repaint */ }
+  /* The plot follows the page theme. Nodes use --accent, the one brand amber
+     in both themes; labels use --text-2 so they stay readable on either
+     surface. --accent-text exists for small accent *text* elsewhere and is
+     deliberately not used for the dots. */
+  var C = {};
+  function readColors() {
+    var s = getComputedStyle(document.documentElement);
+    var g = function (n, f) { return (s.getPropertyValue(n) || f).trim(); };
+    C.line = g("--border", "#322e29");
+    /* --accent-display, not --accent: on the light theme's white plot the full
+       amber sits at about 2.3:1, below the 3:1 that graphics need. The display
+       token is the same amber taken far enough down to clear it, and is
+       identical to --accent in the dark theme. */
+    C.lineHot = g("--accent-display", "#d8a24a");
+    C.text = g("--text-2", "#c8c0b3");
+    C.textDim = g("--text-4", "#8e8578");
+    C.accent = g("--accent-display", "#d8a24a");
+    C.skill = g("--text-3", "#a49b8c");
+    C.prompt = g("--accent-strong", "#e6b45f");
+  }
   window.readColors = readColors;
   readColors();
 
@@ -414,8 +419,6 @@
     if (n) {
       var r = canvas.getBoundingClientRect();
       tip.style.display = "block";
-      tip.style.left = Math.min(r.width - 290, e.clientX - r.left + 14) + "px";
-      tip.style.top = (e.clientY - r.top + 14) + "px";
       tip.innerHTML = "";
       var nm = document.createElement("span");
       nm.className = "t-name"; nm.textContent = n.label;
@@ -431,6 +434,16 @@
         uw.textContent = "Use " + n.use_when;
         tip.appendChild(uw);
       }
+      /* Position after filling it, so the real height is known: the stage clips
+         its overflow, and a node near the bottom edge would otherwise show a
+         tooltip cut in half. Flip above the cursor when it will not fit below. */
+      var tb = tip.getBoundingClientRect();
+      var lx = e.clientX - r.left + 14;
+      var ty = e.clientY - r.top + 14;
+      if (lx + tb.width > r.width - 8) lx = e.clientX - r.left - tb.width - 14;
+      if (ty + tb.height > r.height - 8) ty = e.clientY - r.top - tb.height - 14;
+      tip.style.left = Math.max(8, lx) + "px";
+      tip.style.top = Math.max(8, ty) + "px";
     } else {
       tip.style.display = "none";
     }
