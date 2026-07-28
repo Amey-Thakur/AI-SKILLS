@@ -139,6 +139,7 @@ One row per category; every entry, with its one-line description, is in
 | [research](CATALOG.md#research-15) | 15 | autonomous-research, decision-journals, deep-research |
 | [scripting-automation](CATALOG.md#scripting-automation-10) | 10 | automation-guardrails, bash-robustness, cli-ux-design |
 | [security](CATALOG.md#security-44) | 44 | api-security, audit-logging, authn-design |
+| [sql](CATALOG.md#sql-12) | 12 | common-table-expressions, deduplication-queries, null-semantics |
 | [systems-languages](CATALOG.md#systems-languages-10) | 10 | c-memory-safety, cpp-raii, ffi-boundaries |
 | [testing](CATALOG.md#testing-41) | 41 | api-testing, approval-testing, assertion-libraries |
 | [ui-ux](CATALOG.md#ui-ux-10) | 10 | empty-and-error-states, information-architecture, interaction-design |

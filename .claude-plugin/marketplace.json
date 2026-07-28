@@ -908,6 +908,26 @@
       ]
     },
     {
+      "name": "sql-skills",
+      "description": "12 working methods for sql: common-table-expressions, deduplication-queries, null-semantics, pivot-and-unpivot, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/sql/common-table-expressions",
+        "./skills/sql/deduplication-queries",
+        "./skills/sql/null-semantics",
+        "./skills/sql/pivot-and-unpivot",
+        "./skills/sql/query-readability",
+        "./skills/sql/recursive-queries",
+        "./skills/sql/sql-aggregation",
+        "./skills/sql/sql-date-time",
+        "./skills/sql/sql-joins",
+        "./skills/sql/sql-set-operations",
+        "./skills/sql/upsert-patterns",
+        "./skills/sql/window-functions"
+      ]
+    },
+    {
       "name": "systems-languages-skills",
       "description": "10 working methods for systems languages: c-memory-safety, cpp-raii, ffi-boundaries, go-concurrency, and more",
       "source": "./",

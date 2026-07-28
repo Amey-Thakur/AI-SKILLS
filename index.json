@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 665,
+    "skills": 677,
     "prompts": 134,
-    "categories": 42
+    "categories": 43
   },
   "categories": [
     "accessibility",
@@ -55,6 +55,7 @@
     "research",
     "scripting-automation",
     "security",
+    "sql",
     "systems-languages",
     "testing",
     "ui-ux",
@@ -5406,6 +5407,114 @@
       "use_when": "when designing service-to-service access, internal tooling, or any system that still trusts requests because of where they came from",
       "path": "skills/security/zero-trust-basics/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/security/zero-trust-basics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "common-table-expressions",
+      "category": "sql",
+      "description": "Use CTEs to name intermediate steps so a complex query reads as a sequence rather than a nest, and know when they cost performance. Use when a query has grown into nested subqueries nobody can follow.",
+      "use_when": "when a query has grown into nested subqueries nobody can follow",
+      "path": "skills/sql/common-table-expressions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/common-table-expressions/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "deduplication-queries",
+      "category": "sql",
+      "description": "Find and remove duplicate rows deterministically, keeping the record you meant to keep. Use when a table has accumulated duplicates or an import needs a clean unique set.",
+      "use_when": "when a table has accumulated duplicates or an import needs a clean unique set",
+      "path": "skills/sql/deduplication-queries/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/deduplication-queries/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "null-semantics",
+      "category": "sql",
+      "description": "Reason about SQL nulls in comparisons, aggregates, joins, and uniqueness so absent values stop producing wrong or missing rows. Use when a query silently drops rows or a NOT IN returns nothing.",
+      "use_when": "when a query silently drops rows or a NOT IN returns nothing",
+      "path": "skills/sql/null-semantics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/null-semantics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pivot-and-unpivot",
+      "category": "sql",
+      "description": "Reshape rows into columns and back, and know when the reshape belongs in SQL rather than in the reporting layer. Use when a report needs periods or categories as columns, or a wide table needs normalising.",
+      "use_when": "when a report needs periods or categories as columns, or a wide table needs normalising",
+      "path": "skills/sql/pivot-and-unpivot/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/pivot-and-unpivot/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "query-readability",
+      "category": "sql",
+      "description": "Write SQL other people can review, modify, and trust, with clear structure, meaningful aliases, and stated assumptions. Use when a query will be read again by anyone, including you.",
+      "use_when": "when a query will be read again by anyone, including you",
+      "path": "skills/sql/query-readability/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/query-readability/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "recursive-queries",
+      "category": "sql",
+      "description": "Walk hierarchies and graphs with recursive CTEs, with a termination condition and cycle protection so the query ends. Use when querying trees such as org charts, categories, threads, or dependency graphs.",
+      "use_when": "when querying trees such as org charts, categories, threads, or dependency graphs",
+      "path": "skills/sql/recursive-queries/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/recursive-queries/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "sql-aggregation",
+      "category": "sql",
+      "description": "Group and aggregate correctly, understanding what GROUP BY collapses, how HAVING differs from WHERE, and how nulls and empty groups behave. Use when producing counts, sums, and per-group summaries.",
+      "use_when": "when producing counts, sums, and per-group summaries",
+      "path": "skills/sql/sql-aggregation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/sql-aggregation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "sql-date-time",
+      "category": "sql",
+      "description": "Store, compare, and bucket timestamps with explicit time zones so reports do not drift by a day and ranges do not miss rows. Use when filtering by date, grouping by period, or storing an event time.",
+      "use_when": "when filtering by date, grouping by period, or storing an event time",
+      "path": "skills/sql/sql-date-time/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/sql-date-time/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "sql-joins",
+      "category": "sql",
+      "description": "Choose and write the right join so rows are neither lost nor multiplied, and know why a result set grew. Use when combining tables and the row count or the null columns look wrong.",
+      "use_when": "when combining tables and the row count or the null columns look wrong",
+      "path": "skills/sql/sql-joins/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/sql-joins/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "sql-set-operations",
+      "category": "sql",
+      "description": "Combine result sets with UNION, INTERSECT, and EXCEPT, and know when a join or an exists clause is the better tool. Use when merging or comparing two query results rather than two tables.",
+      "use_when": "when merging or comparing two query results rather than two tables",
+      "path": "skills/sql/sql-set-operations/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/sql-set-operations/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "upsert-patterns",
+      "category": "sql",
+      "description": "Insert or update in one statement without races or lost updates, using the engine's conflict handling rather than check-then-write. Use when writing records that may or may not already exist.",
+      "use_when": "when writing records that may or may not already exist",
+      "path": "skills/sql/upsert-patterns/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/upsert-patterns/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "window-functions",
+      "category": "sql",
+      "description": "Use window functions to rank, compare to neighbours, and compute running totals without collapsing rows or self-joining. Use when you need per-row context such as a rank, a previous value, or a running sum.",
+      "use_when": "when you need per-row context such as a rank, a previous value, or a running sum",
+      "path": "skills/sql/window-functions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/sql/window-functions/SKILL.md"
     },
     {
       "kind": "skill",
