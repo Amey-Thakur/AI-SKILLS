@@ -13,7 +13,7 @@
   },
   "count": {
     "skills": 1000,
-    "prompts": 198,
+    "prompts": 214,
     "categories": 67
   },
   "categories": [
@@ -9310,6 +9310,19 @@
     },
     {
       "kind": "prompt",
+      "name": "api-migration-guide",
+      "category": "prompts",
+      "description": "Write a guide that gets consumers from an old API version to a new one with every breaking change addressed.",
+      "variables": [
+        "{changes}: what changed between versions, breaking and non-breaking",
+        "{timeline}: deprecation dates and support windows"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/api-migration-guide.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/api-migration-guide.md"
+    },
+    {
+      "kind": "prompt",
       "name": "apology-email",
       "category": "prompts",
       "description": "Write a sincere, professional apology email that owns the mistake, addresses the impact, and offers a fix.",
@@ -9476,6 +9489,19 @@
       "settings": "Temperature 0.4.",
       "path": "prompts/campaign-brief.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/campaign-brief.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "career-plan",
+      "category": "prompts",
+      "description": "Build a career plan from a concrete target role, with the gaps named and evidence to be gathered.",
+      "variables": [
+        "{current}: current role, strengths, and what you have shipped",
+        "{target}: the role or capability you want, and by when"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/career-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/career-plan.md"
     },
     {
       "kind": "prompt",
@@ -9646,6 +9672,19 @@
       "settings": "Temperature 0.3.",
       "path": "prompts/cost-reduction-plan.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/cost-reduction-plan.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "course-outline",
+      "category": "prompts",
+      "description": "Outline a course sequenced so each lesson is learnable when it arrives, ending in a real capability.",
+      "variables": [
+        "{subject}: what the course teaches and to whom",
+        "{format}: length, delivery, and how learners will practise"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/course-outline.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/course-outline.md"
     },
     {
       "kind": "prompt",
@@ -10019,6 +10058,19 @@
     },
     {
       "kind": "prompt",
+      "name": "executive-summary",
+      "category": "prompts",
+      "description": "Compress a long document into a summary that stands alone and leads with the conclusion.",
+      "variables": [
+        "{document}: the full document or its key content",
+        "{reader}: who reads it and what decision they face"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/executive-summary.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/executive-summary.md"
+    },
+    {
+      "kind": "prompt",
       "name": "explain-code",
       "category": "prompts",
       "description": "Explain what a piece of code does, why it is shaped that way, and where it can bite.",
@@ -10067,6 +10119,19 @@
       "settings": "Temperature 0-0.2; precision matters more than prose.",
       "path": "prompts/extract-action-items.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/extract-action-items.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "faq-from-tickets",
+      "category": "prompts",
+      "description": "Turn recurring support tickets into a FAQ that deflects them, using the customer's own phrasing.",
+      "variables": [
+        "{tickets}: recurring questions with their resolutions",
+        "{product}: the product and where the FAQ will live"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/faq-from-tickets.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/faq-from-tickets.md"
     },
     {
       "kind": "prompt",
@@ -10253,6 +10318,19 @@
     },
     {
       "kind": "prompt",
+      "name": "interview-prep",
+      "category": "prompts",
+      "description": "Prepare for an interview by mapping your evidence to what the role actually requires.",
+      "variables": [
+        "{role}: the role, the company, and the job description",
+        "{background}: your relevant experience and what you have shipped"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/interview-prep.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/interview-prep.md"
+    },
+    {
+      "kind": "prompt",
       "name": "interview-questions",
       "category": "prompts",
       "description": "Generate interview questions that reveal real capability for a specific role, with what good answers sound like.",
@@ -10383,6 +10461,19 @@
       "settings": "Temperature 0.6-0.8.",
       "path": "prompts/linkedin-post.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/linkedin-post.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "literature-review",
+      "category": "prompts",
+      "description": "Review a body of sources by synthesising across them rather than summarising each in turn.",
+      "variables": [
+        "{sources}: the papers, articles, or documents to review",
+        "{question}: what the review is meant to establish"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/literature-review.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/literature-review.md"
     },
     {
       "kind": "prompt",
@@ -10566,6 +10657,19 @@
       "settings": "Temperature 0.3.",
       "path": "prompts/onboarding-flow.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/onboarding-flow.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "one-on-one-agenda",
+      "category": "prompts",
+      "description": "Prepare a one-to-one that belongs to the report, with space for what they need rather than a status update.",
+      "variables": [
+        "{context}: the person, their current work, and anything outstanding",
+        "{cadence}: how often you meet and what has changed since last time"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/one-on-one-agenda.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/one-on-one-agenda.md"
     },
     {
       "kind": "prompt",
@@ -10907,6 +11011,19 @@
     },
     {
       "kind": "prompt",
+      "name": "readme-write",
+      "category": "prompts",
+      "description": "Write a readme that lets a reader decide in a minute whether this is for them, then get it running.",
+      "variables": [
+        "{project}: what it does, who it is for, and what makes it different",
+        "{usage}: install steps, minimal example, and requirements"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/readme-write.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/readme-write.md"
+    },
+    {
+      "kind": "prompt",
       "name": "refactor-code",
       "category": "prompts",
       "description": "Suggest refactorings that improve readability and structure without changing behavior, ranked by payoff.",
@@ -10943,6 +11060,19 @@
       "settings": "Temperature 0.2 for correctness.",
       "path": "prompts/regex-builder.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/regex-builder.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "release-announcement",
+      "category": "prompts",
+      "description": "Announce a release so users know what changed, what breaks, and what to do about it.",
+      "variables": [
+        "{release}: version, changes, fixes, and any breaking changes",
+        "{audience}: who uses this and how they consume updates"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/release-announcement.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/release-announcement.md"
     },
     {
       "kind": "prompt",
@@ -11008,6 +11138,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/request-email.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/request-email.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "research-brief",
+      "category": "prompts",
+      "description": "Scope a research question so the work is bounded, the sources are named, and the output is decided in advance.",
+      "variables": [
+        "{question}: what you need to know and the decision it informs",
+        "{constraints}: time available, access to sources, and required depth"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/research-brief.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/research-brief.md"
     },
     {
       "kind": "prompt",
@@ -11233,6 +11376,19 @@
     },
     {
       "kind": "prompt",
+      "name": "skill-gap-analysis",
+      "category": "prompts",
+      "description": "Assess the gap between current and required capability using demonstrated evidence rather than confidence.",
+      "variables": [
+        "{required}: the capabilities the role or project needs",
+        "{current}: what has actually been demonstrated, with examples"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/skill-gap-analysis.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/skill-gap-analysis.md"
+    },
+    {
+      "kind": "prompt",
       "name": "social-media-post",
       "category": "prompts",
       "description": "Write a social media post or caption tuned to the platform, with a hook, a point, and a clear call to action.",
@@ -11325,6 +11481,19 @@
     },
     {
       "kind": "prompt",
+      "name": "style-guide",
+      "category": "prompts",
+      "description": "Write a style guide specific enough to settle real disagreements rather than restating general advice.",
+      "variables": [
+        "{scope}: what it covers, such as docs, UI copy, or code comments",
+        "{examples}: existing writing that is good or bad, with why"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/style-guide.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/style-guide.md"
+    },
+    {
+      "kind": "prompt",
       "name": "summarize-document",
       "category": "prompts",
       "description": "Summarize any document into a faithful, layered brief that never invents content.",
@@ -11404,6 +11573,19 @@
     },
     {
       "kind": "prompt",
+      "name": "technical-tutorial",
+      "category": "prompts",
+      "description": "Write a tutorial that gets a reader to a working result, with every step tested and nothing assumed.",
+      "variables": [
+        "{topic}: what the reader will build and what they will know afterwards",
+        "{audience}: their starting knowledge and environment"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/technical-tutorial.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/technical-tutorial.md"
+    },
+    {
+      "kind": "prompt",
       "name": "test-plan",
       "category": "prompts",
       "description": "Write a test plan for a feature or release: what to test, the scenarios and edge cases, and the risk-based priorities.",
@@ -11453,6 +11635,19 @@
       "settings": "Temperature 0.3-0.5 for natural phrasing.",
       "path": "prompts/translate-text.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/translate-text.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "troubleshooting-guide",
+      "category": "prompts",
+      "description": "Write a guide organised by the symptom a user sees, leading to the cause and the fix.",
+      "variables": [
+        "{problems}: the failures that occur, their causes, and known fixes",
+        "{system}: the system and what the user can access"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/troubleshooting-guide.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/troubleshooting-guide.md"
     },
     {
       "kind": "prompt",
@@ -11557,6 +11752,19 @@
       "settings": "Temperature 0.3.",
       "path": "prompts/win-loss-analysis.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/win-loss-analysis.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "workshop-design",
+      "category": "prompts",
+      "description": "Design a workshop where participants do the work rather than watch a presentation.",
+      "variables": [
+        "{outcome}: what participants will be able to do afterwards",
+        "{group}: how many, their starting level, and how long you have"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/workshop-design.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/workshop-design.md"
     },
     {
       "kind": "prompt",
