@@ -114,7 +114,7 @@ One row per category; every entry, with its one-line description, is in
 | [business-growth](CATALOG.md#business-growth-8) | 8 | churn-analysis, community-building, developer-marketing |
 | [career-communication](CATALOG.md#career-communication-10) | 10 | async-communication, conference-talks, engineering-resume |
 | [cloud](CATALOG.md#cloud-12) | 12 | autoscaling-policies, cloud-cost-optimization, cloud-disaster-recovery |
-| [code-quality](CATALOG.md#code-quality-37) | 37 | api-surface-minimalism, assertion-density, boolean-parameters |
+| [code-quality](CATALOG.md#code-quality-38) | 38 | api-surface-minimalism, assertion-density, boolean-parameters |
 | [computer-engineering](CATALOG.md#computer-engineering-12) | 12 | algorithmic-complexity, binary-data-representation, compilers-and-toolchains |
 | [css-styling](CATALOG.md#css-styling-10) | 10 | css-animations, css-architecture, css-cascade |
 | [customer-support](CATALOG.md#customer-support-12) | 12 | community-support, customer-feedback-loop, difficult-customer-conversations |
@@ -138,6 +138,7 @@ One row per category; every entry, with its one-line description, is in
 | [i18n-localization](CATALOG.md#i18n-localization-12) | 12 | character-encoding, currency-localization, locale-aware-sorting |
 | [javascript-typescript](CATALOG.md#javascript-typescript-14) | 14 | js-async-patterns, js-error-handling, js-event-loop |
 | [jvm-dotnet](CATALOG.md#jvm-dotnet-10) | 10 | csharp-linq, dotnet-async, dotnet-dependency-injection |
+| [learning-and-teaching](CATALOG.md#learning-and-teaching-12) | 12 | chess-improvement, curriculum-sequencing, deliberate-practice |
 | [llm-engineering](CATALOG.md#llm-engineering-22) | 22 | agent-memory, agentic-loops, coding-agent-workflow |
 | [machine-learning](CATALOG.md#machine-learning-12) | 12 | cross-validation, drift-monitoring, experiment-tracking |
 | [marketing](CATALOG.md#marketing-12) | 12 | community-led-growth, competitive-messaging, content-marketing-strategy |

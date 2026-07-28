@@ -295,7 +295,7 @@
     },
     {
       "name": "code-quality-skills",
-      "description": "37 working methods for code quality: api-surface-minimalism, assertion-density, boolean-parameters, boy-scout-rule, and more",
+      "description": "38 working methods for code quality: api-surface-minimalism, assertion-density, boolean-parameters, boy-scout-rule, and more",
       "source": "./",
       "strict": false,
       "skills": [
@@ -308,6 +308,7 @@
         "./skills/code-quality/code-duplication",
         "./skills/code-quality/code-formatting",
         "./skills/code-quality/code-metrics",
+        "./skills/code-quality/code-reading",
         "./skills/code-quality/code-review",
         "./skills/code-quality/code-review-comments",
         "./skills/code-quality/cognitive-load",
@@ -811,6 +812,26 @@
         "./skills/jvm-dotnet/jvm-profiling",
         "./skills/jvm-dotnet/kotlin-idioms",
         "./skills/jvm-dotnet/spring-boot-discipline"
+      ]
+    },
+    {
+      "name": "learning-and-teaching-skills",
+      "description": "12 working methods for learning and teaching: chess-improvement, curriculum-sequencing, deliberate-practice, explaining-to-beginners, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/learning-and-teaching/chess-improvement",
+        "./skills/learning-and-teaching/curriculum-sequencing",
+        "./skills/learning-and-teaching/deliberate-practice",
+        "./skills/learning-and-teaching/explaining-to-beginners",
+        "./skills/learning-and-teaching/feedback-for-learning",
+        "./skills/learning-and-teaching/knowledge-transfer",
+        "./skills/learning-and-teaching/learning-from-failure",
+        "./skills/learning-and-teaching/mental-model-building",
+        "./skills/learning-and-teaching/self-directed-learning",
+        "./skills/learning-and-teaching/skill-assessment",
+        "./skills/learning-and-teaching/spaced-repetition",
+        "./skills/learning-and-teaching/teaching-technical-concepts"
       ]
     },
     {

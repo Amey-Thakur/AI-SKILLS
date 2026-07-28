@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 987,
+    "skills": 1000,
     "prompts": 134,
-    "categories": 66
+    "categories": 67
   },
   "categories": [
     "accessibility",
@@ -54,6 +54,7 @@
     "i18n-localization",
     "javascript-typescript",
     "jvm-dotnet",
+    "learning-and-teaching",
     "llm-engineering",
     "machine-learning",
     "marketing",
@@ -1785,6 +1786,15 @@
       "use_when": "when triaging a large codebase for refactoring targets or reviewing metric-gated quality checks",
       "path": "skills/code-quality/code-metrics/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-metrics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-reading",
+      "category": "code-quality",
+      "description": "Understand unfamiliar code quickly by tracing real execution paths rather than reading files in order. Use when joining a codebase, reviewing an unfamiliar area, or debugging something you did not write.",
+      "use_when": "when joining a codebase, reviewing an unfamiliar area, or debugging something you did not write",
+      "path": "skills/code-quality/code-reading/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-reading/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4656,6 +4666,114 @@
       "use_when": "when building or reviewing Spring Boot services that must stay debuggable",
       "path": "skills/jvm-dotnet/spring-boot-discipline/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/jvm-dotnet/spring-boot-discipline/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "chess-improvement",
+      "category": "learning-and-teaching",
+      "description": "Improve at chess through tactical pattern training, endgame fundamentals, and engine-assisted analysis of your own losses. Use when your rating has plateaued and playing more games is not helping.",
+      "use_when": "when your rating has plateaued and playing more games is not helping",
+      "path": "skills/learning-and-teaching/chess-improvement/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/chess-improvement/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "curriculum-sequencing",
+      "category": "learning-and-teaching",
+      "description": "Order material so each piece is learnable when it arrives, with prerequisites satisfied and difficulty increasing gradually. Use when designing a course, onboarding path, or tutorial series.",
+      "use_when": "when designing a course, onboarding path, or tutorial series",
+      "path": "skills/learning-and-teaching/curriculum-sequencing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/curriculum-sequencing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "deliberate-practice",
+      "category": "learning-and-teaching",
+      "description": "Improve at a skill through focused repetition at the edge of ability with immediate feedback, rather than through accumulated hours. Use when you have plateaued despite continued practice.",
+      "use_when": "when you have plateaued despite continued practice",
+      "path": "skills/learning-and-teaching/deliberate-practice/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/deliberate-practice/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "explaining-to-beginners",
+      "category": "learning-and-teaching",
+      "description": "Explain something to someone with no background, without condescension and without jargon that quietly requires prior knowledge. Use when writing introductory material or onboarding someone new.",
+      "use_when": "when writing introductory material or onboarding someone new",
+      "path": "skills/learning-and-teaching/explaining-to-beginners/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/explaining-to-beginners/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "feedback-for-learning",
+      "category": "learning-and-teaching",
+      "description": "Give feedback that improves performance, timed and framed so it is used rather than defended against. Use when coaching, reviewing work, or mentoring.",
+      "use_when": "when coaching, reviewing work, or mentoring",
+      "path": "skills/learning-and-teaching/feedback-for-learning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/feedback-for-learning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "knowledge-transfer",
+      "category": "learning-and-teaching",
+      "description": "Move understanding from one person to others so critical knowledge does not leave with them. Use before someone changes role or when one person is the only one who understands something.",
+      "use_when": "before someone changes role or when one person is the only one who understands something",
+      "path": "skills/learning-and-teaching/knowledge-transfer/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/knowledge-transfer/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "learning-from-failure",
+      "category": "learning-and-teaching",
+      "description": "Extract the lesson from a mistake by examining the reasoning that produced it, rather than only the outcome. Use after something goes wrong, personally or as a team.",
+      "use_when": "after something goes wrong, personally or as a team",
+      "path": "skills/learning-and-teaching/learning-from-failure/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/learning-from-failure/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mental-model-building",
+      "category": "learning-and-teaching",
+      "description": "Build an internal model of how a system works so you can predict its behaviour rather than recalling procedures. Use when learning a complex system or when you can follow steps but cannot debug.",
+      "use_when": "when learning a complex system or when you can follow steps but cannot debug",
+      "path": "skills/learning-and-teaching/mental-model-building/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/mental-model-building/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "self-directed-learning",
+      "category": "learning-and-teaching",
+      "description": "Learn something substantial without a course, by defining the goal, finding the right resources, and building feedback into the process. Use when you need a capability nobody is going to teach you.",
+      "use_when": "when you need a capability nobody is going to teach you",
+      "path": "skills/learning-and-teaching/self-directed-learning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/self-directed-learning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "skill-assessment",
+      "category": "learning-and-teaching",
+      "description": "Judge someone's ability, including your own, through demonstrated performance rather than confidence or credentials. Use when hiring, mentoring, or deciding what to learn next.",
+      "use_when": "when hiring, mentoring, or deciding what to learn next",
+      "path": "skills/learning-and-teaching/skill-assessment/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/skill-assessment/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "spaced-repetition",
+      "category": "learning-and-teaching",
+      "description": "Schedule review at increasing intervals so knowledge is retained with minimal total time. Use when you must remember material long-term rather than pass an immediate test.",
+      "use_when": "when you must remember material long-term rather than pass an immediate test",
+      "path": "skills/learning-and-teaching/spaced-repetition/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/spaced-repetition/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "teaching-technical-concepts",
+      "category": "learning-and-teaching",
+      "description": "Explain a technical idea by starting from what the learner knows, one concept at a time, with a concrete example before the abstraction. Use when teaching, mentoring, or writing an explanation.",
+      "use_when": "when teaching, mentoring, or writing an explanation",
+      "path": "skills/learning-and-teaching/teaching-technical-concepts/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/learning-and-teaching/teaching-technical-concepts/SKILL.md"
     },
     {
       "kind": "skill",
