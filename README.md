@@ -83,8 +83,10 @@ installable plugin per category:
 | Cline | `curl -s <raw>/skills/code-quality/code-review/SKILL.md > .clinerules/code-review.md` |
 | Any API | Fetch the raw file; the body is your system prompt |
 
-Full per-tool instructions, including scoped Cursor `.mdc` rules and Copilot
-instruction files, are in **[INSTALL.md](INSTALL.md)**.
+`<raw>` above is
+`https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main`. Full per-tool
+instructions, including scoped Cursor `.mdc` rules and Copilot instruction
+files, are in **[INSTALL.md](INSTALL.md)**.
 
 **For agents:** the whole catalog is machine-readable at
 [`index.json`](index.json) (each entry with a description and a raw URL),
