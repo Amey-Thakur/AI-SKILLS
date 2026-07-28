@@ -684,6 +684,45 @@
       ]
     },
     {
+      "name": "mcp-skills",
+      "description": "12 working methods for mcp: mcp-authentication, mcp-client-integration, mcp-context-budgeting, mcp-error-handling, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/mcp/mcp-authentication",
+        "./skills/mcp/mcp-client-integration",
+        "./skills/mcp/mcp-context-budgeting",
+        "./skills/mcp/mcp-error-handling",
+        "./skills/mcp/mcp-multi-server-orchestration",
+        "./skills/mcp/mcp-prompt-templates",
+        "./skills/mcp/mcp-resource-design",
+        "./skills/mcp/mcp-sampling-and-elicitation",
+        "./skills/mcp/mcp-security-boundaries",
+        "./skills/mcp/mcp-server-testing",
+        "./skills/mcp/mcp-tool-design",
+        "./skills/mcp/mcp-transport-selection"
+      ]
+    },
+    {
+      "name": "media-processing-skills",
+      "description": "11 working methods for media processing: audio-processing, document-parsing, format-selection, media-delivery, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/media-processing/audio-processing",
+        "./skills/media-processing/document-parsing",
+        "./skills/media-processing/format-selection",
+        "./skills/media-processing/media-delivery",
+        "./skills/media-processing/media-processing-queue",
+        "./skills/media-processing/media-storage-tiering",
+        "./skills/media-processing/metadata-stripping",
+        "./skills/media-processing/resumable-uploads",
+        "./skills/media-processing/thumbnail-generation",
+        "./skills/media-processing/upload-pipeline-design",
+        "./skills/media-processing/video-transcoding"
+      ]
+    },
+    {
       "name": "mobile-skills",
       "description": "10 working methods for mobile: app-store-readiness, deep-linking, mobile-input-ux, mobile-navigation, and more",
       "source": "./",

@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 785,
+    "skills": 808,
     "prompts": 134,
-    "categories": 49
+    "categories": 51
   },
   "categories": [
     "accessibility",
@@ -47,6 +47,8 @@
     "jvm-dotnet",
     "llm-engineering",
     "machine-learning",
+    "mcp",
+    "media-processing",
     "mobile",
     "multi-agent-teams",
     "networking",
@@ -3973,6 +3975,213 @@
       "use_when": "when setting up ML evaluation or auditing why offline metrics did not survive production",
       "path": "skills/machine-learning/train-test-discipline/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/machine-learning/train-test-discipline/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-authentication",
+      "category": "mcp",
+      "description": "Authenticate and authorise access to a remote MCP server so tools act as the right user with the least necessary privilege. Use when hosting an MCP server that more than one person or agent reaches.",
+      "use_when": "when hosting an MCP server that more than one person or agent reaches",
+      "path": "skills/mcp/mcp-authentication/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-authentication/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-client-integration",
+      "category": "mcp",
+      "description": "Connect MCP servers into an application with lifecycle management, capability negotiation, and graceful degradation when a server is unavailable. Use when building a client or embedding MCP into a product.",
+      "use_when": "when building a client or embedding MCP into a product",
+      "path": "skills/mcp/mcp-client-integration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-client-integration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-context-budgeting",
+      "category": "mcp",
+      "description": "Keep tool results small enough that an agent can hold what matters, through pagination, projection, and summarisation at the server. Use when tool output floods the context window.",
+      "use_when": "when tool output floods the context window",
+      "path": "skills/mcp/mcp-context-budgeting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-context-budgeting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-error-handling",
+      "category": "mcp",
+      "description": "Return errors an agent can act on, distinguishing retryable failures from permanent ones and never leaking internals. Use when building MCP tools that will fail in production.",
+      "use_when": "when building MCP tools that will fail in production",
+      "path": "skills/mcp/mcp-error-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-error-handling/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-multi-server-orchestration",
+      "category": "mcp",
+      "description": "Run an agent across several MCP servers without name collisions, tool overload, or ambiguity about which server owns an action. Use when one agent connects to more than a few servers.",
+      "use_when": "when one agent connects to more than a few servers",
+      "path": "skills/mcp/mcp-multi-server-orchestration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-multi-server-orchestration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-prompt-templates",
+      "category": "mcp",
+      "description": "Ship reusable prompt templates from an MCP server so users invoke tested workflows rather than improvising. Use when a server supports a workflow that benefits from a known-good prompt.",
+      "use_when": "when a server supports a workflow that benefits from a known-good prompt",
+      "path": "skills/mcp/mcp-prompt-templates/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-prompt-templates/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-resource-design",
+      "category": "mcp",
+      "description": "Expose data through MCP resources with stable URIs, useful listings, and sizes that fit a context window. Use when an agent needs to read data rather than perform an action.",
+      "use_when": "when an agent needs to read data rather than perform an action",
+      "path": "skills/mcp/mcp-resource-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-resource-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-sampling-and-elicitation",
+      "category": "mcp",
+      "description": "Use server-initiated model calls and user prompts responsibly, so a server can ask for reasoning or input without seizing control. Use when a server needs the model's help or a decision from the user mid-operation.",
+      "use_when": "when a server needs the model's help or a decision from the user mid-operation",
+      "path": "skills/mcp/mcp-sampling-and-elicitation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-sampling-and-elicitation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-security-boundaries",
+      "category": "mcp",
+      "description": "Treat tool output as untrusted data, confirm destructive actions, and keep an agent's reach inside what its user may do. Use when an MCP server touches real systems or reads content from outside your control.",
+      "use_when": "when an MCP server touches real systems or reads content from outside your control",
+      "path": "skills/mcp/mcp-security-boundaries/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-security-boundaries/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-server-testing",
+      "category": "mcp",
+      "description": "Test an MCP server for protocol conformance, tool selection accuracy, and behaviour under real model calls rather than only unit tests. Use before shipping a server others will connect agents to.",
+      "use_when": "before shipping a server others will connect agents to",
+      "path": "skills/mcp/mcp-server-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-server-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-tool-design",
+      "category": "mcp",
+      "description": "Design MCP tools an agent can select correctly, with names, descriptions, and schemas that make the right call obvious and the wrong one impossible. Use when exposing capability to an agent through an MCP server.",
+      "use_when": "when exposing capability to an agent through an MCP server",
+      "path": "skills/mcp/mcp-tool-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-tool-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "mcp-transport-selection",
+      "category": "mcp",
+      "description": "Choose between local stdio and remote HTTP transports for an MCP server based on trust, deployment, and who runs it. Use when deciding how a server will be hosted and reached.",
+      "use_when": "when deciding how a server will be hosted and reached",
+      "path": "skills/mcp/mcp-transport-selection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/mcp/mcp-transport-selection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "audio-processing",
+      "category": "media-processing",
+      "description": "Normalise, compress, and prepare audio for reliable playback and transcription, handling levels and formats consistently. Use when accepting recorded audio or producing spoken content.",
+      "use_when": "when accepting recorded audio or producing spoken content",
+      "path": "skills/media-processing/audio-processing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/audio-processing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "document-parsing",
+      "category": "media-processing",
+      "description": "Extract text and structure from PDFs, office documents, and scans reliably enough to search, index, or summarise. Use when users upload documents whose contents the product must understand.",
+      "use_when": "when users upload documents whose contents the product must understand",
+      "path": "skills/media-processing/document-parsing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/document-parsing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "format-selection",
+      "category": "media-processing",
+      "description": "Choose media formats and codecs by compatibility, quality, and licensing, with fallbacks for what the client cannot play. Use when deciding what to store and deliver.",
+      "use_when": "when deciding what to store and deliver",
+      "path": "skills/media-processing/format-selection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/format-selection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "media-delivery",
+      "category": "media-processing",
+      "description": "Serve media efficiently with caching, range requests, and access control, so playback starts fast and private files stay private. Use when media is slow to load or must be restricted to authorised users.",
+      "use_when": "when media is slow to load or must be restricted to authorised users",
+      "path": "skills/media-processing/media-delivery/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/media-delivery/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "media-processing-queue",
+      "category": "media-processing",
+      "description": "Run transcoding, thumbnailing, and extraction as queued background work with progress, retries, and failure visibility. Use when media processing takes long enough that it cannot happen in the request.",
+      "use_when": "when media processing takes long enough that it cannot happen in the request",
+      "path": "skills/media-processing/media-processing-queue/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/media-processing-queue/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "media-storage-tiering",
+      "category": "media-processing",
+      "description": "Match storage class to access pattern so rarely read media costs less without becoming unavailable. Use when media storage cost grows faster than usage.",
+      "use_when": "when media storage cost grows faster than usage",
+      "path": "skills/media-processing/media-storage-tiering/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/media-storage-tiering/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "metadata-stripping",
+      "category": "media-processing",
+      "description": "Remove embedded metadata such as location, device, and author from user files before they are stored or shared. Use when users upload photographs or documents that others will see.",
+      "use_when": "when users upload photographs or documents that others will see",
+      "path": "skills/media-processing/metadata-stripping/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/metadata-stripping/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "resumable-uploads",
+      "category": "media-processing",
+      "description": "Let large uploads survive network interruption by chunking and resuming from the last confirmed part. Use when files are large enough that a failed upload is a real cost to the user.",
+      "use_when": "when files are large enough that a failed upload is a real cost to the user",
+      "path": "skills/media-processing/resumable-uploads/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/resumable-uploads/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "thumbnail-generation",
+      "category": "media-processing",
+      "description": "Produce preview images for files of every type, consistently sized and generated without blocking the user. Use when a file list or gallery needs visual previews.",
+      "use_when": "when a file list or gallery needs visual previews",
+      "path": "skills/media-processing/thumbnail-generation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/thumbnail-generation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "upload-pipeline-design",
+      "category": "media-processing",
+      "description": "Move a file from the user's device to durable storage and a processed state, with validation, progress, and recovery at every stage. Use when building any feature that accepts files.",
+      "use_when": "when building any feature that accepts files",
+      "path": "skills/media-processing/upload-pipeline-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/upload-pipeline-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "video-transcoding",
+      "category": "media-processing",
+      "description": "Convert uploaded video into the renditions needed for reliable playback across devices and bandwidths. Use when accepting user video or delivering video that must play everywhere.",
+      "use_when": "when accepting user video or delivering video that must play everywhere",
+      "path": "skills/media-processing/video-transcoding/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/media-processing/video-transcoding/SKILL.md"
     },
     {
       "kind": "skill",
