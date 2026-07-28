@@ -13,7 +13,7 @@
   },
   "count": {
     "skills": 1000,
-    "prompts": 182,
+    "prompts": 198,
     "categories": 67
   },
   "categories": [
@@ -9349,6 +9349,19 @@
     },
     {
       "kind": "prompt",
+      "name": "beta-program-plan",
+      "category": "prompts",
+      "description": "Plan a beta with the right participants, defined success criteria, and a decision point at the end.",
+      "variables": [
+        "{feature}: what is being tested and its current readiness",
+        "{goal}: what you need to learn before general release"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/beta-program-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/beta-program-plan.md"
+    },
+    {
+      "kind": "prompt",
       "name": "blog-outline",
       "category": "prompts",
       "description": "Outline a blog post with a clear angle and a section flow before you write, so the draft comes easily.",
@@ -9505,6 +9518,19 @@
     },
     {
       "kind": "prompt",
+      "name": "churn-investigation",
+      "category": "prompts",
+      "description": "Investigate why customers are leaving, separating involuntary churn from genuine dissatisfaction.",
+      "variables": [
+        "{data}: churned accounts with their usage history and stated reasons",
+        "{context}: the product, pricing, and any recent changes"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/churn-investigation.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/churn-investigation.md"
+    },
+    {
+      "kind": "prompt",
       "name": "cold-email",
       "category": "prompts",
       "description": "Write a short, specific cold outreach email that respects the reader's time and gives a real reason to reply.",
@@ -9647,6 +9673,32 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/critique.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/critique.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "customer-feedback-synthesis",
+      "category": "prompts",
+      "description": "Turn scattered feedback into ranked themes with evidence, separating loud voices from representative ones.",
+      "variables": [
+        "{feedback}: tickets, reviews, interview notes, or survey responses",
+        "{context}: the product, and what decision this informs"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/customer-feedback-synthesis.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/customer-feedback-synthesis.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "customer-health-score",
+      "category": "prompts",
+      "description": "Define a health score from behaviour that predicts churn, with thresholds that trigger action.",
+      "variables": [
+        "{signals}: available usage, support, and engagement data",
+        "{product}: what successful use looks like and the typical lifecycle"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/customer-health-score.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/customer-health-score.md"
     },
     {
       "kind": "prompt",
@@ -9847,6 +9899,19 @@
     },
     {
       "kind": "prompt",
+      "name": "discovery-interview-guide",
+      "category": "prompts",
+      "description": "Write an interview guide that surfaces what people actually do rather than what they say they want.",
+      "variables": [
+        "{question}: what you need to learn and the decision it informs",
+        "{participants}: who you will speak to and their relationship to the problem"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/discovery-interview-guide.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/discovery-interview-guide.md"
+    },
+    {
+      "kind": "prompt",
       "name": "dockerfile-generate",
       "category": "prompts",
       "description": "Write a small, secure, cache-friendly Dockerfile for an application, with multi-stage builds and a non-root runtime.",
@@ -9899,6 +9964,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/email-professional.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/email-professional.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "escalation-policy",
+      "category": "prompts",
+      "description": "Define what gets escalated, to whom, and how fast, so problems reach the right person at the right time.",
+      "variables": [
+        "{context}: the team, the types of issue, and current pain with escalation",
+        "{roles}: who is available at each level and their authority"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/escalation-policy.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/escalation-policy.md"
     },
     {
       "kind": "prompt",
@@ -10002,6 +10080,32 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/faq-generator.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/faq-generator.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "feature-prioritization",
+      "category": "prompts",
+      "description": "Rank candidate work by value, effort, and confidence, with the reasoning visible enough to argue with.",
+      "variables": [
+        "{candidates}: the features or work under consideration, with any evidence",
+        "{goals}: what the team is trying to achieve this period"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/feature-prioritization.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/feature-prioritization.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "feature-spec",
+      "category": "prompts",
+      "description": "Specify a feature with the problem, the behaviour, the edge cases, and what is out of scope.",
+      "variables": [
+        "{feature}: what is being built and the user problem behind it",
+        "{context}: existing product, constraints, and who it is for"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/feature-spec.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/feature-spec.md"
     },
     {
       "kind": "prompt",
@@ -10123,6 +10227,19 @@
     },
     {
       "kind": "prompt",
+      "name": "incident-response-plan",
+      "category": "prompts",
+      "description": "Define how incidents are detected, classified, communicated, and closed, before the next one.",
+      "variables": [
+        "{service}: the systems covered and their failure modes",
+        "{team}: who is available, their hours, and current on-call arrangement"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/incident-response-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/incident-response-plan.md"
+    },
+    {
+      "kind": "prompt",
       "name": "incident-status-update",
       "category": "prompts",
       "description": "Write a calm, honest status update during an ongoing incident, sized for its audience.",
@@ -10186,6 +10303,19 @@
       "settings": "Temperature 0.5-0.7.",
       "path": "prompts/job-description.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/job-description.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "knowledge-base-article",
+      "category": "prompts",
+      "description": "Write a self-serve article that answers one question in the words customers actually use.",
+      "variables": [
+        "{question}: the question as customers ask it, ideally from real tickets",
+        "{answer}: the correct answer, including caveats and exceptions"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/knowledge-base-article.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/knowledge-base-article.md"
     },
     {
       "kind": "prompt",
@@ -10423,6 +10553,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/okr-draft.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/okr-draft.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "onboarding-flow",
+      "category": "prompts",
+      "description": "Design an onboarding flow that gets a user to first value quickly, cutting everything that delays it.",
+      "variables": [
+        "{product}: what it does and what the first meaningful outcome is",
+        "{current}: the current signup and first-run experience, if any"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/onboarding-flow.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/onboarding-flow.md"
     },
     {
       "kind": "prompt",
@@ -10674,6 +10817,19 @@
     },
     {
       "kind": "prompt",
+      "name": "product-strategy",
+      "category": "prompts",
+      "description": "Set product direction by choosing who to serve and what not to build, with the bet stated explicitly.",
+      "variables": [
+        "{context}: the product today, its users, and what is working or not",
+        "{constraints}: team size, runway, competition, and any fixed commitments"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/product-strategy.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/product-strategy.md"
+    },
+    {
+      "kind": "prompt",
       "name": "promotion-packet",
       "category": "prompts",
       "description": "Write a promotion packet or self-review that frames your work as impact at the next level, with evidence.",
@@ -10722,6 +10878,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/pros-cons.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/pros-cons.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "qbr-outline",
+      "category": "prompts",
+      "description": "Outline a quarterly business review that leads with outcomes and ends with decisions rather than activity.",
+      "variables": [
+        "{period}: the quarter, its goals, and what actually happened",
+        "{audience}: who attends and what they need to decide"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/qbr-outline.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/qbr-outline.md"
     },
     {
       "kind": "prompt",
@@ -10972,6 +11141,19 @@
     },
     {
       "kind": "prompt",
+      "name": "roadmap-draft",
+      "category": "prompts",
+      "description": "Draft a roadmap communicating direction and confidence, without implying dates the team cannot hold.",
+      "variables": [
+        "{priorities}: what matters over the coming periods and why",
+        "{audience}: who reads this, whether customers, executives, or the team"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/roadmap-draft.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/roadmap-draft.md"
+    },
+    {
+      "kind": "prompt",
       "name": "root-cause-analysis",
       "category": "prompts",
       "description": "Find the real root cause of a problem with the 5 Whys, getting past symptoms to the systemic fix.",
@@ -11170,6 +11352,19 @@
     },
     {
       "kind": "prompt",
+      "name": "support-macro-set",
+      "category": "prompts",
+      "description": "Write reusable support replies that explain clearly while leaving the specifics to be personalised.",
+      "variables": [
+        "{scenarios}: the recurring situations that need replies",
+        "{voice}: the tone and any phrases the company uses or avoids"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/support-macro-set.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/support-macro-set.md"
+    },
+    {
+      "kind": "prompt",
       "name": "survey-questions",
       "category": "prompts",
       "description": "Write survey or research questions that get honest, useful data without leading, loading, or confusing respondents.",
@@ -11284,6 +11479,19 @@
       "settings": "Temperature 0.2 for arithmetic care.",
       "path": "prompts/unit-economics-analysis.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/unit-economics-analysis.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "usability-test-plan",
+      "category": "prompts",
+      "description": "Plan a usability test with realistic tasks and observation rather than opinion gathering.",
+      "variables": [
+        "{subject}: what is being tested and what you are unsure about",
+        "{users}: who will participate and their familiarity with the product"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/usability-test-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/usability-test-plan.md"
     },
     {
       "kind": "prompt",
