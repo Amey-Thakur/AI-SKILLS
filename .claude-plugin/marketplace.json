@@ -46,6 +46,26 @@
       ]
     },
     {
+      "name": "api-integration-skills",
+      "description": "12 working methods for api integration: api-credential-rotation, data-mapping, integration-migration, integration-monitoring, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/api-integration/api-credential-rotation",
+        "./skills/api-integration/data-mapping",
+        "./skills/api-integration/integration-migration",
+        "./skills/api-integration/integration-monitoring",
+        "./skills/api-integration/integration-resilience",
+        "./skills/api-integration/partial-failure-handling",
+        "./skills/api-integration/polling-vs-webhooks",
+        "./skills/api-integration/rate-limit-handling",
+        "./skills/api-integration/sandbox-testing",
+        "./skills/api-integration/sdk-selection",
+        "./skills/api-integration/third-party-integration",
+        "./skills/api-integration/webhook-consumption"
+      ]
+    },
+    {
       "name": "apis-skills",
       "description": "9 working methods for apis: api-change-management, api-client-design, api-deprecation, api-design, and more",
       "source": "./",
