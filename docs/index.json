@@ -12,7 +12,7 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 749,
+    "skills": 761,
     "prompts": 134,
     "categories": 48
   },
@@ -4065,6 +4065,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-accountability-loop",
+      "category": "multi-agent-teams",
+      "description": "Track every commitment from assignment to completion, chasing what is late and escalating what is stuck, so work finishes rather than fading. Use when things are agreed in meetings and quietly never happen.",
+      "use_when": "when things are agreed in meetings and quietly never happen",
+      "path": "skills/multi-agent-teams/agent-accountability-loop/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-accountability-loop/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-analytics-desk",
       "category": "multi-agent-teams",
       "description": "Turn business data into answered questions with agents that define the metric, pull it consistently, check it against a second source, and state what it does not prove. Use when numbers are quoted in meetings that nobody can reproduce.",
@@ -4098,6 +4107,24 @@
       "use_when": "when output comes from many sources and the product sounds like several different companies",
       "path": "skills/multi-agent-teams/agent-brand-guardian/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-brand-guardian/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-capacity-planning",
+      "category": "multi-agent-teams",
+      "description": "Know what the company can actually take on this cycle, in agent budget and human hours, and refuse work beyond it. Use when everything is committed and nothing finishes.",
+      "use_when": "when everything is committed and nothing finishes",
+      "path": "skills/multi-agent-teams/agent-capacity-planning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-capacity-planning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-chief-of-staff",
+      "category": "multi-agent-teams",
+      "description": "Run the management layer above specialist desks: set the week's priorities, route work, chase what is stuck, and end every cycle with decisions and owners. Use when several agent desks exist but nothing coordinates them into finished work.",
+      "use_when": "when several agent desks exist but nothing coordinates them into finished work",
+      "path": "skills/multi-agent-teams/agent-chief-of-staff/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-chief-of-staff/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4182,6 +4209,33 @@
     },
     {
       "kind": "skill",
+      "name": "agent-decision-log",
+      "category": "multi-agent-teams",
+      "description": "Record what was decided, by whom, on what basis, and when to revisit, so decisions are not relitigated or silently forgotten. Use when the same discussion recurs and nobody remembers why the current approach was chosen.",
+      "use_when": "when the same discussion recurs and nobody remembers why the current approach was chosen",
+      "path": "skills/multi-agent-teams/agent-decision-log/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-decision-log/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-delegation-protocol",
+      "category": "multi-agent-teams",
+      "description": "Decide what to hand to an agent, what to keep with a human, and what to split, based on reversibility and consequence rather than capability alone. Use when deciding how much of a workflow to automate.",
+      "use_when": "when deciding how much of a workflow to automate",
+      "path": "skills/multi-agent-teams/agent-delegation-protocol/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-delegation-protocol/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-dependency-manager",
+      "category": "multi-agent-teams",
+      "description": "Track cross-desk and external dependencies so blocked work is visible early and the blocker has an owner. Use when work stalls waiting on somebody else and nobody notices until the deadline.",
+      "use_when": "when work stalls waiting on somebody else and nobody notices until the deadline",
+      "path": "skills/multi-agent-teams/agent-dependency-manager/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-dependency-manager/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-design-review-panel",
       "category": "multi-agent-teams",
       "description": "Convene several reviewer agents with fixed distinct lenses, correctness, security, cost, and simplicity, then synthesize their verdicts into one. Use when a single review agent keeps missing whole classes of problems because it cannot hold every concern at once on a design or plan.",
@@ -4197,6 +4251,15 @@
       "use_when": "when a codebase has outrun its docs and you need both new coverage and a way to stop pages from rotting",
       "path": "skills/multi-agent-teams/agent-docs-guild/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-docs-guild/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-escalation-ladder",
+      "category": "multi-agent-teams",
+      "description": "Define what gets escalated, to whom, and how fast, so problems reach a decision maker at the right moment rather than too early or too late. Use when issues either sit unresolved or interrupt the wrong people constantly.",
+      "use_when": "when issues either sit unresolved or interrupt the wrong people constantly",
+      "path": "skills/multi-agent-teams/agent-escalation-ladder/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-escalation-ladder/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4224,6 +4287,15 @@
       "use_when": "when preparing to raise and the story keeps changing between meetings",
       "path": "skills/multi-agent-teams/agent-fundraising-room/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-fundraising-room/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-goal-cascade",
+      "category": "multi-agent-teams",
+      "description": "Translate company objectives into desk-level goals and weekly work, keeping the line from a task to the objective visible. Use when teams are busy but nobody can say how the work serves the goal.",
+      "use_when": "when teams are busy but nobody can say how the work serves the goal",
+      "path": "skills/multi-agent-teams/agent-goal-cascade/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-goal-cascade/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4278,6 +4350,15 @@
       "use_when": "when marketing output is inconsistent or bottlenecked on one person writing everything",
       "path": "skills/multi-agent-teams/agent-marketing-studio/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-marketing-studio/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-meeting-runner",
+      "category": "multi-agent-teams",
+      "description": "Prepare, run, and close meetings with agents so each one produces decisions and owned actions instead of discussion. Use when meetings consume time and nothing is decided or recorded.",
+      "use_when": "when meetings consume time and nothing is decided or recorded",
+      "path": "skills/multi-agent-teams/agent-meeting-runner/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-meeting-runner/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4461,6 +4542,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-status-rollup",
+      "category": "multi-agent-teams",
+      "description": "Aggregate desk-level state into an honest company view where problems stay visible instead of averaging away. Use when everything is reported green and things are still going wrong.",
+      "use_when": "when everything is reported green and things are still going wrong",
+      "path": "skills/multi-agent-teams/agent-status-rollup/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-status-rollup/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-strategy-review",
       "category": "multi-agent-teams",
       "description": "Run a periodic strategy review with agents that check whether stated goals still match reality, argue the alternatives, and force an explicit continue or change decision. Use when quarterly planning repeats last quarter's plan by default.",
@@ -4494,6 +4584,24 @@
       "use_when": "when software spend grows quietly and nobody knows what is still in use",
       "path": "skills/multi-agent-teams/agent-vendor-operations/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-vendor-operations/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-work-assignment",
+      "category": "multi-agent-teams",
+      "description": "Match work to the agent or person best able to finish it, with explicit capacity limits so nothing is assigned into an already full queue. Use when work is distributed by whoever is nearest rather than by fit and capacity.",
+      "use_when": "when work is distributed by whoever is nearest rather than by fit and capacity",
+      "path": "skills/multi-agent-teams/agent-work-assignment/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-work-assignment/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-workload-balancing",
+      "category": "multi-agent-teams",
+      "description": "Redistribute work across desks and workers as load shifts, so one bottleneck does not stall the company while others idle. Use when some desks are overwhelmed and others have nothing queued.",
+      "use_when": "when some desks are overwhelmed and others have nothing queued",
+      "path": "skills/multi-agent-teams/agent-workload-balancing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-workload-balancing/SKILL.md"
     },
     {
       "kind": "skill",

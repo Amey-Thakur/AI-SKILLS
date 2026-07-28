@@ -132,7 +132,7 @@ One row per category; every entry, with its one-line description, is in
 | [llm-engineering](CATALOG.md#llm-engineering-22) | 22 | agent-memory, agentic-loops, coding-agent-workflow |
 | [machine-learning](CATALOG.md#machine-learning-12) | 12 | cross-validation, drift-monitoring, experiment-tracking |
 | [mobile](CATALOG.md#mobile-10) | 10 | app-store-readiness, deep-linking, mobile-input-ux |
-| [multi-agent-teams](CATALOG.md#multi-agent-teams-49) | 49 | agent-analytics-desk, agent-arch-board, agent-board-reporting |
+| [multi-agent-teams](CATALOG.md#multi-agent-teams-61) | 61 | agent-accountability-loop, agent-analytics-desk, agent-arch-board |
 | [networking](CATALOG.md#networking-4) | 4 | dns-fundamentals, load-balancing, tls-and-certificates |
 | [open-source](CATALOG.md#open-source-12) | 12 | code-of-conduct-enforcement, contributor-onboarding, documentation-for-adoption |
 | [payments-billing](CATALOG.md#payments-billing-12) | 12 | failed-payment-recovery, invoicing-and-receipts, payment-idempotency |
