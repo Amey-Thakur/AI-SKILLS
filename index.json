@@ -13,7 +13,7 @@
   },
   "count": {
     "skills": 1000,
-    "prompts": 166,
+    "prompts": 182,
     "categories": 67
   },
   "categories": [
@@ -9088,6 +9088,19 @@
     },
     {
       "kind": "prompt",
+      "name": "ab-test-plan",
+      "category": "prompts",
+      "description": "Design an experiment with the hypothesis, sample size, and decision rule fixed before it runs.",
+      "variables": [
+        "{change}: what is being tested and why you expect it to work",
+        "{traffic}: current volume, baseline conversion, and audience"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/ab-test-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/ab-test-plan.md"
+    },
+    {
+      "kind": "prompt",
       "name": "ad-copy",
       "category": "prompts",
       "description": "Write advertising copy that leads with the benefit, speaks to one audience, and drives one clear action.",
@@ -9242,6 +9255,19 @@
       "settings": "Temperature 0.2-0.4 for precision.",
       "path": "prompts/agent-tool-definition.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-tool-definition.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "agent-workflow-design",
+      "category": "prompts",
+      "description": "Design a multi-agent workflow with the right pattern, explicit handoffs, and human gates on consequential actions.",
+      "variables": [
+        "{task}: the work to be done, its inputs, and what done looks like",
+        "{constraints}: budget, latency, and what must not happen unattended"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/agent-workflow-design.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/agent-workflow-design.md"
     },
     {
       "kind": "prompt",
@@ -9427,6 +9453,19 @@
     },
     {
       "kind": "prompt",
+      "name": "campaign-brief",
+      "category": "prompts",
+      "description": "Write a campaign brief with one audience, one message, one action, and a defined success measure.",
+      "variables": [
+        "{goal}: what the campaign must achieve, with a number if possible",
+        "{audience}: who it targets and what they currently believe"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/campaign-brief.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/campaign-brief.md"
+    },
+    {
+      "kind": "prompt",
       "name": "case-study",
       "category": "prompts",
       "description": "Write a customer case study with the classic problem-solution-results arc and concrete, credible outcomes.",
@@ -9518,6 +9557,19 @@
     },
     {
       "kind": "prompt",
+      "name": "content-calendar",
+      "category": "prompts",
+      "description": "Plan a content calendar from real audience questions, at a cadence that can be sustained.",
+      "variables": [
+        "{audience}: who reads it and what they are trying to do",
+        "{capacity}: how much can genuinely be produced per period"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/content-calendar.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/content-calendar.md"
+    },
+    {
+      "kind": "prompt",
       "name": "content-outline",
       "category": "prompts",
       "description": "Outline an article, course, or long piece so the structure is sound before you write a word.",
@@ -9595,6 +9647,58 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/critique.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/critique.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "customer-persona",
+      "category": "prompts",
+      "description": "Build a persona from evidence, capturing the job, the trigger, and the objection rather than demographics.",
+      "variables": [
+        "{evidence}: interview notes, sales calls, support tickets, or usage data",
+        "{product}: what they would be buying and the decision involved"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/customer-persona.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/customer-persona.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "dashboard-spec",
+      "category": "prompts",
+      "description": "Specify a dashboard around the decisions it supports, with a small number of headline figures.",
+      "variables": [
+        "{audience}: who looks at it, how often, and what they do with it",
+        "{data}: what metrics are available and how current they are"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/dashboard-spec.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/dashboard-spec.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "data-analysis-plan",
+      "category": "prompts",
+      "description": "Plan an analysis before touching the data, with the question, the method, and what would falsify the hypothesis.",
+      "variables": [
+        "{question}: the decision this analysis supports",
+        "{data}: what data exists, its grain, and its known problems"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/data-analysis-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/data-analysis-plan.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "data-quality-audit",
+      "category": "prompts",
+      "description": "Assess a dataset for the problems that would invalidate analysis, before anyone builds on it.",
+      "variables": [
+        "{dataset}: the data, its source, and what it is meant to represent",
+        "{use}: what it will be used for"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/data-quality-audit.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/data-quality-audit.md"
     },
     {
       "kind": "prompt",
@@ -10098,6 +10202,19 @@
     },
     {
       "kind": "prompt",
+      "name": "launch-plan",
+      "category": "prompts",
+      "description": "Plan a launch with readiness checks, sequenced channels, and a defined follow-through after the spike.",
+      "variables": [
+        "{launch}: what is launching, to whom, and when",
+        "{readiness}: current state of product, docs, support, and infrastructure"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/launch-plan.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/launch-plan.md"
+    },
+    {
+      "kind": "prompt",
       "name": "learning-plan",
       "category": "prompts",
       "description": "Build a realistic, practice-first plan to learn any skill, fitted to available time and a concrete goal.",
@@ -10204,6 +10321,19 @@
     },
     {
       "kind": "prompt",
+      "name": "metric-definition",
+      "category": "prompts",
+      "description": "Define a metric precisely enough that two people computing it independently get the same number.",
+      "variables": [
+        "{metric}: the metric name and what it is meant to capture",
+        "{context}: the business, the systems, and how the metric will be used"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/metric-definition.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/metric-definition.md"
+    },
+    {
+      "kind": "prompt",
       "name": "multi-agent-workflow",
       "category": "prompts",
       "description": "Design a multi-agent workflow: which agents, how they divide the work, how they hand off, and how to verify.",
@@ -10267,6 +10397,19 @@
       "settings": "Temperature 0.6-0.8.",
       "path": "prompts/newsletter.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/newsletter.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "objection-handling",
+      "category": "prompts",
+      "description": "Prepare honest answers to the objections a buyer will actually raise, including where the objection is correct.",
+      "variables": [
+        "{objections}: the objections heard, or the deal context if they are anticipated",
+        "{product}: what you sell, its real limitations, and its pricing"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/objection-handling.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/objection-handling.md"
     },
     {
       "kind": "prompt",
@@ -10384,6 +10527,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/plan.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/plan.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "positioning-statement",
+      "category": "prompts",
+      "description": "Write a positioning statement that names the audience, the alternative, and the one defensible difference.",
+      "variables": [
+        "{product}: what it does and who uses it today",
+        "{alternatives}: what buyers use instead, including doing nothing"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/positioning-statement.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/positioning-statement.md"
     },
     {
       "kind": "prompt",
@@ -10528,6 +10684,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/promotion-packet.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/promotion-packet.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "prompt-optimization",
+      "category": "prompts",
+      "description": "Improve an underperforming prompt through structured changes measured against fixed cases.",
+      "variables": [
+        "{prompt}: the current prompt and what it produces",
+        "{failures}: the specific outputs that were wrong and why"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/prompt-optimization.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/prompt-optimization.md"
     },
     {
       "kind": "prompt",
@@ -10816,6 +10985,19 @@
     },
     {
       "kind": "prompt",
+      "name": "sales-outreach-sequence",
+      "category": "prompts",
+      "description": "Draft a multi-step outreach sequence grounded in research about the recipient, for a human to review and send.",
+      "variables": [
+        "{prospect}: the company and person, and what you know about their situation",
+        "{offer}: what you are offering and why it fits them"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/sales-outreach-sequence.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/sales-outreach-sequence.md"
+    },
+    {
+      "kind": "prompt",
       "name": "second-order-thinking",
       "category": "prompts",
       "description": "Think through the downstream consequences of a decision, past the obvious first effect to what it causes next.",
@@ -10840,6 +11022,19 @@
       "settings": "Temperature 0.5-0.7.",
       "path": "prompts/seo-article.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/seo-article.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "seo-content-brief",
+      "category": "prompts",
+      "description": "Brief a piece of content that serves the searcher's intent first and search engines second.",
+      "variables": [
+        "{topic}: the topic and the query the reader would type",
+        "{context}: what your product does and what expertise you can bring"
+      ],
+      "settings": "Temperature 0.4.",
+      "path": "prompts/seo-content-brief.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/seo-content-brief.md"
     },
     {
       "kind": "prompt",
@@ -11141,6 +11336,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/weekly-plan.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/weekly-plan.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "win-loss-analysis",
+      "category": "prompts",
+      "description": "Analyse why deals were won and lost from evidence, separating stated reasons from real ones.",
+      "variables": [
+        "{deals}: the deals with outcomes, stated reasons, and any notes",
+        "{context}: your product, price point, and main competitors"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/win-loss-analysis.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/win-loss-analysis.md"
     },
     {
       "kind": "prompt",
