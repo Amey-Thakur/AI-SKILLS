@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 820,
+    "skills": 832,
     "prompts": 134,
-    "categories": 52
+    "categories": 53
   },
   "categories": [
     "accessibility",
@@ -29,6 +29,7 @@
     "cloud",
     "code-quality",
     "css-styling",
+    "customer-support",
     "data-engineering",
     "data-privacy",
     "data-science",
@@ -1789,6 +1790,114 @@
       "use_when": "when establishing typography for a site or fixing cramped, shifting, or slow-loading text",
       "path": "skills/css-styling/web-typography/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/css-styling/web-typography/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "community-support",
+      "category": "customer-support",
+      "description": "Run a public forum where users help each other, with seeding, moderation, and staff presence that keeps answers accurate. Use when support volume exceeds staffing and questions are broadly shareable.",
+      "use_when": "when support volume exceeds staffing and questions are broadly shareable",
+      "path": "skills/customer-support/community-support/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/community-support/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "customer-feedback-loop",
+      "category": "customer-support",
+      "description": "Turn support conversations into product change through structured tagging, aggregation, and a route into the roadmap. Use when support hears the same complaints and nothing changes.",
+      "use_when": "when support hears the same complaints and nothing changes",
+      "path": "skills/customer-support/customer-feedback-loop/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/customer-feedback-loop/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "difficult-customer-conversations",
+      "category": "customer-support",
+      "description": "Handle angry, distressed, or unreasonable customers without escalating the conflict or capitulating on things you cannot give. Use when a conversation has become emotional rather than transactional.",
+      "use_when": "when a conversation has become emotional rather than transactional",
+      "path": "skills/customer-support/difficult-customer-conversations/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/difficult-customer-conversations/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "knowledge-base-design",
+      "category": "customer-support",
+      "description": "Build self-serve documentation that answers questions before they become tickets, organised by what people search for. Use when the same questions arrive repeatedly.",
+      "use_when": "when the same questions arrive repeatedly",
+      "path": "skills/customer-support/knowledge-base-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/knowledge-base-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "proactive-support",
+      "category": "customer-support",
+      "description": "Reach customers before they contact you, when telemetry or a known issue means they are about to have a problem. Use when failures are detectable before the customer notices or writes in.",
+      "use_when": "when failures are detectable before the customer notices or writes in",
+      "path": "skills/customer-support/proactive-support/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/proactive-support/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "support-analytics",
+      "category": "customer-support",
+      "description": "Measure support with metrics that reflect customer outcomes rather than agent activity, and use them to reduce ticket volume. Use when support is measured by throughput and quality is drifting.",
+      "use_when": "when support is measured by throughput and quality is drifting",
+      "path": "skills/customer-support/support-analytics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/support-analytics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "support-escalation",
+      "category": "customer-support",
+      "description": "Move a ticket to engineering or management with the context needed to act, and set expectations with the customer while it moves. Use when a ticket cannot be resolved at the current level.",
+      "use_when": "when a ticket cannot be resolved at the current level",
+      "path": "skills/customer-support/support-escalation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/support-escalation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "support-handoff",
+      "category": "customer-support",
+      "description": "Transfer a ticket between agents, shifts, or teams without the customer repeating themselves. Use when work crosses people and context is being lost.",
+      "use_when": "when work crosses people and context is being lost",
+      "path": "skills/customer-support/support-handoff/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/support-handoff/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "support-macros",
+      "category": "customer-support",
+      "description": "Build reusable reply templates that speed common answers without making replies feel automated. Use when agents retype the same explanations daily.",
+      "use_when": "when agents retype the same explanations daily",
+      "path": "skills/customer-support/support-macros/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/support-macros/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "support-response-writing",
+      "category": "customer-support",
+      "description": "Write replies that answer the question, respect the customer's time, and avoid the phrases that make people angrier. Use when writing any customer-facing support message.",
+      "use_when": "when writing any customer-facing support message",
+      "path": "skills/customer-support/support-response-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/support-response-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "support-sla-management",
+      "category": "customer-support",
+      "description": "Set, measure, and honour response and resolution commitments that reflect real capacity rather than aspiration. Use when promising response times to customers or in contracts.",
+      "use_when": "when promising response times to customers or in contracts",
+      "path": "skills/customer-support/support-sla-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/support-sla-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "support-ticket-triage",
+      "category": "customer-support",
+      "description": "Sort incoming tickets by urgency and type so the ones that matter are answered first and nothing sits unread. Use when volume exceeds what can be handled in arrival order.",
+      "use_when": "when volume exceeds what can be handled in arrival order",
+      "path": "skills/customer-support/support-ticket-triage/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/customer-support/support-ticket-triage/SKILL.md"
     },
     {
       "kind": "skill",

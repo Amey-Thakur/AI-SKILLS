@@ -297,6 +297,26 @@
       ]
     },
     {
+      "name": "customer-support-skills",
+      "description": "12 working methods for customer support: community-support, customer-feedback-loop, difficult-customer-conversations, knowledge-base-design, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/customer-support/community-support",
+        "./skills/customer-support/customer-feedback-loop",
+        "./skills/customer-support/difficult-customer-conversations",
+        "./skills/customer-support/knowledge-base-design",
+        "./skills/customer-support/proactive-support",
+        "./skills/customer-support/support-analytics",
+        "./skills/customer-support/support-escalation",
+        "./skills/customer-support/support-handoff",
+        "./skills/customer-support/support-macros",
+        "./skills/customer-support/support-response-writing",
+        "./skills/customer-support/support-sla-management",
+        "./skills/customer-support/support-ticket-triage"
+      ]
+    },
+    {
       "name": "data-engineering-skills",
       "description": "12 working methods for data engineering: batch-vs-streaming, change-data-capture, data-lineage, data-partitioning, and more",
       "source": "./",
