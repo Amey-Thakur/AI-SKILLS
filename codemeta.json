@@ -5,7 +5,7 @@
   "description": "Plug-and-play skills and prompts for every AI coding agent. Original, tested methods in plain markdown that Claude Code, Cursor, Codex, Gemini CLI, Copilot, Windsurf, Antigravity, and any tool reading a file can load, plus an index to every major skill collection on GitHub.",
   "version": "2.0.0",
   "dateCreated": "2026-07-16",
-  "dateModified": "2026-07-18",
+  "dateModified": "2026-07-28",
   "license": "https://spdx.org/licenses/MIT",
   "codeRepository": "https://github.com/Amey-Thakur/AI-SKILLS",
   "issueTracker": "https://github.com/Amey-Thakur/AI-SKILLS/issues",

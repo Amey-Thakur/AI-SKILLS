@@ -9,7 +9,7 @@
 // frontmatter; fails loudly on a malformed entry rather than emitting a
 // partial catalog.
 
-import { readdirSync, readFileSync, writeFileSync, statSync, mkdirSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, statSync, mkdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
 
 const RAW_BASE = "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main";
@@ -263,6 +263,16 @@ for (const p of prompts) {
   writeFileSync(join("commands", `${p.name}.md`), command);
   commandFiles.push(`./commands/${p.name}.md`);
 }
+/* Commands are generated, so the folder must mirror prompts/ exactly. Without
+   this, renaming or deleting a prompt would leave its old command behind and
+   ship a slash command backed by nothing. */
+const expected = new Set(prompts.map((p) => `${p.name}.md`));
+for (const file of readdirSync("commands")) {
+  if (file.endsWith(".md") && !expected.has(file)) {
+    rmSync(join("commands", file));
+    console.log(`removed stale command: commands/${file}`);
+  }
+}
 
 /* Claude Code marketplace: one plugin per category, generated so the listing
    can never drift from the folders. */
@@ -276,12 +286,15 @@ const marketplace = {
   plugins: [
     ...categories.map((cat) => {
       const list = skills.filter((s) => s.category === cat);
+      /* Name a handful, then say "and more" only when more actually exist:
+         a category with four skills lists all four and must not claim a
+         fifth. */
+      const shown = list.slice(0, 4).map((e) => e.name).join(", ");
       return {
         name: `${cat}-skills`,
-        description: `${list.length} working methods for ${cat.replace(/-/g, " ")}: ${list
-          .slice(0, 4)
-          .map((e) => e.name)
-          .join(", ")}, and more`,
+        description:
+          `${list.length} working methods for ${cat.replace(/-/g, " ")}: ${shown}` +
+          (list.length > 4 ? ", and more" : ""),
         source: "./",
         strict: false,
         skills: list.map((e) => `./skills/${cat}/${e.name}`),

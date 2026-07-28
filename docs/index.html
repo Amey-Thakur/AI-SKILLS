@@ -309,10 +309,16 @@
 
   document.querySelectorAll(".copy-btn[data-copy]").forEach(function (btn) {
     btn.addEventListener("click", function () {
-      navigator.clipboard.writeText(document.getElementById(btn.getAttribute("data-copy")).textContent).then(function () {
-        var old = btn.textContent; btn.textContent = "Copied";
-        setTimeout(function () { btn.textContent = old; }, 1200);
-      });
+      var text = document.getElementById(btn.getAttribute("data-copy")).textContent;
+      var old = btn.textContent;
+      /* Clipboard access can be refused or unavailable (insecure context, denied
+         permission). Say so rather than leaving the button silent on a rejected
+         promise. */
+      Promise.resolve()
+        .then(function () { return navigator.clipboard.writeText(text); })
+        .then(function () { btn.textContent = "Copied"; })
+        .catch(function () { btn.textContent = "Copy failed"; })
+        .then(function () { setTimeout(function () { btn.textContent = old; }, 1200); });
     });
   });
 
@@ -407,14 +413,21 @@
   function makeCard(e) {
     var card = document.createElement("div");
     card.className = "card";
-    var gh = "https://github.com/Amey-Thakur/AI-SKILLS/blob/main/" + e.path;
+    /* Build the shell with no interpolation, then set every value as a
+       property. Catalog paths are safe today, but assigning them into an
+       attribute string is the habit that ships an injection later. */
     card.innerHTML =
       '<span class="kind"></span><h3></h3><p></p>' +
-      '<div class="actions"><a href="' + gh + '">View</a>' +
-      '<a href="#" data-raw="' + e.raw_url + '">Copy content</a></div>';
+      '<div class="actions"><a class="view"></a><a class="raw" href="#"></a></div>';
     card.querySelector(".kind").textContent = e.kind === "prompt" ? "prompt" : e.category;
     card.querySelector("h3").textContent = e.name;
     card.querySelector("p").textContent = e.description;
+    var view = card.querySelector("a.view");
+    view.href = "https://github.com/Amey-Thakur/AI-SKILLS/blob/main/" + e.path;
+    view.textContent = "View";
+    var rawLink = card.querySelector("a.raw");
+    rawLink.dataset.raw = e.raw_url;
+    rawLink.textContent = "Copy content";
     return card;
   }
 

@@ -293,15 +293,20 @@
      spelling is a different, common word: "its" (possessive) and "id"
      (identifier, which this tool's users type constantly). */
   var APOSTROPHE_ONLY = { its: "it is", id: "I would" };
-  var VENT =/\b(i hate (this|it|everything)|so (annoying|frustrating)|driving me (crazy|nuts|insane)|wtf|ffs|omg|ugh+|argh+|aargh+|smh|kill(ing)? me|i give up|fed up|sick of (this|it)|this (stupid|dumb|damn|bloody) )\b/gi;
+  /* Letter-stretching is collapsed to a doubled letter before this runs, so
+     "sooo annoying" arrives as "soo annoying" and "omgggg" as "omgg". Every
+     stretch-prone token therefore ends in "+" so both spellings match. */
+  var VENT = /\b(i hate+ (this|it|everything)|((this|it) is )?so+ (annoying|frustrating)|driving me (crazy+|nuts+|insane+)|wtf+|ffs+|omg+|ugh+|argh+|aargh+|smh+|kill(ing)? me|i give up|fed up|sick of (this|it)|this (stupid|dumb|damn|bloody) )\b/gi;
   var SWEAR = /\b(damn|dammit|hell|freaking|fricking|frigging|fucking|fucked|shit|shitty|crap|crappy|bullshit)\b/gi;
 
   function cleanStage(text) {
     var fixes = 0;
     var vented = false;
     var out = text.replace(/\s+/g, " ").trim();
-    /* Collapse dramatic letter-stretching first: sooo -> so, slowwww -> slow.
-       Doing this before the vent strip lets "sooo annoying" match the pattern. */
+    /* Collapse dramatic letter-stretching first: a run of three or more becomes
+       a pair, so "soooo" -> "soo" and "slowwww" -> "sloww". Two is the floor
+       because real words double letters ("committee"), and the vent pattern
+       above accepts the doubled spelling. */
     out = out.replace(/([a-z])\1{2,}/gi, function (m, ch) { fixes++; return ch + ch; });
     /* Expand shorthand next, so "i h8 this" becomes "i hate this" and the vent
        strip below can catch it instead of letting it leak into the objective. */
@@ -510,6 +515,18 @@
     }
     var extra = more.value.trim();
     var cleaned = cleanStage(extra ? input + ". " + extra : input);
+    /* Input can survive the emptiness check above and still be empty after
+       cleaning, when the whole message was venting or punctuation ("ugh wtf
+       omg"). Building from that yields a full prompt with an empty objective,
+       so ask for the task instead. */
+    if (!/[a-z0-9]/i.test(cleaned.text)) {
+      result.textContent =
+        "That reads as frustration rather than a task, and there is nothing left " +
+        "to build a prompt from. Say what you want done: the job, the thing it " +
+        "applies to, and what a good result looks like.";
+      settingsBox.hidden = true; analysis.hidden = true;
+      return;
+    }
     var facts = understandStage(cleaned.text);
     lastFacts = facts;
     var type = chosenType || classifyStage(cleaned.text);

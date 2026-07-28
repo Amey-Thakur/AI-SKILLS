@@ -1044,7 +1044,7 @@
     },
     {
       "name": "networking-skills",
-      "description": "4 working methods for networking: dns-fundamentals, load-balancing, tls-and-certificates, websockets-at-scale, and more",
+      "description": "4 working methods for networking: dns-fundamentals, load-balancing, tls-and-certificates, websockets-at-scale",
       "source": "./",
       "strict": false,
       "skills": [
