@@ -26,6 +26,26 @@
       ]
     },
     {
+      "name": "ai-coding-tools-skills",
+      "description": "12 working methods for ai coding tools: agent-code-review, agent-context-setup, agent-cost-control, agent-debugging-workflow, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/ai-coding-tools/agent-code-review",
+        "./skills/ai-coding-tools/agent-context-setup",
+        "./skills/ai-coding-tools/agent-cost-control",
+        "./skills/ai-coding-tools/agent-debugging-workflow",
+        "./skills/ai-coding-tools/agent-instruction-files",
+        "./skills/ai-coding-tools/agent-plan-review",
+        "./skills/ai-coding-tools/agent-refactoring-workflow",
+        "./skills/ai-coding-tools/agent-session-management",
+        "./skills/ai-coding-tools/agent-test-generation",
+        "./skills/ai-coding-tools/agent-tool-permissions",
+        "./skills/ai-coding-tools/multi-model-workflows",
+        "./skills/ai-coding-tools/subagent-delegation"
+      ]
+    },
+    {
       "name": "ai-memory-rag-skills",
       "description": "12 working methods for ai memory rag: chunking-strategies, citation-grounding, context-compression, conversation-memory, and more",
       "source": "./",

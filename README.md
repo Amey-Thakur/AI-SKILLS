@@ -102,6 +102,7 @@ One row per category; every entry, with its one-line description, is in
 | Category | Skills | For example |
 |---|---|---|
 | [accessibility](CATALOG.md#accessibility-8) | 8 | accessibility-review, accessible-forms, alt-text-writing |
+| [ai-coding-tools](CATALOG.md#ai-coding-tools-12) | 12 | agent-code-review, agent-context-setup, agent-cost-control |
 | [ai-memory-rag](CATALOG.md#ai-memory-rag-12) | 12 | chunking-strategies, citation-grounding, context-compression |
 | [api-integration](CATALOG.md#api-integration-12) | 12 | api-credential-rotation, data-mapping, integration-migration |
 | [apis](CATALOG.md#apis-9) | 9 | api-change-management, api-client-design, api-deprecation |
