@@ -18,7 +18,7 @@
   --text-1: #efe9df;
   --text-2: #c8c0b3;
   --text-3: #a49b8c;
-  --text-4: #857c6e;
+  --text-4: #8e8578;
   --accent: #d8a24a;
   --accent-soft: rgba(216, 162, 74, 0.14);
   --accent-strong: #e6b45f;
@@ -45,9 +45,12 @@
   --text-1: #221f1a;
   --text-2: #4a453c;
   --text-3: #6b6558;
-  --text-4: #8c8474;
-  --accent: #b07216;
-  --accent-soft: rgba(176, 114, 22, 0.10);
+  /* The faintest text tier and the accent both carry real content (meta
+     lines, section labels, inline links) at 10-16px, so both clear 4.5:1
+     against every surface they sit on, not just against white. */
+  --text-4: #6f685c;
+  --accent: #976213;
+  --accent-soft: rgba(151, 98, 19, 0.10);
   --accent-strong: #965f0c;
   /* Light theme's accent is a dark brown; white text on a slightly deeper
      brown clears WCAG AA where the old near-black text was unreadable. */

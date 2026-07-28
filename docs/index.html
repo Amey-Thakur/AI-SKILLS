@@ -51,7 +51,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 <script>
   try {
     var stored = localStorage.getItem("ai-skills-theme");
@@ -75,7 +75,9 @@
   }
 
   section.block { padding: 26px 0; }
-  .section-label { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text-4); margin-bottom: 18px; }
+  /* A real <h2> so screen readers can jump section to section, styled back to
+     the quiet eyebrow it looks like (font-weight, or it inherits h2 bold). */
+  .section-label { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text-4); margin-bottom: 18px; }
 
   .install {
     border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius);
@@ -229,7 +231,7 @@
 
   <div class="wrap">
     <section class="block" aria-label="Install">
-      <p class="section-label">Use it in one line</p>
+      <h2 class="section-label">Use it in one line</h2>
       <div class="install">
         <div class="row">
           <span class="label">Claude Code</span>
@@ -254,7 +256,7 @@
     </section>
 
     <section class="block" id="library" aria-label="Library">
-      <p class="section-label">The library</p>
+      <h2 class="section-label">The library</h2>
       <p class="eco-lede">In Claude Code, every prompt is a slash command. Type <span class="mono">/summarize</span>, <span class="mono">/tldr</span>, <span class="mono">/explain</span>, <span class="mono">/plan</span>, <span class="mono">/brainstorm</span>, <span class="mono">/goal</span>, <span class="mono">/autoresearch</span>, <span class="mono">/reflect</span>, and more. Cursor and Antigravity run the same prompts as slash commands too.</p>
       <div class="toolbar">
         <input id="search" type="search" placeholder="Search skills and prompts" aria-label="Search the library">
@@ -273,7 +275,7 @@
     </section>
 
     <section class="block" id="ecosystem" aria-label="Ecosystem">
-      <p class="section-label">The rest of the world's skills</p>
+      <h2 class="section-label">The rest of the world's skills</h2>
       <p class="eco-lede">
         Our library is original and complete above. Beyond it, this index
         covers every major skill collection on GitHub: 8,000+ skills, one
