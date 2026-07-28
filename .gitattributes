@@ -28,6 +28,7 @@ index.json linguist-generated=true
 docs/index.json linguist-generated=true
 docs/ecosystem.json linguist-generated=true
 llms.txt linguist-generated=true
+docs/llms.txt linguist-generated=true
 CATALOG.md linguist-generated=true
 commands/*.md linguist-generated=true
 .claude-plugin/marketplace.json linguist-generated=true

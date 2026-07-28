@@ -4,7 +4,7 @@
 //
 //   node scripts/build-index.mjs
 //
-// Produces: index.json (+ docs/ copy), llms.txt, CATALOG.md, the README
+// Produces: index.json (+ docs/ copy), llms.txt (+ docs/ copy), CATALOG.md, the README
 // category table, and .claude-plugin/marketplace.json. Reads only
 // frontmatter; fails loudly on a malformed entry rather than emitting a
 // partial catalog.
@@ -296,6 +296,11 @@ llms.push("## Prompts", "");
 for (const e of prompts) llms.push(`- [${e.name}](${e.raw_url}): ${e.description}`);
 llms.push("");
 writeFileSync("llms.txt", llms.join("\n"));
+/* The llms.txt convention is a web one: an agent looks for it at the site
+   root, not in a Git tree. Pages serves docs/, so without this copy
+   https://amey-thakur.github.io/AI-SKILLS/llms.txt answered 404 while the
+   file sat in the repository the whole time. */
+writeFileSync(join("docs", "llms.txt"), llms.join("\n"));
 
 /* CATALOG.md: the complete human-browsable listing, grouped by category. */
 const catalog = [
