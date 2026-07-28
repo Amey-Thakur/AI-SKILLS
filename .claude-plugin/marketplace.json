@@ -574,6 +574,26 @@
       ]
     },
     {
+      "name": "i18n-localization-skills",
+      "description": "12 working methods for i18n localization: character-encoding, currency-localization, locale-aware-sorting, locale-fallback, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/i18n-localization/character-encoding",
+        "./skills/i18n-localization/currency-localization",
+        "./skills/i18n-localization/locale-aware-sorting",
+        "./skills/i18n-localization/locale-fallback",
+        "./skills/i18n-localization/locale-formatting",
+        "./skills/i18n-localization/plural-and-gender-rules",
+        "./skills/i18n-localization/pseudo-localization",
+        "./skills/i18n-localization/rtl-layout",
+        "./skills/i18n-localization/string-externalization",
+        "./skills/i18n-localization/text-expansion-layout",
+        "./skills/i18n-localization/translation-quality-review",
+        "./skills/i18n-localization/translation-workflow"
+      ]
+    },
+    {
       "name": "javascript-typescript-skills",
       "description": "14 working methods for javascript typescript: js-async-patterns, js-error-handling, js-event-loop, js-immutability, and more",
       "source": "./",
@@ -736,6 +756,26 @@
         "./skills/networking/load-balancing",
         "./skills/networking/tls-and-certificates",
         "./skills/networking/websockets-at-scale"
+      ]
+    },
+    {
+      "name": "open-source-skills",
+      "description": "12 working methods for open source: code-of-conduct-enforcement, contributor-onboarding, documentation-for-adoption, forking-and-vendoring, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/open-source/code-of-conduct-enforcement",
+        "./skills/open-source/contributor-onboarding",
+        "./skills/open-source/documentation-for-adoption",
+        "./skills/open-source/forking-and-vendoring",
+        "./skills/open-source/issue-triage",
+        "./skills/open-source/maintainer-sustainability",
+        "./skills/open-source/open-source-licensing",
+        "./skills/open-source/project-governance",
+        "./skills/open-source/release-management",
+        "./skills/open-source/semantic-versioning",
+        "./skills/open-source/supply-chain-security",
+        "./skills/open-source/vulnerability-disclosure"
       ]
     },
     {

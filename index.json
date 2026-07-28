@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 677,
+    "skills": 701,
     "prompts": 134,
-    "categories": 43
+    "categories": 45
   },
   "categories": [
     "accessibility",
@@ -42,6 +42,7 @@
     "game-development",
     "git-collaboration",
     "gpu-ai-infrastructure",
+    "i18n-localization",
     "javascript-typescript",
     "jvm-dotnet",
     "llm-engineering",
@@ -49,6 +50,7 @@
     "mobile",
     "multi-agent-teams",
     "networking",
+    "open-source",
     "performance",
     "product-management",
     "python",
@@ -3340,6 +3342,114 @@
     },
     {
       "kind": "skill",
+      "name": "character-encoding",
+      "category": "i18n-localization",
+      "description": "Handle Unicode end to end so text survives storage, transport, and display without mojibake or truncation mid-character. Use when text arrives corrupted, lengths behave oddly, or emoji break a field.",
+      "use_when": "when text arrives corrupted, lengths behave oddly, or emoji break a field",
+      "path": "skills/i18n-localization/character-encoding/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/character-encoding/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "currency-localization",
+      "category": "i18n-localization",
+      "description": "Display, store, and reason about money across currencies without rounding errors or implied conversions. Use when showing prices in more than one currency or storing monetary amounts.",
+      "use_when": "when showing prices in more than one currency or storing monetary amounts",
+      "path": "skills/i18n-localization/currency-localization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/currency-localization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "locale-aware-sorting",
+      "category": "i18n-localization",
+      "description": "Sort and compare text using locale collation rather than byte order, so lists read correctly in every language. Use when displaying sorted names, searching case-insensitively, or matching user input.",
+      "use_when": "when displaying sorted names, searching case-insensitively, or matching user input",
+      "path": "skills/i18n-localization/locale-aware-sorting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/locale-aware-sorting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "locale-fallback",
+      "category": "i18n-localization",
+      "description": "Define what a user sees when a string, a locale, or a region is not available, so gaps degrade predictably instead of showing keys or blanks. Use when supporting partial translations or regional variants.",
+      "use_when": "when supporting partial translations or regional variants",
+      "path": "skills/i18n-localization/locale-fallback/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/locale-fallback/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "locale-formatting",
+      "category": "i18n-localization",
+      "description": "Format numbers, dates, currency, and units by locale using the platform formatter rather than string templates. Use when displaying any value whose written form differs between regions.",
+      "use_when": "when displaying any value whose written form differs between regions",
+      "path": "skills/i18n-localization/locale-formatting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/locale-formatting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "plural-and-gender-rules",
+      "category": "i18n-localization",
+      "description": "Handle plurals, grammatical gender, and agreement using locale plural categories rather than an if-else on count. Use when a string contains a number or refers to a person or object with gender.",
+      "use_when": "when a string contains a number or refers to a person or object with gender",
+      "path": "skills/i18n-localization/plural-and-gender-rules/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/plural-and-gender-rules/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "pseudo-localization",
+      "category": "i18n-localization",
+      "description": "Test localisation readiness with generated pseudo-translations that expand, accent, and bracket text, before any real translation exists. Use when preparing a product for translation and wanting to find breakage early.",
+      "use_when": "when preparing a product for translation and wanting to find breakage early",
+      "path": "skills/i18n-localization/pseudo-localization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/pseudo-localization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "rtl-layout",
+      "category": "i18n-localization",
+      "description": "Support right-to-left languages by mirroring layout, icons, and interactions while leaving numbers and code untouched. Use when adding Arabic, Hebrew, Persian, or Urdu support to an interface.",
+      "use_when": "when adding Arabic, Hebrew, Persian, or Urdu support to an interface",
+      "path": "skills/i18n-localization/rtl-layout/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/rtl-layout/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "string-externalization",
+      "category": "i18n-localization",
+      "description": "Move user-facing text out of code into catalogs with stable keys and context, so translation becomes possible without touching logic. Use when preparing a product for translation or fixing hardcoded strings.",
+      "use_when": "when preparing a product for translation or fixing hardcoded strings",
+      "path": "skills/i18n-localization/string-externalization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/string-externalization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "text-expansion-layout",
+      "category": "i18n-localization",
+      "description": "Design interfaces that survive translated text growing or shrinking substantially, without truncation or broken layout. Use when building UI that will be translated, or fixing clipped text in another language.",
+      "use_when": "when building UI that will be translated, or fixing clipped text in another language",
+      "path": "skills/i18n-localization/text-expansion-layout/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/text-expansion-layout/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "translation-quality-review",
+      "category": "i18n-localization",
+      "description": "Review translated text for accuracy, register, and fit in context, with a rubric rather than an impression. Use when accepting translations or diagnosing why a localised product feels wrong to native speakers.",
+      "use_when": "when accepting translations or diagnosing why a localised product feels wrong to native speakers",
+      "path": "skills/i18n-localization/translation-quality-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/translation-quality-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "translation-workflow",
+      "category": "i18n-localization",
+      "description": "Run translation as a pipeline with catalogs, context, review, and continuous updates rather than a one-off handoff. Use when shipping in multiple languages on an ongoing release cadence.",
+      "use_when": "when shipping in multiple languages on an ongoing release cadence",
+      "path": "skills/i18n-localization/translation-workflow/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/i18n-localization/translation-workflow/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "js-async-patterns",
       "category": "javascript-typescript",
       "description": "Compose async JavaScript with promises and async/await correctly, propagating errors and cancelling with AbortController. Use when writing async code, running work concurrently, or debugging swallowed errors and unhandled rejections.",
@@ -4318,6 +4428,114 @@
       "use_when": "when building realtime features on WebSockets or a similar long-lived transport",
       "path": "skills/networking/websockets-at-scale/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/networking/websockets-at-scale/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "code-of-conduct-enforcement",
+      "category": "open-source",
+      "description": "Apply a code of conduct consistently, with a reporting path, proportionate responses, and records, so it protects people rather than decorating the repository. Use when adopting a code of conduct or handling a report.",
+      "use_when": "when adopting a code of conduct or handling a report",
+      "path": "skills/open-source/code-of-conduct-enforcement/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/code-of-conduct-enforcement/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "contributor-onboarding",
+      "category": "open-source",
+      "description": "Lower the cost of a first contribution with a working setup, a clear scope, and a fast review so people come back. Use when a project wants contributors and gets drive-by patches or none.",
+      "use_when": "when a project wants contributors and gets drive-by patches or none",
+      "path": "skills/open-source/contributor-onboarding/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/contributor-onboarding/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "documentation-for-adoption",
+      "category": "open-source",
+      "description": "Write the docs that decide whether someone adopts a project: a truthful readme, a working quickstart, and answers to the first questions. Use when a project is capable but nobody gets past the first ten minutes.",
+      "use_when": "when a project is capable but nobody gets past the first ten minutes",
+      "path": "skills/open-source/documentation-for-adoption/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/documentation-for-adoption/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "forking-and-vendoring",
+      "category": "open-source",
+      "description": "Decide between patching upstream, forking, and vendoring a dependency, and carry the ongoing cost knowingly. Use when a dependency needs a change you cannot get merged, or is unmaintained.",
+      "use_when": "when a dependency needs a change you cannot get merged, or is unmaintained",
+      "path": "skills/open-source/forking-and-vendoring/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/forking-and-vendoring/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "issue-triage",
+      "category": "open-source",
+      "description": "Process incoming issues so real problems get found fast and the queue stays honest about what will be worked on. Use when an issue tracker has grown past what anyone reads.",
+      "use_when": "when an issue tracker has grown past what anyone reads",
+      "path": "skills/open-source/issue-triage/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/issue-triage/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "maintainer-sustainability",
+      "category": "open-source",
+      "description": "Keep a project alive without burning out its maintainers, through scope limits, shared load, and honest signals about capacity. Use when maintenance feels like an obligation you cannot decline.",
+      "use_when": "when maintenance feels like an obligation you cannot decline",
+      "path": "skills/open-source/maintainer-sustainability/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/maintainer-sustainability/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "open-source-licensing",
+      "category": "open-source",
+      "description": "Choose a licence, comply with the licences you depend on, and keep attribution correct as a project grows. Use when publishing a project, adding a dependency, or answering whether a licence permits your use.",
+      "use_when": "when publishing a project, adding a dependency, or answering whether a licence permits your use",
+      "path": "skills/open-source/open-source-licensing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/open-source-licensing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "project-governance",
+      "category": "open-source",
+      "description": "Define who decides what in a project, how that changes, and how disputes end, before a disagreement forces the question. Use when a project grows past one maintainer or a conflict has no clear resolution path.",
+      "use_when": "when a project grows past one maintainer or a conflict has no clear resolution path",
+      "path": "skills/open-source/project-governance/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/project-governance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "release-management",
+      "category": "open-source",
+      "description": "Ship releases on a predictable rhythm with versioned changes, tested artifacts, and notes users can act on. Use when releases are ad hoc or users cannot tell what changed.",
+      "use_when": "when releases are ad hoc or users cannot tell what changed",
+      "path": "skills/open-source/release-management/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/release-management/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "semantic-versioning",
+      "category": "open-source",
+      "description": "Communicate compatibility through version numbers so consumers know what upgrading costs. Use when releasing a library, deciding whether a change is breaking, or setting a dependency range.",
+      "use_when": "when releasing a library, deciding whether a change is breaking, or setting a dependency range",
+      "path": "skills/open-source/semantic-versioning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/semantic-versioning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "supply-chain-security",
+      "category": "open-source",
+      "description": "Protect a project and its users from compromised dependencies, publishing credentials, and build pipelines. Use when publishing packages or auditing what your build actually trusts.",
+      "use_when": "when publishing packages or auditing what your build actually trusts",
+      "path": "skills/open-source/supply-chain-security/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/supply-chain-security/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "vulnerability-disclosure",
+      "category": "open-source",
+      "description": "Receive, triage, fix, and announce security reports on a coordinated timeline that protects users. Use when running a project that could have security issues, or when you receive a report.",
+      "use_when": "when running a project that could have security issues, or when you receive a report",
+      "path": "skills/open-source/vulnerability-disclosure/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/open-source/vulnerability-disclosure/SKILL.md"
     },
     {
       "kind": "skill",

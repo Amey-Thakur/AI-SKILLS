@@ -126,6 +126,7 @@ One row per category; every entry, with its one-line description, is in
 | [game-development](CATALOG.md#game-development-8) | 8 | entity-component-system, game-asset-pipeline, game-input-handling |
 | [git-collaboration](CATALOG.md#git-collaboration-10) | 10 | branch-strategy, code-owners, commit-messages |
 | [gpu-ai-infrastructure](CATALOG.md#gpu-ai-infrastructure-20) | 20 | ai-datacenter-networking, checkpointing-large-training, cuda-kernel-basics |
+| [i18n-localization](CATALOG.md#i18n-localization-12) | 12 | character-encoding, currency-localization, locale-aware-sorting |
 | [javascript-typescript](CATALOG.md#javascript-typescript-14) | 14 | js-async-patterns, js-error-handling, js-event-loop |
 | [jvm-dotnet](CATALOG.md#jvm-dotnet-10) | 10 | csharp-linq, dotnet-async, dotnet-dependency-injection |
 | [llm-engineering](CATALOG.md#llm-engineering-22) | 22 | agent-memory, agentic-loops, coding-agent-workflow |
@@ -133,6 +134,7 @@ One row per category; every entry, with its one-line description, is in
 | [mobile](CATALOG.md#mobile-10) | 10 | app-store-readiness, deep-linking, mobile-input-ux |
 | [multi-agent-teams](CATALOG.md#multi-agent-teams-37) | 37 | agent-arch-board, agent-board-reporting, agent-code-review-loop |
 | [networking](CATALOG.md#networking-4) | 4 | dns-fundamentals, load-balancing, tls-and-certificates |
+| [open-source](CATALOG.md#open-source-12) | 12 | code-of-conduct-enforcement, contributor-onboarding, documentation-for-adoption |
 | [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
 | [product-management](CATALOG.md#product-management-10) | 10 | ab-test-design, customer-interviews, feature-sunsetting |
 | [python](CATALOG.md#python-14) | 14 | pytest-mastery, python-asyncio, python-cli-tools |
