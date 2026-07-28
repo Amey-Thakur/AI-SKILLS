@@ -42,10 +42,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=14">
 <script>
+  /* Runs before the first paint, so the page never flashes the wrong theme.
+     An explicit choice wins; with nothing stored, follow the operating system
+     and otherwise keep the dark default already on <html>. The browser chrome
+     colour then tracks whichever theme won, rather than staying pinned dark. */
   try {
     var stored = localStorage.getItem("ai-skills-theme");
-    if (stored === "light" || stored === "dark") document.documentElement.setAttribute("data-theme", stored);
+    if (stored === "light" || stored === "dark") {
+      document.documentElement.setAttribute("data-theme", stored);
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
   } catch (_) {}
+  function paintChrome(theme) {
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute("content", theme === "light" ? "#f4f1ea" : "#12100e");
+  }
+  paintChrome(document.documentElement.getAttribute("data-theme"));
 </script>
 <style>
   .head { padding: 56px 0 8px; }
@@ -237,6 +250,7 @@
   toggle.addEventListener("click", function () {
     var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
+    paintChrome(next);
     try { localStorage.setItem("ai-skills-theme", next); } catch (_) {}
     sync();
   });
@@ -376,15 +390,41 @@
   var TECH = ("react next nextjs vue angular svelte javascript typescript python rust go java kotlin swift php ruby c# c++ node deno bun express django flask fastapi rails laravel spring html css tailwind bootstrap sass api rest graphql grpc websocket webhook oauth jwt sql mysql postgres postgresql sqlite mongodb redis kafka rabbitmq elasticsearch docker kubernetes terraform aws azure gcp vercel netlify heroku firebase supabase git github gitlab ci cd linux windows macos android ios flutter electron tauri figma excel csv json yaml xml pdf regex cron nginx apache stripe twilio sendgrid openai anthropic claude gpt gemini llm rag embedding chatbot webpack vite babel jest pytest selenium playwright cypress pandas numpy sklearn tensorflow pytorch jupyter airflow spark dbt snowflake bigquery powerbi tableau wordpress shopify seo email newsletter instagram youtube tiktok linkedin resume invoice contract database frontend backend fullstack devops microservice monolith cache queue auth login signup checkout payment cart dashboard admin crud form modal navbar footer landing blog cms markdown latex").split(" ");
   var GOALS = ("fix debug build create write draft make design develop implement generate summarize summarise translate convert migrate refactor optimize optimise speed improve review audit analyze analyse compare choose decide plan organize organise sort classify label extract parse scrape clean merge split rename deploy test automate schedule explain teach document research find calculate estimate validate monitor track recover troubleshoot").split(" ");
 
+  /* Half of the list above is also ordinary English. Matched on the word
+     alone, "go to the store next spring" reports a Go / Next.js / Spring
+     stack, "draft a contract" reports contract, and "how rust forms on old
+     cars" reports Rust: a technical constraint written into the prompt that
+     the user never asked for. These tokens only count when the text carries
+     some other technical signal, either an unambiguous tool name or a word
+     that only shows up when the subject really is software. */
+  var SOFT_TECH = {};
+  ("go next spring swift rust ruby bun express flask rails sass rest cd ci windows " +
+   "flutter electron excel stripe claude gemini rag jest babel selenium playwright " +
+   "cypress pandas airflow spark snowflake tableau apache latex node java email " +
+   "newsletter resume invoice contract cache queue auth login signup checkout " +
+   "payment cart dashboard admin form modal footer landing blog")
+    .split(" ").forEach(function (t) { SOFT_TECH[t] = 1; });
+  var TECH_CONTEXT = /\b(code|coding|app|application|api|server|client|database|repo|repository|function|component|library|framework|package|npm|pip|install|deploy|compile|endpoint|query|script|module|stack|frontend|backend|localhost|production|website|web|ui|software|programming|developer)\b/i;
+
   function understandStage(text) {
     var lower = " " + text.toLowerCase() + " ";
     var found = { goal: null, tech: [], numbers: [], limits: [], urgency: false, hasInput: false };
     for (var i = 0; i < GOALS.length; i++) {
       if (lower.indexOf(" " + GOALS[i] + " ") !== -1 || lower.indexOf(" " + GOALS[i] + "ing ") !== -1) { found.goal = GOALS[i]; break; }
     }
+    var hardHit = false;
+    var softHits = [];
     TECH.forEach(function (t) {
-      if (found.tech.length < 8 && new RegExp("(^|[^a-z0-9])" + t.replace(/[+#]/g, "\\$&") + "([^a-z0-9]|$)", "i").test(text)) found.tech.push(t);
+      if (!new RegExp("(^|[^a-z0-9])" + t.replace(/[+#]/g, "\\$&") + "([^a-z0-9]|$)", "i").test(text)) return;
+      if (SOFT_TECH[t]) { softHits.push(t); return; }
+      hardHit = true;
+      if (found.tech.length < 8) found.tech.push(t);
     });
+    /* An unambiguous tool name in the same sentence, or plainly technical
+       wording, is enough to read the ambiguous ones as tools too. */
+    if (hardHit || TECH_CONTEXT.test(text)) {
+      softHits.forEach(function (t) { if (found.tech.length < 8) found.tech.push(t); });
+    }
     var nums = text.match(/\d[\d,.]*\s?(ms|s\b|sec|seconds?|min|minutes?|hours?|days?|weeks?|words?|pages?|items?|rows?|users?|percent|%|kb|mb|gb|px|dollars?|\$)/gi);
     if (nums) found.numbers = nums.slice(0, 6);
     /* Only markers that genuinely express a limit. A bare "by" fires on

@@ -374,6 +374,14 @@
   window.draw = draw;
 
   /* --------------------------------------------------------- animation */
+  /* Someone who has asked the system to reduce motion should not watch the
+     layout shake itself apart and settle. The stylesheet's reduced-motion
+     block only stops CSS transitions; it cannot touch a canvas loop, so the
+     check has to happen here. Read it live rather than once, since the
+     preference can change while the page is open. */
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)");
+  function prefersReduced() { return !!(reduceMotion && reduceMotion.matches); }
+
   function frame() {
     var g = graph();
     if (settleTicks < settleTarget) {
@@ -387,7 +395,19 @@
     draw();
     rafId = 0;
   }
-  function kick() { if (!rafId) rafId = requestAnimationFrame(frame); }
+  function kick() {
+    if (prefersReduced()) {
+      /* Settle to the same layout in one pass, then paint the finished result
+         once. Same picture, no visible motion. */
+      if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+      var g = graph();
+      while (settleTicks < settleTarget) { tick(g); settleTicks++; }
+      fitView();
+      draw();
+      return;
+    }
+    if (!rafId) rafId = requestAnimationFrame(frame);
+  }
 
   /* ------------------------------------------------------- interaction */
   function nodeAt(clientX, clientY) {

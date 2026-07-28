@@ -41,10 +41,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=14">
 <script>
+  /* Runs before the first paint, so the page never flashes the wrong theme.
+     An explicit choice wins; with nothing stored, follow the operating system
+     and otherwise keep the dark default already on <html>. The browser chrome
+     colour then tracks whichever theme won, rather than staying pinned dark. */
   try {
     var stored = localStorage.getItem("ai-skills-theme");
-    if (stored === "light" || stored === "dark") document.documentElement.setAttribute("data-theme", stored);
+    if (stored === "light" || stored === "dark") {
+      document.documentElement.setAttribute("data-theme", stored);
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
   } catch (_) {}
+  function paintChrome(theme) {
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute("content", theme === "light" ? "#f4f1ea" : "#12100e");
+  }
+  paintChrome(document.documentElement.getAttribute("data-theme"));
 </script>
 <style>
   .head { padding: 48px 0 6px; }
@@ -172,6 +185,7 @@
   toggle.addEventListener("click", function () {
     var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
+    paintChrome(next);
     try { localStorage.setItem("ai-skills-theme", next); } catch (_) {}
     syncTheme();
     /* map.js loads deferred and owns the canvas palette; repaint only once it
