@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 939,
+    "skills": 951,
     "prompts": 134,
-    "categories": 62
+    "categories": 63
   },
   "categories": [
     "accessibility",
@@ -65,6 +65,7 @@
     "open-source",
     "payments-billing",
     "performance",
+    "platform-engineering",
     "product-management",
     "project-management",
     "prompt-writing",
@@ -6524,6 +6525,114 @@
       "use_when": "when Core Web Vitals are failing or a page feels slow to load, settle, or respond",
       "path": "skills/performance/web-vitals/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/performance/web-vitals/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "build-system-design",
+      "category": "platform-engineering",
+      "description": "Design builds that are fast, reproducible, and cacheable, so developers wait less and CI costs less. Use when builds are slow, flaky, or produce different results locally and in CI.",
+      "use_when": "when builds are slow, flaky, or produce different results locally and in CI",
+      "path": "skills/platform-engineering/build-system-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/build-system-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "developer-productivity-metrics",
+      "category": "platform-engineering",
+      "description": "Measure the system's throughput and stability rather than individual output, and use the numbers to remove friction. Use when improving engineering effectiveness or justifying platform work.",
+      "use_when": "when improving engineering effectiveness or justifying platform work",
+      "path": "skills/platform-engineering/developer-productivity-metrics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/developer-productivity-metrics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "environment-provisioning",
+      "category": "platform-engineering",
+      "description": "Create development, preview, and staging environments that resemble production closely enough to be useful, and clean them up automatically. Use when environments drift, cost too much, or block testing.",
+      "use_when": "when environments drift, cost too much, or block testing",
+      "path": "skills/platform-engineering/environment-provisioning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/environment-provisioning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "golden-path-templates",
+      "category": "platform-engineering",
+      "description": "Provide starting templates that encode the organisation's defaults so new services are consistent without anyone reading a standards document. Use when new services vary widely in structure and quality.",
+      "use_when": "when new services vary widely in structure and quality",
+      "path": "skills/platform-engineering/golden-path-templates/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/golden-path-templates/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "internal-developer-platform",
+      "category": "platform-engineering",
+      "description": "Build a platform that lets product teams ship without filing tickets, treating the platform as a product with users. Use when infrastructure work is a bottleneck or every team solves the same problems differently.",
+      "use_when": "when infrastructure work is a bottleneck or every team solves the same problems differently",
+      "path": "skills/platform-engineering/internal-developer-platform/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/internal-developer-platform/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "local-development-setup",
+      "category": "platform-engineering",
+      "description": "Make a working local environment reachable in minutes from a clean machine, and keep it close to production. Use when onboarding takes days or developers cannot run the system locally.",
+      "use_when": "when onboarding takes days or developers cannot run the system locally",
+      "path": "skills/platform-engineering/local-development-setup/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/local-development-setup/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "paved-road-adoption",
+      "category": "platform-engineering",
+      "description": "Get teams onto the supported path through incentives and migration support rather than mandates. Use when a better platform exists and teams are not moving to it.",
+      "use_when": "when a better platform exists and teams are not moving to it",
+      "path": "skills/platform-engineering/paved-road-adoption/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/paved-road-adoption/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "platform-abstractions",
+      "category": "platform-engineering",
+      "description": "Choose the level of abstraction a platform exposes so it hides complexity without hiding what teams need to control. Use when designing platform interfaces or when teams keep bypassing them.",
+      "use_when": "when designing platform interfaces or when teams keep bypassing them",
+      "path": "skills/platform-engineering/platform-abstractions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/platform-abstractions/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "platform-as-product",
+      "category": "platform-engineering",
+      "description": "Run an internal platform with users, feedback, and adoption metrics rather than as a mandated standard. Use when platform adoption is poor or teams complain about the tools they are required to use.",
+      "use_when": "when platform adoption is poor or teams complain about the tools they are required to use",
+      "path": "skills/platform-engineering/platform-as-product/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/platform-as-product/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "policy-as-code",
+      "category": "platform-engineering",
+      "description": "Express organisational rules as automated checks in the pipeline rather than as documents people are meant to follow. Use when standards exist on paper and are inconsistently applied.",
+      "use_when": "when standards exist on paper and are inconsistently applied",
+      "path": "skills/platform-engineering/policy-as-code/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/policy-as-code/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "self-service-infrastructure",
+      "category": "platform-engineering",
+      "description": "Let teams provision what they need within guardrails, without waiting for an infrastructure team to act. Use when provisioning requests queue and infrastructure work is reactive.",
+      "use_when": "when provisioning requests queue and infrastructure work is reactive",
+      "path": "skills/platform-engineering/self-service-infrastructure/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/self-service-infrastructure/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "service-catalog",
+      "category": "platform-engineering",
+      "description": "Maintain an inventory of services with owners, dependencies, and operational metadata so questions about who owns what are answerable. Use when nobody can say who owns a service or what depends on it.",
+      "use_when": "when nobody can say who owns a service or what depends on it",
+      "path": "skills/platform-engineering/service-catalog/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/platform-engineering/service-catalog/SKILL.md"
     },
     {
       "kind": "skill",

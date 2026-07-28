@@ -1110,6 +1110,26 @@
       ]
     },
     {
+      "name": "platform-engineering-skills",
+      "description": "12 working methods for platform engineering: build-system-design, developer-productivity-metrics, environment-provisioning, golden-path-templates, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/platform-engineering/build-system-design",
+        "./skills/platform-engineering/developer-productivity-metrics",
+        "./skills/platform-engineering/environment-provisioning",
+        "./skills/platform-engineering/golden-path-templates",
+        "./skills/platform-engineering/internal-developer-platform",
+        "./skills/platform-engineering/local-development-setup",
+        "./skills/platform-engineering/paved-road-adoption",
+        "./skills/platform-engineering/platform-abstractions",
+        "./skills/platform-engineering/platform-as-product",
+        "./skills/platform-engineering/policy-as-code",
+        "./skills/platform-engineering/self-service-infrastructure",
+        "./skills/platform-engineering/service-catalog"
+      ]
+    },
+    {
       "name": "product-management-skills",
       "description": "10 working methods for product management: ab-test-design, customer-interviews, feature-sunsetting, mvp-scoping, and more",
       "source": "./",

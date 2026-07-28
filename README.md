@@ -149,6 +149,7 @@ One row per category; every entry, with its one-line description, is in
 | [open-source](CATALOG.md#open-source-12) | 12 | code-of-conduct-enforcement, contributor-onboarding, documentation-for-adoption |
 | [payments-billing](CATALOG.md#payments-billing-12) | 12 | failed-payment-recovery, invoicing-and-receipts, payment-idempotency |
 | [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
+| [platform-engineering](CATALOG.md#platform-engineering-12) | 12 | build-system-design, developer-productivity-metrics, environment-provisioning |
 | [product-management](CATALOG.md#product-management-10) | 10 | ab-test-design, customer-interviews, feature-sunsetting |
 | [project-management](CATALOG.md#project-management-11) | 11 | cross-team-coordination, milestone-planning, project-closure |
 | [prompt-writing](CATALOG.md#prompt-writing-12) | 12 | chain-of-thought-prompting, context-placement, few-shot-examples |
