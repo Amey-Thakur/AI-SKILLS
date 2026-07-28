@@ -22,6 +22,7 @@ prompt as a slash command: type `/summarize`, `/tldr`, `/goal`,
 `/autoresearch`, and the rest. Or copy one command on its own:
 
 ```bash
+git clone https://github.com/Amey-Thakur/AI-SKILLS
 cp AI-SKILLS/commands/summarize.md ~/.claude/commands/    # global
 cp AI-SKILLS/commands/summarize.md .claude/commands/      # this project
 ```
@@ -94,9 +95,13 @@ files it applies to:
 ```bash
 mkdir -p .cursor/rules
 { printf -- '---\ndescription: Review code with severity-ranked findings\nglobs: **/*\nalwaysApply: false\n---\n\n'; \
-  curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review/SKILL.md; \
+  curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review/SKILL.md \
+    | sed '1,/^---$/d'; \
 } > .cursor/rules/code-review.mdc
 ```
+
+The `sed` drops the skill's own frontmatter, so the file has one frontmatter
+block rather than two stacked ones with the skill's `name:` left in the body.
 
 The `.mdc` extension and frontmatter are required; a plain `.md` in that folder
 is ignored.
@@ -119,8 +124,11 @@ always-on project instructions:
 ```bash
 mkdir -p .github
 curl -s https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/code-review/SKILL.md \
-  >> .github/copilot-instructions.md
+  | sed '1,/^---$/d' >> .github/copilot-instructions.md
 ```
+
+The `sed` drops the skill's frontmatter, which would otherwise land in the
+middle of the instructions file as a stray `---` block.
 
 ## Cline
 
