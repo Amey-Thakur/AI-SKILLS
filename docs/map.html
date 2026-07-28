@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Map · AI-SKILLS</title>
-<meta name="description" content="An interactive map of the AI-SKILLS library: 67 categories and 1,250 entries, drawn from how the skills and prompts reference one another. Browse by cluster, focus any entry to see what works alongside it.">
+<meta name="description" content="An interactive map of 1,000 skills and 250 prompts, laid out by how they reference one another. Browse by cluster, then focus an entry.">
 <meta property="og:title" content="AI-SKILLS map">
 <meta property="og:description" content="See how 1,000 skills and 250 prompts connect. Browse by cluster, focus an entry to see what works alongside it.">
 <meta property="og:type" content="website">
@@ -21,10 +21,25 @@
 <meta name="theme-color" content="#12100e">
 <link rel="sitemap" type="application/xml" href="sitemap.xml">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI-SKILLS map",
+  "url": "https://amey-thakur.github.io/AI-SKILLS/map.html",
+  "description": "An interactive 2D and 3D map of 1,000 skills and 250 prompts, laid out by how the entries reference one another. Browse by cluster, then focus an entry to see what works alongside it.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "isPartOf": { "@type": "WebSite", "@id": "https://amey-thakur.github.io/AI-SKILLS/#website" },
+  "author": { "@type": "Person", "name": "Amey Thakur", "url": "https://github.com/Amey-Thakur" }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=12">
+<link rel="stylesheet" href="style.css?v=14">
 <script>
   try {
     var stored = localStorage.getItem("ai-skills-theme");
@@ -45,7 +60,10 @@
   #map-search { flex: 1; min-width: 200px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-1); font-family: ui-monospace, Consolas, monospace; font-size: 14px; padding: 11px 16px; outline: none; transition: border-color .15s, box-shadow .15s; }
   #map-search:focus { border-color: var(--accent-display); box-shadow: 0 0 0 3px var(--accent-soft); }
   .ctl { display: flex; align-items: center; gap: 9px; font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12.5px; color: var(--text-4); }
-  .ctl input[type="range"] { accent-color: var(--accent); width: 116px; }
+  /* The height is the touch target, not the track: the browser draws a 16px
+     tall control, which is awkward to hit on a phone. 24px matches the
+     minimum target size without thickening the track itself. */
+  .ctl input[type="range"] { accent-color: var(--accent); width: 116px; height: 24px; }
 
   /* The plot follows the page theme: white surface in light, dark in dark. */
   .stage { position: relative; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow-sm); overflow: hidden; }
@@ -121,7 +139,7 @@
     <input id="map-search" type="search" placeholder="Find a skill or prompt" aria-label="Find a skill or prompt on the map">
     <label class="ctl" for="link-strength">Links
       <input type="range" id="link-strength" min="1" max="20" value="10" aria-label="Minimum link strength to draw">
-      <span id="link-count">—</span>
+      <span id="link-count">0 links</span>
     </label>
   </div>
 

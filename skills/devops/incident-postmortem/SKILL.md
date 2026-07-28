@@ -9,7 +9,7 @@ The purpose is a system that cannot fail this way again: not a culprit.
 The moment a postmortem blames a person, everyone stops telling the truth
 in the next one.
 
-## Structure
+## Method
 
 1. **Summary**: three sentences: what broke, who felt it and for how long,
    and the one-line cause. Written last, placed first.

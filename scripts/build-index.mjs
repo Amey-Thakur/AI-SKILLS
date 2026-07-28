@@ -196,7 +196,12 @@ const RELATED_COUNT = 5;
       let s = score[j];
       if (docs[i].cites.has(entries[j].name)) s += 0.35;
       if (docs[j].cites.has(e.name)) s += 0.2;
-      if (s > 0.06) ranked.push([j, s]);
+      /* Keep every positive candidate, not only those over a floor. The list is
+         sorted by score, so an entry with five strong matches is unaffected;
+         this only backfills the rare entry whose vocabulary is shared with
+         fewer than five others, which would otherwise carry a short list and
+         break the "five nearest" contract the index documents. */
+      if (s > 0) ranked.push([j, s]);
     }
     ranked.sort((a, b) => b[1] - a[1]);
     /* Deduplicate by name for the same reason: a shared name would otherwise
@@ -213,6 +218,12 @@ const RELATED_COUNT = 5;
     e.related = picked;
     if (index_of.size && e.related.some((r) => !index_of.has(r))) {
       throw new Error(`Computed a related entry that does not exist, for ${e.name}`);
+    }
+    if (e.related.length !== RELATED_COUNT) {
+      throw new Error(
+        `${e.name} has ${e.related.length} related entries, expected ${RELATED_COUNT}. ` +
+          `Every entry must carry a full list, since the index documents it as the five nearest.`
+      );
     }
   });
 }

@@ -362,9 +362,14 @@
     ctx.globalAlpha = 1;
 
     linkCountEl.textContent = mode === "cat" ? links.length + " links" : (focus ? links.length + " links" : "all");
+    /* Count the real skill categories, not the node total: prompts ride in as
+       a synthetic 68th group so they get a cluster, and calling that a
+       category would contradict the 67 the rest of the site reports. */
+    var catCount = g.nodes.filter(function (n) { return n.id !== "prompts"; }).length;
     legend.innerHTML = mode === "cat"
-      ? "<b>" + g.nodes.length + " categories</b><br>dot size = entries<br>line = shared references"
-      : "<b>" + g.nodes.length + " entries</b><br>skills and <span style='color:" + C.prompt + "'>prompts</span><br>click one to focus";
+      ? "<b>" + catCount + " categories + prompts</b><br>dot size = entries<br>line = shared references"
+      : "<b>" + g.nodes.length.toLocaleString("en-US") + " entries</b><br>skills and <span style='color:" +
+        C.prompt + "'>prompts</span><br>click one to focus";
   }
   window.draw = draw;
 

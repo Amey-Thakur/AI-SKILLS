@@ -104,6 +104,13 @@ a:hover { color: var(--accent-strong); }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
 ::selection { background: var(--accent-soft); }
 
+/* Placeholders carry real instructions here ("Example: it is a Next.js app"),
+   so they need a deliberate colour rather than the browser's. The default
+   grey measures 3.6:1 on the dark input surface and 4.3:1 on the light one,
+   both under the 4.5:1 body text needs; --text-3 clears it in both. Firefox
+   also dims placeholders on its own, so the opacity is reset. */
+::placeholder { color: var(--text-3); opacity: 1; }
+
 /* Skip link: the first thing a keyboard or screen reader user reaches, so a
    sticky header and its nav can be bypassed in one press. Off-screen until
    focused, then anchored over the header. */
@@ -117,6 +124,19 @@ a:hover { color: var(--accent-strong); }
 }
 .skip-link:focus { top: 12px; outline: 2px solid var(--accent-display); outline-offset: 2px; }
 main:focus { outline: none; }
+
+/* One ring for every link, button, and slider. The buttons and search fields
+   already declared their own; everything else fell back to the browser's,
+   which is 0.8px in Chrome and a blue halo in Safari, so a keyboard user
+   tabbing the library saw the focus marker change shape and colour partway
+   down the page. Text inputs keep their own border-and-glow treatment, since
+   they show focus on click too and a hard ring there reads as an error. */
+a:focus-visible,
+button:focus-visible,
+input[type="range"]:focus-visible {
+  outline: 2px solid var(--accent-display);
+  outline-offset: 2px;
+}
 
 /* Header */
 header.site {

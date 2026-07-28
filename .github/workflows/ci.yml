@@ -72,9 +72,14 @@ jobs:
       - name: Rebuild the generated catalog
         run: node scripts/build-index.mjs
 
+      # git status, not git diff: diff only reports tracked files, so a brand
+      # new generated file (the command written for a newly added prompt) would
+      # sit untracked and pass. Porcelain catches modified, deleted, and new.
       - name: Fail if a generated file drifted
         run: |
-          if ! git diff --exit-code; then
+          if [ -n "$(git status --porcelain)" ]; then
             echo "::error::Generated catalog files are out of date. Run 'node scripts/build-index.mjs' from the repository root and commit the result."
+            git status --short
+            git diff
             exit 1
           fi
