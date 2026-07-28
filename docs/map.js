@@ -23,19 +23,21 @@
   var legend = document.getElementById("legend");
   var linkCountEl = document.getElementById("link-count");
 
-  var C = {};
-  function readColors() {
-    var s = getComputedStyle(document.documentElement);
-    var g = function (n, f) { return (s.getPropertyValue(n) || f).trim(); };
-    C.bg = g("--surface", "#1a1815");
-    C.line = g("--border", "#322e29");
-    C.lineHot = g("--accent", "#d8a24a");
-    C.text = g("--text-2", "#c8c0b3");
-    C.textDim = g("--text-4", "#857c6e");
-    C.accent = g("--accent", "#d8a24a");
-    C.skill = g("--text-3", "#a49b8c");
-    C.prompt = g("--accent-strong", "#e6b45f");
-  }
+  /* The canvas keeps the dark palette in both themes. Light mode darkens the
+     accent to clear 4.5:1 for small text, which turns the dots muddy brown and
+     is the wrong trade for graphics: on a dark plot the amber reads at 7:1 and
+     the map looks the same whichever theme the rest of the page is in. */
+  var C = {
+    bg: "#12100e",
+    line: "#3a352e",
+    lineHot: "#d8a24a",
+    text: "#c8c0b3",
+    textDim: "#857c6e",
+    accent: "#d8a24a",
+    skill: "#a49b8c",
+    prompt: "#e6b45f",
+  };
+  function readColors() { /* palette is fixed; kept so the theme toggle can repaint */ }
   window.readColors = readColors;
   readColors();
 
@@ -48,12 +50,20 @@
   var settleTicks = 0, settleTarget = 0, rafId = 0;
 
   /* ------------------------------------------------------------ geometry */
+  /* Assigning canvas.width reallocates the backing store and resets the
+     context, so only do it when the element has actually changed size. This
+     runs on every frame of a drag. */
+  var lastW = 0, lastH = 0;
   function size() {
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     var r = canvas.getBoundingClientRect();
-    canvas.width = Math.max(1, Math.round(r.width * dpr));
-    canvas.height = Math.max(1, Math.round(r.height * dpr));
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var w = Math.max(1, Math.round(r.width * dpr));
+    var h = Math.max(1, Math.round(r.height * dpr));
+    if (w !== lastW || h !== lastH) {
+      canvas.width = w; canvas.height = h;
+      lastW = w; lastH = h;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
     return r;
   }
 
@@ -185,8 +195,9 @@
       return { id: c, label: c, count: byCat[c].length, kind: "category",
                r: 5 + Math.sqrt(byCat[c].length) * 2.1 };
     });
+    /* Same shape as the entry index, so callers resolve a name the one way. */
     var index = Object.create(null);
-    nodes.forEach(function (n) { index[n.id] = n; });
+    nodes.forEach(function (n) { index[n.id] = [n]; });
 
     var pairs = Object.create(null);
     raw.entries.forEach(function (e) {
@@ -199,7 +210,7 @@
     });
     var links = Object.keys(pairs).map(function (k) {
       var p = k.split("|");
-      return { a: index[p[0]], b: index[p[1]], w: pairs[k], rest: 230 };
+      return { a: index[p[0]] && index[p[0]][0], b: index[p[1]] && index[p[1]][0], w: pairs[k], rest: 230 };
     }).filter(function (l) { return l.a && l.b && l.w >= 3; });
     return { nodes: nodes, links: links, index: index };
   }
@@ -210,17 +221,24 @@
                description: e.description, use_when: e.use_when || "",
                path: e.path, related: e.related || [], r: e.kind === "prompt" ? 3.2 : 2.8 };
     });
+    /* Six names belong to both a skill and a prompt, so a name maps to a list.
+       Keeping only the first left those prompts with no links and unreachable
+       from any "Works with" button. */
     var index = Object.create(null);
-    nodes.forEach(function (n) { if (!index[n.id]) index[n.id] = n; });
+    nodes.forEach(function (n, i) {
+      n.uid = n.kind + ":" + n.id + ":" + i;
+      (index[n.id] || (index[n.id] = [])).push(n);
+    });
     var seen = Object.create(null), links = [];
     nodes.forEach(function (n) {
       n.related.forEach(function (rn) {
-        var t = index[rn];
-        if (!t || t === n) return;
-        var k = n.id < rn ? n.id + "|" + rn : rn + "|" + n.id;
-        if (seen[k]) return;
-        seen[k] = 1;
-        links.push({ a: n, b: t, w: 1, rest: 42 });
+        (index[rn] || []).forEach(function (t) {
+          if (t === n) return;
+          var k = n.uid < t.uid ? n.uid + "|" + t.uid : t.uid + "|" + n.uid;
+          if (seen[k]) return;
+          seen[k] = 1;
+          links.push({ a: n, b: t, w: 1, rest: 42 });
+        });
       });
     });
     return { nodes: nodes, links: links, index: index };
@@ -437,16 +455,20 @@
   }, { passive: false });
 
   /* ------------------------------------------------------------ detail */
-  function link(name) {
-    var b = document.createElement("button");
-    b.type = "button";
-    b.textContent = name;
-    b.addEventListener("click", function () {
-      var g = graph();
-      var t = g.index[name];
-      if (t) { select(t); }
+  /* A button per node, not per name: where a name belongs to both a skill and
+     a prompt, say which one each button opens instead of silently picking. */
+  function linkButtons(name) {
+    var g = graph();
+    var targets = g.index[name] || [];
+    if (!targets.length) return [];
+    var ambiguous = targets.length > 1;
+    return targets.map(function (t) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = ambiguous ? name + " (" + t.kind + ")" : name;
+      b.addEventListener("click", function () { select(t); });
+      return b;
     });
-    return b;
   }
 
   function select(n) {
@@ -475,8 +497,10 @@
       partners.forEach(function (l) {
         var other = l.a === n ? l.b : l.a;
         var li = document.createElement("li");
-        var b = link(other.id);
+        var b = document.createElement("button");
+        b.type = "button";
         b.textContent = other.id + "  ·  " + l.w;
+        b.addEventListener("click", function () { select(other); });
         li.appendChild(b); ul.appendChild(li);
       });
       detail.appendChild(ul);
@@ -499,9 +523,11 @@
       detail.appendChild(h3b);
       var ul2 = document.createElement("ul");
       n.related.forEach(function (rn) {
-        var li = document.createElement("li");
-        li.appendChild(link(rn));
-        ul2.appendChild(li);
+        linkButtons(rn).forEach(function (b) {
+          var li = document.createElement("li");
+          li.appendChild(b);
+          ul2.appendChild(li);
+        });
       });
       detail.appendChild(ul2);
     }
