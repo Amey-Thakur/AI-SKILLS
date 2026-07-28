@@ -13,7 +13,7 @@
   },
   "count": {
     "skills": 1000,
-    "prompts": 230,
+    "prompts": 250,
     "categories": 67
   },
   "categories": [
@@ -9271,6 +9271,19 @@
     },
     {
       "kind": "prompt",
+      "name": "analyze-competitor-product",
+      "category": "prompts",
+      "description": "Analyse a competitor's product from public information, separating observation from inference.",
+      "variables": [
+        "{competitor}: the product, its public materials, and anything you have tried",
+        "{focus}: what you need to understand and why"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/analyze-competitor-product.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/analyze-competitor-product.md"
+    },
+    {
+      "kind": "prompt",
       "name": "analyze-performance",
       "category": "prompts",
       "description": "Diagnose a performance problem from measurements rather than intuition, and propose the fix with the largest expected return.",
@@ -9346,6 +9359,19 @@
       "settings": "Temperature 0.3-0.4.",
       "path": "prompts/architecture-decision-record.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/architecture-decision-record.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "assess-technical-debt",
+      "category": "prompts",
+      "description": "Assess technical debt by what it costs now, and produce a paydown plan tied to upcoming work.",
+      "variables": [
+        "{codebase}: the areas of concern and why they are painful",
+        "{roadmap}: what is being built next and where it touches those areas"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/assess-technical-debt.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/assess-technical-debt.md"
     },
     {
       "kind": "prompt",
@@ -9464,6 +9490,19 @@
       "settings": "Temperature 0-0.3.",
       "path": "prompts/bug-report-triage.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/bug-report-triage.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "build-internal-tool",
+      "category": "prompts",
+      "description": "Specify an internal tool that removes real friction, with the simplest build that works.",
+      "variables": [
+        "{problem}: the manual process today, who does it, and how often",
+        "{constraints}: who will maintain it and what it must integrate with"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/build-internal-tool.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/build-internal-tool.md"
     },
     {
       "kind": "prompt",
@@ -9701,6 +9740,19 @@
     },
     {
       "kind": "prompt",
+      "name": "cost-optimization-review",
+      "category": "prompts",
+      "description": "Review infrastructure and vendor spend for savings ranked by size, with the risk of each stated.",
+      "variables": [
+        "{spend}: the cost breakdown by service, resource, or vendor",
+        "{usage}: utilisation data and what the workload actually requires"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/cost-optimization-review.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/cost-optimization-review.md"
+    },
+    {
+      "kind": "prompt",
       "name": "cost-reduction-plan",
       "category": "prompts",
       "description": "Find genuine cost reduction ranked by size and risk, distinguishing waste from capability being cut.",
@@ -9777,6 +9829,19 @@
       "settings": "Temperature 0.3.",
       "path": "prompts/customer-health-score.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/customer-health-score.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "customer-interview-synthesis",
+      "category": "prompts",
+      "description": "Turn interview transcripts into findings with evidence, separating what people said from what they do.",
+      "variables": [
+        "{interviews}: the transcripts or notes",
+        "{question}: what the research was trying to establish"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/customer-interview-synthesis.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/customer-interview-synthesis.md"
     },
     {
       "kind": "prompt",
@@ -9872,6 +9937,19 @@
     },
     {
       "kind": "prompt",
+      "name": "decision-brief",
+      "category": "prompts",
+      "description": "Frame a decision with real options, the trade-offs, a recommendation, and what would change it.",
+      "variables": [
+        "{decision}: what must be decided, by when, and by whom",
+        "{context}: constraints, what is known, and what is uncertain"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/decision-brief.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/decision-brief.md"
+    },
+    {
+      "kind": "prompt",
       "name": "decision-matrix",
       "category": "prompts",
       "description": "Build a weighted decision matrix to compare options against criteria and surface what the choice hinges on.",
@@ -9896,6 +9974,19 @@
       "settings": "Temperature 0.4-0.6.",
       "path": "prompts/decline-politely.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/decline-politely.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "delegate-to-agents",
+      "category": "prompts",
+      "description": "Decide which parts of a workflow to hand to agents and which must stay with a person, by reversibility.",
+      "variables": [
+        "{workflow}: the steps involved and what each produces",
+        "{stakes}: what happens if a step is done wrong"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/delegate-to-agents.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/delegate-to-agents.md"
     },
     {
       "kind": "prompt",
@@ -9964,6 +10055,19 @@
     },
     {
       "kind": "prompt",
+      "name": "design-experiment-program",
+      "category": "prompts",
+      "description": "Set up a programme of experiments with a prioritised hypothesis backlog and honest decision rules.",
+      "variables": [
+        "{goal}: the metric you are trying to move and its current value",
+        "{traffic}: available volume and how quickly tests can conclude"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/design-experiment-program.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-experiment-program.md"
+    },
+    {
+      "kind": "prompt",
       "name": "design-form",
       "category": "prompts",
       "description": "Design a form with the fewest fields that works, clear labels, and errors that help.",
@@ -10013,6 +10117,19 @@
       "settings": "Temperature 0.3.",
       "path": "prompts/design-observability.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-observability.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "design-pricing-experiment",
+      "category": "prompts",
+      "description": "Test a pricing change safely, given that pricing tests affect real revenue and existing customers.",
+      "variables": [
+        "{change}: the pricing change and the reasoning behind it",
+        "{context}: current pricing, customer base, and contractual commitments"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/design-pricing-experiment.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-pricing-experiment.md"
     },
     {
       "kind": "prompt",
@@ -10764,6 +10881,19 @@
     },
     {
       "kind": "prompt",
+      "name": "onboard-new-hire",
+      "category": "prompts",
+      "description": "Build a first-month plan that gets a new joiner to a real contribution in week one.",
+      "variables": [
+        "{role}: the role, the team, and what they will own",
+        "{context}: the systems, the people to meet, and current work in flight"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/onboard-new-hire.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/onboard-new-hire.md"
+    },
+    {
+      "kind": "prompt",
       "name": "onboarding-flow",
       "category": "prompts",
       "description": "Design an onboarding flow that gets a user to first value quickly, cutting everything that delays it.",
@@ -10891,6 +11021,19 @@
       "settings": "Temperature 0.3.",
       "path": "prompts/plan-observability-rollout.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/plan-observability-rollout.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "plan-platform-migration",
+      "category": "prompts",
+      "description": "Plan a move to a new platform or provider, with parallel running and a reversible cutover.",
+      "variables": [
+        "{migration}: what is moving, from what to what, and why",
+        "{scale}: data volume, traffic, dependencies, and acceptable downtime"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/plan-platform-migration.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/plan-platform-migration.md"
     },
     {
       "kind": "prompt",
@@ -11151,6 +11294,19 @@
       "settings": "Temperature 0.3.",
       "path": "prompts/qbr-outline.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/qbr-outline.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "quarterly-okr-review",
+      "category": "prompts",
+      "description": "Review objectives honestly against outcomes, separating execution failure from wrong strategy.",
+      "variables": [
+        "{okrs}: the objectives and key results set, with final values",
+        "{context}: what happened during the period, including what changed"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/quarterly-okr-review.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/quarterly-okr-review.md"
     },
     {
       "kind": "prompt",
@@ -11479,6 +11635,19 @@
     },
     {
       "kind": "prompt",
+      "name": "run-company-standup",
+      "category": "prompts",
+      "description": "Produce a daily operating brief across every function, ranked by what needs a decision today.",
+      "variables": [
+        "{state}: current status from each area, including anything stalled",
+        "{priorities}: what this week is meant to achieve"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/run-company-standup.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/run-company-standup.md"
+    },
+    {
+      "kind": "prompt",
       "name": "sales-outreach-sequence",
       "category": "prompts",
       "description": "Draft a multi-step outreach sequence grounded in research about the recipient, for a human to review and send.",
@@ -11502,6 +11671,19 @@
       "settings": "Temperature 0.6-0.8.",
       "path": "prompts/second-order-thinking.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/second-order-thinking.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "security-incident-response",
+      "category": "prompts",
+      "description": "Respond to a suspected security incident with containment, evidence preservation, and the right escalation.",
+      "variables": [
+        "{incident}: what was observed, when, and how it was noticed",
+        "{systems}: what is affected and what data it holds"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/security-incident-response.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/security-incident-response.md"
     },
     {
       "kind": "prompt",
@@ -11742,6 +11924,19 @@
     },
     {
       "kind": "prompt",
+      "name": "technical-due-diligence",
+      "category": "prompts",
+      "description": "Assess a codebase and its engineering practice for risk, from what can be observed.",
+      "variables": [
+        "{target}: the codebase, architecture, and team information available",
+        "{purpose}: acquisition, investment, partnership, or inheriting the system"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/technical-due-diligence.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/technical-due-diligence.md"
+    },
+    {
+      "kind": "prompt",
       "name": "technical-tutorial",
       "category": "prompts",
       "description": "Write a tutorial that gets a reader to a working result, with every step tested and nothing assumed.",
@@ -11804,6 +11999,19 @@
       "settings": "Temperature 0.3-0.5 for natural phrasing.",
       "path": "prompts/translate-text.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/translate-text.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "triage-inbox",
+      "category": "prompts",
+      "description": "Sort a backlog of incoming items by what actually needs action, with everything else disposed of.",
+      "variables": [
+        "{items}: the messages, tickets, or requests to triage",
+        "{context}: your current priorities and what you are accountable for"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/triage-inbox.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/triage-inbox.md"
     },
     {
       "kind": "prompt",
@@ -11911,6 +12119,19 @@
     },
     {
       "kind": "prompt",
+      "name": "weekly-review",
+      "category": "prompts",
+      "description": "Review the week honestly against what was planned, and set the next one from what you learned.",
+      "variables": [
+        "{planned}: what you intended to do this week",
+        "{actual}: what actually happened, including interruptions"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/weekly-review.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/weekly-review.md"
+    },
+    {
+      "kind": "prompt",
       "name": "win-loss-analysis",
       "category": "prompts",
       "description": "Analyse why deals were won and lost from evidence, separating stated reasons from real ones.",
@@ -11934,6 +12155,19 @@
       "settings": "Temperature 0.4.",
       "path": "prompts/workshop-design.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/workshop-design.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-agents-md",
+      "category": "prompts",
+      "description": "Write the repository instruction file that coding agents read, covering conventions they cannot infer.",
+      "variables": [
+        "{project}: the stack, structure, and how it is built and tested",
+        "{conventions}: commit format, quality gates, and anything agents keep getting wrong"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/write-agents-md.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-agents-md.md"
     },
     {
       "kind": "prompt",
@@ -12029,6 +12263,19 @@
     },
     {
       "kind": "prompt",
+      "name": "write-postmortem",
+      "category": "prompts",
+      "description": "Write a blameless postmortem that finds systemic causes and produces owned actions.",
+      "variables": [
+        "{incident}: what happened, the timeline, and the impact",
+        "{response}: what was done, by whom, and what was tried"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/write-postmortem.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-postmortem.md"
+    },
+    {
+      "kind": "prompt",
       "name": "write-proposal",
       "category": "prompts",
       "description": "Write a client proposal that shows you understood the problem, with scope, price, and risks stated.",
@@ -12065,6 +12312,19 @@
       "settings": "Temperature 0.2-0.4.",
       "path": "prompts/write-runbook.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-runbook.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-technical-spec",
+      "category": "prompts",
+      "description": "Write a technical design document with the problem, the approach, the alternatives, and the risks.",
+      "variables": [
+        "{problem}: what needs solving and the constraints",
+        "{context}: existing systems, scale, and team"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/write-technical-spec.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-technical-spec.md"
     },
     {
       "kind": "prompt",
