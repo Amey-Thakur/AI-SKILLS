@@ -221,17 +221,19 @@
         <a class="btn primary" href="#library">Browse the library</a>
         <a class="btn" href="prompt-studio.html">Open Prompt Studio</a>
       </div>
-      <div class="works" aria-label="Compatible tools">
-        <span>Claude Code</span><span>Claude Desktop</span><span>Cursor</span>
-        <span>OpenAI Codex</span><span>Gemini CLI</span><span>GitHub Copilot</span>
-        <span>Windsurf</span><span>Antigravity</span><span>Cline</span><span>Zed</span><span>Aider</span>
+      <!-- role="list" because aria-label is ignored on a bare div (the generic
+           role prohibits naming), which silently dropped this label. -->
+      <div class="works" role="list" aria-label="Compatible tools">
+        <span role="listitem">Claude Code</span><span role="listitem">Claude Desktop</span><span role="listitem">Cursor</span>
+        <span role="listitem">OpenAI Codex</span><span role="listitem">Gemini CLI</span><span role="listitem">GitHub Copilot</span>
+        <span role="listitem">Windsurf</span><span role="listitem">Antigravity</span><span role="listitem">Cline</span><span role="listitem">Zed</span><span role="listitem">Aider</span>
       </div>
     </div>
   </section>
 
   <div class="wrap">
-    <section class="block" aria-label="Install">
-      <h2 class="section-label">Use it in one line</h2>
+    <section class="block" aria-labelledby="lbl-install">
+      <h2 class="section-label" id="lbl-install">Use it in one line</h2>
       <div class="install">
         <div class="row">
           <span class="label">Claude Code</span>
@@ -255,9 +257,9 @@
       </div>
     </section>
 
-    <section class="block" id="library" aria-label="Library">
-      <h2 class="section-label">The library</h2>
-      <p class="eco-lede">In Claude Code, every prompt is a slash command. Type <span class="mono">/summarize</span>, <span class="mono">/tldr</span>, <span class="mono">/explain</span>, <span class="mono">/plan</span>, <span class="mono">/brainstorm</span>, <span class="mono">/goal</span>, <span class="mono">/autoresearch</span>, <span class="mono">/reflect</span>, and more. Cursor and Antigravity run the same prompts as slash commands too.</p>
+    <section class="block" id="library" aria-labelledby="lbl-library">
+      <h2 class="section-label" id="lbl-library">The library</h2>
+      <p class="eco-lede">In Claude Code, every prompt is a slash command. Type <code class="mono">/summarize</code>, <code class="mono">/tldr</code>, <code class="mono">/explain</code>, <code class="mono">/plan</code>, <code class="mono">/brainstorm</code>, <code class="mono">/goal</code>, <code class="mono">/autoresearch</code>, <code class="mono">/reflect</code>, and more. Cursor and Antigravity run the same prompts as slash commands too.</p>
       <div class="toolbar">
         <input id="search" type="search" placeholder="Search skills and prompts" aria-label="Search the library">
         <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
@@ -274,8 +276,8 @@
       <p id="empty">Nothing matches that search.</p>
     </section>
 
-    <section class="block" id="ecosystem" aria-label="Ecosystem">
-      <h2 class="section-label">The rest of the world's skills</h2>
+    <section class="block" id="ecosystem" aria-labelledby="lbl-ecosystem">
+      <h2 class="section-label" id="lbl-ecosystem">The rest of the world's skills</h2>
       <p class="eco-lede">
         Our library is original and complete above. Beyond it, this index
         covers every major skill collection on GitHub: 8,000+ skills, one
@@ -449,7 +451,10 @@
     var hidden = matches.length - Math.min(limit, matches.length);
     moreBtn.hidden = hidden <= 0;
     if (hidden > 0) moreBtn.textContent = "Show " + hidden + " more";
-    tally.textContent = matches.length ? matches.length + " of " + entries.length : "";
+    /* Always report the count, including zero. Blanking it left the
+       role="status" region silent at the one moment it matters, so a screen
+       reader user got no feedback that a search returned nothing. */
+    tally.textContent = matches.length + " of " + entries.length;
     empty.style.display = matches.length === 0 ? "block" : "none";
   }
 
