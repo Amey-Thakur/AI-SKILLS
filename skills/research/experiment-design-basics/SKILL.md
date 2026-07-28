@@ -41,7 +41,7 @@ conclusions that are worse than no experiment.
    groups: control for known ones (blocking, stratification,
    or including them in analysis), and randomize to handle
    unknown ones (see statistical-inference,
-   experiment-design-basics for the rigorous versions). The
+   sampling-and-bias for the rigorous versions). The
    confound you did not think of is why the surprising
    result later evaporates.
 5. **Pre-register the analysis.** Decide the primary metric,
@@ -63,9 +63,8 @@ conclusions that are worse than no experiment.
 
 - This is the pragmatic core; rigorous experimental design
   (factorial designs, power analysis, mixed models: see
-  experiment-design-basics, statistical-inference,
-  statistical-inference) goes deeper where stakes and
-  publication demand it.
+  statistical-inference, experiment-analysis) goes deeper
+  where stakes and publication demand it.
 - Not everything can be experimented on (ethics, cost,
   irreversibility); observational methods and natural
   experiments substitute, with weaker causal claims that

@@ -371,11 +371,22 @@
     });
     var nums = text.match(/\d[\d,.]*\s?(ms|s\b|sec|seconds?|min|minutes?|hours?|days?|weeks?|words?|pages?|items?|rows?|users?|percent|%|kb|mb|gb|px|dollars?|\$)/gi);
     if (nums) found.numbers = nums.slice(0, 6);
+    /* Only markers that genuinely express a limit. A bare "by" fires on
+       ordinary prose ("written by", "sort by", "group by"), and bare "no",
+       "not" and "only" describe a symptom far more often than a rule ("the
+       chart is not rendering"); "must not" and "should not" are already
+       covered by "must" and "should". Promoting those to "MUST respect" put
+       the task itself, or a bug report, into the constraints block. */
+    var LIMIT = /\b(?:must\b|shall\b|cannot\b|can not\b|never\b|required to\b|has to\b|have to\b|needs? to\b|should\b(?!\s+i\b)|no more than|not exceed|less than|greater than|at least|at most|under \d|below \d|over \d|within \d|without\b|max(?:imum)?\b|min(?:imum)?\b|limit(?:ed|s)?\b|budget\b|deadline\b|due by|by (?:mon|tues|wednes|thurs|fri|satur|sun|today|tomorrow|tonight|eod|eow|next\b|the end of|\d))/i;
+    var objective = text.trim().replace(/[.!?]+$/, "").toLowerCase();
     var sentences = text.split(/(?<=[.!?])\s+/);
     sentences.forEach(function (s) {
-      if (/\b(must|should|never|no |not |only|under|below|less than|at least|at most|without|max|limit|budget|deadline|by )\b/i.test(s) && s.length < 200) {
-        if (found.limits.length < 6 && s.trim().length > 8) found.limits.push(s.trim());
-      }
+      var t = s.trim();
+      if (t.length <= 8 || t.length >= 200 || !LIMIT.test(t)) return;
+      /* When the whole input is one sentence it is the objective, already
+         stated above; repeating it as a constraint adds nothing. */
+      if (t.replace(/[.!?]+$/, "").toLowerCase() === objective) return;
+      if (found.limits.length < 6) found.limits.push(t);
     });
     found.urgency = /\b(urgent|as soon as possible|today|tonight|tomorrow|right now|immediately|quickly|deadline)\b/i.test(text);
     found.hasInput = /```|~~~|\n {4}|<[a-z]+>|https?:\/\//.test(raw.value) || text.length > 600;

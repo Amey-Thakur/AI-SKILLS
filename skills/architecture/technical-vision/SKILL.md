@@ -30,13 +30,13 @@ is the coherence that lets teams decide locally and still converge.
    (see tech-debt-register).
 3. **Sequence the path as principles, not a Gantt chart.**
    The order of movement (what must come first, what
-   unlocks what) and the migration strategy (strangler-fig
-   for the big moves: see strangler-fig), expressed as
+   unlocks what) and the migration strategy (see
+   strangler-fig for the big moves), expressed as
    direction and next steps, not dated commitments. This
    is the difference from a roadmap (see
-   roadmap-communication): the vision says "toward",
-   the roadmap says "by when", and conflating them makes
-   the vision brittle.
+   roadmap-communication): the vision says "toward", the
+   roadmap says "by when", and conflating them makes the
+   vision brittle.
 4. **Make it decision-useful.** The test of a vision: can a
    team facing a design choice consult it and know which
    option moves toward the destination? Encode the

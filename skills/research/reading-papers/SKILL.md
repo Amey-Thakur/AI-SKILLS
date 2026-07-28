@@ -51,11 +51,10 @@ for the few that earn it.
    finding: weight accordingly.
 6. **Extract into your own notes and synthesis.** Capture
    the contribution, method, key result, and your
-   assessment in your own words (see research-synthesis,
-   research-synthesis): the act of restating tests your
-   understanding, and the notes feed the literature review
-   without re-reading. Note how it connects to and
-   disagrees with other work.
+   assessment in your own words (see research-synthesis):
+   the act of restating tests your understanding, and the
+   notes feed the literature review without re-reading.
+   Note how it connects to and disagrees with other work.
 
 ## Boundaries
 

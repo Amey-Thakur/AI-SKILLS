@@ -41,12 +41,11 @@ useless and pure hand-writing is helpful but stale.
    links here). A reference nobody can make their first
    call from has failed at its one job.
 5. **Keep examples tested and current.** Runnable, verified
-   examples (docs-as-code: run them in CI so a breaking
-   change fails the docs build too: see docs-as-code): a
-   copy-pasted example that errors is worse than none,
-   because it destroys trust in the whole reference. This
-   is the discipline that keeps generated-plus-curated
-   honest.
+   examples (see docs-as-code: run them in CI so a breaking
+   change fails the docs build too): a copy-pasted example
+   that errors is worse than none, because it destroys
+   trust in the whole reference. This is the discipline
+   that keeps generated-plus-curated honest.
 6. **Version the reference with the API.** Consumers on
    different versions need the docs for *their* version
    (see api-versioning); a single reference that silently
