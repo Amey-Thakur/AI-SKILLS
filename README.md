@@ -121,6 +121,7 @@ One row per category; every entry, with its one-line description, is in
 | [data-science](CATALOG.md#data-science-18) | 18 | cohort-analysis, correlation-causation, data-cleaning |
 | [databases](CATALOG.md#databases-12) | 12 | backup-restore, database-migrations, database-normalization |
 | [debugging](CATALOG.md#debugging-32) | 32 | alerting-design, binary-search-debugging, browser-devtools |
+| [deep-learning](CATALOG.md#deep-learning-12) | 12 | attention-mechanism, backpropagation, batch-size-effects |
 | [devops](CATALOG.md#devops-14) | 14 | artifact-versioning, blue-green-deployments, capacity-planning |
 | [distributed-systems](CATALOG.md#distributed-systems-12) | 12 | backpressure, clock-skew, consensus-basics |
 | [documentation](CATALOG.md#documentation-10) | 10 | api-reference-docs, changelog-writing, code-documentation |

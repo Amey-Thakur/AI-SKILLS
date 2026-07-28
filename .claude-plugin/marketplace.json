@@ -482,6 +482,26 @@
       ]
     },
     {
+      "name": "deep-learning-skills",
+      "description": "12 working methods for deep learning: attention-mechanism, backpropagation, batch-size-effects, learning-rate-schedules, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/deep-learning/attention-mechanism",
+        "./skills/deep-learning/backpropagation",
+        "./skills/deep-learning/batch-size-effects",
+        "./skills/deep-learning/learning-rate-schedules",
+        "./skills/deep-learning/loss-function-selection",
+        "./skills/deep-learning/optimizer-selection",
+        "./skills/deep-learning/overfitting-diagnosis",
+        "./skills/deep-learning/regularization-techniques",
+        "./skills/deep-learning/scaling-laws",
+        "./skills/deep-learning/tokenization",
+        "./skills/deep-learning/training-loop-design",
+        "./skills/deep-learning/weight-initialization"
+      ]
+    },
+    {
       "name": "devops-skills",
       "description": "14 working methods for devops: artifact-versioning, blue-green-deployments, capacity-planning, ci-cd, and more",
       "source": "./",

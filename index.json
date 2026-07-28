@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 868,
+    "skills": 880,
     "prompts": 134,
-    "categories": 56
+    "categories": 57
   },
   "categories": [
     "accessibility",
@@ -37,6 +37,7 @@
     "data-science",
     "databases",
     "debugging",
+    "deep-learning",
     "devops",
     "distributed-systems",
     "documentation",
@@ -2882,6 +2883,114 @@
       "use_when": "when a bug is hard to reproduce or the failure surfaces long after its cause, and rerunning changes the outcome",
       "path": "skills/debugging/time-travel-debugging/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/debugging/time-travel-debugging/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "attention-mechanism",
+      "category": "deep-learning",
+      "description": "Understand what attention computes and why its cost grows quadratically with sequence length, to reason about context limits and efficiency work. Use when working with transformer models or evaluating long-context claims.",
+      "use_when": "when working with transformer models or evaluating long-context claims",
+      "path": "skills/deep-learning/attention-mechanism/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/attention-mechanism/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "backpropagation",
+      "category": "deep-learning",
+      "description": "Understand how gradients flow backward through a network so vanishing gradients, dead units, and exploding losses become diagnosable. Use when training does not converge or a network learns nothing.",
+      "use_when": "when training does not converge or a network learns nothing",
+      "path": "skills/deep-learning/backpropagation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/backpropagation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "batch-size-effects",
+      "category": "deep-learning",
+      "description": "Choose batch size understanding its effect on gradient noise, memory, throughput, and generalisation, and adjust the learning rate with it. Use when scaling training or running out of memory.",
+      "use_when": "when scaling training or running out of memory",
+      "path": "skills/deep-learning/batch-size-effects/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/batch-size-effects/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "learning-rate-schedules",
+      "category": "deep-learning",
+      "description": "Set and vary the learning rate over training, since it is the hyperparameter that most determines whether a run converges. Use when loss diverges, plateaus early, or oscillates.",
+      "use_when": "when loss diverges, plateaus early, or oscillates",
+      "path": "skills/deep-learning/learning-rate-schedules/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/learning-rate-schedules/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "loss-function-selection",
+      "category": "deep-learning",
+      "description": "Choose a loss that matches the task and the metric you care about, and understand what each penalises. Use when a model optimises well and performs badly on the thing that matters.",
+      "use_when": "when a model optimises well and performs badly on the thing that matters",
+      "path": "skills/deep-learning/loss-function-selection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/loss-function-selection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "optimizer-selection",
+      "category": "deep-learning",
+      "description": "Choose an optimiser and its hyperparameters based on the problem rather than habit, and know what each actually does. Use when training is unstable, slow to converge, or generalising poorly.",
+      "use_when": "when training is unstable, slow to converge, or generalising poorly",
+      "path": "skills/deep-learning/optimizer-selection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/optimizer-selection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "overfitting-diagnosis",
+      "category": "deep-learning",
+      "description": "Distinguish overfitting from underfitting, data leakage, and distribution shift, since all four present as poor validation performance. Use when validation performance is worse than expected.",
+      "use_when": "when validation performance is worse than expected",
+      "path": "skills/deep-learning/overfitting-diagnosis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/overfitting-diagnosis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "regularization-techniques",
+      "category": "deep-learning",
+      "description": "Reduce overfitting with weight decay, dropout, augmentation, and early stopping, choosing by why the model is overfitting. Use when validation performance diverges from training performance.",
+      "use_when": "when validation performance diverges from training performance",
+      "path": "skills/deep-learning/regularization-techniques/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/regularization-techniques/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "scaling-laws",
+      "category": "deep-learning",
+      "description": "Reason about how model performance improves with parameters, data, and compute, to allocate a training budget sensibly. Use when planning a training run or evaluating claims about model size.",
+      "use_when": "when planning a training run or evaluating claims about model size",
+      "path": "skills/deep-learning/scaling-laws/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/scaling-laws/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "tokenization",
+      "category": "deep-learning",
+      "description": "Understand how text becomes tokens, and why token boundaries explain model behaviour on numbers, code, and non-English text. Use when a model behaves strangely on specific strings or costs more than expected.",
+      "use_when": "when a model behaves strangely on specific strings or costs more than expected",
+      "path": "skills/deep-learning/tokenization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/tokenization/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "training-loop-design",
+      "category": "deep-learning",
+      "description": "Structure a training loop with correct ordering, evaluation, checkpointing, and logging so runs are debuggable and resumable. Use when writing or reviewing training code.",
+      "use_when": "when writing or reviewing training code",
+      "path": "skills/deep-learning/training-loop-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/training-loop-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "weight-initialization",
+      "category": "deep-learning",
+      "description": "Initialise parameters so signal and gradients propagate at usable scale from the first step. Use when a deep network fails to train from the start or diverges immediately.",
+      "use_when": "when a deep network fails to train from the start or diverges immediately",
+      "path": "skills/deep-learning/weight-initialization/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/deep-learning/weight-initialization/SKILL.md"
     },
     {
       "kind": "skill",
