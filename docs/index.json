@@ -12,7 +12,7 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 737,
+    "skills": 749,
     "prompts": 134,
     "categories": 48
   },
@@ -4065,6 +4065,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-analytics-desk",
+      "category": "multi-agent-teams",
+      "description": "Turn business data into answered questions with agents that define the metric, pull it consistently, check it against a second source, and state what it does not prove. Use when numbers are quoted in meetings that nobody can reproduce.",
+      "use_when": "when numbers are quoted in meetings that nobody can reproduce",
+      "path": "skills/multi-agent-teams/agent-analytics-desk/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-analytics-desk/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-arch-board",
       "category": "multi-agent-teams",
       "description": "Run an architecture board of agents where one proposes a design, several review it independently and blind, and a chair synthesizes a binding decision. Use when a design choice matters enough that one agent's opinion will not do and you want independent scrutiny before committing.",
@@ -4080,6 +4089,15 @@
       "use_when": "when periodic reporting eats days and the numbers keep needing correction",
       "path": "skills/multi-agent-teams/agent-board-reporting/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-board-reporting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-brand-guardian",
+      "category": "multi-agent-teams",
+      "description": "Keep every outgoing artefact consistent in voice, claims, and terminology with agents that check against a written brand definition. Use when output comes from many sources and the product sounds like several different companies.",
+      "use_when": "when output comes from many sources and the product sounds like several different companies",
+      "path": "skills/multi-agent-teams/agent-brand-guardian/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-brand-guardian/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4137,6 +4155,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-crisis-comms",
+      "category": "multi-agent-teams",
+      "description": "Prepare public communication during an incident with agents that assemble facts, draft holding statements, and check for claims that cannot be supported, while a human speaks. Use when something has gone wrong publicly and the response must be fast and accurate.",
+      "use_when": "when something has gone wrong publicly and the response must be fast and accurate",
+      "path": "skills/multi-agent-teams/agent-crisis-comms/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-crisis-comms/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-customer-success-team",
       "category": "multi-agent-teams",
       "description": "Run retention as a standing function with agents that watch usage signals, spot churn risk early, prepare account reviews, and hand humans a specific reason to reach out. Use when customers leave without warning and renewals are handled reactively.",
@@ -4173,12 +4200,30 @@
     },
     {
       "kind": "skill",
+      "name": "agent-executive-briefing",
+      "category": "multi-agent-teams",
+      "description": "Produce a short honest briefing across every desk on a fixed cadence, surfacing decisions needed rather than activity performed. Use when leading a business through agent desks and needing one readable view.",
+      "use_when": "when leading a business through agent desks and needing one readable view",
+      "path": "skills/multi-agent-teams/agent-executive-briefing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-executive-briefing/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-finance-desk",
       "category": "multi-agent-teams",
       "description": "Run a standing finance function with agents that reconcile transactions, track runway, flag anomalies, and prepare reporting for a human to approve. Use when the money side of a business needs steady attention rather than a quarterly scramble.",
       "use_when": "when the money side of a business needs steady attention rather than a quarterly scramble",
       "path": "skills/multi-agent-teams/agent-finance-desk/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-finance-desk/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-fundraising-room",
+      "category": "multi-agent-teams",
+      "description": "Prepare a raise with agents that assemble the narrative, stress-test it as an investor would, and organise diligence material, while the founder owns every conversation. Use when preparing to raise and the story keeps changing between meetings.",
+      "use_when": "when preparing to raise and the story keeps changing between meetings",
+      "path": "skills/multi-agent-teams/agent-fundraising-room/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-fundraising-room/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4254,12 +4299,30 @@
     },
     {
       "kind": "skill",
+      "name": "agent-ops-command",
+      "category": "multi-agent-teams",
+      "description": "Run the daily operating rhythm with agents that sweep every system each morning, surface what needs a decision, and keep nothing waiting silently. Use when running a business day to day and things fall through the cracks between desks.",
+      "use_when": "when running a business day to day and things fall through the cracks between desks",
+      "path": "skills/multi-agent-teams/agent-ops-command/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-ops-command/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-orchestration-antipatterns",
       "category": "multi-agent-teams",
       "description": "Guard a multi-agent team against the structural failures single agents never hit: context lost across handoffs, false agreement, and runaway cost. Use when a team costs more than one agent or trusts its own output, and you need to find out why.",
       "use_when": "when a team costs more than one agent or trusts its own output, and you need to find out why",
       "path": "skills/multi-agent-teams/agent-orchestration-antipatterns/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-orchestration-antipatterns/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-partnerships-desk",
+      "category": "multi-agent-teams",
+      "description": "Research, qualify, and prepare partnership approaches with agents, leaving the relationship and the commitment to a human. Use when business development is ad hoc and partner conversations start without preparation.",
+      "use_when": "when business development is ad hoc and partner conversations start without preparation",
+      "path": "skills/multi-agent-teams/agent-partnerships-desk/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-partnerships-desk/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4317,6 +4380,15 @@
     },
     {
       "kind": "skill",
+      "name": "agent-quality-council",
+      "category": "multi-agent-teams",
+      "description": "Hold a consistent standard across everything a company ships, with agents that review against written criteria and escalate disagreements rather than averaging them. Use when quality varies by who happened to do the work.",
+      "use_when": "when quality varies by who happened to do the work",
+      "path": "skills/multi-agent-teams/agent-quality-council/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-quality-council/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-red-team-blue-team",
       "category": "multi-agent-teams",
       "description": "Run attacker and defender agents in a fix-and-re-attack loop so exploitable bugs get found, triaged, fixed, and verified before ship. Use when you want a system probed and hardened by an agent team rather than one pass of review.",
@@ -4341,6 +4413,15 @@
       "use_when": "when a question needs breadth of sources and every load-bearing claim must trace to evidence",
       "path": "skills/multi-agent-teams/agent-research-lab/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-research-lab/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-risk-register",
+      "category": "multi-agent-teams",
+      "description": "Maintain a living register of business risks with agents that surface new ones, track mitigations, and force stale entries back to a decision. Use when risks are discussed in meetings and then forgotten until they happen.",
+      "use_when": "when risks are discussed in meetings and then forgotten until they happen",
+      "path": "skills/multi-agent-teams/agent-risk-register/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-risk-register/SKILL.md"
     },
     {
       "kind": "skill",
@@ -4380,12 +4461,39 @@
     },
     {
       "kind": "skill",
+      "name": "agent-strategy-review",
+      "category": "multi-agent-teams",
+      "description": "Run a periodic strategy review with agents that check whether stated goals still match reality, argue the alternatives, and force an explicit continue or change decision. Use when quarterly planning repeats last quarter's plan by default.",
+      "use_when": "when quarterly planning repeats last quarter's plan by default",
+      "path": "skills/multi-agent-teams/agent-strategy-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-strategy-review/SKILL.md"
+    },
+    {
+      "kind": "skill",
       "name": "agent-support-desk",
       "category": "multi-agent-teams",
       "description": "Run a team of support agents that triages each ticket, reproduces the problem, drafts a reply, and hands clean escalations to a human. Use when inbound support volume needs consistent handling and a person must approve every customer-facing reply before it goes out.",
       "use_when": "when inbound support volume needs consistent handling and a person must approve every customer-facing reply before it goes out",
       "path": "skills/multi-agent-teams/agent-support-desk/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-support-desk/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-training-academy",
+      "category": "multi-agent-teams",
+      "description": "Turn internal knowledge into role-based learning paths with agents that build, test, and keep material current as systems change. Use when onboarding is slow because knowledge lives in people rather than in material.",
+      "use_when": "when onboarding is slow because knowledge lives in people rather than in material",
+      "path": "skills/multi-agent-teams/agent-training-academy/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-training-academy/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "agent-vendor-operations",
+      "category": "multi-agent-teams",
+      "description": "Track every vendor's cost, renewal, usage, and access with agents that flag waste and surface renewals before they auto-renew. Use when software spend grows quietly and nobody knows what is still in use.",
+      "use_when": "when software spend grows quietly and nobody knows what is still in use",
+      "path": "skills/multi-agent-teams/agent-vendor-operations/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/multi-agent-teams/agent-vendor-operations/SKILL.md"
     },
     {
       "kind": "skill",
