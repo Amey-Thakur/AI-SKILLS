@@ -12,6 +12,13 @@ the right entry for a task and apply it, without the user having to name it.
   `variables` a prompt needs. Its top-level `agents` block states this same
   protocol, so the index is enough to select from on its own. Fetch it once,
   pick by `use_when` / description, fetch only what the task needs.
+- Every entry also carries `related`: the five entries closest to it, computed
+  from the whole library rather than hand-listed, so it is populated for all of
+  them. Use it after you have one good match, to find the entries that work
+  alongside it: a skill's `related` often names the prompt that drafts the
+  thing, and a prompt's often names the skill that raises the bar on the draft.
+  It is a shortlist to consider, not a set of entries to load; judge each
+  against its own `use_when` before using it.
 - [`llms.txt`](llms.txt) carries the same catalog as plain text if JSON is
   inconvenient.
 - Raw URL pattern:
