@@ -13,7 +13,7 @@
   },
   "count": {
     "skills": 1000,
-    "prompts": 134,
+    "prompts": 150,
     "categories": 67
   },
   "categories": [
@@ -9245,6 +9245,19 @@
     },
     {
       "kind": "prompt",
+      "name": "analyze-performance",
+      "category": "prompts",
+      "description": "Diagnose a performance problem from measurements rather than intuition, and propose the fix with the largest expected return.",
+      "variables": [
+        "{problem}: what is slow, how slow, and under what conditions",
+        "{measurements}: profiles, traces, query plans, or timings you already have"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/analyze-performance.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/analyze-performance.md"
+    },
+    {
+      "kind": "prompt",
       "name": "api-design",
       "category": "prompts",
       "description": "Design a clean REST or GraphQL API from requirements, with sensible resources, methods, status codes, and error shapes.",
@@ -9588,6 +9601,45 @@
     },
     {
       "kind": "prompt",
+      "name": "design-api-integration",
+      "category": "prompts",
+      "description": "Design an integration with a third-party API so its failures and changes stay contained.",
+      "variables": [
+        "{api}: the service, the operations you need, and its documented limits",
+        "{usage}: how your product uses it, how often, and how critical it is"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/design-api-integration.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-api-integration.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "design-caching",
+      "category": "prompts",
+      "description": "Design a caching layer with explicit invalidation, chosen for a specific access pattern rather than added generally.",
+      "variables": [
+        "{workload}: what is read, how often, how it changes, and how stale it may be",
+        "{system}: where the data lives now and what the current latency is"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/design-caching.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-caching.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "design-data-model",
+      "category": "prompts",
+      "description": "Design a data model from access patterns and invariants, with the constraints that keep it correct.",
+      "variables": [
+        "{domain}: the entities, their relationships, and the rules that must always hold",
+        "{access}: how the data will be read and written, and at what volume"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/design-data-model.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-data-model.md"
+    },
+    {
+      "kind": "prompt",
       "name": "design-doc",
       "category": "prompts",
       "description": "Write an engineering design doc that states the problem, weighs options, and lets reviewers approve or push back.",
@@ -9598,6 +9650,19 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/design-doc.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-doc.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "design-observability",
+      "category": "prompts",
+      "description": "Decide what to log, measure, and trace for a service so failures are diagnosable without adding noise.",
+      "variables": [
+        "{service}: what the service does, its dependencies, and its failure modes",
+        "{concerns}: what has gone wrong before or what you most need to detect"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/design-observability.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/design-observability.md"
     },
     {
       "kind": "prompt",
@@ -10154,6 +10219,32 @@
     },
     {
       "kind": "prompt",
+      "name": "plan-migration",
+      "category": "prompts",
+      "description": "Plan a migration between systems, versions, or providers with staged cutover and a rollback at every step.",
+      "variables": [
+        "{migration}: what is moving from where to where, and why",
+        "{constraints}: downtime tolerance, data volume, deadline, and who is affected"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/plan-migration.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/plan-migration.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "plan-refactor",
+      "category": "prompts",
+      "description": "Plan a refactor as a sequence of safe verified steps, with tests established before anything moves.",
+      "variables": [
+        "{code}: the code to restructure and what is wrong with it now",
+        "{goal}: the structure you want and why it is better"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/plan-refactor.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/plan-refactor.md"
+    },
+    {
+      "kind": "prompt",
       "name": "plan",
       "category": "prompts",
       "description": "Turn a task or project into a clear, ordered plan with steps, milestones, and risks. A quick /plan command for anything you need to get done.",
@@ -10440,6 +10531,45 @@
     },
     {
       "kind": "prompt",
+      "name": "review-accessibility",
+      "category": "prompts",
+      "description": "Review an interface for accessibility barriers, prioritised by who is blocked rather than by rule count.",
+      "variables": [
+        "{interface}: the markup, component, or flow to review",
+        "{context}: what the user is trying to accomplish and on what devices"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/review-accessibility.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/review-accessibility.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "review-dependencies",
+      "category": "prompts",
+      "description": "Assess a project's dependencies for risk, maintenance burden, and whether each still earns its place.",
+      "variables": [
+        "{dependencies}: the dependency list, ideally with versions",
+        "{context}: what the project does and what its distribution and security requirements are"
+      ],
+      "settings": "Temperature 0.2-0.4.",
+      "path": "prompts/review-dependencies.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/review-dependencies.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "review-infrastructure",
+      "category": "prompts",
+      "description": "Review infrastructure configuration for reliability, cost, and security problems before they reach production.",
+      "variables": [
+        "{config}: the infrastructure definition to review",
+        "{context}: what it runs, its availability target, and its expected load"
+      ],
+      "settings": "Temperature 0.2.",
+      "path": "prompts/review-infrastructure.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/review-infrastructure.md"
+    },
+    {
+      "kind": "prompt",
       "name": "review-my-code",
       "category": "prompts",
       "description": "Review code for bugs, security issues, and clarity, with severity-ranked findings and concrete fixes.",
@@ -10450,6 +10580,19 @@
       "settings": "Temperature 0.2-0.4 for careful, grounded review.",
       "path": "prompts/review-my-code.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/review-my-code.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "review-security",
+      "category": "prompts",
+      "description": "Review code or a design for security weaknesses, ranked by real exploitability rather than by checklist coverage.",
+      "variables": [
+        "{target}: the code, endpoint, or design to review, with enough context to see the trust boundaries",
+        "{context}: who can reach it, what data it touches, and what authentication applies"
+      ],
+      "settings": "Temperature 0.2 for precision.",
+      "path": "prompts/review-security.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/review-security.md"
     },
     {
       "kind": "prompt",
@@ -10808,6 +10951,19 @@
     },
     {
       "kind": "prompt",
+      "name": "write-chaos-experiment",
+      "category": "prompts",
+      "description": "Design a failure injection experiment that tests a specific resilience hypothesis safely.",
+      "variables": [
+        "{hypothesis}: what you believe should happen when a specific thing fails",
+        "{system}: the system, its dependencies, and its current resilience mechanisms"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/write-chaos-experiment.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-chaos-experiment.md"
+    },
+    {
+      "kind": "prompt",
       "name": "write-documentation",
       "category": "prompts",
       "description": "Write clear documentation for code, an API, or a feature, structured for the reader who needs to use it.",
@@ -10818,6 +10974,58 @@
       "settings": "Temperature 0.3-0.5.",
       "path": "prompts/write-documentation.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-documentation.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-error-messages",
+      "category": "prompts",
+      "description": "Rewrite error messages so the reader knows what happened, why, and what to do next.",
+      "variables": [
+        "{errors}: the current error messages and where they appear",
+        "{audience}: who reads them, whether end users, operators, or developers"
+      ],
+      "settings": "Temperature 0.3-0.5.",
+      "path": "prompts/write-error-messages.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-error-messages.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-integration-test",
+      "category": "prompts",
+      "description": "Write integration tests that exercise real boundaries and fail for real reasons rather than mirroring the implementation.",
+      "variables": [
+        "{component}: what is being tested and which boundaries are involved",
+        "{behavior}: the behaviour that must hold, including failure cases"
+      ],
+      "settings": "Temperature 0.2-0.4.",
+      "path": "prompts/write-integration-test.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-integration-test.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-load-test",
+      "category": "prompts",
+      "description": "Design a load test that answers a specific capacity question rather than generating traffic for its own sake.",
+      "variables": [
+        "{question}: what you need to know, such as the breaking point or behaviour at expected peak",
+        "{system}: the system under test, its entry points, and realistic usage patterns"
+      ],
+      "settings": "Temperature 0.3.",
+      "path": "prompts/write-load-test.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-load-test.md"
+    },
+    {
+      "kind": "prompt",
+      "name": "write-runbook",
+      "category": "prompts",
+      "description": "Write an operational runbook someone can follow at 3am without prior knowledge of the system.",
+      "variables": [
+        "{scenario}: the failure or task the runbook covers",
+        "{system}: the system involved, its dependencies, and how to reach its controls"
+      ],
+      "settings": "Temperature 0.2-0.4.",
+      "path": "prompts/write-runbook.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/prompts/write-runbook.md"
     },
     {
       "kind": "prompt",
