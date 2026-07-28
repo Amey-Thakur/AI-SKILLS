@@ -113,6 +113,7 @@ One row per category; every entry, with its one-line description, is in
 | [career-communication](CATALOG.md#career-communication-10) | 10 | async-communication, conference-talks, engineering-resume |
 | [cloud](CATALOG.md#cloud-12) | 12 | autoscaling-policies, cloud-cost-optimization, cloud-disaster-recovery |
 | [code-quality](CATALOG.md#code-quality-37) | 37 | api-surface-minimalism, assertion-density, boolean-parameters |
+| [computer-engineering](CATALOG.md#computer-engineering-12) | 12 | algorithmic-complexity, binary-data-representation, compilers-and-toolchains |
 | [css-styling](CATALOG.md#css-styling-10) | 10 | css-animations, css-architecture, css-cascade |
 | [customer-support](CATALOG.md#customer-support-12) | 12 | community-support, customer-feedback-loop, difficult-customer-conversations |
 | [data-engineering](CATALOG.md#data-engineering-12) | 12 | batch-vs-streaming, change-data-capture, data-lineage |

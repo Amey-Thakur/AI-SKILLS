@@ -299,6 +299,26 @@
       ]
     },
     {
+      "name": "computer-engineering-skills",
+      "description": "12 working methods for computer engineering: algorithmic-complexity, binary-data-representation, compilers-and-toolchains, concurrency-primitives, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/computer-engineering/algorithmic-complexity",
+        "./skills/computer-engineering/binary-data-representation",
+        "./skills/computer-engineering/compilers-and-toolchains",
+        "./skills/computer-engineering/concurrency-primitives",
+        "./skills/computer-engineering/cpu-architecture",
+        "./skills/computer-engineering/data-structure-selection",
+        "./skills/computer-engineering/file-systems",
+        "./skills/computer-engineering/floating-point-behavior",
+        "./skills/computer-engineering/networking-stack",
+        "./skills/computer-engineering/operating-system-basics",
+        "./skills/computer-engineering/process-and-threads",
+        "./skills/computer-engineering/virtual-memory"
+      ]
+    },
+    {
       "name": "css-styling-skills",
       "description": "10 working methods for css styling: css-animations, css-architecture, css-cascade, css-debugging, and more",
       "source": "./",

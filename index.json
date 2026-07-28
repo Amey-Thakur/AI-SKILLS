@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 856,
+    "skills": 868,
     "prompts": 134,
-    "categories": 55
+    "categories": 56
   },
   "categories": [
     "accessibility",
@@ -29,6 +29,7 @@
     "career-communication",
     "cloud",
     "code-quality",
+    "computer-engineering",
     "css-styling",
     "customer-support",
     "data-engineering",
@@ -1810,6 +1811,114 @@
       "use_when": "when designing types, modeling state machines, or hardening a loosely typed module",
       "path": "skills/code-quality/type-safety/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/code-quality/type-safety/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "algorithmic-complexity",
+      "category": "computer-engineering",
+      "description": "Reason about how running time and memory grow with input size, and know when the asymptotic answer is the wrong one. Use when choosing an approach, reviewing code that loops over data, or explaining why something slows at scale.",
+      "use_when": "when choosing an approach, reviewing code that loops over data, or explaining why something slows at scale",
+      "path": "skills/computer-engineering/algorithmic-complexity/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/algorithmic-complexity/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "binary-data-representation",
+      "category": "computer-engineering",
+      "description": "Work with bytes, endianness, alignment, and binary formats so data written by one system is read correctly by another. Use when parsing binary protocols, file formats, or debugging corrupted data.",
+      "use_when": "when parsing binary protocols, file formats, or debugging corrupted data",
+      "path": "skills/computer-engineering/binary-data-representation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/binary-data-representation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "compilers-and-toolchains",
+      "category": "computer-engineering",
+      "description": "Understand what happens between source and running program, so build errors, linking failures, and optimisation surprises become tractable. Use when builds fail obscurely or behaviour differs between debug and release.",
+      "use_when": "when builds fail obscurely or behaviour differs between debug and release",
+      "path": "skills/computer-engineering/compilers-and-toolchains/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/compilers-and-toolchains/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "concurrency-primitives",
+      "category": "computer-engineering",
+      "description": "Use locks, atomics, channels, and barriers correctly, and know which class of bug each prevents. Use when writing code that shares state between threads.",
+      "use_when": "when writing code that shares state between threads",
+      "path": "skills/computer-engineering/concurrency-primitives/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/concurrency-primitives/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "cpu-architecture",
+      "category": "computer-engineering",
+      "description": "Understand caches, branches, and pipelines well enough to explain why equivalent code differs in speed by an order of magnitude. Use when optimising hot code or when performance does not match operation counts.",
+      "use_when": "when optimising hot code or when performance does not match operation counts",
+      "path": "skills/computer-engineering/cpu-architecture/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/cpu-architecture/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "data-structure-selection",
+      "category": "computer-engineering",
+      "description": "Choose the structure whose operations match how the data will actually be used, rather than defaulting to a list or a map. Use when designing anything that stores and queries data in memory.",
+      "use_when": "when designing anything that stores and queries data in memory",
+      "path": "skills/computer-engineering/data-structure-selection/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/data-structure-selection/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "file-systems",
+      "category": "computer-engineering",
+      "description": "Understand how files, directories, and durability actually work, so data written is data that survives a crash. Use when writing files that matter or debugging corruption and permission problems.",
+      "use_when": "when writing files that matter or debugging corruption and permission problems",
+      "path": "skills/computer-engineering/file-systems/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/file-systems/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "floating-point-behavior",
+      "category": "computer-engineering",
+      "description": "Reason about rounding, precision limits, and comparison in floating point so numerical results are predictable. Use when money, physics, aggregation, or any comparison of computed values is involved.",
+      "use_when": "when money, physics, aggregation, or any comparison of computed values is involved",
+      "path": "skills/computer-engineering/floating-point-behavior/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/floating-point-behavior/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "networking-stack",
+      "category": "computer-engineering",
+      "description": "Understand the layers between a request and its response, so latency, connection failures, and timeouts can be attributed to the right layer. Use when network behaviour is unexplained or performance varies by geography.",
+      "use_when": "when network behaviour is unexplained or performance varies by geography",
+      "path": "skills/computer-engineering/networking-stack/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/networking-stack/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "operating-system-basics",
+      "category": "computer-engineering",
+      "description": "Understand what the kernel does for your process, so system-level behaviour such as scheduling, file descriptors, and signals stops being mysterious. Use when debugging behaviour that application-level reasoning cannot explain.",
+      "use_when": "when debugging behaviour that application-level reasoning cannot explain",
+      "path": "skills/computer-engineering/operating-system-basics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/operating-system-basics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "process-and-threads",
+      "category": "computer-engineering",
+      "description": "Choose between processes, threads, and asynchronous concurrency based on isolation, memory sharing, and failure behaviour. Use when deciding how to run work concurrently.",
+      "use_when": "when deciding how to run work concurrently",
+      "path": "skills/computer-engineering/process-and-threads/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/process-and-threads/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "virtual-memory",
+      "category": "computer-engineering",
+      "description": "Understand address translation, paging, and the memory hierarchy well enough to explain swap thrashing, page faults, and why memory usage numbers disagree. Use when memory behaviour is confusing or a process is slower than its CPU usage suggests.",
+      "use_when": "when memory behaviour is confusing or a process is slower than its CPU usage suggests",
+      "path": "skills/computer-engineering/virtual-memory/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/computer-engineering/virtual-memory/SKILL.md"
     },
     {
       "kind": "skill",
