@@ -156,6 +156,7 @@ One row per category; every entry, with its one-line description, is in
 | [prompt-writing](CATALOG.md#prompt-writing-12) | 12 | chain-of-thought-prompting, context-placement, few-shot-examples |
 | [python](CATALOG.md#python-14) | 14 | pytest-mastery, python-asyncio, python-cli-tools |
 | [realtime-collaboration](CATALOG.md#realtime-collaboration-12) | 12 | collaborative-editing-models, comments-and-annotations, conflict-resolution-ux |
+| [reliability](CATALOG.md#reliability-12) | 12 | capacity-forecasting, chaos-engineering, disaster-recovery-testing |
 | [research](CATALOG.md#research-15) | 15 | autonomous-research, decision-journals, deep-research |
 | [scripting-automation](CATALOG.md#scripting-automation-10) | 10 | automation-guardrails, bash-robustness, cli-ux-design |
 | [search-relevance](CATALOG.md#search-relevance-12) | 12 | autocomplete-design, faceted-search, full-text-search-design |

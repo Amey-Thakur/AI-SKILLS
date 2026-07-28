@@ -1249,6 +1249,26 @@
       ]
     },
     {
+      "name": "reliability-skills",
+      "description": "12 working methods for reliability: capacity-forecasting, chaos-engineering, disaster-recovery-testing, failure-mode-analysis, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/reliability/capacity-forecasting",
+        "./skills/reliability/chaos-engineering",
+        "./skills/reliability/disaster-recovery-testing",
+        "./skills/reliability/failure-mode-analysis",
+        "./skills/reliability/graceful-degradation",
+        "./skills/reliability/incident-severity-levels",
+        "./skills/reliability/load-shedding",
+        "./skills/reliability/on-call-health",
+        "./skills/reliability/redundancy-design",
+        "./skills/reliability/reliability-tradeoffs",
+        "./skills/reliability/service-level-objectives",
+        "./skills/reliability/toil-reduction"
+      ]
+    },
+    {
       "name": "research-skills",
       "description": "15 working methods for research: autonomous-research, decision-journals, deep-research, estimation-techniques, and more",
       "source": "./",

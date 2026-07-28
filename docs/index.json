@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 975,
+    "skills": 987,
     "prompts": 134,
-    "categories": 65
+    "categories": 66
   },
   "categories": [
     "accessibility",
@@ -72,6 +72,7 @@
     "prompt-writing",
     "python",
     "realtime-collaboration",
+    "reliability",
     "research",
     "scripting-automation",
     "search-relevance",
@@ -7274,6 +7275,114 @@
       "use_when": "when edits are shared or when accidental loss must be recoverable",
       "path": "skills/realtime-collaboration/version-history-ux/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/realtime-collaboration/version-history-ux/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "capacity-forecasting",
+      "category": "reliability",
+      "description": "Predict when current capacity will be exhausted and plan the increase before it becomes an incident. Use when growth is steady enough to plan for or when scaling events surprise you.",
+      "use_when": "when growth is steady enough to plan for or when scaling events surprise you",
+      "path": "skills/reliability/capacity-forecasting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/capacity-forecasting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "chaos-engineering",
+      "category": "reliability",
+      "description": "Deliberately inject failures to verify that resilience mechanisms work before a real incident tests them. Use when a system has failover, retries, or redundancy that has never actually been exercised.",
+      "use_when": "when a system has failover, retries, or redundancy that has never actually been exercised",
+      "path": "skills/reliability/chaos-engineering/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/chaos-engineering/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "disaster-recovery-testing",
+      "category": "reliability",
+      "description": "Verify that backups restore and failover works by practising it, rather than trusting that the procedure would work. Use when recovery has never been rehearsed end to end.",
+      "use_when": "when recovery has never been rehearsed end to end",
+      "path": "skills/reliability/disaster-recovery-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/disaster-recovery-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "failure-mode-analysis",
+      "category": "reliability",
+      "description": "Enumerate how a system can fail and what each failure does, before building the mitigations. Use when designing a critical system or reviewing one that has surprised you.",
+      "use_when": "when designing a critical system or reviewing one that has surprised you",
+      "path": "skills/reliability/failure-mode-analysis/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/failure-mode-analysis/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "graceful-degradation",
+      "category": "reliability",
+      "description": "Design systems that lose functionality progressively rather than failing entirely when a dependency is unavailable. Use when one component's failure currently takes down the whole product.",
+      "use_when": "when one component's failure currently takes down the whole product",
+      "path": "skills/reliability/graceful-degradation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/graceful-degradation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "incident-severity-levels",
+      "category": "reliability",
+      "description": "Classify incidents consistently so the response, communication, and escalation match the impact. Use when incident response is either overwhelming or too slow.",
+      "use_when": "when incident response is either overwhelming or too slow",
+      "path": "skills/reliability/incident-severity-levels/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/incident-severity-levels/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "load-shedding",
+      "category": "reliability",
+      "description": "Reject excess work deliberately under overload so the system serves some requests well instead of failing all of them. Use when traffic spikes cause complete collapse rather than partial service.",
+      "use_when": "when traffic spikes cause complete collapse rather than partial service",
+      "path": "skills/reliability/load-shedding/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/load-shedding/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "on-call-health",
+      "category": "reliability",
+      "description": "Run an on-call rotation that is sustainable, with alert hygiene, fair distribution, and follow-through on what caused the pages. Use when on-call is dreaded or people are leaving because of it.",
+      "use_when": "when on-call is dreaded or people are leaving because of it",
+      "path": "skills/reliability/on-call-health/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/on-call-health/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "redundancy-design",
+      "category": "reliability",
+      "description": "Add redundancy where it removes a single point of failure, understanding what each level protects against and what it costs. Use when designing for availability targets.",
+      "use_when": "when designing for availability targets",
+      "path": "skills/reliability/redundancy-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/redundancy-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "reliability-tradeoffs",
+      "category": "reliability",
+      "description": "Decide how much reliability to buy, given that each additional nine costs disproportionately more than the last. Use when reliability investment is being decided without reference to its cost.",
+      "use_when": "when reliability investment is being decided without reference to its cost",
+      "path": "skills/reliability/reliability-tradeoffs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/reliability-tradeoffs/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "service-level-objectives",
+      "category": "reliability",
+      "description": "Define measurable reliability targets from the user's perspective and use the error budget to decide between shipping and stabilising. Use when reliability is debated without numbers.",
+      "use_when": "when reliability is debated without numbers",
+      "path": "skills/reliability/service-level-objectives/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/service-level-objectives/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "toil-reduction",
+      "category": "reliability",
+      "description": "Identify repetitive manual operational work and eliminate it, so capacity goes to improvement rather than maintenance. Use when an on-call rotation is consumed by routine intervention.",
+      "use_when": "when an on-call rotation is consumed by routine intervention",
+      "path": "skills/reliability/toil-reduction/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/reliability/toil-reduction/SKILL.md"
     },
     {
       "kind": "skill",
