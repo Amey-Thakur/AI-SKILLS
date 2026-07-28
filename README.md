@@ -144,6 +144,7 @@ One row per category; every entry, with its one-line description, is in
 | [payments-billing](CATALOG.md#payments-billing-12) | 12 | failed-payment-recovery, invoicing-and-receipts, payment-idempotency |
 | [performance](CATALOG.md#performance-28) | 28 | algorithmic-optimization, async-io-patterns, batching-and-debouncing |
 | [product-management](CATALOG.md#product-management-10) | 10 | ab-test-design, customer-interviews, feature-sunsetting |
+| [prompt-writing](CATALOG.md#prompt-writing-12) | 12 | chain-of-thought-prompting, context-placement, few-shot-examples |
 | [python](CATALOG.md#python-14) | 14 | pytest-mastery, python-asyncio, python-cli-tools |
 | [realtime-collaboration](CATALOG.md#realtime-collaboration-12) | 12 | collaborative-editing-models, comments-and-annotations, conflict-resolution-ux |
 | [research](CATALOG.md#research-15) | 15 | autonomous-research, decision-journals, deep-research |

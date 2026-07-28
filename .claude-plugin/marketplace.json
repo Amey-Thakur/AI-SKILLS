@@ -1008,6 +1008,26 @@
       ]
     },
     {
+      "name": "prompt-writing-skills",
+      "description": "12 working methods for prompt writing: chain-of-thought-prompting, context-placement, few-shot-examples, negative-instructions, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/prompt-writing/chain-of-thought-prompting",
+        "./skills/prompt-writing/context-placement",
+        "./skills/prompt-writing/few-shot-examples",
+        "./skills/prompt-writing/negative-instructions",
+        "./skills/prompt-writing/output-format-control",
+        "./skills/prompt-writing/prompt-constraints",
+        "./skills/prompt-writing/prompt-iteration",
+        "./skills/prompt-writing/prompt-structure",
+        "./skills/prompt-writing/prompt-testing",
+        "./skills/prompt-writing/prompt-versioning",
+        "./skills/prompt-writing/role-and-persona-prompting",
+        "./skills/prompt-writing/system-prompt-design"
+      ]
+    },
+    {
       "name": "python-skills",
       "description": "14 working methods for python: pytest-mastery, python-asyncio, python-cli-tools, python-concurrency, and more",
       "source": "./",

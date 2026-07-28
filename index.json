@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 844,
+    "skills": 856,
     "prompts": 134,
-    "categories": 54
+    "categories": 55
   },
   "categories": [
     "accessibility",
@@ -60,6 +60,7 @@
     "payments-billing",
     "performance",
     "product-management",
+    "prompt-writing",
     "python",
     "realtime-collaboration",
     "research",
@@ -5958,6 +5959,114 @@
       "use_when": "when turning product intent into buildable work or fixing a backlog of vague tickets",
       "path": "skills/product-management/user-story-writing/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/product-management/user-story-writing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "chain-of-thought-prompting",
+      "category": "prompt-writing",
+      "description": "Ask a model to reason before answering when the task needs intermediate steps, and know when it costs more than it gives. Use for multi-step reasoning, and avoid it for simple retrieval or formatting.",
+      "use_when": "for multi-step reasoning, and avoid it for simple retrieval or formatting",
+      "path": "skills/prompt-writing/chain-of-thought-prompting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/chain-of-thought-prompting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "context-placement",
+      "category": "prompt-writing",
+      "description": "Decide where in a prompt to put documents, history, and instructions, given that models attend unevenly across a long context. Use when prompts are long and the model ignores material in the middle.",
+      "use_when": "when prompts are long and the model ignores material in the middle",
+      "path": "skills/prompt-writing/context-placement/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/context-placement/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "few-shot-examples",
+      "category": "prompt-writing",
+      "description": "Teach a task by showing worked examples, chosen and ordered so the model generalises the pattern rather than copying the specifics. Use when instructions alone produce inconsistent format or judgement.",
+      "use_when": "when instructions alone produce inconsistent format or judgement",
+      "path": "skills/prompt-writing/few-shot-examples/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/few-shot-examples/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "negative-instructions",
+      "category": "prompt-writing",
+      "description": "Tell a model what not to do in a way that works, by converting prohibitions into positive alternatives wherever possible. Use when a prompt lists things to avoid and the model keeps doing them.",
+      "use_when": "when a prompt lists things to avoid and the model keeps doing them",
+      "path": "skills/prompt-writing/negative-instructions/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/negative-instructions/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "output-format-control",
+      "category": "prompt-writing",
+      "description": "Get output in exactly the structure downstream code expects, using schemas, examples, and validation rather than hope. Use when a model's output is parsed by a program rather than read by a person.",
+      "use_when": "when a model's output is parsed by a program rather than read by a person",
+      "path": "skills/prompt-writing/output-format-control/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/output-format-control/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "prompt-constraints",
+      "category": "prompt-writing",
+      "description": "Express limits on length, scope, style, and behaviour so they are followed rather than politely ignored. Use when a model consistently exceeds bounds or drifts outside the task.",
+      "use_when": "when a model consistently exceeds bounds or drifts outside the task",
+      "path": "skills/prompt-writing/prompt-constraints/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/prompt-constraints/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "prompt-iteration",
+      "category": "prompt-writing",
+      "description": "Improve a prompt through controlled changes measured against a fixed set of cases, rather than by rewriting until an example looks good. Use when a prompt underperforms and each edit is a guess.",
+      "use_when": "when a prompt underperforms and each edit is a guess",
+      "path": "skills/prompt-writing/prompt-iteration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/prompt-iteration/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "prompt-structure",
+      "category": "prompt-writing",
+      "description": "Order a prompt so the model knows its task, its material, and its output before it starts generating. Use when writing any non-trivial prompt or fixing one that produces the wrong shape of answer.",
+      "use_when": "when writing any non-trivial prompt or fixing one that produces the wrong shape of answer",
+      "path": "skills/prompt-writing/prompt-structure/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/prompt-structure/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "prompt-testing",
+      "category": "prompt-writing",
+      "description": "Test prompts like code, with a case set, pass criteria, and regression runs on every change including model upgrades. Use when a prompt is in production and its behaviour matters.",
+      "use_when": "when a prompt is in production and its behaviour matters",
+      "path": "skills/prompt-writing/prompt-testing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/prompt-testing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "prompt-versioning",
+      "category": "prompt-writing",
+      "description": "Manage prompts as versioned artefacts with review, rollback, and a record of what changed and why. Use when prompts affect production behaviour and more than one person edits them.",
+      "use_when": "when prompts affect production behaviour and more than one person edits them",
+      "path": "skills/prompt-writing/prompt-versioning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/prompt-versioning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "role-and-persona-prompting",
+      "category": "prompt-writing",
+      "description": "Assign a role to shape expertise, register, and priorities, without pretending it grants knowledge the model lacks. Use when output should read as written by a particular kind of expert for a particular audience.",
+      "use_when": "when output should read as written by a particular kind of expert for a particular audience",
+      "path": "skills/prompt-writing/role-and-persona-prompting/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/role-and-persona-prompting/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "system-prompt-design",
+      "category": "prompt-writing",
+      "description": "Write the durable instructions that shape every turn, covering role, boundaries, and defaults without micromanaging each response. Use when configuring an assistant or agent that will handle many different requests.",
+      "use_when": "when configuring an assistant or agent that will handle many different requests",
+      "path": "skills/prompt-writing/system-prompt-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/prompt-writing/system-prompt-design/SKILL.md"
     },
     {
       "kind": "skill",
