@@ -252,17 +252,17 @@
         <div class="row">
           <span class="label">Claude Code</span>
           <code id="i-claude">/plugin marketplace add Amey-Thakur/AI-SKILLS</code>
-          <button class="copy-btn" type="button" data-copy="i-claude">Copy</button>
+          <button class="copy-btn" type="button" data-copy="i-claude" aria-label="Copy the Claude Code install command">Copy</button>
         </div>
         <div class="row">
           <span class="label">Any editor</span>
           <code id="i-clone">git clone https://github.com/Amey-Thakur/AI-SKILLS</code>
-          <button class="copy-btn" type="button" data-copy="i-clone">Copy</button>
+          <button class="copy-btn" type="button" data-copy="i-clone" aria-label="Copy the git clone command for any editor">Copy</button>
         </div>
         <div class="row">
           <span class="label">Any agent</span>
           <code id="i-raw">https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/index.json</code>
-          <button class="copy-btn" type="button" data-copy="i-raw">Copy</button>
+          <button class="copy-btn" type="button" data-copy="i-raw" aria-label="Copy the index.json URL for any agent">Copy</button>
         </div>
         <p class="more">
           Per-tool steps for Cursor, Codex, Copilot, Windsurf, Antigravity, Cline, and more
@@ -365,9 +365,17 @@
       var sel = list.querySelector('[aria-selected="true"]') || list.firstElementChild;
       if (sel) sel.focus();
     }
+    /* The button shows the current value, so its accessible name has to carry
+       that word too: with a fixed "Filter by category", a voice control user
+       saying "click Every category" matched nothing on the page. Keep the
+       purpose and append whatever is currently shown. */
+    function nameBtn() {
+      btn.setAttribute("aria-label", "Filter by category: " + btn.textContent);
+    }
     function pick(li) {
       current = li.dataset.value;
       btn.textContent = li.textContent.replace(/ ✓$/, "");
+      nameBtn();
       items().forEach(function (o) { o.setAttribute("aria-selected", String(o === li)); });
       close(true);
       onChange.forEach(function (fn) { fn(); });
@@ -407,6 +415,7 @@
     document.addEventListener("focusin", function (e) {
       if (!list.hidden && e.target.closest && !e.target.closest(".selectwrap")) close(false);
     });
+    nameBtn();
 
     return {
       get value() { return current; },
@@ -450,9 +459,21 @@
     var view = card.querySelector("a.view");
     view.href = "https://github.com/Amey-Thakur/AI-SKILLS/blob/main/" + e.path;
     view.textContent = "View";
+    /* Every card offers the same two words, so a screen reader listing the
+       links hears "View, Copy content" a hundred times over. The visible text
+       stays put and the entry name goes in the accessible name, which keeps
+       the on-screen word first for voice control. */
+    view.setAttribute("aria-label", "View " + e.name + " on GitHub");
     var rawLink = card.querySelector("a.raw");
     rawLink.dataset.raw = e.raw_url;
+    /* Point at the file itself rather than leaving the placeholder "#". A
+       plain click still copies, since the handler cancels it, but a
+       middle-click now opens the raw file instead of a second copy of this
+       page: auxclick never reaches that handler, so "#" was a dead end. It
+       also means the control still does something useful without JavaScript. */
+    rawLink.href = e.raw_url;
     rawLink.textContent = "Copy content";
+    rawLink.setAttribute("aria-label", "Copy content of " + e.name);
     return card;
   }
 
@@ -529,7 +550,12 @@
           '<div class="actions"><a rel="noopener">Visit</a></div>';
         card.querySelector("h3").textContent = c.name;
         card.querySelector("p").textContent = c.focus;
-        card.querySelector(".actions a").href = c.url;
+        var visit = card.querySelector(".actions a");
+        visit.href = c.url;
+        /* Twelve links all reading "Visit" are indistinguishable in a screen
+           reader's link list. Name each one, keeping the visible word first so
+           voice control still matches what is on screen. */
+        visit.setAttribute("aria-label", "Visit " + c.name + " on GitHub");
         ecoGrid.appendChild(card);
       });
     })
