@@ -92,6 +92,15 @@
   .mode-toggle { display: inline-flex; gap: 0; border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 3px; margin-bottom: 18px; background: var(--surface-2); }
   .mode-btn { border: none; background: none; color: var(--text-3); font-family: "Play", ui-monospace, Consolas, monospace; font-size: 13px; padding: 7px 16px; border-radius: var(--radius-pill); cursor: pointer; transition: background-color .15s, color .15s; }
   .mode-btn[aria-pressed="true"] { background: var(--accent-btn); color: var(--on-accent); }
+  .library-hits { margin-top: 18px; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius); padding: 20px 22px; box-shadow: var(--shadow-sm); }
+  .library-hits h2 { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: var(--text-4); margin-bottom: 6px; }
+  .hits-note { font-size: 13.5px; color: var(--text-3); margin-bottom: 14px; }
+  .library-hits ul { list-style: none; display: grid; gap: 10px; }
+  .library-hits li { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .library-hits a { font-family: ui-monospace, Consolas, monospace; font-size: 13.5px; }
+  .hit-kind { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--accent); border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 2px 9px; }
+  .hit-why { flex: 1 1 100%; font-size: 13px; color: var(--text-3); line-height: 1.55; }
+
   .stages { list-style: none; display: grid; gap: 8px; }
   .stages li { display: flex; gap: 10px; align-items: baseline; font-size: 13.5px; color: var(--text-3); }
   .stages b { font-family: "Play", ui-monospace, Consolas, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
@@ -196,6 +205,12 @@
       </div>
       <pre id="result" aria-live="polite">Describe the job on the left, press Build, and the pipeline assembles a strict, agent-ready prompt here.</pre>
       <div class="settings" id="settings" hidden></div>
+      <section class="library-hits" id="library-hits" aria-labelledby="lbl-hits" hidden>
+        <h2 id="lbl-hits">From the library</h2>
+        <p class="hits-note">Entries whose own trigger matches this job. Open one
+          to follow its method, or run it as a prompt.</p>
+        <ul id="hits-list"></ul>
+      </section>
       <p class="fill-note">
         Anything the Studio cannot know appears as a <code>{variable}</code> to
         fill before running. An honest gap beats an invented fact.
@@ -531,6 +546,7 @@
     if (!input) {
       result.textContent = "Describe the job on the left, press Build, and the pipeline assembles a strict, agent-ready prompt here.";
       settingsBox.hidden = true; analysis.hidden = true;
+      showHits("");
       return;
     }
     var extra = more.value.trim();
@@ -545,6 +561,7 @@
         "to build a prompt from. Say what you want done: the job, the thing it " +
         "applies to, and what a good result looks like.";
       settingsBox.hidden = true; analysis.hidden = true;
+      showHits("");
       return;
     }
     var facts = understandStage(cleaned.text);
@@ -597,6 +614,7 @@
       gapsEl.appendChild(d);
     });
     analysis.hidden = false;
+    showHits(cleaned.text);
   }
 
   document.getElementById("build").addEventListener("click", runPipeline);
@@ -669,6 +687,152 @@
   document.getElementById("clear").addEventListener("click", function () {
     raw.value = ""; more.value = ""; chosenType = null; runPipeline();
   });
+
+  /* The library, matched against the job.
+     ------------------------------------
+     The stages above decide how to shape a prompt; they do not know what the
+     library already holds. This fetches the catalog once and scores the cleaned
+     text against each entry's trigger and description, so a job about stale
+     retrieval surfaces rag-freshness rather than leaving the user to find it.
+     Purely additive: if the fetch fails the Studio behaves exactly as before. */
+  var catalog = null, idf = null;
+  var hitsBox = document.getElementById("library-hits");
+  var hitsList = document.getElementById("hits-list");
+  var STOPWORDS = (" the a an and or of to in for on with is are be that this it as by from at not " +
+    "you your we our can will if when what how use used using make made than then so into over under " +
+    "about after before need want get got have has had do does did but one two three ten run runs ran " +
+    "thing things help new keep keeps takes take give gives put set says say tell told out off down " +
+    "back very much many lot lots really just also even still yet ").split(" ");
+  function terms(s) {
+    return String(s).toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/\s+/)
+      .filter(function (w) { return w.length > 2 && STOPWORDS.indexOf(w) === -1; });
+  }
+  fetch("index.json").then(function (r) { return r.json(); }).then(function (data) {
+    catalog = data.entries.map(function (e) {
+      return {
+        name: e.name, kind: e.kind, category: e.category, description: e.description,
+        use_when: e.use_when || "", related: e.related || [], path: e.path,
+        /* name and trigger state the intent, so they weigh most */
+        bag: terms(e.name.replace(/-/g, " ") + " " + e.name.replace(/-/g, " ") + " " +
+                   (e.use_when || "") + " " + (e.use_when || "") + " " +
+                   e.description + " " + e.category.replace(/-/g, " ")),
+      };
+    });
+    var df = Object.create(null);
+    catalog.forEach(function (e) {
+      var seen = Object.create(null);
+      e.bag.forEach(function (t) { if (!seen[t]) { seen[t] = 1; df[t] = (df[t] || 0) + 1; } });
+    });
+    idf = function (t) { return Math.log(catalog.length / (1 + (df[t] || 0))); };
+    /* L2-normalised tf-idf per entry, so a long description cannot outrank a
+       precise one just by containing more words. */
+    catalog.forEach(function (e) {
+      var tf = Object.create(null);
+      e.bag.forEach(function (t) { tf[t] = (tf[t] || 0) + 1; });
+      var v = Object.create(null), norm = 0;
+      Object.keys(tf).forEach(function (t) {
+        var w = (1 + Math.log(tf[t])) * idf(t);
+        if (w <= 0) return;
+        v[t] = w; norm += w * w;
+      });
+      norm = Math.sqrt(norm) || 1;
+      Object.keys(v).forEach(function (t) { v[t] /= norm; });
+      e.vec = v;
+      /* Unique, so "one-on-one-agenda" cannot count "one" three times. */
+      e.nameTerms = terms(e.name.replace(/-/g, " ")).filter(function (t, i, a) { return a.indexOf(t) === i; });
+      e.bag = null;
+    });
+    if (lastQuery) showHits(lastQuery);
+  }).catch(function () { catalog = null; });
+
+  var lastQuery = "";
+  function showHits(text) {
+    lastQuery = text;
+    if (!catalog || !text) { hitsBox.hidden = true; return; }
+    var q = terms(text);
+    if (!q.length) { hitsBox.hidden = true; return; }
+    /* Query as a normalised tf-idf vector too, so the rare words in the job
+       ("stale", "postmortem", "sql") drive the match and the common ones
+       ("pipeline", "query", "write") cannot carry an entry on their own. */
+    var qtf = Object.create(null);
+    q.forEach(function (t) { qtf[t] = (qtf[t] || 0) + 1; });
+    var qv = Object.create(null), qn = 0;
+    Object.keys(qtf).forEach(function (t) {
+      var w = (1 + Math.log(qtf[t])) * idf(t);
+      if (w <= 0) return;
+      qv[t] = w; qn += w * w;
+    });
+    qn = Math.sqrt(qn) || 1;
+    Object.keys(qv).forEach(function (t) { qv[t] /= qn; });
+    var qterms = Object.keys(qv);
+    if (!qterms.length) { hitsBox.hidden = true; return; }
+
+    var scored = catalog.map(function (e) {
+      var s = 0, matched = [];
+      for (var i = 0; i < qterms.length; i++) {
+        var t = qterms[i];
+        if (!e.vec[t]) continue;
+        s += qv[t] * e.vec[t];
+        matched.push(t);
+      }
+      /* A query word in the entry's own name is the strongest signal there is,
+         but only when the word is distinctive: "sql" should reach
+         sql-optimization, while "write" or "one" must not drag in every entry
+         whose name happens to contain them. Weighting by the query term's own
+         idf-scaled weight does that. */
+      var inName = 0, nameBoost = 0;
+      for (var k = 0; k < e.nameTerms.length; k++) {
+        var nt = e.nameTerms[k];
+        if (!qv[nt]) continue;
+        inName++;
+        nameBoost += qv[nt];
+      }
+      /* Capped, so one rare word in a name cannot outweigh an entry that
+         matches the job across several terms. */
+      if (inName) s += Math.min(0.34, 0.9 * nameBoost);
+      return { e: e, s: s, matched: matched, inName: inName, nameBoost: nameBoost };
+    }).filter(function (x) {
+      /* A distinctive name match, or several content words: one shared common
+         word is not a recommendation. */
+      return (x.inName > 0 && x.nameBoost > 0.12) || x.matched.length >= 2;
+    }).filter(function (x) { return x.s > 0.12; });
+    scored.sort(function (a, b) { return b.s - a.s; });
+
+    /* Take the strongest few, then pull in what those entries name as related,
+       which is how a skill reaches its companion prompt. */
+    var picked = [], names = Object.create(null);
+    scored.slice(0, 4).forEach(function (x) { if (!names[x.e.name]) { names[x.e.name] = 1; picked.push(x); } });
+    var byName = Object.create(null);
+    catalog.forEach(function (e) { if (!byName[e.name]) byName[e.name] = e; });
+    picked.slice(0, 2).forEach(function (x) {
+      x.e.related.forEach(function (r) {
+        var e = byName[r];
+        if (!e || names[r] || picked.length >= 6) return;
+        names[r] = 1;
+        picked.push({ e: e, s: 0, matched: [], via: x.e.name });
+      });
+    });
+    if (!picked.length) { hitsBox.hidden = true; return; }
+
+    hitsList.innerHTML = "";
+    picked.forEach(function (x) {
+      var li = document.createElement("li");
+      var kind = document.createElement("span");
+      kind.className = "hit-kind";
+      kind.textContent = x.e.kind;
+      var a = document.createElement("a");
+      a.href = "https://github.com/Amey-Thakur/AI-SKILLS/blob/main/" + x.e.path;
+      a.textContent = x.e.name;
+      var why = document.createElement("span");
+      why.className = "hit-why";
+      why.textContent = x.via
+        ? "Works with " + x.via + ". " + x.e.description
+        : x.e.description;
+      li.appendChild(kind); li.appendChild(a); li.appendChild(why);
+      hitsList.appendChild(li);
+    });
+    hitsBox.hidden = false;
+  }
 })();
 </script>
 </body>
