@@ -141,6 +141,7 @@ One row per category; every entry, with its one-line description, is in
 | [python](CATALOG.md#python-14) | 14 | pytest-mastery, python-asyncio, python-cli-tools |
 | [research](CATALOG.md#research-15) | 15 | autonomous-research, decision-journals, deep-research |
 | [scripting-automation](CATALOG.md#scripting-automation-10) | 10 | automation-guardrails, bash-robustness, cli-ux-design |
+| [search-relevance](CATALOG.md#search-relevance-12) | 12 | autocomplete-design, faceted-search, full-text-search-design |
 | [security](CATALOG.md#security-44) | 44 | api-security, audit-logging, authn-design |
 | [sql](CATALOG.md#sql-12) | 12 | common-table-expressions, deduplication-queries, null-semantics |
 | [systems-languages](CATALOG.md#systems-languages-10) | 10 | c-memory-safety, cpp-raii, ffi-boundaries |

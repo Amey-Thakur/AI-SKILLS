@@ -916,6 +916,26 @@
       ]
     },
     {
+      "name": "search-relevance-skills",
+      "description": "12 working methods for search relevance: autocomplete-design, faceted-search, full-text-search-design, hybrid-search, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/search-relevance/autocomplete-design",
+        "./skills/search-relevance/faceted-search",
+        "./skills/search-relevance/full-text-search-design",
+        "./skills/search-relevance/hybrid-search",
+        "./skills/search-relevance/query-understanding",
+        "./skills/search-relevance/relevance-tuning",
+        "./skills/search-relevance/search-analytics",
+        "./skills/search-relevance/search-indexing-pipeline",
+        "./skills/search-relevance/search-result-presentation",
+        "./skills/search-relevance/synonyms-and-stemming",
+        "./skills/search-relevance/typo-tolerance",
+        "./skills/search-relevance/zero-results-handling"
+      ]
+    },
+    {
       "name": "security-skills",
       "description": "44 working methods for security: api-security, audit-logging, authn-design, authz-design, and more",
       "source": "./",

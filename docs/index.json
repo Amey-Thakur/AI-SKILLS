@@ -12,9 +12,9 @@
     "llms_txt": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/llms.txt"
   },
   "count": {
-    "skills": 713,
+    "skills": 725,
     "prompts": 134,
-    "categories": 46
+    "categories": 47
   },
   "categories": [
     "accessibility",
@@ -57,6 +57,7 @@
     "python",
     "research",
     "scripting-automation",
+    "search-relevance",
     "security",
     "sql",
     "systems-languages",
@@ -5338,6 +5339,114 @@
       "use_when": "when slicing logs, transforming files, or wrangling command output",
       "path": "skills/scripting-automation/text-processing/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/scripting-automation/text-processing/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "autocomplete-design",
+      "category": "search-relevance",
+      "description": "Suggest queries as the user types, fast enough to feel instant and relevant enough to be worth reading. Use when adding a search box that should guide rather than merely accept input.",
+      "use_when": "when adding a search box that should guide rather than merely accept input",
+      "path": "skills/search-relevance/autocomplete-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/autocomplete-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "faceted-search",
+      "category": "search-relevance",
+      "description": "Provide filters that narrow results honestly, with counts that reflect what is actually available and a clear way back out. Use when a result set is large enough that browsing needs structure.",
+      "use_when": "when a result set is large enough that browsing needs structure",
+      "path": "skills/search-relevance/faceted-search/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/faceted-search/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "full-text-search-design",
+      "category": "search-relevance",
+      "description": "Design a text search feature with the right analyzer, fields, and matching model so results are relevant rather than merely returned. Use when adding search to a product or replacing a LIKE query that no longer works.",
+      "use_when": "when adding search to a product or replacing a LIKE query that no longer works",
+      "path": "skills/search-relevance/full-text-search-design/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/full-text-search-design/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "hybrid-search",
+      "category": "search-relevance",
+      "description": "Combine keyword and vector retrieval so exact terms and semantic meaning both work, and fuse the two rankings sensibly. Use when keyword search misses paraphrases or vector search misses exact identifiers.",
+      "use_when": "when keyword search misses paraphrases or vector search misses exact identifiers",
+      "path": "skills/search-relevance/hybrid-search/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/hybrid-search/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "query-understanding",
+      "category": "search-relevance",
+      "description": "Interpret what a user meant before matching, through normalisation, intent detection, and entity extraction. Use when queries are short, ambiguous, or full of product-specific language.",
+      "use_when": "when queries are short, ambiguous, or full of product-specific language",
+      "path": "skills/search-relevance/query-understanding/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/query-understanding/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "relevance-tuning",
+      "category": "search-relevance",
+      "description": "Improve ranking with a judged evaluation set and measured changes rather than intuition. Use when search feels wrong and every proposed fix is someone's opinion.",
+      "use_when": "when search feels wrong and every proposed fix is someone's opinion",
+      "path": "skills/search-relevance/relevance-tuning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/relevance-tuning/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "search-analytics",
+      "category": "search-relevance",
+      "description": "Instrument search so queries, clicks, and abandonment tell you what to fix. Use when improving relevance without evidence, or when nobody can say whether search works.",
+      "use_when": "when improving relevance without evidence, or when nobody can say whether search works",
+      "path": "skills/search-relevance/search-analytics/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/search-analytics/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "search-indexing-pipeline",
+      "category": "search-relevance",
+      "description": "Get data into a search index reliably and keep it current, with reindexing, partial updates, and a defined staleness budget. Use when search results lag reality or a schema change requires a full rebuild.",
+      "use_when": "when search results lag reality or a schema change requires a full rebuild",
+      "path": "skills/search-relevance/search-indexing-pipeline/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/search-indexing-pipeline/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "search-result-presentation",
+      "category": "search-relevance",
+      "description": "Present results so a user can judge relevance without opening each one, with useful snippets, clear grouping, and honest metadata. Use when results are correct but users still cannot find what they need.",
+      "use_when": "when results are correct but users still cannot find what they need",
+      "path": "skills/search-relevance/search-result-presentation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/search-result-presentation/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "synonyms-and-stemming",
+      "category": "search-relevance",
+      "description": "Match words to their variants and equivalents without collapsing distinctions that matter. Use when searches miss obvious results, or when unrelated results appear because two words were merged.",
+      "use_when": "when searches miss obvious results, or when unrelated results appear because two words were merged",
+      "path": "skills/search-relevance/synonyms-and-stemming/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/synonyms-and-stemming/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "typo-tolerance",
+      "category": "search-relevance",
+      "description": "Correct or forgive misspelled queries without turning precise searches into fuzzy guesses. Use when users mistype and get nothing, or when fuzzy matching returns irrelevant results.",
+      "use_when": "when users mistype and get nothing, or when fuzzy matching returns irrelevant results",
+      "path": "skills/search-relevance/typo-tolerance/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/typo-tolerance/SKILL.md"
+    },
+    {
+      "kind": "skill",
+      "name": "zero-results-handling",
+      "category": "search-relevance",
+      "description": "Turn an empty result set into a useful next step instead of a dead end, and treat the query as a signal worth acting on. Use when searches return nothing and users leave.",
+      "use_when": "when searches return nothing and users leave",
+      "path": "skills/search-relevance/zero-results-handling/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Amey-Thakur/AI-SKILLS/main/skills/search-relevance/zero-results-handling/SKILL.md"
     },
     {
       "kind": "skill",
