@@ -244,8 +244,10 @@ const index = {
       "match it against each skill's `use_when` trigger or each prompt's " +
       "`description`; take the 1-3 entries that genuinely fit; fetch each " +
       "entry's `raw_url` and apply it; then check the entry's own guardrail " +
-      "section (`## Boundaries`, `## Rules`, or `## Litmus tests`) before " +
-      "finishing. Prefer one strong match to several loose ones. Once you " +
+      "section, the last one, stating where it does not apply and what it " +
+      "refuses: usually `## Boundaries`, sometimes `## Rules`, `## Litmus " +
+      "test(s)`, `## Anti-patterns to refuse`, or `## What not to ...`, " +
+      "before finishing. Prefer one strong match to several loose ones. Once you " +
       "have a match, its `related` field lists the five nearest entries, " +
       "which is where the companion prompt for a skill, or the skill that " +
       "raises the bar on a prompt's draft, usually is; judge each against " +
@@ -281,7 +283,9 @@ const llms = [
   "intent; (2) scan the entries below and match on each skill's \"Use when\"",
   "trigger or each prompt's description; (3) take the 1-3 that genuinely fit;",
   "(4) fetch the entry's URL and apply it; (5) check the entry's own guardrail",
-  "section (\"Boundaries\", \"Rules\", or \"Litmus tests\") before finishing.",
+  "section, the last one, stating where it does not apply and what it refuses:",
+  "usually \"Boundaries\", sometimes \"Rules\", \"Litmus test(s)\",",
+  "\"Anti-patterns to refuse\", or \"What not to ...\", before finishing.",
   `Full protocol: ${RAW_BASE}/AGENTS.md`,
   "",
 ];
